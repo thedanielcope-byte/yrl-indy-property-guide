@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    YOAST SEO FIELDS
+    Focus Keyword:    central indiana real estate
+    SEO Title:        Central Indiana Real Estate | Indy Property Guide
+    Meta Description: Your source for Central Indiana real estate. Browse cities, neighborhoods, and services powered by Your Realty Link — Indianapolis's trusted MIBOR brokerage.
+    Schema:           LocalBusiness + RealEstateAgent + WebSite
+  -->
+  <title>Central Indiana Real Estate | Indy Property Guide</title>
+  <meta name="description" content="Your source for Central Indiana real estate. Browse cities, neighborhoods, and services powered by Your Realty Link — Indianapolis's trusted MIBOR brokerage.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://indypropertyguide.com/">
+  <meta property="og:title" content="Central Indiana Real Estate | Indy Property Guide">
+  <meta property="og:description" content="Your source for Central Indiana real estate. Browse cities, neighborhoods, and services powered by Your Realty Link — Indianapolis's trusted MIBOR brokerage.">
+  <meta property="og:url" content="https://indypropertyguide.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Indy Property Guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "RealEstateAgent"],
+        "@id": "https://indypropertyguide.com/#business",
+        "name": "Your Realty Link",
+        "alternateName": "Indy Property Guide",
+        "description": "Full-service MIBOR real estate brokerage serving buyers, sellers, and investors across Central Indiana.",
+        "url": "https://yourrealtylink.com",
+        "telephone": "+13179977404",
+        "email": "janet@yourrealtylink.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2302 E Southport Rd",
+          "addressLocality": "Indianapolis",
+          "addressRegion": "IN",
+          "postalCode": "46227",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.6789,
+          "longitude": -86.1003
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        "priceRange": "$$",
+        "image": "https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png",
+        "sameAs": [
+          "https://www.facebook.com/yourrealtylink",
+          "https://www.linkedin.com/in/janetgilesrealtor/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://indypropertyguide.com/#website",
+        "url": "https://indypropertyguide.com",
+        "name": "Indy Property Guide",
+        "publisher": { "@id": "https://indypropertyguide.com/#business" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    /* Homepage-specific overrides */
+    .home-section { padding: 64px 0; }
+    .home-section-alt { padding: 64px 0; background: #f7f7f7; }
+    .section-header { text-align: center; margin-bottom: 40px; }
+    .section-header h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 12px; }
+    .section-header p { color: #6e6e70; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+    .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .value-card { background: #fff; border-radius: 10px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.06); border-top: 3px solid #c03926; }
+    .value-card .value-icon { font-size: 2rem; margin-bottom: 12px; }
+    .value-card h3 { font-size: 1.1rem; color: #1a1a1a; margin-bottom: 8px; }
+    .value-card p { color: #6e6e70; font-size: .92rem; line-height: 1.6; margin: 0; }
+    .county-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .county-card { background: #1a1a1a; color: #fff; border-radius: 8px; padding: 22px 20px; text-decoration: none; display: block; transition: background .2s; }
+    .county-card:hover { background: #c03926; }
+    .county-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; color: #fff; }
+    .county-card p { font-size: .82rem; color: rgba(255,255,255,.7); margin: 0; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .service-card { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,.06); text-decoration: none; display: block; border-left: 4px solid #c03926; transition: transform .15s; }
+    .service-card:hover { transform: translateY(-2px); }
+    .service-card h3 { font-size: 1rem; color: #1a1a1a; margin-bottom: 6px; }
+    .service-card p { font-size: .88rem; color: #6e6e70; margin: 0 0 12px; line-height: 1.5; }
+    .service-card .arrow { color: #c03926; font-size: .85rem; font-weight: 600; }
+    .about-home { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .about-home-text h2 { font-size: 1.8rem; color: #1a1a1a; margin-bottom: 16px; }
+    .about-home-text p { color: #6e6e70; line-height: 1.7; margin-bottom: 16px; }
+    .about-home-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .about-stat { text-align: center; background: #f7f7f7; border-radius: 8px; padding: 20px; }
+    .about-stat .num { font-size: 2rem; font-weight: 700; color: #c03926; display: block; }
+    .about-stat .lbl { font-size: .85rem; color: #6e6e70; }
+    @media (max-width: 768px) {
+      .about-home { grid-template-columns: 1fr; }
+      .section-header h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <img src="https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png" alt="Your Realty Link" width="120" height="40">
+      <div class="site-logo-text">
+        <span class="site-name">Indy Property Guide</span>
+        <span class="site-tagline">Powered by Your Realty Link</span>
+      </div>
+    </a>
+    <nav class="site-nav" id="siteNav">
+      <a href="/">Home</a>
+      <a href="/indianapolis-real-estate/">Indianapolis</a>
+      <a href="/services/">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="https://yourrealtylink.com/property-search" class="nav-cta" target="_blank" rel="noopener">Search Homes →</a>
+    </nav>
+    <button class="hamburger" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero" style="padding: 100px 0 80px;">
+  <div class="container">
+    <h1 style="font-size:2.6rem;font-weight:700;color:#fff;margin-bottom:16px;max-width:780px;">Central Indiana Real Estate — Find Your Place in Indianapolis</h1>
+    <p class="hero-sub" style="max-width:620px;">Your Realty Link is a full-service MIBOR brokerage serving buyers, sellers, and investors across the Indianapolis metro and Central Indiana. Browse hundreds of city guides, neighborhood pages, and local resources — then connect with an agent who truly knows this market.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">17 Counties Covered</span>
+      <span class="hero-badge">275+ City &amp; Service Pages</span>
+      <span class="hero-badge">MIBOR Member Brokerage</span>
+      <span class="hero-badge">Free Home Valuations</span>
+    </div>
+    <div class="btn-group" style="margin-top:32px;">
+      <a href="https://yourrealtylink.com/property-search" class="btn btn-primary" target="_blank" rel="noopener">Search Homes on YRL →</a>
+      <a href="https://yourrealtylink.com/home-valuation" class="btn btn-white" target="_blank" rel="noopener">Get a Free Valuation</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY INDY PROPERTY GUIDE -->
+<section class="home-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Indy Property Guide?</h2>
+      <p>We built this resource to help buyers, sellers, and investors navigate Central Indiana's real estate market with confidence — backed by a brokerage that's been doing it for years.</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">🏡</div>
+        <h3>Local Expertise</h3>
+        <p>Janet Giles-Schultz and the Your Realty Link team know Central Indiana's neighborhoods, price trends, and communities inside and out. We live and work here.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔍</div>
+        <h3>Full MLS Access</h3>
+        <p>As MIBOR members, YRL agents have access to every active listing across Central Indiana. Search the full MLS at yourrealtylink.com — updated in real time.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📖</div>
+        <h3>Free Local Resources</h3>
+        <p>Hundreds of city guides, county overviews, neighborhood breakdowns, and service pages — all written specifically for Central Indiana buyers and sellers.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Trusted Agents</h3>
+        <p>Your Realty Link puts people first. Whether you're a first-time buyer, a seasoned investor, or ready to list, our agents guide you every step of the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE BY COUNTY -->
+<section class="home-section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Explore Central Indiana by County</h2>
+      <p>Your Realty Link serves buyers and sellers across 17 counties in the Indianapolis metro and surrounding region. Choose a county to explore cities, market info, and local resources.</p>
+    </div>
+    <div class="county-grid">
+      <a href="/counties/hamilton-county-indiana-real-estate/" class="county-card">
+        <h3>Hamilton County</h3>
+        <p>Carmel · Fishers · Noblesville · Westfield</p>
+      </a>
+      <a href="/counties/johnson-county-indiana-real-estate/" class="county-card">
+        <h3>Johnson County</h3>
+        <p>Greenwood · Franklin · Bargersville</p>
+      </a>
+      <a href="/counties/hendricks-county-indiana-real-estate/" class="county-card">
+        <h3>Hendricks County</h3>
+        <p>Avon · Brownsburg · Plainfield · Danville</p>
+      </a>
+      <a href="/counties/marion-county-indiana-real-estate/" class="county-card">
+        <h3>Marion County</h3>
+        <p>Indianapolis · Southport · Lawrence · Beech Grove</p>
+      </a>
+      <a href="/counties/boone-county-indiana-real-estate/" class="county-card">
+        <h3>Boone County</h3>
+        <p>Zionsville · Whitestown · Lebanon</p>
+      </a>
+      <a href="/counties/hancock-county-indiana-real-estate/" class="county-card">
+        <h3>Hancock County</h3>
+        <p>McCordsville · Greenfield · New Palestine</p>
+      </a>
+      <a href="/counties/shelby-county-indiana-real-estate/" class="county-card">
+        <h3>Shelby County</h3>
+        <p>Shelbyville · Fairland · Morristown</p>
+      </a>
+      <a href="/counties/morgan-county-indiana-real-estate/" class="county-card">
+        <h3>Morgan County</h3>
+        <p>Mooresville · Martinsville · Monrovia</p>
+      </a>
+      <a href="/counties/madison-county-indiana-real-estate/" class="county-card">
+        <h3>Madison County</h3>
+        <p>Anderson · Pendleton · Lapel</p>
+      </a>
+      <a href="/counties/bartholomew-county-indiana-real-estate/" class="county-card">
+        <h3>Bartholomew County</h3>
+        <p>Columbus &amp; surrounding communities</p>
+      </a>
+      <a href="/counties/brown-county-indiana-real-estate/" class="county-card">
+        <h3>Brown County</h3>
+        <p>Nashville, Bean Blossom &amp; rural Indiana</p>
+      </a>
+      <a href="/counties/montgomery-county-indiana-real-estate/" class="county-card">
+        <h3>Montgomery County</h3>
+        <p>Crawfordsville &amp; surrounding towns</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR CITIES -->
+<section class="home-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Popular Cities Near Indianapolis</h2>
+      <p>From fast-growing suburbs to established communities, Central Indiana has a neighborhood for everyone. Explore city guides with local market info, schools, and more.</p>
+    </div>
+    <div class="city-grid">
+      <a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="city-card">
+        <h3>Carmel</h3>
+        <p>Hamilton County · $400s–$1M+</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="city-card">
+        <h3>Fishers</h3>
+        <p>Hamilton County · $300s–$600s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="city-card">
+        <h3>Greenwood</h3>
+        <p>Johnson County · $250s–$450s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="city-card">
+        <h3>Noblesville</h3>
+        <p>Hamilton County · $300s–$600s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/hendricks-county/avon-indiana-real-estate/" class="city-card">
+        <h3>Avon</h3>
+        <p>Hendricks County · $250s–$450s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/hendricks-county/brownsburg-indiana-real-estate/" class="city-card">
+        <h3>Brownsburg</h3>
+        <p>Hendricks County · $250s–$450s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/boone-county/zionsville-indiana-real-estate/" class="city-card">
+        <h3>Zionsville</h3>
+        <p>Boone County · $400s–$1M+</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="city-card">
+        <h3>Westfield</h3>
+        <p>Hamilton County · $300s–$600s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/hendricks-county/plainfield-indiana-real-estate/" class="city-card">
+        <h3>Plainfield</h3>
+        <p>Hendricks County · $230s–$400s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/hancock-county/mccordsville-indiana-real-estate/" class="city-card">
+        <h3>McCordsville</h3>
+        <p>Hancock County · $280s–$500s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/marion-county/southport-indiana-real-estate/" class="city-card">
+        <h3>Southport</h3>
+        <p>Marion County · $150s–$320s</p>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/cities/shelby-county/shelbyville-indiana-real-estate/" class="city-card">
+        <h3>Shelbyville</h3>
+        <p>Shelby County · $150s–$300s</p>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES -->
+<section class="home-section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>How Your Realty Link Can Help</h2>
+      <p>Whether you're buying your first home, selling after years of memories, or building an investment portfolio — YRL has a service designed for your situation.</p>
+    </div>
+    <div class="service-grid">
+      <a href="/services/buyer-representation/" class="service-card">
+        <h3>Buyer Representation</h3>
+        <p>Your YRL agent works exclusively for you — negotiating price, terms, and inspections so you get the best deal possible.</p>
+        <span class="arrow">Explore Buyer Services →</span>
+      </a>
+      <a href="/services/sell-my-home/" class="service-card">
+        <h3>Sell Your Home</h3>
+        <p>Free CMA, professional marketing, MIBOR MLS exposure, and a proven plan to get your home sold quickly and for top dollar.</p>
+        <span class="arrow">Explore Seller Services →</span>
+      </a>
+      <a href="/services/investment-property/" class="service-card">
+        <h3>Investment Properties</h3>
+        <p>Indianapolis is one of America's top investment markets. YRL helps investors find rentals, flips, and multi-family properties.</p>
+        <span class="arrow">Explore Investment Services →</span>
+      </a>
+      <a href="/services/new-construction/" class="service-card">
+        <h3>New Construction</h3>
+        <p>Buying a new build? You need your own agent. YRL represents buyers in new construction at no extra cost to you.</p>
+        <span class="arrow">Explore New Construction →</span>
+      </a>
+      <a href="/services/expired-listings/" class="service-card">
+        <h3>Expired Listings</h3>
+        <p>Your home didn't sell — now what? YRL specializes in relaunching homes that need a new strategy and fresh marketing.</p>
+        <span class="arrow">Explore Expired Listings →</span>
+      </a>
+      <a href="/services/join-yrl/" class="service-card">
+        <h3>Join Our Team</h3>
+        <p>Indiana agents: explore the YRL difference. Competitive splits, broker support, and a team that invests in your growth.</p>
+        <span class="arrow">Explore Agent Recruiting →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT YRL -->
+<section class="home-section">
+  <div class="container">
+    <div class="about-home">
+      <div class="about-home-text">
+        <h2>About Your Realty Link</h2>
+        <p>Your Realty Link is a full-service MIBOR brokerage headquartered in Indianapolis, Indiana. Led by Principal Broker <strong>Janet Giles-Schultz</strong>, our team serves buyers, sellers, and investors across Central Indiana with honest advice, local knowledge, and a commitment to results.</p>
+        <p>We're not a big box franchise. We're your neighbors — people who know the difference between Carmel and Fishers, who understand why families love Avon, and who know exactly how to price a home on the south side of Indianapolis. When you work with YRL, you get an agent who genuinely cares about where you end up.</p>
+        <div class="btn-group">
+          <a href="/about/" class="btn btn-primary">Meet Our Team</a>
+          <a href="https://yourrealtylink.com/contact" class="btn btn-outline" target="_blank" rel="noopener">Contact YRL</a>
+        </div>
+      </div>
+      <div class="about-home-stats">
+        <div class="about-stat">
+          <span class="num">17</span>
+          <span class="lbl">Counties Served</span>
+        </div>
+        <div class="about-stat">
+          <span class="num">MIBOR</span>
+          <span class="lbl">Member Brokerage</span>
+        </div>
+        <div class="about-stat">
+          <span class="num">Free</span>
+          <span class="lbl">Home Valuations</span>
+        </div>
+        <div class="about-stat">
+          <span class="num">Full</span>
+          <span class="lbl">MLS Access</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-block">
+  <div class="container">
+    <h2>Ready to Buy or Sell in Central Indiana?</h2>
+    <p>Connect with a Your Realty Link agent today. Search every active MLS listing, get a free home valuation, or call Janet Giles-Schultz directly at 317-997-7404.</p>
+    <div class="btn-group">
+      <a href="https://yourrealtylink.com/property-search" class="btn btn-white" target="_blank" rel="noopener">Search Homes in Central Indiana →</a>
+      <a href="https://yourrealtylink.com/home-valuation" class="btn btn-outline" target="_blank" rel="noopener">Get a Free Home Valuation</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png" alt="Your Realty Link">
+        <p>Indy Property Guide is your source for Central Indiana real estate, powered by Your Realty Link — a full-service MIBOR brokerage.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/yourrealtylink" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="http://twitter.com/janetgiles" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://www.linkedin.com/in/janetgilesrealtor/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="http://www.instagram.com/IndianapolisRealEstate" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Top Cities</h4><ul>
+        <li><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a></li>
+        <li><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a></li>
+        <li><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a></li>
+        <li><a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a></li>
+        <li><a href="/cities/hamilton-county/noblesville-indiana-real-estate/">Noblesville</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="/services/buyer-representation/">Buy a Home</a></li>
+        <li><a href="/services/sell-my-home/">Sell a Home</a></li>
+        <li><a href="/services/expired-listings/">Expired Listings</a></li>
+        <li><a href="/services/free-home-valuation/">Free Valuation</a></li>
+        <li><a href="/services/investment-property/">Investment</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Your Realty Link</h4><ul>
+        <li><a href="https://yourrealtylink.com" target="_blank" rel="noopener">yourrealtylink.com</a></li>
+        <li><a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener">Search Homes</a></li>
+        <li><a href="https://yourrealtylink.com/home-valuation" target="_blank" rel="noopener">Home Valuation</a></li>
+        <li><a href="https://yourrealtylink.com/contact" target="_blank" rel="noopener">Contact Us</a></li>
+        <li><a href="tel:3179977404">317-997-7404</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Indy Property Guide · Powered by <a href="https://yourrealtylink.com" target="_blank" rel="noopener">Your Realty Link</a> · Janet Giles-Schultz, Principal Broker · MIBOR Member</span>
+      <span>2302 E Southport Rd, Indianapolis, IN 46227 · <a href="tel:3179977404">317-997-7404</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

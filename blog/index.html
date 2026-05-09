@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    YOAST SEO FIELDS
+    Focus Keyword:    indianapolis real estate blog
+    SEO Title:        Indianapolis Real Estate Blog | Indy Property Guide
+    Meta Description: The Indy Property Guide blog covers Indianapolis real estate market updates, neighborhood guides, buyer and seller tips, and local lifestyle content from Your Realty Link.
+    Schema:           LocalBusiness + RealEstateAgent + Blog
+  -->
+  <title>Indianapolis Real Estate Blog | Indy Property Guide</title>
+  <meta name="description" content="The Indy Property Guide blog covers Indianapolis real estate market updates, neighborhood guides, buyer and seller tips, and local lifestyle content from Your Realty Link.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://indypropertyguide.com/blog/">
+  <meta property="og:title" content="Indianapolis Real Estate Blog | Indy Property Guide">
+  <meta property="og:description" content="The Indy Property Guide blog covers Indianapolis real estate market updates, neighborhood guides, buyer and seller tips, and local lifestyle content from Your Realty Link.">
+  <meta property="og:url" content="https://indypropertyguide.com/blog/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "RealEstateAgent"],
+        "@id": "https://indypropertyguide.com/#business",
+        "name": "Your Realty Link",
+        "url": "https://yourrealtylink.com",
+        "telephone": "+13179977404",
+        "email": "janet@yourrealtylink.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2302 E Southport Rd",
+          "addressLocality": "Indianapolis",
+          "addressRegion": "IN",
+          "postalCode": "46227",
+          "addressCountry": "US"
+        },
+        "image": "https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png"
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://indypropertyguide.com/blog/#blog",
+        "url": "https://indypropertyguide.com/blog/",
+        "name": "Indy Property Guide Blog",
+        "publisher": { "@id": "https://indypropertyguide.com/#business" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://indypropertyguide.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://indypropertyguide.com/blog/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .blog-featured { background: #1a1a1a; border-radius: 12px; padding: 40px; margin-bottom: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    .blog-featured-label { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #c03926; margin-bottom: 10px; }
+    .blog-featured h2 { font-size: 1.6rem; color: #fff; margin-bottom: 12px; line-height: 1.3; }
+    .blog-featured p { color: rgba(255,255,255,.75); line-height: 1.6; margin-bottom: 20px; }
+    .blog-featured-meta { font-size: .82rem; color: rgba(255,255,255,.5); margin-bottom: 16px; }
+    .blog-featured-img { background: #c03926; border-radius: 8px; height: 220px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 3rem; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .blog-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.07); overflow: hidden; display: flex; flex-direction: column; transition: transform .15s; }
+    .blog-card:hover { transform: translateY(-3px); }
+    .blog-card-img { height: 140px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+    .blog-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .blog-card-cat { font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #c03926; margin-bottom: 6px; }
+    .blog-card h3 { font-size: 1rem; color: #1a1a1a; line-height: 1.4; margin-bottom: 8px; }
+    .blog-card p { font-size: .88rem; color: #6e6e70; line-height: 1.5; flex: 1; margin-bottom: 16px; }
+    .blog-card a.read-more { font-size: .85rem; color: #c03926; font-weight: 600; text-decoration: none; }
+    .blog-card a.read-more:hover { text-decoration: underline; }
+    .category-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+    .cat-pill { background: #f0f0f0; color: #3a3a3a; padding: 6px 14px; border-radius: 20px; font-size: .82rem; font-weight: 500; text-decoration: none; transition: background .15s; }
+    .cat-pill:hover { background: #c03926; color: #fff; }
+    @media (max-width: 768px) { .blog-featured { grid-template-columns: 1fr; } .blog-featured-img { display: none; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <img src="https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png" alt="Your Realty Link" width="120" height="40">
+      <div class="site-logo-text">
+        <span class="site-name">Indy Property Guide</span>
+        <span class="site-tagline">Powered by Your Realty Link</span>
+      </div>
+    </a>
+    <nav class="site-nav" id="siteNav">
+      <a href="/">Home</a>
+      <a href="/indianapolis-real-estate/">Indianapolis</a>
+      <a href="/services/">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="https://yourrealtylink.com/property-search" class="nav-cta" target="_blank" rel="noopener">Search Homes →</a>
+    </nav>
+    <button class="hamburger" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="breadcrumbs">
+  <div class="container">
+    <a href="/">Home</a> › <span>Blog</span>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Indianapolis Real Estate Blog</h1>
+    <p class="hero-sub">Market updates, neighborhood guides, buyer and seller tips, and local lifestyle content — written for Central Indiana homeowners, buyers, and investors by the Your Realty Link team.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">Market Updates</span>
+      <span class="hero-badge">City Guides</span>
+      <span class="hero-badge">Buyer &amp; Seller Tips</span>
+      <span class="hero-badge">Investment Insights</span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="container">
+
+      <!-- FEATURED POST -->
+      <div class="blog-featured">
+        <div>
+          <div class="blog-featured-label">Featured Post · Market Updates</div>
+          <h2>Indianapolis Real Estate Market Update 2026</h2>
+          <div class="blog-featured-meta">By Janet Giles-Schultz · May 2026 · 10 min read</div>
+          <p>What's happening in the Indianapolis housing market right now? From inventory levels to price trends across Hamilton, Johnson, and Hendricks counties — here's what buyers and sellers need to know heading into 2026.</p>
+          <a href="/blog/indianapolis-real-estate-market-update-2026/" class="btn btn-primary">Read the Market Update →</a>
+        </div>
+        <div class="blog-featured-img">🏙️</div>
+      </div>
+
+      <!-- CATEGORY FILTER -->
+      <h2 style="font-size:1.3rem; margin-bottom:16px;">Browse by Category</h2>
+      <div class="category-pills">
+        <a href="#market-updates" class="cat-pill">Market Updates</a>
+        <a href="#buying" class="cat-pill">Buying a Home</a>
+        <a href="#selling" class="cat-pill">Selling a Home</a>
+        <a href="#city-guides" class="cat-pill">City Guides</a>
+        <a href="#neighborhoods" class="cat-pill">Neighborhoods</a>
+        <a href="#investment" class="cat-pill">Investment</a>
+        <a href="#mortgage" class="cat-pill">Mortgage &amp; Finance</a>
+        <a href="#join-team" class="cat-pill">Join Our Team</a>
+      </div>
+
+      <!-- BLOG GRID -->
+      <div class="blog-grid">
+
+        <div class="blog-card">
+          <div class="blog-card-img">🏘️</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Neighborhoods</div>
+            <h3>Best Neighborhoods to Buy a Home in Indianapolis</h3>
+            <p>From Broad Ripple to Irvington, Southport to Eagle Creek — a local's guide to finding your perfect Indianapolis neighborhood.</p>
+            <a href="/blog/best-neighborhoods-to-buy-a-home-in-indianapolis/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🏡</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Selling a Home</div>
+            <h3>How to Sell Your Home Fast in Greenwood Indiana</h3>
+            <p>Proven strategies for Greenwood homeowners who need to sell quickly without leaving money on the table. YRL's step-by-step guide.</p>
+            <a href="/blog/how-to-sell-your-home-fast-in-greenwood-indiana/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🔑</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Buying a Home</div>
+            <h3>First Time Home Buyer Guide — Indianapolis 2026</h3>
+            <p>Everything first-time buyers need to know: pre-approval, down payment programs, what to expect at closing, and how to choose an agent.</p>
+            <a href="/blog/first-time-home-buyer-guide-indianapolis-2026/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🌳</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">City Guides</div>
+            <h3>Living in Carmel Indiana — What to Know Before You Move</h3>
+            <p>Carmel consistently ranks among America's best places to live. Here's what makes it special — and what to consider before buying there.</p>
+            <a href="/blog/living-in-carmel-indiana-what-to-know-before-you-move/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">💰</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Selling a Home</div>
+            <h3>What Is My Home Worth in Indianapolis?</h3>
+            <p>How home values are determined in the Indianapolis metro, what factors affect your price, and how to get a free CMA from Your Realty Link.</p>
+            <a href="/blog/what-is-my-home-worth-in-indianapolis/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">⭐</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">City Guides</div>
+            <h3>Fishers Indiana — One of America's Best Places to Live</h3>
+            <p>What makes Fishers so popular? Schools, parks, restaurants, job access, and a real estate market that keeps growing. Here's the full picture.</p>
+            <a href="/blog/fishers-indiana-one-of-americas-best-places-to-live/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">👥</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Join Our Team</div>
+            <h3>Why Join a Real Estate Team Instead of Going Independent</h3>
+            <p>The honest pros and cons of joining a team vs. hanging your own shingle — and why YRL's team model works for Indiana agents at every stage.</p>
+            <a href="/blog/why-join-a-real-estate-team-instead-of-going-independent/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🏗️</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">New Construction</div>
+            <h3>Buying New Construction in Central Indiana — Pros and Cons</h3>
+            <p>New builds offer modern finishes and warranties, but there are traps buyers fall into without proper representation. What you need to know.</p>
+            <a href="/blog/buying-new-construction-in-central-indiana-pros-and-cons/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">📋</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Selling a Home</div>
+            <h3>Closing Costs in Indiana — What Sellers Need to Know</h3>
+            <p>A clear breakdown of what Indiana sellers actually pay at closing — agent fees, title, taxes, and more. No surprises with YRL.</p>
+            <a href="/blog/closing-costs-in-indiana-what-sellers-need-to-know/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🏙️</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">City Guides</div>
+            <h3>Zionsville Indiana — Small Town Luxury Living Near Indy</h3>
+            <p>Cobblestone streets, top-ranked schools, and executive-level homes — Zionsville offers a unique lifestyle just north of Indianapolis.</p>
+            <a href="/blog/zionsville-indiana-small-town-luxury-living-near-indy/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">📈</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Investment Properties</div>
+            <h3>Investment Property in Indianapolis — Is Now a Good Time?</h3>
+            <p>Indianapolis has been one of America's top investment markets for years. Here's a realistic look at what investors should know right now.</p>
+            <a href="/blog/investment-property-in-indianapolis-is-now-a-good-time/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">📝</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Buying a Home</div>
+            <h3>How the Buyer Compensation Agreement Works in Indiana</h3>
+            <p>New rules, new forms — what Indiana buyers need to understand about buyer compensation agreements before they start touring homes.</p>
+            <a href="/blog/how-the-buyer-compensation-agreement-works-in-indiana/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🚫</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Selling a Home</div>
+            <h3>Top 5 Things That Kill a Home Sale in Indianapolis</h3>
+            <p>Price, condition, photos, showings, and agent strategy — the five most common reasons Indianapolis homes sit on the market too long.</p>
+            <a href="/blog/top-5-things-that-kill-a-home-sale-in-indianapolis/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🌿</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">City Guides</div>
+            <h3>Avon Indiana — Why Families Love Hendricks County</h3>
+            <p>Avon's combination of great schools, affordable homes, and easy Indianapolis access makes it one of the metro's most popular family destinations.</p>
+            <a href="/blog/avon-indiana-why-families-love-hendricks-county/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">💼</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Join Our Team</div>
+            <h3>YRL Agent Commission Structure — What You Need to Know</h3>
+            <p>Transparent, competitive, and designed to help agents keep more of what they earn. Here's exactly how Your Realty Link structures agent compensation.</p>
+            <a href="/blog/yrl-agent-commission-structure-what-you-need-to-know/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🚀</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">City Guides</div>
+            <h3>McCordsville Indiana — Hancock County's Fastest Growing City</h3>
+            <p>McCordsville is one of Central Indiana's most talked-about growth stories. Here's what's driving the boom and what buyers should know.</p>
+            <a href="/blog/mccordsville-indiana-hancock-countys-fastest-growing-city/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🛋️</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Selling a Home</div>
+            <h3>Home Staging Tips for Indianapolis Sellers</h3>
+            <p>Staged homes sell faster and for more. Here are practical, affordable staging strategies that work in the Indianapolis market.</p>
+            <a href="/blog/home-staging-tips-for-indianapolis-sellers/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-img">🌊</div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Neighborhoods</div>
+            <h3>Geist Reservoir — Waterfront Homes Near Indianapolis</h3>
+            <p>Geist offers lakefront living just minutes from the city. Here's what to know about buying a home on or near Geist Reservoir.</p>
+            <a href="/blog/geist-reservoir-waterfront-homes-near-indianapolis/" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MORE COMING -->
+      <div class="info-box" style="margin-top:40px; text-align:center;">
+        <strong>100+ posts planned for 2026</strong>
+        <p style="margin:8px 0 0; color:#6e6e70; font-size:.9rem;">New articles added regularly covering Central Indiana cities, market trends, buyer and seller guides, and more. Bookmark this page and check back often — or <a href="https://yourrealtylink.com/contact" target="_blank" rel="noopener">contact Your Realty Link</a> to get updates directly.</p>
+      </div>
+
+      <div class="cta-block" style="margin-top:40px;">
+        <h2>Ready to Make a Move in Central Indiana?</h2>
+        <p>Don't just read about it — take the next step. Search homes, get a free valuation, or call Janet Giles-Schultz at 317-997-7404.</p>
+        <div class="btn-group">
+          <a href="https://yourrealtylink.com/property-search" class="btn btn-white" target="_blank" rel="noopener">Search Homes →</a>
+          <a href="https://yourrealtylink.com/home-valuation" class="btn btn-outline" target="_blank" rel="noopener">Free Home Valuation</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png" alt="Your Realty Link">
+        <p>Indy Property Guide is your source for Central Indiana real estate, powered by Your Realty Link — a full-service MIBOR brokerage.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/yourrealtylink" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="http://twitter.com/janetgiles" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://www.linkedin.com/in/janetgilesrealtor/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="http://www.instagram.com/IndianapolisRealEstate" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Top Cities</h4><ul>
+        <li><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a></li>
+        <li><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a></li>
+        <li><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a></li>
+        <li><a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a></li>
+        <li><a href="/cities/hamilton-county/noblesville-indiana-real-estate/">Noblesville</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="/services/buyer-representation/">Buy a Home</a></li>
+        <li><a href="/services/sell-my-home/">Sell a Home</a></li>
+        <li><a href="/services/expired-listings/">Expired Listings</a></li>
+        <li><a href="/services/free-home-valuation/">Free Valuation</a></li>
+        <li><a href="/services/investment-property/">Investment</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Your Realty Link</h4><ul>
+        <li><a href="https://yourrealtylink.com" target="_blank" rel="noopener">yourrealtylink.com</a></li>
+        <li><a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener">Search Homes</a></li>
+        <li><a href="https://yourrealtylink.com/home-valuation" target="_blank" rel="noopener">Home Valuation</a></li>
+        <li><a href="https://yourrealtylink.com/contact" target="_blank" rel="noopener">Contact Us</a></li>
+        <li><a href="tel:3179977404">317-997-7404</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Indy Property Guide · Powered by <a href="https://yourrealtylink.com" target="_blank" rel="noopener">Your Realty Link</a> · Janet Giles-Schultz, Principal Broker · MIBOR Member</span>
+      <span>2302 E Southport Rd, Indianapolis, IN 46227 · <a href="tel:3179977404">317-997-7404</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
