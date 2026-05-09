@@ -53,53 +53,72 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
+    /* ── SEARCH HERO ── */
     .val-hero {
-      background: linear-gradient(180deg, #fdf5f4 0%, #fff 70%);
+      background: linear-gradient(180deg, #fdf5f4 0%, #fff 65%);
       border-bottom: 1px solid #ead9d6;
-      padding: 64px 24px 0;
+      padding: 52px 24px 48px;
       text-align: center;
       position: relative;
-      overflow: hidden;
     }
     .val-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: #c03926; }
-    .val-hero h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; margin-bottom: 14px; }
+    .val-hero h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
     .val-hero h1 em { font-style: normal; color: #c03926; }
-    .val-hero .sub { color: #6e6e70; font-size: 1.05rem; max-width: 540px; margin: 0 auto 36px; line-height: 1.65; }
+    .val-hero .sub { color: #6e6e70; font-size: 1rem; max-width: 500px; margin: 0 auto 28px; line-height: 1.6; }
 
-    .val-cta-card {
+    /* Search bar */
+    .val-search-wrap { max-width: 600px; margin: 0 auto 20px; }
+    .val-search-bar {
+      display: flex;
       background: #fff;
-      border: 2px solid #e0e0e0;
-      border-radius: 16px;
-      padding: 48px 40px;
-      max-width: 620px;
-      margin: 0 auto 0;
-      box-shadow: 0 8px 40px rgba(192,57,38,.1), 0 2px 12px rgba(0,0,0,.06);
-      position: relative;
-      z-index: 1;
-      bottom: -32px;
+      border: 2px solid #ddd;
+      border-radius: 50px;
+      box-shadow: 0 6px 28px rgba(192,57,38,.13);
+      overflow: hidden;
+      transition: border-color .2s;
     }
-    .val-cta-card h2 { font-size: 1.4rem; margin-bottom: 10px; }
-    .val-cta-card p { color: #6e6e70; font-size: .95rem; line-height: 1.6; margin-bottom: 28px; }
-    .val-btn-main {
-      display: block;
-      width: 100%;
+    .val-search-bar:focus-within { border-color: #c03926; }
+    .val-search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 16px 24px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: transparent;
+      color: #1a1a1a;
+      min-width: 0;
+    }
+    .val-search-bar input::placeholder { color: #aaa; }
+    .val-search-bar button {
       background: #c03926;
       color: #fff;
-      text-align: center;
-      padding: 18px 24px;
-      border-radius: 10px;
-      font-size: 1.1rem;
+      border: none;
+      padding: 14px 28px;
+      font-size: .95rem;
       font-weight: 700;
-      text-decoration: none;
+      font-family: inherit;
+      cursor: pointer;
+      border-radius: 0 50px 50px 0;
+      white-space: nowrap;
       transition: background .2s;
-      margin-bottom: 12px;
     }
-    .val-btn-main:hover { background: #9e2e1e; color: #fff; text-decoration: none; }
+    .val-search-bar button:hover { background: #9e2e1e; }
+
     .val-trust { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
     .val-trust-item { font-size: .8rem; color: #6e6e70; display: flex; align-items: center; gap: 5px; }
     .val-trust-item::before { content: '✓'; color: #c03926; font-weight: 700; }
 
-    .val-body { padding-top: 72px; }
+    .val-or-divider {
+      text-align: center;
+      color: #aaa;
+      font-size: .82rem;
+      margin: 10px 0 0;
+    }
+    .val-or-divider a { color: #c03926; font-weight: 600; }
+
+    /* ── BELOW FOLD ── */
+    .val-body { padding-top: 16px; }
     .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin: 32px 0; }
     .how-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 28px 24px; text-align: center; }
     .how-num { width: 40px; height: 40px; background: #c03926; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; margin: 0 auto 14px; }
@@ -117,7 +136,7 @@
     .vs-card li::before { content: '✓'; color: #c03926; font-weight: 700; flex-shrink: 0; }
 
     @media (max-width: 640px) {
-      .val-cta-card { padding: 32px 24px; }
+      .val-search-bar button { padding: 14px 18px; font-size: .85rem; }
       .val-vs { grid-template-columns: 1fr; }
     }
   </style>
@@ -135,14 +154,36 @@
     </a>
     <nav class="site-nav" id="siteNav">
       <a href="/">Home</a>
-      <a href="/sell-my-home-indianapolis/">Sellers</a>
-      <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+      <div class="nav-item-dropdown">
+        <a href="/sell-my-home-indianapolis/">Sellers</a>
+        <div class="nav-submenu">
+          <a href="/instant-home-valuation/">Instant Home Valuation</a>
+          <a href="/home-value-estimator/">Home Value Estimator</a>
+          <div class="nav-submenu-divider"></div>
+          <a href="/services/free-home-valuation/">Free Home Valuation</a>
+          <a href="/services/sell-my-home/">Sell My Home</a>
+          <a href="/services/pricing-your-home/">Pricing Your Home</a>
+          <a href="/services/expired-listings/">Expired Listings</a>
+        </div>
+      </div>
+      <div class="nav-item-dropdown">
+        <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+        <div class="nav-submenu">
+          <a href="/search/">Search Homes</a>
+          <a href="/home-value-estimator/">Home Value Estimator</a>
+          <div class="nav-submenu-divider"></div>
+          <a href="/services/first-time-home-buyers/">First Time Buyers</a>
+          <a href="/services/buyer-representation/">Buyer Representation</a>
+          <a href="/services/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/services/down-payment-assistance/">Down Payment Help</a>
+        </div>
+      </div>
       <a href="/agents/">Meet Our Agents</a>
       <a href="/blog/">Blog</a>
       <a href="/about/">About</a>
       <a href="/search/" class="nav-cta">Search Homes →</a>
     </nav>
-    <button class="hamburger" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -157,26 +198,35 @@
 <div class="val-hero">
   <div class="container">
     <h1>What Is My Home Worth <em>Right Now?</em></h1>
-    <p class="sub">Get an instant estimate for your Central Indiana home — free, no obligation, and powered by real MLS data from Your Realty Link.</p>
+    <p class="sub">Enter your address for a free instant estimate — no login, no obligation, powered by local Indiana market data.</p>
 
-    <div class="val-cta-card">
-      <h2>Get Your Instant Home Value</h2>
-      <p>Enter your address on our valuation tool and see an estimated market value based on recent comparable sales in your neighborhood — in seconds.</p>
-      <a href="https://yourrealtylink.com/instant-home-valuation" class="val-btn-main" target="_blank" rel="noopener">
-        Get My Instant Home Value →
-      </a>
-      <a href="https://yourrealtylink.com/home-valuation" class="btn btn-outline" style="width:100%; text-align:center; justify-content:center;" target="_blank" rel="noopener">
-        Request a Full CMA Instead
-      </a>
-      <div class="val-trust">
-        <span class="val-trust-item">100% Free</span>
-        <span class="val-trust-item">No Obligation</span>
-        <span class="val-trust-item">Real MLS Data</span>
-        <span class="val-trust-item">Central Indiana Only</span>
-      </div>
+    <div class="val-search-wrap">
+      <form class="val-search-bar" onsubmit="handleAddressSearch(event)">
+        <input type="text" id="val-address" placeholder="Enter your home address, city, or ZIP…" autocomplete="street-address">
+        <button type="submit">Get My Value →</button>
+      </form>
+      <p class="val-or-divider">
+        or <a href="https://yourrealtylink.com/instant-home-valuation" target="_blank" rel="noopener">use the MLS-powered tool on YRL →</a>
+      </p>
+    </div>
+
+    <div class="val-trust">
+      <span class="val-trust-item">100% Free</span>
+      <span class="val-trust-item">No Obligation</span>
+      <span class="val-trust-item">Local Market Data</span>
+      <span class="val-trust-item">Central Indiana</span>
     </div>
   </div>
 </div>
+
+<script>
+function handleAddressSearch(e) {
+  e.preventDefault();
+  const addr = document.getElementById('val-address').value.trim();
+  if (!addr) { document.getElementById('val-address').focus(); return; }
+  window.location.href = '/home-value-estimator/?address=' + encodeURIComponent(addr);
+}
+</script>
 
 <main class="val-body">
   <section class="section">
@@ -314,5 +364,20 @@
   </div>
 </footer>
 
+<script>
+function toggleNav() {
+  document.getElementById('siteNav').classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var dd = e.target.closest('.nav-item-dropdown');
+  if (dd && window.innerWidth <= 700) {
+    var nav = dd.closest('.site-nav');
+    if (nav && nav.classList.contains('open')) {
+      e.preventDefault();
+      dd.classList.toggle('open');
+    }
+  }
+});
+</script>
 </body>
 </html>

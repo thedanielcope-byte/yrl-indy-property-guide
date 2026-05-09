@@ -583,7 +583,7 @@
         <a href="/about/">About</a>
         <a href="/search/" class="nav-cta">Search Homes →</a>
       </nav>
-      <button class="hamburger" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <button class="hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
     </div>
   </header>
 
@@ -1087,6 +1087,16 @@
   let currentStep = 1;
   let calcResult  = {};
 
+  // Pre-fill address from URL param (passed from /instant-home-valuation/)
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const addr = params.get('address');
+    if (addr) {
+      const field = document.getElementById('street');
+      if (field) field.value = addr;
+    }
+  })();
+
   // ═══════════════════════════════════════════════════════════
   // BUTTON SELECT HELPER
   // ═══════════════════════════════════════════════════════════
@@ -1329,5 +1339,20 @@
   }
   </script>
 
+<script>
+function toggleNav() {
+  document.getElementById('siteNav').classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var dd = e.target.closest('.nav-item-dropdown');
+  if (dd && window.innerWidth <= 700) {
+    var nav = dd.closest('.site-nav');
+    if (nav && nav.classList.contains('open')) {
+      e.preventDefault();
+      dd.classList.toggle('open');
+    }
+  }
+});
+</script>
 </body>
 </html>

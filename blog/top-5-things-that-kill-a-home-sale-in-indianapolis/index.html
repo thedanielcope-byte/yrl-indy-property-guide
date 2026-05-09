@@ -141,14 +141,36 @@
     </a>
     <nav class="site-nav" id="siteNav">
       <a href="/">Home</a>
-      <a href="/sell-my-home-indianapolis/">Sellers</a>
-      <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+      <div class="nav-item-dropdown">
+        <a href="/sell-my-home-indianapolis/">Sellers</a>
+        <div class="nav-submenu">
+          <a href="/instant-home-valuation/">Instant Home Valuation</a>
+          <a href="/home-value-estimator/">Home Value Estimator</a>
+          <div class="nav-submenu-divider"></div>
+          <a href="/services/free-home-valuation/">Free Home Valuation</a>
+          <a href="/services/sell-my-home/">Sell My Home</a>
+          <a href="/services/pricing-your-home/">Pricing Your Home</a>
+          <a href="/services/expired-listings/">Expired Listings</a>
+        </div>
+      </div>
+      <div class="nav-item-dropdown">
+        <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+        <div class="nav-submenu">
+          <a href="/search/">Search Homes</a>
+          <a href="/home-value-estimator/">Home Value Estimator</a>
+          <div class="nav-submenu-divider"></div>
+          <a href="/services/first-time-home-buyers/">First Time Buyers</a>
+          <a href="/services/buyer-representation/">Buyer Representation</a>
+          <a href="/services/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/services/down-payment-assistance/">Down Payment Help</a>
+        </div>
+      </div>
       <a href="/agents/">Meet Our Agents</a>
       <a href="/blog/">Blog</a>
       <a href="/about/">About</a>
       <a href="/search/" class="nav-cta">Search Homes →</a>
     </nav>
-    <button class="hamburger" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -372,5 +394,20 @@
   </div>
 </footer>
 
+<script>
+function toggleNav() {
+  document.getElementById('siteNav').classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var dd = e.target.closest('.nav-item-dropdown');
+  if (dd && window.innerWidth <= 700) {
+    var nav = dd.closest('.site-nav');
+    if (nav && nav.classList.contains('open')) {
+      e.preventDefault();
+      dd.classList.toggle('open');
+    }
+  }
+});
+</script>
 </body>
 </html>
