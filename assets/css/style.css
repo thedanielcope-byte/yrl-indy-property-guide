@@ -255,13 +255,16 @@ p  { margin-bottom: 1rem; }
   background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
   color: var(--white);
   border-radius: var(--radius);
-  padding: 40px 36px;
+  padding: 48px 36px;
   margin: 40px 0;
   text-align: center;
 }
+.cta-block h2 { color: var(--white); font-size: 1.75rem; margin-bottom: .75rem; margin-top: 0; }
 .cta-block h3 { color: var(--white); font-size: 1.3rem; margin-bottom: .5rem; margin-top: 0; }
-.cta-block p { color: rgba(255,255,255,.85); font-size: 14px; margin-bottom: 1.5rem; }
+.cta-block p { color: rgba(255,255,255,.88); font-size: 15px; margin-bottom: 1.75rem; max-width: 580px; margin-left: auto; margin-right: auto; }
 .cta-block .btn-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.cta-block .btn-outline { color: var(--white); border-color: rgba(255,255,255,.6); }
+.cta-block .btn-outline:hover { background: rgba(255,255,255,.15); border-color: var(--white); }
 
 .cta-block-light {
   background: var(--light);
@@ -315,33 +318,54 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 .city-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 12px;
+  gap: 14px;
   margin: 1.25rem 0 2rem;
 }
 .city-card {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 12px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dark);
+  padding: 18px 20px 16px;
   text-decoration: none;
   transition: all var(--transition);
   box-shadow: var(--shadow-sm);
 }
+.city-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 5px;
+  line-height: 1.2;
+  padding-right: 24px;
+}
+.city-card p {
+  font-size: .78rem;
+  color: var(--gray);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.city-card .arrow {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  color: var(--red);
+  font-size: 14px;
+  opacity: .5;
+  transition: opacity var(--transition), transform var(--transition);
+}
 .city-card:hover {
   border-color: var(--red);
-  color: var(--red);
   box-shadow: var(--shadow);
   text-decoration: none;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
-.city-card .arrow { color: var(--red); font-size: 12px; opacity: .6; }
+.city-card:hover h3 { color: var(--red); }
+.city-card:hover .arrow { opacity: 1; transform: translateX(3px); }
 
 /* ── INFO BOX ── */
 .info-box {
@@ -446,8 +470,8 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 
 /* ── FOOTER ── */
 .site-footer {
-  background: var(--dark);
-  color: #aaa;
+  background: #f7f7f7;
+  color: #444;
   padding: 56px 0 24px;
   border-top: 3px solid var(--red);
   font-size: 13px;
@@ -459,9 +483,9 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
   margin-bottom: 40px;
 }
 .footer-brand img { height: 36px; margin-bottom: 14px; }
-.footer-brand p { font-size: 13px; color: #888; line-height: 1.6; margin-bottom: 12px; }
+.footer-brand p { font-size: 13px; color: #6e6e70; line-height: 1.6; margin-bottom: 12px; }
 .footer-col h4 {
-  color: var(--white);
+  color: var(--dark);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -470,10 +494,10 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 }
 .footer-col ul { list-style: none; padding: 0; }
 .footer-col ul li { margin-bottom: 8px; }
-.footer-col ul a { color: #888; font-size: 13px; transition: color var(--transition); }
+.footer-col ul a { color: #6e6e70; font-size: 13px; transition: color var(--transition); }
 .footer-col ul a:hover { color: var(--red); text-decoration: none; }
 .footer-bottom {
-  border-top: 1px solid #2a2a2a;
+  border-top: 1px solid #e2e2e2;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -481,19 +505,19 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
   flex-wrap: wrap;
   gap: 10px;
   font-size: 12px;
-  color: #666;
+  color: #999;
 }
-.footer-bottom a { color: #666; }
+.footer-bottom a { color: #999; }
 .footer-bottom a:hover { color: var(--red); text-decoration: none; }
 .social-links { display: flex; gap: 10px; margin-top: 12px; }
 .social-links a {
   width: 30px; height: 30px;
-  background: #2a2a2a;
+  background: #e8e8e8;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #888;
+  color: #555;
   font-size: 13px;
   transition: all var(--transition);
 }
