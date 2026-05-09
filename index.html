@@ -99,7 +99,137 @@
     .about-stat { text-align: center; background: #f7f7f7; border-radius: 8px; padding: 20px; }
     .about-stat .num { font-size: 2rem; font-weight: 700; color: #c03926; display: block; }
     .about-stat .lbl { font-size: .85rem; color: #6e6e70; }
-    @media (max-width: 768px) {
+
+    /* ── SEARCH HERO ── */
+    .search-hero-home {
+      background: linear-gradient(160deg, #0f1923 0%, #1a1a1a 50%, #2a1010 100%);
+      min-height: 72vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .search-hero-home::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 60%, rgba(192,57,38,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .search-hero-home h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.15;
+      max-width: 800px;
+      position: relative;
+    }
+    .search-hero-home .hero-sub {
+      color: rgba(255,255,255,.7);
+      font-size: 1.1rem;
+      margin-bottom: 36px;
+      max-width: 560px;
+      position: relative;
+    }
+    .hero-search-bar {
+      display: flex;
+      width: 100%;
+      max-width: 680px;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.35);
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .hero-search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 18px 24px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: #1a1a1a;
+      background: transparent;
+      min-width: 0;
+    }
+    .hero-search-bar input::placeholder { color: #999; }
+    .hero-search-bar button {
+      background: #c03926;
+      color: #fff;
+      border: none;
+      padding: 18px 32px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      border-radius: 0 50px 50px 0;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+    .hero-search-bar button:hover { background: #9e2e1e; }
+    .hero-quick-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .hero-quick-links span {
+      color: rgba(255,255,255,.55);
+      font-size: .85rem;
+      align-self: center;
+    }
+    .hero-quick-link {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.9);
+      padding: 7px 18px;
+      border-radius: 20px;
+      font-size: .85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background .15s, border-color .15s;
+    }
+    .hero-quick-link:hover {
+      background: rgba(255,255,255,.2);
+      border-color: rgba(255,255,255,.4);
+      text-decoration: none;
+      color: #fff;
+    }
+    .hero-trust {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255,255,255,.6);
+      font-size: .82rem;
+    }
+    .hero-trust-item .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c03926;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .search-hero-home { min-height: 60vh; padding: 100px 16px 48px; }
+      .hero-search-bar { border-radius: 14px; flex-direction: column; }
+      .hero-search-bar input { padding: 16px 20px; border-radius: 14px 14px 0 0; }
+      .hero-search-bar button { border-radius: 0 0 14px 14px; padding: 16px; }
       .about-home { grid-template-columns: 1fr; }
       .section-header h2 { font-size: 1.5rem; }
     }
@@ -130,21 +260,37 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="page-hero" style="padding: 100px 0 80px;">
-  <div class="container">
-    <h1 style="font-size:2.6rem;font-weight:700;color:#fff;margin-bottom:16px;max-width:780px;">Central Indiana Real Estate — Find Your Place in Indianapolis</h1>
-    <p class="hero-sub" style="max-width:620px;">Your Realty Link is a full-service MIBOR brokerage serving buyers, sellers, and investors across the Indianapolis metro and Central Indiana. Browse hundreds of city guides, neighborhood pages, and local resources — then connect with an agent who truly knows this market.</p>
-    <div class="hero-badges">
-      <span class="hero-badge">17 Counties Covered</span>
-      <span class="hero-badge">275+ City &amp; Service Pages</span>
-      <span class="hero-badge">MIBOR Member Brokerage</span>
-      <span class="hero-badge">Free Home Valuations</span>
-    </div>
-    <div class="btn-group" style="margin-top:32px;">
-      <a href="https://yourrealtylink.com/property-search" class="btn btn-primary" target="_blank" rel="noopener">Search Homes on YRL →</a>
-      <a href="https://yourrealtylink.com/home-valuation" class="btn btn-white" target="_blank" rel="noopener">Get a Free Valuation</a>
-    </div>
+<!-- SEARCH HERO -->
+<section class="search-hero-home">
+  <h1>Find Your Home in Central Indiana</h1>
+  <p class="hero-sub">Search every active MLS listing across Indianapolis and the surrounding metro — powered by Your Realty Link and MIBOR.</p>
+
+  <form class="hero-search-bar" onsubmit="event.preventDefault(); window.location.href='/search/';" role="search">
+    <input
+      type="text"
+      placeholder="Search by city, ZIP code, or neighborhood..."
+      aria-label="Search homes by city, ZIP code, or neighborhood"
+      autocomplete="off"
+    >
+    <button type="submit">Search Homes</button>
+  </form>
+
+  <div class="hero-quick-links">
+    <span>Popular:</span>
+    <a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="hero-quick-link">Carmel</a>
+    <a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="hero-quick-link">Fishers</a>
+    <a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="hero-quick-link">Greenwood</a>
+    <a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="hero-quick-link">Noblesville</a>
+    <a href="/cities/hendricks-county/avon-indiana-real-estate/" class="hero-quick-link">Avon</a>
+    <a href="/cities/boone-county/zionsville-indiana-real-estate/" class="hero-quick-link">Zionsville</a>
+    <a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="hero-quick-link">Westfield</a>
+  </div>
+
+  <div class="hero-trust">
+    <div class="hero-trust-item"><span class="dot"></span> All MIBOR MLS Listings</div>
+    <div class="hero-trust-item"><span class="dot"></span> Updated Daily</div>
+    <div class="hero-trust-item"><span class="dot"></span> 17 Counties Covered</div>
+    <div class="hero-trust-item"><span class="dot"></span> Free Agent Representation</div>
   </div>
 </section>
 
@@ -395,7 +541,7 @@
     <h2>Ready to Buy or Sell in Central Indiana?</h2>
     <p>Connect with a Your Realty Link agent today. Search every active MLS listing, get a free home valuation, or call Janet Giles-Schultz directly at 317-997-7404.</p>
     <div class="btn-group">
-      <a href="https://yourrealtylink.com/property-search" class="btn btn-white" target="_blank" rel="noopener">Search Homes in Central Indiana →</a>
+      <a href="/search/" class="btn btn-white">Search Homes in Central Indiana →</a>
       <a href="https://yourrealtylink.com/home-valuation" class="btn btn-outline" target="_blank" rel="noopener">Get a Free Home Valuation</a>
     </div>
   </div>
