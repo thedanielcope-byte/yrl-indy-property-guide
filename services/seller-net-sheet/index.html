@@ -385,7 +385,7 @@ function toggleNav() {
 }
 document.addEventListener('click', function(e) {
   var dd = e.target.closest('.nav-item-dropdown');
-  if (dd && window.innerWidth <= 700) {
+  if (dd && window.innerWidth <= 960) {
     var nav = dd.closest('.site-nav');
     if (nav && nav.classList.contains('open')) {
       e.preventDefault();

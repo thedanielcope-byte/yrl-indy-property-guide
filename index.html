@@ -14,6 +14,7 @@
   <meta name="description" content="Your source for Central Indiana real estate. Browse cities, neighborhoods, and services powered by Your Realty Link — Indianapolis's trusted MIBOR brokerage.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://indypropertyguide.com/">
+  <meta name="google-site-verification" content="Wyw8kNVDT8UngiIVhqXbPvgHzod3tJ23e0W49qbLq5s">
   <meta property="og:title" content="Central Indiana Real Estate | Indy Property Guide">
   <meta property="og:description" content="Your source for Central Indiana real estate. Browse cities, neighborhoods, and services powered by Your Realty Link — Indianapolis's trusted MIBOR brokerage.">
   <meta property="og:url" content="https://indypropertyguide.com/">
@@ -636,7 +637,7 @@ function toggleNav() {
 }
 document.addEventListener('click', function(e) {
   var dd = e.target.closest('.nav-item-dropdown');
-  if (dd && window.innerWidth <= 700) {
+  if (dd && window.innerWidth <= 960) {
     var nav = dd.closest('.site-nav');
     if (nav && nav.classList.contains('open')) {
       e.preventDefault();
