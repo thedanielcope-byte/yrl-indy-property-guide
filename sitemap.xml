@@ -274,6 +274,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/marion-county/irvington-indianapolis-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/marion-county/broad-ripple-indianapolis-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/marion-county/geist-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/marion-county/eagle-creek-indianapolis-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ═══════════════════════════════════════
        CITY PAGES — SHELBY COUNTY
@@ -288,6 +312,12 @@
   <!-- ═══════════════════════════════════════
        SERVICE PAGES — HIGH PRIORITY (lead gen)
        ═══════════════════════════════════════ -->
+  <url>
+    <loc>https://indypropertyguide.com/services/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://indypropertyguide.com/services/expired-listings/</loc>
     <lastmod>2026-05-13</lastmod>
