@@ -772,6 +772,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://indypropertyguide.com/blog/anderson-indiana-real-estate-guide/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/blog/why-real-estate-agents-switch-brokerages-indianapolis/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/blog/multi-family-investing-indianapolis/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- ═══════════════════════════════════════
        SERVICE PAGES — PHASE 2 (added 2026-05-22)
