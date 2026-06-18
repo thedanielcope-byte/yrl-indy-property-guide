@@ -354,6 +354,28 @@
   </url>
 
   <!-- ═══════════════════════════════════════
+       CITY PAGES — MADISON COUNTY (added 2026-05-22)
+       ═══════════════════════════════════════ -->
+  <url>
+    <loc>https://indypropertyguide.com/cities/madison-county/anderson-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/madison-county/pendleton-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/madison-county/lapel-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════
        CITY PAGES — SHELBY COUNTY
        ═══════════════════════════════════════ -->
   <url>
