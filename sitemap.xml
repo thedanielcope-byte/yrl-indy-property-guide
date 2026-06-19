@@ -1077,4 +1077,81 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ═══════════════════════════════════════
+       FINAL 12 CITIES — Phase 3/4 (added 2026-05-22)
+       Completes entire CLAUDE.md city map
+       ═══════════════════════════════════════ -->
+  <url>
+    <loc>https://indypropertyguide.com/cities/montgomery-county/crawfordsville-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/decatur-county/greensburg-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/brown-county/nashville-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/brown-county/bean-blossom-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/hancock-county/shirley-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/decatur-county/westport-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/putnam-county/greencastle-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/putnam-county/cloverdale-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/parke-county/rockville-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/bartholomew-county/columbus-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/jackson-county/seymour-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/jennings-county/north-vernon-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
