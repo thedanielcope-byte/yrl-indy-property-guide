@@ -288,6 +288,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/hendricks-county/danville-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/hendricks-county/pittsboro-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/hendricks-county/clayton-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ═══════════════════════════════════════
        CITY PAGES — JOHNSON COUNTY
@@ -470,6 +488,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/madison-county/alexandria-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/madison-county/elwood-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ═══════════════════════════════════════
        CITY PAGES — SHELBY COUNTY
@@ -477,6 +507,46 @@
   <url>
     <loc>https://indypropertyguide.com/cities/shelby-county/shelbyville-indiana-real-estate/</loc>
     <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/shelby-county/fairland-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/shelby-county/morristown-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/shelby-county/waldron-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════
+       CITY PAGES — MORGAN COUNTY (added 2026-05-22)
+       ═══════════════════════════════════════ -->
+  <url>
+    <loc>https://indypropertyguide.com/cities/morgan-county/mooresville-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/morgan-county/martinsville-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indypropertyguide.com/cities/morgan-county/monrovia-indiana-real-estate/</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
