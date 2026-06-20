@@ -31,6 +31,11 @@
     data.source_url = window.location.href;
     data.submitted_at = new Date().toISOString();
 
+    // Auto-append Indiana if no state detected
+    if (data.address && !/\b[A-Z]{2}\b/.test(data.address) && !/indiana/i.test(data.address)) {
+      data.address = data.address.replace(/,?\s*$/, '') + ', IN';
+    }
+
     // Send to GHL in background (don't wait for it)
     fetch(GHL_WEBHOOK, {
       method: 'POST',
