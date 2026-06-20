@@ -1,1357 +1,1357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Home Value Estimator — Indianapolis & Central Indiana | Indy Property Guide</title>
-  <meta name="description" content="Get an instant home value estimate for your Central Indiana property. Free tool using local market data by ZIP code. No obligation — see what your home is worth today.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Free Home Value Estimator — Indianapolis & Central Indiana | Indy Property Guide</title>
+ <meta name="description" content="Get an instant home value estimate for your Central Indiana property. Free tool using local market data by ZIP code. No obligation — see what your home is worth today.">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/assets/css/style.css">
 
-  <!--
-  ═══════════════════════════════════════════════════════════
-  EMAILJS SETUP (5 minutes — free at emailjs.com)
-  ───────────────────────────────────────────────────────────
-  1. Go to https://emailjs.com → Sign Up Free
-  2. Add Email Service → Connect Gmail (janet@yourrealtylink.com)
-     → copy the Service ID, paste below as EMAILJS_SERVICE_ID
-  3. Create Email Template → set To Email: janet@yourrealtylink.com
-     Use these template variables:
-       {{from_name}}  {{from_email}}  {{from_phone}}
-       {{property_address}}  {{estimated_value}}
-       {{value_low}}  {{value_high}}
-       {{bedrooms}}  {{bathrooms}}  {{sqft}}
-       {{year_built}}  {{condition}}
-     → copy the Template ID, paste below as EMAILJS_TEMPLATE_ID
-  4. Account → API Keys → copy Public Key → paste as EMAILJS_PUBLIC_KEY
-  ═══════════════════════════════════════════════════════════
-  -->
+ <!--
+ ═══════════════════════════════════════════════════════════
+ EMAILJS SETUP (5 minutes — free at emailjs.com)
+ ───────────────────────────────────────────────────────────
+ 1. Go to https://emailjs.com → Sign Up Free
+ 2. Add Email Service → Connect Gmail (csirealtyteam@yourrealtylink.com)
+ → copy the Service ID, paste below as EMAILJS_SERVICE_ID
+ 3. Create Email Template → set To Email: csirealtyteam@yourrealtylink.com
+ Use these template variables:
+ {{from_name}} {{from_email}} {{from_phone}}
+ {{property_address}} {{estimated_value}}
+ {{value_low}} {{value_high}}
+ {{bedrooms}} {{bathrooms}} {{sqft}}
+ {{year_built}} {{condition}}
+ → copy the Template ID, paste below as EMAILJS_TEMPLATE_ID
+ 4. Account → API Keys → copy Public Key → paste as EMAILJS_PUBLIC_KEY
+ ═══════════════════════════════════════════════════════════
+ -->
 
-  <style>
-    :root {
-      --red: #c03926;
-      --gray: #6e6e70;
-      --dark: #1a1a1a;
-      --white: #ffffff;
-      --light: #f7f7f7;
-      --border: #e2e2e2;
-      --green: #2d7a4f;
-    }
+ <style>
+:root {
+ --red: #c03926;
+ --gray: #6e6e70;
+ --dark: #1a1a1a;
+ --white: #ffffff;
+ --light: #f7f7f7;
+ --border: #e2e2e2;
+ --green: #2d7a4f;
+ }
 
-    *, *::before, *::after { box-sizing: border-box; }
+ *, *::before, *::after { box-sizing: border-box; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--dark);
-      background: #fff;
-      margin: 0;
-    }
+ body {
+ font-family: 'Inter', sans-serif;
+ color: var(--dark);
+ background: #fff;
+ margin: 0;
+ }
 
-    /* ── HERO ── */
-    .estimator-hero {
-      background: linear-gradient(160deg, #fdf2f0 0%, #fff 55%);
-      border-bottom: 1px solid #ead9d6;
-      padding: 48px 20px 40px;
-      text-align: center;
-      position: relative;
-    }
-    .estimator-hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: var(--red);
-    }
-    .estimator-hero h1 {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 800;
-      color: var(--dark);
-      margin: 0 0 10px;
-      line-height: 1.2;
-    }
-    .estimator-hero h1 em {
-      font-style: normal;
-      color: var(--red);
-    }
-    .estimator-hero p {
-      font-size: 1rem;
-      color: var(--gray);
-      margin: 0 auto;
-      max-width: 540px;
-    }
+ /* ── HERO ── */
+.estimator-hero {
+ background: linear-gradient(160deg, #fdf2f0 0%, #fff 55%);
+ border-bottom: 1px solid #ead9d6;
+ padding: 48px 20px 40px;
+ text-align: center;
+ position: relative;
+ }
+.estimator-hero::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0; right: 0;
+ height: 4px;
+ background: var(--red);
+ }
+.estimator-hero h1 {
+ font-size: clamp(1.6rem, 4vw, 2.4rem);
+ font-weight: 800;
+ color: var(--dark);
+ margin: 0 0 10px;
+ line-height: 1.2;
+ }
+.estimator-hero h1 em {
+ font-style: normal;
+ color: var(--red);
+ }
+.estimator-hero p {
+ font-size: 1rem;
+ color: var(--gray);
+ margin: 0 auto;
+ max-width: 540px;
+ }
 
-    /* ── PROGRESS BAR ── */
-    .progress-wrap {
-      max-width: 560px;
-      margin: 32px auto 0;
-      display: flex;
-      align-items: center;
-      gap: 0;
-    }
-    .progress-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1;
-      position: relative;
-    }
-    .progress-step:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 16px;
-      left: 50%;
-      width: 100%;
-      height: 2px;
-      background: var(--border);
-      z-index: 0;
-    }
-    .progress-step.done:not(:last-child)::after,
-    .progress-step.active:not(:last-child)::after {
-      background: var(--red);
-    }
-    .step-dot {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--border);
-      color: #999;
-      font-weight: 700;
-      font-size: .85rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-      transition: all .3s;
-    }
-    .progress-step.active .step-dot {
-      background: var(--red);
-      color: #fff;
-      box-shadow: 0 0 0 4px rgba(192,57,38,.15);
-    }
-    .progress-step.done .step-dot {
-      background: var(--red);
-      color: #fff;
-    }
-    .step-label {
-      font-size: .7rem;
-      font-weight: 600;
-      color: #999;
-      margin-top: 6px;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-    }
-    .progress-step.active .step-label,
-    .progress-step.done .step-label { color: var(--red); }
+ /* ── PROGRESS BAR ── */
+.progress-wrap {
+ max-width: 560px;
+ margin: 32px auto 0;
+ display: flex;
+ align-items: center;
+ gap: 0;
+ }
+.progress-step {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ flex: 1;
+ position: relative;
+ }
+.progress-step:not(:last-child)::after {
+ content: '';
+ position: absolute;
+ top: 16px;
+ left: 50%;
+ width: 100%;
+ height: 2px;
+ background: var(--border);
+ z-index: 0;
+ }
+.progress-step.done:not(:last-child)::after,
+.progress-step.active:not(:last-child)::after {
+ background: var(--red);
+ }
+.step-dot {
+ width: 32px;
+ height: 32px;
+ border-radius: 50%;
+ background: var(--border);
+ color: #999;
+ font-weight: 700;
+ font-size:.85rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ z-index: 1;
+ transition: all.3s;
+ }
+.progress-step.active.step-dot {
+ background: var(--red);
+ color: #fff;
+ box-shadow: 0 0 0 4px rgba(192,57,38,.15);
+ }
+.progress-step.done.step-dot {
+ background: var(--red);
+ color: #fff;
+ }
+.step-label {
+ font-size:.7rem;
+ font-weight: 600;
+ color: #999;
+ margin-top: 6px;
+ text-transform: uppercase;
+ letter-spacing:.04em;
+ }
+.progress-step.active.step-label,
+.progress-step.done.step-label { color: var(--red); }
 
-    /* ── FORM CONTAINER ── */
-    .estimator-wrap {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
+ /* ── FORM CONTAINER ── */
+.estimator-wrap {
+ max-width: 620px;
+ margin: 0 auto;
+ padding: 40px 20px 60px;
+ }
 
-    .form-step {
-      display: none;
-      animation: fadeUp .3s ease;
-    }
-    .form-step.active { display: block; }
+.form-step {
+ display: none;
+ animation: fadeUp.3s ease;
+ }
+.form-step.active { display: block; }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+ @keyframes fadeUp {
+ from { opacity: 0; transform: translateY(12px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
 
-    .step-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin: 0 0 6px;
-      color: var(--dark);
-    }
-    .step-sub {
-      font-size: .9rem;
-      color: var(--gray);
-      margin: 0 0 28px;
-    }
+.step-title {
+ font-size: 1.4rem;
+ font-weight: 700;
+ margin: 0 0 6px;
+ color: var(--dark);
+ }
+.step-sub {
+ font-size:.9rem;
+ color: var(--gray);
+ margin: 0 0 28px;
+ }
 
-    /* ── FORM FIELDS ── */
-    .field-group {
-      margin-bottom: 20px;
-    }
-    .field-group label {
-      display: block;
-      font-size: .82rem;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-    }
-    .field-group input,
-    .field-group select {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-size: .95rem;
-      font-family: inherit;
-      color: var(--dark);
-      background: #fff;
-      transition: border-color .2s;
-      -webkit-appearance: none;
-    }
-    .field-group input:focus,
-    .field-group select:focus {
-      outline: none;
-      border-color: var(--red);
-    }
-    .field-group input.error,
-    .field-group select.error {
-      border-color: #e03e3e;
-    }
-    .field-hint {
-      font-size: .78rem;
-      color: #aaa;
-      margin-top: 4px;
-    }
+ /* ── FORM FIELDS ── */
+.field-group {
+ margin-bottom: 20px;
+ }
+.field-group label {
+ display: block;
+ font-size:.82rem;
+ font-weight: 600;
+ color: var(--dark);
+ margin-bottom: 6px;
+ text-transform: uppercase;
+ letter-spacing:.04em;
+ }
+.field-group input,
+.field-group select {
+ width: 100%;
+ padding: 12px 14px;
+ border: 1.5px solid var(--border);
+ border-radius: 8px;
+ font-size:.95rem;
+ font-family: inherit;
+ color: var(--dark);
+ background: #fff;
+ transition: border-color.2s;
+ -webkit-appearance: none;
+ }
+.field-group input:focus,
+.field-group select:focus {
+ outline: none;
+ border-color: var(--red);
+ }
+.field-group input.error,
+.field-group select.error {
+ border-color: #e03e3e;
+ }
+.field-hint {
+ font-size:.78rem;
+ color: #aaa;
+ margin-top: 4px;
+ }
 
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    @media (max-width: 480px) { .field-row { grid-template-columns: 1fr; } }
+.field-row {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 14px;
+ }
+ @media (max-width: 480px) {.field-row { grid-template-columns: 1fr; } }
 
-    /* ── BUTTON SELECTS ── */
-    .btn-select-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .btn-select {
-      padding: 9px 18px;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      background: #fff;
-      color: #555;
-      font-size: .88rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all .2s;
-      font-family: inherit;
-    }
-    .btn-select:hover {
-      border-color: var(--red);
-      color: var(--red);
-    }
-    .btn-select.selected {
-      background: var(--red);
-      border-color: var(--red);
-      color: #fff;
-    }
+ /* ── BUTTON SELECTS ── */
+.btn-select-group {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ }
+.btn-select {
+ padding: 9px 18px;
+ border: 1.5px solid var(--border);
+ border-radius: 8px;
+ background: #fff;
+ color: #555;
+ font-size:.88rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all.2s;
+ font-family: inherit;
+ }
+.btn-select:hover {
+ border-color: var(--red);
+ color: var(--red);
+ }
+.btn-select.selected {
+ background: var(--red);
+ border-color: var(--red);
+ color: #fff;
+ }
 
-    /* ── NAV BUTTONS ── */
-    .form-nav {
-      display: flex;
-      gap: 12px;
-      margin-top: 32px;
-    }
-    .btn-next {
-      flex: 1;
-      padding: 14px 20px;
-      background: var(--red);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: inherit;
-      transition: background .2s, transform .1s;
-    }
-    .btn-next:hover { background: #a8301f; }
-    .btn-next:active { transform: scale(.98); }
-    .btn-back {
-      padding: 14px 20px;
-      background: transparent;
-      color: var(--gray);
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-size: .95rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
-      transition: border-color .2s;
-    }
-    .btn-back:hover { border-color: var(--gray); }
+ /* ── NAV BUTTONS ── */
+.form-nav {
+ display: flex;
+ gap: 12px;
+ margin-top: 32px;
+ }
+.btn-next {
+ flex: 1;
+ padding: 14px 20px;
+ background: var(--red);
+ color: #fff;
+ border: none;
+ border-radius: 8px;
+ font-size: 1rem;
+ font-weight: 700;
+ cursor: pointer;
+ font-family: inherit;
+ transition: background.2s, transform.1s;
+ }
+.btn-next:hover { background: #a8301f; }
+.btn-next:active { transform: scale(.98); }
+.btn-back {
+ padding: 14px 20px;
+ background: transparent;
+ color: var(--gray);
+ border: 1.5px solid var(--border);
+ border-radius: 8px;
+ font-size:.95rem;
+ font-weight: 600;
+ cursor: pointer;
+ font-family: inherit;
+ transition: border-color.2s;
+ }
+.btn-back:hover { border-color: var(--gray); }
 
-    /* ── RESULT CARD ── */
-    .result-card {
-      background: linear-gradient(135deg, #c03926 0%, #a8301f 100%);
-      border-radius: 16px;
-      padding: 32px 28px;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 28px;
-      box-shadow: 0 8px 32px rgba(192,57,38,.25);
-    }
-    .result-label {
-      font-size: .75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      opacity: .8;
-      margin-bottom: 8px;
-    }
-    .result-range {
-      font-size: clamp(1.6rem, 5vw, 2.4rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-    .result-estimate {
-      font-size: .88rem;
-      opacity: .75;
-    }
-    .result-disclaimer {
-      font-size: .75rem;
-      opacity: .6;
-      margin-top: 10px;
-      font-style: italic;
-    }
+ /* ── RESULT CARD ── */
+.result-card {
+ background: linear-gradient(135deg, #c03926 0%, #a8301f 100%);
+ border-radius: 16px;
+ padding: 32px 28px;
+ color: #fff;
+ text-align: center;
+ margin-bottom: 28px;
+ box-shadow: 0 8px 32px rgba(192,57,38,.25);
+ }
+.result-label {
+ font-size:.75rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing:.1em;
+ opacity:.8;
+ margin-bottom: 8px;
+ }
+.result-range {
+ font-size: clamp(1.6rem, 5vw, 2.4rem);
+ font-weight: 800;
+ line-height: 1.1;
+ margin-bottom: 8px;
+ }
+.result-estimate {
+ font-size:.88rem;
+ opacity:.75;
+ }
+.result-disclaimer {
+ font-size:.75rem;
+ opacity:.6;
+ margin-top: 10px;
+ font-style: italic;
+ }
 
-    .result-details {
-      background: var(--light);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
-      text-align: center;
-    }
-    .detail-item span {
-      display: block;
-      font-size: .7rem;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      color: #aaa;
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-    .detail-item strong {
-      font-size: .95rem;
-      color: var(--dark);
-    }
+.result-details {
+ background: var(--light);
+ border-radius: 12px;
+ padding: 20px;
+ margin-bottom: 24px;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 12px;
+ text-align: center;
+ }
+.detail-item span {
+ display: block;
+ font-size:.7rem;
+ text-transform: uppercase;
+ letter-spacing:.05em;
+ color: #aaa;
+ font-weight: 600;
+ margin-bottom: 3px;
+ }
+.detail-item strong {
+ font-size:.95rem;
+ color: var(--dark);
+ }
 
-    /* ── LEAD FORM GATE ── */
-    .lead-gate {
-      border: 2px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      background: #fff;
-    }
-    .lead-gate-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin: 0 0 4px;
-    }
-    .lead-gate-sub {
-      font-size: .85rem;
-      color: var(--gray);
-      margin: 0 0 20px;
-    }
+ /* ── LEAD FORM GATE ── */
+.lead-gate {
+ border: 2px solid var(--border);
+ border-radius: 12px;
+ padding: 24px;
+ background: #fff;
+ }
+.lead-gate-title {
+ font-size: 1rem;
+ font-weight: 700;
+ color: var(--dark);
+ margin: 0 0 4px;
+ }
+.lead-gate-sub {
+ font-size:.85rem;
+ color: var(--gray);
+ margin: 0 0 20px;
+ }
 
-    /* ── TRUST BADGES ── */
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 28px;
-      justify-content: center;
-    }
-    .trust-badge {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--light);
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-size: .78rem;
-      color: var(--gray);
-      font-weight: 600;
-    }
-    .trust-badge .icon { color: var(--green); font-size: .9rem; }
+ /* ── TRUST BADGES ── */
+.trust-row {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ margin-top: 28px;
+ justify-content: center;
+ }
+.trust-badge {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ background: var(--light);
+ border-radius: 20px;
+ padding: 6px 14px;
+ font-size:.78rem;
+ color: var(--gray);
+ font-weight: 600;
+ }
+.trust-badge.icon { color: var(--green); font-size:.9rem; }
 
-    /* ── SUCCESS STATE ── */
-    .success-state {
-      display: none;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .success-icon {
-      width: 64px;
-      height: 64px;
-      background: #e8f5ee;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 2rem;
-    }
-    .success-state h2 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--dark);
-      margin: 0 0 10px;
-    }
-    .success-state p {
-      color: var(--gray);
-      font-size: .95rem;
-      margin: 0 auto 24px;
-      max-width: 400px;
-    }
+ /* ── SUCCESS STATE ── */
+.success-state {
+ display: none;
+ text-align: center;
+ padding: 40px 20px;
+ }
+.success-icon {
+ width: 64px;
+ height: 64px;
+ background: #e8f5ee;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto 20px;
+ font-size: 2rem;
+ }
+.success-state h2 {
+ font-size: 1.5rem;
+ font-weight: 800;
+ color: var(--dark);
+ margin: 0 0 10px;
+ }
+.success-state p {
+ color: var(--gray);
+ font-size:.95rem;
+ margin: 0 auto 24px;
+ max-width: 400px;
+ }
 
-    /* ── BELOW FOLD ── */
-    .how-section {
-      background: var(--light);
-      border-top: 1px solid var(--border);
-      padding: 56px 20px;
-    }
-    .how-inner {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .section-eyebrow {
-      text-align: center;
-      font-size: .75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--red);
-      margin-bottom: 8px;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--dark);
-      margin: 0 0 40px;
-    }
-    .how-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-    .how-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 24px;
-      border: 1px solid var(--border);
-    }
-    .how-num {
-      width: 36px;
-      height: 36px;
-      background: var(--red);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 14px;
-    }
-    .how-card h3 {
-      font-size: .95rem;
-      font-weight: 700;
-      margin: 0 0 6px;
-    }
-    .how-card p {
-      font-size: .85rem;
-      color: var(--gray);
-      margin: 0;
-      line-height: 1.5;
-    }
+ /* ── BELOW FOLD ── */
+.how-section {
+ background: var(--light);
+ border-top: 1px solid var(--border);
+ padding: 56px 20px;
+ }
+.how-inner {
+ max-width: 860px;
+ margin: 0 auto;
+ }
+.section-eyebrow {
+ text-align: center;
+ font-size:.75rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing:.1em;
+ color: var(--red);
+ margin-bottom: 8px;
+ }
+.section-title {
+ text-align: center;
+ font-size: 1.6rem;
+ font-weight: 800;
+ color: var(--dark);
+ margin: 0 0 40px;
+ }
+.how-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ gap: 24px;
+ }
+.how-card {
+ background: #fff;
+ border-radius: 12px;
+ padding: 24px;
+ border: 1px solid var(--border);
+ }
+.how-num {
+ width: 36px;
+ height: 36px;
+ background: var(--red);
+ color: #fff;
+ border-radius: 8px;
+ font-weight: 800;
+ font-size: 1rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 14px;
+ }
+.how-card h3 {
+ font-size:.95rem;
+ font-weight: 700;
+ margin: 0 0 6px;
+ }
+.how-card p {
+ font-size:.85rem;
+ color: var(--gray);
+ margin: 0;
+ line-height: 1.5;
+ }
 
-    .factors-section {
-      padding: 56px 20px;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .factors-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-    }
-    .factor-chip {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--light);
-      border-radius: 10px;
-      padding: 14px 16px;
-      font-size: .88rem;
-      font-weight: 600;
-      color: var(--dark);
-    }
-    .factor-chip .fi {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
+.factors-section {
+ padding: 56px 20px;
+ max-width: 860px;
+ margin: 0 auto;
+ }
+.factors-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+ gap: 14px;
+ }
+.factor-chip {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ background: var(--light);
+ border-radius: 10px;
+ padding: 14px 16px;
+ font-size:.88rem;
+ font-weight: 600;
+ color: var(--dark);
+ }
+.factor-chip.fi {
+ font-size: 1.2rem;
+ flex-shrink: 0;
+ }
 
-    .agent-cta-section {
-      background: var(--red);
-      padding: 56px 20px;
-      text-align: center;
-      color: #fff;
-    }
-    .agent-cta-section h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      margin: 0 0 10px;
-      color: #fff;
-    }
-    .agent-cta-section p {
-      opacity: .85;
-      margin: 0 0 28px;
-      font-size: 1rem;
-    }
-    .cta-btn-white {
-      display: inline-block;
-      padding: 14px 32px;
-      background: #fff;
-      color: var(--red);
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      margin: 6px;
-      transition: transform .15s;
-    }
-    .cta-btn-white:hover { transform: translateY(-2px); }
-    .cta-btn-outline-white {
-      display: inline-block;
-      padding: 13px 28px;
-      border: 2px solid rgba(255,255,255,.6);
-      color: #fff;
-      font-weight: 600;
-      font-size: .95rem;
-      border-radius: 8px;
-      text-decoration: none;
-      margin: 6px;
-      transition: all .15s;
-    }
-    .cta-btn-outline-white:hover {
-      border-color: #fff;
-      background: rgba(255,255,255,.1);
-    }
+.agent-cta-section {
+ background: var(--red);
+ padding: 56px 20px;
+ text-align: center;
+ color: #fff;
+ }
+.agent-cta-section h2 {
+ font-size: 1.8rem;
+ font-weight: 800;
+ margin: 0 0 10px;
+ color: #fff;
+ }
+.agent-cta-section p {
+ opacity:.85;
+ margin: 0 0 28px;
+ font-size: 1rem;
+ }
+.cta-btn-white {
+ display: inline-block;
+ padding: 14px 32px;
+ background: #fff;
+ color: var(--red);
+ font-weight: 700;
+ font-size: 1rem;
+ border-radius: 8px;
+ text-decoration: none;
+ margin: 6px;
+ transition: transform.15s;
+ }
+.cta-btn-white:hover { transform: translateY(-2px); }
+.cta-btn-outline-white {
+ display: inline-block;
+ padding: 13px 28px;
+ border: 2px solid rgba(255,255,255,.6);
+ color: #fff;
+ font-weight: 600;
+ font-size:.95rem;
+ border-radius: 8px;
+ text-decoration: none;
+ margin: 6px;
+ transition: all.15s;
+ }
+.cta-btn-outline-white:hover {
+ border-color: #fff;
+ background: rgba(255,255,255,.1);
+ }
 
-    /* ── SPINNER ── */
-    .spinner {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 2px solid rgba(255,255,255,.4);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
-      vertical-align: middle;
-      margin-right: 6px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-  </style>
+ /* ── SPINNER ── */
+.spinner {
+ display: inline-block;
+ width: 18px;
+ height: 18px;
+ border: 2px solid rgba(255,255,255,.4);
+ border-top-color: #fff;
+ border-radius: 50%;
+ animation: spin.7s linear infinite;
+ vertical-align: middle;
+ margin-right: 6px;
+ }
+ @keyframes spin { to { transform: rotate(360deg); } }
+ </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="site-logo">
-        <img src="https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png" alt="Your Realty Link" height="36">
-        <span>Indy Property Guide</span>
-      </a>
-      <nav class="site-nav" id="siteNav">
-        <a href="/">Home</a>
-        <a href="/sell-my-home-indianapolis/">Sellers</a>
-        <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
-        <a href="https://yourrealtylink.com/agent-search" target="_blank" rel="noopener">Meet Our Agents</a>
-        <a href="/blog/">Blog</a>
-        <a href="/about/">About</a>
-        <a href="/search/" class="nav-cta">Search Homes →</a>
-      </nav>
-      <button class="hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="estimator-hero">
-    <h1>What Is Your Home Worth in <em>Central Indiana</em>?</h1>
-    <p>Get a free instant estimate in under 2 minutes using local market data. No obligation, no login required.</p>
-
-    <div class="progress-wrap">
-      <div class="progress-step active" id="prog-1">
-        <div class="step-dot">1</div>
-        <div class="step-label">Address</div>
-      </div>
-      <div class="progress-step" id="prog-2">
-        <div class="step-dot">2</div>
-        <div class="step-label">Details</div>
-      </div>
-      <div class="progress-step" id="prog-3">
-        <div class="step-dot">3</div>
-        <div class="step-label">Your Estimate</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORM AREA -->
-  <div class="estimator-wrap">
-
-    <!-- ── STEP 1: ADDRESS ── -->
-    <div class="form-step active" id="step-1">
-      <h2 class="step-title">What's the property address?</h2>
-      <p class="step-sub">We use your ZIP code to look up local market data for your area.</p>
-
-      <div class="field-group">
-        <label for="street">Street Address</label>
-        <input type="text" id="street" placeholder="e.g. 4821 Oak Ridge Dr" autocomplete="street-address">
-      </div>
-
-      <div class="field-row">
-        <div class="field-group">
-          <label for="city">City</label>
-          <select id="city">
-            <option value="">Select city…</option>
-            <optgroup label="Hamilton County">
-              <option value="Carmel">Carmel</option>
-              <option value="Fishers">Fishers</option>
-              <option value="Noblesville">Noblesville</option>
-              <option value="Westfield">Westfield</option>
-              <option value="Zionsville">Zionsville (Boone)</option>
-              <option value="Arcadia">Arcadia</option>
-              <option value="Cicero">Cicero</option>
-              <option value="Sheridan">Sheridan</option>
-            </optgroup>
-            <optgroup label="Marion County / Indianapolis">
-              <option value="Indianapolis">Indianapolis</option>
-              <option value="Southport">Southport</option>
-              <option value="Lawrence">Lawrence</option>
-              <option value="Beech Grove">Beech Grove</option>
-              <option value="Speedway">Speedway</option>
-              <option value="Broad Ripple">Broad Ripple</option>
-              <option value="Irvington">Irvington</option>
-              <option value="Geist">Geist</option>
-            </optgroup>
-            <optgroup label="Johnson County">
-              <option value="Greenwood">Greenwood</option>
-              <option value="Franklin">Franklin</option>
-              <option value="Bargersville">Bargersville</option>
-              <option value="Whiteland">Whiteland</option>
-            </optgroup>
-            <optgroup label="Hendricks County">
-              <option value="Avon">Avon</option>
-              <option value="Brownsburg">Brownsburg</option>
-              <option value="Plainfield">Plainfield</option>
-              <option value="Danville">Danville</option>
-              <option value="Pittsboro">Pittsboro</option>
-              <option value="Whitestown">Whitestown</option>
-            </optgroup>
-            <optgroup label="Hancock County">
-              <option value="McCordsville">McCordsville</option>
-              <option value="Greenfield">Greenfield</option>
-              <option value="Fortville">Fortville</option>
-              <option value="New Palestine">New Palestine</option>
-              <option value="Cumberland">Cumberland</option>
-            </optgroup>
-            <optgroup label="Madison County">
-              <option value="Anderson">Anderson</option>
-              <option value="Pendleton">Pendleton</option>
-              <option value="Lapel">Lapel</option>
-            </optgroup>
-            <optgroup label="Shelby County">
-              <option value="Shelbyville">Shelbyville</option>
-            </optgroup>
-            <optgroup label="Morgan County">
-              <option value="Mooresville">Mooresville</option>
-              <option value="Martinsville">Martinsville</option>
-            </optgroup>
-            <optgroup label="Boone County">
-              <option value="Lebanon">Lebanon</option>
-              <option value="Thorntown">Thorntown</option>
-            </optgroup>
-            <option value="Other">Other / Not Listed</option>
-          </select>
-        </div>
-        <div class="field-group">
-          <label for="zip">ZIP Code</label>
-          <input type="text" id="zip" placeholder="e.g. 46032" maxlength="5" pattern="[0-9]{5}" inputmode="numeric">
-        </div>
-      </div>
-
-      <div class="trust-row">
-        <span class="trust-badge"><span class="icon">✓</span> Free — no credit card</span>
-        <span class="trust-badge"><span class="icon">✓</span> No login required</span>
-        <span class="trust-badge"><span class="icon">✓</span> Local market data</span>
-      </div>
-
-      <div class="form-nav">
-        <button class="btn-next" onclick="goToStep2()">Next: Home Details →</button>
-      </div>
-    </div>
-
-    <!-- ── STEP 2: PROPERTY DETAILS ── -->
-    <div class="form-step" id="step-2">
-      <h2 class="step-title">Tell us about your home</h2>
-      <p class="step-sub">These details help us calculate a more accurate estimate for your property.</p>
-
-      <div class="field-group">
-        <label>Bedrooms</label>
-        <div class="btn-select-group" id="beds-group">
-          <button class="btn-select" data-val="1" onclick="selectOpt(this,'beds-group','1')">1</button>
-          <button class="btn-select" data-val="2" onclick="selectOpt(this,'beds-group','2')">2</button>
-          <button class="btn-select selected" data-val="3" onclick="selectOpt(this,'beds-group','3')">3</button>
-          <button class="btn-select" data-val="4" onclick="selectOpt(this,'beds-group','4')">4</button>
-          <button class="btn-select" data-val="5" onclick="selectOpt(this,'beds-group','5')">5+</button>
-        </div>
-      </div>
-
-      <div class="field-group">
-        <label>Bathrooms</label>
-        <div class="btn-select-group" id="baths-group">
-          <button class="btn-select" data-val="1" onclick="selectOpt(this,'baths-group','1')">1</button>
-          <button class="btn-select" data-val="1.5" onclick="selectOpt(this,'baths-group','1.5')">1.5</button>
-          <button class="btn-select selected" data-val="2" onclick="selectOpt(this,'baths-group','2')">2</button>
-          <button class="btn-select" data-val="2.5" onclick="selectOpt(this,'baths-group','2.5')">2.5</button>
-          <button class="btn-select" data-val="3" onclick="selectOpt(this,'baths-group','3')">3</button>
-          <button class="btn-select" data-val="3.5" onclick="selectOpt(this,'baths-group','3.5')">3.5+</button>
-        </div>
-      </div>
-
-      <div class="field-row">
-        <div class="field-group">
-          <label for="sqft">Square Footage</label>
-          <input type="number" id="sqft" placeholder="e.g. 1850" min="400" max="15000" inputmode="numeric">
-          <p class="field-hint">Finished living area</p>
-        </div>
-        <div class="field-group">
-          <label for="year-built">Year Built</label>
-          <input type="number" id="year-built" placeholder="e.g. 2004" min="1880" max="2026" inputmode="numeric">
-        </div>
-      </div>
-
-      <div class="field-group">
-        <label>Home Condition</label>
-        <div class="btn-select-group" id="condition-group">
-          <button class="btn-select" data-val="needs-work" onclick="selectOpt(this,'condition-group','needs-work')">Needs Work</button>
-          <button class="btn-select" data-val="fair" onclick="selectOpt(this,'condition-group','fair')">Fair</button>
-          <button class="btn-select selected" data-val="good" onclick="selectOpt(this,'condition-group','good')">Good</button>
-          <button class="btn-select" data-val="excellent" onclick="selectOpt(this,'condition-group','excellent')">Excellent</button>
-        </div>
-      </div>
-
-      <div class="field-group">
-        <label>Garage</label>
-        <div class="btn-select-group" id="garage-group">
-          <button class="btn-select" data-val="none" onclick="selectOpt(this,'garage-group','none')">None</button>
-          <button class="btn-select" data-val="1" onclick="selectOpt(this,'garage-group','1')">1-Car</button>
-          <button class="btn-select selected" data-val="2" onclick="selectOpt(this,'garage-group','2')">2-Car</button>
-          <button class="btn-select" data-val="3" onclick="selectOpt(this,'garage-group','3')">3-Car+</button>
-        </div>
-      </div>
-
-      <div class="form-nav">
-        <button class="btn-back" onclick="goToStep(1)">← Back</button>
-        <button class="btn-next" onclick="goToStep3()">See My Estimate →</button>
-      </div>
-    </div>
-
-    <!-- ── STEP 3: RESULT + LEAD GATE ── -->
-    <div class="form-step" id="step-3">
-      <h2 class="step-title">Your Home Value Estimate</h2>
-      <p class="step-sub">Based on local market data for your area and the details you provided.</p>
-
-      <div class="result-card">
-        <div class="result-label">Estimated Market Value Range</div>
-        <div class="result-range" id="result-range">$—</div>
-        <div class="result-estimate" id="result-midpoint"></div>
-        <div class="result-disclaimer">Estimate based on ZIP code market data and home characteristics. Not a formal appraisal.</div>
-      </div>
-
-      <div class="result-details" id="result-details"></div>
-
-      <div class="lead-gate">
-        <p class="lead-gate-title">📬 Get Your Full Report Emailed to You</p>
-        <p class="lead-gate-sub">We'll send a summary of your estimate plus a free Comparative Market Analysis offer from Janet Giles-Schultz.</p>
-
-        <div class="field-group">
-          <label for="lead-name">Your Name</label>
-          <input type="text" id="lead-name" placeholder="First and last name" autocomplete="name">
-        </div>
-        <div class="field-row">
-          <div class="field-group">
-            <label for="lead-email">Email Address</label>
-            <input type="email" id="lead-email" placeholder="you@email.com" autocomplete="email">
-          </div>
-          <div class="field-group">
-            <label for="lead-phone">Phone (optional)</label>
-            <input type="tel" id="lead-phone" placeholder="317-555-0100" autocomplete="tel">
-          </div>
-        </div>
-
-        <button class="btn-next" id="submit-btn" onclick="submitLead()" style="width:100%; margin-top:4px;">
-          Send My Free Report →
-        </button>
-        <p style="font-size:.75rem; color:#aaa; margin:10px 0 0; text-align:center;">No spam. Your info is shared only with Your Realty Link.</p>
-      </div>
-
-      <div class="form-nav" style="margin-top:16px;">
-        <button class="btn-back" onclick="goToStep(2)">← Edit Details</button>
-      </div>
-    </div>
-
-    <!-- ── SUCCESS ── -->
-    <div class="success-state" id="success-state">
-      <div class="success-icon">✅</div>
-      <h2>Report on Its Way!</h2>
-      <p>Thanks — Janet Giles-Schultz will review your estimate and follow up shortly. Check your email for your summary.</p>
-      <a href="/services/free-home-valuation/" target="_blank" rel="noopener" class="btn-next" style="display:inline-block; text-decoration:none; padding:14px 28px; border-radius:8px; font-size:1rem;">
-        Get a Full Free CMA →
-      </a>
-      <br><br>
-      <a href="/search/" style="font-size:.9rem; color:var(--gray);">Browse homes for sale in your area →</a>
-    </div>
-
-  </div><!-- /estimator-wrap -->
-
-  <!-- HOW IT WORKS -->
-  <section class="how-section">
-    <div class="how-inner">
-      <p class="section-eyebrow">How It Works</p>
-      <h2 class="section-title">How We Calculate Your Estimate</h2>
-      <div class="how-grid">
-        <div class="how-card">
-          <div class="how-num">1</div>
-          <h3>ZIP Code Market Data</h3>
-          <p>We look up the median price per square foot for homes sold in your ZIP code, based on Central Indiana county assessor and market data.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">2</div>
-          <h3>Home Characteristics</h3>
-          <p>Your square footage, age, condition, and garage are weighed against local averages to adjust the base estimate up or down.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">3</div>
-          <h3>Value Range</h3>
-          <p>We show a realistic range (±10%) to reflect normal market variation. No AVM is perfect — that's why we offer a free professional CMA.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">4</div>
-          <h3>Free CMA Offer</h3>
-          <p>Janet Giles-Schultz will follow up with a full Comparative Market Analysis — using actual MLS sold data — at no charge.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT AFFECTS VALUE -->
-  <section class="factors-section">
-    <p class="section-eyebrow" style="text-align:center;">Valuation Factors</p>
-    <h2 class="section-title">What Affects Your Home's Value</h2>
-    <div class="factors-grid">
-      <div class="factor-chip"><span class="fi">📍</span> Location & ZIP code</div>
-      <div class="factor-chip"><span class="fi">📐</span> Square footage</div>
-      <div class="factor-chip"><span class="fi">🛏</span> Bedrooms & bathrooms</div>
-      <div class="factor-chip"><span class="fi">📅</span> Year built & age</div>
-      <div class="factor-chip"><span class="fi">🔧</span> Condition & updates</div>
-      <div class="factor-chip"><span class="fi">🚗</span> Garage & parking</div>
-      <div class="factor-chip"><span class="fi">🌳</span> Lot size</div>
-      <div class="factor-chip"><span class="fi">🏫</span> School district</div>
-      <div class="factor-chip"><span class="fi">📈</span> Recent comparable sales</div>
-      <div class="factor-chip"><span class="fi">🏗</span> New construction nearby</div>
-      <div class="factor-chip"><span class="fi">🛒</span> Buyer demand in area</div>
-      <div class="factor-chip"><span class="fi">💧</span> Basement / finishes</div>
-    </div>
-  </section>
-
-  <!-- AGENT CTA -->
-  <section class="agent-cta-section">
-    <h2>Want the Most Accurate Number?</h2>
-    <p>Janet Giles-Schultz provides free Comparative Market Analyses using real MLS sold data — the same data agents use to price homes.</p>
-    <a href="/services/free-home-valuation/" target="_blank" rel="noopener" class="cta-btn-white">Get a Free CMA</a>
-    <a href="https://yourrealtylink.com/contact" target="_blank" rel="noopener" class="cta-btn-outline-white">Contact Janet</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-col">
-        <h4>Your Realty Link</h4>
-        <ul>
-          <li>Janet Giles-Schultz, Principal Broker</li>
-          <li><a href="tel:3179977404">317-997-7404</a></li>
-          <li><a href="mailto:janet@yourrealtylink.com">janet@yourrealtylink.com</a></li>
-          <li>2302 E Southport Rd, Indianapolis IN 46227</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="/home-value-estimator/">Home Value Estimator</a></li>
-          <li><a href="/services/free-home-valuation/" target="_blank" rel="noopener">Free Professional CMA</a></li>
-          <li><a href="/sell-my-home-indianapolis/">Sell My Home</a></li>
-          <li><a href="/first-time-home-buyers-indianapolis/">Buying a Home</a></li>
-          <li><a href="https://yourrealtylink.com/agent-search" target="_blank" rel="noopener">Meet Our Agents</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Popular Areas</h4>
-        <ul>
-          <li><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel Real Estate</a></li>
-          <li><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers Real Estate</a></li>
-          <li><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood Real Estate</a></li>
-          <li><a href="/indianapolis-real-estate/">Indianapolis Real Estate</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Indy Property Guide · Powered by <a href="https://yourrealtylink.com" target="_blank" rel="noopener">Your Realty Link</a> · MIBOR Member</p>
-      <p style="font-size:.75rem; margin-top:4px; color:#bbb;">Estimates are for informational purposes only and do not constitute an appraisal or formal market analysis.</p>
-    </div>
-  </footer>
-
-  <!-- EMAILJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-  <script>
-  // ═══════════════════════════════════════════════════════════
-  // EMAILJS CONFIG — paste your IDs here after setup
-  // See instructions in the <head> comment block above
-  // ═══════════════════════════════════════════════════════════
-  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';     // Account → API Keys
-  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';     // Email Services
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';    // Email Templates
-  const EMAILJS_CONFIGURED  = (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY');
-
-  if (EMAILJS_CONFIGURED) {
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-  }
-
-  // ═══════════════════════════════════════════════════════════
-  // ZIP CODE PRICE TABLE — median $/sqft by ZIP
-  // Sources: Indiana county assessor data + local market ranges
-  // Last updated: May 2026
-  // ═══════════════════════════════════════════════════════════
-  const ZIP_TABLE = {
-    // Hamilton County — Carmel
-    '46032': 222, '46033': 228, '46082': 205,
-    // Hamilton County — Zionsville
-    '46077': 215,
-    // Hamilton County — Fishers
-    '46037': 178, '46038': 185,
-    // Hamilton County — Westfield
-    '46074': 192,
-    // Hamilton County — Noblesville
-    '46060': 165, '46061': 158, '46062': 170,
-    // Hamilton County — Arcadia / Cicero / Sheridan
-    '46030': 125, '46034': 135, '46069': 118,
-    // Boone County — Zionsville / Whitestown
-    '46075': 162,
-    // Boone County — Lebanon
-    '46052': 118,
-    // Boone County — Thorntown
-    '46071': 112,
-    // Marion County — Indianapolis North (Meridian, Keystone, Broad Ripple)
-    '46220': 168, '46240': 162, '46250': 165, '46260': 158, '46268': 148,
-    // Marion County — Indianapolis Central / Near North
-    '46202': 152, '46204': 148, '46205': 140, '46208': 135,
-    // Marion County — Indianapolis East
-    '46201': 105, '46203': 112, '46218': 98, '46219': 108,
-    '46229': 105, '46235': 102, '46239': 118,
-    // Marion County — Indianapolis South
-    '46217': 118, '46221': 112, '46227': 122, '46237': 128,
-    // Marion County — Indianapolis West
-    '46214': 108, '46222': 105, '46224': 118, '46225': 108,
-    '46228': 118, '46231': 112, '46241': 108,
-    // Marion County — Geist / Far NE
-    '46256': 192,
-    // Marion County — Lawrence
-    '46226': 112, '46236': 118,
-    // Marion County — Beech Grove
-    '46107': 118,
-    // Marion County — Speedway
-    // 46224 already above
-    // Marion County — Southport area
-    // 46227 already above
-    // Johnson County — Greenwood
-    '46142': 155, '46143': 150,
-    // Johnson County — Franklin
-    '46131': 128,
-    // Johnson County — Bargersville
-    '46106': 132,
-    // Johnson County — Whiteland / Trafalgar / Edinburgh
-    '46184': 140, '46181': 118, '46124': 112,
-    // Hendricks County — Avon
-    '46123': 158,
-    // Hendricks County — Brownsburg
-    '46112': 152,
-    // Hendricks County — Plainfield
-    '46168': 145,
-    // Hendricks County — Danville
-    '46122': 140,
-    // Hendricks County — Pittsboro / Clayton
-    '46167': 135, '46118': 128,
-    // Hancock County — McCordsville
-    '46055': 165,
-    // Hancock County — Greenfield
-    '46140': 122,
-    // Hancock County — Fortville
-    '46040': 138,
-    // Hancock County — New Palestine
-    '46163': 155,
-    // Hancock County — Cumberland
-    '46229': 108, // shared with Indy east
-    // Madison County — Anderson
-    '46011': 90, '46012': 95, '46013': 88, '46016': 85, '46017': 92,
-    // Madison County — Pendleton
-    '46064': 128,
-    // Madison County — Lapel
-    '46051': 118,
-    // Shelby County — Shelbyville
-    '46176': 108,
-    // Morgan County — Mooresville
-    '46158': 128,
-    // Morgan County — Martinsville
-    '46151': 112,
-    // Montgomery County — Crawfordsville
-    '47933': 102, '47934': 102,
-    // Decatur County — Greensburg
-    '47240': 100,
-    // Bartholomew County — Columbus
-    '47201': 118, '47203': 115,
-    // Jackson County — Seymour
-    '47274': 96,
-    // Putnam County — Greencastle
-    '46135': 105,
-  };
-
-  // City → default ZIP (fallback when user doesn't enter a ZIP)
-  const CITY_DEFAULT_ZIP = {
-    'Carmel':        '46032',
-    'Fishers':       '46037',
-    'Noblesville':   '46060',
-    'Westfield':     '46074',
-    'Zionsville (Boone)': '46077',
-    'Arcadia':       '46030',
-    'Cicero':        '46034',
-    'Sheridan':      '46069',
-    'Indianapolis':  '46220',
-    'Southport':     '46227',
-    'Lawrence':      '46226',
-    'Beech Grove':   '46107',
-    'Speedway':      '46224',
-    'Broad Ripple':  '46220',
-    'Irvington':     '46219',
-    'Geist':         '46256',
-    'Greenwood':     '46142',
-    'Franklin':      '46131',
-    'Bargersville':  '46106',
-    'Whiteland':     '46184',
-    'Avon':          '46123',
-    'Brownsburg':    '46112',
-    'Plainfield':    '46168',
-    'Danville':      '46122',
-    'Pittsboro':     '46167',
-    'Whitestown':    '46075',
-    'McCordsville':  '46055',
-    'Greenfield':    '46140',
-    'Fortville':     '46040',
-    'New Palestine': '46163',
-    'Cumberland':    '46229',
-    'Anderson':      '46012',
-    'Pendleton':     '46064',
-    'Lapel':         '46051',
-    'Shelbyville':   '46176',
-    'Mooresville':   '46158',
-    'Martinsville':  '46151',
-    'Lebanon':       '46052',
-    'Thorntown':     '46071',
-  };
-
-  // ═══════════════════════════════════════════════════════════
-  // STATE
-  // ═══════════════════════════════════════════════════════════
-  let currentStep = 1;
-  let calcResult  = {};
-
-  // Pre-fill address from URL param (passed from /instant-home-valuation/)
-  (function() {
-    const params = new URLSearchParams(window.location.search);
-    const addr = params.get('address');
-    if (addr) {
-      const field = document.getElementById('street');
-      if (field) field.value = addr;
-    }
-  })();
-
-  // ═══════════════════════════════════════════════════════════
-  // BUTTON SELECT HELPER
-  // ═══════════════════════════════════════════════════════════
-  function selectOpt(btn, groupId, val) {
-    document.querySelectorAll('#' + groupId + ' .btn-select')
-      .forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-  }
-
-  function getSelected(groupId) {
-    const sel = document.querySelector('#' + groupId + ' .btn-select.selected');
-    return sel ? sel.dataset.val : null;
-  }
-
-  // ═══════════════════════════════════════════════════════════
-  // STEP NAVIGATION
-  // ═══════════════════════════════════════════════════════════
-  function goToStep(n) {
-    document.getElementById('step-' + currentStep).classList.remove('active');
-    document.getElementById('prog-' + currentStep).classList.remove('active');
-    if (currentStep < n) {
-      document.getElementById('prog-' + currentStep).classList.add('done');
-    } else {
-      document.getElementById('prog-' + currentStep).classList.remove('done');
-    }
-    currentStep = n;
-    document.getElementById('step-' + currentStep).classList.add('active');
-    document.getElementById('prog-' + currentStep).classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function goToStep2() {
-    const street = document.getElementById('street').value.trim();
-    const city   = document.getElementById('city').value;
-    const zip    = document.getElementById('zip').value.trim();
-
-    if (!street) { highlight('street'); return; }
-    if (!city)   { highlight('city');   return; }
-    if (!zip && !CITY_DEFAULT_ZIP[city]) {
-      highlight('zip');
-      return;
-    }
-    // Auto-fill ZIP if missing
-    if (!zip && CITY_DEFAULT_ZIP[city]) {
-      document.getElementById('zip').value = CITY_DEFAULT_ZIP[city];
-    }
-    goToStep(2);
-  }
-
-  function goToStep3() {
-    const sqft      = parseInt(document.getElementById('sqft').value);
-    const yearBuilt = parseInt(document.getElementById('year-built').value);
-
-    if (!sqft || sqft < 400 || sqft > 15000) {
-      highlight('sqft'); return;
-    }
-    if (!yearBuilt || yearBuilt < 1880 || yearBuilt > 2026) {
-      highlight('year-built'); return;
-    }
-
-    calcResult = calculate();
-    renderResult();
-    goToStep(3);
-  }
-
-  function highlight(id) {
-    const el = document.getElementById(id);
-    el.classList.add('error');
-    el.focus();
-    setTimeout(() => el.classList.remove('error'), 2000);
-  }
-
-  // ═══════════════════════════════════════════════════════════
-  // CALCULATION ENGINE
-  // ═══════════════════════════════════════════════════════════
-  function calculate() {
-    const zip       = document.getElementById('zip').value.trim() || CITY_DEFAULT_ZIP[document.getElementById('city').value] || '46220';
-    const sqft      = parseInt(document.getElementById('sqft').value);
-    const yearBuilt = parseInt(document.getElementById('year-built').value);
-    const beds      = parseFloat(getSelected('beds-group'))    || 3;
-    const baths     = parseFloat(getSelected('baths-group'))   || 2;
-    const condition = getSelected('condition-group')           || 'good';
-    const garage    = getSelected('garage-group')              || '2';
-
-    // Base: $/sqft from ZIP table (default to Indianapolis median if unknown)
-    const pricePerSqft = ZIP_TABLE[zip] || 130;
-    let base = sqft * pricePerSqft;
-
-    // Age adjustment
-    const age = 2026 - yearBuilt;
-    if      (age <= 3)  base *= 1.10;
-    else if (age <= 10) base *= 1.05;
-    else if (age <= 20) base *= 1.02;
-    else if (age <= 35) base *= 1.00;
-    else if (age <= 50) base *= 0.96;
-    else if (age <= 70) base *= 0.92;
-    else                base *= 0.88;
-
-    // Condition adjustment
-    const condMult = { 'needs-work': 0.87, 'fair': 0.94, 'good': 1.00, 'excellent': 1.08 };
-    base *= (condMult[condition] || 1.00);
-
-    // Garage adjustment
-    const garMult = { 'none': 0.975, '1': 0.99, '2': 1.00, '3': 1.02 };
-    base *= (garMult[garage] || 1.00);
-
-    // Bathroom bonus (extra baths above 2 add value)
-    if (baths > 2) base += (baths - 2) * 3500;
-
-    // Round to nearest $1,000
-    base = Math.round(base / 1000) * 1000;
-    const low  = Math.round(base * 0.91 / 1000) * 1000;
-    const high = Math.round(base * 1.09 / 1000) * 1000;
-
-    return {
-      estimate: base, low, high,
-      pricePerSqft, zip, sqft, yearBuilt, beds, baths, condition, garage,
-      city: document.getElementById('city').value,
-      street: document.getElementById('street').value.trim(),
-    };
-  }
-
-  function fmt(n) {
-    return '$' + n.toLocaleString('en-US');
-  }
-
-  // ═══════════════════════════════════════════════════════════
-  // RENDER RESULT
-  // ═══════════════════════════════════════════════════════════
-  function renderResult() {
-    const r = calcResult;
-
-    document.getElementById('result-range').textContent =
-      fmt(r.low) + ' – ' + fmt(r.high);
-
-    document.getElementById('result-midpoint').textContent =
-      'Midpoint estimate: ' + fmt(r.estimate) + '  ·  ~' + fmt(r.pricePerSqft) + '/sqft in ' + r.zip;
-
-    const condLabel = { 'needs-work': 'Needs Work', 'fair': 'Fair', 'good': 'Good', 'excellent': 'Excellent' };
-    const garLabel  = { 'none': 'None', '1': '1-Car', '2': '2-Car', '3': '3-Car+' };
-
-    document.getElementById('result-details').innerHTML = `
-      <div class="detail-item"><span>Beds / Baths</span><strong>${r.beds} bd / ${r.baths} ba</strong></div>
-      <div class="detail-item"><span>Square Feet</span><strong>${r.sqft.toLocaleString()}</strong></div>
-      <div class="detail-item"><span>Year Built</span><strong>${r.yearBuilt}</strong></div>
-      <div class="detail-item"><span>Condition</span><strong>${condLabel[r.condition]}</strong></div>
-      <div class="detail-item"><span>Garage</span><strong>${garLabel[r.garage]}</strong></div>
-      <div class="detail-item"><span>Area $/sqft</span><strong>${fmt(r.pricePerSqft)}</strong></div>
-    `;
-  }
-
-  // ═══════════════════════════════════════════════════════════
-  // LEAD SUBMISSION
-  // ═══════════════════════════════════════════════════════════
-  async function submitLead() {
-    const name  = document.getElementById('lead-name').value.trim();
-    const email = document.getElementById('lead-email').value.trim();
-    const phone = document.getElementById('lead-phone').value.trim();
-
-    if (!name)  { highlight('lead-name');  return; }
-    if (!email || !email.includes('@')) { highlight('lead-email'); return; }
-
-    const btn = document.getElementById('submit-btn');
-    btn.innerHTML = '<span class="spinner"></span>Sending…';
-    btn.disabled = true;
-
-    const r = calcResult;
-    const fullAddress = r.street + ', ' + r.city + ', IN ' + r.zip;
-
-    const templateParams = {
-      from_name:        name,
-      from_email:       email,
-      from_phone:       phone || 'Not provided',
-      property_address: fullAddress,
-      estimated_value:  fmt(r.estimate),
-      value_low:        fmt(r.low),
-      value_high:       fmt(r.high),
-      bedrooms:         r.beds,
-      bathrooms:        r.baths,
-      sqft:             r.sqft.toLocaleString(),
-      year_built:       r.yearBuilt,
-      condition:        r.condition,
-    };
-
-    if (EMAILJS_CONFIGURED) {
-      try {
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
-        showSuccess();
-      } catch (err) {
-        console.error('EmailJS error:', err);
-        fallbackMailto(name, email, phone, fullAddress, r);
-      }
-    } else {
-      // EmailJS not configured yet — fall back to mailto
-      fallbackMailto(name, email, phone, fullAddress, r);
-    }
-  }
-
-  function fallbackMailto(name, email, phone, address, r) {
-    const body = encodeURIComponent(
-      `New Home Value Lead\n\n` +
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\n` +
-      `Property: ${address}\n` +
-      `Estimate: ${fmt(r.low)} – ${fmt(r.high)}\nMidpoint: ${fmt(r.estimate)}\n\n` +
-      `Details: ${r.sqft.toLocaleString()} sqft | ${r.beds}bd/${r.baths}ba | Built ${r.yearBuilt} | Condition: ${r.condition}`
-    );
-    const subject = encodeURIComponent(`Home Value Lead — ${address}`);
-    window.location.href = `mailto:janet@yourrealtylink.com?subject=${subject}&body=${body}`;
-    showSuccess();
-  }
-
-  function showSuccess() {
-    document.getElementById('step-3').classList.remove('active');
-    document.getElementById('success-state').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  </script>
-
-  <!-- SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free Home Value Estimator — Indianapolis & Central Indiana",
-    "description": "Instant home value estimate for Central Indiana properties using local market data by ZIP code.",
-    "url": "https://indypropertyguide.com/home-value-estimator/",
-    "provider": {
-      "@type": "RealEstateAgent",
-      "name": "Your Realty Link",
-      "url": "https://yourrealtylink.com",
-      "telephone": "317-997-7404",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2302 E Southport Rd",
-        "addressLocality": "Indianapolis",
-        "addressRegion": "IN",
-        "postalCode": "46227"
-      }
-    }
-  }
-  </script>
+ <!-- HEADER -->
+ <header class="site-header">
+ <div class="header-inner">
+ <a href="/" class="site-logo">
+ <img src="https://Agent3000.com/admin/upload/logos/MIBOR/MBR1322.png" alt="Your Realty Link" height="36">
+ <span>Indy Property Guide</span>
+ </a>
+ <nav class="site-nav" id="siteNav">
+ <a href="/">Home</a>
+ <a href="/sell-my-home-indianapolis/">Sellers</a>
+ <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+ <a href="https://yourrealtylink.com/agent-search" target="_blank" rel="noopener">Meet Our Agents</a>
+ <a href="/blog/">Blog</a>
+ <a href="/about/">About</a>
+ <a href="/search/" class="nav-cta">Search Homes →</a>
+ </nav>
+ <button class="hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
+ </div>
+ </header>
+
+ <!-- HERO -->
+ <section class="estimator-hero">
+ <h1>What Is Your Home Worth in <em>Central Indiana</em>?</h1>
+ <p>Get a free instant estimate in under 2 minutes using local market data. No obligation, no login required.</p>
+
+ <div class="progress-wrap">
+ <div class="progress-step active" id="prog-1">
+ <div class="step-dot">1</div>
+ <div class="step-label">Address</div>
+ </div>
+ <div class="progress-step" id="prog-2">
+ <div class="step-dot">2</div>
+ <div class="step-label">Details</div>
+ </div>
+ <div class="progress-step" id="prog-3">
+ <div class="step-dot">3</div>
+ <div class="step-label">Your Estimate</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- FORM AREA -->
+ <div class="estimator-wrap">
+
+ <!-- ── STEP 1: ADDRESS ── -->
+ <div class="form-step active" id="step-1">
+ <h2 class="step-title">What's the property address?</h2>
+ <p class="step-sub">We use your ZIP code to look up local market data for your area.</p>
+
+ <div class="field-group">
+ <label for="street">Street Address</label>
+ <input type="text" id="street" placeholder="e.g. 4821 Oak Ridge Dr" autocomplete="street-address">
+ </div>
+
+ <div class="field-row">
+ <div class="field-group">
+ <label for="city">City</label>
+ <select id="city">
+ <option value="">Select city…</option>
+ <optgroup label="Hamilton County">
+ <option value="Carmel">Carmel</option>
+ <option value="Fishers">Fishers</option>
+ <option value="Noblesville">Noblesville</option>
+ <option value="Westfield">Westfield</option>
+ <option value="Zionsville">Zionsville (Boone)</option>
+ <option value="Arcadia">Arcadia</option>
+ <option value="Cicero">Cicero</option>
+ <option value="Sheridan">Sheridan</option>
+ </optgroup>
+ <optgroup label="Marion County / Indianapolis">
+ <option value="Indianapolis">Indianapolis</option>
+ <option value="Southport">Southport</option>
+ <option value="Lawrence">Lawrence</option>
+ <option value="Beech Grove">Beech Grove</option>
+ <option value="Speedway">Speedway</option>
+ <option value="Broad Ripple">Broad Ripple</option>
+ <option value="Irvington">Irvington</option>
+ <option value="Geist">Geist</option>
+ </optgroup>
+ <optgroup label="Johnson County">
+ <option value="Greenwood">Greenwood</option>
+ <option value="Franklin">Franklin</option>
+ <option value="Bargersville">Bargersville</option>
+ <option value="Whiteland">Whiteland</option>
+ </optgroup>
+ <optgroup label="Hendricks County">
+ <option value="Avon">Avon</option>
+ <option value="Brownsburg">Brownsburg</option>
+ <option value="Plainfield">Plainfield</option>
+ <option value="Danville">Danville</option>
+ <option value="Pittsboro">Pittsboro</option>
+ <option value="Whitestown">Whitestown</option>
+ </optgroup>
+ <optgroup label="Hancock County">
+ <option value="McCordsville">McCordsville</option>
+ <option value="Greenfield">Greenfield</option>
+ <option value="Fortville">Fortville</option>
+ <option value="New Palestine">New Palestine</option>
+ <option value="Cumberland">Cumberland</option>
+ </optgroup>
+ <optgroup label="Madison County">
+ <option value="Anderson">Anderson</option>
+ <option value="Pendleton">Pendleton</option>
+ <option value="Lapel">Lapel</option>
+ </optgroup>
+ <optgroup label="Shelby County">
+ <option value="Shelbyville">Shelbyville</option>
+ </optgroup>
+ <optgroup label="Morgan County">
+ <option value="Mooresville">Mooresville</option>
+ <option value="Martinsville">Martinsville</option>
+ </optgroup>
+ <optgroup label="Boone County">
+ <option value="Lebanon">Lebanon</option>
+ <option value="Thorntown">Thorntown</option>
+ </optgroup>
+ <option value="Other">Other / Not Listed</option>
+ </select>
+ </div>
+ <div class="field-group">
+ <label for="zip">ZIP Code</label>
+ <input type="text" id="zip" placeholder="e.g. 46032" maxlength="5" pattern="[0-9]{5}" inputmode="numeric">
+ </div>
+ </div>
+
+ <div class="trust-row">
+ <span class="trust-badge"><span class="icon">✓</span> Free — no credit card</span>
+ <span class="trust-badge"><span class="icon">✓</span> No login required</span>
+ <span class="trust-badge"><span class="icon">✓</span> Local market data</span>
+ </div>
+
+ <div class="form-nav">
+ <button class="btn-next" onclick="goToStep2()">Next: Home Details →</button>
+ </div>
+ </div>
+
+ <!-- ── STEP 2: PROPERTY DETAILS ── -->
+ <div class="form-step" id="step-2">
+ <h2 class="step-title">Tell us about your home</h2>
+ <p class="step-sub">These details help us calculate a more accurate estimate for your property.</p>
+
+ <div class="field-group">
+ <label>Bedrooms</label>
+ <div class="btn-select-group" id="beds-group">
+ <button class="btn-select" data-val="1" onclick="selectOpt(this,'beds-group','1')">1</button>
+ <button class="btn-select" data-val="2" onclick="selectOpt(this,'beds-group','2')">2</button>
+ <button class="btn-select selected" data-val="3" onclick="selectOpt(this,'beds-group','3')">3</button>
+ <button class="btn-select" data-val="4" onclick="selectOpt(this,'beds-group','4')">4</button>
+ <button class="btn-select" data-val="5" onclick="selectOpt(this,'beds-group','5')">5+</button>
+ </div>
+ </div>
+
+ <div class="field-group">
+ <label>Bathrooms</label>
+ <div class="btn-select-group" id="baths-group">
+ <button class="btn-select" data-val="1" onclick="selectOpt(this,'baths-group','1')">1</button>
+ <button class="btn-select" data-val="1.5" onclick="selectOpt(this,'baths-group','1.5')">1.5</button>
+ <button class="btn-select selected" data-val="2" onclick="selectOpt(this,'baths-group','2')">2</button>
+ <button class="btn-select" data-val="2.5" onclick="selectOpt(this,'baths-group','2.5')">2.5</button>
+ <button class="btn-select" data-val="3" onclick="selectOpt(this,'baths-group','3')">3</button>
+ <button class="btn-select" data-val="3.5" onclick="selectOpt(this,'baths-group','3.5')">3.5+</button>
+ </div>
+ </div>
+
+ <div class="field-row">
+ <div class="field-group">
+ <label for="sqft">Square Footage</label>
+ <input type="number" id="sqft" placeholder="e.g. 1850" min="400" max="15000" inputmode="numeric">
+ <p class="field-hint">Finished living area</p>
+ </div>
+ <div class="field-group">
+ <label for="year-built">Year Built</label>
+ <input type="number" id="year-built" placeholder="e.g. 2004" min="1880" max="2026" inputmode="numeric">
+ </div>
+ </div>
+
+ <div class="field-group">
+ <label>Home Condition</label>
+ <div class="btn-select-group" id="condition-group">
+ <button class="btn-select" data-val="needs-work" onclick="selectOpt(this,'condition-group','needs-work')">Needs Work</button>
+ <button class="btn-select" data-val="fair" onclick="selectOpt(this,'condition-group','fair')">Fair</button>
+ <button class="btn-select selected" data-val="good" onclick="selectOpt(this,'condition-group','good')">Good</button>
+ <button class="btn-select" data-val="excellent" onclick="selectOpt(this,'condition-group','excellent')">Excellent</button>
+ </div>
+ </div>
+
+ <div class="field-group">
+ <label>Garage</label>
+ <div class="btn-select-group" id="garage-group">
+ <button class="btn-select" data-val="none" onclick="selectOpt(this,'garage-group','none')">None</button>
+ <button class="btn-select" data-val="1" onclick="selectOpt(this,'garage-group','1')">1-Car</button>
+ <button class="btn-select selected" data-val="2" onclick="selectOpt(this,'garage-group','2')">2-Car</button>
+ <button class="btn-select" data-val="3" onclick="selectOpt(this,'garage-group','3')">3-Car+</button>
+ </div>
+ </div>
+
+ <div class="form-nav">
+ <button class="btn-back" onclick="goToStep(1)">← Back</button>
+ <button class="btn-next" onclick="goToStep3()">See My Estimate →</button>
+ </div>
+ </div>
+
+ <!-- ── STEP 3: RESULT + LEAD GATE ── -->
+ <div class="form-step" id="step-3">
+ <h2 class="step-title">Your Home Value Estimate</h2>
+ <p class="step-sub">Based on local market data for your area and the details you provided.</p>
+
+ <div class="result-card">
+ <div class="result-label">Estimated Market Value Range</div>
+ <div class="result-range" id="result-range">$—</div>
+ <div class="result-estimate" id="result-midpoint"></div>
+ <div class="result-disclaimer">Estimate based on ZIP code market data and home characteristics. Not a formal appraisal.</div>
+ </div>
+
+ <div class="result-details" id="result-details"></div>
+
+ <div class="lead-gate">
+ <p class="lead-gate-title">📬 Get Your Full Report Emailed to You</p>
+ <p class="lead-gate-sub">We'll send a summary of your estimate plus a free Comparative Market Analysis offer from Daniel Cope.</p>
+
+ <div class="field-group">
+ <label for="lead-name">Your Name</label>
+ <input type="text" id="lead-name" placeholder="First and last name" autocomplete="name">
+ </div>
+ <div class="field-row">
+ <div class="field-group">
+ <label for="lead-email">Email Address</label>
+ <input type="email" id="lead-email" placeholder="you@email.com" autocomplete="email">
+ </div>
+ <div class="field-group">
+ <label for="lead-phone">Phone (optional)</label>
+ <input type="tel" id="lead-phone" placeholder="317-555-0100" autocomplete="tel">
+ </div>
+ </div>
+
+ <button class="btn-next" id="submit-btn" onclick="submitLead()" style="width:100%; margin-top:4px;">
+ Send My Free Report →
+ </button>
+ <p style="font-size:.75rem; color:#aaa; margin:10px 0 0; text-align:center;">No spam. Your info is shared only with Your Realty Link.</p>
+ </div>
+
+ <div class="form-nav" style="margin-top:16px;">
+ <button class="btn-back" onclick="goToStep(2)">← Edit Details</button>
+ </div>
+ </div>
+
+ <!-- ── SUCCESS ── -->
+ <div class="success-state" id="success-state">
+ <div class="success-icon">✅</div>
+ <h2>Report on Its Way!</h2>
+ <p>Thanks — Daniel Cope will review your estimate and follow up shortly. Check your email for your summary.</p>
+ <a href="/services/free-home-valuation/" target="_blank" rel="noopener" class="btn-next" style="display:inline-block; text-decoration:none; padding:14px 28px; border-radius:8px; font-size:1rem;">
+ Get a Full Free CMA →
+ </a>
+ <br><br>
+ <a href="/search/" style="font-size:.9rem; color:var(--gray);">Browse homes for sale in your area →</a>
+ </div>
+
+ </div><!-- /estimator-wrap -->
+
+ <!-- HOW IT WORKS -->
+ <section class="how-section">
+ <div class="how-inner">
+ <p class="section-eyebrow">How It Works</p>
+ <h2 class="section-title">How We Calculate Your Estimate</h2>
+ <div class="how-grid">
+ <div class="how-card">
+ <div class="how-num">1</div>
+ <h3>ZIP Code Market Data</h3>
+ <p>We look up the median price per square foot for homes sold in your ZIP code, based on Central Indiana county assessor and market data.</p>
+ </div>
+ <div class="how-card">
+ <div class="how-num">2</div>
+ <h3>Home Characteristics</h3>
+ <p>Your square footage, age, condition, and garage are weighed against local averages to adjust the base estimate up or down.</p>
+ </div>
+ <div class="how-card">
+ <div class="how-num">3</div>
+ <h3>Value Range</h3>
+ <p>We show a realistic range (±10%) to reflect normal market variation. No AVM is perfect — that's why we offer a free professional CMA.</p>
+ </div>
+ <div class="how-card">
+ <div class="how-num">4</div>
+ <h3>Free CMA Offer</h3>
+ <p>Daniel Cope will follow up with a full Comparative Market Analysis — using actual MLS sold data — at no charge.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- WHAT AFFECTS VALUE -->
+ <section class="factors-section">
+ <p class="section-eyebrow" style="text-align:center;">Valuation Factors</p>
+ <h2 class="section-title">What Affects Your Home's Value</h2>
+ <div class="factors-grid">
+ <div class="factor-chip"><span class="fi">📍</span> Location & ZIP code</div>
+ <div class="factor-chip"><span class="fi">📐</span> Square footage</div>
+ <div class="factor-chip"><span class="fi">🛏</span> Bedrooms & bathrooms</div>
+ <div class="factor-chip"><span class="fi">📅</span> Year built & age</div>
+ <div class="factor-chip"><span class="fi">🔧</span> Condition & updates</div>
+ <div class="factor-chip"><span class="fi">🚗</span> Garage & parking</div>
+ <div class="factor-chip"><span class="fi">🌳</span> Lot size</div>
+ <div class="factor-chip"><span class="fi">🏫</span> School district</div>
+ <div class="factor-chip"><span class="fi">📈</span> Recent comparable sales</div>
+ <div class="factor-chip"><span class="fi">🏗</span> New construction nearby</div>
+ <div class="factor-chip"><span class="fi">🛒</span> Buyer demand in area</div>
+ <div class="factor-chip"><span class="fi">💧</span> Basement / finishes</div>
+ </div>
+ </section>
+
+ <!-- AGENT CTA -->
+ <section class="agent-cta-section">
+ <h2>Want the Most Accurate Number?</h2>
+ <p>Daniel Cope provides free Comparative Market Analyses using real MLS sold data — the same data agents use to price homes.</p>
+ <a href="/services/free-home-valuation/" target="_blank" rel="noopener" class="cta-btn-white">Get a Free CMA</a>
+ <a href="https://yourrealtylink.com/contact" target="_blank" rel="noopener" class="cta-btn-outline-white">Contact Daniel</a>
+ </section>
+
+ <!-- FOOTER -->
+ <footer class="site-footer">
+ <div class="footer-inner">
+ <div class="footer-col">
+ <h4>Your Realty Link</h4>
+ <ul>
+ <li>Daniel Cope, REALTOR</li>
+ <li><a href="tel:3172016323">317-201-6323</a></li>
+ <li><a href="mailto:csirealtyteam@yourrealtylink.com">csirealtyteam@yourrealtylink.com</a></li>
+ <li>2302 E Southport Rd, Indianapolis IN 46227</li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="/home-value-estimator/">Home Value Estimator</a></li>
+ <li><a href="/services/free-home-valuation/" target="_blank" rel="noopener">Free Professional CMA</a></li>
+ <li><a href="/sell-my-home-indianapolis/">Sell My Home</a></li>
+ <li><a href="/first-time-home-buyers-indianapolis/">Buying a Home</a></li>
+ <li><a href="https://yourrealtylink.com/agent-search" target="_blank" rel="noopener">Meet Our Agents</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Popular Areas</h4>
+ <ul>
+ <li><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel Real Estate</a></li>
+ <li><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers Real Estate</a></li>
+ <li><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood Real Estate</a></li>
+ <li><a href="/indianapolis-real-estate/">Indianapolis Real Estate</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>© 2026 Indy Property Guide · Powered by <a href="https://yourrealtylink.com" target="_blank" rel="noopener">Your Realty Link</a></p>
+ <p style="font-size:.75rem; margin-top:4px; color:#bbb;">Estimates are for informational purposes only and do not constitute an appraisal or formal market analysis.</p>
+ </div>
+ </footer>
+
+ <!-- EMAILJS SDK -->
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+ <script>
+ // ═══════════════════════════════════════════════════════════
+ // EMAILJS CONFIG — paste your IDs here after setup
+ // See instructions in the <head> comment block above
+ // ═══════════════════════════════════════════════════════════
+ const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Account → API Keys
+ const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Email Services
+ const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Email Templates
+ const EMAILJS_CONFIGURED = (EMAILJS_PUBLIC_KEY!== 'YOUR_PUBLIC_KEY');
+
+ if (EMAILJS_CONFIGURED) {
+ emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+ }
+
+ // ═══════════════════════════════════════════════════════════
+ // ZIP CODE PRICE TABLE — median $/sqft by ZIP
+ // Sources: Indiana county assessor data + local market ranges
+ // Last updated: May 2026
+ // ═══════════════════════════════════════════════════════════
+ const ZIP_TABLE = {
+ // Hamilton County — Carmel
+ '46032': 222, '46033': 228, '46082': 205,
+ // Hamilton County — Zionsville
+ '46077': 215,
+ // Hamilton County — Fishers
+ '46037': 178, '46038': 185,
+ // Hamilton County — Westfield
+ '46074': 192,
+ // Hamilton County — Noblesville
+ '46060': 165, '46061': 158, '46062': 170,
+ // Hamilton County — Arcadia / Cicero / Sheridan
+ '46030': 125, '46034': 135, '46069': 118,
+ // Boone County — Zionsville / Whitestown
+ '46075': 162,
+ // Boone County — Lebanon
+ '46052': 118,
+ // Boone County — Thorntown
+ '46071': 112,
+ // Marion County — Indianapolis North (Meridian, Keystone, Broad Ripple)
+ '46220': 168, '46240': 162, '46250': 165, '46260': 158, '46268': 148,
+ // Marion County — Indianapolis Central / Near North
+ '46202': 152, '46204': 148, '46205': 140, '46208': 135,
+ // Marion County — Indianapolis East
+ '46201': 105, '46203': 112, '46218': 98, '46219': 108,
+ '46229': 105, '46235': 102, '46239': 118,
+ // Marion County — Indianapolis South
+ '46217': 118, '46221': 112, '46227': 122, '46237': 128,
+ // Marion County — Indianapolis West
+ '46214': 108, '46222': 105, '46224': 118, '46225': 108,
+ '46228': 118, '46231': 112, '46241': 108,
+ // Marion County — Geist / Far NE
+ '46256': 192,
+ // Marion County — Lawrence
+ '46226': 112, '46236': 118,
+ // Marion County — Beech Grove
+ '46107': 118,
+ // Marion County — Speedway
+ // 46224 already above
+ // Marion County — Southport area
+ // 46227 already above
+ // Johnson County — Greenwood
+ '46142': 155, '46143': 150,
+ // Johnson County — Franklin
+ '46131': 128,
+ // Johnson County — Bargersville
+ '46106': 132,
+ // Johnson County — Whiteland / Trafalgar / Edinburgh
+ '46184': 140, '46181': 118, '46124': 112,
+ // Hendricks County — Avon
+ '46123': 158,
+ // Hendricks County — Brownsburg
+ '46112': 152,
+ // Hendricks County — Plainfield
+ '46168': 145,
+ // Hendricks County — Danville
+ '46122': 140,
+ // Hendricks County — Pittsboro / Clayton
+ '46167': 135, '46118': 128,
+ // Hancock County — McCordsville
+ '46055': 165,
+ // Hancock County — Greenfield
+ '46140': 122,
+ // Hancock County — Fortville
+ '46040': 138,
+ // Hancock County — New Palestine
+ '46163': 155,
+ // Hancock County — Cumberland
+ '46229': 108, // shared with Indy east
+ // Madison County — Anderson
+ '46011': 90, '46012': 95, '46013': 88, '46016': 85, '46017': 92,
+ // Madison County — Pendleton
+ '46064': 128,
+ // Madison County — Lapel
+ '46051': 118,
+ // Shelby County — Shelbyville
+ '46176': 108,
+ // Morgan County — Mooresville
+ '46158': 128,
+ // Morgan County — Martinsville
+ '46151': 112,
+ // Montgomery County — Crawfordsville
+ '47933': 102, '47934': 102,
+ // Decatur County — Greensburg
+ '47240': 100,
+ // Bartholomew County — Columbus
+ '47201': 118, '47203': 115,
+ // Jackson County — Seymour
+ '47274': 96,
+ // Putnam County — Greencastle
+ '46135': 105,
+ };
+
+ // City → default ZIP (fallback when user doesn't enter a ZIP)
+ const CITY_DEFAULT_ZIP = {
+ 'Carmel': '46032',
+ 'Fishers': '46037',
+ 'Noblesville': '46060',
+ 'Westfield': '46074',
+ 'Zionsville (Boone)': '46077',
+ 'Arcadia': '46030',
+ 'Cicero': '46034',
+ 'Sheridan': '46069',
+ 'Indianapolis': '46220',
+ 'Southport': '46227',
+ 'Lawrence': '46226',
+ 'Beech Grove': '46107',
+ 'Speedway': '46224',
+ 'Broad Ripple': '46220',
+ 'Irvington': '46219',
+ 'Geist': '46256',
+ 'Greenwood': '46142',
+ 'Franklin': '46131',
+ 'Bargersville': '46106',
+ 'Whiteland': '46184',
+ 'Avon': '46123',
+ 'Brownsburg': '46112',
+ 'Plainfield': '46168',
+ 'Danville': '46122',
+ 'Pittsboro': '46167',
+ 'Whitestown': '46075',
+ 'McCordsville': '46055',
+ 'Greenfield': '46140',
+ 'Fortville': '46040',
+ 'New Palestine': '46163',
+ 'Cumberland': '46229',
+ 'Anderson': '46012',
+ 'Pendleton': '46064',
+ 'Lapel': '46051',
+ 'Shelbyville': '46176',
+ 'Mooresville': '46158',
+ 'Martinsville': '46151',
+ 'Lebanon': '46052',
+ 'Thorntown': '46071',
+ };
+
+ // ═══════════════════════════════════════════════════════════
+ // STATE
+ // ═══════════════════════════════════════════════════════════
+ let currentStep = 1;
+ let calcResult = {};
+
+ // Pre-fill address from URL param (passed from /instant-home-valuation/)
+ (function() {
+ const params = new URLSearchParams(window.location.search);
+ const addr = params.get('address');
+ if (addr) {
+ const field = document.getElementById('street');
+ if (field) field.value = addr;
+ }
+ })();
+
+ // ═══════════════════════════════════════════════════════════
+ // BUTTON SELECT HELPER
+ // ═══════════════════════════════════════════════════════════
+ function selectOpt(btn, groupId, val) {
+ document.querySelectorAll('#' + groupId + '.btn-select')
+.forEach(b => b.classList.remove('selected'));
+ btn.classList.add('selected');
+ }
+
+ function getSelected(groupId) {
+ const sel = document.querySelector('#' + groupId + '.btn-select.selected');
+ return sel? sel.dataset.val: null;
+ }
+
+ // ═══════════════════════════════════════════════════════════
+ // STEP NAVIGATION
+ // ═══════════════════════════════════════════════════════════
+ function goToStep(n) {
+ document.getElementById('step-' + currentStep).classList.remove('active');
+ document.getElementById('prog-' + currentStep).classList.remove('active');
+ if (currentStep < n) {
+ document.getElementById('prog-' + currentStep).classList.add('done');
+ } else {
+ document.getElementById('prog-' + currentStep).classList.remove('done');
+ }
+ currentStep = n;
+ document.getElementById('step-' + currentStep).classList.add('active');
+ document.getElementById('prog-' + currentStep).classList.add('active');
+ window.scrollTo({ top: 0, behavior: 'smooth' });
+ }
+
+ function goToStep2() {
+ const street = document.getElementById('street').value.trim();
+ const city = document.getElementById('city').value;
+ const zip = document.getElementById('zip').value.trim();
+
+ if (!street) { highlight('street'); return; }
+ if (!city) { highlight('city'); return; }
+ if (!zip &&!CITY_DEFAULT_ZIP[city]) {
+ highlight('zip');
+ return;
+ }
+ // Auto-fill ZIP if missing
+ if (!zip && CITY_DEFAULT_ZIP[city]) {
+ document.getElementById('zip').value = CITY_DEFAULT_ZIP[city];
+ }
+ goToStep(2);
+ }
+
+ function goToStep3() {
+ const sqft = parseInt(document.getElementById('sqft').value);
+ const yearBuilt = parseInt(document.getElementById('year-built').value);
+
+ if (!sqft || sqft < 400 || sqft > 15000) {
+ highlight('sqft'); return;
+ }
+ if (!yearBuilt || yearBuilt < 1880 || yearBuilt > 2026) {
+ highlight('year-built'); return;
+ }
+
+ calcResult = calculate();
+ renderResult();
+ goToStep(3);
+ }
+
+ function highlight(id) {
+ const el = document.getElementById(id);
+ el.classList.add('error');
+ el.focus();
+ setTimeout(() => el.classList.remove('error'), 2000);
+ }
+
+ // ═══════════════════════════════════════════════════════════
+ // CALCULATION ENGINE
+ // ═══════════════════════════════════════════════════════════
+ function calculate() {
+ const zip = document.getElementById('zip').value.trim() || CITY_DEFAULT_ZIP[document.getElementById('city').value] || '46220';
+ const sqft = parseInt(document.getElementById('sqft').value);
+ const yearBuilt = parseInt(document.getElementById('year-built').value);
+ const beds = parseFloat(getSelected('beds-group')) || 3;
+ const baths = parseFloat(getSelected('baths-group')) || 2;
+ const condition = getSelected('condition-group') || 'good';
+ const garage = getSelected('garage-group') || '2';
+
+ // Base: $/sqft from ZIP table (default to Indianapolis median if unknown)
+ const pricePerSqft = ZIP_TABLE[zip] || 130;
+ let base = sqft * pricePerSqft;
+
+ // Age adjustment
+ const age = 2026 - yearBuilt;
+ if (age <= 3) base *= 1.10;
+ else if (age <= 10) base *= 1.05;
+ else if (age <= 20) base *= 1.02;
+ else if (age <= 35) base *= 1.00;
+ else if (age <= 50) base *= 0.96;
+ else if (age <= 70) base *= 0.92;
+ else base *= 0.88;
+
+ // Condition adjustment
+ const condMult = { 'needs-work': 0.87, 'fair': 0.94, 'good': 1.00, 'excellent': 1.08 };
+ base *= (condMult[condition] || 1.00);
+
+ // Garage adjustment
+ const garMult = { 'none': 0.975, '1': 0.99, '2': 1.00, '3': 1.02 };
+ base *= (garMult[garage] || 1.00);
+
+ // Bathroom bonus (extra baths above 2 add value)
+ if (baths > 2) base += (baths - 2) * 3500;
+
+ // Round to nearest $1,000
+ base = Math.round(base / 1000) * 1000;
+ const low = Math.round(base * 0.91 / 1000) * 1000;
+ const high = Math.round(base * 1.09 / 1000) * 1000;
+
+ return {
+ estimate: base, low, high,
+ pricePerSqft, zip, sqft, yearBuilt, beds, baths, condition, garage,
+ city: document.getElementById('city').value,
+ street: document.getElementById('street').value.trim(),
+ };
+ }
+
+ function fmt(n) {
+ return '$' + n.toLocaleString('en-US');
+ }
+
+ // ═══════════════════════════════════════════════════════════
+ // RENDER RESULT
+ // ═══════════════════════════════════════════════════════════
+ function renderResult() {
+ const r = calcResult;
+
+ document.getElementById('result-range').textContent =
+ fmt(r.low) + ' – ' + fmt(r.high);
+
+ document.getElementById('result-midpoint').textContent =
+ 'Midpoint estimate: ' + fmt(r.estimate) + ' · ~' + fmt(r.pricePerSqft) + '/sqft in ' + r.zip;
+
+ const condLabel = { 'needs-work': 'Needs Work', 'fair': 'Fair', 'good': 'Good', 'excellent': 'Excellent' };
+ const garLabel = { 'none': 'None', '1': '1-Car', '2': '2-Car', '3': '3-Car+' };
+
+ document.getElementById('result-details').innerHTML = `
+ <div class="detail-item"><span>Beds / Baths</span><strong>${r.beds} bd / ${r.baths} ba</strong></div>
+ <div class="detail-item"><span>Square Feet</span><strong>${r.sqft.toLocaleString()}</strong></div>
+ <div class="detail-item"><span>Year Built</span><strong>${r.yearBuilt}</strong></div>
+ <div class="detail-item"><span>Condition</span><strong>${condLabel[r.condition]}</strong></div>
+ <div class="detail-item"><span>Garage</span><strong>${garLabel[r.garage]}</strong></div>
+ <div class="detail-item"><span>Area $/sqft</span><strong>${fmt(r.pricePerSqft)}</strong></div>
+ `;
+ }
+
+ // ═══════════════════════════════════════════════════════════
+ // LEAD SUBMISSION
+ // ═══════════════════════════════════════════════════════════
+ async function submitLead() {
+ const name = document.getElementById('lead-name').value.trim();
+ const email = document.getElementById('lead-email').value.trim();
+ const phone = document.getElementById('lead-phone').value.trim();
+
+ if (!name) { highlight('lead-name'); return; }
+ if (!email ||!email.includes('@')) { highlight('lead-email'); return; }
+
+ const btn = document.getElementById('submit-btn');
+ btn.innerHTML = '<span class="spinner"></span>Sending…';
+ btn.disabled = true;
+
+ const r = calcResult;
+ const fullAddress = r.street + ', ' + r.city + ', IN ' + r.zip;
+
+ const templateParams = {
+ from_name: name,
+ from_email: email,
+ from_phone: phone || 'Not provided',
+ property_address: fullAddress,
+ estimated_value: fmt(r.estimate),
+ value_low: fmt(r.low),
+ value_high: fmt(r.high),
+ bedrooms: r.beds,
+ bathrooms: r.baths,
+ sqft: r.sqft.toLocaleString(),
+ year_built: r.yearBuilt,
+ condition: r.condition,
+ };
+
+ if (EMAILJS_CONFIGURED) {
+ try {
+ await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+ showSuccess();
+ } catch (err) {
+ console.error('EmailJS error:', err);
+ fallbackMailto(name, email, phone, fullAddress, r);
+ }
+ } else {
+ // EmailJS not configured yet — fall back to mailto
+ fallbackMailto(name, email, phone, fullAddress, r);
+ }
+ }
+
+ function fallbackMailto(name, email, phone, address, r) {
+ const body = encodeURIComponent(
+ `New Home Value Lead\n\n` +
+ `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\n` +
+ `Property: ${address}\n` +
+ `Estimate: ${fmt(r.low)} – ${fmt(r.high)}\nMidpoint: ${fmt(r.estimate)}\n\n` +
+ `Details: ${r.sqft.toLocaleString()} sqft | ${r.beds}bd/${r.baths}ba | Built ${r.yearBuilt} | Condition: ${r.condition}`
+ );
+ const subject = encodeURIComponent(`Home Value Lead — ${address}`);
+ window.location.href = `mailto:csirealtyteam@yourrealtylink.com?subject=${subject}&body=${body}`;
+ showSuccess();
+ }
+
+ function showSuccess() {
+ document.getElementById('step-3').classList.remove('active');
+ document.getElementById('success-state').style.display = 'block';
+ window.scrollTo({ top: 0, behavior: 'smooth' });
+ }
+ </script>
+
+ <!-- SCHEMA -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Free Home Value Estimator — Indianapolis & Central Indiana",
+ "description": "Instant home value estimate for Central Indiana properties using local market data by ZIP code.",
+ "url": "https://indypropertyguide.com/home-value-estimator/",
+ "provider": {
+ "@type": "RealEstateAgent",
+ "name": "Your Realty Link",
+ "url": "https://yourrealtylink.com",
+ "telephone": "317-201-6323",
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "2302 E Southport Rd",
+ "addressLocality": "Indianapolis",
+ "addressRegion": "IN",
+ "postalCode": "46227"
+ }
+ }
+ }
+ </script>
 
 <script>
 function toggleNav() {
-  document.getElementById('siteNav').classList.toggle('open');
+ document.getElementById('siteNav').classList.toggle('open');
 }
 document.addEventListener('click', function(e) {
-  var dd = e.target.closest('.nav-item-dropdown');
-  if (dd && window.innerWidth <= 960) {
-    var nav = dd.closest('.site-nav');
-    if (nav && nav.classList.contains('open')) {
-      e.preventDefault();
-      dd.classList.toggle('open');
-    }
-  }
+ var dd = e.target.closest('.nav-item-dropdown');
+ if (dd && window.innerWidth <= 960) {
+ var nav = dd.closest('.site-nav');
+ if (nav && nav.classList.contains('open')) {
+ e.preventDefault();
+ dd.classList.toggle('open');
+ }
+ }
 });
 </script>
 </body>
