@@ -340,13 +340,22 @@ p  { margin-bottom: 1rem; }
 .cta-block .btn-outline { color: var(--white); border: 2px solid var(--white); }
 .cta-block .btn-outline:hover { background: var(--white); color: var(--red); border-color: var(--white); }
 
+.cta-block.cta-light,
 .cta-block-light {
   background: var(--light);
   border: 1px solid var(--border);
   color: var(--dark);
 }
+.cta-block.cta-light h3,
 .cta-block-light h3 { color: var(--dark); }
+.cta-block.cta-light p,
 .cta-block-light p { color: var(--gray); }
+.btn-red {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+.btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); text-decoration: none; color: var(--white); }
 
 /* ── FAQ ── */
 .faq-section { margin: 2.5rem 0; }
