@@ -115,6 +115,7 @@
 .valuation-tool-card h2 { text-align: center; font-size: 1.6rem; color: var(--dark); margin: 0 0 8px; }
 .valuation-tool-sub { text-align: center; color: var(--mid); font-size: 15px; margin: 0 0 28px; }
 .valuation-tool-card .ipg-lead-form label { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 5px; }
+.valuation-tool-card .required { color: var(--red); }
 .valuation-tool-card .ipg-lead-form input { padding: 13px 16px; font-size: 15px; border-radius: 10px; border: 1.5px solid #ddd; margin-bottom: 16px; }
 .valuation-tool-card .ipg-lead-form input:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(192,57,38,.1); }
 .valuation-tool-card .ipg-lead-form button[type="submit"] { padding: 15px 24px; font-size: 16px; border-radius: 10px; margin-top: 8px; }
@@ -226,19 +227,19 @@
    <form class="ipg-valuation-form ipg-lead-form">
     <input type="hidden" name="source_page" value="services/free-home-valuation">
     <input type="hidden" name="interest_type" value="Free Home Valuation — Instant Report">
-    <label for="val-address">Property Address</label>
+    <label for="val-address">Property Address <span class="required">*</span></label>
     <input type="text" id="val-address" name="address" required placeholder="123 Main St, Indianapolis, IN 46227" autocomplete="street-address">
     <div class="form-row">
      <div>
       <label for="val-name">Name</label>
-      <input type="text" id="val-name" name="name" required placeholder="Your name">
+      <input type="text" id="val-name" name="name" placeholder="Your name">
      </div>
      <div>
       <label for="val-phone">Phone</label>
-      <input type="tel" id="val-phone" name="phone" required placeholder="317-555-1234">
+      <input type="tel" id="val-phone" name="phone" placeholder="317-555-1234">
      </div>
     </div>
-    <label for="val-email">Email</label>
+    <label for="val-email">Email <span class="required">*</span></label>
     <input type="email" id="val-email" name="email" required placeholder="you@example.com">
     <button type="submit">Get My Home Value →</button>
     <p class="form-note">Instant estimate on screen · Detailed report emailed to you · No obligation</p>
