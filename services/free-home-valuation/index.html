@@ -110,6 +110,20 @@
 .benefit-item p { font-size: 13px; color: var(--mid); margin: 0; }
  @media (max-width: 600px) {.benefit-grid { grid-template-columns: 1fr; } }
 
+.valuation-tool-section { padding: 48px 0 56px; background: var(--light); }
+.valuation-tool-card { max-width: 560px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 40px 36px; box-shadow: 0 4px 24px rgba(0,0,0,.08); }
+.valuation-tool-card h2 { text-align: center; font-size: 1.6rem; color: var(--dark); margin: 0 0 8px; }
+.valuation-tool-sub { text-align: center; color: var(--mid); font-size: 15px; margin: 0 0 28px; }
+.valuation-tool-card .ipg-lead-form label { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 5px; }
+.valuation-tool-card .ipg-lead-form input { padding: 13px 16px; font-size: 15px; border-radius: 10px; border: 1.5px solid #ddd; margin-bottom: 16px; }
+.valuation-tool-card .ipg-lead-form input:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(192,57,38,.1); }
+.valuation-tool-card .ipg-lead-form button[type="submit"] { padding: 15px 24px; font-size: 16px; border-radius: 10px; margin-top: 8px; }
+.valuation-tool-card .form-note { margin-top: 14px; font-size: 12px; color: var(--mid); }
+@media (max-width: 600px) {
+ .valuation-tool-card { padding: 28px 20px; border-radius: 12px; }
+ .valuation-tool-card h2 { font-size: 1.3rem; }
+}
+
 .valuation-result-card { background: #fff; border: 2px solid var(--red); border-radius: var(--radius); padding: 32px; margin-top: 28px; text-align: center; }
 .valuation-result-card h3 { color: var(--mid); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px; }
 .valuation-estimate { font-size: 42px; font-weight: 700; color: var(--dark); margin: 0; }
@@ -171,6 +185,7 @@
  </div>
  </div>
  <a href="/blog/">Blog</a>
+ <a href="/contact/">Contact</a>
  <a href="/about/">About</a>
  <a href="/search/" class="nav-cta">Search Homes →</a>
  </nav>
@@ -200,6 +215,54 @@
  <span class="hero-badge">✅ No Obligation</span>
  <span class="hero-badge">📞 317-201-6323</span>
  </div>
+ </div>
+</section>
+
+<section class="valuation-tool-section" id="valuation-form">
+ <div class="container">
+  <div class="valuation-tool-card">
+   <h2>Get Your Free Instant Home Valuation Now</h2>
+   <p class="valuation-tool-sub">Enter your address for an instant estimate backed by real comparable sales data.</p>
+   <form class="ipg-valuation-form ipg-lead-form">
+    <input type="hidden" name="source_page" value="services/free-home-valuation">
+    <input type="hidden" name="interest_type" value="Free Home Valuation — Instant Report">
+    <label for="val-address">Property Address</label>
+    <input type="text" id="val-address" name="address" required placeholder="123 Main St, Indianapolis, IN 46227" autocomplete="street-address">
+    <div class="form-row">
+     <div>
+      <label for="val-name">Name</label>
+      <input type="text" id="val-name" name="name" required placeholder="Your name">
+     </div>
+     <div>
+      <label for="val-phone">Phone</label>
+      <input type="tel" id="val-phone" name="phone" required placeholder="317-555-1234">
+     </div>
+    </div>
+    <label for="val-email">Email</label>
+    <input type="email" id="val-email" name="email" required placeholder="you@example.com">
+    <button type="submit">Get My Home Value →</button>
+    <p class="form-note">Instant estimate on screen · Detailed report emailed to you · No obligation</p>
+   </form>
+
+   <div id="valuation-results" style="display:none;">
+    <div class="valuation-result-card">
+     <h3>Your Estimated Home Value</h3>
+     <div class="valuation-estimate" id="val-estimate"></div>
+     <div class="valuation-range" id="val-range"></div>
+     <div class="valuation-address" id="val-address-display"></div>
+     <div class="valuation-details-grid" id="val-details"></div>
+     <div class="valuation-comps" id="val-comps-section" style="display:none;">
+      <h4>Comparable Properties</h4>
+      <div id="val-comps-list"></div>
+     </div>
+     <div class="valuation-cta">
+      <p>This is an automated estimate. For a precise valuation based on your home's condition and upgrades, request a personalized CMA from Daniel Cope.</p>
+      <a href="tel:3172016323" class="btn-red">Call 317-201-6323</a>
+      <a href="mailto:csirealtyteam@yourrealtylink.com" class="btn-outline">Email Daniel</a>
+     </div>
+    </div>
+   </div>
+  </div>
  </div>
 </section>
 
@@ -317,7 +380,7 @@
  <div class="cta-block cta-light">
  <h3>Start with an Online Estimate</h3>
  <p>Get a quick online estimate as a starting point, then connect with Your Realty Link for a professional CMA that tells you the full story.</p>
- <a href="/services/free-home-valuation/" class="btn btn-red" target="_blank" rel="noopener">Get My Home's Value →</a>
+ <a href="#valuation-form" class="btn btn-red">Get My Home's Value →</a>
  </div>
 
  <div class="related-links">
@@ -333,55 +396,7 @@
 </div>
 
 
-<section class="cta-form-section" id="valuation-form">
- <div class="container">
- <h2>Get Your Free Instant Home Valuation</h2>
- <p>Enter your property address below for an instant estimate — plus a detailed PDF report with comparable sales emailed to you.</p>
- <form class="ipg-valuation-form">
- <input type="hidden" name="source_page" value="services/free-home-valuation">
- <input type="hidden" name="interest_type" value="Free Home Valuation — Instant Report">
- <label for="val-address">Property Address *</label>
- <input type="text" id="val-address" name="address" required placeholder="123 Main St, Indianapolis, IN 46227" autocomplete="street-address">
- <div class="form-row">
- <div>
- <label for="val-name">Name *</label>
- <input type="text" id="val-name" name="name" required placeholder="Your name">
- </div>
- <div>
- <label for="val-phone">Phone *</label>
- <input type="tel" id="val-phone" name="phone" required placeholder="317-555-1234">
- </div>
- </div>
- <label for="val-email">Email *</label>
- <input type="email" id="val-email" name="email" required placeholder="you@example.com">
- <button type="submit">Get My Home Value →</button>
- <p class="form-note">Instant estimate on screen · Detailed report emailed to you · No obligation</p>
- </form>
-
- <!-- Results display (hidden until valuation returns) -->
- <div id="valuation-results" style="display:none;">
- <div class="valuation-result-card">
-  <h3>Your Estimated Home Value</h3>
-  <div class="valuation-estimate" id="val-estimate"></div>
-  <div class="valuation-range" id="val-range"></div>
-  <div class="valuation-address" id="val-address-display"></div>
-
-  <div class="valuation-details-grid" id="val-details"></div>
-
-  <div class="valuation-comps" id="val-comps-section" style="display:none;">
-  <h4>Comparable Properties</h4>
-  <div id="val-comps-list"></div>
-  </div>
-
-  <div class="valuation-cta">
-  <p>This is an automated estimate. For a precise valuation based on your home's condition and upgrades, request a personalized CMA from Daniel Cope.</p>
-  <a href="tel:3172016323" class="btn-red">Call 317-201-6323</a>
-  <a href="mailto:csirealtyteam@yourrealtylink.com" class="btn-outline">Email Daniel</a>
-  </div>
- </div>
- </div>
- </div>
-</section>
+<!-- Valuation form moved to top of page -->
 
 <footer class="site-footer">
  <div class="container">
