@@ -222,16 +222,22 @@
  <!-- ── SIDEBAR ── -->
  <aside class="content-sidebar">
 
- <div class="sidebar-card">
- <div class="sidebar-card-header">Contact Your Realty Link</div>
+  <div class="sidebar-card">
+ <div class="sidebar-card-header">Get in Touch</div>
  <div class="sidebar-card-body">
- <p>Ready to buy or sell in Montgomery County? Let's talk.</p>
- <ul class="contact-list">
- <li><span class="icon">📞</span> <a href="tel:3172016323">317-201-6323</a></li>
- <li><span class="icon">✉️</span> <a href="mailto:csirealtyteam@yourrealtylink.com">csirealtyteam@yourrealtylink.com</a></li>
- <li><span class="icon">🏢</span> Your Realty Link<br>Daniel Cope, REALTOR</li>
- </ul>
- <a href="https://yourrealtylink.com/contact" class="btn btn-primary btn-sm btn-full" target="_blank" rel="noopener">Send a Message</a>
+ <p>Have questions? Fill out this quick form and we'll reach out.</p>
+ <form class="ipg-lead-form">
+ <input type="hidden" name="source_page" value="counties/montgomery-county-indiana-real-estate">
+ <input type="hidden" name="interest_type" value="Real Estate">
+ <label for="sf-name-counties-montgomery-county-ind">Name *</label>
+ <input type="text" id="sf-name-counties-montgomery-county-ind" name="name" required placeholder="Your name">
+ <label for="sf-phone-counties-montgomery-county-ind">Phone *</label>
+ <input type="tel" id="sf-phone-counties-montgomery-county-ind" name="phone" required placeholder="317-555-1234">
+ <label for="sf-email-counties-montgomery-county-ind">Email *</label>
+ <input type="email" id="sf-email-counties-montgomery-county-ind" name="email" required placeholder="you@example.com">
+ <button type="submit">Connect With an Agent →</button>
+ <p class="form-note">No spam · No obligation · We respond personally</p>
+ </form>
  </div>
  </div>
 
@@ -327,5 +333,6 @@ document.addEventListener('click', function(e) {
  }
 });
 </script>
+<script src="/assets/js/lead-form.js"></script>
 </body>
 </html>

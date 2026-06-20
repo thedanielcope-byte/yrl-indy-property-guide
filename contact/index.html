@@ -228,28 +228,52 @@
  </div>
 
  <div>
- <div class="contact-cta-block">
- <h2>Send a Message</h2>
- <p>Use the contact form on the Your Realty Link main site to send a message directly to the team. Whether you have a question about buying, selling, the local market, or joining the team — someone will get back to you promptly.</p>
- <a href="https://yourrealtylink.com/contact" class="btn btn-primary btn-full" target="_blank" rel="noopener">Go to Contact Form at yourrealtylink.com →</a>
+ <div class="contact-form-block">
+ <h2>Send Us a Message</h2>
+ <p>Fill out the form below and we'll get back to you promptly — usually within a few hours.</p>
+ <form class="ipg-lead-form" id="contactForm">
+ <input type="hidden" name="source_page" value="contact">
+ <div class="form-row">
+ <div>
+ <label for="cf-name">Full Name *</label>
+ <input type="text" id="cf-name" name="name" required placeholder="Your name">
+ </div>
+ <div>
+ <label for="cf-phone">Phone *</label>
+ <input type="tel" id="cf-phone" name="phone" required placeholder="317-555-1234">
+ </div>
+ </div>
+ <label for="cf-email">Email *</label>
+ <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
+ <label for="cf-interest">I'm Interested In…</label>
+ <select id="cf-interest" name="interest_type">
+ <option value="">Select one</option>
+ <option value="Buy a Home">Buying a home</option>
+ <option value="Sell a Home">Selling a home</option>
+ <option value="Home Valuation">Free home valuation</option>
+ <option value="Investment Property">Investment property</option>
+ <option value="New Construction">New construction</option>
+ <option value="Relocation">Relocating to Indianapolis</option>
+ <option value="Join YRL">Joining the YRL team</option>
+ <option value="Other">Other / General question</option>
+ </select>
+ <label for="cf-message">Message</label>
+ <textarea id="cf-message" name="message" placeholder="Tell us a little about what you're looking for…"></textarea>
+ <button type="submit">Send Message →</button>
+ <p class="form-note">No spam. No obligation. We'll respond personally.</p>
+ </form>
  </div>
 
  <div class="contact-cta-block" style="margin-top:20px;">
  <h2>Free Home Valuation</h2>
- <p>Curious what your home is worth in today's Central Indiana market? Get a free, no-obligation home valuation from Daniel Cope and the YRL team. We'll give you a real number — not a gimmick.</p>
- <a href="/services/free-home-valuation/" class="btn btn-primary btn-full" target="_blank" rel="noopener">Request Your Free Valuation →</a>
+ <p>Curious what your home is worth in today's Central Indiana market? Get a free, no-obligation home valuation from Daniel Cope and the YRL team.</p>
+ <a href="/services/free-home-valuation/" class="btn btn-primary btn-full">Request Your Free Valuation →</a>
  </div>
 
  <div class="contact-cta-block" style="margin-top:20px;">
  <h2>Search All MLS Listings</h2>
- <p>Ready to start your home search? Browse every active listing across Central Indiana on the Your Realty Link property search — updated daily from the MIBOR MLS.</p>
+ <p>Browse every active listing across Central Indiana — updated daily from the MIBOR MLS.</p>
  <a href="https://yourrealtylink.com/property-search" class="btn btn-primary btn-full" target="_blank" rel="noopener">Search Homes on YRL →</a>
- </div>
-
- <div class="contact-cta-block" style="margin-top:20px;">
- <h2>Thinking About Joining YRL?</h2>
- <p>Indiana agents: if you're looking for a brokerage that actually supports your growth, learn about the Your Realty Link team. Competitive splits, mentorship, and a culture built on results.</p>
- <a href="https://yourrealtylink.com/content/join-us" class="btn btn-outline btn-full" target="_blank" rel="noopener">Learn About Joining YRL →</a>
  </div>
  </div>
 
@@ -318,5 +342,6 @@ document.addEventListener('click', function(e) {
  }
 });
 </script>
+<script src="/assets/js/lead-form.js"></script>
 </body>
 </html>

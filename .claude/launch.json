@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "indy-property-guide",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4400"],
+      "name": "Indy Property Guide",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "4400", "-s"],
       "port": 4400
     }
   ]
