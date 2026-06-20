@@ -315,6 +315,12 @@ p  { margin-bottom: 1rem; }
   border-color: var(--white);
 }
 .btn-white:hover { background: var(--light); text-decoration: none; }
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+.btn-outline-white:hover { background: var(--white); color: var(--red); text-decoration: none; }
 .btn-sm { padding: 9px 18px; font-size: 13px; }
 .btn-full { width: 100%; justify-content: center; margin-bottom: 10px; }
 
@@ -331,8 +337,8 @@ p  { margin-bottom: 1rem; }
 .cta-block h3 { color: var(--white); font-size: 1.3rem; margin-bottom: .5rem; margin-top: 0; }
 .cta-block p { color: rgba(255,255,255,.88); font-size: 15px; margin-bottom: 1.75rem; max-width: 580px; margin-left: auto; margin-right: auto; }
 .cta-block .btn-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.cta-block .btn-outline { color: var(--white); border-color: rgba(255,255,255,.6); }
-.cta-block .btn-outline:hover { background: rgba(255,255,255,.15); border-color: var(--white); }
+.cta-block .btn-outline { color: var(--white); border: 2px solid var(--white); }
+.cta-block .btn-outline:hover { background: var(--white); color: var(--red); border-color: var(--white); }
 
 .cta-block-light {
   background: var(--light);
