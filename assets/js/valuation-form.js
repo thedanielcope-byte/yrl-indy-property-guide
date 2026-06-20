@@ -1,5 +1,5 @@
 (function () {
-  var GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/iOT1nopTL5CnKPq44zFI/webhook-trigger/b82bea0a-88fa-4cd5-9ad5-9fa3f05e7d50';
+  var GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/iOT1nopTL5CnKPq44zFI/webhook-trigger/90f523ba-dd26-4946-ab3d-5b036540af8a';
 
   var VALUATION_API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/property-valuation';
 
