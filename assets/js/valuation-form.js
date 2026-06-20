@@ -77,7 +77,7 @@
     if (!container) return;
 
     document.getElementById('val-estimate').textContent = fmt(r.estimate);
-    document.getElementById('val-range').textContent = 'Estimated Range: ' + fmt(r.rangeLow) + ' — ' + fmt(r.rangeHigh);
+    document.getElementById('val-range').textContent = 'Estimated Range: ' + fmt(Math.max(0, r.rangeLow || 0)) + ' — ' + fmt(r.rangeHigh);
     document.getElementById('val-address-display').textContent = r.address || address;
 
     // Property details
