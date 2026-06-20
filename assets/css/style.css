@@ -10,12 +10,14 @@
   --red-dark:  #9e2e1e;
   --red-light: #f5ede9;
   --gray:      #6e6e70;
-  --dark:      #1a1a1a;
-  --mid:       #444;
-  --light:     #f7f7f7;
-  --border:    #e2e2e2;
+  --dark:      #1b3a5c;
+  --mid:       #2a4a6c;
+  --light:     #f5f8fc;
+  --border:    #d6e3f0;
   --white:     #ffffff;
   --green:     #2e7d32;
+  --navy:      #1b3a5c;
+  --navy-dark: #132a44;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Merriweather', Georgia, serif;
@@ -202,7 +204,7 @@ p  { margin-bottom: 1rem; }
 
 /* ── HERO ── */
 .page-hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d1a14 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
   color: var(--white);
   padding: 56px 0 48px;
   position: relative;
@@ -553,8 +555,8 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 
 /* ── FOOTER ── */
 .site-footer {
-  background: #f7f7f7;
-  color: #444;
+  background: var(--light);
+  color: var(--mid);
   padding: 56px 0 24px;
   border-top: 3px solid var(--red);
   font-size: 13px;
@@ -838,7 +840,7 @@ hr.divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0
 
 /* CTA form (bottom of service pages) */
 .cta-form-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d1a14 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
   padding: 56px 0;
   text-align: center;
 }

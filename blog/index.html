@@ -60,19 +60,22 @@
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="/assets/css/style.css">
  <style>
-.blog-featured { background: #1a1a1a; border-radius: 12px; padding: 40px; margin-bottom: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.blog-featured { background: #1b3a5c; border-radius: 12px; padding: 40px; margin-bottom: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
 .blog-featured-label { font-size:.75rem; font-weight: 700; letter-spacing:.08em; text-transform: uppercase; color: #c03926; margin-bottom: 10px; }
 .blog-featured h2 { font-size: 1.6rem; color: #fff; margin-bottom: 12px; line-height: 1.3; }
 .blog-featured p { color: rgba(255,255,255,.75); line-height: 1.6; margin-bottom: 20px; }
 .blog-featured-meta { font-size:.82rem; color: rgba(255,255,255,.5); margin-bottom: 16px; }
-.blog-featured-img { background: #c03926; border-radius: 8px; height: 220px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 3rem; }
+.blog-featured-img { border-radius: 8px; height: 220px; overflow: hidden; }
+.blog-featured-img img { width: 100%; height: 100%; object-fit: cover; }
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
 .blog-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.07); overflow: hidden; display: flex; flex-direction: column; transition: transform.15s; }
 .blog-card:hover { transform: translateY(-3px); }
-.blog-card-img { height: 140px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+.blog-card-img { height: 160px; overflow: hidden; }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.blog-card:hover .blog-card-img img { transform: scale(1.05); }
 .blog-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
 .blog-card-cat { font-size:.72rem; font-weight: 700; letter-spacing:.07em; text-transform: uppercase; color: #c03926; margin-bottom: 6px; }
-.blog-card h3 { font-size: 1rem; color: #1a1a1a; line-height: 1.4; margin-bottom: 8px; }
+.blog-card h3 { font-size: 1rem; color: #1b3a5c; line-height: 1.4; margin-bottom: 8px; }
 .blog-card p { font-size:.88rem; color: #6e6e70; line-height: 1.5; flex: 1; margin-bottom: 16px; }
 .blog-card a.read-more { font-size:.85rem; color: #c03926; font-weight: 600; text-decoration: none; }
 .blog-card a.read-more:hover { text-decoration: underline; }
@@ -118,7 +121,6 @@
  <a href="/services/down-payment-assistance/">Down Payment Help</a>
  </div>
  </div>
- <a href="https://yourrealtylink.com/agent-search" target="_blank" rel="noopener">Meet Our Agents</a>
  <a href="/blog/">Blog</a>
  <a href="/about/">About</a>
  <a href="/search/" class="nav-cta">Search Homes →</a>
@@ -161,7 +163,7 @@
  <p>What's happening in the Indianapolis housing market right now? From inventory levels to price trends across Hamilton, Johnson, and Hendricks counties — here's what buyers and sellers need to know heading into 2026.</p>
  <a href="/blog/indianapolis-real-estate-market-update-2026/" class="btn btn-primary">Read the Market Update →</a>
  </div>
- <div class="blog-featured-img">🏙️</div>
+ <div class="blog-featured-img"><img src="/assets/img/blog/city-skyline.jpg" alt="Indianapolis skyline" loading="lazy"></div>
  </div>
 
  <!-- CATEGORY FILTER -->
@@ -181,7 +183,7 @@
  <div class="blog-grid">
 
  <div class="blog-card">
- <div class="blog-card-img">🏙️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="anderson indiana real estate guide" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Anderson Indiana Real Estate Guide</h3>
@@ -191,7 +193,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏢</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/investment.jpg" alt="multi-family investing in indianapolis — is it worth it?" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Investment Properties</div>
  <h3>Multi-Family Investing in Indianapolis — Is It Worth It?</h3>
@@ -201,7 +203,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🤝</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/team-office.jpg" alt="why real estate agents switch brokerages in indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Join Our Team</div>
  <h3>Why Real Estate Agents Switch Brokerages in Indianapolis</h3>
@@ -211,7 +213,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏘️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/neighborhood.jpg" alt="best neighborhoods to buy a home in indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Neighborhoods</div>
  <h3>Best Neighborhoods to Buy a Home in Indianapolis</h3>
@@ -221,7 +223,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏡</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/for-sale.jpg" alt="how to sell your home fast in greenwood indiana" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Selling a Home</div>
  <h3>How to Sell Your Home Fast in Greenwood Indiana</h3>
@@ -231,7 +233,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🔑</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/house-keys.jpg" alt="first time home buyer guide — indianapolis 2026" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Buying a Home</div>
  <h3>First Time Home Buyer Guide — Indianapolis 2026</h3>
@@ -241,7 +243,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🌳</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="living in carmel indiana — what to know before you move" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Living in Carmel Indiana — What to Know Before You Move</h3>
@@ -251,7 +253,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">💰</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/for-sale.jpg" alt="what is my home worth in indianapolis?" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Selling a Home</div>
  <h3>What Is My Home Worth in Indianapolis?</h3>
@@ -261,7 +263,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">⭐</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="fishers indiana — one of america's best places to live" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Fishers Indiana — One of America's Best Places to Live</h3>
@@ -271,7 +273,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">👥</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/team-office.jpg" alt="why join a real estate team instead of going independent" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Join Our Team</div>
  <h3>Why Join a Real Estate Team Instead of Going Independent</h3>
@@ -281,7 +283,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏗️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/new-construction.jpg" alt="buying new construction in central indiana — pros and cons" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">New Construction</div>
  <h3>Buying New Construction in Central Indiana — Pros and Cons</h3>
@@ -291,7 +293,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">📋</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/for-sale.jpg" alt="closing costs in indiana — what sellers need to know" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Selling a Home</div>
  <h3>Closing Costs in Indiana — What Sellers Need to Know</h3>
@@ -301,7 +303,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏙️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="zionsville indiana — small town luxury living near indy" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Zionsville Indiana — Small Town Luxury Living Near Indy</h3>
@@ -311,7 +313,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">📈</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/investment.jpg" alt="investment property in indianapolis — is now a good time?" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Investment Properties</div>
  <h3>Investment Property in Indianapolis — Is Now a Good Time?</h3>
@@ -321,7 +323,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">📝</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/house-keys.jpg" alt="how the buyer compensation agreement works in indiana" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Buying a Home</div>
  <h3>How the Buyer Compensation Agreement Works in Indiana</h3>
@@ -331,7 +333,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🚫</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/for-sale.jpg" alt="top 5 things that kill a home sale in indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Selling a Home</div>
  <h3>Top 5 Things That Kill a Home Sale in Indianapolis</h3>
@@ -341,7 +343,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🌿</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="avon indiana — why families love hendricks county" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Avon Indiana — Why Families Love Hendricks County</h3>
@@ -351,7 +353,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">💼</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/team-office.jpg" alt="yrl agent commission structure — what you need to know" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Join Our Team</div>
  <h3>YRL Agent Commission Structure — What You Need to Know</h3>
@@ -361,7 +363,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🚀</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="mccordsville indiana — hancock county's fastest growing city" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>McCordsville Indiana — Hancock County's Fastest Growing City</h3>
@@ -371,7 +373,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🛋️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/for-sale.jpg" alt="home staging tips for indianapolis sellers" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Selling a Home</div>
  <h3>Home Staging Tips for Indianapolis Sellers</h3>
@@ -381,7 +383,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🌊</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/neighborhood.jpg" alt="geist reservoir — waterfront homes near indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Neighborhoods</div>
  <h3>Geist Reservoir — Waterfront Homes Near Indianapolis</h3>
@@ -391,7 +393,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">📊</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/city-skyline.jpg" alt="indianapolis housing market forecast — what to expect" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Market Updates</div>
  <h3>Indianapolis Housing Market Forecast — What to Expect</h3>
@@ -401,7 +403,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🌾</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="shelbyville indiana — affordable living near indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Shelbyville Indiana — Affordable Living Near Indianapolis</h3>
@@ -411,7 +413,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🤝</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/house-keys.jpg" alt="how to choose the right real estate agent in indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Buying a Home</div>
  <h3>How to Choose the Right Real Estate Agent in Indianapolis</h3>
@@ -421,7 +423,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🛒</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="plainfield indiana — hendricks county's retail hub" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Plainfield Indiana — Hendricks County's Retail Hub</h3>
@@ -431,7 +433,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">⏰</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/home-exterior.jpg" alt="my home expired — what should i do next?" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Expired Listings</div>
  <h3>My Home Expired — What Should I Do Next?</h3>
@@ -441,7 +443,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏷️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/for-sale.jpg" alt="why fsbo homes sell for less in indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">For Sale By Owner</div>
  <h3>Why FSBO Homes Sell for Less in Indianapolis</h3>
@@ -451,7 +453,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">⚖️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/home-exterior.jpg" alt="selling a home during a divorce in indiana" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Divorce &amp; Estate Sales</div>
  <h3>Selling a Home During a Divorce in Indiana</h3>
@@ -461,7 +463,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏛️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/home-exterior.jpg" alt="probate and estate home sales in indianapolis" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Divorce &amp; Estate Sales</div>
  <h3>Probate and Estate Home Sales in Indianapolis</h3>
@@ -471,7 +473,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">💵</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/mortgage-calc.jpg" alt="down payment assistance programs in indiana 2026" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Mortgage &amp; Finance</div>
  <h3>Down Payment Assistance Programs in Indiana 2026</h3>
@@ -481,7 +483,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏎️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="brownsburg indiana — racing town, growing suburbs" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Brownsburg Indiana — Racing Town, Growing Suburbs</h3>
@@ -491,7 +493,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">⚓</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="noblesville indiana — hamilton county's county seat" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Noblesville Indiana — Hamilton County's County Seat</h3>
@@ -501,7 +503,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🔄</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/for-sale.jpg" alt="what is a short sale in indiana?" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Selling a Home</div>
  <h3>What Is a Short Sale in Indiana?</h3>
@@ -511,7 +513,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🎨</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/neighborhood.jpg" alt="broad ripple — indianapolis's most vibrant neighborhood" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Neighborhoods</div>
  <h3>Broad Ripple — Indianapolis's Most Vibrant Neighborhood</h3>
@@ -521,7 +523,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏠</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/neighborhood.jpg" alt="irvington indianapolis — historic charm on the east side" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Neighborhoods</div>
  <h3>Irvington Indianapolis — Historic Charm on the East Side</h3>
@@ -531,7 +533,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🎖️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/mortgage-calc.jpg" alt="va loans in indiana — a complete guide for veterans" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Mortgage &amp; Finance</div>
  <h3>VA Loans in Indiana — A Complete Guide for Veterans</h3>
@@ -541,7 +543,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">🏟️</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/suburban-home.jpg" alt="westfield indiana real estate — home of grand park" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">City Guides</div>
  <h3>Westfield Indiana Real Estate — Home of Grand Park</h3>
@@ -551,7 +553,7 @@
  </div>
 
  <div class="blog-card">
- <div class="blog-card-img">📅</div>
+ <div class="blog-card-img"><img src="/assets/img/blog/city-skyline.jpg" alt="year in review — central indiana real estate 2025" loading="lazy"></div>
  <div class="blog-card-body">
  <div class="blog-card-cat">Market Updates</div>
  <h3>Year in Review — Central Indiana Real Estate 2025</h3>
