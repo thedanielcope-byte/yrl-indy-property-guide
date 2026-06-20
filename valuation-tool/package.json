@@ -1,0 +1,17 @@
+{
+  "name": "yrl-property-valuation",
+  "version": "1.0.0",
+  "description": "Property valuation report generator for Your Realty Link",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "server": "node src/server.js",
+    "valuation": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemailer": "^6.9.0",
+    "pdfkit": "^0.15.0"
+  }
+}
