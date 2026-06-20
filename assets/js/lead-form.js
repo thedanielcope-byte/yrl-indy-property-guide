@@ -5,7 +5,7 @@
 
 (function () {
   // ── GHL WEBHOOK URL — replace this with your real URL ──
-  var WEBHOOK_URL = 'PASTE_YOUR_GHL_WEBHOOK_URL_HERE';
+  var WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/iOT1nopTL5CnKPq44zFI/webhook-trigger/b82bea0a-88fa-4cd5-9ad5-9fa3f05e7d50';
 
   document.addEventListener('submit', function (e) {
     var form = e.target;
