@@ -253,6 +253,39 @@
 .section-header h2 { font-size: 1.5rem; }
 .hero-trust { padding: 10px 16px; gap: 14px; }
  }
+
+ /* ── FEATURED LISTINGS CAROUSEL ── */
+.listings-section { padding: 56px 0 64px; background: #f7f7f7; }
+.listings-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
+.listings-header h2 { font-size: 1.7rem; color: #1b3a5c; margin: 0; }
+.listings-header .listings-count { font-size: .88rem; color: #6e6e70; }
+.listings-scroll-wrap { position: relative; }
+.listings-track { display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; }
+.listings-track::-webkit-scrollbar { display: none; }
+.listing-card { flex: 0 0 280px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.07); text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s; display: flex; flex-direction: column; }
+.listing-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+.listing-card-img { width: 100%; height: 190px; object-fit: cover; background: #e8e8e8; display: block; }
+.listing-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+.listing-card-price { font-size: 1.25rem; font-weight: 700; color: #1b3a5c; margin-bottom: 4px; }
+.listing-card-city { font-size: .9rem; color: #6e6e70; margin-bottom: 12px; }
+.listing-card-details { display: flex; gap: 16px; font-size: .82rem; color: #555; margin-top: auto; }
+.listing-card-details span { display: flex; align-items: center; gap: 4px; }
+.listing-card-mls { font-size: .75rem; color: #aaa; margin-top: 10px; }
+.listings-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.95); border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,.1); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #1b3a5c; z-index: 2; transition: background .15s; }
+.listings-arrow:hover { background: #fff; border-color: #c03926; color: #c03926; }
+.listings-arrow-left { left: -16px; }
+.listings-arrow-right { right: -16px; }
+.listings-cta { text-align: center; margin-top: 32px; }
+.listings-cta a { display: inline-block; background: #c03926; color: #fff; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .95rem; transition: background .2s; }
+.listings-cta a:hover { background: #a22e1e; }
+.listings-loading { text-align: center; padding: 60px 20px; color: #6e6e70; font-size: .95rem; }
+.listings-empty { display: none; }
+@media (max-width: 768px) {
+ .listing-card { flex: 0 0 260px; }
+ .listing-card-img { height: 170px; }
+ .listings-arrow { display: none; }
+ .listings-header h2 { font-size: 1.4rem; }
+}
  </style>
 </head>
 <body>
@@ -333,6 +366,26 @@
  <div class="hero-trust-item"><span class="dot"></span> Updated Daily</div>
  <div class="hero-trust-item"><span class="dot"></span> 17 Counties Covered</div>
  <div class="hero-trust-item"><span class="dot"></span> Free Agent Representation</div>
+ </div>
+</section>
+
+<!-- FEATURED LISTINGS CAROUSEL -->
+<section class="listings-section" id="featuredListings">
+ <div class="container">
+ <div class="listings-header">
+ <h2>Our Office Listings</h2>
+ <span class="listings-count" id="listingsCount"></span>
+ </div>
+ <div class="listings-scroll-wrap">
+ <button class="listings-arrow listings-arrow-left" id="listingsLeft" aria-label="Scroll left">&#8249;</button>
+ <div class="listings-track" id="listingsTrack">
+ <div class="listings-loading" id="listingsLoading">Loading listings&hellip;</div>
+ </div>
+ <button class="listings-arrow listings-arrow-right" id="listingsRight" aria-label="Scroll right">&#8250;</button>
+ </div>
+ <div class="listings-cta">
+ <a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener">Browse All Listings on YourRealtyLink.com &rarr;</a>
+ </div>
  </div>
 </section>
 
@@ -646,6 +699,57 @@ document.addEventListener('click', function(e) {
  }
  }
 });
+
+// ── Featured Listings Carousel ──
+(function() {
+ var API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/office-listings';
+ var track = document.getElementById('listingsTrack');
+ var loading = document.getElementById('listingsLoading');
+ var countEl = document.getElementById('listingsCount');
+ var section = document.getElementById('featuredListings');
+
+ function buildCard(l) {
+  return '<a class="listing-card" href="' + l.detailUrl + '" target="_blank" rel="noopener">' +
+   '<img class="listing-card-img" src="' + l.image + '" alt="Home in ' + l.city + '" loading="lazy" onerror="this.src=\'/assets/img/yrl-logo.png\';this.style.objectFit=\'contain\';this.style.padding=\'40px\'">' +
+   '<div class="listing-card-body">' +
+   '<div class="listing-card-price">' + l.price + '</div>' +
+   '<div class="listing-card-city">' + l.city + '</div>' +
+   '<div class="listing-card-details">' +
+   (l.bedsBaths ? '<span>🛏 ' + l.bedsBaths + '</span>' : '') +
+   (l.sqft ? '<span>📐 ' + l.sqft + ' sqft</span>' : '') +
+   (l.acres ? '<span>🌳 ' + l.acres + ' acres</span>' : '') +
+   '</div>' +
+   '<div class="listing-card-mls">MLS# ' + l.mlsNumber + '</div>' +
+   '</div></a>';
+ }
+
+ fetch(API)
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+   if (!data.listings || data.listings.length === 0) {
+    section.style.display = 'none';
+    return;
+   }
+   loading.remove();
+   countEl.textContent = data.listings.length + ' active listings';
+   var html = '';
+   for (var i = 0; i < data.listings.length; i++) {
+    html += buildCard(data.listings[i]);
+   }
+   track.innerHTML = html;
+  })
+  .catch(function() {
+   section.style.display = 'none';
+  });
+
+ // Scroll arrows
+ document.getElementById('listingsLeft').addEventListener('click', function() {
+  track.scrollBy({ left: -300, behavior: 'smooth' });
+ });
+ document.getElementById('listingsRight').addEventListener('click', function() {
+  track.scrollBy({ left: 300, behavior: 'smooth' });
+ });
+})();
 </script>
 </body>
 </html>
