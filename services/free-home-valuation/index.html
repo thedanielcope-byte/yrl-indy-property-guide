@@ -109,6 +109,29 @@
 .benefit-item h4 { font-size: 14px; margin-bottom: 6px; color: var(--red); margin-top: 0; }
 .benefit-item p { font-size: 13px; color: var(--mid); margin: 0; }
  @media (max-width: 600px) {.benefit-grid { grid-template-columns: 1fr; } }
+
+.valuation-result-card { background: #fff; border: 2px solid var(--red); border-radius: var(--radius); padding: 32px; margin-top: 28px; text-align: center; }
+.valuation-result-card h3 { color: var(--mid); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px; }
+.valuation-estimate { font-size: 42px; font-weight: 700; color: var(--dark); margin: 0; }
+.valuation-range { font-size: 15px; color: var(--mid); margin: 6px 0 0; }
+.valuation-address { font-size: 14px; color: var(--mid); margin: 12px 0 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.valuation-details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; text-align: center; margin: 20px 0; }
+.val-detail-item { background: var(--light); border-radius: 6px; padding: 14px 10px; }
+.val-detail-label { font-size: 11px; color: var(--mid); text-transform: uppercase; letter-spacing: 0.5px; }
+.val-detail-value { font-size: 18px; font-weight: 700; color: var(--dark); margin-top: 4px; }
+.valuation-comps { text-align: left; margin-top: 24px; }
+.valuation-comps h4 { color: var(--red); font-size: 16px; border-bottom: 2px solid var(--red); padding-bottom: 8px; }
+.comp-card { background: var(--light); border-radius: 6px; padding: 14px 18px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.comp-address { font-weight: 600; color: var(--dark); font-size: 14px; }
+.comp-price { font-weight: 700; color: var(--red); font-size: 16px; }
+.comp-meta { font-size: 12px; color: var(--mid); width: 100%; }
+.valuation-cta { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border); }
+.valuation-cta p { font-size: 14px; color: var(--mid); margin-bottom: 16px; }
+.btn-outline { display: inline-block; padding: 12px 24px; border: 2px solid var(--red); color: var(--red); font-weight: 600; border-radius: 6px; text-decoration: none; margin: 4px 8px; transition: all 0.2s; }
+.btn-outline:hover { background: var(--red); color: #fff; }
+.valuation-loading { text-align: center; padding: 40px; }
+.valuation-loading .spinner { width: 40px; height: 40px; border: 4px solid var(--border); border-top-color: var(--red); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+@keyframes spin { to { transform: rotate(360deg); } }
  </style>
 </head>
 <body>
@@ -250,7 +273,7 @@
  </ol>
 
  <h2>Why Choose Your Realty Link for Your Home Valuation</h2>
- <p>Any agent can produce a CMA. The quality of that CMA depends entirely on the agent's market knowledge, their access to current data, and their honesty in presenting the results. Your Realty Link brings all three. Daniel Cope is a REALTOR with deep roots in Central Indiana real estate and MLS access that provides access to the most complete and current listing data available. We don't inflate valuations to win listings — that approach backfires on sellers, and we've built our reputation on honest advice. If you're selling in <a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a>, <a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a>, or anywhere across the Indianapolis metro, start with a free CMA from Your Realty Link. Then check out our <a href="/services/pricing-your-home/">pricing strategy page</a> to understand how we turn that valuation into a listing price that works.</p>
+ <p>Any agent can produce a CMA. The quality of that CMA depends entirely on the agent's market knowledge, their access to current data, and their honesty in presenting the results. Your Realty Link brings all three. Daniel Cope is a Real Estate Broker with deep roots in Central Indiana real estate and MLS access that provides access to the most complete and current listing data available. We don't inflate valuations to win listings — that approach backfires on sellers, and we've built our reputation on honest advice. If you're selling in <a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a>, <a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a>, or anywhere across the Indianapolis metro, start with a free CMA from Your Realty Link. Then check out our <a href="/services/pricing-your-home/">pricing strategy page</a> to understand how we turn that valuation into a listing price that works.</p>
 
  <h2>Frequently Asked Questions</h2>
 
@@ -310,30 +333,53 @@
 </div>
 
 
-<section class="cta-form-section">
+<section class="cta-form-section" id="valuation-form">
  <div class="container">
- <h2>Ready to Take the Next Step?</h2>
- <p>Fill out the form below and a Your Realty Link agent will reach out — no obligation, no pressure.</p>
- <form class="ipg-lead-form">
+ <h2>Get Your Free Instant Home Valuation</h2>
+ <p>Enter your property address below for an instant estimate — plus a detailed PDF report with comparable sales emailed to you.</p>
+ <form class="ipg-valuation-form">
  <input type="hidden" name="source_page" value="services/free-home-valuation">
- <input type="hidden" name="interest_type" value="Free Home Valuation in Indianapolis &amp; Central Indiana">
+ <input type="hidden" name="interest_type" value="Free Home Valuation — Instant Report">
+ <label for="val-address">Property Address *</label>
+ <input type="text" id="val-address" name="address" required placeholder="123 Main St, Indianapolis, IN 46227" autocomplete="street-address">
  <div class="form-row">
  <div>
- <label for="sv-name">Name *</label>
- <input type="text" id="sv-name" name="name" required placeholder="Your name">
+ <label for="val-name">Name *</label>
+ <input type="text" id="val-name" name="name" required placeholder="Your name">
  </div>
  <div>
- <label for="sv-phone">Phone *</label>
- <input type="tel" id="sv-phone" name="phone" required placeholder="317-555-1234">
+ <label for="val-phone">Phone *</label>
+ <input type="tel" id="val-phone" name="phone" required placeholder="317-555-1234">
  </div>
  </div>
- <label for="sv-email">Email *</label>
- <input type="email" id="sv-email" name="email" required placeholder="you@example.com">
- <label for="sv-message">How can we help?</label>
- <textarea id="sv-message" name="message" placeholder="Tell us about your situation…"></textarea>
- <button type="submit">Send Message →</button>
- <p class="form-note">No spam · No obligation · We respond personally</p>
+ <label for="val-email">Email *</label>
+ <input type="email" id="val-email" name="email" required placeholder="you@example.com">
+ <button type="submit">Get My Home Value →</button>
+ <p class="form-note">Instant estimate on screen · Detailed report emailed to you · No obligation</p>
  </form>
+
+ <!-- Results display (hidden until valuation returns) -->
+ <div id="valuation-results" style="display:none;">
+ <div class="valuation-result-card">
+  <h3>Your Estimated Home Value</h3>
+  <div class="valuation-estimate" id="val-estimate"></div>
+  <div class="valuation-range" id="val-range"></div>
+  <div class="valuation-address" id="val-address-display"></div>
+
+  <div class="valuation-details-grid" id="val-details"></div>
+
+  <div class="valuation-comps" id="val-comps-section" style="display:none;">
+  <h4>Comparable Properties</h4>
+  <div id="val-comps-list"></div>
+  </div>
+
+  <div class="valuation-cta">
+  <p>This is an automated estimate. For a precise valuation based on your home's condition and upgrades, request a personalized CMA from Daniel Cope.</p>
+  <a href="tel:3172016323" class="btn-red">Call 317-201-6323</a>
+  <a href="mailto:csirealtyteam@yourrealtylink.com" class="btn-outline">Email Daniel</a>
+  </div>
+ </div>
+ </div>
  </div>
 </section>
 
@@ -342,7 +388,7 @@
  <div class="footer-grid">
  <div class="footer-col">
  <h4>Your Realty Link</h4>
- <p>Daniel Cope, REALTOR<br>2302 E Southport Rd<br>Indianapolis, IN 46227</p>
+ <p>Daniel Cope, Real Estate Broker<br>2302 E Southport Rd<br>Indianapolis, IN 46227</p>
  <p><a href="tel:3172016323">317-201-6323</a><br><a href="mailto:csirealtyteam@yourrealtylink.com">csirealtyteam@yourrealtylink.com</a></p>
  </div>
  <div class="footer-col">
@@ -398,6 +444,6 @@ document.addEventListener('click', function(e) {
  }
 });
 </script>
-<script src="/assets/js/lead-form.js"></script>
+<script src="/assets/js/valuation-form.js"></script>
 </body>
 </html>
