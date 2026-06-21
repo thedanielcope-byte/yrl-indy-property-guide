@@ -338,7 +338,7 @@ p  { margin-bottom: 1rem; }
 .cta-block h2 { color: var(--white); font-size: 1.75rem; margin-bottom: .75rem; margin-top: 0; }
 .cta-block h3 { color: var(--white); font-size: 1.3rem; margin-bottom: .5rem; margin-top: 0; }
 .cta-block p { color: rgba(255,255,255,.88); font-size: 15px; margin-bottom: 1.75rem; max-width: 580px; margin-left: auto; margin-right: auto; }
-.cta-block .btn-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.cta-block .btn-group, .cta-block .cta-buttons, .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .cta-block .btn-outline { color: var(--white); border: 2px solid var(--white); }
 .cta-block .btn-outline:hover { background: var(--white); color: var(--red); border-color: var(--white); }
 
