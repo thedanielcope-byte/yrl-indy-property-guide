@@ -64,12 +64,12 @@ p  { margin-bottom: 1rem; }
 
 /* ── HEADER ── */
 .site-header {
-  background: var(--dark);
+  background: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 3px solid var(--red);
-  box-shadow: var(--shadow);
+  border-bottom: 2px solid #e5e5e5;
+  box-shadow: 0 1px 8px rgba(0,0,0,.06);
 }
 .header-inner {
   display: flex;
@@ -90,24 +90,24 @@ p  { margin-bottom: 1rem; }
 .site-logo-text .site-name {
   font-size: 13px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--dark);
   letter-spacing: .03em;
 }
 .site-logo-text .site-tagline {
   font-size: 11px;
-  color: #aaa;
+  color: #6e6e70;
 }
 .site-nav { display: flex; align-items: center; gap: 4px; }
 .site-nav > a, .nav-item-dropdown > a {
   font-size: 13px;
   font-weight: 500;
-  color: #ccc;
+  color: #444;
   padding: 6px 10px;
   border-radius: 5px;
   transition: color var(--transition), background var(--transition);
   white-space: nowrap;
 }
-.site-nav > a:hover, .nav-item-dropdown > a:hover { color: var(--white); background: rgba(255,255,255,.08); text-decoration: none; }
+.site-nav > a:hover, .nav-item-dropdown > a:hover { color: var(--red); background: rgba(0,0,0,.04); text-decoration: none; }
 
 /* ── NAV DROPDOWNS ── */
 .nav-item-dropdown {
@@ -182,10 +182,10 @@ p  { margin-bottom: 1rem; }
   border-radius: var(--radius);
   transition: background var(--transition);
 }
-.hamburger:hover { background: rgba(255,255,255,.08); }
+.hamburger:hover { background: rgba(0,0,0,.05); }
 .hamburger span {
   display: block; width: 22px; height: 2px;
-  background: #ccc;
+  background: #444;
   transition: var(--transition);
   pointer-events: none;
 }
