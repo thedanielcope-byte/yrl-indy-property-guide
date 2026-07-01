@@ -55,22 +55,22 @@
       '<div class="exit-popup">' +
         '<button class="exit-popup-close" aria-label="Close">&times;</button>' +
         '<div class="exit-popup-content">' +
-          '<h2>Before You Go...</h2>' +
-          '<p>Get a <strong>free, no-obligation home valuation</strong> or schedule a consultation with a local Indianapolis real estate expert.</p>' +
+          '<h2>Wait — Grab a Free Guide Before You Go</h2>' +
+          '<p>Download a free checklist and get expert tips for your next move in Indianapolis.</p>' +
           '<div class="exit-popup-cards">' +
-            '<a href="/schedule/buyer-consultation/" class="exit-card">' +
-              '<span class="exit-card-icon">🏠</span>' +
+            '<a href="/resources/buyer-checklist/" class="exit-card">' +
+              '<span class="exit-card-icon">📋</span>' +
               '<span class="exit-card-label">Buying a Home?</span>' +
-              '<span class="exit-card-action">Free Buyer Consultation →</span>' +
+              '<span class="exit-card-action">Free Buyer Checklist →</span>' +
             '</a>' +
-            '<a href="/schedule/seller-consultation/" class="exit-card">' +
-              '<span class="exit-card-icon">📊</span>' +
+            '<a href="/resources/seller-guide/" class="exit-card">' +
+              '<span class="exit-card-icon">📦</span>' +
               '<span class="exit-card-label">Selling a Home?</span>' +
-              '<span class="exit-card-action">Free CMA & Consultation →</span>' +
+              '<span class="exit-card-action">Free Seller Prep Guide →</span>' +
             '</a>' +
           '</div>' +
           '<div class="exit-popup-alt">' +
-            '<a href="tel:3172016323" class="exit-phone">Or call Daniel Cope directly: <strong>317-201-6323</strong></a>' +
+            '<a href="/schedule/" class="exit-phone">Or <strong>schedule a free consultation</strong> — no obligation</a>' +
           '</div>' +
         '</div>' +
       '</div>';

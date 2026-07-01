@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- ═══════════════════════════════════════════════
+ YOAST SEO FIELDS
+ Focus Keyword: (none — noindex page)
+ SEO Title: Your Seller Prep Guide — Indy Property Guide
+ Meta Description: (noindex — no meta description needed)
+ ═══════════════════════════════════════════════ -->
+
+ <title>Your Seller Prep Guide — Indy Property Guide</title>
+ <meta name="robots" content="noindex, nofollow">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/assets/css/style.css">
+
+ <style>
+ /* Thank-you / guide delivery page */
+ .ty-hero {
+ background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+ color: var(--white);
+ padding: 48px 0 40px;
+ text-align: center;
+ }
+ .ty-hero h1 {
+ color: var(--white);
+ font-size: clamp(1.6rem, 4vw, 2.2rem);
+ margin-bottom: 12px;
+ }
+ .ty-hero p {
+ color: rgba(255,255,255,.85);
+ font-size: 1.05rem;
+ max-width: 580px;
+ margin: 0 auto;
+ line-height: 1.6;
+ }
+
+ .guide-wrap {
+ max-width: 780px;
+ margin: 0 auto;
+ padding: 48px 0 64px;
+ }
+
+ .guide-section {
+ margin-bottom: 48px;
+ }
+ .guide-section:last-of-type {
+ margin-bottom: 40px;
+ }
+ .guide-section h2 {
+ font-size: 1.4rem;
+ color: var(--dark);
+ border-bottom: 2px solid var(--red);
+ padding-bottom: 10px;
+ margin-bottom: 20px;
+ }
+ .guide-section h3 {
+ font-size: 1.1rem;
+ color: var(--red);
+ margin-top: 28px;
+ margin-bottom: 10px;
+ }
+
+ /* Timeline styles */
+ .timeline {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+ .timeline li {
+ display: flex;
+ gap: 18px;
+ align-items: flex-start;
+ margin-bottom: 20px;
+ padding-bottom: 20px;
+ border-bottom: 1px solid var(--border);
+ }
+ .timeline li:last-child {
+ border-bottom: none;
+ margin-bottom: 0;
+ padding-bottom: 0;
+ }
+ .timeline-badge {
+ background: var(--red);
+ color: var(--white);
+ font-size: 12px;
+ font-weight: 700;
+ padding: 6px 10px;
+ border-radius: var(--radius);
+ white-space: nowrap;
+ flex-shrink: 0;
+ margin-top: 2px;
+ min-width: 70px;
+ text-align: center;
+ }
+ .timeline-content h4 {
+ margin: 0 0 4px;
+ font-size: 15px;
+ color: var(--dark);
+ }
+ .timeline-content p {
+ font-size: 14px;
+ color: var(--gray);
+ margin: 0;
+ line-height: 1.55;
+ }
+
+ /* Checklist styles */
+ .checklist {
+ list-style: none;
+ padding: 0;
+ margin: 0 0 8px;
+ }
+ .checklist li {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ padding: 8px 0;
+ font-size: 14px;
+ line-height: 1.5;
+ color: var(--dark);
+ border-bottom: 1px solid #eef2f7;
+ }
+ .checklist li:last-child {
+ border-bottom: none;
+ }
+ .checklist li::before {
+ content: "\2610";
+ font-size: 16px;
+ color: var(--red);
+ flex-shrink: 0;
+ margin-top: 1px;
+ }
+
+ /* Room cards */
+ .room-card {
+ background: var(--light);
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ padding: 24px;
+ margin-bottom: 20px;
+ }
+ .room-card h3 {
+ margin-top: 0;
+ }
+
+ /* Tip callout */
+ .tip-callout {
+ background: #fef8f0;
+ border-left: 4px solid #e8a838;
+ border-radius: 0 var(--radius) var(--radius) 0;
+ padding: 18px 20px;
+ margin: 24px 0;
+ }
+ .tip-callout strong {
+ display: block;
+ font-size: 14px;
+ color: var(--dark);
+ margin-bottom: 4px;
+ }
+ .tip-callout p {
+ font-size: 14px;
+ color: var(--gray);
+ margin: 0;
+ line-height: 1.55;
+ }
+
+ /* Warning callout */
+ .warn-callout {
+ background: #fdf2f2;
+ border-left: 4px solid var(--red);
+ border-radius: 0 var(--radius) var(--radius) 0;
+ padding: 18px 20px;
+ margin: 24px 0;
+ }
+ .warn-callout strong {
+ display: block;
+ font-size: 14px;
+ color: var(--dark);
+ margin-bottom: 4px;
+ }
+ .warn-callout p {
+ font-size: 14px;
+ color: var(--gray);
+ margin: 0;
+ line-height: 1.55;
+ }
+
+ /* Divider */
+ .guide-divider {
+ border: none;
+ border-top: 2px solid var(--border);
+ margin: 48px 0;
+ }
+
+ @media (max-width: 600px) {
+ .timeline li {
+ flex-direction: column;
+ gap: 8px;
+ }
+ .timeline-badge {
+ align-self: flex-start;
+ }
+ .room-card {
+ padding: 18px;
+ }
+ }
+ </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="site-header">
+ <div class="header-inner">
+ <a href="/" class="site-logo">
+ <img src="/assets/img/yrl-logo.png" alt="Your Realty Link" width="120" height="40">
+ <div class="site-logo-text">
+ <span class="site-name">Indy Property Guide</span>
+ <span class="site-tagline">Powered by Your Realty Link</span>
+ </div>
+ </a>
+ <nav class="site-nav" id="siteNav">
+ <a href="/">Home</a>
+ <div class="nav-item-dropdown">
+ <a href="/sell-my-home-indianapolis/">Sellers</a>
+ <div class="nav-submenu">
+ <a href="/contact/">Free Home Valuation</a>
+ <div class="nav-submenu-divider"></div>
+ <a href="/services/sell-my-home/">Sell My Home</a>
+ <a href="/services/pricing-your-home/">Pricing Your Home</a>
+ <a href="/services/expired-listings/">Expired Listings</a>
+ </div>
+ </div>
+ <div class="nav-item-dropdown">
+ <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+ <div class="nav-submenu">
+ <a href="/search/">Search Homes</a>
+ <div class="nav-submenu-divider"></div>
+ <a href="/services/first-time-home-buyers/">First Time Buyers</a>
+ <a href="/services/buyer-representation/">Buyer Representation</a>
+ <a href="/services/mortgage-calculator/">Mortgage Calculator</a>
+ <a href="/services/down-payment-assistance/">Down Payment Help</a>
+ </div>
+ </div>
+ <a href="/blog/">Blog</a>
+ <a href="/schedule/">Schedule</a>
+ <a href="/contact/">Contact</a>
+ <a href="/about/">About</a>
+ <a href="/search/" class="nav-cta">Search Homes &rarr;</a>
+ </nav>
+ <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="ty-hero">
+ <div class="container">
+ <h1>Here's Your Home Selling Prep Guide</h1>
+ <p>Thanks for requesting your guide. Everything you need is right here on this page — bookmark it so you can come back anytime.</p>
+ </div>
+</section>
+
+<!-- ══ GUIDE CONTENT ══ -->
+<div class="container">
+ <div class="guide-wrap">
+
+ <!-- ═══ SECTION 1: 30-DAY TIMELINE ═══ -->
+ <section class="guide-section">
+ <h2>Section 1: Your 30-Day Pre-Listing Timeline</h2>
+ <p>Selling a home in Indianapolis takes preparation. This week-by-week timeline keeps you on track from your first call to listing day.</p>
+
+ <ul class="timeline">
+ <li>
+ <span class="timeline-badge">Day 1-5</span>
+ <div class="timeline-content">
+ <h4>Schedule a Pre-Listing Consultation</h4>
+ <p>Meet with your agent for a comparative market analysis (CMA), pricing discussion, and agent interview. This is where you set the foundation for a successful sale — understanding what your home is worth in the current market and what strategy will get you the best result.</p>
+ </div>
+ </li>
+ <li>
+ <span class="timeline-badge">Day 5-10</span>
+ <div class="timeline-content">
+ <h4>Declutter and Depersonalize</h4>
+ <p>Remove personal photos, excess furniture, seasonal items, and anything that makes rooms feel crowded. Rent a storage unit if needed — it's a small investment that pays off in buyer perception. The goal is to help buyers picture themselves living here, not feel like they're visiting someone else's home.</p>
+ </div>
+ </li>
+ <li>
+ <span class="timeline-badge">Day 10-15</span>
+ <div class="timeline-content">
+ <h4>Deep Clean Everything</h4>
+ <p>Hire professionals for carpets, windows, and pressure washing the exterior. Clean inside cabinets, appliances, and closets — buyers look everywhere. A spotless home signals that it's been well cared for, which translates directly into buyer confidence and stronger offers.</p>
+ </div>
+ </li>
+ <li>
+ <span class="timeline-badge">Day 15-20</span>
+ <div class="timeline-content">
+ <h4>Handle Repairs and Touch-Ups</h4>
+ <p>Fix leaky faucets, squeaky doors, cracked tiles, and burned-out bulbs. Touch up paint on scuffed walls and baseboards. These small repairs eliminate objections that can slow down or kill a sale during the inspection period.</p>
+ </div>
+ </li>
+ <li>
+ <span class="timeline-badge">Day 20-25</span>
+ <div class="timeline-content">
+ <h4>Professional Photos and Listing Prep</h4>
+ <p>Your agent coordinates professional photography, writes the listing description, and sets up the showing schedule. Great photos are the single most important marketing asset — they determine whether buyers click on your listing or scroll past it.</p>
+ </div>
+ </li>
+ <li>
+ <span class="timeline-badge">Day 25-30</span>
+ <div class="timeline-content">
+ <h4>Go Live on MLS</h4>
+ <p>Your home hits the MIBOR MLS, which syndicates to Zillow, Realtor.com, Redfin, and 500+ other platforms. Your agent launches the full marketing campaign — social media, email outreach, agent networking — and showings begin.</p>
+ </div>
+ </li>
+ </ul>
+
+ <div class="tip-callout">
+ <strong>Pro Tip</strong>
+ <p>The first two weeks on the MLS are when your home gets the most attention. Homes that are fully prepped, professionally photographed, and priced right from day one consistently receive more showings and stronger offers than homes that are listed before they're ready.</p>
+ </div>
+ </section>
+
+ <hr class="guide-divider">
+
+ <!-- ═══ SECTION 2: ROOM-BY-ROOM CHECKLIST ═══ -->
+ <section class="guide-section">
+ <h2>Section 2: Room-by-Room Prep Checklist</h2>
+ <p>Go through each area of your home and check off these items before your listing photos are taken. Buyers notice details — and so do their agents.</p>
+
+ <div class="room-card">
+ <h3>Kitchen</h3>
+ <ul class="checklist">
+ <li>Clean and organize countertops — keep only 2-3 decorative items</li>
+ <li>Deep clean inside oven, microwave, and refrigerator</li>
+ <li>Fix any dripping faucets or running water</li>
+ <li>Replace burned-out bulbs under cabinets</li>
+ <li>Remove magnets, papers, and clutter from the refrigerator front</li>
+ </ul>
+ </div>
+
+ <div class="room-card">
+ <h3>Bathrooms</h3>
+ <ul class="checklist">
+ <li>Re-caulk tubs and showers if discolored</li>
+ <li>Replace worn towels with fresh white ones for showings</li>
+ <li>Fix any running toilets or slow drains</li>
+ <li>Clean grout lines and remove any mildew</li>
+ <li>Add a fresh shower curtain</li>
+ </ul>
+ </div>
+
+ <div class="room-card">
+ <h3>Living Areas</h3>
+ <ul class="checklist">
+ <li>Remove excess furniture — buyers need to see the space, not your stuff</li>
+ <li>Clean or replace worn carpet</li>
+ <li>Touch up scuffed baseboards and walls</li>
+ <li>Arrange furniture to showcase room size and flow</li>
+ <li>Clean windows inside and out</li>
+ </ul>
+ </div>
+
+ <div class="room-card">
+ <h3>Bedrooms</h3>
+ <ul class="checklist">
+ <li>Make beds with fresh, neutral bedding</li>
+ <li>Clear nightstands and dressers</li>
+ <li>Organize closets — buyers will look inside; half-full closets look bigger</li>
+ <li>Remove personal photos and memorabilia</li>
+ </ul>
+ </div>
+
+ <div class="room-card">
+ <h3>Exterior and Curb Appeal</h3>
+ <ul class="checklist">
+ <li>Power wash driveway, walkways, and siding</li>
+ <li>Mow, edge, and mulch landscape beds</li>
+ <li>Paint or replace the front door if worn</li>
+ <li>Add potted plants or flowers near the entrance</li>
+ <li>Clean gutters and repair any visible damage</li>
+ <li>Make sure house numbers are visible and mailbox is in good shape</li>
+ </ul>
+ </div>
+
+ <div class="tip-callout">
+ <strong>Pro Tip</strong>
+ <p>Curb appeal is your home's first impression — and for many buyers, it's the deciding factor on whether they even walk through the front door. A $200 investment in mulch, flowers, and a clean walkway can add thousands to your perceived home value.</p>
+ </div>
+ </section>
+
+ <hr class="guide-divider">
+
+ <!-- ═══ SECTION 3: PRICING YOUR HOME RIGHT ═══ -->
+ <section class="guide-section">
+ <h2>Section 3: Pricing Your Home Right</h2>
+
+ <h3>What a CMA Is and Why It Matters</h3>
+ <p>A Comparative Market Analysis is the foundation of smart pricing. Your agent pulls recent sales data for homes similar to yours in your neighborhood — same size, age, condition, and location — to determine what the market will actually pay. This is not a guess. It's a data-driven strategy based on what buyers in your area have recently paid for comparable properties.</p>
+
+ <div class="warn-callout">
+ <strong>The Danger of Overpricing</strong>
+ <p>Overpriced homes sit on the market longer, accumulate days on market that signal desperation to buyers, and almost always end up selling for less than if they had been priced correctly from the start. Price reductions are public — every buyer and agent can see them — and they invite lowball offers. The data is clear: homes priced right from day one sell faster and for more money.</p>
+ </div>
+
+ <h3>The Power of Strategic Pricing</h3>
+ <p>Homes priced at or slightly below market value generate more showings, more competition, and often receive multiple offers. This isn't about undervaluing your home — it's about positioning it to attract the maximum number of qualified buyers, which drives the final sale price up rather than down.</p>
+
+ <h3>What Not to Base Your Price On</h3>
+ <ul>
+ <li><strong>What you paid for the home</strong> — the market doesn't care what you paid; it cares what comparable homes are selling for now.</li>
+ <li><strong>What you "need" to walk away with</strong> — your financial needs don't change what buyers are willing to pay.</li>
+ <li><strong>Zillow's Zestimate alone</strong> — automated estimates can be off by tens of thousands of dollars. They don't account for condition, updates, or local nuances that a CMA captures.</li>
+ </ul>
+
+ <h3>Indiana-Specific Considerations</h3>
+ <p>Indiana property tax rates vary significantly by county and township — and they affect affordability for buyers. Indiana sellers are required to complete a <a href="/services/closing-costs-sellers/">seller disclosure form</a>, and seller closing costs typically run 6-8% of the sale price, including agent commissions, title insurance, and transfer taxes. Your agent will prepare a seller net sheet so you know exactly what you'll walk away with before you accept an offer.</p>
+ </section>
+
+ <hr class="guide-divider">
+
+ <!-- ═══ SECTION 4: SHOWINGS ═══ -->
+ <section class="guide-section">
+ <h2>Section 4: What to Expect During Showings</h2>
+
+ <ul>
+ <li><strong>Leave the home for all showings</strong> — buyers are more honest and comfortable when sellers aren't present. They need to picture themselves living there, and that's hard to do with the current owner watching.</li>
+ <li><strong>Keep it show-ready daily</strong> — develop a 30-minute pickup routine so you can leave quickly when a showing is scheduled. Dishes put away, beds made, surfaces wiped, lights on.</li>
+ <li><strong>Secure valuables, medications, and important documents</strong> — lock them in a safe or take them with you. Open houses and showings bring strangers into your home.</li>
+ <li><strong>Leave lights on and blinds open</strong> — bright, naturally lit homes show dramatically better than dark ones. Turn on every light before you leave.</li>
+ <li><strong>Have a plan for pets</strong> — remove pets during showings or have a plan to take them with you. Not every buyer is comfortable around animals, and pet odor is one of the most common buyer objections.</li>
+ </ul>
+
+ <div class="tip-callout">
+ <strong>Pro Tip</strong>
+ <p>The most common feedback from buyer agents after a showing is about cleanliness and odor. Before every showing, do a quick smell check — take the trash out, avoid cooking strong-smelling food, and consider a subtle, neutral scent like fresh linen.</p>
+ </div>
+ </section>
+
+ <hr class="guide-divider">
+
+ <!-- ═══ SECTION 5: OFFER TO CLOSING ═══ -->
+ <section class="guide-section">
+ <h2>Section 5: From Offer to Closing</h2>
+
+ <h3>Reviewing Offers</h3>
+ <p>Price is important, but it's not everything. Your agent will help you evaluate each offer based on the full picture: purchase price, financing type and strength, contingencies, earnest money deposit, requested closing date, and any seller concessions. A slightly lower offer with strong financing and fewer contingencies can be worth more than the highest number on paper.</p>
+
+ <h3>Negotiating</h3>
+ <p>Your agent handles all counteroffers, repair requests, and negotiation strategy. Whether it's a single offer or multiple competing bids, having an experienced negotiator working on your behalf protects your interests and maximizes your net proceeds.</p>
+
+ <h3>Inspection Period</h3>
+ <p>Most Indiana purchase agreements include a 10-day inspection window. The buyer hires a home inspector to evaluate the property, and they may request repairs or credits based on the findings. Your agent will advise you on which requests are reasonable and how to respond without jeopardizing the deal.</p>
+
+ <h3>Appraisal</h3>
+ <p>The buyer's lender orders an appraisal to confirm the home's value supports the loan amount. If the appraisal comes in at or above the purchase price, you're clear. If it comes in low, there are options — the buyer can make up the difference, you can negotiate a price adjustment, or the contract can be renegotiated. Your agent will walk you through the best path forward.</p>
+
+ <h3>Final Walkthrough</h3>
+ <p>Shortly before closing, the buyer does a final walkthrough to confirm the home is in the agreed-upon condition and that any negotiated repairs have been completed. This is standard — not a second inspection.</p>
+
+ <h3>Closing Day</h3>
+ <p>Bring your government-issued ID to the title company. You'll sign the closing documents, hand over the keys, and receive your proceeds — typically via wire transfer the same day or next business day. Your agent and the title company handle the details so you can focus on what comes next.</p>
+ </section>
+
+ <hr class="guide-divider">
+
+ <!-- ═══ CTAs ═══ -->
+ <div class="cta-block">
+ <h3>Ready to Sell Your Home?</h3>
+ <p>Schedule a free seller consultation and get your personalized CMA — no obligation, no pressure. Just honest information about what your home is worth and how to sell it for the most money.</p>
+ <div class="btn-group">
+ <a href="/schedule/seller-consultation/" class="btn btn-white">Schedule a Free Seller Consultation</a>
+ <a href="/services/free-home-valuation/" class="btn btn-outline">What's My Home Worth?</a>
+ <a href="tel:3172016323" class="btn btn-outline">Call Daniel Cope: 317-201-6323</a>
+ </div>
+ </div>
+
+ <!-- INTERNAL LINKS -->
+ <hr class="divider" style="margin-top:40px;">
+ <h3>Related Resources</h3>
+ <ul>
+ <li><a href="/services/pricing-your-home/">How to Price Your Home in Indianapolis</a></li>
+ <li><a href="/services/sell-my-home/">Seller Representation — What Your Realty Link Offers</a></li>
+ <li><a href="/services/closing-costs-sellers/">Closing Costs for Sellers in Indiana</a></li>
+ <li><a href="/services/expired-listings/">Your Listing Expired — What to Do Next</a></li>
+ <li><a href="/sell-my-home-indianapolis/">Sell My Home Indianapolis</a></li>
+ </ul>
+
+ </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+
+<footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <img src="/assets/img/yrl-logo.png" alt="Your Realty Link">
+ <p>Indy Property Guide is your source for Central Indiana real estate information, powered by Your Realty Link — a full-service MIBOR brokerage serving buyers, sellers, and investors across the Indianapolis metro.</p>
+ <div class="social-links">
+ <a href="https://www.facebook.com/yourrealtylink" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+ <a href="http://twitter.com/janetgiles" target="_blank" rel="noopener" aria-label="Twitter">&Xopf;</a>
+ <a href="https://www.linkedin.com/in/janetgilesrealtor/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+ <a href="http://www.instagram.com/IndianapolisRealEstate" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+ </div>
+ </div>
+ <div class="footer-col">
+ <h4>Seller Services</h4>
+ <ul>
+ <li><a href="/services/expired-listings/">Expired Listings</a></li>
+ <li><a href="/services/sell-my-home/">Sell My Home</a></li>
+ <li><a href="/services/for-sale-by-owner/">FSBO Assistance</a></li>
+ <li><a href="/services/free-home-valuation/">Free Valuation</a></li>
+ <li><a href="/services/sell-fast/">Sell Fast Indy</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Top Cities</h4>
+ <ul>
+ <li><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a></li>
+ <li><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a></li>
+ <li><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a></li>
+ <li><a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Your Realty Link</h4>
+ <ul>
+ <li><a href="https://yourrealtylink.com" target="_blank" rel="noopener">yourrealtylink.com</a></li>
+ <li><a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener">Search Homes</a></li>
+ <li><a href="/services/free-home-valuation/" target="_blank" rel="noopener">Home Valuation</a></li>
+ <li><a href="/contact/">Contact Us</a></li>
+ <li><a href="tel:3172016323">317-201-6323</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Indy Property Guide &middot; Powered by <a href="https://yourrealtylink.com" target="_blank" rel="noopener">Your Realty Link</a> &middot; Daniel Cope, Real Estate Broker</span>
+ <span><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/terms/">Terms &amp; Conditions</a></span>
+ <span>2302 E Southport Rd, Indianapolis, IN 46227 &middot; <a href="tel:3172016323">317-201-6323</a></span>
+ </div>
+ </div>
+</footer>
+
+<script>
+function toggleNav() {
+ document.getElementById('siteNav').classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+ var dd = e.target.closest('.nav-item-dropdown');
+ if (dd && window.innerWidth <= 960) {
+ var nav = dd.closest('.site-nav');
+ if (nav && nav.classList.contains('open')) {
+ e.preventDefault();
+ dd.classList.toggle('open');
+ }
+ }
+});
+</script>
+
+<script src="/assets/js/site-enhancements.js" defer></script>
+</body>
+</html>
