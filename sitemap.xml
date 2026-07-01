@@ -1076,6 +1076,36 @@
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
+ <url>
+ <loc>https://indypropertyguide.com/neighborhoods/broad-ripple-indianapolis/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
+ <url>
+ <loc>https://indypropertyguide.com/neighborhoods/irvington-indianapolis/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
+ <url>
+ <loc>https://indypropertyguide.com/neighborhoods/geist-reservoir-indianapolis/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
+ <url>
+ <loc>https://indypropertyguide.com/neighborhoods/southport-indianapolis/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
+ <url>
+ <loc>https://indypropertyguide.com/neighborhoods/eagle-creek-indianapolis/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
 
  <!-- ═══════════════════════════════════════
  FINAL 12 CITIES — Phase 3/4 (added 2026-05-22)
@@ -1212,6 +1242,54 @@
  <lastmod>2026-07-01</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/job-relocation-sale/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/vacant-home-sale/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/sell-rental-property/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/move-up-buyers/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/downsizing/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/home-equity/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/usda-loans/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/brokerage-comparison/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
  </url>
 
 </urlset>
