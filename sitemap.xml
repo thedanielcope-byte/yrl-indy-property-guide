@@ -1170,4 +1170,26 @@
  <priority>0.3</priority>
  </url>
 
+ <!-- ═══════════════════════════════════════
+ SCHEDULE / BOOKING PAGES
+ ═══════════════════════════════════════ -->
+ <url>
+ <loc>https://indypropertyguide.com/schedule/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
+ <url>
+ <loc>https://indypropertyguide.com/schedule/buyer-consultation/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
+ <url>
+ <loc>https://indypropertyguide.com/schedule/seller-consultation/</loc>
+ <lastmod>2026-07-01</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.8</priority>
+ </url>
+
 </urlset>
