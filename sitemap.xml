@@ -1291,5 +1291,47 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
  </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/1031-exchange/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/cash-flow-properties/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/off-market-properties/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/behind-on-payments/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/senior-buyers/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/senior-sellers/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/part-time-agents/</loc>
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
 
 </urlset>

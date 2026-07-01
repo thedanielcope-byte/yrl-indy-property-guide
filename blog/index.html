@@ -81,7 +81,7 @@
 .blog-card a.read-more:hover { text-decoration: underline; }
 .category-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
 .cat-pill { background: #f0f0f0; color: #3a3a3a; padding: 6px 14px; border-radius: 20px; font-size:.82rem; font-weight: 500; text-decoration: none; transition: background.15s; }
-.cat-pill:hover { background: #c03926; color: #fff; }
+.cat-pill:hover, .cat-pill.active { background: #c03926; color: #fff; }
  @media (max-width: 768px) {.blog-featured { grid-template-columns: 1fr; }.blog-featured-img { display: none; } }
  </style>
 </head>
@@ -169,14 +169,15 @@
  <!-- CATEGORY FILTER -->
  <h2 style="font-size:1.3rem; margin-bottom:16px;">Browse by Category</h2>
  <div class="category-pills">
- <a href="#market-updates" class="cat-pill">Market Updates</a>
- <a href="#buying" class="cat-pill">Buying a Home</a>
- <a href="#selling" class="cat-pill">Selling a Home</a>
- <a href="#city-guides" class="cat-pill">City Guides</a>
- <a href="#neighborhoods" class="cat-pill">Neighborhoods</a>
- <a href="#investment" class="cat-pill">Investment</a>
- <a href="#mortgage" class="cat-pill">Mortgage &amp; Finance</a>
- <a href="#join-team" class="cat-pill">Join Our Team</a>
+ <a href="#" class="cat-pill active" data-filter="all">All</a>
+ <a href="#" class="cat-pill" data-filter="market updates">Market Updates</a>
+ <a href="#" class="cat-pill" data-filter="buying a home">Buying a Home</a>
+ <a href="#" class="cat-pill" data-filter="selling a home">Selling a Home</a>
+ <a href="#" class="cat-pill" data-filter="city guides">City Guides</a>
+ <a href="#" class="cat-pill" data-filter="neighborhoods">Neighborhoods</a>
+ <a href="#" class="cat-pill" data-filter="investment properties">Investment</a>
+ <a href="#" class="cat-pill" data-filter="mortgage &amp; finance">Mortgage &amp; Finance</a>
+ <a href="#" class="cat-pill" data-filter="join our team">Join Our Team</a>
  </div>
 
  <!-- BLOG GRID -->
@@ -634,6 +635,26 @@ document.addEventListener('click', function(e) {
  }
  }
 });
+</script>
+<script>
+(function() {
+ var pills = document.querySelectorAll('.cat-pill[data-filter]');
+ var cards = document.querySelectorAll('.blog-card');
+ pills.forEach(function(pill) {
+  pill.addEventListener('click', function(e) {
+   e.preventDefault();
+   pills.forEach(function(p) { p.classList.remove('active'); });
+   pill.classList.add('active');
+   var filter = pill.getAttribute('data-filter').toLowerCase();
+   cards.forEach(function(card) {
+    if (filter === 'all') { card.style.display = ''; return; }
+    var cat = card.querySelector('.blog-card-cat');
+    var catText = cat ? cat.textContent.trim().toLowerCase() : '';
+    card.style.display = catText.includes(filter) ? '' : 'none';
+   });
+  });
+ });
+})();
 </script>
 <script src="/assets/js/site-enhancements.js" defer></script>
 </body>
