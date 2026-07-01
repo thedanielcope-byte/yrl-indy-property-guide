@@ -198,6 +198,28 @@
  margin: 48px 0;
  }
 
+ .download-bar {
+ background: var(--light, #f7f7f7);
+ border-bottom: 1px solid var(--border, #e5e5e5);
+ padding: 16px 24px;
+ text-align: center;
+ }
+ .download-bar-text {
+ font-size: .95rem;
+ color: var(--mid, #6e6e70);
+ font-weight: 500;
+ }
+ .download-btn {
+ cursor: pointer;
+ border: none;
+ font-size: .95rem;
+ padding: 11px 24px;
+ }
+ .download-btn:disabled {
+ opacity: .6;
+ cursor: wait;
+ }
+
  @media (max-width: 600px) {
  .timeline li {
  flex-direction: column;
@@ -209,6 +231,12 @@
  .room-card {
  padding: 18px;
  }
+ }
+
+ @media print {
+ .site-header, .ty-hero, .site-footer, .download-bar, .cta-block { display: none !important; }
+ .guide-wrap { padding: 0; }
+ .guide-section { break-inside: avoid; }
  }
  </style>
 </head>
@@ -263,9 +291,16 @@
 <section class="ty-hero">
  <div class="container">
  <h1>Here's Your Home Selling Prep Guide</h1>
- <p>Thanks for requesting your guide. Everything you need is right here on this page — bookmark it so you can come back anytime.</p>
+ <p>Thanks for requesting your guide. Everything you need is right here — bookmark it, or download the PDF to keep on your phone or print out.</p>
  </div>
 </section>
+
+<div class="download-bar">
+ <div class="container" style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+ <span class="download-bar-text">Want a copy you can keep?</span>
+ <button id="downloadPdf" class="btn btn-primary download-btn">📥 Download PDF Guide</button>
+ </div>
+</div>
 
 <!-- ══ GUIDE CONTENT ══ -->
 <div class="container">
@@ -564,6 +599,60 @@ document.addEventListener('click', function(e) {
 });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" defer></script>
 <script src="/assets/js/site-enhancements.js" defer></script>
+<script>
+document.getElementById('downloadPdf').addEventListener('click', function() {
+ var btn = this;
+ btn.disabled = true;
+ btn.textContent = 'Generating PDF...';
+
+ var el = document.querySelector('.guide-wrap');
+ var clone = el.cloneNode(true);
+
+ // Remove CTA block and internal links from PDF
+ var cta = clone.querySelector('.cta-block');
+ if (cta) cta.remove();
+ var divider = clone.querySelector('hr.divider');
+ if (divider) {
+  var next = divider.nextElementSibling;
+  while (next) { var tmp = next.nextElementSibling; next.remove(); next = tmp; }
+  divider.remove();
+ }
+
+ // Add branded header
+ var header = document.createElement('div');
+ header.innerHTML = '<div style="text-align:center;margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid #c03926;">' +
+  '<h1 style="font-size:22px;color:#1a1a1a;margin:0 0 6px;">Home Selling Prep Guide</h1>' +
+  '<p style="font-size:13px;color:#6e6e70;margin:0;">Indy Property Guide &middot; Your Realty Link &middot; Daniel Cope &middot; 317-201-6323</p>' +
+  '</div>';
+ clone.insertBefore(header, clone.firstChild);
+
+ // Add footer
+ var footer = document.createElement('div');
+ footer.innerHTML = '<div style="text-align:center;margin-top:28px;padding-top:14px;border-top:2px solid #c03926;font-size:12px;color:#6e6e70;">' +
+  'Your Realty Link &middot; yourrealtylink.com &middot; indypropertyguide.com &middot; 317-201-6323' +
+  '</div>';
+ clone.appendChild(footer);
+
+ var opt = {
+  margin: [12, 14, 12, 14],
+  filename: 'Home-Selling-Prep-Guide-Indy-Property-Guide.pdf',
+  image: { type: 'jpeg', quality: 0.95 },
+  html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+  jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' },
+  pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+ };
+
+ html2pdf().set(opt).from(clone).save().then(function() {
+  btn.disabled = false;
+  btn.textContent = '📥 Download PDF Guide';
+ }).catch(function() {
+  btn.disabled = false;
+  btn.textContent = '📥 Download PDF Guide';
+  window.print();
+ });
+});
+</script>
 </body>
 </html>

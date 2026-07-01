@@ -254,9 +254,31 @@
  color: var(--mid, #6e6e70);
  }
 
+ .download-bar {
+ background: var(--light, #f7f7f7);
+ border-bottom: 1px solid var(--border, #e5e5e5);
+ padding: 16px 24px;
+ text-align: center;
+ }
+ .download-bar-text {
+ font-size: .95rem;
+ color: var(--mid, #6e6e70);
+ font-weight: 500;
+ }
+ .download-btn {
+ cursor: pointer;
+ border: none;
+ font-size: .95rem;
+ padding: 11px 24px;
+ }
+ .download-btn:disabled {
+ opacity: .6;
+ cursor: wait;
+ }
+
  @media print {
  .site-header, .breadcrumbs, .ty-hero, .site-footer,
- .cta-form-section, .ty-cta-block, .print-tip { display: none !important; }
+ .cta-form-section, .ty-cta-block, .print-tip, .download-bar { display: none !important; }
  .checklist-wrap { padding: 0; }
  .phase-header { break-after: avoid; }
  .checklist-items li { break-inside: avoid; }
@@ -326,8 +348,15 @@
 <!-- ══ HERO ══ -->
 <section class="ty-hero">
  <h1>Here's Your Home Buyer Checklist</h1>
- <p>Thank you! Your checklist is ready below. Bookmark this page or print it so you can check off each step as you go. We'll also send a copy to your email.</p>
+ <p>Thank you! Your checklist is ready below. Bookmark this page, or download the PDF to save it on your phone or print it out.</p>
 </section>
+
+<div class="download-bar">
+ <div class="container" style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+ <span class="download-bar-text">Want a copy you can keep?</span>
+ <button id="downloadPdf" class="btn btn-primary download-btn">📥 Download PDF Checklist</button>
+ </div>
+</div>
 
 <!-- ══ CHECKLIST CONTENT ══ -->
 <div class="checklist-wrap">
@@ -512,7 +541,7 @@
  </ul>
  </div>
 
- <p class="print-tip">Tip: Bookmark this page or use Ctrl+P (Cmd+P on Mac) to print it. Check off each step as you complete it.</p>
+ <p class="print-tip">Bookmark this page to come back anytime, or download the PDF to keep it on your phone or print it out.</p>
 
  <!-- CTA BLOCK -->
  <div class="ty-cta-block">
@@ -605,6 +634,65 @@ document.addEventListener('click', function(e) {
  }
 });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" defer></script>
 <script src="/assets/js/site-enhancements.js" defer></script>
+<script>
+document.getElementById('downloadPdf').addEventListener('click', function() {
+ var btn = this;
+ btn.disabled = true;
+ btn.textContent = 'Generating PDF...';
+
+ var el = document.querySelector('.checklist-wrap');
+ var clone = el.cloneNode(true);
+
+ // Reset all checkmarks to unchecked for the PDF
+ clone.querySelectorAll('.cl-number.checked').forEach(function(n) { n.classList.remove('checked'); });
+
+ // Remove the CTA block and internal links from PDF
+ var cta = clone.querySelector('.ty-cta-block');
+ if (cta) cta.remove();
+ var keepLearning = clone.querySelector('hr.divider');
+ if (keepLearning) {
+  var next = keepLearning.nextElementSibling;
+  while (next) { var tmp = next.nextElementSibling; next.remove(); next = tmp; }
+  keepLearning.remove();
+ }
+ var printTip = clone.querySelector('.print-tip');
+ if (printTip) printTip.remove();
+
+ // Add branded header
+ var header = document.createElement('div');
+ header.innerHTML = '<div style="text-align:center;margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid #c03926;">' +
+  '<h1 style="font-size:22px;color:#1a1a1a;margin:0 0 6px;">First-Time Home Buyer Checklist</h1>' +
+  '<p style="font-size:13px;color:#6e6e70;margin:0;">Indy Property Guide &middot; Your Realty Link &middot; Daniel Cope &middot; 317-201-6323</p>' +
+  '</div>';
+ clone.insertBefore(header, clone.firstChild);
+
+ // Add footer
+ var footer = document.createElement('div');
+ footer.innerHTML = '<div style="text-align:center;margin-top:28px;padding-top:14px;border-top:2px solid #c03926;font-size:12px;color:#6e6e70;">' +
+  'Your Realty Link &middot; yourrealtylink.com &middot; indypropertyguide.com &middot; 317-201-6323' +
+  '</div>';
+ clone.appendChild(footer);
+
+ var opt = {
+  margin: [12, 14, 12, 14],
+  filename: 'First-Time-Home-Buyer-Checklist-Indy-Property-Guide.pdf',
+  image: { type: 'jpeg', quality: 0.95 },
+  html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+  jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' },
+  pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+ };
+
+ html2pdf().set(opt).from(clone).save().then(function() {
+  btn.disabled = false;
+  btn.textContent = '📥 Download PDF Checklist';
+ }).catch(function() {
+  btn.disabled = false;
+  btn.textContent = '📥 Download PDF Checklist';
+  window.print();
+ });
+});
+</script>
 </body>
 </html>
