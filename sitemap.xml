@@ -1381,5 +1381,47 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
  </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/cash-buyers/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/custom-home-building/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/downsizing-estate/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/luxury-home-sellers/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/new-construction-by-county/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/new-construction-negotiation/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/services/portfolio-selling/</loc>
+  <lastmod>2026-07-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
 
 </urlset>
