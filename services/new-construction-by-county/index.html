@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- ═══════════════════════════════════════════════
+ YOAST SEO FIELDS — Fill these into WordPress
+ Focus Keyword: new homes hamilton county indiana
+ SEO Title: New Construction Homes by County | Indy Property Guide
+ Meta Description: Explore new construction homes across Hamilton, Hendricks, Johnson, and Hancock counties in Indiana. Your Realty Link provides free buyer representation. Call 317-201-6323.
+ ═══════════════════════════════════════════════ -->
+
+ <title>New Construction Homes by County — Central Indiana | Indy Property Guide</title>
+ <meta name="description" content="Explore new construction homes across Hamilton, Hendricks, Johnson, and Hancock counties in Indiana. Your Realty Link provides free buyer representation. Call 317-201-6323.">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://indypropertyguide.com/services/new-construction-by-county/">
+
+ <meta property="og:title" content="New Construction Homes by County | Indy Property Guide">
+ <meta property="og:description" content="Find new homes in Hamilton County, Hendricks County, Johnson County, and Hancock County Indiana. Your Realty Link offers free buyer representation for new builds.">
+ <meta property="og:url" content="https://indypropertyguide.com/services/new-construction-by-county/">
+ <meta property="og:type" content="website">
+
+ <!-- Schema -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": ["LocalBusiness", "RealEstateAgent"],
+ "name": "Your Realty Link",
+ "url": "https://yourrealtylink.com",
+ "logo": "/assets/img/yrl-logo.png",
+ "telephone": "317-201-6323",
+ "email": "csirealtyteam@yourrealtylink.com",
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "2302 E Southport Rd",
+ "addressLocality": "Indianapolis",
+ "addressRegion": "IN",
+ "postalCode": "46227",
+ "addressCountry": "US"
+ },
+ "areaServed": "Indianapolis, Indiana and Central Indiana"
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Do I need a real estate agent to buy new construction?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "You don't legally need one, but you absolutely should have one. The builder's sales agent represents the builder, not you. Having your own agent from Your Realty Link costs you nothing — the builder pays the buyer agent's commission — and you get someone in your corner who can negotiate upgrades, review contracts, and protect your interests throughout the build process."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Which county has the most new construction in Central Indiana?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Hamilton County consistently leads Central Indiana in new home construction, with major developments in Fishers, Westfield, Noblesville, and Carmel. Hendricks County (Avon, Brownsburg, Plainfield) and Johnson County (Greenwood, Bargersville) are also seeing significant new construction activity. Hancock County is growing rapidly with new communities in McCordsville and New Palestine."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What price range are new construction homes in Central Indiana?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "New construction pricing varies significantly by county and builder. In Hamilton County, new homes typically start in the mid-$300s and can exceed $1 million for custom builds. Hendricks and Johnson counties offer new homes starting in the mid-$200s to low $300s. Hancock County new construction generally ranges from the upper $200s to the mid-$500s."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can Your Realty Link help me negotiate with a builder?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. While builders rarely negotiate on base price, there is often room to negotiate on upgrades, closing costs, lot premiums, and incentives — especially on inventory homes or during slower sales periods. Daniel Cope knows which builders are flexible on what, and having professional representation ensures you don't miss opportunities that the builder's agent won't volunteer."
+ }
+ }
+ ]
+ },
+ {
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://indypropertyguide.com/" },
+ { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://indypropertyguide.com/services/" },
+ { "@type": "ListItem", "position": 3, "name": "New Construction by County", "item": "https://indypropertyguide.com/services/new-construction-by-county/" }
+ ]
+ }
+ ]
+ }
+ </script>
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/assets/css/style.css">
+
+ <style>
+ /* Service page: full-width content, no sidebar grid */
+.service-wrap { max-width: 780px; margin: 0 auto; padding: 48px 0; }
+.step-list { counter-reset: steps; list-style: none; padding: 0; margin: 1.5rem 0; }
+.step-list li {
+ counter-increment: steps;
+ display: flex;
+ gap: 18px;
+ align-items: flex-start;
+ margin-bottom: 20px;
+ padding-bottom: 20px;
+ border-bottom: 1px solid var(--border);
+ }
+.step-list li:last-child { border: none; }
+.step-num {
+ background: var(--red);
+ color: var(--white);
+ width: 34px; height: 34px;
+ border-radius: 50%;
+ display: flex; align-items: center; justify-content: center;
+ font-weight: 700; font-size: 14px;
+ flex-shrink: 0;
+ margin-top: 2px;
+ }
+.step-content h4 { margin: 0 0 4px; font-size: 15px; }
+.step-content p { font-size: 14px; color: var(--mid); margin: 0; }
+.why-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 16px;
+ margin: 1.5rem 0;
+ }
+.why-item {
+ background: var(--light);
+ border-radius: var(--radius);
+ padding: 18px 20px;
+ border: 1px solid var(--border);
+ }
+.why-item h4 { font-size: 14px; margin-bottom: 6px; color: var(--red); }
+.why-item p { font-size: 13px; color: var(--mid); margin: 0; }
+ @media (max-width: 600px) {.why-grid { grid-template-columns: 1fr; } }
+.county-section { margin: 2rem 0; padding: 24px; background: var(--light); border-radius: var(--radius); border: 1px solid var(--border); }
+.county-section h3 { margin-top: 0; color: var(--red); }
+.county-section ul { margin-bottom: 0; }
+ </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="site-header">
+ <div class="header-inner">
+ <a href="/" class="site-logo">
+ <img src="/assets/img/yrl-logo.png" alt="Your Realty Link" width="120" height="40">
+ <div class="site-logo-text">
+ <span class="site-name">Indy Property Guide</span>
+ <span class="site-tagline">Powered by Your Realty Link</span>
+ </div>
+ </a>
+ <nav class="site-nav" id="siteNav">
+ <a href="/">Home</a>
+ <div class="nav-item-dropdown">
+ <a href="/sell-my-home-indianapolis/">Sellers</a>
+ <div class="nav-submenu">
+ <a href="/contact/">Free Home Valuation</a>
+ <div class="nav-submenu-divider"></div>
+ <a href="/services/sell-my-home/">Sell My Home</a>
+ <a href="/services/pricing-your-home/">Pricing Your Home</a>
+ <a href="/services/expired-listings/">Expired Listings</a>
+ </div>
+ </div>
+ <div class="nav-item-dropdown">
+ <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+ <div class="nav-submenu">
+ <a href="/search/">Search Homes</a>
+ <div class="nav-submenu-divider"></div>
+ <a href="/services/first-time-home-buyers/">First Time Buyers</a>
+ <a href="/services/buyer-representation/">Buyer Representation</a>
+ <a href="/services/mortgage-calculator/">Mortgage Calculator</a>
+ <a href="/services/down-payment-assistance/">Down Payment Help</a>
+ </div>
+ </div>
+ <a href="/blog/">Blog</a>
+ <a href="/schedule/">Schedule</a>
+ <a href="/contact/">Contact</a>
+ <a href="/about/">About</a>
+ <a href="/search/" class="nav-cta">Search Homes &rarr;</a>
+ </nav>
+ <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+</header>
+
+<!-- ══ BREADCRUMBS ══ -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+ <div class="container">
+ <a href="/">Home</a>
+ <span>&rsaquo;</span>
+ <a href="/services/">Services</a>
+ <span>&rsaquo;</span>
+ New Construction by County
+ </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="page-hero">
+ <div class="container">
+ <h1>New Construction Homes by County — <em>Central Indiana's Growing Communities</em></h1>
+ <p class="hero-sub">From Hamilton County's booming subdivisions to Hancock County's newest neighborhoods, Central Indiana is building. Your Realty Link provides free buyer representation so you have someone on your side at the model home.</p>
+ <div class="hero-badges">
+ <span class="hero-badge">Hamilton &middot; Hendricks &middot; Johnson &middot; Hancock</span>
+ <span class="hero-badge">Free Buyer Representation</span>
+ <span class="hero-badge">317-201-6323</span>
+ </div>
+ </div>
+</section>
+
+<!-- ══ MAIN CONTENT ══ -->
+<div class="container">
+ <div class="service-wrap">
+
+ <!-- INTRO -->
+ <p>Central Indiana is one of the most active new-construction markets in the Midwest. Builders large and small are developing communities across Hamilton, Hendricks, Johnson, and Hancock counties — offering everything from entry-level ranch homes to luxury custom builds. But navigating the new construction process without your own agent is a mistake many buyers make. The friendly sales agent at the model home works for the builder, not for you. They're trained to sell you upgrades, lock you into the builder's preferred lender, and present a contract that heavily favors the builder's interests. <strong>Daniel Cope</strong> and Your Realty Link provide free buyer representation for new construction purchases across Central Indiana. Having your own agent costs you nothing — the builder pays the commission — and it gives you someone in your corner who knows the local market, understands builder contracts, and can negotiate on your behalf.</p>
+
+ <!-- COUNTY BREAKDOWN -->
+ <h2>New Construction by County</h2>
+ <p>Here's what's happening in the four most active new-construction counties around Indianapolis:</p>
+
+ <div class="county-section">
+ <h3>Hamilton County — New Homes</h3>
+ <p>Hamilton County leads Central Indiana in new home construction and has for years. With top-rated schools, strong employment corridors, and excellent infrastructure, the demand for new builds here remains consistently high. Major builders are active across the county, with communities ranging from first-time-buyer neighborhoods to luxury custom-home developments.</p>
+ <ul>
+ <li><strong><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a></strong> — One of the fastest-growing cities in Indiana with new communities on the northeast and southeast sides. Homes typically range from the mid-$300s to the $600s.</li>
+ <li><strong><a href="/cities/hamilton-county/westfield-indiana-real-estate/">Westfield</a></strong> — Rapid growth driven by Grand Park and new commercial development. New homes from the low $300s to the upper $500s.</li>
+ <li><strong><a href="/cities/hamilton-county/noblesville-indiana-real-estate/">Noblesville</a></strong> — The county seat with a mix of established neighborhoods and new developments. New construction from the mid-$300s to the $600s.</li>
+ <li><strong><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a></strong> — Premium new construction and custom builds, often in the $500s to $1 million and above. Limited available lots drive higher price points.</li>
+ </ul>
+ </div>
+
+ <div class="county-section">
+ <h3>Hendricks County — New Homes</h3>
+ <p>Hendricks County offers some of the best value in new construction around Indianapolis. Strong schools, easy interstate access via I-74 and US-36, and a growing retail and dining scene make this county attractive to families and commuters alike.</p>
+ <ul>
+ <li><strong><a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a></strong> — Active new construction with multiple builders. Entry-level homes start in the mid-$200s, with move-up communities in the $300s to $400s.</li>
+ <li><strong><a href="/cities/hendricks-county/brownsburg-indiana-real-estate/">Brownsburg</a></strong> — A fast-growing community with several new subdivisions. Expect pricing from the upper $200s to the mid-$400s.</li>
+ <li><strong><a href="/cities/hendricks-county/plainfield-indiana-real-estate/">Plainfield</a></strong> — Conveniently located along US-40 with new communities offering homes from the $230s to the low $400s. Popular with first-time buyers and young families.</li>
+ </ul>
+ </div>
+
+ <div class="county-section">
+ <h3>Johnson County — New Homes</h3>
+ <p>Johnson County has seen significant new construction growth, especially in the northern part of the county closest to Indianapolis. The combination of lower price points, good schools, and proximity to Greenwood's retail hub attracts a wide range of buyers.</p>
+ <ul>
+ <li><strong><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a></strong> — The county's largest city with new communities on the south and east sides. New homes typically range from the mid-$200s to the $400s.</li>
+ <li><strong>Bargersville</strong> — One of the fastest-growing areas in Johnson County with new developments offering homes from the $270s to the $450s. Strong appeal for families seeking newer schools.</li>
+ <li><strong><a href="/cities/johnson-county/franklin-indiana-real-estate/">Franklin</a></strong> — More affordable new construction options in the $220s to $350s range. A good option for buyers priced out of communities closer to Indianapolis.</li>
+ </ul>
+ </div>
+
+ <div class="county-section">
+ <h3>Hancock County — New Homes</h3>
+ <p>Hancock County is Central Indiana's emerging new-construction market. Lower land costs and a growing population are driving builders to develop communities in McCordsville, New Palestine, and Greenfield — offering newer homes at competitive prices with a more rural feel.</p>
+ <ul>
+ <li><strong><a href="/cities/hancock-county/mccordsville-indiana-real-estate/">McCordsville</a></strong> — The county's fastest-growing community with several active new-home developments. Prices generally range from the upper $200s to the $500s.</li>
+ <li><strong>New Palestine</strong> — New construction on the east side of the county with a small-town atmosphere. Homes from the $280s to the $450s.</li>
+ <li><strong>Greenfield</strong> — The county seat with affordable new construction options starting in the $230s to $350s. Easy access to I-70 for commuters.</li>
+ </ul>
+ </div>
+
+ <!-- HOW WE HELP -->
+ <h2>How Your Realty Link Helps New Construction Buyers</h2>
+ <p>Having your own agent when buying new construction is not just helpful — it's essential. Here's what Daniel Cope and Your Realty Link do for you:</p>
+
+ <ul>
+ <li><strong>Free buyer representation</strong> — Our commission is paid by the builder. Having Your Realty Link represent you costs you nothing but gives you professional advocacy throughout the process.</li>
+ <li><strong>Builder contract review</strong> — Builder contracts are written by the builder's attorneys to protect the builder. We review every clause, explain your obligations, and flag anything that puts you at unnecessary risk.</li>
+ <li><strong>Upgrade and incentive negotiation</strong> — Builders rarely negotiate on base price, but there's often room on upgrades, closing cost credits, lot premiums, and <a href="/services/builder-representation/">design center selections</a>. We know what to ask for and when.</li>
+ <li><strong>Community comparison</strong> — With dozens of new communities across Central Indiana, we help you compare builders, HOA structures, lot sizes, included features, and total cost of ownership side by side.</li>
+ <li><strong>Construction monitoring</strong> — We attend key construction milestones, including the pre-drywall walkthrough, to catch issues before they're covered up.</li>
+ <li><strong>Independent inspection coordination</strong> — We strongly recommend a third-party home inspection on new construction, despite what the builder may tell you. We coordinate this and attend with you.</li>
+ </ul>
+
+ <!-- WHAT TO EXPECT -->
+ <h2>What to Expect When Buying New Construction</h2>
+ <p>The new construction buying process differs from purchasing a resale home. Here's how it works:</p>
+
+ <ol class="step-list">
+ <li>
+ <div class="step-num">1</div>
+ <div class="step-content">
+ <h4>Initial Consultation &amp; Needs Assessment</h4>
+ <p>We discuss your budget, location preferences, must-have features, and timeline. Then we identify the best communities and builders for your specific criteria.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">2</div>
+ <div class="step-content">
+ <h4>Community Tours &amp; Builder Comparison</h4>
+ <p>We tour model homes together and compare builders on quality, pricing, included features, and reputation. We register you at each community as our client so the builder knows you have representation.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">3</div>
+ <div class="step-content">
+ <h4>Lot Selection &amp; Contract Negotiation</h4>
+ <p>Once you choose a community and floor plan, we help you select the best available lot and negotiate the purchase agreement — including upgrades, incentives, and closing cost credits.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">4</div>
+ <div class="step-content">
+ <h4>Construction Monitoring</h4>
+ <p>During the build, we stay in communication with the builder and attend key walkthroughs. You'll be informed at every stage so there are no surprises.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">5</div>
+ <div class="step-content">
+ <h4>Final Walkthrough &amp; Closing</h4>
+ <p>We conduct a thorough final walkthrough, compile a punch list of any items needing attention, coordinate your independent inspection, and guide you through closing day.</p>
+ </div>
+ </li>
+ </ol>
+
+ <!-- WHY YRL -->
+ <h2>Why Choose Your Realty Link for New Construction?</h2>
+ <p>Many buyers walk into a model home alone, sign the builder's contract, and don't realize until later what they missed. Your Realty Link prevents that. Daniel Cope has worked with buyers purchasing new construction across all four of these counties and knows the builders, the communities, and the contract terms you need to watch for. We're a MIBOR-member brokerage with access to every new-construction listing on the Indiana MLS, plus direct relationships with builder sales teams across <a href="/indianapolis-real-estate/">Central Indiana</a>. Our representation is free to you, and our only goal is making sure you get the best possible home at the best possible price with the fewest possible headaches.</p>
+
+ <!-- PRIMARY CTA -->
+ <div class="cta-block">
+ <h3>Ready to Explore New Construction?</h3>
+ <p>Call Daniel Cope before you visit your first model home. Having representation from the start protects your negotiating position.</p>
+ <div class="btn-group">
+ <a href="tel:3172016323" class="btn btn-white">Call 317-201-6323</a>
+ <a href="/contact/" class="btn btn-outline">Send a Message &rarr;</a>
+ <a href="https://yourrealtylink.com/content/new-construction" class="btn btn-outline" target="_blank" rel="noopener">Search New Homes on YRL &rarr;</a>
+ </div>
+ </div>
+
+ <!-- FAQ -->
+ <section class="faq-section">
+ <h2>Frequently Asked Questions — New Construction by County</h2>
+
+ <details class="faq-item">
+ <summary>Do I need a real estate agent to buy new construction?</summary>
+ <div class="faq-answer">
+ <p>You don't legally need one, but you absolutely should have one. The builder's sales agent represents the builder, not you. Having your own agent from Your Realty Link costs you nothing — the builder pays the buyer agent's commission — and you get someone in your corner who can negotiate upgrades, review contracts, and protect your interests throughout the build process.</p>
+ </div>
+ </details>
+
+ <details class="faq-item">
+ <summary>Which county has the most new construction in Central Indiana?</summary>
+ <div class="faq-answer">
+ <p>Hamilton County consistently leads Central Indiana in new home construction, with major developments in Fishers, Westfield, Noblesville, and Carmel. Hendricks County (Avon, Brownsburg, Plainfield) and Johnson County (Greenwood, Bargersville) are also very active. Hancock County is the fastest-growing emerging market with new communities in McCordsville and New Palestine.</p>
+ </div>
+ </details>
+
+ <details class="faq-item">
+ <summary>What price range are new construction homes in Central Indiana?</summary>
+ <div class="faq-answer">
+ <p>Pricing varies significantly by county and builder. In Hamilton County, new homes typically start in the mid-$300s and can exceed $1 million for custom builds. Hendricks and Johnson counties offer new homes starting in the mid-$200s to low $300s. Hancock County new construction generally ranges from the upper $200s to the mid-$500s.</p>
+ </div>
+ </details>
+
+ <details class="faq-item">
+ <summary>Can Your Realty Link help me negotiate with a builder?</summary>
+ <div class="faq-answer">
+ <p>Yes. While builders rarely negotiate on base price, there is often room to negotiate on upgrades, closing costs, lot premiums, and incentives — especially on inventory homes or during slower sales periods. Daniel Cope knows which builders are flexible on what, and professional representation ensures you don't miss opportunities the builder's agent won't volunteer.</p>
+ </div>
+ </details>
+ </section>
+
+ <!-- SECONDARY CTA -->
+ <div class="cta-block cta-block-light">
+ <h3>Learn More About New Construction Buying</h3>
+ <p>Read our full guide to buying new construction in Central Indiana, or learn about our builder representation services.</p>
+ <div class="btn-group">
+ <a href="/services/new-construction/" class="btn btn-primary">New Construction Guide</a>
+ <a href="/services/builder-representation/" class="btn btn-outline">Builder Representation</a>
+ </div>
+ </div>
+
+ <!-- INTERNAL LINKS -->
+ <hr class="divider">
+ <h3>Related Services &amp; Resources</h3>
+ <ul>
+ <li><a href="/services/new-construction/">New Construction Home Buying Guide</a></li>
+ <li><a href="/services/builder-representation/">Builder Representation Services</a></li>
+ <li><a href="/services/new-home-communities/">New Home Communities in Indianapolis</a></li>
+ <li><a href="/services/buyer-representation/">Buyer Representation</a></li>
+ <li><a href="/new-construction-indianapolis/">New Construction Indianapolis Overview</a></li>
+ </ul>
+
+ </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+
+<section class="cta-form-section">
+ <div class="container">
+ <h2>Ready to Take the Next Step?</h2>
+ <p>Fill out the form below and a Your Realty Link agent will reach out — no obligation, no pressure.</p>
+ <form class="ipg-lead-form">
+ <input type="hidden" name="source_page" value="services/new-construction-by-county">
+ <input type="hidden" name="interest_type" value="New Construction Buyer">
+ <div class="form-row">
+ <div>
+ <label for="sv-name">Name *</label>
+ <input type="text" id="sv-name" name="name" required placeholder="Your name">
+ </div>
+ <div>
+ <label for="sv-phone">Phone *</label>
+ <input type="tel" id="sv-phone" name="phone" required placeholder="317-555-1234">
+ </div>
+ </div>
+ <label for="sv-email">Email *</label>
+ <input type="email" id="sv-email" name="email" required placeholder="you@example.com">
+ <label for="sv-message">How can we help?</label>
+ <textarea id="sv-message" name="message" placeholder="Which county or community are you interested in?"></textarea>
+ <button type="submit">Send Message &rarr;</button>
+ <p class="form-note">No spam &middot; No obligation &middot; We respond personally</p>
+ </form>
+ </div>
+</section>
+
+<footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <img src="/assets/img/yrl-logo.png" alt="Your Realty Link">
+ <p>Indy Property Guide is your source for Central Indiana real estate information, powered by Your Realty Link — a full-service MIBOR brokerage serving buyers, sellers, and investors across the Indianapolis metro.</p>
+ <div class="social-links">
+ <a href="https://www.facebook.com/CSIRealtyTeam" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+ <a href="http://twitter.com/janetgiles" target="_blank" rel="noopener" aria-label="Twitter">&#x1D54F;</a>
+ <a href="https://www.linkedin.com/in/thedanielcope/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+ <a href="http://www.instagram.com/IndianapolisRealEstate" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+ </div>
+ </div>
+ <div class="footer-col">
+ <h4>Seller Services</h4>
+ <ul>
+ <li><a href="/services/expired-listings/">Expired Listings</a></li>
+ <li><a href="/services/sell-my-home/">Sell My Home</a></li>
+ <li><a href="/services/for-sale-by-owner/">FSBO Assistance</a></li>
+ <li><a href="/services/free-home-valuation/">Free Valuation</a></li>
+ <li><a href="/services/sell-fast/">Sell Fast Indy</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Top Cities</h4>
+ <ul>
+ <li><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a></li>
+ <li><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a></li>
+ <li><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a></li>
+ <li><a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Your Realty Link</h4>
+ <ul>
+ <li><a href="https://yourrealtylink.com" target="_blank" rel="noopener">yourrealtylink.com</a></li>
+ <li><a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener">Search Homes</a></li>
+ <li><a href="/services/free-home-valuation/" target="_blank" rel="noopener">Home Valuation</a></li>
+ <li><a href="/contact/">Contact Us</a></li>
+ <li><a href="tel:3172016323">317-201-6323</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Indy Property Guide &middot; Powered by <a href="https://yourrealtylink.com" target="_blank" rel="noopener">Your Realty Link</a> &middot; Daniel Cope, Real Estate Broker</span>
+ <span><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/terms/">Terms &amp; Conditions</a></span>
+ <span>2302 E Southport Rd, Indianapolis, IN 46227 &middot; <a href="tel:3172016323">317-201-6323</a></span>
+ </div>
+ </div>
+</footer>
+
+<script>
+function toggleNav() {
+ document.getElementById('siteNav').classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+ var dd = e.target.closest('.nav-item-dropdown');
+ if (dd && window.innerWidth <= 960) {
+ var nav = dd.closest('.site-nav');
+ if (nav && nav.classList.contains('open')) {
+ e.preventDefault();
+ dd.classList.toggle('open');
+ }
+ }
+});
+</script>
+<script src="/assets/js/lead-form.js"></script>
+<script src="/assets/js/site-enhancements.js" defer></script>
+</body>
+</html>
