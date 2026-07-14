@@ -1706,4 +1706,16 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
  </url>
+ <url>
+  <loc>https://indypropertyguide.com/resources/central-indiana-buyers-guide/</loc>
+  <lastmod>2026-07-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/resources/central-indiana-sellers-guide/</loc>
+  <lastmod>2026-07-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
 </urlset>
