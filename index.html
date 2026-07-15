@@ -290,6 +290,52 @@
  .listings-arrow { display: none; }
  .listings-header h2 { font-size: 1.4rem; }
 }
+ 
+ /* ── County map (geographic tilegram) ── */
+.county-map { max-width: 760px; margin: 0 auto; }
+.cmap-compass { text-align: center; font-size:.72rem; color:#8a94a3; letter-spacing:.14em; text-transform: uppercase; font-weight: 600; margin-bottom: 14px; }
+.cmap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cmap-tile { position: relative; background: #1b3a5c; color:#fff; border-radius: 14px; padding: 18px 14px; min-height: 96px; text-decoration: none; display: flex; flex-direction: column; justify-content: center; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; overflow: hidden; }
+.cmap-tile::after { content:'\2192'; position:absolute; top:12px; right:14px; opacity:0; transform:translateX(-4px); transition:.18s; font-size:.95rem; }
+.cmap-tile:hover { transform: translateY(-4px); background: #24507a; box-shadow: 0 12px 28px rgba(27,58,92,.28); }
+.cmap-tile:hover::after { opacity:.85; transform:translateX(0); }
+.cmap-name { font-weight: 700; font-size: 1.05rem; }
+.cmap-cities { font-size:.74rem; color: rgba(255,255,255,.72); margin-top: 5px; line-height: 1.4; }
+.cmap-hub { background: linear-gradient(135deg, #c03926 0%, #9e2e1e 100%); box-shadow: 0 8px 24px rgba(192,57,38,.35); }
+.cmap-hub:hover { background: linear-gradient(135deg, #a8301f 0%, #8a2417 100%); box-shadow: 0 12px 30px rgba(192,57,38,.42); }
+.cmap-badge { display:inline-block; width:max-content; font-size:.58rem; font-weight:700; text-transform:uppercase; letter-spacing:.11em; background: rgba(255,255,255,.24); padding:2px 9px; border-radius:20px; margin-bottom:6px; }
+.cmap-outer { margin-top: 22px; text-align: center; }
+.cmap-outer-label { display:block; font-size:.82rem; color:#6e6e70; margin-bottom: 10px; }
+.cmap-outer a { display:inline-block; background:#fff; border:1px solid #dfe3e8; color:#1b3a5c; font-size:.82rem; font-weight:600; padding:6px 14px; border-radius:20px; margin:3px; text-decoration:none; transition: all .15s; }
+.cmap-outer a:hover { background:#1b3a5c; color:#fff; border-color:#1b3a5c; }
+.cmap-foot { text-align:center; margin: 22px 0 0; font-size:.92rem; }
+.cmap-foot a { color:#c03926; font-weight:600; text-decoration:none; }
+.cmap-foot a:hover { text-decoration:underline; }
+@media (max-width: 560px) { .cmap-tile { min-height: 78px; padding: 12px 8px; border-radius:11px; } .cmap-name { font-size:.86rem; } .cmap-cities { display:none; } .cmap-tile::after{display:none;} }
+
+ /* ── Homepage city cards ── */
+.home-cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
+.home-city-card { position: relative; background:#fff; border:1px solid #e8eaed; border-radius: 12px; padding: 20px 20px 18px; text-decoration:none; display:block; overflow:hidden; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.home-city-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:#c03926; transform: scaleY(0); transform-origin: top; transition: transform .2s ease; }
+.home-city-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(27,58,92,.12); border-color:#d9dde2; }
+.home-city-card:hover::before { transform: scaleY(1); }
+.home-city-card h3 { font-size: 1.1rem; color:#1b3a5c; margin:0 0 3px; }
+.home-city-card .hc-county { font-size:.8rem; color:#8a8f96; }
+.home-city-card .hc-price { display:block; font-size:.85rem; color:#c03926; font-weight:700; margin-top:10px; }
+.home-city-card .hc-arrow { position:absolute; right:16px; top:20px; color:#ccd2d8; transition: color .18s, transform .18s; font-size:1.05rem; }
+.home-city-card:hover .hc-arrow { color:#c03926; transform: translateX(3px); }
+
+ /* ── Homepage feature cards ── */
+.home-features-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 980px; margin: 0 auto; }
+.home-feature-card { background:#fff; border:1px solid #e8eaed; border-radius: 16px; padding: 32px 28px; text-decoration:none; display:block; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.home-feature-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(27,58,92,.13); border-color:#d9dde2; }
+.hf-icon { width: 54px; height: 54px; border-radius: 14px; background: #fdeeeb; display:flex; align-items:center; justify-content:center; font-size: 1.55rem; margin-bottom: 18px; }
+.home-feature-card h3 { font-size: 1.18rem; color:#1b3a5c; margin:0 0 8px; }
+.home-feature-card p { font-size:.9rem; color:#6e6e70; line-height:1.6; margin:0 0 16px; }
+.hf-link { font-size:.86rem; font-weight:700; color:#c03926; }
+.home-feature-card:hover .hf-link { text-decoration:underline; }
+@media (max-width: 760px) { .home-features-grid { grid-template-columns: 1fr; } }
+
  </style>
 </head>
 <body>
@@ -432,56 +478,32 @@
  <h2>Explore Central Indiana by County</h2>
  <p>Your Realty Link serves buyers and sellers across 17 counties in the Indianapolis metro and surrounding region. Choose a county to explore cities, market info, and local resources.</p>
  </div>
- <div class="county-grid">
- <a href="/counties/hamilton-county-indiana-real-estate/" class="county-card">
- <h3>Hamilton County</h3>
- <p>Carmel · Fishers · Noblesville · Westfield</p>
- </a>
- <a href="/counties/johnson-county-indiana-real-estate/" class="county-card">
- <h3>Johnson County</h3>
- <p>Greenwood · Franklin · Bargersville</p>
- </a>
- <a href="/counties/hendricks-county-indiana-real-estate/" class="county-card">
- <h3>Hendricks County</h3>
- <p>Avon · Brownsburg · Plainfield · Danville</p>
- </a>
- <a href="/counties/marion-county-indiana-real-estate/" class="county-card">
- <h3>Marion County</h3>
- <p>Indianapolis · Southport · Lawrence · Beech Grove</p>
- </a>
- <a href="/counties/boone-county-indiana-real-estate/" class="county-card">
- <h3>Boone County</h3>
- <p>Zionsville · Whitestown · Lebanon</p>
- </a>
- <a href="/counties/hancock-county-indiana-real-estate/" class="county-card">
- <h3>Hancock County</h3>
- <p>McCordsville · Greenfield · New Palestine</p>
- </a>
- <a href="/counties/shelby-county-indiana-real-estate/" class="county-card">
- <h3>Shelby County</h3>
- <p>Shelbyville · Fairland · Morristown</p>
- </a>
- <a href="/counties/morgan-county-indiana-real-estate/" class="county-card">
- <h3>Morgan County</h3>
- <p>Mooresville · Martinsville · Monrovia</p>
- </a>
- <a href="/counties/madison-county-indiana-real-estate/" class="county-card">
- <h3>Madison County</h3>
- <p>Anderson · Pendleton · Lapel</p>
- </a>
- <a href="/counties/bartholomew-county-indiana-real-estate/" class="county-card">
- <h3>Bartholomew County</h3>
- <p>Columbus &amp; surrounding communities</p>
- </a>
- <a href="/counties/brown-county-indiana-real-estate/" class="county-card">
- <h3>Brown County</h3>
- <p>Nashville, Bean Blossom &amp; rural Indiana</p>
- </a>
- <a href="/counties/montgomery-county-indiana-real-estate/" class="county-card">
- <h3>Montgomery County</h3>
- <p>Crawfordsville &amp; surrounding towns</p>
- </a>
+ <div class="county-map">
+ <div class="cmap-compass">&uarr; North &middot; arranged by geography</div>
+ <div class="cmap-grid">
+  <a href="/counties/boone-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Boone</span><span class="cmap-cities">Zionsville · Lebanon</span></a>
+  <a href="/counties/hamilton-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Hamilton</span><span class="cmap-cities">Carmel · Fishers · Noblesville</span></a>
+  <a href="/counties/madison-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Madison</span><span class="cmap-cities">Anderson · Pendleton</span></a>
+  <a href="/counties/hendricks-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Hendricks</span><span class="cmap-cities">Avon · Brownsburg · Plainfield</span></a>
+  <a href="/counties/marion-county-indiana-real-estate/" class="cmap-tile cmap-hub"><span class="cmap-badge">Indianapolis</span><span class="cmap-name">Marion</span><span class="cmap-cities">Downtown · Southport · Lawrence</span></a>
+  <a href="/counties/hancock-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Hancock</span><span class="cmap-cities">McCordsville · Greenfield</span></a>
+  <a href="/counties/morgan-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Morgan</span><span class="cmap-cities">Mooresville · Martinsville</span></a>
+  <a href="/counties/johnson-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Johnson</span><span class="cmap-cities">Greenwood · Franklin</span></a>
+  <a href="/counties/shelby-county-indiana-real-estate/" class="cmap-tile"><span class="cmap-name">Shelby</span><span class="cmap-cities">Shelbyville · Morristown</span></a>
  </div>
+ <div class="cmap-outer">
+  <span class="cmap-outer-label">Also serving these surrounding counties:</span>
+  <a href="/counties/montgomery-county-indiana-real-estate/">Montgomery</a>
+  <a href="/counties/putnam-county-indiana-real-estate/">Putnam</a>
+  <a href="/counties/parke-county-indiana-real-estate/">Parke</a>
+  <a href="/counties/brown-county-indiana-real-estate/">Brown</a>
+  <a href="/counties/bartholomew-county-indiana-real-estate/">Bartholomew</a>
+  <a href="/counties/decatur-county-indiana-real-estate/">Decatur</a>
+  <a href="/counties/jackson-county-indiana-real-estate/">Jackson</a>
+  <a href="/counties/jennings-county-indiana-real-estate/">Jennings</a>
+ </div>
+ <p class="cmap-foot"><a href="/areas/">See the full directory of every city, neighborhood &amp; community &rarr;</a></p>
+</div>
  </div>
 </section>
 
@@ -492,67 +514,19 @@
  <h2>Popular Cities Near Indianapolis</h2>
  <p>From fast-growing suburbs to established communities, Central Indiana has a neighborhood for everyone. Explore city guides with local market info, schools, and more.</p>
  </div>
- <div class="city-grid">
- <a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="city-card">
- <h3>Carmel</h3>
- <p>Hamilton County · $400s–$1M+</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="city-card">
- <h3>Fishers</h3>
- <p>Hamilton County · $300s–$600s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="city-card">
- <h3>Greenwood</h3>
- <p>Johnson County · $250s–$450s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="city-card">
- <h3>Noblesville</h3>
- <p>Hamilton County · $300s–$600s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/hendricks-county/avon-indiana-real-estate/" class="city-card">
- <h3>Avon</h3>
- <p>Hendricks County · $250s–$450s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/hendricks-county/brownsburg-indiana-real-estate/" class="city-card">
- <h3>Brownsburg</h3>
- <p>Hendricks County · $250s–$450s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/boone-county/zionsville-indiana-real-estate/" class="city-card">
- <h3>Zionsville</h3>
- <p>Boone County · $400s–$1M+</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="city-card">
- <h3>Westfield</h3>
- <p>Hamilton County · $300s–$600s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/hendricks-county/plainfield-indiana-real-estate/" class="city-card">
- <h3>Plainfield</h3>
- <p>Hendricks County · $230s–$400s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/hancock-county/mccordsville-indiana-real-estate/" class="city-card">
- <h3>McCordsville</h3>
- <p>Hancock County · $280s–$500s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/marion-county/southport-indiana-real-estate/" class="city-card">
- <h3>Southport</h3>
- <p>Marion County · $150s–$320s</p>
- <span class="arrow">→</span>
- </a>
- <a href="/cities/shelby-county/shelbyville-indiana-real-estate/" class="city-card">
- <h3>Shelbyville</h3>
- <p>Shelby County · $150s–$300s</p>
- <span class="arrow">→</span>
- </a>
+ <div class="home-cities-grid">
+  <a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Carmel</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$400s – $1M+</span></a>
+  <a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Fishers</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span></a>
+  <a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Greenwood</h3><span class="hc-county">Johnson County</span><span class="hc-price">$250s – $450s</span></a>
+  <a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Noblesville</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span></a>
+  <a href="/cities/hendricks-county/avon-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Avon</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$250s – $450s</span></a>
+  <a href="/cities/hendricks-county/brownsburg-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Brownsburg</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$250s – $450s</span></a>
+  <a href="/cities/boone-county/zionsville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Zionsville</h3><span class="hc-county">Boone County</span><span class="hc-price">$400s – $1M+</span></a>
+  <a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Westfield</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span></a>
+  <a href="/cities/hendricks-county/plainfield-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Plainfield</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$230s – $400s</span></a>
+  <a href="/cities/hancock-county/mccordsville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>McCordsville</h3><span class="hc-county">Hancock County</span><span class="hc-price">$280s – $500s</span></a>
+  <a href="/cities/marion-county/southport-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Southport</h3><span class="hc-county">Marion County</span><span class="hc-price">$150s – $320s</span></a>
+  <a href="/cities/shelby-county/shelbyville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Shelbyville</h3><span class="hc-county">Shelby County</span><span class="hc-price">$150s – $300s</span></a>
  </div>
  </div>
 </section>
@@ -564,22 +538,10 @@
  <h2>Search by School District, Community &amp; Neighborhood</h2>
  <p>Buyers often start with a school district, a named community, or a specific Indianapolis neighborhood. Explore Central Indiana the way you actually search.</p>
  </div>
- <div class="city-grid">
- <a href="/schools/" class="city-card">
- <h3>🏫 School Districts</h3>
- <p>Carmel Clay, HSE, Zionsville, Center Grove &amp; more</p>
- <span class="arrow">→</span>
- </a>
- <a href="/communities/" class="city-card">
- <h3>🏡 Communities &amp; Subdivisions</h3>
- <p>Village of WestClay, Chatham Hills, Holliday Farms &amp; more</p>
- <span class="arrow">→</span>
- </a>
- <a href="/neighborhoods/" class="city-card">
- <h3>📍 Indianapolis Neighborhoods</h3>
- <p>Broad Ripple, Mass Ave, Irvington, Fountain Square &amp; more</p>
- <span class="arrow">→</span>
- </a>
+ <div class="home-features-grid">
+  <a href="/schools/" class="home-feature-card"><div class="hf-icon">&#127979;</div><h3>School Districts</h3><p>Search homes by top districts &mdash; Carmel Clay, Hamilton Southeastern, Zionsville, Center Grove &amp; more.</p><span class="hf-link">Browse school districts &rarr;</span></a>
+  <a href="/communities/" class="home-feature-card"><div class="hf-icon">&#127962;</div><h3>Communities &amp; Subdivisions</h3><p>Named golf, luxury &amp; master-planned communities &mdash; Village of WestClay, Chatham Hills, Holliday Farms &amp; more.</p><span class="hf-link">Browse communities &rarr;</span></a>
+  <a href="/neighborhoods/" class="home-feature-card"><div class="hf-icon">&#128205;</div><h3>Indianapolis Neighborhoods</h3><p>Distinct city neighborhoods &mdash; Broad Ripple, Mass Ave, Irvington, Fountain Square &amp; more.</p><span class="hf-link">Browse neighborhoods &rarr;</span></a>
  </div>
  </div>
 </section>
