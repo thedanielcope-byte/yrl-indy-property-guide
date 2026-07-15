@@ -1,0 +1,108 @@
+{
+  "_comment": "Maps each blog post slug -> list of geo page paths it should surface on. Add an entry when you publish a local/city/business post, then run build_local_posts.py. Post metadata (title, image, excerpt, category) is read automatically from blog/index.html.",
+  "living-in-carmel-indiana-what-to-know-before-you-move": [
+    "/cities/hamilton-county/carmel-indiana-real-estate/",
+    "/counties/hamilton-county-indiana-real-estate/"
+  ],
+  "fishers-indiana-one-of-americas-best-places-to-live": [
+    "/cities/hamilton-county/fishers-indiana-real-estate/",
+    "/counties/hamilton-county-indiana-real-estate/"
+  ],
+  "zionsville-indiana-small-town-luxury-living-near-indy": [
+    "/cities/boone-county/zionsville-indiana-real-estate/",
+    "/counties/boone-county-indiana-real-estate/"
+  ],
+  "avon-indiana-why-families-love-hendricks-county": [
+    "/cities/hendricks-county/avon-indiana-real-estate/",
+    "/counties/hendricks-county-indiana-real-estate/"
+  ],
+  "brownsburg-indiana-racing-town-growing-suburbs": [
+    "/cities/hendricks-county/brownsburg-indiana-real-estate/",
+    "/counties/hendricks-county-indiana-real-estate/"
+  ],
+  "mccordsville-indiana-hancock-countys-fastest-growing-city": [
+    "/cities/hancock-county/mccordsville-indiana-real-estate/",
+    "/counties/hancock-county-indiana-real-estate/"
+  ],
+  "noblesville-indiana-hamilton-countys-county-seat": [
+    "/cities/hamilton-county/noblesville-indiana-real-estate/",
+    "/counties/hamilton-county-indiana-real-estate/"
+  ],
+  "plainfield-indiana-hendricks-countys-retail-hub": [
+    "/cities/hendricks-county/plainfield-indiana-real-estate/",
+    "/counties/hendricks-county-indiana-real-estate/"
+  ],
+  "shelbyville-indiana-affordable-living-near-indianapolis": [
+    "/cities/shelby-county/shelbyville-indiana-real-estate/",
+    "/counties/shelby-county-indiana-real-estate/"
+  ],
+  "westfield-indiana-real-estate-home-of-grand-park": [
+    "/cities/hamilton-county/westfield-indiana-real-estate/",
+    "/counties/hamilton-county-indiana-real-estate/"
+  ],
+  "whitestown-indiana-boone-countys-fastest-growing-town": [
+    "/cities/boone-county/whitestown-indiana-real-estate/",
+    "/counties/boone-county-indiana-real-estate/"
+  ],
+  "pendleton-indiana-small-town-living-near-anderson": [
+    "/cities/madison-county/pendleton-indiana-real-estate/",
+    "/counties/madison-county-indiana-real-estate/"
+  ],
+  "bargersville-indiana-johnson-countys-southern-charm": [
+    "/cities/johnson-county/bargersville-indiana-real-estate/",
+    "/counties/johnson-county-indiana-real-estate/"
+  ],
+  "anderson-indiana-real-estate-guide": [
+    "/cities/madison-county/anderson-indiana-real-estate/",
+    "/counties/madison-county-indiana-real-estate/"
+  ],
+  "how-to-sell-your-home-fast-in-greenwood-indiana": [
+    "/cities/johnson-county/greenwood-indiana-real-estate/",
+    "/counties/johnson-county-indiana-real-estate/"
+  ],
+  "broad-ripple-indianapolis-most-vibrant-neighborhood": [
+    "/neighborhoods/broad-ripple-indianapolis/",
+    "/counties/marion-county-indiana-real-estate/"
+  ],
+  "irvington-indianapolis-historic-charm-on-the-east-side": [
+    "/neighborhoods/irvington-indianapolis/",
+    "/counties/marion-county-indiana-real-estate/"
+  ],
+  "geist-reservoir-waterfront-homes-near-indianapolis": [
+    "/neighborhoods/geist-reservoir-indianapolis/",
+    "/counties/marion-county-indiana-real-estate/"
+  ],
+  "waterfront-living-near-indianapolis-lakes-guide": [
+    "/neighborhoods/geist-reservoir-indianapolis/",
+    "/neighborhoods/eagle-creek-indianapolis/",
+    "/counties/marion-county-indiana-real-estate/"
+  ],
+  "downtown-indianapolis-historic-neighborhoods-guide": [
+    "/neighborhoods/mass-ave-indianapolis/",
+    "/neighborhoods/lockerbie-square-indianapolis/",
+    "/neighborhoods/chatham-arch-indianapolis/",
+    "/neighborhoods/old-northside-indianapolis/",
+    "/neighborhoods/herron-morton-place-indianapolis/",
+    "/neighborhoods/fall-creek-place-indianapolis/",
+    "/neighborhoods/fletcher-place-indianapolis/",
+    "/counties/marion-county-indiana-real-estate/"
+  ],
+  "luxury-golf-course-communities-around-indianapolis": [
+    "/communities/holliday-farms-zionsville/",
+    "/communities/chatham-hills-westfield/",
+    "/communities/bridgewater-club-westfield/",
+    "/communities/sagamore-noblesville/",
+    "/communities/windermere-fishers/"
+  ],
+  "best-neighborhoods-to-buy-a-home-in-indianapolis": [
+    "/counties/marion-county-indiana-real-estate/"
+  ],
+  "things-to-do-in-carmel-indiana-local-guide": [
+    "/cities/hamilton-county/carmel-indiana-real-estate/",
+    "/counties/hamilton-county-indiana-real-estate/"
+  ],
+  "exploring-broad-ripple-village-indianapolis": [
+    "/neighborhoods/broad-ripple-indianapolis/",
+    "/counties/marion-county-indiana-real-estate/"
+  ]
+}
