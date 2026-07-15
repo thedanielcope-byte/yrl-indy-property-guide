@@ -463,6 +463,12 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 }
 .city-card:hover h3 { color: var(--red); }
 .city-card:hover .arrow { opacity: 1; transform: translateX(3px); }
+.city-card .cprice { display: block; font-size: .82rem; color: var(--red); font-weight: 700; margin-top: 6px; }
+/* Reusable Indiana map (areas page + county hub sidebars) */
+.areas-map { max-width: 440px; margin: 6px auto 34px; }
+.areas-map .inmap { width: 100%; height: auto; display: block; filter: drop-shadow(0 8px 22px rgba(27,58,92,.14)); }
+.sidebar-map-card .inmap { width: 100%; height: auto; display: block; }
+.inmap-caption { font-size: .78rem; color: var(--gray); text-align: center; margin: 10px 0 0; }
 
 /* ── INFO BOX ── */
 .info-box {
