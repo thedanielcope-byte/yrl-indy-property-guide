@@ -471,6 +471,16 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 .inmap-caption { font-size: .78rem; color: var(--gray); text-align: center; margin: 10px 0 0; }
 .county-shape-map { max-width: 540px; margin: 10px auto 26px; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 18px 12px; box-shadow: 0 2px 12px rgba(27,58,92,.06); }
 .county-shape-map .cmap2 { width: 100%; height: auto; display: block; }
+/* Pin map (real map image + clickable pins) */
+.pinmap { position: relative; max-width: 840px; margin: 12px auto 8px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 4px 18px rgba(27,58,92,.10); background: #fff; line-height: 0; }
+.pinmap > img { width: 100%; height: auto; display: block; }
+.pin { position: absolute; transform: translate(-50%, -100%); text-decoration: none; z-index: 2; line-height: normal; }
+.pin-marker { display: block; width: 20px; height: 20px; background: #c03926; border: 2.5px solid #fff; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); box-shadow: 0 2px 5px rgba(0,0,0,.4); transition: background .12s ease, transform .12s ease; position: relative; }
+.pin-marker::after { content: ''; position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; background: #fff; border-radius: 50%; transform: translate(-50%,-50%); }
+.pin-label { position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: #1b3a5c; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .12s ease; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+.pin:hover { z-index: 6; }
+.pin:hover .pin-marker { background: #1b3a5c; transform: rotate(-45deg) scale(1.18); }
+.pin:hover .pin-label { opacity: 1; }
 
 /* ── INFO BOX ── */
 .info-box {
