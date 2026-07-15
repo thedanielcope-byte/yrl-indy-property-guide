@@ -469,6 +469,8 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 .areas-map .inmap { width: 100%; height: auto; display: block; filter: drop-shadow(0 8px 22px rgba(27,58,92,.14)); }
 .sidebar-map-card .inmap { width: 100%; height: auto; display: block; }
 .inmap-caption { font-size: .78rem; color: var(--gray); text-align: center; margin: 10px 0 0; }
+.county-shape-map { max-width: 540px; margin: 10px auto 26px; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 18px 12px; box-shadow: 0 2px 12px rgba(27,58,92,.06); }
+.county-shape-map .cmap2 { width: 100%; height: auto; display: block; }
 
 /* ── INFO BOX ── */
 .info-box {
