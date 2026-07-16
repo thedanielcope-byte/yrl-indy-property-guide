@@ -7,7 +7,11 @@
   "scripts": {
     "start": "node src/index.js",
     "server": "node src/server.js",
-    "valuation": "node src/index.js"
+    "valuation": "node src/index.js",
+    "equity": "node src/equity-tracker.js run",
+    "equity:dry": "node src/equity-tracker.js run --dry-run",
+    "equity:list": "node src/equity-tracker.js list",
+    "enroll": "node src/equity-tracker.js enroll"
   },
   "dependencies": {
     "express": "^4.21.0",

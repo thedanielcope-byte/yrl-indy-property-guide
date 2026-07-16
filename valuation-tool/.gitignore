@@ -2,3 +2,5 @@ node_modules/
 .env
 reports/
 package-lock.json
+# homeowner PII (names, emails, home addresses) — never commit
+subscribers.json
