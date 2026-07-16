@@ -20,7 +20,7 @@
   --navy-dark: #132a44;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Merriweather', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --radius: 8px;
   --shadow-sm: 0 1px 4px rgba(0,0,0,.08);
   --shadow: 0 2px 12px rgba(0,0,0,.10);
@@ -52,14 +52,25 @@ h1, h2, h3, h4 {
   line-height: 1.25;
   color: var(--dark);
 }
-h1 { font-size: clamp(1.65rem, 4vw, 2.25rem); margin-bottom: 1rem; }
-h2 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); margin: 2rem 0 .75rem; color: var(--red); }
-h3 { font-size: 1.15rem; margin: 1.5rem 0 .5rem; }
+/* Editorial headings use the display serif; UI/label headings stay sans */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(1.8rem, 4.2vw, 2.5rem); margin-bottom: 1rem; letter-spacing: -0.018em; }
+h2 { font-size: clamp(1.35rem, 2.7vw, 1.8rem); margin: 2.4rem 0 .85rem; color: var(--red); }
+h3 { font-size: 1.22rem; margin: 1.6rem 0 .5rem; }
+/* Small card/UI titles: keep sans for legibility at small sizes */
+.city-card h3, .local-post-card h3, .home-city-card h3, .home-feature-card h3 {
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
 p  { margin-bottom: 1rem; }
 
 /* ── LAYOUT ── */
 .container { max-width: var(--max); width: 100%; margin: 0 auto; padding: 0 24px; }
-.section    { padding: 56px 0; }
+.section    { padding: 72px 0; }
 .section-alt { background: var(--light); }
 
 /* ── HEADER ── */
@@ -204,9 +215,11 @@ p  { margin-bottom: 1rem; }
 
 /* ── HERO ── */
 .page-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  background:
+    radial-gradient(1100px 420px at 12% -10%, rgba(255,255,255,.08), transparent 62%),
+    linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
   color: var(--white);
-  padding: 56px 0 48px;
+  padding: 76px 0 64px;
   position: relative;
   overflow: hidden;
 }
@@ -219,26 +232,34 @@ p  { margin-bottom: 1rem; }
 .page-hero .container { position: relative; }
 .page-hero h1 {
   color: var(--white);
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-  margin-bottom: .75rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.14;
+  letter-spacing: -0.022em;
+  margin-bottom: 1rem;
+  max-width: 24ch;
 }
 .page-hero h1 em { color: var(--red); font-style: normal; }
 .page-hero .hero-sub {
-  font-size: 1rem;
-  color: #ccc;
-  max-width: 640px;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.8);
+  line-height: 1.65;
+  max-width: 660px;
   margin-bottom: 1.5rem;
 }
-.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.25rem; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 1.5rem; }
 .hero-badge {
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.15);
-  color: #ddd;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  color: rgba(255,255,255,.85);
   font-size: 12px;
-  padding: 4px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-weight: 500;
+  letter-spacing: .01em;
+  backdrop-filter: blur(2px);
 }
+/* hide any empty hero badges */
+.hero-badge:empty { display: none; }
 
 /* ── CONTENT LAYOUT ── */
 .content-wrap {
@@ -294,17 +315,21 @@ p  { margin-bottom: 1rem; }
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 14px;
+  letter-spacing: .012em;
   cursor: pointer;
   transition: all var(--transition);
   text-decoration: none;
   border: 2px solid transparent;
 }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
 .btn-primary {
   background: var(--red);
   color: var(--white);
   border-color: var(--red);
+  box-shadow: 0 2px 10px rgba(192,57,38,.24);
 }
-.btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); text-decoration: none; color: var(--white); }
+.btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); text-decoration: none; color: var(--white); box-shadow: 0 6px 18px rgba(192,57,38,.30); }
 .btn-outline {
   background: transparent;
   color: var(--red);
