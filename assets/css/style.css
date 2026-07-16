@@ -482,6 +482,18 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 .pin:hover .pin-marker { background: #1b3a5c; transform: rotate(-45deg) scale(1.2); }
 .pin:hover .pin-label { opacity: 1; }
 
+/* ── "At a Glance" AI-answer / quick-facts block ── */
+.quick-answer { background: linear-gradient(180deg,#f7f9fc,#ffffff); border: 1px solid #e3e8ef; border-left: 4px solid #c03926; border-radius: 12px; padding: 22px 24px; margin: 0 0 30px; box-shadow: 0 2px 12px rgba(27,58,92,.05); }
+.quick-answer .qa-heading { font-size: .8rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #c03926; margin: 0 0 10px; }
+.qa-lead { font-size: 1.07rem; line-height: 1.6; color: #24303f; margin: 0 0 18px; }
+.qa-facts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 30px; margin: 0; }
+.qa-facts > div { display: flex; flex-direction: column; gap: 2px; padding: 9px 0; border-top: 1px solid #eaeef3; }
+.qa-facts dt { font-size: .71rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: #6e6e70; }
+.qa-facts dd { margin: 0; font-size: .98rem; font-weight: 600; color: #1b3a5c; }
+.qa-facts dd a { color: #c03926; text-decoration: none; font-weight: 700; }
+.qa-facts dd a:hover { text-decoration: underline; }
+@media (max-width:560px){ .qa-facts { grid-template-columns: 1fr; } }
+
 /* ── INFO BOX ── */
 .info-box {
   background: var(--red-light);
