@@ -529,6 +529,15 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 .pin:hover .pin-marker { background: #1b3a5c; transform: rotate(-45deg) scale(1.2); }
 .pin:hover .pin-label { opacity: 1; }
 
+/* ── Glossary term list ── */
+.gl-list { margin: 26px 0 8px; }
+.gl-item { padding: 14px 0; border-top: 1px solid #eaeef3; }
+.gl-item:last-child { border-bottom: 1px solid #eaeef3; }
+.gl-item dt { font-family: var(--font-sans); font-weight: 700; font-size: 1rem; color: var(--navy); margin: 0 0 4px; }
+.gl-item dt a { color: var(--red); text-decoration: none; }
+.gl-item dt a:hover { text-decoration: underline; }
+.gl-item dd { margin: 0; font-size: .95rem; line-height: 1.65; color: #3a4652; }
+
 /* ── Content data / comparison tables (guides, comparisons) ── */
 .data-table { width: 100%; border-collapse: collapse; margin: 22px 0 26px; font-size: .94rem; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
 .data-table thead th { background: var(--navy); color: #fff; font-family: var(--font-sans); font-weight: 600; font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; text-align: left; padding: 12px 14px; }
