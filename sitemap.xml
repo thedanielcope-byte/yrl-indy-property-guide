@@ -1766,4 +1766,34 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
  </url>
+ <url>
+  <loc>https://indypropertyguide.com/compare/fishers-vs-noblesville/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/compare/zionsville-vs-carmel/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/compare/avon-vs-brownsburg/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/compare/greenwood-vs-franklin/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/compare/westfield-vs-fishers/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
 </urlset>
