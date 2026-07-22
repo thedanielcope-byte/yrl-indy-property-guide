@@ -507,6 +507,26 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 .pin:hover .pin-marker { background: #1b3a5c; transform: rotate(-45deg) scale(1.2); }
 .pin:hover .pin-label { opacity: 1; }
 
+/* ── Content data / comparison tables (guides, comparisons) ── */
+.data-table { width: 100%; border-collapse: collapse; margin: 22px 0 26px; font-size: .94rem; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.data-table thead th { background: var(--navy); color: #fff; font-family: var(--font-sans); font-weight: 600; font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; text-align: left; padding: 12px 14px; }
+.data-table td, .data-table th { padding: 12px 14px; border-bottom: 1px solid #eaeef3; vertical-align: top; }
+.data-table tbody tr:last-child td { border-bottom: 0; }
+.data-table tbody tr:nth-child(even) { background: #f8fafc; }
+.data-table td strong { color: var(--navy); }
+.data-table a { font-weight: 600; }
+@media (max-width: 620px) {
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+
+/* ── Feature/hub cards (shared — also inlined on the homepage) ── */
+.home-feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin: 28px 0 8px; }
+.home-feature-grid .home-feature-card { background: #fff; border: 1px solid #e8eaed; border-radius: 16px; padding: 28px 26px; text-decoration: none; display: block; position: relative; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.home-feature-grid .home-feature-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(27,58,92,.13); border-color: #d9dde2; }
+.home-feature-grid .home-feature-card h3 { font-size: 1.16rem; color: var(--navy); margin: 0 0 8px; }
+.home-feature-grid .home-feature-card p { font-size: .92rem; color: var(--gray); line-height: 1.65; margin: 0; }
+.home-feature-grid .home-feature-card .arrow { position: absolute; top: 26px; right: 24px; color: var(--red); font-size: 1.2rem; }
+
 /* ── "At a Glance" AI-answer / quick-facts block ── */
 .quick-answer { background: linear-gradient(180deg,#f7f9fc,#ffffff); border: 1px solid #e3e8ef; border-left: 4px solid #c03926; border-radius: 12px; padding: 22px 24px; margin: 0 0 30px; box-shadow: 0 2px 12px rgba(27,58,92,.05); }
 .quick-answer .qa-heading { font-size: .8rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #c03926; margin: 0 0 10px; }
