@@ -69,7 +69,8 @@
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="/assets/css/style.css?v=cbf9084a">
+ <link rel="preload" as="image" href="/assets/img/heroes/home.jpg" fetchpriority="high">
+ <link rel="stylesheet" href="/assets/css/style.css?v=21d1d2c9">
  <style>
  /* Homepage-specific overrides */
 .home-section { padding: 64px 0; }
@@ -105,7 +106,7 @@
 .search-hero-home {
  background:
  linear-gradient(160deg, rgba(27,58,92,0.78) 0%, rgba(192,57,38,0.45) 100%),
- url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80') center 60% / cover no-repeat;
+ image-set(url('/assets/img/heroes/home.webp') type('image/webp'), url('/assets/img/heroes/home.jpg') type('image/jpeg')) center 60% / cover no-repeat;
  border-bottom: none;
  min-height: 82vh;
  display: flex;
