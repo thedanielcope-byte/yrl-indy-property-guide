@@ -1898,4 +1898,22 @@
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
  </url>
+ <url>
+  <loc>https://indypropertyguide.com/compare/new-construction-vs-resale/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/compare/realtor-vs-fsbo/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>https://indypropertyguide.com/best/is-indianapolis-a-good-place-to-live/</loc>
+  <lastmod>2026-07-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
 </urlset>
