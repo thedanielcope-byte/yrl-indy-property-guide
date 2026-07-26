@@ -200,8 +200,8 @@ document.getElementById('leadMagnetForm').addEventListener('submit',function(e){
  e.preventDefault();var btn=this.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
  var data={};var inputs=this.querySelectorAll('input,select,textarea');
  for(var i=0;i<inputs.length;i++){if(inputs[i].name)data[inputs[i].name]=inputs[i].value;}
- data.source_url=window.location.href;data.submitted_at=new Date().toISOString();
- fetch('https://services.leadconnectorhq.com/hooks/iOT1nopTL5CnKPq44zFI/webhook-trigger/b82bea0a-88fa-4cd5-9ad5-9fa3f05e7d50',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+ data.source_url=window.location.href;data.submitted_at=new Date().toISOString();data.business='yrl';data.source=data.source||'lead-magnet';data.tags=data.tags||'lead-magnet';
+ fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
  .then(function(r){window.location.href='/resources/central-indiana-buyers-guide/thank-you/';})
  .catch(function(){btn.disabled=false;btn.textContent='Get the Buyer's Guide';alert('Something went wrong. Please try again or call 317-201-6323.');});
 });

@@ -1,11 +1,11 @@
 /* ═══════════════════════════════════════════════════════════
    Indy Property Guide — Lead Capture Forms
-   Posts to GoHighLevel webhook
+   Posts to the CRM capture-lead endpoint (Supabase) — off GoHighLevel
    ═══════════════════════════════════════════════════════════ */
 
 (function () {
-  // ── GHL WEBHOOK URL — replace this with your real URL ──
-  var WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/iOT1nopTL5CnKPq44zFI/webhook-trigger/b82bea0a-88fa-4cd5-9ad5-9fa3f05e7d50';
+  // ── CRM capture-lead endpoint (Supabase Edge Function) ──
+  var WEBHOOK_URL = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead';
 
   document.addEventListener('submit', function (e) {
     var form = e.target;
@@ -25,6 +25,9 @@
     }
     data.source_url = window.location.href;
     data.submitted_at = new Date().toISOString();
+    data.business = 'yrl';
+    data.source = data.source || 'indypropertyguide';
+    data.tags = data.tags || 'real-estate-lead';
 
     fetch(WEBHOOK_URL, {
       method: 'POST',

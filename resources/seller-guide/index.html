@@ -464,10 +464,10 @@ document.getElementById('leadMagnetForm').addEventListener('submit', function(e)
   }
   data.source_url = window.location.href;
   data.submitted_at = new Date().toISOString();
-  fetch('https://services.leadconnectorhq.com/hooks/iOT1nopTL5CnKPq44zFI/webhook-trigger/b82bea0a-88fa-4cd5-9ad5-9fa3f05e7d50', {
+  fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(data)
+    body: JSON.stringify(Object.assign({source:'lead-magnet',tags:'lead-magnet'},data,{business:'yrl'}))
   }).then(function(r) {
     window.location.href = '/resources/seller-guide/thank-you/';
   }).catch(function() {

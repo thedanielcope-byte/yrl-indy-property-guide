@@ -1,5 +1,5 @@
 (function () {
-  var GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/iOT1nopTL5CnKPq44zFI/webhook-trigger/90f523ba-dd26-4946-ab3d-5b036540af8a';
+  var LEAD_CAPTURE = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead';
 
   var VALUATION_API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/property-valuation';
 
@@ -36,11 +36,19 @@
       data.address = data.address.replace(/,?\s*$/, '') + ', IN';
     }
 
-    // Send to GHL in background (don't wait for it)
-    fetch(GHL_WEBHOOK, {
+    // Capture the lead in the CRM in the background (don't wait for it)
+    fetch(LEAD_CAPTURE, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify({
+        business: 'yrl',
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: 'Home valuation request: ' + (data.address || ''),
+        source: 'home-valuation',
+        tags: 'valuation-lead'
+      })
     }).catch(function () {});
 
     // Send to valuation API
