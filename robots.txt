@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://indypropertyguide.com/sitemap.xml
+Sitemap: https://janetgiles.com/sitemap.xml
