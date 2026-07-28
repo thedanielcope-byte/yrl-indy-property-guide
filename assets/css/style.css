@@ -529,6 +529,10 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 .pin:hover .pin-marker { background: #1b3a5c; transform: rotate(-45deg) scale(1.2); }
 .pin:hover .pin-label { opacity: 1; }
 
+/* Lead-magnet & thank-you hero headings sit on dark/photo backgrounds — keep them
+   white (the global serif-heading color rule would otherwise make them navy). */
+.lm-hero h1, .ty-hero h1 { color: #fff; }
+
 /* ── Glossary term list ── */
 .gl-list { margin: 26px 0 8px; }
 .gl-item { padding: 14px 0; border-top: 1px solid #eaeef3; }
