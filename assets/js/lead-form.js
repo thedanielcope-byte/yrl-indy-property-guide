@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════
    Indy Property Guide — Lead Capture Forms
-   Posts to the CRM capture-lead endpoint (Supabase) — off GoHighLevel
+   Posts to the Nomad Systems CRM capture-lead endpoint (Supabase)
    ═══════════════════════════════════════════════════════════ */
 
 (function () {
