@@ -3,136 +3,35 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!--
- YOAST SEO FIELDS
- Focus Keyword: your realty link agents indianapolis
- SEO Title: Meet Our Agents | Your Realty Link | Your Realty Link
- Meta Description: Meet the Your Realty Link team — Indianapolis real estate agents serving buyers, sellers, and investors across Central Indiana. Led by Daniel Cope.
- Schema: LocalBusiness + RealEstateAgent + Person
- -->
- <title>Meet Our Agents | Your Realty Link | Your Realty Link</title>
- <meta name="description" content="Meet the Your Realty Link team — Indianapolis real estate agents serving buyers, sellers, and investors across Central Indiana. Led by Daniel Cope.">
+ <title>Our Agents | Your Realty Link</title>
+ <meta name="description" content="Meet the Your Realty Link team — 20+ experienced Central Indiana real estate agents. Find your agent, view their profile, and start your home search with them.">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="https://janetgiles.com/agents/">
- <meta property="og:title" content="Meet Our Agents | Your Realty Link | Your Realty Link">
- <meta property="og:description" content="Meet the Your Realty Link team — MIBOR agents serving Central Indiana buyers, sellers, and investors.">
+ <meta property="og:title" content="Our Agents | Your Realty Link">
+ <meta property="og:description" content="Meet the Your Realty Link team — 20+ experienced Central Indiana real estate agents. Find your agent, view their profile, and start your home search with them.">
  <meta property="og:url" content="https://janetgiles.com/agents/">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
- {
- "@context": "https://schema.org",
- "@graph": [
- {
- "@type": ["LocalBusiness", "RealEstateAgent"],
- "@id": "https://janetgiles.com/#business",
- "name": "Your Realty Link",
- "url": "https://yourrealtylink.com",
- "telephone": "+13172016323",
- "email": "info@yourrealtylink.com",
- "address": {
- "@type": "PostalAddress",
- "streetAddress": "2302 E Southport Rd",
- "addressLocality": "Indianapolis",
- "addressRegion": "IN",
- "postalCode": "46227",
- "addressCountry": "US"
- },
- "image": "/assets/img/yrl-logo.png"
- },
- {
- "@type": "Person",
- "name": "Daniel Cope",
- "jobTitle": "Real Estate Broker",
- "worksFor": { "@id": "https://janetgiles.com/#business" },
- "telephone": "+13172016323",
- "email": "info@yourrealtylink.com",
- "url": "https://yourrealtylink.com"
- },
- {
- "@type": "BreadcrumbList",
- "itemListElement": [
+ { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" },
- { "@type": "ListItem", "position": 2, "name": "Meet Our Agents", "item": "https://janetgiles.com/agents/" }
- ]
- }
- ]
- }
+ { "@type": "ListItem", "position": 2, "name": "Our Agents", "item": "https://janetgiles.com/agents/" } ] }
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="/assets/css/style.css?v=3c92eddf">
  <style>
-.agents-hero { background: linear-gradient(180deg, #fdf5f4 0%, #fff 70%); border-bottom: 1px solid #ead9d6; padding: 64px 0 48px; text-align: center; position: relative; }
-.agents-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: #c03926; }
-.agents-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 14px; }
-.agents-hero p { color: #6e6e70; font-size: 1.05rem; max-width: 560px; margin: 0 auto; line-height: 1.65; }
-
-.featured-agent {
- display: grid;
- grid-template-columns: 280px 1fr;
- gap: 48px;
- align-items: start;
- background: #fff;
- border: 1px solid #e8e8e8;
- border-radius: 14px;
- padding: 40px;
- box-shadow: 0 4px 24px rgba(0,0,0,.07);
- margin-bottom: 40px;
- }
-.agent-photo {
- background: linear-gradient(135deg, #c03926 0%, #9e2e1e 100%);
- border-radius: 12px;
- aspect-ratio: 1;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- color: #fff;
- font-size: 4rem;
- font-weight: 800;
- letter-spacing: -.02em;
- }
-.agent-photo span { font-size:.75rem; font-weight: 500; margin-top: 8px; opacity:.8; letter-spacing:.05em; text-transform: uppercase; }
-.agent-badge {
- display: inline-flex;
- align-items: center;
- gap: 6px;
- background: #fdf5f4;
- border: 1px solid #ead9d6;
- color: #c03926;
- padding: 5px 14px;
- border-radius: 20px;
- font-size:.8rem;
- font-weight: 600;
- margin-bottom: 14px;
- }
-.agent-name { font-size: 1.9rem; font-weight: 800; color: #1b3a5c; margin-bottom: 4px; }
-.agent-title { color: #6e6e70; font-size: 1rem; margin-bottom: 20px; }
-.agent-bio p { color: #444; line-height: 1.75; margin-bottom: 14px; font-size:.97rem; }
-.agent-specialties { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
-.specialty-tag { background: #f7f7f7; border: 1px solid #e2e2e2; color: #444; padding: 5px 14px; border-radius: 20px; font-size:.82rem; font-weight: 500; }
-.agent-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
-.agent-contact-item { display: flex; align-items: center; gap: 10px; background: #f7f7f7; border-radius: 8px; padding: 12px 16px; font-size:.88rem; color: #444; text-decoration: none; }
-.agent-contact-item:hover { background: #fdf5f4; color: #c03926; text-decoration: none; }
-.contact-icon { font-size: 1.1rem; }
-
-.team-section { background: #f7f7f7; border-radius: 14px; padding: 40px; margin-bottom: 40px; }
-.team-section h2 { font-size: 1.5rem; margin-bottom: 10px; }
-.team-section p { color: #6e6e70; line-height: 1.7; margin-bottom: 20px; }
-.team-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 24px; }
-.team-benefit { background: #fff; border-radius: 10px; padding: 20px; border-top: 3px solid #c03926; }
-.team-benefit h3 { font-size:.95rem; margin-bottom: 6px; }
-.team-benefit p { font-size:.85rem; margin: 0; color: #6e6e70; line-height: 1.5; }
-
- @media (max-width: 700px) {
-.featured-agent { grid-template-columns: 1fr; }
-.agent-photo { aspect-ratio: auto; padding: 40px; font-size: 3rem; }
-.agent-contact { grid-template-columns: 1fr; }
- }
- </style>
+ .agent-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:22px; margin:8px 0; }
+ .agent-card { display:block; text-decoration:none; background:#fff; border:1px solid #e6e6e6; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.05); transition:transform .15s, box-shadow .15s; }
+ .agent-card:hover { transform:translateY(-3px); box-shadow:0 6px 20px rgba(0,0,0,.12); text-decoration:none; }
+ .agent-card img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#ececec; }
+ .agent-card .ac-body { padding:13px 15px; }
+ .agent-card .ac-name { font-weight:700; color:#1a1a1a; font-size:1rem; }
+ .agent-card .ac-title { font-size:.83rem; color:#6e6e70; margin-top:2px; }
+ .agent-card .ac-cta { color:#c03926; font-weight:600; font-size:.83rem; margin-top:8px; display:inline-block; }
+</style>
 </head>
 <body>
-
 <header class="site-header">
  <div class="header-inner">
  <a href="/" class="site-logo">
@@ -162,6 +61,7 @@
  </div>
  </div>
  <a href="/blog/">Blog</a>
+ <a href="/agents/">Agents</a>
  <a href="/contact/">Contact</a>
  <a href="/reviews/">Reviews</a>
  <a href="/about/">About</a>
@@ -173,117 +73,39 @@
  </button>
  </div>
 </header>
-
-<nav class="breadcrumbs">
- <div class="container">
- <a href="/">Home</a> › <span>Meet Our Agents</span>
- </div>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+ <div class="container"><a href="/">Home</a> <span>›</span> Our Agents</div>
 </nav>
-
-<div class="agents-hero">
+<section class="page-hero">
  <div class="container">
- <h1>Meet the Your Realty Link Team</h1>
- <p>We're a full-service MIBOR brokerage headquartered in Indianapolis. Our agents live and work in Central Indiana — and it shows in the results we deliver for buyers, sellers, and investors.</p>
+ <h1>Our Agents</h1>
+ <p class="hero-sub">Meet the Your Realty Link team — a local boutique brokerage of 20+ experienced Central Indiana real estate experts.</p>
+ <div class="hero-badges">
+ <span class="hero-badge">🏡 20+ Agents</span>
+ <span class="hero-badge">📍 All 17 Central Indiana Counties</span>
+ <span class="hero-badge">⭐ 5.0 on Google</span>
  </div>
-</div>
-
+ </div>
+</section>
 <main>
  <section class="section">
  <div class="container">
-
- <!-- JANET FEATURED -->
- <div class="featured-agent">
- <div class="agent-photo">
- JG
- <span>Real Estate Broker</span>
+ <p>Our agents are seasoned, tech-savvy, and relentless about getting the right result — whether you're buying your first home, selling a longtime family property, or building an investment portfolio. Click any agent below to view their profile and start your home search with them.</p>
+ <div class="agent-grid">
+ <a href="/agents/daniel-cope/" class="agent-card"><img src="https://assets.cdn.filesafe.space/MbY1ICQ6HdzVOrgFncoI/media/699cdf483730806ca89406e5.png" alt="Daniel Cope — Your Realty Link" width="300" height="300" loading="lazy"><div class="ac-body"><div class="ac-name">Daniel Cope</div><div class="ac-title">Principal Broker</div><span class="ac-cta">View Profile →</span></div></a>
  </div>
- <div class="agent-info">
- <div class="agent-badge">⭐ Real Estate Broker</div>
- <div class="agent-name">Daniel Cope</div>
- <div class="agent-title">Real Estate Broker · Your Realty Link · Indianapolis, IN</div>
- <div class="agent-bio">
- <p>Daniel Cope is a Real Estate Broker at Your Realty Link, a full-service real estate brokerage serving the greater Indianapolis metro. Daniel brings local knowledge, honest guidance, and a genuine passion for connecting people with the right properties.</p>
- <p>Daniel and the Your Realty Link team specialize in a wide range of real estate situations — from first-time buyers and growing families to investors, relocation clients, expired listings, estate sales, and everything in between. If you're buying or selling in Central Indiana, Daniel's team has the expertise and the track record to get it done right.</p>
- <p>Your Realty Link is a full-service brokerage, giving every client access to the full MLS and every active listing across the Indianapolis metro. Daniel is also the recruiting face of the brokerage — if you're a licensed Indianan agent looking for a better fit, he'd love to talk.</p>
- </div>
- <div class="agent-specialties">
- <span class="specialty-tag">Buyer Representation</span>
- <span class="specialty-tag">Listing Agent</span>
- <span class="specialty-tag">Expired Listings</span>
- <span class="specialty-tag">Estate &amp; Probate Sales</span>
- <span class="specialty-tag">Divorce Home Sales</span>
- <span class="specialty-tag">New Construction</span>
- <span class="specialty-tag">Investment Properties</span>
- <span class="specialty-tag">Agent Recruiting</span>
- </div>
- <div class="agent-contact">
- <a href="tel:3172016323" class="agent-contact-item">
- <span class="contact-icon">📞</span>
- <span>317-201-6323</span>
- </a>
- <a href="mailto:info@yourrealtylink.com" class="agent-contact-item">
- <span class="contact-icon">✉️</span>
- <span>info@yourrealtylink.com</span>
- </a>
- <a href="/contact/" class="agent-contact-item">
- <span class="contact-icon">💬</span>
- <span>Send a Message</span>
- </a>
- <a href="https://yourrealtylink.com" target="_blank" rel="noopener" class="agent-contact-item">
- <span class="contact-icon">👤</span>
- <span>Full Agent Profile</span>
- </a>
+ <div class="cta-block" style="margin-top:40px;">
+ <h2>Not sure who to reach out to?</h2>
+ <p>Tell us what you're looking for and we'll connect you with the right Your Realty Link agent for your goals and your part of Central Indiana.</p>
+ <div class="cta-buttons">
+ <a href="/contact/" class="btn-primary">Contact Us</a>
+ <a href="/schedule/" class="btn-secondary">Schedule a Free Consultation</a>
+ <a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener" class="btn-secondary">Search Homes</a>
  </div>
  </div>
- </div>
-
- <!-- AREAS SERVED -->
- <div class="info-box" style="margin-bottom: 40px;">
- <strong>YRL Serves All of Central Indiana</strong>
- <p style="margin: 8px 0 0; font-size:.9rem;">Our agents cover Marion, Hamilton, Johnson, Hendricks, Hancock, Boone, Shelby, Morgan, Madison, and surrounding counties — from Carmel and Fishers to Greenwood, Avon, Shelbyville, and beyond. <a href="/indianapolis-real-estate/">Browse our city guides →</a></p>
- </div>
-
- <!-- JOIN THE TEAM -->
- <div class="team-section">
- <h2>Are You a Licensed Indiana Agent?</h2>
- <p>Your Realty Link is always looking for motivated agents who want to grow their business in a collaborative, supportive environment. Whether you're newly licensed or an experienced producer ready for a better split and more support, Daniel wants to hear from you.</p>
- <div class="team-benefits">
- <div class="team-benefit">
- <h3>Competitive Commission Split</h3>
- <p>Keep more of what you earn with a transparent, agent-first commission structure.</p>
- </div>
- <div class="team-benefit">
- <h3>MIBOR MLS Access</h3>
- <p>Full MLS access and MLS access on day one — no delays, no extra hoops.</p>
- </div>
- <div class="team-benefit">
- <h3>Broker Support</h3>
- <p>Daniel is hands-on and accessible. Get real answers from an experienced broker who's been in the field.</p>
- </div>
- <div class="team-benefit">
- <h3>Marketing &amp; Tools</h3>
- <p>Agent-branded materials, IDX access, listing support, and a platform that works for you.</p>
- </div>
- </div>
- <div class="btn-group" style="margin-top: 28px;">
- <a href="/services/join-yrl/" class="btn btn-primary">Learn About Joining YRL</a>
- <a href="https://yourrealtylink.com/content/join-us" class="btn btn-outline" target="_blank" rel="noopener">Apply Now on YRL.com</a>
- </div>
- </div>
-
- <div class="cta-block">
- <h2>Ready to Buy or Sell in Central Indiana?</h2>
- <p>Connect with Daniel Cope and the Your Realty Link team. Search the full MLS, request a free home valuation, or call us directly at 317-201-6323.</p>
- <div class="btn-group">
- <a href="/search/" class="btn btn-white">Search Homes →</a>
- <a href="/contact/" class="btn btn-outline">Contact Our Team</a>
- </div>
- </div>
-
  </div>
  </section>
 </main>
-
 <footer class="site-footer">
  <div class="container">
  <div class="footer-grid">
@@ -317,6 +139,7 @@
  <li><a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener">Search Homes</a></li>
  <li><a href="/services/free-home-valuation/" target="_blank" rel="noopener">Home Valuation</a></li>
  <li><a href="/reviews/">Reviews</a></li>
+ <li><a href="/agents/">Our Agents</a></li>
  <li><a href="/contact/">Contact Us</a></li>
  <li><a href="https://yrlagent.com" target="_blank" rel="noopener">Agent Login</a></li>
  <li><a href="tel:3172016323">317-201-6323</a></li>
@@ -329,6 +152,7 @@
  </div>
  </div>
 </footer>
+
 
 <script>
 function toggleNav() {
@@ -344,6 +168,57 @@ document.addEventListener('click', function(e) {
  }
  }
 });
+
+// ── Featured Listings Carousel ──
+(function() {
+ var API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/office-listings';
+ var track = document.getElementById('listingsTrack');
+ var loading = document.getElementById('listingsLoading');
+ var countEl = document.getElementById('listingsCount');
+ var section = document.getElementById('featuredListings');
+
+ function buildCard(l) {
+  return '<a class="listing-card" href="' + l.detailUrl + '" target="_blank" rel="noopener">' +
+   '<img class="listing-card-img" src="' + l.image + '" alt="Home in ' + l.city + '" loading="lazy" onerror="this.src=\'/assets/img/yrl-logo.png\';this.style.objectFit=\'contain\';this.style.padding=\'40px\'">' +
+   '<div class="listing-card-body">' +
+   '<div class="listing-card-price">' + l.price + '</div>' +
+   '<div class="listing-card-city">' + l.city + '</div>' +
+   '<div class="listing-card-details">' +
+   (l.bedsBaths ? '<span>🛏 ' + l.bedsBaths + '</span>' : '') +
+   (l.sqft ? '<span>📐 ' + l.sqft + ' sqft</span>' : '') +
+   (l.acres ? '<span>🌳 ' + l.acres + ' acres</span>' : '') +
+   '</div>' +
+   '<div class="listing-card-mls">MLS# ' + l.mlsNumber + '</div>' +
+   '</div></a>';
+ }
+
+ fetch(API)
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+   if (!data.listings || data.listings.length === 0) {
+    section.style.display = 'none';
+    return;
+   }
+   loading.remove();
+   countEl.textContent = data.listings.length + ' active listings';
+   var html = '';
+   for (var i = 0; i < data.listings.length; i++) {
+    html += buildCard(data.listings[i]);
+   }
+   track.innerHTML = html;
+  })
+  .catch(function() {
+   section.style.display = 'none';
+  });
+
+ // Scroll arrows
+ document.getElementById('listingsLeft').addEventListener('click', function() {
+  track.scrollBy({ left: -300, behavior: 'smooth' });
+ });
+ document.getElementById('listingsRight').addEventListener('click', function() {
+  track.scrollBy({ left: 300, behavior: 'smooth' });
+ });
+})();
 </script>
 <script src="/assets/js/site-enhancements.js?v=fc5867a3" defer></script>
 </body>
