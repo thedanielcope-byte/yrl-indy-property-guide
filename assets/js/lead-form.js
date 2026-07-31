@@ -53,7 +53,7 @@
           form.appendChild(err);
         }
         err.textContent =
-          'Something went wrong. Please call us at 317-201-6323 or email csirealtyteam@yourrealtylink.com.';
+          'Something went wrong. Please call us at 317-201-6323 or email info@yourrealtylink.com.';
       });
   });
 })();

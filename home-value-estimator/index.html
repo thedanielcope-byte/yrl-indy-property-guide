@@ -13,16 +13,16 @@
  <meta property="og:type" content="website">
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="/assets/css/style.css?v=eef736cd">
+ <link rel="stylesheet" href="/assets/css/style.css?v=3c92eddf">
 
  <!--
  ═══════════════════════════════════════════════════════════
  EMAILJS SETUP (5 minutes — free at emailjs.com)
  ───────────────────────────────────────────────────────────
  1. Go to https://emailjs.com → Sign Up Free
- 2. Add Email Service → Connect Gmail (csirealtyteam@yourrealtylink.com)
+ 2. Add Email Service → Connect Gmail (info@yourrealtylink.com)
  → copy the Service ID, paste below as EMAILJS_SERVICE_ID
- 3. Create Email Template → set To Email: csirealtyteam@yourrealtylink.com
+ 3. Create Email Template → set To Email: info@yourrealtylink.com
  Use these template variables:
  {{from_name}} {{from_email}} {{from_phone}}
  {{property_address}} {{estimated_value}}
@@ -1372,7 +1372,7 @@
  `Details: ${r.sqft.toLocaleString()} sqft | ${r.beds}bd/${r.baths}ba | Built ${r.yearBuilt} | Condition: ${r.condition}`
  );
  const subject = encodeURIComponent(`Home Value Lead — ${address}`);
- window.location.href = `mailto:csirealtyteam@yourrealtylink.com?subject=${subject}&body=${body}`;
+ window.location.href = `mailto:info@yourrealtylink.com?subject=${subject}&body=${body}`;
  showSuccess();
  }
 
@@ -1422,7 +1422,7 @@ document.addEventListener('click', function(e) {
  }
 });
 </script>
-<script src="/assets/js/lead-form.js?v=f7b338ac"></script>
+<script src="/assets/js/lead-form.js?v=e328eedd"></script>
 <script src="/assets/js/site-enhancements.js?v=fc5867a3" defer></script>
 </body>
 </html>
