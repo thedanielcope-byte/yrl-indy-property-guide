@@ -17,7 +17,7 @@
         '<span class="sticky-cta-text">Ready to buy or sell in Indianapolis? Talk to a local expert — <strong>no obligation.</strong></span>' +
         '<div class="sticky-cta-actions">' +
           '<a href="/schedule/" class="sticky-btn sticky-btn-primary">Schedule a Free Consultation</a>' +
-          '<a href="tel:3172016323" class="sticky-btn sticky-btn-phone">📞 317-201-6323</a>' +
+          '<a href="tel:3179977404" class="sticky-btn sticky-btn-phone">📞 317-997-7404</a>' +
         '</div>' +
         '<button class="sticky-cta-close" aria-label="Close">&times;</button>' +
       '</div>';
@@ -144,7 +144,7 @@
         '<p class="blog-inline-cta-text">💬 <strong>Have questions?</strong> Talk to a local Indianapolis agent — no pressure, no obligation.</p>' +
         '<div class="blog-inline-cta-buttons">' +
           '<a href="' + scheduleUrl + '" class="btn btn-primary">Schedule a ' + scheduleLabel + '</a>' +
-          '<a href="tel:3172016323" class="btn btn-outline">Call 317-201-6323</a>' +
+          '<a href="tel:3179977404" class="btn btn-outline">Call 317-997-7404</a>' +
         '</div>' +
       '</div>';
 

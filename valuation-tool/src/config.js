@@ -30,7 +30,7 @@ export const config = {
   agent: {
     name: process.env.AGENT_NAME || 'Daniel Cope',
     title: process.env.AGENT_TITLE || 'Real Estate Broker',
-    phone: process.env.AGENT_PHONE || '317-201-6323',
+    phone: process.env.AGENT_PHONE || '317-997-7404',
     email: process.env.AGENT_EMAIL || 'info@yourrealtylink.com',
   },
   brokerage: {

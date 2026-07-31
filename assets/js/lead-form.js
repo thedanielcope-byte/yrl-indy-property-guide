@@ -40,7 +40,7 @@
           '<div class="form-success">' +
           '<span class="form-success-icon">✓</span>' +
           '<strong>Thank you!</strong>' +
-          '<p>We\'ll be in touch shortly. If you need immediate help, call <a href="tel:3172016323">317-201-6323</a>.</p>' +
+          '<p>We\'ll be in touch shortly. If you need immediate help, call <a href="tel:3179977404">317-997-7404</a>.</p>' +
           '</div>';
       })
       .catch(function () {
@@ -53,7 +53,7 @@
           form.appendChild(err);
         }
         err.textContent =
-          'Something went wrong. Please call us at 317-201-6323 or email info@yourrealtylink.com.';
+          'Something went wrong. Please call us at 317-997-7404 or email info@yourrealtylink.com.';
       });
   });
 })();
