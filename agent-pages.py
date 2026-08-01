@@ -226,6 +226,183 @@ def agent_page(a):
 </html>
 """
 
+FEATURED_POSTS = [
+    ("Best School Districts in the Indianapolis Suburbs", "/blog/best-school-districts-in-the-indianapolis-suburbs/"),
+    ("New Construction Communities in the Indy Suburbs", "/blog/new-construction-communities-indianapolis-suburbs/"),
+    ("Things to Do in Carmel, Indiana", "/blog/things-to-do-in-carmel-indiana-local-guide/"),
+]
+PREMIUM = {"daniel-cope"}  # slugs that get the full mini-site layout
+
+def expertise_for(a):
+    if a.get("expertise"): return a["expertise"]
+    t = a["title"]
+    if "Commercial" in t: return ["Commercial Real Estate", "Investment Property", "Residential Buying & Selling", "Listing Marketing", "New Construction"]
+    if a.get("lead") or "Broker" in t: return ["Listings & Marketing", "Buyer & Seller Representation", "Investment Property", "Relocation", "New Construction"]
+    return ["Buyer Representation", "Home Selling", "First-Time Buyers", "Relocation", "Investment Property"]
+
+PREMIUM_CSS = """
+ .ah-grid { display:grid; grid-template-columns:230px 1fr; gap:34px; align-items:center; }
+ .ah-photo { width:100%; border-radius:14px; box-shadow:0 6px 22px rgba(0,0,0,.28); display:block; }
+ .ah-title { font-size:1.05rem; color:rgba(255,255,255,.9); margin:2px 0 6px; }
+ .ah-tag { color:rgba(255,255,255,.8); margin:0 0 18px; max-width:560px; }
+ .ah-cta { display:flex; flex-wrap:wrap; gap:12px; }
+ .ah-cta a { font-weight:600; font-size:.95rem; padding:12px 22px; border-radius:8px; text-decoration:none; }
+ .ah-cta .btn-primary { background:var(--red); color:#fff; }
+ .ah-cta .btn-ghost { background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.4); }
+ .agent-search { background:linear-gradient(135deg,#6e6e70 0%,#565759 100%); color:#fff; padding:56px 0; text-align:center; }
+ .agent-search h2 { color:#fff; }
+ .agent-search p { color:rgba(255,255,255,.85); margin:6px auto 20px; max-width:560px; }
+ .asr-bar { display:flex; max-width:640px; margin:0 auto; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.22); }
+ .asr-bar input { flex:1; border:0; padding:15px 18px; font-size:1rem; outline:none; color:#1a1a1a; }
+ .asr-bar button { border:0; background:var(--red); color:#fff; font-weight:600; font-size:1rem; padding:0 26px; cursor:pointer; }
+ .asr-links { margin-top:16px; font-size:.92rem; color:rgba(255,255,255,.92); }
+ .asr-links a { color:#fff; text-decoration:underline; margin:0 7px; white-space:nowrap; }
+ .sect-alt { background:#f7f7f7; }
+ .exp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:8px; }
+ .exp-card { background:#fff; border:1px solid #e6e6e6; border-left:4px solid var(--red); border-radius:10px; padding:16px 18px; font-weight:600; color:#1a1a1a; }
+ .rev-strip { text-align:center; background:#fff; border:1px solid #e6e6e6; border-radius:14px; padding:26px; box-shadow:0 2px 12px rgba(0,0,0,.05); }
+ .rev-strip .stars { color:#f5b301; font-size:1.6rem; letter-spacing:3px; }
+ .rev-strip .big { font-family:var(--font-serif,Georgia,serif); font-size:2rem; font-weight:700; color:#1a1a1a; }
+ .blog-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; margin-top:8px; }
+ .blog-card { display:block; text-decoration:none; background:#fff; border:1px solid #e6e6e6; border-radius:12px; padding:20px 22px; box-shadow:0 2px 10px rgba(0,0,0,.05); transition:transform .15s, box-shadow .15s; }
+ .blog-card:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,.12); text-decoration:none; }
+ .blog-card .bc-tag { font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--red); font-weight:700; }
+ .blog-card h3 { font-size:1.02rem; color:#1a1a1a; margin:6px 0 0; line-height:1.35; }
+ .agent-work-form { max-width:620px; }
+ @media (max-width:680px){ .ah-grid{ grid-template-columns:1fr; text-align:center; } .ah-photo{ max-width:220px; margin:0 auto; } .ah-cta{ justify-content:center; } }
+"""
+
+def premium_agent_page(a):
+    first = first_name(a["name"]); tel = re.sub(r"\D", "", a["phone"])
+    bio_html = "\n   ".join(f"<p>{esc(p)}</p>" for p in bio(a))
+    exp = "".join(f'<div class="exp-card">{esc(x)}</div>' for x in expertise_for(a))
+    posts = "".join(f'<a class="blog-card" href="{u}"><span class="bc-tag">From our blog</span><h3>{esc(t)}</h3></a>' for t, u in FEATURED_POSTS)
+    mailto = f"mailto:{a['email']}?subject=Real%20Estate%20Inquiry%20%E2%80%94%20Your%20Realty%20Link"
+    site = clean_site(a.get("website"))
+    desc = f'{a["name"]}, {a["title"]} at Your Realty Link. Search Central Indiana homes, explore {first}’s expertise, and get in touch to buy, sell, or invest.'
+    schema = {"@context":"https://schema.org","@type":"RealEstateAgent","name":a["name"],"jobTitle":a["title"],"image":a["photo"],"telephone":a["phone"],"email":a["email"],"url":f"https://janetgiles.com/agents/{a['slug']}/","worksFor":{"@type":"RealEstateAgent","name":"Your Realty Link","url":"https://yourrealtylink.com"},"areaServed":"Central Indiana"}
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>{esc(a['name'])} — {esc(a['title'])} | Your Realty Link</title>
+ <meta name="description" content="{esc(desc)}">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://janetgiles.com/agents/{a['slug']}/">
+ <meta property="og:title" content="{esc(a['name'])} — {esc(a['title'])} | Your Realty Link">
+ <meta property="og:description" content="{esc(desc)}">
+ <meta property="og:url" content="https://janetgiles.com/agents/{a['slug']}/">
+ <meta property="og:type" content="profile">
+ <meta property="og:image" content="{a['photo']}">
+ <script type="application/ld+json">
+ {json.dumps(schema, indent=1)}
+ </script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
+ <style>{PREMIUM_CSS}</style>
+</head>
+<body>
+{CANON_HDR}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+ <div class="container"><a href="/">Home</a> <span>›</span> <a href="/agents/">Our Agents</a> <span>›</span> {esc(a['name'])}</div>
+</nav>
+
+<section class="page-hero">
+ <div class="container">
+ <div class="ah-grid">
+ <img class="ah-photo" src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link">
+ <div class="ah-info">
+ <h1>{esc(a['name'])}</h1>
+ <p class="ah-title">{esc(a['title'])} · Your Realty Link · Central Indiana</p>
+ <p class="ah-tag">Helping buyers, sellers, and investors across the Indianapolis metro with local knowledge, straight talk, and full MLS access.</p>
+ <div class="ah-cta">
+ <a class="btn-primary" href="#work-with">Work With {esc(first)}</a>
+ <a class="btn-ghost" href="{mailto}">Email {esc(first)}</a>
+ <a class="btn-ghost" href="tel:{tel}">Call / Text {esc(a['phone'])}</a>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<section class="agent-search">
+ <div class="container">
+ <h2>Search Central Indiana Homes with {esc(first)}</h2>
+ <p>Browse every active MLS listing across Indianapolis and the surrounding metro — updated daily.</p>
+ <form class="asr-bar" onsubmit="event.preventDefault(); window.location.href='/search/';" role="search">
+ <input type="text" placeholder="Search by city, ZIP code, or neighborhood..." aria-label="Search homes" autocomplete="off">
+ <button type="submit">Search Homes</button>
+ </form>
+ <div class="asr-links"><span>Popular:</span> <a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a> <a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a> <a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a> <a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a> <a href="/cities/boone-county/zionsville-indiana-real-estate/">Zionsville</a></div>
+ </div>
+</section>
+
+<main>
+ <section class="section">
+ <div class="container" style="max-width:820px;">
+ <h2>About {esc(first)}</h2>
+ {bio_html}
+ <p class="agent-reach" style="color:#6e6e70;margin-top:14px;">Call or text <a href="tel:{tel}">{esc(a['phone'])}</a> · <a href="{mailto}">{esc(a['email'])}</a>{(' · <a href="'+site[0]+'" target="_blank" rel="noopener">'+esc(site[1])+'</a>') if site else ''}</p>
+ </div>
+ </section>
+
+ <section class="section sect-alt">
+ <div class="container">
+ <h2>{esc(first)}&rsquo;s Areas of Expertise</h2>
+ <div class="exp-grid">{exp}</div>
+ </div>
+ </section>
+
+ <section class="section">
+ <div class="container">
+ <div class="rev-strip">
+ <div class="stars">★★★★★</div>
+ <div class="big">5.0 on Google</div>
+ <p style="color:#444;margin:6px 0 14px;">Your Realty Link clients consistently rate the team 5 stars for responsive, no-pressure service.</p>
+ <a href="/reviews/" class="btn-secondary">Read our reviews →</a>
+ </div>
+ </div>
+ </section>
+
+ <section class="section sect-alt">
+ <div class="container">
+ <h2>Helpful Reading</h2>
+ <div class="blog-cards">{posts}</div>
+ </div>
+ </section>
+
+ <section class="section" id="work-with">
+ <div class="container" style="max-width:820px;">
+ <h2>Work With {esc(a['name'])}</h2>
+ <p>Tell {esc(first)} what you're looking for and you'll get a personal reply — no pressure, no obligation.</p>
+ <form class="ipg-lead-form agent-work-form">
+ <input type="hidden" name="source" value="agent-{a['slug']}">
+ <input type="hidden" name="tags" value="agent-lead,agent-{a['slug']}">
+ <input type="hidden" name="source_page" value="agents/{a['slug']}">
+ <input type="hidden" name="interest_type" value="Agent: {esc(a['name'])} ({esc(a['title'])})">
+ <div class="form-row">
+ <div><label for="wname">Name *</label><input type="text" id="wname" name="name" required placeholder="Your name"></div>
+ <div><label for="wphone">Phone *</label><input type="tel" id="wphone" name="phone" required placeholder="317-555-1234"></div>
+ </div>
+ <label for="wemail">Email *</label>
+ <input type="email" id="wemail" name="email" required placeholder="you@example.com">
+ <label for="wmsg">How can {esc(first)} help?</label>
+ <textarea id="wmsg" name="message" placeholder="Buying, selling, investing, or just have a question…"></textarea>
+ <button type="submit">Send to {esc(first)} →</button>
+ <p class="form-note">No spam · No obligation · You'll hear back personally</p>
+ </form>
+ </div>
+ </section>
+</main>
+{CANON_FTR}
+{TAIL}<script src="/assets/js/lead-form.js?v=406824a0"></script>
+</body>
+</html>
+"""
+
 # assign slugs
 for a in AGENTS:
     a["slug"] = slugify(a["name"])
@@ -235,8 +412,9 @@ open(os.path.join(ROOT, "agents", "index.html"), "w", encoding="utf-8").write(hu
 for a in AGENTS:
     d = os.path.join(ROOT, "agents", a["slug"])
     os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(agent_page(a))
+    builder = premium_agent_page if a["slug"] in PREMIUM else agent_page
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(builder(a))
 
-print(f"built /agents/ hub + {len(AGENTS)} agent pages")
+print(f"built /agents/ hub + {len(AGENTS)} agent pages (premium: {sorted(PREMIUM)})")
 for a in AGENTS:
     print("  /agents/%s/  — %s (%s)" % (a["slug"], a["name"], a["title"]))
