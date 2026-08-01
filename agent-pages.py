@@ -34,7 +34,7 @@ GRID_CSS = """
 
 AGENT_CSS = """
  .agent-layout { display:grid; grid-template-columns:300px 1fr; gap:40px; align-items:start; }
- .agent-photo { width:100%; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,.12); display:block; background:#ececec; }.agent-logo-link { display:block; text-align:center; margin:16px 0 4px; }.agent-logo { width:160px; max-width:70%; height:auto; display:inline-block; }
+ .agent-photo { width:100%; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,.12); display:block; background:#ececec; }
  .agent-contact { margin-top:18px; display:flex; flex-direction:column; gap:10px; }
  .agent-contact a.btn-primary, .agent-contact a.btn-secondary { text-align:center; display:block; }
  .agent-reach { font-size:.9rem; color:#6e6e70; margin-top:10px; line-height:1.9; }
@@ -210,7 +210,6 @@ def agent_page(a):
  <div class="agent-layout">
  <aside class="agent-side">
  <img src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link" class="agent-photo">
- <a href="/" class="agent-logo-link"><img src="/assets/img/yrl-logo.png" alt="Your Realty Link" class="agent-logo" width="160" height="53" loading="lazy"></a>
  <div class="agent-contact">
  <a href="{SEARCH_URL}" target="_blank" rel="noopener" class="btn-primary">Search Homes with {esc(first)} →</a>
  <a href="mailto:{a['email']}?subject=Real%20Estate%20Inquiry%20%E2%80%94%20Your%20Realty%20Link" class="btn-secondary">Email {esc(first)}</a>
@@ -249,8 +248,6 @@ def expertise_for(a):
 PREMIUM_CSS = """
  .ah-grid { display:grid; grid-template-columns:230px 1fr; gap:34px; align-items:center; }
  .ah-photo { width:100%; border-radius:14px; box-shadow:0 6px 22px rgba(0,0,0,.28); display:block; }
- .ah-logo-link { display:block; text-align:center; margin:14px auto 0; }
- .ah-logo { width:150px; max-width:80%; height:auto; background:#fff; border-radius:8px; padding:9px 14px; box-shadow:0 2px 10px rgba(0,0,0,.2); }
  .ah-title { font-size:1.05rem; color:rgba(255,255,255,.9); margin:2px 0 6px; }
  .ah-tag { color:rgba(255,255,255,.8); margin:0 0 18px; max-width:560px; }
  .ah-cta { display:flex; flex-wrap:wrap; gap:12px; }
@@ -431,10 +428,7 @@ def premium_agent_page(a):
 <section class="page-hero">
  <div class="container">
  <div class="ah-grid">
- <div class="ah-photo-col">
  <img class="ah-photo" src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link">
- <a href="/" class="ah-logo-link"><img src="/assets/img/yrl-logo.png" alt="Your Realty Link" class="ah-logo" width="150" height="50" loading="lazy"></a>
- </div>
  <div class="ah-info">
  <h1>{esc(a['name'])}</h1>
  <p class="ah-title">{esc(a['title'])} · Your Realty Link · Central Indiana</p>
