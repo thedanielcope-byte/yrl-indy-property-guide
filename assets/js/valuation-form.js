@@ -46,8 +46,9 @@
         email: data.email,
         phone: data.phone,
         message: 'Home valuation request: ' + (data.address || ''),
-        source: 'home-valuation',
-        tags: 'valuation-lead'
+        source: data.source || 'home-valuation',
+        tags: data.tags || 'valuation-lead',
+        source_page: data.source_page || 'home-valuation'
       })
     }).catch(function () {});
 
