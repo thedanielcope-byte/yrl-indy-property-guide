@@ -124,7 +124,6 @@ def hub_page(agents):
 <main>
  <section class="section">
  <div class="container">
- <img src="/assets/img/team-photo.png" alt="The Your Realty Link team" class="team-photo" onerror="this.style.display='none'">
  <p>Our agents are seasoned, tech-savvy, and relentless about getting the right result — whether you're buying your first home, selling a longtime family property, or building an investment portfolio. Click any agent below to view their profile and start your home search with them.</p>
  <div class="agent-grid">
  {cards}
