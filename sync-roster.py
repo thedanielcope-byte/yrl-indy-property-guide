@@ -79,8 +79,11 @@ def main():
         matched += 1
         # Freeze the URL slug to the CURRENT name before any name change syncs in.
         a.setdefault("slug", slugify(a.get("name")))
-        before = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"),
-                  a.get("name"), a.get("title"), a.get("phone"), a.get("photo"))
+        snap = lambda: (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"),
+                        a.get("name"), a.get("title"), a.get("phone"), a.get("photo"),
+                        a.get("testimonials"), a.get("years"), a.get("designations"),
+                        a.get("languages"), a.get("video"))
+        before = snap()
 
         exp = [str(x) for x in (r.get("expertise") or []) if str(x).strip()]
         areas = clean_areas(r.get("areas"))
@@ -101,6 +104,19 @@ def main():
         # images for everyone else instead of heavy legacy CDN URLs).
         if "hub-files/headshots" in r_photo:
             a["photo"] = r_photo
+        # Enrichment fields (agent-editable): mirror the hub; drop when empty.
+        for k in ("testimonials", "designations", "languages"):
+            v = r.get(k)
+            if isinstance(v, list) and v:
+                a[k] = v
+            else:
+                a.pop(k, None)
+        for k in ("years", "video"):
+            v = (r.get(k) or "").strip() if isinstance(r.get(k), str) else r.get(k)
+            if v:
+                a[k] = v
+            else:
+                a.pop(k, None)
 
         # Mirror the hub: set when present, remove the key when empty so the
         # site falls back to defaults (expertise/bio) / hides the section (areas).
@@ -121,9 +137,7 @@ def main():
         else:
             a.pop("tagline", None)
 
-        after = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"),
-                 a.get("name"), a.get("title"), a.get("phone"), a.get("photo"))
-        if before != after:
+        if before != snap():
             changed.append(a.get("name"))
 
     print(f"matched {matched}/{len(local)} agents to the hub roster")

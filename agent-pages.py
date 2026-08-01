@@ -313,6 +313,25 @@ PREMIUM_CSS = """
  .valuation-cta .btn-outline { display:inline-block; padding:12px 24px; border:2px solid var(--red); color:var(--red); font-weight:600; border-radius:6px; text-decoration:none; margin:4px 8px; }
  .valuation-cta .btn-outline:hover { background:var(--red); color:#fff; }
  @media (max-width:680px){ .ah-grid{ grid-template-columns:1fr; text-align:center; } .ah-photo{ max-width:220px; margin:0 auto; } .ah-cta{ justify-content:center; } }
+ .cred-strip { background:#1a1a1a; }
+ .cred-row { display:flex; flex-wrap:wrap; justify-content:center; gap:16px 44px; padding:22px 0; }
+ .cred { text-align:center; }
+ .cred-v { display:block; font-family:var(--font-serif,Georgia,serif); font-size:1.5rem; font-weight:700; color:#fff; }
+ .cred-l { display:block; font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; color:rgba(255,255,255,.65); margin-top:3px; }
+ .tst-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:22px; }
+ .tst-card { background:#fff; border:1px solid #e6e6e6; border-radius:14px; padding:24px; margin:0; box-shadow:0 2px 12px rgba(0,0,0,.05); }
+ .tst-card .tst-stars { color:#f5b301; letter-spacing:2px; margin-bottom:8px; }
+ .tst-card p { font-style:italic; color:#333; margin:0 0 12px; line-height:1.6; }
+ .tst-card cite { font-style:normal; font-weight:600; color:#1a1a1a; }
+ .video-wrap { position:relative; padding-bottom:56.25%; height:0; margin-top:16px; border-radius:14px; overflow:hidden; box-shadow:0 6px 22px rgba(0,0,0,.18); }
+ .video-wrap iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+ .faq-list { margin-top:16px; }
+ .faq-item { border:1px solid #e6e6e6; border-radius:10px; margin-bottom:10px; background:#fff; }
+ .faq-item summary { cursor:pointer; font-weight:600; color:#1a1a1a; padding:16px 44px 16px 18px; list-style:none; position:relative; }
+ .faq-item summary::-webkit-details-marker { display:none; }
+ .faq-item summary::after { content:'+'; position:absolute; right:18px; top:14px; color:var(--red); font-size:1.35rem; line-height:1; }
+ .faq-item[open] summary::after { content:'\\2013'; }
+ .faq-item p { margin:0; padding:0 18px 16px; color:#555; line-height:1.6; }
 """
 
 def premium_agent_page(a):
@@ -327,6 +346,54 @@ def premium_agent_page(a):
     site = clean_site(a.get("website"))
     desc = f'{a["name"]}, {a["title"]} at Your Realty Link. Search Central Indiana homes, explore {first}’s expertise, and get in touch to buy, sell, or invest.'
     schema = {"@context":"https://schema.org","@type":"RealEstateAgent","name":a["name"],"jobTitle":a["title"],"image":a["photo"],"telephone":a["phone"],"email":a["email"],"url":f"https://janetgiles.com/agents/{a['slug']}/","worksFor":{"@type":"RealEstateAgent","name":"Your Realty Link","url":"https://yourrealtylink.com"},"areaServed":"Central Indiana"}
+
+    # ── Credentials / quick-facts strip ──
+    years = str(a.get("years") or "").strip()
+    designations = [str(x).strip() for x in (a.get("designations") or []) if str(x).strip()]
+    languages = [str(x).strip() for x in (a.get("languages") or []) if str(x).strip()]
+    facts = []
+    if years: facts.append((years + ("+" if years.isdigit() else ""), "Years Experience"))
+    if areas: facts.append((str(len(areas)), "Areas Served"))
+    if designations: facts.append((", ".join(designations), "Designations"))
+    if languages: facts.append((" / ".join(languages), "Languages"))
+    creds_html = ('<div class="cred-strip"><div class="container"><div class="cred-row">'
+        + "".join(f'<div class="cred"><span class="cred-v">{esc(v)}</span><span class="cred-l">{esc(l)}</span></div>' for v, l in facts)
+        + '</div></div></div>') if facts else ''
+
+    # ── Testimonials ──
+    def _tpair(t):
+        if isinstance(t, dict): return ((t.get("quote") or "").strip(), (t.get("name") or "").strip())
+        if isinstance(t, (list, tuple)): return (((t[0] or "").strip() if t else ""), ((t[1] or "").strip() if len(t) > 1 else ""))
+        return (str(t).strip(), "")
+    tpairs = [(q, n) for q, n in (_tpair(t) for t in (a.get("testimonials") or [])) if q]
+    testimonials_html = ('<section class="section sect-alt"><div class="container"><h2 style="text-align:center;">What Clients Say About '
+        + esc(first) + '</h2><div class="tst-grid">'
+        + "".join('<blockquote class="tst-card"><div class="tst-stars">★★★★★</div><p>&ldquo;' + esc(q) + '&rdquo;</p>' + (f'<cite>&mdash; {esc(n)}</cite>' if n else '') + '</blockquote>' for q, n in tpairs)
+        + '</div></div></section>') if tpairs else ''
+
+    # ── Intro video (YouTube) ──
+    vm = re.search(r"(?:v=|youtu\.be/|embed/|shorts/)([A-Za-z0-9_-]{6,})", (a.get("video") or "").strip())
+    video_html = ('<section class="section"><div class="container" style="max-width:820px;text-align:center;"><h2>Meet '
+        + esc(first) + '</h2><div class="video-wrap"><iframe src="https://www.youtube.com/embed/' + vm.group(1)
+        + '" title="Meet ' + esc(a["name"]) + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></section>') if vm else ''
+
+    # ── FAQ (templated) + FAQPage schema ──
+    area_names = ", ".join(l for l, _ in areas[:6]) if areas else ""
+    faqs = [
+        (f"How do I start working with {first}?",
+         f"Call or text {first} at {a['phone']}, send an email, or use the contact form on this page. {first} will follow up to learn what you're looking for and walk you through the next steps — no pressure, no obligation."),
+        (f"What areas does {first} serve?",
+         (f"{first} works across Central Indiana, with a focus on {area_names}. " if area_names else f"{first} works with buyers and sellers across the Indianapolis metro and Central Indiana. ") + "Not sure if your area is covered? Just reach out and ask."),
+        (f"Does {first} help both buyers and sellers?",
+         f"Yes. {first} represents both buyers and sellers with Your Realty Link — from first-time buyers and move-up families to sellers pricing a home and investors building a portfolio."),
+        (f"Is {first} part of a larger team?",
+         "Yes — Your Realty Link is a local boutique brokerage led by Broker-Owner Janet Giles, with 20+ experienced agents serving Central Indiana."),
+    ]
+    faq_html = ('<section class="section"><div class="container" style="max-width:820px;"><h2>Frequently Asked Questions</h2><div class="faq-list">'
+        + "".join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(anv)}</p></details>' for q, anv in faqs)
+        + '</div></div></section>')
+    faq_schema = json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":anv}} for q, anv in faqs]}, indent=1)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -348,6 +415,9 @@ def premium_agent_page(a):
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
+ <script type="application/ld+json">
+ {faq_schema}
+ </script>
  <style>{PREMIUM_CSS}</style>
 </head>
 <body>
@@ -373,7 +443,7 @@ def premium_agent_page(a):
  </div>
  </div>
 </section>
-
+{creds_html}
 <section class="agent-search">
  <div class="container">
  <h2>Search Central Indiana Homes with {esc(first)}</h2>
@@ -394,6 +464,7 @@ def premium_agent_page(a):
  <p class="agent-reach" style="color:#6e6e70;margin-top:14px;">Call or text <a href="tel:{tel}">{esc(a['phone'])}</a> · <a href="{mailto}">{esc(a['email'])}</a>{(' · <a href="'+site[0]+'" target="_blank" rel="noopener">'+esc(site[1])+'</a>') if site else ''}</p>
  </div>
  </section>
+{video_html}
 
  <section class="section expertise-band">
  <div class="container">
@@ -446,6 +517,7 @@ def premium_agent_page(a):
  </div>
  </section>
 
+{testimonials_html}
  <section class="section reviews-band">
  <div class="container">
  <div class="rev-strip">
@@ -466,6 +538,7 @@ def premium_agent_page(a):
  </div>
  </div>
  </section>
+{faq_html}
 
  <section class="section" id="work-with">
  <div class="container" style="max-width:820px;">
