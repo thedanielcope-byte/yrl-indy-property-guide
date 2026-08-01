@@ -258,6 +258,9 @@ PREMIUM_CSS = """
  .asr-links { margin-top:16px; font-size:.92rem; color:rgba(255,255,255,.92); }
  .asr-links a { color:#fff; text-decoration:underline; margin:0 7px; white-space:nowrap; }
  .sect-alt { background:#f7f7f7; }
+ .expertise-band { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%), url('/assets/img/neighborhood.png') center/cover no-repeat; }
+ .expertise-band h2, .expertise-band h3 { color:#fff; }
+ .expertise-band p { color:rgba(255,255,255,.9); }
  .exp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:8px; }
  .exp-card { background:#fff; border:1px solid #e6e6e6; border-left:4px solid var(--red); border-radius:10px; padding:16px 18px; font-weight:600; color:#1a1a1a; }
  .rev-strip { text-align:center; background:#fff; border:1px solid #e6e6e6; border-radius:14px; padding:26px; box-shadow:0 2px 12px rgba(0,0,0,.05); }
@@ -385,7 +388,7 @@ def premium_agent_page(a):
  </div>
  </section>
 
- <section class="section sect-alt">
+ <section class="section expertise-band">
  <div class="container">
  <h2>{esc(first)}&rsquo;s Areas of Expertise</h2>
  <div class="exp-grid">{exp}</div>
