@@ -261,7 +261,7 @@ PREMIUM_CSS = """
  .expertise-band { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%), url('/assets/img/neighborhood.png') center/cover no-repeat; }
  .expertise-band h2, .expertise-band h3 { color:#fff; }
  .expertise-band p { color:rgba(255,255,255,.9); }
- .reviews-band { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%), url('/assets/img/reviews.png') center/cover no-repeat; }
+ .reviews-band { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%), url('/assets/img/review.png') center/cover no-repeat; }
  .exp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:8px; }
  .exp-card { background:#fff; border:1px solid #e6e6e6; border-left:4px solid var(--red); border-radius:10px; padding:16px 18px; font-weight:600; color:#1a1a1a; }
  .rev-strip { text-align:center; background:#fff; border:1px solid #e6e6e6; border-radius:14px; padding:26px; box-shadow:0 2px 12px rgba(0,0,0,.05); }
