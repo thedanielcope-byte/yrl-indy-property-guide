@@ -25,10 +25,6 @@
     "/cities/johnson-county/greenwood-indiana-real-estate/"
    ],
    [
-    "Beech Grove",
-    "/cities/marion-county/beech-grove-indiana-real-estate/"
-   ],
-   [
     "Franklin",
     "/cities/johnson-county/franklin-indiana-real-estate/"
    ],
@@ -39,14 +35,25 @@
    [
     "Fountain Square",
     "/neighborhoods/fountain-square-indianapolis/"
+   ],
+   [
+    "Broad Ripple",
+    "/cities/marion-county/broad-ripple-indianapolis-real-estate/"
+   ],
+   [
+    "Mass Ave",
+    "/neighborhoods/mass-ave-indianapolis/"
+   ],
+   [
+    "Southport",
+    "/neighborhoods/southport-indianapolis/"
    ]
   ],
   "expertise": [
-   "Commercial Real Estate",
-   "Investment Property",
+   "Buyer Representation",
    "Seller Representation",
    "New Construction",
-   "Multi-Family"
+   "Commercial Real Estate"
   ]
  },
  {
