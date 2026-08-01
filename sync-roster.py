@@ -70,13 +70,15 @@ def main():
             unmatched.append(a.get("name"))
             continue
         matched += 1
-        before = (a.get("expertise"), a.get("areas"))
+        before = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"))
 
         exp = [str(x) for x in (r.get("expertise") or []) if str(x).strip()]
         areas = clean_areas(r.get("areas"))
+        bio_txt = (r.get("bio") or "").strip()
+        tagline = (r.get("tagline") or "").strip()
 
         # Mirror the hub: set when present, remove the key when empty so the
-        # site falls back to defaults (expertise) / hides the section (areas).
+        # site falls back to defaults (expertise/bio) / hides the section (areas).
         if exp:
             a["expertise"] = exp
         else:
@@ -85,15 +87,23 @@ def main():
             a["areas"] = areas
         else:
             a.pop("areas", None)
+        if bio_txt:
+            a["bio"] = bio_txt
+        else:
+            a.pop("bio", None)
+        if tagline:
+            a["tagline"] = tagline
+        else:
+            a.pop("tagline", None)
 
-        after = (a.get("expertise"), a.get("areas"))
+        after = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"))
         if before != after:
             changed.append(a.get("name"))
 
     print(f"matched {matched}/{len(local)} agents to the hub roster")
     if unmatched:
         print("  · no hub match (left as-is): " + ", ".join(n for n in unmatched if n))
-    print(f"  · updated specialties/areas for {len(changed)} agent(s): "
+    print(f"  · updated specialties/areas/bio for {len(changed)} agent(s): "
           + (", ".join(changed) if changed else "none"))
 
     if DRY:

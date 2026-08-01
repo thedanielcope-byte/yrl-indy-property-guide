@@ -55,6 +55,11 @@ def first_name(name):
 
 def bio(a):
     n, first, t = a["name"], first_name(a["name"]), a["title"]
+    # Real bio (from the hub / My Agent Info) wins over the auto-generated default.
+    custom = (a.get("bio") or "").strip()
+    if custom:
+        paras = [p.strip() for p in re.split(r"\n\s*\n", custom) if p.strip()]
+        return paras or [custom]
     if a.get("lead"):
         return [f"{n} is the Broker–Owner of Your Realty Link, leading a local boutique team of 20+ agents across Central Indiana. Under Janet's leadership, the brokerage has built its reputation on straight talk, strong marketing, and putting clients first — every single time.",
                 "Whether you're buying, selling, or investing anywhere in the Indianapolis metro, Janet and the Your Realty Link team bring deep local knowledge and full MLS access to every transaction."]
@@ -313,6 +318,7 @@ PREMIUM_CSS = """
 def premium_agent_page(a):
     first = first_name(a["name"]); tel = re.sub(r"\D", "", a["phone"])
     bio_html = "\n   ".join(f"<p>{esc(p)}</p>" for p in bio(a))
+    tagline = esc((a.get("tagline") or "").strip() or "Helping buyers, sellers, and investors across the Indianapolis metro with local knowledge, straight talk, and full MLS access.")
     exp = "".join(f'<div class="exp-card">{esc(x)}</div>' for x in expertise_for(a))
     areas = a.get("areas") or []
     areas_html = ('<h3 style="margin-top:30px;">Cities &amp; Neighborhoods ' + esc(first) + ' Serves</h3>\n <p style="color:#6e6e70;margin:2px 0 4px;">Explore the areas ' + esc(first) + ' works in most:</p>\n <div class="area-links">' + "".join(f'<a href="{u}">{esc(l)}</a>' for l, u in areas) + '</div>') if areas else ''
@@ -357,7 +363,7 @@ def premium_agent_page(a):
  <div class="ah-info">
  <h1>{esc(a['name'])}</h1>
  <p class="ah-title">{esc(a['title'])} · Your Realty Link · Central Indiana</p>
- <p class="ah-tag">Helping buyers, sellers, and investors across the Indianapolis metro with local knowledge, straight talk, and full MLS access.</p>
+ <p class="ah-tag">{tagline}</p>
  <div class="ah-cta">
  <a class="btn-primary" href="#work-with">Work With {esc(first)}</a>
  <a class="btn-ghost" href="{mailto}">Email {esc(first)}</a>
