@@ -57,25 +57,50 @@ def clean_areas(areas):
     return out
 
 
+def slugify(name):
+    s = (name or "").lower().replace("&", " ")
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+
+
 def main():
     remote = fetch_remote()
-    rmap = {norm(a.get("name")): a for a in remote}
+    by_email = {norm(r.get("email")): r for r in remote if norm(r.get("email"))}
+    by_name = {norm(r.get("name")): r for r in remote}
 
     local = json.load(open(ROSTER, encoding="utf-8"))
     changed, matched, unmatched = [], 0, []
 
     for a in local:
-        r = rmap.get(norm(a.get("name")))
+        # Match on email first (stable if the agent renames), then name.
+        r = by_email.get(norm(a.get("email"))) or by_name.get(norm(a.get("name")))
         if not r:
             unmatched.append(a.get("name"))
             continue
         matched += 1
-        before = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"))
+        # Freeze the URL slug to the CURRENT name before any name change syncs in.
+        a.setdefault("slug", slugify(a.get("name")))
+        before = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"),
+                  a.get("name"), a.get("title"), a.get("phone"), a.get("photo"))
 
         exp = [str(x) for x in (r.get("expertise") or []) if str(x).strip()]
         areas = clean_areas(r.get("areas"))
         bio_txt = (r.get("bio") or "").strip()
         tagline = (r.get("tagline") or "").strip()
+        # Hero identity fields (agent-editable via My Agent Info)
+        r_name = (r.get("name") or "").strip()
+        r_title = (r.get("title") or "").strip()
+        r_phone = (r.get("phone") or "").strip()
+        r_photo = (r.get("photo") or "").strip()
+        if r_name:
+            a["name"] = r_name
+        if r_title:
+            a["title"] = r_title
+        if r_phone:
+            a["phone"] = r_phone
+        # Photo: only adopt an agent-uploaded headshot (keeps the optimized local
+        # images for everyone else instead of heavy legacy CDN URLs).
+        if "hub-files/headshots" in r_photo:
+            a["photo"] = r_photo
 
         # Mirror the hub: set when present, remove the key when empty so the
         # site falls back to defaults (expertise/bio) / hides the section (areas).
@@ -96,7 +121,8 @@ def main():
         else:
             a.pop("tagline", None)
 
-        after = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"))
+        after = (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"),
+                 a.get("name"), a.get("title"), a.get("phone"), a.get("photo"))
         if before != after:
             changed.append(a.get("name"))
 

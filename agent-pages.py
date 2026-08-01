@@ -62,12 +62,12 @@ def bio(a):
         return paras or [custom]
     if a.get("lead"):
         return [f"{n} is the Broker–Owner of Your Realty Link, leading a local boutique team of 20+ agents across Central Indiana. Under Janet's leadership, the brokerage has built its reputation on straight talk, strong marketing, and putting clients first — every single time.",
-                "Whether you're buying, selling, or investing anywhere in the Indianapolis metro, Janet and the Your Realty Link team bring deep local knowledge and full MLS access to every transaction."]
+                "Whether you're buying, selling, or investing anywhere in the Indianapolis metro, Janet and the Your Realty Link team bring deep local knowledge to every transaction."]
     if "Referral" in t:
         return [f"{n} is a referral partner of Your Realty Link. Connect with {first} and the Your Realty Link team to get matched with the right agent for your buying, selling, or investment goals anywhere in Central Indiana."]
     if "Commercial" in t:
-        return [f"{n} is a Commercial Broker and leads marketing for Your Realty Link, working with clients on commercial and residential real estate across the Indianapolis metro and Central Indiana. Reach out to {first} to talk through your next move with the local knowledge and full-MLS reach of the Your Realty Link team."]
-    return [f"{n} is a REALTOR® with Your Realty Link, helping buyers and sellers across the Indianapolis metro and Central Indiana. Reach out to {first} to start your home search, price your home, or talk through your next move — backed by the local knowledge and full MLS access of the Your Realty Link team."]
+        return [f"{n} is a Commercial Broker and leads marketing for Your Realty Link, working with clients on commercial and residential real estate across the Indianapolis metro and Central Indiana. Reach out to {first} to talk through your next move with the local knowledge of the Your Realty Link team."]
+    return [f"{n} is a REALTOR® with Your Realty Link, helping buyers and sellers across the Indianapolis metro and Central Indiana. Reach out to {first} to start your home search, price your home, or talk through your next move — backed by the local knowledge of the Your Realty Link team."]
 
 def clean_site(url):
     if not url: return None
@@ -318,7 +318,7 @@ PREMIUM_CSS = """
 def premium_agent_page(a):
     first = first_name(a["name"]); tel = re.sub(r"\D", "", a["phone"])
     bio_html = "\n   ".join(f"<p>{esc(p)}</p>" for p in bio(a))
-    tagline = esc((a.get("tagline") or "").strip() or "Helping buyers, sellers, and investors across the Indianapolis metro with local knowledge, straight talk, and full MLS access.")
+    tagline = esc((a.get("tagline") or "").strip() or "Helping buyers, sellers, and investors across the Indianapolis metro with local knowledge and straight talk.")
     exp = "".join(f'<div class="exp-card">{esc(x)}</div>' for x in expertise_for(a))
     areas = a.get("areas") or []
     areas_html = ('<h3 style="margin-top:30px;">Cities &amp; Neighborhoods ' + esc(first) + ' Serves</h3>\n <p style="color:#6e6e70;margin:2px 0 4px;">Explore the areas ' + esc(first) + ' works in most:</p>\n <div class="area-links">' + "".join(f'<a href="{u}">{esc(l)}</a>' for l, u in areas) + '</div>') if areas else ''
@@ -461,6 +461,9 @@ def premium_agent_page(a):
  <div class="container">
  <h2>Helpful Reading</h2>
  <div class="blog-cards">{posts}</div>
+ <div style="text-align:center;margin-top:30px;">
+  <a href="/blog/" style="display:inline-block;background:var(--red);color:#fff;font-weight:600;font-size:1rem;padding:14px 34px;border-radius:8px;text-decoration:none;">Read the Full Blog →</a>
+ </div>
  </div>
  </section>
 
@@ -496,7 +499,7 @@ def premium_agent_page(a):
 
 # assign slugs
 for a in AGENTS:
-    a["slug"] = slugify(a["name"])
+    a["slug"] = a.get("slug") or slugify(a["name"])  # frozen: name edits won't change the URL
 
 os.makedirs(os.path.join(ROOT, "agents"), exist_ok=True)
 open(os.path.join(ROOT, "agents", "index.html"), "w", encoding="utf-8").write(hub_page(AGENTS))
