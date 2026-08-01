@@ -207,7 +207,7 @@ def agent_page(a):
  <img src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link" class="agent-photo">
  <div class="agent-contact">
  <a href="{SEARCH_URL}" target="_blank" rel="noopener" class="btn-primary">Search Homes with {esc(first)} →</a>
- <a href="/contact/" class="btn-secondary">Contact {esc(first)}</a>
+ <a href="mailto:{a['email']}?subject=Real%20Estate%20Inquiry%20%E2%80%94%20Your%20Realty%20Link" class="btn-secondary">Email {esc(first)}</a>
  <a href="/services/free-home-valuation/" class="btn-secondary">Free Home Valuation</a>
  <p class="agent-reach">Call or text <a href="tel:{tel}">{esc(a['phone'])}</a><br><a href="mailto:{a['email']}">{esc(a['email'])}</a>{site_html}</p>
  </div>
