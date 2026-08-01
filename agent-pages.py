@@ -323,6 +323,15 @@ PREMIUM_CSS = """
  .tst-card .tst-stars { color:#f5b301; letter-spacing:2px; margin-bottom:8px; }
  .tst-card p { font-style:italic; color:#333; margin:0 0 12px; line-height:1.6; }
  .tst-card cite { font-style:normal; font-weight:600; color:#1a1a1a; }
+ .gallery-carousel { position:relative; margin-top:22px; }
+ .gc-track { display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px; scrollbar-width:none; }
+ .gc-track::-webkit-scrollbar { display:none; }
+ .gc-item { flex:0 0 auto; width:340px; max-width:82vw; margin:0; scroll-snap-align:center; background:#fff; border:1px solid #e6e6e6; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+ .gc-item img { width:100%; height:250px; object-fit:cover; display:block; background:#ececec; }
+ .gc-item figcaption { padding:12px 16px; font-size:.92rem; color:#444; }
+ .gc-arrow { position:absolute; top:42%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; border:0; background:var(--red); color:#fff; font-size:1.6rem; line-height:1; cursor:pointer; box-shadow:0 3px 12px rgba(0,0,0,.25); z-index:2; }
+ .gc-prev { left:-10px; } .gc-next { right:-10px; }
+ @media (max-width:680px){ .gc-arrow { display:none; } }
  .video-wrap { position:relative; padding-bottom:56.25%; height:0; margin-top:16px; border-radius:14px; overflow:hidden; box-shadow:0 6px 22px rgba(0,0,0,.18); }
  .video-wrap iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
  .faq-list { margin-top:16px; }
@@ -392,6 +401,22 @@ def premium_agent_page(a):
         + "".join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(anv)}</p></details>' for q, anv in faqs)
         + '</div></div></section>')
     faq_schema = json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":anv}} for q, anv in faqs]}, indent=1)
+
+    # ── Photo gallery / carousel (agent-uploaded closings, clients, events) ──
+    def _gpair(g):
+        if isinstance(g, dict): return ((g.get("url") or "").strip(), (g.get("caption") or "").strip())
+        if isinstance(g, (list, tuple)): return (((g[0] or "").strip() if g else ""), ((g[1] or "").strip() if len(g) > 1 else ""))
+        return (str(g).strip(), "")
+    gpairs = [(u, c) for u, c in (_gpair(g) for g in (a.get("gallery") or [])) if u]
+    gallery_html = ('<section class="section sect-alt"><div class="container"><h2 style="text-align:center;">Moments with '
+        + esc(first) + '&rsquo;s Clients</h2>'
+        + '<div class="gallery-carousel"><button class="gc-arrow gc-prev" aria-label="Previous" onclick="gcScroll(this,-1)">&#8249;</button>'
+        + '<div class="gc-track">'
+        + "".join('<figure class="gc-item"><img src="' + esc(u) + '" alt="' + esc(c or (a["name"] + " — Your Realty Link")) + '" loading="lazy">'
+                  + (f'<figcaption>{esc(c)}</figcaption>' if c else '') + '</figure>' for u, c in gpairs)
+        + '</div><button class="gc-arrow gc-next" aria-label="Next" onclick="gcScroll(this,1)">&#8250;</button></div></div>'
+        + '<script>function gcScroll(b,d){var t=b.parentElement.querySelector(".gc-track");t.scrollBy({left:d*Math.min(t.clientWidth*0.85,400),behavior:"smooth"});}</script>'
+        + '</section>') if gpairs else ''
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -517,6 +542,7 @@ def premium_agent_page(a):
  </section>
 
 {testimonials_html}
+{gallery_html}
  <section class="section reviews-band">
  <div class="container">
  <div class="rev-strip">

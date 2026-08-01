@@ -82,7 +82,7 @@ def main():
         snap = lambda: (a.get("expertise"), a.get("areas"), a.get("bio"), a.get("tagline"),
                         a.get("name"), a.get("title"), a.get("phone"), a.get("photo"),
                         a.get("testimonials"), a.get("years"), a.get("designations"),
-                        a.get("languages"), a.get("video"))
+                        a.get("languages"), a.get("video"), a.get("gallery"))
         before = snap()
 
         exp = [str(x) for x in (r.get("expertise") or []) if str(x).strip()]
@@ -105,7 +105,7 @@ def main():
         if "hub-files/headshots" in r_photo:
             a["photo"] = r_photo
         # Enrichment fields (agent-editable): mirror the hub; drop when empty.
-        for k in ("testimonials", "designations", "languages"):
+        for k in ("testimonials", "designations", "languages", "gallery"):
             v = r.get(k)
             if isinstance(v, list) and v:
                 a[k] = v
