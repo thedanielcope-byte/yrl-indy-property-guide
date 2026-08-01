@@ -407,7 +407,7 @@ def premium_agent_page(a):
         if isinstance(g, dict): return ((g.get("url") or "").strip(), (g.get("caption") or "").strip())
         if isinstance(g, (list, tuple)): return (((g[0] or "").strip() if g else ""), ((g[1] or "").strip() if len(g) > 1 else ""))
         return (str(g).strip(), "")
-    gpairs = [(u, c) for u, c in (_gpair(g) for g in (a.get("gallery") or [])) if u]
+    gpairs = [(u, c) for u, c in (_gpair(g) for g in (a.get("gallery") or [])) if u][:10]  # cap at 10
     gallery_html = ('<section class="section sect-alt"><div class="container"><h2 style="text-align:center;">Moments with '
         + esc(first) + '&rsquo;s Clients</h2>'
         + '<div class="gallery-carousel"><button class="gc-arrow gc-prev" aria-label="Previous" onclick="gcScroll(this,-1)">&#8249;</button>'
