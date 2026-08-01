@@ -236,7 +236,7 @@ FEATURED_POSTS = [
     ("New Construction Communities in the Indy Suburbs", "/blog/new-construction-communities-indianapolis-suburbs/"),
     ("Things to Do in Carmel, Indiana", "/blog/things-to-do-in-carmel-indiana-local-guide/"),
 ]
-PREMIUM = {"daniel-cope"}  # slugs that get the full mini-site layout
+SIMPLE_ONLY = set()  # slugs to KEEP on the basic layout; empty = every agent gets the full mini-site
 
 def expertise_for(a):
     if a.get("expertise"): return a["expertise"]
@@ -604,9 +604,9 @@ open(os.path.join(ROOT, "agents", "index.html"), "w", encoding="utf-8").write(hu
 for a in AGENTS:
     d = os.path.join(ROOT, "agents", a["slug"])
     os.makedirs(d, exist_ok=True)
-    builder = premium_agent_page if a["slug"] in PREMIUM else agent_page
+    builder = agent_page if a["slug"] in SIMPLE_ONLY else premium_agent_page
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(builder(a))
 
-print(f"built /agents/ hub + {len(AGENTS)} agent pages (premium: {sorted(PREMIUM)})")
+print(f"built /agents/ hub + {len(AGENTS)} agent pages (mini-site; simple-only: {sorted(SIMPLE_ONLY) or 'none'})")
 for a in AGENTS:
     print("  /agents/%s/  — %s (%s)" % (a["slug"], a["name"], a["title"]))
