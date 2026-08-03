@@ -1,0 +1,1512 @@
+[
+ {
+  "slug": "arcadia-indiana-real-estate",
+  "city": "Arcadia",
+  "county": "Hamilton",
+  "official_site": "https://www.arcadiaindiana.org/",
+  "calendar_links": [
+   {
+    "label": "Visit Hamilton County Events",
+    "url": "https://www.visithamiltoncounty.com/events/"
+   },
+   {
+    "label": "Hamilton County 4-H Fair (Purdue Extension)",
+    "url": "https://extension.purdue.edu/county/hamilton/hamilton-county-fair/4-h-fair.html"
+   }
+  ],
+  "events": [
+   {
+    "name": "Hamilton County 4-H Fair",
+    "when": "each July",
+    "desc": "The county fair held in nearby Noblesville with contests, animals, exhibits, food, and family activities."
+   }
+  ]
+ },
+ {
+  "slug": "atlanta-indiana-real-estate",
+  "city": "Atlanta",
+  "county": "Hamilton",
+  "official_site": "https://www.atlanta.in.gov",
+  "calendar_links": [
+   {
+    "label": "Atlanta New Earth Festival",
+    "url": "https://atlantaindiana.com/"
+   },
+   {
+    "label": "Visit Hamilton County Events",
+    "url": "https://www.visithamiltoncounty.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Atlanta New Earth Festival",
+    "when": "late September",
+    "desc": "A large arts, crafts, and antiques street festival that draws tens of thousands of visitors to the small town of Atlanta each year."
+   }
+  ]
+ },
+ {
+  "slug": "carmel-indiana-real-estate",
+  "city": "Carmel",
+  "county": "Hamilton",
+  "official_site": "https://www.carmel.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hamilton County: Carmel Events",
+    "url": "https://www.visithamiltoncounty.com/cities/carmel/events/"
+   },
+   {
+    "label": "Carmel Christkindlmarkt",
+    "url": "https://www.carmelchristkindlmarkt.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "CarmelFest",
+    "when": "around the Fourth of July",
+    "desc": "An Independence Day celebration with a community parade, live entertainment, food, and fireworks."
+   },
+   {
+    "name": "Carmel International Arts Festival",
+    "when": "late September",
+    "desc": "A juried outdoor fine-arts festival in the Carmel Arts and Design District featuring artists from around the world."
+   },
+   {
+    "name": "Carmel Christkindlmarkt",
+    "when": "late November through December",
+    "desc": "A German-style outdoor Christmas market at Carter Green with an ice-skating rink, food, and holiday shopping."
+   }
+  ]
+ },
+ {
+  "slug": "cicero-indiana-real-estate",
+  "city": "Cicero",
+  "county": "Hamilton",
+  "official_site": "https://www.ciceroin.org/",
+  "calendar_links": [
+   {
+    "label": "Visit Hamilton County Events",
+    "url": "https://www.visithamiltoncounty.com/events/"
+   },
+   {
+    "label": "Hamilton County 4-H Fair (Purdue Extension)",
+    "url": "https://extension.purdue.edu/county/hamilton/hamilton-county-fair/4-h-fair.html"
+   }
+  ],
+  "events": [
+   {
+    "name": "Red Bridge Rod Run",
+    "when": "each summer",
+    "desc": "An annual classic car and hot rod show hosted at Red Bridge Park on Morse Reservoir."
+   }
+  ]
+ },
+ {
+  "slug": "fishers-indiana-real-estate",
+  "city": "Fishers",
+  "county": "Hamilton",
+  "official_site": "https://fishersin.gov/",
+  "calendar_links": [
+   {
+    "label": "Visit Hamilton County: Fishers Events",
+    "url": "https://www.visithamiltoncounty.com/cities/fishers/events/"
+   },
+   {
+    "label": "Hamilton East Public Library Events",
+    "url": "https://hepl.libnet.info/events"
+   }
+  ],
+  "events": [
+   {
+    "name": "Spark!Fishers",
+    "when": "late June",
+    "desc": "A community festival in the Nickel Plate District with a parade, live concerts, a 5K, and a drone and fireworks show."
+   },
+   {
+    "name": "Fishers Farmers Market",
+    "when": "Saturday mornings, late spring through early fall",
+    "desc": "A large weekly outdoor market at the Nickel Plate District Amphitheater featuring local food, produce, and vendors."
+   }
+  ]
+ },
+ {
+  "slug": "noblesville-indiana-real-estate",
+  "city": "Noblesville",
+  "county": "Hamilton",
+  "official_site": "https://www.noblesville.in.gov",
+  "calendar_links": [
+   {
+    "label": "Noblesville Main Street Events",
+    "url": "https://www.noblesvillemainstreet.org/events-calendar"
+   },
+   {
+    "label": "Hamilton County 4-H Fair (Purdue Extension)",
+    "url": "https://extension.purdue.edu/county/hamilton/hamilton-county-fair/4-h-fair.html"
+   }
+  ],
+  "events": [
+   {
+    "name": "Noblesville First Friday",
+    "when": "the first Friday of each month",
+    "desc": "A monthly evening celebration in historic downtown Noblesville with shopping, dining, and themed activities on the courthouse square."
+   },
+   {
+    "name": "Hamilton County 4-H Fair",
+    "when": "each July",
+    "desc": "The county fair held in Noblesville with contests, animals, exhibits, food, and family activities."
+   }
+  ]
+ },
+ {
+  "slug": "sheridan-indiana-real-estate",
+  "city": "Sheridan",
+  "county": "Hamilton",
+  "official_site": "https://www.sheridan.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hamilton County Events",
+    "url": "https://www.visithamiltoncounty.com/events/"
+   },
+   {
+    "label": "Hamilton County 4-H Fair (Purdue Extension)",
+    "url": "https://extension.purdue.edu/county/hamilton/hamilton-county-fair/4-h-fair.html"
+   }
+  ],
+  "events": [
+   {
+    "name": "Sheridan Harvest Moon Festival",
+    "when": "early October",
+    "desc": "An annual downtown street festival with live music, carnival rides, food vendors, and a costume contest."
+   }
+  ]
+ },
+ {
+  "slug": "westfield-indiana-real-estate",
+  "city": "Westfield",
+  "county": "Hamilton",
+  "official_site": "https://www.westfield.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hamilton County: Westfield Events",
+    "url": "https://www.visithamiltoncounty.com/cities/westfield/events/"
+   },
+   {
+    "label": "Visit Hamilton County Events",
+    "url": "https://www.visithamiltoncounty.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Westfield Rocks the Fourth",
+    "when": "around the Fourth of July",
+    "desc": "An Independence Day celebration with live music, family activities, and a fireworks display."
+   },
+   {
+    "name": "Westfield in Lights",
+    "when": "early December",
+    "desc": "A downtown holiday celebration with a tree lighting, entertainment, and seasonal festivities."
+   }
+  ]
+ },
+ {
+  "slug": "beech-grove-indiana-real-estate",
+  "city": "Beech Grove",
+  "county": "Marion",
+  "official_site": "https://www.beechgrove.com/",
+  "calendar_links": [
+   {
+    "label": "City of Beech Grove Annual Events and Festivals",
+    "url": "https://www.beechgrove.com/annual-events-and-festivals"
+   },
+   {
+    "label": "City of Beech Grove Calendar of Events",
+    "url": "https://www.beechgrove.com/yearly-calendar-of-events"
+   }
+  ],
+  "events": [
+   {
+    "name": "All American Day and Fireworks in the Park",
+    "when": "early July",
+    "desc": "A patriotic celebration with fireworks at Sarah T. Bolton Park hosted by the Beech Grove Promoters Club."
+   },
+   {
+    "name": "Fourth Friday Art Walks",
+    "when": "late spring through early fall",
+    "desc": "Monthly evenings of local art, live music, and food along Main Street from spring into fall."
+   },
+   {
+    "name": "Beech Grove Promoters Club Fall Festival",
+    "when": "mid-September",
+    "desc": "A long-running community festival with rides, food, and entertainment each fall."
+   },
+   {
+    "name": "Lighted Christmas Parade",
+    "when": "December",
+    "desc": "An evening holiday parade of lighted floats through downtown Beech Grove."
+   }
+  ]
+ },
+ {
+  "slug": "broad-ripple-indianapolis-real-estate",
+  "city": "Broad Ripple",
+  "county": "Marion",
+  "official_site": "https://www.indy.gov",
+  "calendar_links": [
+   {
+    "label": "Broad Ripple Village Association Event Calendar",
+    "url": "https://www.broadrippleindy.org/event-calendar/"
+   },
+   {
+    "label": "Broad Ripple Art Fair (Indianapolis Art Center)",
+    "url": "https://indyartcenter.org/braf/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Broad Ripple Art Fair",
+    "when": "mid-May",
+    "desc": "A nationally recognized juried art fair benefiting the Indianapolis Art Center that draws thousands to the Broad Ripple area."
+   },
+   {
+    "name": "Broad Ripple Duck Race",
+    "when": "June",
+    "desc": "A family-friendly rubber duck race and fun run organized by the Broad Ripple Village Association."
+   },
+   {
+    "name": "Broad Ripple Farmers Market",
+    "when": "Saturday mornings, spring through fall",
+    "desc": "A weekly outdoor market of local growers and makers held during the warm months."
+   }
+  ]
+ },
+ {
+  "slug": "eagle-creek-indianapolis-real-estate",
+  "city": "Eagle Creek",
+  "county": "Marion",
+  "official_site": "https://www.indy.gov",
+  "calendar_links": [
+   {
+    "label": "Eagle Creek Park (Indy Parks)",
+    "url": "https://parks.indy.gov/parks/eagle-creek-park/"
+   },
+   {
+    "label": "Eagle Creek Park Foundation Events",
+    "url": "https://eaglecreekpark.org/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "OwlFest",
+    "when": "late October",
+    "desc": "A family fall festival and fundraiser hosted by the Eagle Creek Park Foundation celebrating owls and autumn."
+   },
+   {
+    "name": "Eagle Creek Park Birding Festival",
+    "when": "May",
+    "desc": "An annual festival of guided hikes and workshops celebrating the park's birdlife."
+   },
+   {
+    "name": "Summer Concert Series",
+    "when": "summer",
+    "desc": "Free outdoor concerts held at Eagle Creek Beach during the summer months."
+   }
+  ]
+ },
+ {
+  "slug": "geist-indiana-real-estate",
+  "city": "Geist",
+  "county": "Marion",
+  "official_site": "https://www.indy.gov",
+  "calendar_links": [
+   {
+    "label": "Geist Half Marathon",
+    "url": "https://www.geisthalf.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Geist Half Marathon",
+    "when": "September",
+    "desc": "A popular waterfront half marathon, 10K, and 5K run held along the shores of Geist Reservoir."
+   }
+  ]
+ },
+ {
+  "slug": "irvington-indianapolis-real-estate",
+  "city": "Irvington",
+  "county": "Marion",
+  "official_site": "https://www.indy.gov",
+  "calendar_links": [
+   {
+    "label": "Historic Irvington Community Council Events",
+    "url": "https://www.irvingtoncommunitycouncil.com/events"
+   },
+   {
+    "label": "Historic Irvington Halloween Festival",
+    "url": "https://www.irvingtonhalloween.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Historic Irvington Halloween Festival",
+    "when": "late October",
+    "desc": "A long-running fall street festival on the historic east side featuring a parade, vendors, and family activities."
+   },
+   {
+    "name": "Irvington Winter Luminaria",
+    "when": "December",
+    "desc": "A cherished holiday tradition of candlelit luminaria lining the neighborhood streets before Christmas."
+   }
+  ]
+ },
+ {
+  "slug": "lawrence-indiana-real-estate",
+  "city": "Lawrence",
+  "county": "Marion",
+  "official_site": "https://www.cityoflawrence.org",
+  "calendar_links": [
+   {
+    "label": "Visit Lawrence Events Calendar",
+    "url": "https://visitlawrenceindiana.com/events/"
+   },
+   {
+    "label": "Arts for Lawrence (Fort Ben Cultural Campus)",
+    "url": "https://www.artsforlawrence.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Fort Ben Farmers Market",
+    "when": "summer",
+    "desc": "A seasonal outdoor farmers market held at the Fort Ben Cultural Campus."
+   },
+   {
+    "name": "Third Sunday Jazz Concerts",
+    "when": "summer",
+    "desc": "A summer series of Sunday jazz performances at the Fort Ben Cultural Campus presented by Arts for Lawrence."
+   }
+  ]
+ },
+ {
+  "slug": "southport-indiana-real-estate",
+  "city": "Southport",
+  "county": "Marion",
+  "official_site": "https://www.in.gov/cities/southport/",
+  "calendar_links": [
+   {
+    "label": "City of Southport News and Events",
+    "url": "https://www.in.gov/cities/southport/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Southport Fall Festival",
+    "when": "mid-October",
+    "desc": "A community fall festival held in the city park with activities for all ages."
+   },
+   {
+    "name": "Santa through the City",
+    "when": "December",
+    "desc": "A holiday event where Santa travels through Southport to greet residents."
+   },
+   {
+    "name": "Independence Day Celebration",
+    "when": "around the Fourth of July",
+    "desc": "A patriotic community celebration with a parade and festivities each summer."
+   }
+  ]
+ },
+ {
+  "slug": "speedway-indiana-real-estate",
+  "city": "Speedway",
+  "county": "Marion",
+  "official_site": "https://www.speedwayin.gov/",
+  "calendar_links": [
+   {
+    "label": "Indianapolis 500 and Month of May Schedule",
+    "url": "https://www.indianapolismotorspeedway.com/events/indy500"
+   },
+   {
+    "label": "Speedway Neighborhood Guide (Visit Indy)",
+    "url": "https://www.visitindy.com/neighborhoods/speedway/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Indianapolis 500 and the Month of May",
+    "when": "May, Memorial Day weekend",
+    "desc": "The world-famous Indianapolis 500 caps a month of racing activities at the Indianapolis Motor Speedway each spring."
+   }
+  ]
+ },
+ {
+  "slug": "avon-indiana-real-estate",
+  "city": "Avon",
+  "county": "Hendricks",
+  "official_site": "https://www.avonindiana.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hendricks County events",
+    "url": "https://www.visithendrickscounty.com/events/"
+   },
+   {
+    "label": "Hendricks County 4-H Fair",
+    "url": "https://www.4hcomplex.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Avon Night at the Park",
+    "when": "each summer",
+    "desc": "Avon hosts Night at the Park each summer at Avon Town Hall with food trucks, live music, and a fireworks display."
+   }
+  ]
+ },
+ {
+  "slug": "brownsburg-indiana-real-estate",
+  "city": "Brownsburg",
+  "county": "Hendricks",
+  "official_site": "https://www.brownsburg.org",
+  "calendar_links": [
+   {
+    "label": "Visit Hendricks County events",
+    "url": "https://www.visithendrickscounty.com/events/"
+   },
+   {
+    "label": "Hendricks County 4-H Fair",
+    "url": "https://www.4hcomplex.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Brownsburg Lions Club Fourth of July Extravaganza",
+    "when": "each July, around Independence Day",
+    "desc": "The Brownsburg Lions Club Fourth of July Extravaganza brings a community parade, carnival rides, and fireworks to Arbuckle Acres Park each July."
+   }
+  ]
+ },
+ {
+  "slug": "clayton-indiana-real-estate",
+  "city": "Clayton",
+  "county": "Hendricks",
+  "official_site": "https://townofclayton.us",
+  "calendar_links": [
+   {
+    "label": "Visit Hendricks County events",
+    "url": "https://www.visithendrickscounty.com/events/"
+   },
+   {
+    "label": "Hendricks County 4-H Fair",
+    "url": "https://www.4hcomplex.org/"
+   }
+  ],
+  "events": []
+ },
+ {
+  "slug": "danville-indiana-real-estate",
+  "city": "Danville",
+  "county": "Hendricks",
+  "official_site": "https://danvillein.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hendricks County events",
+    "url": "https://www.visithendrickscounty.com/events/"
+   },
+   {
+    "label": "Hendricks County 4-H Fair",
+    "url": "https://www.4hcomplex.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Heartland Apple Festival at Beasley's Orchard",
+    "when": "each October",
+    "desc": "The Heartland Apple Festival draws crowds to Beasley's Orchard in Danville each October for hayrides, a corn maze, and apple cider."
+   },
+   {
+    "name": "Hendricks County 4-H Fair",
+    "when": "each July",
+    "desc": "The Hendricks County 4-H Fair fills the Danville fairgrounds each July with livestock shows, carnival rides, and grandstand entertainment."
+   }
+  ]
+ },
+ {
+  "slug": "pittsboro-indiana-real-estate",
+  "city": "Pittsboro",
+  "county": "Hendricks",
+  "official_site": "https://www.townofpittsboro.org",
+  "calendar_links": [
+   {
+    "label": "Visit Hendricks County events",
+    "url": "https://www.visithendrickscounty.com/events/"
+   },
+   {
+    "label": "Hendricks County 4-H Fair",
+    "url": "https://www.4hcomplex.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Pittsboro Freedom Celebration",
+    "when": "each July, around Independence Day",
+    "desc": "The Pittsboro Freedom Celebration brings a Main Street parade, food trucks, and fireworks to Scamahorn Park each July."
+   }
+  ]
+ },
+ {
+  "slug": "plainfield-indiana-real-estate",
+  "city": "Plainfield",
+  "county": "Hendricks",
+  "official_site": "https://www.plainfield.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hendricks County events",
+    "url": "https://www.visithendrickscounty.com/events/"
+   },
+   {
+    "label": "Hendricks County 4-H Fair",
+    "url": "https://www.4hcomplex.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Plainfield Quaker Day Festival",
+    "when": "each September",
+    "desc": "The Plainfield Quaker Day Festival features a parade along U.S. 40, a craft and vendor fair, and live music each September."
+   }
+  ]
+ },
+ {
+  "slug": "bargersville-indiana-real-estate",
+  "city": "Bargersville",
+  "county": "Johnson",
+  "official_site": "https://bargersville.in.gov",
+  "calendar_links": [
+   {
+    "label": "Festival Country Indiana events",
+    "url": "https://www.festivalcountryindiana.com/festivals-and-events"
+   },
+   {
+    "label": "Johnson County Public Library events",
+    "url": "https://pageafterpage.org"
+   },
+   {
+    "label": "Johnson County Fairgrounds",
+    "url": "https://www.jocofairin.com"
+   }
+  ],
+  "events": [
+   {
+    "name": "Harvest Moon Fall Festival",
+    "when": "each fall",
+    "desc": "The Harvest Moon Fall Festival brings a parade, live music, and vendors to downtown Bargersville each fall."
+   }
+  ]
+ },
+ {
+  "slug": "edinburgh-indiana-real-estate",
+  "city": "Edinburgh",
+  "county": "Johnson",
+  "official_site": "https://www.edinburgh.in.us",
+  "calendar_links": [
+   {
+    "label": "Festival Country Indiana events",
+    "url": "https://www.festivalcountryindiana.com/festivals-and-events"
+   },
+   {
+    "label": "Johnson County Public Library events",
+    "url": "https://pageafterpage.org"
+   },
+   {
+    "label": "Johnson County Fairgrounds",
+    "url": "https://www.jocofairin.com"
+   }
+  ],
+  "events": [
+   {
+    "name": "Edinburgh Fall Festival",
+    "when": "each September",
+    "desc": "The Edinburgh Fall Festival is a four-day downtown celebration each September with carnival rides, food, entertainment, and a closing parade."
+   }
+  ]
+ },
+ {
+  "slug": "franklin-indiana-real-estate",
+  "city": "Franklin",
+  "county": "Johnson",
+  "official_site": "https://www.franklin.in.gov",
+  "calendar_links": [
+   {
+    "label": "Festival Country Indiana events",
+    "url": "https://www.festivalcountryindiana.com/festivals-and-events"
+   },
+   {
+    "label": "Johnson County Public Library events",
+    "url": "https://pageafterpage.org"
+   },
+   {
+    "label": "Johnson County Fairgrounds",
+    "url": "https://www.jocofairin.com"
+   }
+  ],
+  "events": [
+   {
+    "name": "Johnson County Fair",
+    "when": "each July",
+    "desc": "The Johnson County Fair runs each July at the fairgrounds in Franklin with rides, livestock shows, a demolition derby, and a fireworks finale."
+   },
+   {
+    "name": "Scarecrow Madness",
+    "when": "each October",
+    "desc": "Scarecrow Madness decorates downtown Franklin each October with hundreds of hand-built scarecrows supporting local nonprofits."
+   }
+  ]
+ },
+ {
+  "slug": "greenwood-indiana-real-estate",
+  "city": "Greenwood",
+  "county": "Johnson",
+  "official_site": "https://www.greenwood.in.gov",
+  "calendar_links": [
+   {
+    "label": "Festival Country Indiana events",
+    "url": "https://www.festivalcountryindiana.com/festivals-and-events"
+   },
+   {
+    "label": "Johnson County Public Library events",
+    "url": "https://pageafterpage.org"
+   },
+   {
+    "label": "Johnson County Fairgrounds",
+    "url": "https://www.jocofairin.com"
+   }
+  ],
+  "events": [
+   {
+    "name": "Greenwood Freedom Festival",
+    "when": "each summer, near Independence Day",
+    "desc": "The Greenwood Freedom Festival fills Craig Park each summer with a parade, live music, a drone show, and fireworks."
+   }
+  ]
+ },
+ {
+  "slug": "trafalgar-indiana-real-estate",
+  "city": "Trafalgar",
+  "county": "Johnson",
+  "official_site": "https://townoftrafalgar.org",
+  "calendar_links": [
+   {
+    "label": "Festival Country Indiana events",
+    "url": "https://www.festivalcountryindiana.com/festivals-and-events"
+   },
+   {
+    "label": "Johnson County Public Library events",
+    "url": "https://pageafterpage.org"
+   },
+   {
+    "label": "Johnson County Fairgrounds",
+    "url": "https://www.jocofairin.com"
+   }
+  ],
+  "events": []
+ },
+ {
+  "slug": "whiteland-indiana-real-estate",
+  "city": "Whiteland",
+  "county": "Johnson",
+  "official_site": "https://www.townofwhiteland.com",
+  "calendar_links": [
+   {
+    "label": "Festival Country Indiana events",
+    "url": "https://www.festivalcountryindiana.com/festivals-and-events"
+   },
+   {
+    "label": "Johnson County Public Library events",
+    "url": "https://pageafterpage.org"
+   },
+   {
+    "label": "Johnson County Fairgrounds",
+    "url": "https://www.jocofairin.com"
+   }
+  ],
+  "events": [
+   {
+    "name": "Whiteland Fall Fest",
+    "when": "each fall",
+    "desc": "Whiteland Fall Fest brings live music, food trucks, and a fireworks show to the community each fall."
+   }
+  ]
+ },
+ {
+  "slug": "jamestown-indiana-real-estate",
+  "city": "Jamestown",
+  "county": "Boone",
+  "official_site": "https://www.in.gov/towns/jamestown/",
+  "calendar_links": [
+   {
+    "label": "Discover Boone County events calendar",
+    "url": "https://discoverboonecounty.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Jamestown Apple Festival",
+    "when": "fall",
+    "desc": "The Jamestown Apple Festival celebrates the town's agricultural roots each fall at Pleasant Acres Nature Park with local apples, live music, food vendors, and family activities."
+   }
+  ]
+ },
+ {
+  "slug": "lebanon-indiana-real-estate",
+  "city": "Lebanon",
+  "county": "Boone",
+  "official_site": "https://www.lebanon.in.gov",
+  "calendar_links": [
+   {
+    "label": "Discover Boone County events calendar",
+    "url": "https://discoverboonecounty.com/events/"
+   },
+   {
+    "label": "City of Lebanon events calendar",
+    "url": "https://lebanon.in.gov/lebanoninevents/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Boone County 4-H Fair",
+    "when": "summer (July)",
+    "desc": "The Boone County 4-H Fair takes over the county fairgrounds in Lebanon each July with livestock shows, project exhibits, carnival rides, and a demolition derby."
+   },
+   {
+    "name": "Back to the Fifties Festival",
+    "when": "fall (September)",
+    "desc": "Lebanon's historic downtown square hosts the Back to the Fifties Festival every September with a large classic car show, live music, and period-themed activities."
+   },
+   {
+    "name": "Boone County Summer Fest",
+    "when": "summer (June)",
+    "desc": "Boone County Summer Fest is a free family event on Lebanon's downtown square featuring live music, food vendors, and games."
+   }
+  ]
+ },
+ {
+  "slug": "thorntown-indiana-real-estate",
+  "city": "Thorntown",
+  "county": "Boone",
+  "official_site": "https://townofthorntown.com",
+  "calendar_links": [
+   {
+    "label": "Festival of the Turning Leaves",
+    "url": "https://thorntownfestival.org/"
+   },
+   {
+    "label": "Discover Boone County events calendar",
+    "url": "https://discoverboonecounty.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Festival of the Turning Leaves",
+    "when": "fall (late September)",
+    "desc": "The Festival of the Turning Leaves fills downtown Thorntown on the last full weekend of September with a parade, live music, craft and food vendors, a car show, and a children's area."
+   }
+  ]
+ },
+ {
+  "slug": "whitestown-indiana-real-estate",
+  "city": "Whitestown",
+  "county": "Boone",
+  "official_site": "https://www.whitestown.in.gov",
+  "calendar_links": [
+   {
+    "label": "Discover Boone County events calendar",
+    "url": "https://discoverboonecounty.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Whitestown Viking Fest",
+    "when": "spring (April)",
+    "desc": "Whitestown Viking Fest brings Viking reenactors, artisans, food, and a keg-toss competition to Anson Acres Park each spring."
+   },
+   {
+    "name": "Whitestown Summer Concert Series",
+    "when": "summer",
+    "desc": "The free Whitestown Summer Concert Series presents outdoor live music across a range of genres on summer evenings."
+   }
+  ]
+ },
+ {
+  "slug": "zionsville-indiana-real-estate",
+  "city": "Zionsville",
+  "county": "Boone",
+  "official_site": "https://www.zionsville-in.gov",
+  "calendar_links": [
+   {
+    "label": "Discover Boone County events calendar",
+    "url": "https://discoverboonecounty.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Zionsville Fall Festival",
+    "when": "late summer (Labor Day weekend)",
+    "desc": "The Zionsville Fall Festival runs over Labor Day weekend at Lions Park with a carnival, food vendors, community booths, and a Saturday parade through the Village."
+   },
+   {
+    "name": "Brick Street Market",
+    "when": "spring (May)",
+    "desc": "The Brick Street Market lines Zionsville's brick-paved Main Street each May with well over a hundred artisan and craft vendors."
+   },
+   {
+    "name": "Zionsville Farmers Market",
+    "when": "summer",
+    "desc": "The Zionsville Farmers Market runs Saturday mornings through the growing season in the historic Village."
+   }
+  ]
+ },
+ {
+  "slug": "cumberland-indiana-real-estate",
+  "city": "Cumberland",
+  "county": "Hancock",
+  "official_site": "https://www.town.cumberland.in.us",
+  "calendar_links": [
+   {
+    "label": "Visit Hancock County events calendar",
+    "url": "https://www.visitinhancock.org/events-new"
+   },
+   {
+    "label": "Hancock County Public Library",
+    "url": "https://www.hcplibrary.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Blues, Beer, and BBQ",
+    "when": "summer",
+    "desc": "Blues, Beer, and BBQ is a free outdoor concert series held on select summer Saturdays in Cumberland featuring blues musicians, food, and family activities."
+   }
+  ]
+ },
+ {
+  "slug": "fortville-indiana-real-estate",
+  "city": "Fortville",
+  "county": "Hancock",
+  "official_site": "https://www.fortville.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hancock County events calendar",
+    "url": "https://www.visitinhancock.org/events-new"
+   },
+   {
+    "label": "Hancock County Public Library",
+    "url": "https://www.hcplibrary.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Fortville Summerfest",
+    "when": "summer (July)",
+    "desc": "Fortville Summerfest transforms downtown Main Street and Landmark Park each summer with artisan booths, a kids zone, live music, and a fireworks finale."
+   }
+  ]
+ },
+ {
+  "slug": "greenfield-indiana-real-estate",
+  "city": "Greenfield",
+  "county": "Hancock",
+  "official_site": "https://www.greenfield.in.gov",
+  "calendar_links": [
+   {
+    "label": "Riley Festival",
+    "url": "https://www.rileyfestival.com/"
+   },
+   {
+    "label": "Visit Hancock County events calendar",
+    "url": "https://www.visitinhancock.org/events-new"
+   },
+   {
+    "label": "Hancock County Public Library",
+    "url": "https://www.hcplibrary.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Riley Festival",
+    "when": "fall (October)",
+    "desc": "The Riley Festival takes over downtown Greenfield each October, honoring Hoosier poet James Whitcomb Riley with one of Indiana's largest craft festivals, a parade, food, and live entertainment."
+   },
+   {
+    "name": "Hancock County 4-H Fair",
+    "when": "summer (July)",
+    "desc": "The Hancock County 4-H Fair is held each summer at the fairgrounds in Greenfield with livestock shows, exhibits, carnival rides, and grandstand entertainment."
+   }
+  ]
+ },
+ {
+  "slug": "mccordsville-indiana-real-estate",
+  "city": "McCordsville",
+  "county": "Hancock",
+  "official_site": "https://www.mccordsville.org",
+  "calendar_links": [
+   {
+    "label": "Visit Hancock County events calendar",
+    "url": "https://www.visitinhancock.org/events-new"
+   },
+   {
+    "label": "Hancock County Public Library",
+    "url": "https://www.hcplibrary.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Market in McCordsville",
+    "when": "spring through fall",
+    "desc": "Market in McCordsville gathers dozens of artisans, food vendors, and small businesses with live music at McCord Square during the warmer months."
+   },
+   {
+    "name": "McCordsville Tree Lighting",
+    "when": "winter (December)",
+    "desc": "McCordsville's Town Hall Community Park hosts a community tree lighting each December as part of the town's seasonal celebrations."
+   }
+  ]
+ },
+ {
+  "slug": "new-palestine-indiana-real-estate",
+  "city": "New Palestine",
+  "county": "Hancock",
+  "official_site": "https://www.newpalestine.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Hancock County events calendar",
+    "url": "https://www.visitinhancock.org/events-new"
+   },
+   {
+    "label": "Hancock County Public Library",
+    "url": "https://www.hcplibrary.org/"
+   }
+  ],
+  "events": [
+   {
+    "name": "New Palestine Winter Fest",
+    "when": "winter (December)",
+    "desc": "New Palestine Winter Fest lights up Main Street each December with a lighted parade, tree lighting, train rides, and visits with Santa."
+   },
+   {
+    "name": "New Palestine Summer Fest",
+    "when": "summer",
+    "desc": "New Palestine Main Street hosts Summer Fest downtown each summer with vendors, live music, and family activities."
+   }
+  ]
+ },
+ {
+  "slug": "shirley-indiana-real-estate",
+  "city": "Shirley",
+  "county": "Hancock",
+  "official_site": "https://www.townofshirley.com",
+  "calendar_links": [
+   {
+    "label": "Visit Hancock County events calendar",
+    "url": "https://www.visitinhancock.org/events-new"
+   },
+   {
+    "label": "Hancock County Public Library",
+    "url": "https://www.hcplibrary.org/"
+   }
+  ],
+  "events": []
+ },
+ {
+  "slug": "alexandria-indiana-real-estate",
+  "city": "Alexandria",
+  "county": "Madison",
+  "official_site": "https://www.alexandria.in.gov",
+  "calendar_links": [
+   {
+    "label": "Anderson Madison County Visitors Bureau Events Calendar",
+    "url": "https://visitandersonmadisoncounty.com/calendar-of-events/"
+   },
+   {
+    "label": "Madison County Local Events",
+    "url": "https://www.madisoncounty.in.gov"
+   }
+  ],
+  "events": [
+   {
+    "name": "Madison County 4-H Fair",
+    "when": "July",
+    "desc": "The Madison County 4-H Fair fills Beulah Park in Alexandria each July with 4-H exhibits, a parade, carnival rides, and live entertainment."
+   },
+   {
+    "name": "Alexandria Grand Prix",
+    "when": "August",
+    "desc": "The Alexandria Grand Prix, one of Indiana's largest go-kart street races, takes over downtown Alexandria each August."
+   }
+  ]
+ },
+ {
+  "slug": "anderson-indiana-real-estate",
+  "city": "Anderson",
+  "county": "Madison",
+  "official_site": "https://www.cityofanderson.com",
+  "calendar_links": [
+   {
+    "label": "Anderson Madison County Visitors Bureau Events Calendar",
+    "url": "https://visitandersonmadisoncounty.com/calendar-of-events/"
+   },
+   {
+    "label": "Madison County Local Events",
+    "url": "https://www.madisoncounty.in.gov"
+   }
+  ],
+  "events": [
+   {
+    "name": "Little 500 Festival",
+    "when": "May",
+    "desc": "The Little 500 sprint car race and its weeks of festivities center on Anderson Speedway each May on the eve of the Indianapolis 500."
+   },
+   {
+    "name": "Anderson Gaslight Festival",
+    "when": "August",
+    "desc": "The Anderson Gaslight Festival celebrates the historic West 8th Street district each August with home and garden tours, a parade, and a classic car show."
+   }
+  ]
+ },
+ {
+  "slug": "elwood-indiana-real-estate",
+  "city": "Elwood",
+  "county": "Madison",
+  "official_site": "https://elwood-in.com",
+  "calendar_links": [
+   {
+    "label": "Anderson Madison County Visitors Bureau Events Calendar",
+    "url": "https://visitandersonmadisoncounty.com/calendar-of-events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Elwood Glass Festival",
+    "when": "August",
+    "desc": "The Elwood Glass Festival fills Callaway Park each August with carnival rides, a parade, food and craft vendors, and a classic car show honoring the city's glassmaking heritage."
+   }
+  ]
+ },
+ {
+  "slug": "lapel-indiana-real-estate",
+  "city": "Lapel",
+  "county": "Madison",
+  "official_site": "https://lapelindiana.org",
+  "calendar_links": [
+   {
+    "label": "Anderson Madison County Visitors Bureau Events Calendar",
+    "url": "https://visitandersonmadisoncounty.com/calendar-of-events/"
+   },
+   {
+    "label": "Madison County Local Events",
+    "url": "https://www.madisoncounty.in.gov"
+   }
+  ],
+  "events": [
+   {
+    "name": "Lapel Village Fair",
+    "when": "July",
+    "desc": "The Lapel Village Fair takes over Main Street each July with a town-wide rummage sale, a Saturday parade, craft and food booths, and live music."
+   }
+  ]
+ },
+ {
+  "slug": "pendleton-indiana-real-estate",
+  "city": "Pendleton",
+  "county": "Madison",
+  "official_site": "https://www.madisoncounty.in.gov",
+  "calendar_links": [
+   {
+    "label": "Anderson Madison County Visitors Bureau Events Calendar",
+    "url": "https://visitandersonmadisoncounty.com/calendar-of-events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "June Jamboree",
+    "when": "June",
+    "desc": "The June Jamboree, a Pendleton Lions Club tradition for more than fifty years, brings carnival rides, games, food, and live entertainment to Falls Park each June."
+   }
+  ]
+ },
+ {
+  "slug": "martinsville-indiana-real-estate",
+  "city": "Martinsville",
+  "county": "Morgan",
+  "official_site": "https://www.martinsville.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Morgan County Annual Events",
+    "url": "https://www.visitmorgancountyin.com/events/annual-events/"
+   },
+   {
+    "label": "Morgan County Fall Foliage Festival",
+    "url": "https://morgancountyfallfoliagefestival.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Morgan County Fall Foliage Festival",
+    "when": "October",
+    "desc": "The Morgan County Fall Foliage Festival draws visitors to Martinsville each October with a parade, a carnival, a car show, and rows of craft and food vendors."
+   }
+  ]
+ },
+ {
+  "slug": "monrovia-indiana-real-estate",
+  "city": "Monrovia",
+  "county": "Morgan",
+  "official_site": "https://monrovia.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Morgan County Annual Events",
+    "url": "https://www.visitmorgancountyin.com/events/annual-events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Monrovia Festival",
+    "when": "September",
+    "desc": "The Monrovia Festival is a three-day downtown celebration each September featuring a parade, an antique tractor show, an art show, food, and family activities."
+   }
+  ]
+ },
+ {
+  "slug": "mooresville-indiana-real-estate",
+  "city": "Mooresville",
+  "county": "Morgan",
+  "official_site": "https://www.mooresville.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Morgan County Annual Events",
+    "url": "https://www.visitmorgancountyin.com/events/annual-events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Mooresville Old Settlers Fair",
+    "when": "summer",
+    "desc": "The Mooresville Old Settlers Fair returns to Pioneer Park each summer with carnival rides, games, food, and live performances."
+   },
+   {
+    "name": "Victorian Christmas Festival",
+    "when": "December",
+    "desc": "Mooresville's Victorian Christmas Festival brings carriage rides, carolers, and locally made crafts to downtown each December."
+   }
+  ]
+ },
+ {
+  "slug": "fairland-indiana-real-estate",
+  "city": "Fairland",
+  "county": "Shelby",
+  "official_site": "https://www.in.gov/counties/shelby/",
+  "calendar_links": [
+   {
+    "label": "Shelby County Tourism and Visitors Bureau",
+    "url": "https://visitshelbycounty.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Fairland Fish Fry and Parade",
+    "when": "June",
+    "desc": "The Fairland Volunteer Fire Department hosts its annual Fish Fry and Parade each June, a longtime community gathering in this small Shelby County town."
+   }
+  ]
+ },
+ {
+  "slug": "morristown-indiana-real-estate",
+  "city": "Morristown",
+  "county": "Shelby",
+  "official_site": "https://www.townofmorristown.org",
+  "calendar_links": [
+   {
+    "label": "Shelby County Tourism and Visitors Bureau",
+    "url": "https://visitshelbycounty.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Morristown Derby Days",
+    "when": "July",
+    "desc": "Morristown Derby Days closes out July each summer with soap box derby races, a downtown parade, food and craft vendors, live entertainment, and fireworks."
+   }
+  ]
+ },
+ {
+  "slug": "shelbyville-indiana-real-estate",
+  "city": "Shelbyville",
+  "county": "Shelby",
+  "official_site": "https://www.shelbyville.in.gov",
+  "calendar_links": [
+   {
+    "label": "Shelby County Tourism and Visitors Bureau",
+    "url": "https://visitshelbycounty.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Blue River Highland Games and Festival",
+    "when": "May",
+    "desc": "The Blue River Highland Games and Festival brings Scottish athletics, bagpipes, and clan culture to Shelbyville each spring."
+   }
+  ]
+ },
+ {
+  "slug": "waldron-indiana-real-estate",
+  "city": "Waldron",
+  "county": "Shelby",
+  "official_site": "https://www.in.gov/counties/shelby/",
+  "calendar_links": [
+   {
+    "label": "Shelby County Tourism and Visitors Bureau",
+    "url": "https://visitshelbycounty.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Waldron Will Freedom Festival",
+    "when": "early July",
+    "desc": "The Waldron Will Freedom Festival celebrates Independence Day in early July with a parade, a car show, live music, and a large fireworks show at the local school."
+   }
+  ]
+ },
+ {
+  "slug": "columbus-indiana-real-estate",
+  "city": "Columbus",
+  "county": "Bartholomew",
+  "official_site": "https://www.columbus.in.gov",
+  "calendar_links": [
+   {
+    "label": "Columbus Area Visitors Center Events Calendar",
+    "url": "https://visitcolumbusindiana.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Ethnic Expo",
+    "when": "October",
+    "desc": "Columbus hosts the annual Ethnic Expo downtown each fall, a festival celebrating the community's many cultures with international food and live entertainment."
+   },
+   {
+    "name": "Exhibit Columbus",
+    "when": "fall",
+    "desc": "Columbus periodically hosts Exhibit Columbus, a design and architecture exhibition that reflects the city's renowned modernist architecture."
+   }
+  ]
+ },
+ {
+  "slug": "bean-blossom-indiana-real-estate",
+  "city": "Bean Blossom",
+  "county": "Brown",
+  "official_site": "https://browncounty.com",
+  "calendar_links": [
+   {
+    "label": "Bill Monroe's Music Park Events",
+    "url": "https://billmonroemusicpark.com/events"
+   },
+   {
+    "label": "Brown County Events Calendar",
+    "url": "https://browncounty.com/calendar/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Bill Monroe Bluegrass Festival",
+    "when": "June",
+    "desc": "Bill Monroe's Music Park in Bean Blossom hosts the Bill Monroe Bluegrass Festival each June, one of the longest continuously running bluegrass festivals in the country."
+   },
+   {
+    "name": "Uncle Pen Fest",
+    "when": "September",
+    "desc": "The music park also holds Uncle Pen Fest each September, featuring bluegrass performances, workshops, and jams."
+   }
+  ]
+ },
+ {
+  "slug": "nashville-indiana-real-estate",
+  "city": "Nashville",
+  "county": "Brown",
+  "official_site": "https://www.townofnashville.org",
+  "calendar_links": [
+   {
+    "label": "Brown County Events Calendar",
+    "url": "https://browncounty.com/calendar/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Fall Foliage Season",
+    "when": "October",
+    "desc": "Nashville draws visitors each autumn as Brown County reaches peak fall color, filling the village's shops and art galleries during leaf-peeping season."
+   }
+  ]
+ },
+ {
+  "slug": "greensburg-indiana-real-estate",
+  "city": "Greensburg",
+  "county": "Decatur",
+  "official_site": "https://www.cityofgreensburg.com",
+  "calendar_links": [
+   {
+    "label": "Visit Greensburg Events",
+    "url": "https://www.visitgreensburg.com/events/"
+   },
+   {
+    "label": "Visit Greensburg Annual Events",
+    "url": "https://www.visitgreensburg.com/events/annual-events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Tree City Fall Festival",
+    "when": "fall",
+    "desc": "Greensburg celebrates its Tree City identity with the annual Tree City Fall Festival held downtown near the courthouse famous for the tree growing from its tower."
+   }
+  ]
+ },
+ {
+  "slug": "westport-indiana-real-estate",
+  "city": "Westport",
+  "county": "Decatur",
+  "official_site": "https://www.in.gov/towns/westport/",
+  "calendar_links": [
+   {
+    "label": "Visit Greensburg and Decatur County Events",
+    "url": "https://www.visitgreensburg.com/events/"
+   }
+  ],
+  "events": []
+ },
+ {
+  "slug": "seymour-indiana-real-estate",
+  "city": "Seymour",
+  "county": "Jackson",
+  "official_site": "https://www.seymourin.org",
+  "calendar_links": [
+   {
+    "label": "City of Seymour Events Calendar",
+    "url": "https://www.seymourin.org/index.php/calendar"
+   }
+  ],
+  "events": [
+   {
+    "name": "Seymour Oktoberfest",
+    "when": "fall",
+    "desc": "Seymour hosts its annual Oktoberfest downtown each fall, a long-running celebration of the area's German heritage with food, music, and family activities."
+   }
+  ]
+ },
+ {
+  "slug": "north-vernon-indiana-real-estate",
+  "city": "North Vernon",
+  "county": "Jennings",
+  "official_site": "https://www.northvernon-in.gov",
+  "calendar_links": [
+   {
+    "label": "City of North Vernon Events",
+    "url": "https://www.northvernon-in.gov/events/index.php"
+   },
+   {
+    "label": "Jennings County Events Calendar",
+    "url": "https://joinusinjennings.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Sweet Street",
+    "when": "October",
+    "desc": "Downtown North Vernon hosts Sweet Street, a family Halloween celebration, each October."
+   },
+   {
+    "name": "Christmas in the City",
+    "when": "December",
+    "desc": "North Vernon celebrates the holidays with Christmas in the City downtown each December."
+   }
+  ]
+ },
+ {
+  "slug": "crawfordsville-indiana-real-estate",
+  "city": "Crawfordsville",
+  "county": "Montgomery",
+  "official_site": "https://www.crawfordsville.in.gov",
+  "calendar_links": [
+   {
+    "label": "Visit Montgomery County Events",
+    "url": "https://www.visitmoco.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Crawfordsville Strawberry Festival",
+    "when": "June",
+    "desc": "Crawfordsville hosts the Strawberry Festival each June on the grounds of the historic Lane Place, a decades-old tradition with food, crafts, and live entertainment."
+   }
+  ]
+ },
+ {
+  "slug": "rockville-indiana-real-estate",
+  "city": "Rockville",
+  "county": "Parke",
+  "official_site": "https://www.in.gov/towns/rockville/",
+  "calendar_links": [
+   {
+    "label": "Parke County Events Calendar",
+    "url": "https://www.coveredbridges.com/events-calendar"
+   },
+   {
+    "label": "Parke County Convention and Visitors Commission",
+    "url": "https://www.coveredbridges.com/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Parke County Covered Bridge Festival",
+    "when": "October",
+    "desc": "The Parke County Covered Bridge Festival is headquartered on the courthouse lawn in Rockville each October, drawing large crowds to celebrate the county's historic covered bridges and fall foliage."
+   }
+  ]
+ },
+ {
+  "slug": "cloverdale-indiana-real-estate",
+  "city": "Cloverdale",
+  "county": "Putnam",
+  "official_site": "https://townofcloverdale.in.gov",
+  "calendar_links": [
+   {
+    "label": "Putnam County Visitors Bureau Events",
+    "url": "https://goputnam.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "Cloverween Fall Festival",
+    "when": "fall",
+    "desc": "Cloverdale hosts the Cloverween Fall Festival each fall, a downtown celebration with live music, food, games, and a costume parade."
+   }
+  ]
+ },
+ {
+  "slug": "greencastle-indiana-real-estate",
+  "city": "Greencastle",
+  "county": "Putnam",
+  "official_site": "https://www.cityofgreencastle.com",
+  "calendar_links": [
+   {
+    "label": "Putnam County Visitors Bureau Events",
+    "url": "https://goputnam.com/events/"
+   }
+  ],
+  "events": [
+   {
+    "name": "First Friday",
+    "when": "spring through fall",
+    "desc": "Downtown Greencastle, home to DePauw University, hosts First Friday events on the courthouse square from spring through fall with live music and open-air activities."
+   }
+  ]
+ }
+]
