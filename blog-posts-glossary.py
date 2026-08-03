@@ -472,13 +472,24 @@ POSTS.append({
 })
 
 # ─────────────────────────────────────────────────────────────────────────────
+# The 3 dicts above are the ORIGINAL live posts and are NOT regenerated (they now
+# carry site-wide auto-links). New posts are authored in blog-posts-new.json and
+# written here. HTML attribute quotes are normalized single -> double.
+import json
+
+def normalize(htmlout):
+    return re.sub(r"href='([^']*)'", r'href="\1"', htmlout)
+
+new_path = os.path.join(ROOT, "blog-posts-new.json")
+NEWPOSTS = json.load(open(new_path, encoding="utf-8")) if os.path.exists(new_path) else []
+
 written = []
-for p in POSTS:
+for p in NEWPOSTS:
     d = os.path.join(ROOT, "blog", p["slug"])
     os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(build(p))
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(normalize(build(p)))
     written.append(p["slug"])
 
-print("Wrote", len(written), "posts:")
+print("Wrote", len(written), "NEW posts (3 original posts left untouched):")
 for s in written:
     print("  /blog/%s/" % s)
