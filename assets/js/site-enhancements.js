@@ -2,6 +2,20 @@
   'use strict';
 
   // ═══════════════════════════════════════════════
+  // CRISP LIVE CHAT
+  // Responses route to csirealtyteam@yourrealtylink.com (set in the Crisp workspace).
+  // ═══════════════════════════════════════════════
+  (function initCrispChat() {
+    if (window.$crisp) return;
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = '3bbec33b-553d-457d-bb53-0cd004a78e3e';
+    var s = document.createElement('script');
+    s.src = 'https://client.crisp.chat/l.js';
+    s.async = 1;
+    (document.head || document.getElementsByTagName('head')[0]).appendChild(s);
+  })();
+
+  // ═══════════════════════════════════════════════
   // STICKY BOTTOM BAR CTA
   // ═══════════════════════════════════════════════
   function initStickyBar() {
