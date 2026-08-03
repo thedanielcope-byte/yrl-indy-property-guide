@@ -1,0 +1,338 @@
+[
+{
+ "slug": "home-appraisal",
+ "term": "Home Appraisal",
+ "h1": "What Is a Home Appraisal?",
+ "title": "What Is a Home Appraisal? | Your Realty Link",
+ "meta": "A home appraisal is a lender-ordered estimate of a home's market value. Learn how the appraisal process works for buyers and sellers in Central Indiana.",
+ "hero_sub": "An independent check on what a home is really worth — and a key step in almost every financed purchase.",
+ "definition": "A home appraisal is an independent, professional opinion of a property's market value, prepared by a state-licensed appraiser. Mortgage lenders order one to confirm a home is worth the amount being borrowed.",
+ "qa_lead": "When you finance a home, your lender orders an appraisal so it doesn't lend more than the property is worth. A licensed appraiser inspects the home and compares it to recent nearby sales to reach a value. If the appraisal comes in below your agreed price, you may face an <a href=\"/glossary/appraisal-gap/\">appraisal gap</a> to solve before closing.",
+ "qa_facts": [["Who orders it", "Your mortgage lender"], ["Who pays", "Usually the buyer"], ["Who performs it", "A state-licensed appraiser"], ["Main purpose", "Protect the lender's collateral"], ["Typical basis", "Recent comparable sales"]],
+ "sections": [
+   ["Why Lenders Require an Appraisal", ["A mortgage is secured by the home itself, so the lender needs to know the property is worth at least what it's lending. The appraisal is that safeguard. It protects the bank from over-lending and, indirectly, protects you from overpaying.", "Even a strong offer can hinge on the appraisal. If you're paying cash you can waive it, but most financed purchases in Central Indiana include an appraisal step tied to loan approval."]],
+   ["How an Appraiser Determines Value", ["Most appraisers use the sales comparison approach: they look at recently sold homes nearby that are similar in size, age, and condition, then adjust for differences like an extra bath, a finished basement, or a larger lot. The result is a supported opinion of value, not a guess.", "This differs from a comparative market analysis your agent prepares. An appraisal is a formal, licensed valuation used by the lender, while a <a href=\"/services/free-home-valuation/\">market analysis</a> helps set a listing or offer price."]],
+   ["When the Appraisal Comes in Low", ["Sometimes an appraisal lands below the contract price. When that happens you generally have options: the buyer can cover the difference in cash, the parties can renegotiate the price, or the buyer can walk away if the contract includes the right <a href=\"/glossary/contingency/\">contingency</a>.", "This shortfall is called an appraisal gap. Knowing how you'd handle one before you write an offer keeps a low number from derailing your purchase."]]
+ ],
+ "faqs": [
+   ["How long does a home appraisal take?", "The on-site visit is often under an hour, but the written report usually takes several days to a week to reach your lender."],
+   ["Is an appraisal the same as a home inspection?", "No. An appraisal estimates value for your lender, while an inspection evaluates the home's condition for you as the buyer."],
+   ["Can I use my own appraisal?", "For a mortgage, the lender orders the appraisal through an approved appraiser, so you generally can't substitute one you ordered yourself."]
+ ],
+ "related": [["Appraisal Gap", "/glossary/appraisal-gap/"], ["Contingency", "/glossary/contingency/"], ["Get a Free Home Valuation", "/services/free-home-valuation/"], ["Mortgage Calculator", "/services/mortgage-calculator/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"]]
+},
+{
+ "slug": "home-inspection",
+ "term": "Home Inspection",
+ "h1": "What Is a Home Inspection?",
+ "title": "What Is a Home Inspection? | Your Realty Link",
+ "meta": "A home inspection is a professional review of a home's condition before you buy. Learn what inspections cover and why they matter for Central Indiana buyers.",
+ "hero_sub": "Your independent look under the hood before you commit to a home.",
+ "definition": "A home inspection is a professional, top-to-bottom review of a home's condition, performed by a qualified inspector so a buyer understands what they're purchasing before closing.",
+ "qa_lead": "A home inspection is your chance to learn a property's real condition before you're locked in. You hire a qualified inspector who examines the home's major systems and structure, then gives you a written report. Most Central Indiana buyers keep an inspection <a href=\"/glossary/contingency/\">contingency</a> in their offer so they can renegotiate or walk away if something serious turns up.",
+ "qa_facts": [["Who hires it", "The buyer"], ["Who pays", "Usually the buyer"], ["What it covers", "Roof, structure, HVAC, electrical, plumbing"], ["Pass or fail?", "No — it's an informational report"], ["Common Indiana add-on", "Radon testing"]],
+ "sections": [
+   ["What a Home Inspection Covers", ["A general inspection looks at the home's big-ticket systems: roof and structure, foundation, HVAC, electrical, plumbing, water heater, windows, and visible signs of moisture or pests. The inspector documents what's working, what's worn, and what may need attention soon.", "It's not a pass-or-fail test and not a code inspection. Think of it as a detailed snapshot of condition so you can make an informed decision."]],
+   ["Why It Matters in Central Indiana", ["Indiana law requires most sellers to complete a residential <a href=\"/glossary/sellers-disclosure/\">seller's disclosure</a>, but that reflects the seller's knowledge, not an expert's. An inspection is your own due diligence, and it often pays for itself by catching issues early.", "Radon is worth a special mention: much of Central Indiana sits in a higher-radon region, so many buyers add a radon test to their inspection. It's an easy, affordable safeguard."]],
+   ["Using Inspection Results", ["Your report becomes a negotiating tool. Depending on your contract, you can ask the seller to make repairs, offer a credit, adjust the price, or, for major problems, cancel under your inspection contingency.", "The goal isn't a perfect house — no home is flawless. It's making sure there are no expensive surprises you didn't sign up for."]]
+ ],
+ "faqs": [
+   ["Is a home inspection required in Indiana?", "It isn't legally required, but it's strongly recommended and is a standard part of most purchase agreements as a contingency."],
+   ["How much does a home inspection cost?", "Costs vary with the home's size and age and any add-ons like radon or a sewer scope; your agent can point you to fair local pricing."],
+   ["What if the inspection finds problems?", "You can typically request repairs, a credit, or a price change — or, for serious issues, exercise your inspection contingency to exit the deal."]
+ ],
+ "related": [["Contingency", "/glossary/contingency/"], ["Seller's Disclosure", "/glossary/sellers-disclosure/"], ["Earnest Money", "/glossary/earnest-money/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"], ["First-Time Home Buyers", "/services/first-time-home-buyers/"]]
+},
+{
+ "slug": "pre-approval-vs-pre-qualification",
+ "term": "Pre-Approval vs. Pre-Qualification",
+ "h1": "Pre-Approval vs. Pre-Qualification: What's the Difference?",
+ "title": "Pre-Approval vs. Pre-Qualification | Your Realty Link",
+ "meta": "Pre-approval vs. pre-qualification: learn the real difference, why pre-approval carries more weight, and how each affects your Central Indiana home offer.",
+ "hero_sub": "Two similar-sounding steps that carry very different weight with sellers.",
+ "definition": "Pre-qualification is a quick, informal estimate of how much you might borrow based on information you share. Pre-approval is a stronger, verified commitment from a lender after reviewing your documents and credit.",
+ "qa_lead": "Both terms describe early mortgage steps, but they aren't equal. Pre-qualification is a fast estimate based on numbers you provide. Pre-approval means a lender has verified your income, assets, and credit and put it in writing. In a competitive Central Indiana market, a <a href=\"/services/mortgage-pre-approval/\">pre-approval letter</a> tells sellers your offer is real.",
+ "qa_facts": [["Pre-qualification", "Quick estimate, self-reported info"], ["Pre-approval", "Verified, documented, in writing"], ["Credit check", "Soft or none vs. full review"], ["Time to complete", "Minutes vs. a few days"], ["Seller confidence", "Low vs. high"]],
+ "sections": [
+   ["What Pre-Qualification Really Is", ["Pre-qualification is the lightest touch. You tell a lender your income, debts, and rough savings, and they estimate a loan amount. Nothing is verified, so it's a helpful starting point but not a promise.", "It's useful early on to understand your ballpark budget before you start touring homes."]],
+   ["Why Pre-Approval Carries More Weight", ["For pre-approval, the lender collects documents — pay stubs, tax returns, bank statements — and pulls your credit. The resulting letter states a specific amount they're prepared to lend, subject to a property and final underwriting.", "Because it's backed by verification, sellers and their agents take pre-approved buyers far more seriously, especially when multiple offers are on the table."]],
+   ["Which One You Need in Central Indiana", ["When homes move quickly, a pre-approval letter is close to essential. Many sellers won't seriously consider an offer without one, and having it ready lets you act fast on the right house.", "Start the mortgage conversation early. Getting pre-approved before you shop keeps you from falling for a home outside your range and strengthens every offer you make."]]
+ ],
+ "faqs": [
+   ["Does pre-approval guarantee a loan?", "No. It's a strong commitment based on verified information, but final approval still depends on the property and underwriting."],
+   ["Will pre-approval hurt my credit?", "It involves a credit check, but the impact is usually minor and temporary, especially if you shop lenders within a short window."],
+   ["How long is a pre-approval good for?", "Letters are typically valid for a couple of months, since income and credit can change; your lender can refresh it if your search runs longer."]
+ ],
+ "related": [["Mortgage Pre-Approval", "/services/mortgage-pre-approval/"], ["Mortgage Calculator", "/services/mortgage-calculator/"], ["Private Mortgage Insurance", "/glossary/private-mortgage-insurance/"], ["First-Time Home Buyers", "/services/first-time-home-buyers/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"]]
+},
+{
+ "slug": "amortization",
+ "term": "Amortization",
+ "h1": "What Is Amortization?",
+ "title": "What Is Amortization? | Your Realty Link",
+ "meta": "Amortization is how your mortgage is paid off over time, with each payment split between interest and principal. See how it works for Indiana homeowners.",
+ "hero_sub": "The reason your early mortgage payments feel like they're barely denting the balance.",
+ "definition": "Amortization is the process of paying off a loan through regular, equal payments over time, with each payment covering both interest and a portion of the principal balance.",
+ "qa_lead": "On a typical fixed-rate mortgage, your monthly payment stays the same, but what's inside it shifts. Early on, most of each payment goes to interest and only a little to principal. Over the years that flips. An <a href=\"/services/mortgage-calculator/\">amortization schedule</a> shows this split for every payment.",
+ "qa_facts": [["Applies to", "Most fixed-rate mortgages"], ["Each payment", "Splits interest and principal"], ["Early payments", "Mostly interest"], ["Later payments", "Mostly principal"], ["Extra payments", "Go straight to principal"]],
+ "sections": [
+   ["How Amortization Works", ["When you take a fixed-rate loan, the lender calculates one steady payment that will pay off the balance by the end of the term. Because you owe the most at the start, the interest portion is largest early and shrinks as the balance falls.", "By the final years, nearly all of each payment is reducing principal. This is why building meaningful equity through payments alone takes time."]],
+   ["Reading an Amortization Schedule", ["An amortization schedule is a table listing every payment, how much goes to interest, how much to principal, and your remaining balance. It's a clear way to see the true cost of a loan over its full life.", "A <a href=\"/services/mortgage-calculator/\">mortgage calculator</a> can generate this for you so you can compare loan terms before you commit."]],
+   ["Paying Down Faster", ["Any extra money you put toward the loan is applied directly to principal, which shrinks the balance and the interest you'll pay going forward. Even occasional extra payments can shorten the loan and save a meaningful amount over time.", "A shorter term, like paying on a 15-year schedule instead of 30, amortizes faster with higher payments but far less total interest."]]
+ ],
+ "faqs": [
+   ["Why is so much of my early payment interest?", "Interest is charged on your outstanding balance, which is highest at the start, so early payments are interest-heavy by design."],
+   ["Does making extra payments help?", "Yes. Extra payments reduce principal directly, lowering future interest and shortening the life of your loan."],
+   ["Are all mortgages amortized?", "Most traditional fixed-rate mortgages are fully amortized, though some loan types have interest-only periods or balloon payments that work differently."]
+ ],
+ "related": [["Mortgage Calculator", "/services/mortgage-calculator/"], ["Private Mortgage Insurance", "/glossary/private-mortgage-insurance/"], ["Mortgage Pre-Approval", "/services/mortgage-pre-approval/"], ["First-Time Home Buyers", "/services/first-time-home-buyers/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"]]
+},
+{
+ "slug": "home-equity",
+ "term": "Home Equity",
+ "h1": "What Is Home Equity?",
+ "title": "What Is Home Equity? | Your Realty Link",
+ "meta": "Home equity is the share of your home you truly own — its value minus what you still owe. Learn how equity builds and grows for Central Indiana homeowners.",
+ "hero_sub": "The part of your home's value that's truly yours, and one of the biggest ways families build wealth.",
+ "definition": "Home equity is the portion of your home that you actually own — the difference between your home's current market value and the amount you still owe on your mortgage.",
+ "qa_lead": "Home equity is simply your home's value minus what you owe on it. If your house would sell for more than your remaining loan balance, that gap is your equity. It grows as you pay down your mortgage and as your home's value rises. A quick <a href=\"/services/free-home-valuation/\">home valuation</a> is the easiest way to estimate where you stand.",
+ "qa_facts": [["Formula", "Market value minus what you owe"], ["Builds through", "Loan paydown and appreciation"], ["Ways to tap it", "HELOC, home equity loan, refinance, sale"], ["Ties to PMI", "More equity can remove PMI"], ["Biggest payoff", "Often realized when you sell"]],
+ "sections": [
+   ["How Equity Is Built", ["Equity grows two ways. First, every mortgage payment chips away at your loan balance, so you owe a little less each month. Second, when local home values rise, your property may be worth more even before you've paid anything extra.", "Improvements that add real value and a strong Central Indiana market can both move equity in your favor over time."]],
+   ["Equity and Mortgage Insurance", ["If you bought with a smaller down payment, you may be paying <a href=\"/glossary/private-mortgage-insurance/\">private mortgage insurance</a>. As you build equity and reach a common threshold of about 20 percent, you can often request to have PMI removed, lowering your payment.", "Watching your equity grow isn't just satisfying — it can put money back in your pocket."]],
+   ["Putting Equity to Work", ["Homeowners tap equity in several ways: a home equity line of credit, a home equity loan, or a cash-out refinance for goals like renovations. The largest payoff, though, usually comes when you sell and roll equity into your next home.", "If you're weighing a move, knowing your equity helps you plan your next purchase. Reach out anytime to talk it through."]]
+ ],
+ "faqs": [
+   ["How do I calculate my home equity?", "Estimate your home's current market value and subtract your remaining mortgage balance; the difference is your equity."],
+   ["Can home equity go down?", "Yes. If local home values fall or you borrow against the home, your equity can shrink, though paying down your loan works the other way."],
+   ["Do I have to sell to use my equity?", "No. Options like a HELOC, home equity loan, or cash-out refinance let you access equity without selling, though selling is often the simplest way."]
+ ],
+ "related": [["Private Mortgage Insurance", "/glossary/private-mortgage-insurance/"], ["Get a Free Home Valuation", "/services/free-home-valuation/"], ["Mortgage Calculator", "/services/mortgage-calculator/"], ["Selling a Home in Indianapolis", "/guides/selling-a-home-in-indianapolis/"], ["Contact Us", "/contact/"]]
+},
+{
+ "slug": "deed",
+ "term": "Deed",
+ "h1": "What Is a Deed?",
+ "title": "What Is a Deed? | Your Realty Link",
+ "meta": "A deed is the legal document that transfers home ownership from seller to buyer. Learn the common deed types and how a deed differs from title in Indiana.",
+ "hero_sub": "The signed, recorded document that actually moves a home from seller to buyer.",
+ "definition": "A deed is the legal document that transfers ownership of real estate from one party to another. Signing and recording the deed is how a home officially changes hands.",
+ "qa_lead": "A deed is the paperwork that legally transfers a home's ownership at closing. It names the seller and buyer, describes the property, and is signed and then recorded with the county. A deed isn't the same as title — title is your ownership right, while the deed is the document that conveys it. <a href=\"/glossary/title-insurance/\">Title insurance</a> helps protect that ownership.",
+ "qa_facts": [["What it does", "Transfers property ownership"], ["Deed vs. title", "Document vs. the ownership itself"], ["Common types", "Warranty deed, quitclaim deed"], ["Where it's recorded", "County recorder's office"], ["Signed by", "The seller (grantor)"]],
+ "sections": [
+   ["Deed vs. Title", ["People use these words interchangeably, but they're different. Title is the concept of legal ownership — your right to the property. The deed is the physical, signed document that transfers that right from the seller to you.", "At closing you receive a deed; owning valid title is what that deed gives you."]],
+   ["Common Types of Deeds", ["A general warranty deed offers the strongest protection, with the seller guaranteeing clear ownership going back through the property's history. A special warranty deed guarantees only the seller's own period of ownership.", "A quitclaim deed transfers whatever interest the seller has with no guarantees, so it's typically used between people who trust each other, like family members or in divorce transfers, rather than in a standard sale."]],
+   ["How Deeds Are Handled in Indiana", ["Indiana closings are usually handled by a title company rather than an attorney. The title company prepares the deed, coordinates <a href=\"/glossary/escrow/\">escrow</a>, and makes sure the signed deed is recorded with the county recorder so the transfer becomes part of the public record.", "Recording matters: it's how the world knows you're the owner and helps protect your claim against later disputes."]]
+ ],
+ "faqs": [
+   ["Is a deed the same as a title?", "No. Title is your legal ownership, and the deed is the document that transfers that ownership to you."],
+   ["Who keeps the deed after closing?", "You do, as the new owner, and a copy is recorded with the county so there's a permanent public record."],
+   ["What's a quitclaim deed used for?", "It transfers whatever interest someone has without warranties, so it's common between trusted parties like family or in divorce, not typical sales."]
+ ],
+ "related": [["Title Insurance", "/glossary/title-insurance/"], ["Escrow", "/glossary/escrow/"], ["Seller's Disclosure", "/glossary/sellers-disclosure/"], ["Real Estate Glossary", "/glossary/"], ["Selling a Home in Indianapolis", "/guides/selling-a-home-in-indianapolis/"]]
+},
+{
+ "slug": "comparative-market-analysis",
+ "term": "Comparative Market Analysis (CMA)",
+ "h1": "What Is a Comparative Market Analysis (CMA)?",
+ "title": "What Is a Comparative Market Analysis? | Your Realty Link",
+ "meta": "A comparative market analysis (CMA) uses recent nearby sales to estimate what your home is worth. Learn how an agent builds a CMA in Central Indiana.",
+ "hero_sub": "How your agent pinpoints a realistic price using what similar homes actually sold for.",
+ "definition": "A comparative market analysis (CMA) is an agent's estimate of a home's likely market value, based on recent sales of similar nearby properties. It helps set a smart listing or offer price.",
+ "qa_lead": "A CMA is how a real estate agent estimates what your home is worth right now. Your agent gathers recent sales of comparable homes nearby, adjusts for differences, and factors in current market activity to recommend a price range. It's the foundation for pricing a listing or shaping an offer. Request a <a href=\"/services/free-home-valuation/\">free home valuation</a> to get started.",
+ "qa_facts": [["Who prepares it", "Your real estate agent"], ["Based on", "Recent comparable sales"], ["Cost", "Typically free"], ["Data source", "The MLS (MIBOR locally)"], ["Not the same as", "A formal appraisal"]],
+ "sections": [
+   ["How a CMA Is Built", ["Your agent starts by pulling comparable homes — recently sold, similar in size, age, style, and location. Active and pending listings help gauge current competition. From there, the agent adjusts for differences like an extra bedroom, an updated kitchen, or a larger lot.", "In Central Indiana, this data comes through the MIBOR-powered MLS, so a local agent is working from accurate, up-to-date sales rather than public estimate tools."]],
+   ["CMA vs. Appraisal", ["A CMA and an appraisal both estimate value, but they serve different roles. A CMA is a pricing tool your agent prepares, usually at no cost. An appraisal is a formal valuation by a licensed appraiser that your lender orders during financing.", "A well-built CMA can help you avoid an <a href=\"/glossary/appraisal-gap/\">appraisal gap</a> later by pricing in line with what the market supports."]],
+   ["Why Accurate Pricing Matters", ["Price too high and a home can sit, pushing up <a href=\"/glossary/days-on-market/\">days on market</a> and inviting lowball offers. Price too low and you leave money on the table. A careful CMA aims for the sweet spot that attracts strong buyers.", "Whether you're selling or making an offer, a current CMA keeps your decision grounded in real numbers."]]
+ ],
+ "faqs": [
+   ["Is a CMA free?", "In most cases, yes. Agents typically prepare a CMA at no cost as part of helping you sell or make an offer."],
+   ["Is a CMA as accurate as an appraisal?", "It's a strong, data-based estimate, but an appraisal is a formal, licensed valuation; the two can differ and serve different purposes."],
+   ["How often should I get a CMA?", "Market conditions shift, so if you're actively planning to sell or buy, a CMA from within the last few weeks is most reliable."]
+ ],
+ "related": [["Get a Free Home Valuation", "/services/free-home-valuation/"], ["Days on Market", "/glossary/days-on-market/"], ["Appraisal Gap", "/glossary/appraisal-gap/"], ["Selling a Home in Indianapolis", "/guides/selling-a-home-in-indianapolis/"], ["Search Homes for Sale", "https://yourrealtylink.com/property-search"]]
+},
+{
+ "slug": "homestead-exemption",
+ "term": "Homestead Exemption",
+ "h1": "What Is a Homestead Exemption?",
+ "title": "What Is a Homestead Exemption? | Your Realty Link",
+ "meta": "Indiana's homestead exemption lowers property taxes on your primary residence. Learn how the standard deduction and property-tax caps work in Indiana.",
+ "hero_sub": "An Indiana homeowner benefit that can meaningfully lower the property taxes on the home you live in.",
+ "definition": "In Indiana, a homestead exemption is a set of property-tax benefits for your primary residence that lowers the taxable value of your home and caps how much property tax you can owe.",
+ "qa_lead": "Indiana's homestead benefits reduce property taxes on the home you own and live in as your main residence. They work by lowering your home's taxable assessed value through deductions and by capping your tax bill. You claim them by filing with your county auditor. If you're buying, ask about this early — it can affect your <a href=\"/services/closing-costs-buyers/\">ongoing housing costs</a>.",
+ "qa_facts": [["Applies to", "Your primary residence"], ["Main benefit", "Lower taxable assessed value"], ["Homestead tax cap", "1% of gross assessed value"], ["How to claim", "File with the county auditor"], ["Second homes", "Not eligible"]],
+ "sections": [
+   ["How Indiana's Homestead Benefits Work", ["Indiana offers a homestead standard deduction that reduces the assessed value of your primary home, plus a supplemental homestead deduction that reduces it further. A lower assessed value generally means a lower property-tax bill.", "These benefits apply only to a home you own and occupy as your principal residence — not to rentals, vacation homes, or investment property."]],
+   ["The Property-Tax Caps", ["Indiana's constitution caps property taxes as a share of a home's gross assessed value. For a qualifying homestead, the bill is capped at 1 percent of assessed value, while other residential and commercial property face higher caps of 2 and 3 percent.", "This cap, often called the circuit breaker, is a major reason claiming your homestead status matters for keeping housing costs predictable."]],
+   ["How to Claim It", ["You claim the homestead deduction by filing with your county auditor, and it's commonly handled around the time you close. Once it's on file, it generally stays in place as long as you own and live in the home.", "If you've recently bought or aren't sure your homestead is filed, it's worth confirming with your county — a missed filing can quietly raise your tax bill."]]
+ ],
+ "faqs": [
+   ["Do I have to reapply every year?", "Usually no. Once your homestead deduction is on file in Indiana, it typically remains until your ownership or use of the home changes."],
+   ["Can I claim a homestead on more than one home?", "No. The benefit applies only to your primary residence, so a second home or rental doesn't qualify."],
+   ["When should I file for the homestead deduction?", "Often at or shortly after closing; your title company or county auditor can confirm the deadline and process for your county."]
+ ],
+ "related": [["Closing Costs for Buyers", "/services/closing-costs-buyers/"], ["Get a Free Home Valuation", "/services/free-home-valuation/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"], ["Real Estate Glossary", "/glossary/"], ["Contact Us", "/contact/"]]
+},
+{
+ "slug": "property-tax-caps",
+ "term": "Property Tax Caps (Indiana)",
+ "h1": "What Are Indiana's Property Tax Caps?",
+ "title": "What Are Indiana's Property Tax Caps? | Your Realty Link",
+ "meta": "Indiana's property tax caps limit your annual bill to a share of your home's assessed value. Learn how the 1%, 2%, and 3% circuit breaker caps really work.",
+ "hero_sub": "Indiana's built-in limit on how much property tax you can owe — and how to keep yours as low as it should be.",
+ "definition": "Indiana's property tax caps, often called the circuit breaker, limit your annual property tax bill to a set percentage of your home's gross assessed value. Owner-occupied homes are capped at 1%, other residential property and farmland at 2%, and most other property at 3%.",
+ "qa_lead": "Indiana caps how much property tax you can owe based on your home's gross assessed value. For an owner-occupied home (your homestead), the cap is 1% of assessed value; other residential property and farmland are capped at 2%, and most other property at 3%. It's commonly called the \"circuit breaker.\" See our <a href=\"/glossary/\">real estate glossary</a> for related terms.",
+ "qa_facts": [["Also called", "The \"circuit breaker\" cap"], ["Homestead cap", "1% of gross assessed value"], ["Other residential / farm", "2% cap"], ["Commercial / other", "3% cap"], ["Set by", "Indiana Constitution & state law"]],
+ "sections": [
+   ["How Indiana's Property Tax Caps Work", ["Every property in Indiana gets a \"gross assessed value\" from the county assessor. The caps limit your total annual bill to a percentage of that value, no matter how high local tax rates climb. Owner-occupied homes fall under the 1% cap, second homes and rentals under 2%, and commercial and most other property under 3%.", "Because the cap is tied to assessed value rather than a fixed dollar amount, your ceiling rises and falls as your assessment changes. If your calculated bill would exceed the cap, the circuit breaker credit reduces it back down."]],
+   ["The Homestead Deduction Lowers the Base", ["To get the 1% homestead cap, you have to file for the homestead deduction on the property you live in as your primary residence. That deduction, along with the supplemental homestead deduction, reduces the assessed value your tax is figured on before the cap is even applied.", "You can only claim the homestead on one property, and the paperwork is usually handled at or shortly after closing. If you're buying, ask your title company and county auditor about filing so you don't miss it for the year."]],
+   ["Why Two Similar Homes Can Have Different Bills", ["Two nearly identical houses on the same street can carry different tax bills. The differences come from whether each owner filed the homestead deduction, when the home last sold, prior assessment history, and any additional deductions (such as those for veterans or seniors) that one owner qualifies for and the other doesn't.", "That's why we tell buyers to look at a property's actual assessed value and deductions, not just last year's tax figure — the number can change once the home changes hands. Fold estimated taxes into your monthly payment with our <a href=\"/services/mortgage-calculator/\">mortgage calculator</a>."]],
+   ["How Taxes Fit Into Your Closing", ["Property taxes in Indiana are generally paid in arrears, which means at closing they're prorated between buyer and seller. Your title company handles that math as part of <a href=\"/glossary/escrow/\">escrow</a>.", "Understanding your cap helps you budget for the actual bill after you move in, rather than being surprised by it."]]
+ ],
+ "faqs": [
+   ["Do property tax caps apply automatically?", "The cap itself applies automatically, but the lower 1% homestead cap only kicks in once you've filed the homestead deduction on your primary residence. Filing that paperwork is the step people most often miss."],
+   ["Will my property taxes go up after I buy?", "They can. The prior owner's deductions don't transfer to you, and the assessment may change, so the seller's old tax figure isn't a guaranteed preview of yours. Always confirm the current assessed value and eligible deductions."],
+   ["Are property tax caps the same in every Indiana county?", "The 1%, 2%, and 3% caps are statewide, but local tax rates differ by county, city, and school district, so two homes with the same cap percentage can still owe different amounts."]
+ ],
+ "related": [["Real Estate Glossary", "/glossary/"], ["What Is Escrow?", "/glossary/escrow/"], ["Buyer Closing Costs in Indiana", "/services/closing-costs-buyers/"], ["Mortgage Calculator", "/services/mortgage-calculator/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"]]
+},
+{
+ "slug": "conventional-loan",
+ "term": "Conventional Loan",
+ "h1": "What Is a Conventional Loan?",
+ "title": "What Is a Conventional Loan? | Your Realty Link",
+ "meta": "A conventional loan is a mortgage not backed by the government like FHA or VA. Learn how conventional loans work and when they fit Central Indiana buyers.",
+ "hero_sub": "The most common type of mortgage, explained in plain English.",
+ "definition": "A conventional loan is a mortgage that isn't insured or guaranteed by a government agency such as the FHA, VA, or USDA. It's offered by private lenders and follows guidelines set by Fannie Mae and Freddie Mac.",
+ "qa_lead": "A conventional loan is the most common type of mortgage. Unlike FHA, VA, or USDA loans, it isn't backed by the government — it's issued by a private lender following Fannie Mae and Freddie Mac guidelines. It often appeals to buyers with steady credit, and if you put down less than 20%, you'll usually pay <a href=\"/glossary/private-mortgage-insurance/\">private mortgage insurance</a> until you build enough equity.",
+ "qa_facts": [["Backed by", "Private lenders, not a government agency"], ["Follows", "Fannie Mae / Freddie Mac guidelines"], ["Typical down payment", "As low as 3% for some qualified buyers"], ["PMI", "Usually required under 20% down"], ["Two types", "Conforming and non-conforming (jumbo)"]],
+ "sections": [
+   ["How a Conventional Loan Works", ["With a conventional loan, a private lender — a bank, credit union, or mortgage company — lends you money to buy a home, and you repay it with interest over a set term, commonly 15 or 30 years. Because there's no government insurance behind the loan, lenders look closely at your credit history, income, debt, and down payment.", "Down payments can be lower than many buyers expect, sometimes as little as 3% for qualified borrowers. If you put down less than 20%, you'll typically carry <a href=\"/glossary/private-mortgage-insurance/\">PMI</a> until your equity reaches the point where it can be removed."]],
+   ["Conforming vs. Jumbo Loans", ["Most conventional loans are \"conforming,\" meaning they fall within the loan limits set each year for Fannie Mae and Freddie Mac. For higher-priced homes above that limit, you'd need a \"jumbo\" loan, which is non-conforming and usually comes with stricter requirements.", "In most of Central Indiana, home prices keep the majority of buyers comfortably within conforming limits, though luxury purchases in areas like Carmel or Zionsville can push into jumbo territory."]],
+   ["Conventional vs. FHA and VA", ["FHA loans are government-insured and can be more forgiving on credit and down payment, but they carry their own mortgage insurance for the life of many loans. VA loans, for eligible veterans and service members, often require no down payment. A conventional loan can be attractive when your credit and savings are solid, because PMI can eventually come off and lower your long-term cost.", "There's no single \"best\" loan — the right choice depends on your finances and goals. A local lender can compare options with you side by side."]],
+   ["Is a Conventional Loan Right for You?", ["If you have reliable income, a reasonable debt load, and some savings for a down payment, a conventional loan is often worth pricing out. Run the numbers with our <a href=\"/services/mortgage-calculator/\">mortgage calculator</a>, and if you're new to the process, our <a href=\"/services/first-time-home-buyers/\">first-time buyer resources</a> walk through what to expect.", "When you're ready, <a href=\"/contact/\">reach out</a> and we'll connect you with trusted Central Indiana lenders who can compare loan types for your situation."]]
+ ],
+ "faqs": [
+   ["How much do I need to put down on a conventional loan?", "It varies by lender and program, but qualified buyers can sometimes put down as little as 3%. Putting down 20% or more lets you avoid private mortgage insurance."],
+   ["Can I remove PMI from a conventional loan?", "Yes. Unlike some FHA mortgage insurance, conventional PMI can usually be cancelled once you've built enough equity in the home, which can lower your monthly payment over time."],
+   ["Is a conventional loan better than an FHA loan?", "Neither is automatically better. Conventional loans can cost less long term for buyers with strong credit, while FHA loans may be easier to qualify for. Compare both with a lender."]
+ ],
+ "related": [["Private Mortgage Insurance", "/glossary/private-mortgage-insurance/"], ["Mortgage Calculator", "/services/mortgage-calculator/"], ["First-Time Home Buyers", "/services/first-time-home-buyers/"], ["Buyer Closing Costs", "/services/closing-costs-buyers/"], ["Real Estate Glossary", "/glossary/"]]
+},
+{
+ "slug": "hoa",
+ "term": "HOA (Homeowners Association)",
+ "h1": "What Is an HOA (Homeowners Association)?",
+ "title": "What Is an HOA (Homeowners Association)? | Your Realty Link",
+ "meta": "An HOA (homeowners association) sets neighborhood rules and charges dues for shared spaces. Learn how HOAs work before you buy a home in Central Indiana.",
+ "hero_sub": "The rules, dues, and fine print behind neighborhood living.",
+ "definition": "A homeowners association (HOA) is an organization that governs a neighborhood or community, sets rules for the properties in it, and charges owners dues to maintain shared areas and amenities.",
+ "qa_lead": "An HOA, or homeowners association, manages a planned community or condo development. If you buy in one, you automatically become a member, agree to follow its rules (called covenants, or CC&Rs), and pay regular dues. In return, the HOA maintains common areas and shared amenities. Many newer Central Indiana subdivisions have one.",
+ "qa_facts": [["Stands for", "Homeowners Association"], ["Rules are called", "Covenants / CC&Rs"], ["You pay", "Regular dues (monthly, quarterly, or yearly)"], ["Covers", "Common areas, amenities, sometimes services"], ["Membership", "Automatic when you buy in the community"]],
+ "sections": [
+   ["What an HOA Does", ["An HOA is a governing body — usually run by a volunteer board of resident homeowners, sometimes with a professional management company — that oversees a neighborhood, condo building, or planned development. Its job is to maintain shared property and enforce a common set of standards so the community stays consistent and well-kept.", "Common areas an HOA might maintain include entrance signage, sidewalks, retention ponds, playgrounds, pools, clubhouses, and landscaping in shared spaces. In condos and townhomes, the HOA often handles exterior building maintenance too."]],
+   ["HOA Dues and What They Cover", ["HOA dues fund the association's budget. How much you pay depends on the community and what it maintains — a subdivision with just a pond and a common entrance costs far less than a condo with a pool, gym, and exterior upkeep. Dues can be billed monthly, quarterly, or annually.", "Associations also keep a reserve fund for big-ticket repairs. Occasionally, if reserves fall short, an HOA may levy a \"special assessment\" — a one-time charge on owners. It's worth asking about a community's reserves and assessment history before you buy."]],
+   ["Rules, Covenants, and Restrictions", ["When you buy in an HOA community, you agree to its covenants, conditions, and restrictions — the CC&Rs. These can govern things like exterior paint colors, fences, sheds, parking, short-term rentals, and even the type of mailbox you can install. The goal is to protect property values, though the rules aren't for everyone.", "Review the CC&Rs carefully. If you plan to rent the home, run a home business, or park an RV, make sure the community allows it before you're committed."]],
+   ["What Indiana Buyers Should Check Before Closing", ["In Indiana, HOA documents are part of your due diligence. Before closing, request the current dues, the CC&Rs, meeting minutes, and the association's financials. Your agent can help you gather these and read the <a href=\"/glossary/sellers-disclosure/\">seller's disclosure</a>.", "HOA dues also factor into your monthly budget, so include them when you run the numbers on our <a href=\"/services/mortgage-calculator/\">mortgage calculator</a>."]]
+ ],
+ "faqs": [
+   ["Are HOA dues required?", "Yes. If a property is in an HOA, paying dues isn't optional — it's a legal obligation tied to owning the home, and unpaid dues can lead to fines or a lien against the property."],
+   ["Can an HOA really tell me what I can do with my home?", "Within the limits of its recorded covenants, yes. HOAs can enforce rules on exterior changes, landscaping, parking, and rentals. Always read the CC&Rs before buying so there are no surprises."],
+   ["Do all homes in Central Indiana have an HOA?", "No. Many older neighborhoods have none, while most newer subdivisions and condo developments do. Your agent can tell you whether a specific property comes with one."]
+ ],
+ "related": [["Seller's Disclosure", "/glossary/sellers-disclosure/"], ["Mortgage Calculator", "/services/mortgage-calculator/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"], ["Real Estate Glossary", "/glossary/"], ["Contact Your Realty Link", "/contact/"]]
+},
+{
+ "slug": "closing-day",
+ "term": "Closing Day",
+ "h1": "What Happens on Closing Day?",
+ "title": "What Happens on Closing Day? | Your Realty Link",
+ "meta": "Closing day is when a home sale becomes official and ownership transfers. See what happens at an Indiana closing, what to bring, and when you get the keys.",
+ "hero_sub": "The day the home officially becomes yours — here's what to expect.",
+ "definition": "Closing day is the final step of a real estate transaction, when ownership of the home officially transfers from the seller to the buyer and the paperwork and funds are completed.",
+ "qa_lead": "Closing day is when a home sale becomes official. Buyer and seller sign the final documents, funds are exchanged, and ownership legally transfers. In Indiana, closings are typically handled by a title company rather than an attorney, and the signing itself usually takes about an hour. Once it's done and recorded, you get the keys.",
+ "qa_facts": [["Also called", "Settlement"], ["Who runs it in Indiana", "A title company"], ["Typical length", "Around an hour at the table"], ["You'll need", "Photo ID and any required funds"], ["End result", "Deed transfers; you get the keys"]],
+ "sections": [
+   ["Who's at the Closing Table", ["In a typical Central Indiana closing, you'll meet with a closing agent from the title company who guides both sides through the documents. The buyer, seller, and their real estate agents may attend — sometimes together, sometimes separately. Lenders usually don't attend in person, but their loan documents are part of the package.", "Buyers and sellers don't always sit in the same room; it's common for each party to sign at different times or locations, especially when schedules or distance make it easier."]],
+   ["What You'll Sign and Pay", ["Buyers sign the loan documents, the closing disclosure, and paperwork accepting the deed. Sellers sign the deed transferring ownership and documents confirming payoff of any existing mortgage. You'll also settle the money: buyers bring their down payment and <a href=\"/services/closing-costs-buyers/\">closing costs</a>, usually by wire or cashier's check, and sellers receive their proceeds.", "Your <a href=\"/glossary/earnest-money/\">earnest money</a> deposit is credited toward what you owe, and prorated items like property taxes are squared up between buyer and seller."]],
+   ["How Indiana Closings Work", ["Indiana is a \"title company\" state, which means a licensed title company — not an attorney — usually conducts the closing. The title company also handles the <a href=\"/glossary/escrow/\">escrow</a> of funds, issues <a href=\"/glossary/title-insurance/\">title insurance</a>, and records the deed with the county after signing.", "Recording is what makes the transfer official in the public record. In most cases it happens the same day or the next business day, and that's typically when keys change hands."]],
+   ["Before and After You Sign", ["Before closing day, you'll do your final walk-through to confirm the home's condition. On the day itself, bring a valid photo ID and be ready to sign a lot of pages.", "Afterward, keep your closing documents somewhere safe — you'll want them for taxes and future reference. Questions about your closing? <a href=\"/contact/\">Get in touch</a>."]]
+ ],
+ "faqs": [
+   ["How long does closing day take?", "The signing itself usually takes around an hour, though it can be quicker or longer depending on the loan. The bigger timeline is the weeks of preparation leading up to it."],
+   ["What do I need to bring to closing?", "A valid government-issued photo ID and any funds you owe, usually sent by wire or brought as a cashier's check. Your title company or agent will tell you the exact amount ahead of time."],
+   ["When do I get the keys?", "Usually once the sale is funded and the deed is recorded, which is often the same day or the next business day. Your agent will confirm the exact hand-off with you."]
+ ],
+ "related": [["What Is Escrow?", "/glossary/escrow/"], ["Title Insurance", "/glossary/title-insurance/"], ["Earnest Money", "/glossary/earnest-money/"], ["Buyer Closing Costs", "/services/closing-costs-buyers/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"]]
+},
+{
+ "slug": "buyers-agency-agreement",
+ "term": "Buyer's Agency Agreement",
+ "h1": "What Is a Buyer's Agency Agreement?",
+ "title": "What Is a Buyer's Agency Agreement? | Your Realty Link",
+ "meta": "A buyer's agency agreement is a contract hiring an agent to represent you. Learn what it covers, how agents get paid, and why it's now standard in Indiana.",
+ "hero_sub": "The contract that puts a real estate agent officially on your side.",
+ "definition": "A buyer's agency agreement is a written contract between a homebuyer and a real estate agent that defines their working relationship, the agent's duties, and how the agent is compensated.",
+ "qa_lead": "A buyer's agency agreement is a written contract that hires a real estate agent to represent you as a buyer. It spells out what the agent will do for you, how long the agreement lasts, and how they get paid. In Indiana, having buyers sign an agreement before touring homes has become standard practice, and it makes the agent legally your advocate.",
+ "qa_facts": [["What it is", "A contract hiring your buyer's agent"], ["Creates", "A fiduciary duty to you, the buyer"], ["Covers", "Duties, term length, and compensation"], ["Common in Indiana", "Signed before touring homes"], ["Negotiable", "Terms and length can be discussed"]],
+ "sections": [
+   ["What the Agreement Does", ["A buyer's agency agreement turns a casual relationship into a formal one. Once you sign, your agent owes you fiduciary duties — loyalty, confidentiality, honest advice, and putting your interests first. Without an agreement, an agent you're working with may technically represent the seller or simply be a facilitator, not your advocate.", "The document typically names the agent and brokerage, describes the services they'll provide, sets a time period, and often defines the geographic area or type of property you're searching for."]],
+   ["Why Agents Ask Buyers to Sign One", ["Recent changes in how real estate commissions are handled nationwide have made written buyer agreements the norm. Practically, many agents and MLS systems now expect buyers to have a signed agreement in place before touring homes. It protects you by making the agent's role and duties clear from the start.", "Think of it less as a trap and more as a job description — it's the point where an agent officially goes to work for you."]],
+   ["How Buyer's Agents Get Paid", ["The agreement states how your agent is paid and by whom. Historically, sellers often covered the buyer's agent commission, and in many transactions that's still negotiated. But the agreement makes the arrangement explicit, so you know up front what you might owe if the seller doesn't cover it.", "Compensation is negotiable and varies by transaction. Ask your agent to walk you through the numbers and how they fit into your overall <a href=\"/services/closing-costs-buyers/\">closing costs</a>."]],
+   ["What to Look For Before You Sign", ["Read the term length and whether it's exclusive. Ask what happens if you're not satisfied and how to end the agreement early. Make sure you understand the compensation section and any \"protection period\" that applies after it ends.", "A good agent will happily explain every line. Learn more about <a href=\"/services/buyer-representation/\">buyer representation</a> or <a href=\"/contact/\">reach out</a> with questions before you sign anything."]]
+ ],
+ "faqs": [
+   ["Do I have to sign a buyer's agency agreement?", "In practice, most agents now ask you to sign one before showing homes, and it's become standard across the industry. The terms, including length, are negotiable, so discuss anything you're unsure about."],
+   ["How long does a buyer's agency agreement last?", "It varies. Some cover a single showing, others run for weeks or months. The length is negotiable, so ask for a term you're comfortable with before signing."],
+   ["Can I cancel a buyer's agency agreement?", "Often yes, depending on the terms. Many agreements include a way to end the relationship, but confirm the cancellation and any protection-period language before you sign."]
+ ],
+ "related": [["Buyer Representation", "/services/buyer-representation/"], ["Buyer Closing Costs", "/services/closing-costs-buyers/"], ["First-Time Home Buyers", "/services/first-time-home-buyers/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"], ["Real Estate Glossary", "/glossary/"]]
+},
+{
+ "slug": "final-walk-through",
+ "term": "Final Walk-Through",
+ "h1": "What Is a Final Walk-Through?",
+ "title": "What Is a Final Walk-Through? | Your Realty Link",
+ "meta": "A final walk-through is your last look at a home before closing. Learn what to check, how it fits the timeline, and what to do if something isn't right.",
+ "hero_sub": "Your last look before the keys are yours.",
+ "definition": "A final walk-through is the buyer's last visit to a home shortly before closing, done to confirm the property's condition and that agreed-upon repairs and terms have been met.",
+ "qa_lead": "A final walk-through is your last look at the home right before closing day. It's not another inspection — it's a chance to confirm the house is in the condition you agreed to, that any negotiated repairs are done, and that nothing has changed since your offer. It usually happens within a day or two of closing.",
+ "qa_facts": [["What it is", "A buyer's last look before closing"], ["When", "Usually 1-2 days before closing"], ["Purpose", "Confirm condition and agreed repairs"], ["Not the same as", "A home inspection"], ["If there's a problem", "Your agent addresses it before closing"]],
+ "sections": [
+   ["What You're Checking For", ["During the walk-through, you're confirming the home is in the shape you expect. Check that agreed-upon repairs were completed, that fixtures and appliances included in the sale are still there, and that the seller has removed their belongings and any trash. Test the basics — lights, faucets, toilets, garage door, heating and cooling, and outlets.", "Also look for anything new: damage from moving out, a leak that appeared since your last visit, or items that were supposed to convey but are missing. Bring your purchase agreement and inspection notes so you can compare."]],
+   ["How the Walk-Through Fits the Timeline", ["The final walk-through is usually scheduled within a day or two of closing, once the seller has moved out. It's the last checkpoint after your inspection, appraisal, and any repair negotiations are complete. Skipping it isn't wise — it's your chance to catch problems while you still have leverage, before ownership transfers.", "If your purchase was subject to repairs handled through a <a href=\"/glossary/contingency/\">contingency</a>, the walk-through is where you verify that work actually got done."]],
+   ["What to Do If Something's Wrong", ["If something isn't right, don't panic and don't feel pressured to sign anyway. Tell your agent right away. Depending on the issue, the closing can be delayed, funds can be held back in <a href=\"/glossary/escrow/\">escrow</a> to cover a repair, or the seller can be asked to make it right before you close.", "Most walk-throughs go smoothly, but the whole point is to protect you. Have questions about your walk-through or closing? <a href=\"/contact/\">Reach out</a> and we'll help."]]
+ ],
+ "faqs": [
+   ["Is a final walk-through the same as a home inspection?", "No. An inspection is a detailed professional evaluation done earlier in the process. The walk-through is a quick visual check right before closing to confirm the home's condition hasn't changed and repairs were completed."],
+   ["What if the seller hasn't finished agreed-upon repairs?", "Let your agent know immediately. Options include delaying closing, holding money in escrow to cover the work, or requiring the seller to complete it before the sale is finalized."],
+   ["Can I skip the final walk-through?", "You can, but it's rarely a good idea. It's your last chance to spot issues while you still have negotiating power, so most buyers take advantage of it."]
+ ],
+ "related": [["What Is Escrow?", "/glossary/escrow/"], ["Contingency", "/glossary/contingency/"], ["Buyer Closing Costs", "/services/closing-costs-buyers/"], ["Buying a Home in Indianapolis", "/guides/buying-a-home-in-indianapolis/"], ["Real Estate Glossary", "/glossary/"]]
+},
+{
+ "slug": "as-is-sale",
+ "term": "As-Is Sale",
+ "h1": "What Is an As-Is Sale?",
+ "title": "What Is an As-Is Sale? | Your Realty Link",
+ "meta": "An as-is sale means the seller won't make repairs, but you can still inspect. Learn how as-is home sales work in Indiana and what buyers and sellers should know.",
+ "hero_sub": "Sold in current condition — but you still have more rights than you might think.",
+ "definition": "An as-is sale is a real estate transaction in which the seller offers the property in its current condition and won't make repairs, though the buyer can typically still inspect and back out based on what they find.",
+ "qa_lead": "An as-is sale means the seller is offering the home in its current condition and doesn't plan to make repairs or give credits for them. It does not mean you give up your right to inspect the property. In Indiana, sellers still generally have to complete a <a href=\"/glossary/sellers-disclosure/\">seller's disclosure</a>, and buyers can usually still walk away if an inspection reveals a problem.",
+ "qa_facts": [["What it means", "Seller won't make repairs"], ["You can still", "Inspect the property"], ["Disclosure", "Indiana seller's disclosure still applies"], ["Common for", "Estates, foreclosures, investor deals"], ["Doesn't mean", "The seller can hide known defects"]],
+ "sections": [
+   ["What \"As-Is\" Really Means", ["Selling a home \"as-is\" signals that the seller won't be making repairs or improvements before closing and won't negotiate credits for the property's condition. The price often reflects that. It's a way of saying, \"what you see is what you get.\"", "Importantly, as-is refers to condition, not disclosure. In Indiana, sellers of most residential homes are still required to complete a <a href=\"/glossary/sellers-disclosure/\">seller's disclosure</a> form and can't knowingly conceal or misrepresent defects they're aware of."]],
+   ["You Can Still Inspect", ["An as-is sale doesn't take away your right to a home inspection. Most buyers should still hire an inspector to understand exactly what they're buying. Depending on how your offer is written, you may keep an inspection <a href=\"/glossary/contingency/\">contingency</a> that lets you cancel if the inspection turns up something you can't live with.", "The difference is expectation: in an as-is deal, you generally can't ask the seller to fix what the inspection finds. You can, however, use that information to decide whether to move forward or walk away."]],
+   ["Why Sellers Choose As-Is", ["Sellers choose as-is for many reasons. Estate and probate sales, where heirs are settling a loved one's property, are often as-is because no one has the time or funds to make repairs. Foreclosures and investor flips are commonly as-is too, as are situations where a seller simply wants a faster, simpler sale.", "An as-is listing isn't a red flag by itself — it just tells you the seller's starting position on repairs. Plenty of solid homes are sold this way."]],
+   ["Tips for Buyers and Sellers in Indiana", ["If you're buying as-is, budget for potential repairs, read the disclosure closely, and lean on your inspection. If you're selling as-is, know that pricing and honest disclosure matter more than ever — a fair price and full transparency attract serious buyers.", "Thinking about selling? Start with a <a href=\"/services/free-home-valuation/\">free home valuation</a> or <a href=\"/contact/\">contact us</a> to talk through your options."]]
+ ],
+ "faqs": [
+   ["Can I still get an inspection on an as-is home?", "Yes. As-is refers to the seller not making repairs, not to your right to inspect. Most buyers should still hire an inspector so they fully understand the home's condition before closing."],
+   ["Does \"as-is\" let the seller hide problems?", "No. In Indiana, sellers of most homes must still complete a seller's disclosure and can't knowingly conceal known defects. As-is only means they won't repair those issues."],
+   ["Why would someone sell a house as-is?", "Common reasons include estate or probate sales, foreclosures, investor properties, or a seller who wants a quicker, simpler transaction without negotiating repairs."]
+ ],
+ "related": [["Seller's Disclosure", "/glossary/sellers-disclosure/"], ["Contingency", "/glossary/contingency/"], ["Free Home Valuation", "/services/free-home-valuation/"], ["Selling a Home in Indianapolis", "/guides/selling-a-home-in-indianapolis/"], ["Real Estate Glossary", "/glossary/"]]
+}
+]
