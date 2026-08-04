@@ -1,0 +1,104 @@
+{
+ "bartholomew-county": {
+  "name": "Bartholomew County",
+  "lat": 39.1914156,
+  "lon": -85.8204601,
+  "state": "Indiana"
+ },
+ "boone-county": {
+  "name": "Boone County",
+  "lat": 40.0459913,
+  "lon": -86.4650842,
+  "state": "Indiana"
+ },
+ "brown-county": {
+  "name": "Brown County",
+  "lat": 39.1682855,
+  "lon": -86.2297004,
+  "state": "Indiana"
+ },
+ "decatur-county": {
+  "name": "Decatur County",
+  "lat": 39.2862128,
+  "lon": -85.4943058,
+  "state": "Indiana"
+ },
+ "hamilton-county": {
+  "name": "Hamilton County",
+  "lat": 40.0749813,
+  "lon": -86.0498885,
+  "state": "Indiana"
+ },
+ "hancock-county": {
+  "name": "Hancock County",
+  "lat": 39.8127873,
+  "lon": -85.7874738,
+  "state": "Indiana"
+ },
+ "hendricks-county": {
+  "name": "Hendricks County",
+  "lat": 39.7565309,
+  "lon": -86.5173641,
+  "state": "Indiana"
+ },
+ "jackson-county": {
+  "name": "Jackson County",
+  "lat": 38.9023184,
+  "lon": -86.0650856,
+  "state": "Indiana"
+ },
+ "jennings-county": {
+  "name": "Jennings County",
+  "lat": 38.9957749,
+  "lon": -85.6359201,
+  "state": "Indiana"
+ },
+ "johnson-county": {
+  "name": "Johnson County",
+  "lat": 39.4891804,
+  "lon": -86.1079903,
+  "state": "Indiana"
+ },
+ "madison-county": {
+  "name": "Madison County",
+  "lat": 40.1624531,
+  "lon": -85.7260804,
+  "state": "Indiana"
+ },
+ "marion-county": {
+  "name": "Marion County",
+  "lat": 39.779801,
+  "lon": -86.1394092,
+  "state": "Indiana"
+ },
+ "montgomery-county": {
+  "name": "Montgomery County",
+  "lat": 40.0361447,
+  "lon": -86.9007083,
+  "state": "Indiana"
+ },
+ "morgan-county": {
+  "name": "Morgan County",
+  "lat": 39.4665575,
+  "lon": -86.4556794,
+  "state": "Indiana"
+ },
+ "parke-county": {
+  "name": "Parke County",
+  "lat": 39.7686321,
+  "lon": -87.2158436,
+  "state": "Indiana"
+ },
+ "putnam-county": {
+  "name": "Putnam County",
+  "lat": 39.6666195,
+  "lon": -86.8374032,
+  "state": "Indiana"
+ },
+ "shelby-county": {
+  "name": "Shelby County",
+  "lat": 39.493485,
+  "lon": -85.8190596,
+  "state": "Indiana"
+ }
+}

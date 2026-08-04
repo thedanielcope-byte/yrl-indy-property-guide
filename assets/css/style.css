@@ -251,6 +251,24 @@ p  { margin-bottom: 1rem; }
       var(--hero-img);
   }
 }
+/* Hero street-map support (set-map-heroes.py adds `.has-map` + `--hero-img`).
+   The map is a DARK style, so it needs a lighter scrim than a photo — the street
+   grid stays visible as a premium texture while the white headline stays crisp. */
+.page-hero.has-map {
+  background-image:
+    linear-gradient(100deg, rgba(19,42,68,.92) 0%, rgba(19,42,68,.60) 44%, rgba(19,42,68,.22) 100%),
+    var(--hero-img);
+  background-size: cover, cover;
+  background-position: center, var(--hero-pos, center);
+  background-repeat: no-repeat, no-repeat;
+}
+@media (max-width: 760px) {
+  .page-hero.has-map {
+    background-image:
+      linear-gradient(180deg, rgba(19,42,68,.90) 0%, rgba(19,42,68,.72) 55%, rgba(19,42,68,.90) 100%),
+      var(--hero-img);
+  }
+}
 .page-hero .container { position: relative; }
 .page-hero h1 {
   color: var(--white);

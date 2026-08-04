@@ -20,6 +20,16 @@ ZOOM = 12
 W, H = 480, 210                     # retina-ish; cards crop via object-fit: cover
 PIN = "%23c03926"                   # brand red
 
+# Page-hero backgrounds: a dark map (readable under a light navy scrim), wide, no
+# pin (text sits over it). Cities zoom in; counties zoom out to show the area.
+HERO_STYLE = "dark-matter-brown"
+HERO_W, HERO_H = 1280, 460
+CITY_HERO_ZOOM = 12
+COUNTY_HERO_ZOOM = 10
+COUNTY_COORDS = os.path.join(ROOT, "county_coords.json")
+HERO_DIR = os.path.join(OUTDIR, "heroes")
+COUNTY_DIR = os.path.join(OUTDIR, "counties")
+
 # central-Indiana sanity box (looser than the query filter) for validation
 IN_BOX = dict(lat=(38.2, 40.9), lon=(-87.6, -84.7))
 
@@ -102,6 +112,65 @@ def maps():
     print(f"generated {done} city maps -> assets/img/citymaps/*.webp")
 
 
+def _save_webp(url, path):
+    from PIL import Image
+    import io
+    img = Image.open(io.BytesIO(get(url))).convert("RGB")
+    img.save(path, "WEBP", quality=80, method=6)
+
+
+def city_heroes():
+    """Wide dark street map per city for the page-hero background (no pin)."""
+    if not KEY: sys.exit("Set GEOAPIFY_KEY in the environment.")
+    os.makedirs(HERO_DIR, exist_ok=True)
+    coords = json.load(open(COORDS, encoding="utf-8"))
+    done = 0
+    for k, c in coords.items():
+        if not c.get("lat"): continue
+        url = (f"https://maps.geoapify.com/v1/staticmap?style={HERO_STYLE}&width={HERO_W}&height={HERO_H}"
+               f"&center=lonlat:{c['lon']},{c['lat']}&zoom={CITY_HERO_ZOOM}&apiKey={KEY}")
+        try:
+            _save_webp(url, os.path.join(HERO_DIR, f"{k}-hero.webp")); done += 1
+        except Exception as e:
+            print(f"  ✗ {k}: {e}")
+    print(f"generated {done} city hero maps -> assets/img/citymaps/heroes/*-hero.webp")
+
+
+def county_list():
+    return sorted(os.path.basename(os.path.dirname(p)).replace("-indiana-real-estate", "")
+                  for p in glob.glob(os.path.join(ROOT, "counties", "*", "index.html")))
+
+
+def counties():
+    """Geocode each county (centroid) and render a zoomed-out dark hero map."""
+    if not KEY: sys.exit("Set GEOAPIFY_KEY in the environment.")
+    os.makedirs(COUNTY_DIR, exist_ok=True)
+    cc = json.load(open(COUNTY_COORDS, encoding="utf-8")) if os.path.exists(COUNTY_COORDS) else {}
+    for slug in county_list():
+        name = slug.replace("-", " ").title()          # e.g. "Hamilton County"
+        if slug not in cc or not cc[slug].get("lat"):
+            q = urllib.parse.quote(f"{name}, Indiana, USA")
+            url = (f"https://api.geoapify.com/v1/geocode/search?text={q}&format=json&limit=1"
+                   f"&bias=proximity:-86.15,39.77&filter=rect:-88.1,37.8,-84.8,41.8&apiKey={KEY}")
+            try:
+                r = json.loads(get(url)).get("results", [])
+            except Exception as e:
+                print(f"  ✗ geocode {name}: {e}"); continue
+            if not r: print(f"  ✗ geocode {name}: no result"); continue
+            cc[slug] = dict(name=name, lat=r[0]["lat"], lon=r[0]["lon"], state=r[0].get("state"))
+    json.dump(cc, open(COUNTY_COORDS, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    done = 0
+    for slug, c in cc.items():
+        if not c.get("lat"): continue
+        url = (f"https://maps.geoapify.com/v1/staticmap?style={HERO_STYLE}&width={HERO_W}&height={HERO_H}"
+               f"&center=lonlat:{c['lon']},{c['lat']}&zoom={COUNTY_HERO_ZOOM}&apiKey={KEY}")
+        try:
+            _save_webp(url, os.path.join(COUNTY_DIR, f"{slug}-hero.webp")); done += 1
+        except Exception as e:
+            print(f"  ✗ {slug}: {e}")
+    print(f"geocoded/rendered {done} county hero maps -> assets/img/citymaps/counties/*-hero.webp")
+
+
 if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else "geocode"
-    (geocode if mode == "geocode" else maps)()
+    {"geocode": geocode, "maps": maps, "heroes": city_heroes, "counties": counties}[mode]()

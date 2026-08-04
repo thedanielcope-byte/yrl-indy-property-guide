@@ -82,6 +82,8 @@ def strip_hero(html):
     """Remove any existing hero-photo wiring so the page falls back to gradient."""
     html = re.sub(r'\n?\s*' + re.escape(PRELOAD_MARK) + r'.*?\n', '\n', html, flags=re.S)
     html = html.replace('<section class="page-hero has-photo"', '<section class="page-hero"')
+    # a real photo also supersedes a map hero (set-map-heroes.py)
+    html = html.replace('<section class="page-hero has-map"', '<section class="page-hero"')
     html = re.sub(r'(<section class="page-hero")\s+style="[^"]*--hero-img[^"]*"', r'\1', html)
     return html
 
