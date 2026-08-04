@@ -1,0 +1,647 @@
+{
+ "columbus": {
+  "name": "Columbus",
+  "county": "Bartholomew County",
+  "url": "/cities/bartholomew-county/columbus-indiana-real-estate/",
+  "price": "the $200s to the $500s+",
+  "schools": "Bartholomew Consolidated School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 50 minutes to downtown Indianapolis",
+  "character": "a Bartholomew County community known for its local character, Bartholomew Consolidated School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "jamestown": {
+  "name": "Jamestown",
+  "county": "Boone County",
+  "url": "/cities/boone-county/jamestown-indiana-real-estate/",
+  "price": "the $150s to the $280s+",
+  "schools": "Western Boone Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 50 minutes to downtown Indianapolis",
+  "character": "a Boone County community known for its local character, Western Boone Schools, and convenient access to the greater Indianapolis area"
+ },
+ "thorntown": {
+  "name": "Thorntown",
+  "county": "Boone County",
+  "url": "/cities/boone-county/thorntown-indiana-real-estate/",
+  "price": "the $180s to the $300s+",
+  "schools": "Western Boone Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 45 minutes to downtown Indianapolis",
+  "character": "a Boone County community known for its local character, Western Boone Schools, and convenient access to the greater Indianapolis area"
+ },
+ "bean-blossom": {
+  "name": "Bean Blossom",
+  "county": "Brown County",
+  "url": "/cities/brown-county/bean-blossom-indiana-real-estate/",
+  "price": "the $200s to the $400s+",
+  "schools": "Brown County School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 50 minutes to downtown Indianapolis",
+  "character": "a Brown County community known for its local character, Brown County School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "nashville": {
+  "name": "Nashville",
+  "county": "Brown County",
+  "url": "/cities/brown-county/nashville-indiana-real-estate/",
+  "price": "the $300s to the $700s+",
+  "schools": "Brown County School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "a manageable drive to downtown Indianapolis",
+  "character": "a Brown County community known for its local character, Brown County School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "greensburg": {
+  "name": "Greensburg",
+  "county": "Decatur County",
+  "url": "/cities/decatur-county/greensburg-indiana-real-estate/",
+  "price": "the $180s to the $320s+",
+  "schools": "Greensburg Community School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 55 minutes to downtown Indianapolis",
+  "character": "a Decatur County community known for its local character, Greensburg Community School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "westport": {
+  "name": "Westport",
+  "county": "Decatur County",
+  "url": "/cities/decatur-county/westport-indiana-real-estate/",
+  "price": "the $150s to the $280s+",
+  "schools": "South Decatur Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 70 minutes to downtown Indianapolis",
+  "character": "a Decatur County community known for its local character, South Decatur Schools, and convenient access to the greater Indianapolis area"
+ },
+ "arcadia": {
+  "name": "Arcadia",
+  "county": "Hamilton County",
+  "url": "/cities/hamilton-county/arcadia-indiana-real-estate/",
+  "price": "the $200s to the $400s+",
+  "schools": "Hamilton Heights Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 40 minutes to downtown Indianapolis",
+  "character": "a Hamilton County community known for its local character, Hamilton Heights Schools, and convenient access to the greater Indianapolis area"
+ },
+ "atlanta": {
+  "name": "Atlanta",
+  "county": "Hamilton County",
+  "url": "/cities/hamilton-county/atlanta-indiana-real-estate/",
+  "price": "the $180s to the $300s+",
+  "schools": "Hamilton Heights Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 45 minutes to downtown Indianapolis",
+  "character": "a Hamilton County community known for its local character, Hamilton Heights Schools, and convenient access to the greater Indianapolis area"
+ },
+ "cicero": {
+  "name": "Cicero",
+  "county": "Hamilton County",
+  "url": "/cities/hamilton-county/cicero-indiana-real-estate/",
+  "price": "the $250s to the $1M+",
+  "schools": "Hamilton Heights Community School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 35 minutes to downtown Indianapolis",
+  "character": "a Hamilton County community known for its local character, Hamilton Heights Community School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "sheridan": {
+  "name": "Sheridan",
+  "county": "Hamilton County",
+  "url": "/cities/hamilton-county/sheridan-indiana-real-estate/",
+  "price": "the $180s to the $300s+",
+  "schools": "Sheridan Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 45 minutes to downtown Indianapolis",
+  "character": "a Hamilton County community known for its local character, Sheridan Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "cumberland": {
+  "name": "Cumberland",
+  "county": "Hancock / E Marion",
+  "url": "/cities/hancock-county/cumberland-indiana-real-estate/",
+  "price": "the $150s to the $300s+",
+  "schools": "Mt. Vernon Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 15 minutes to downtown Indianapolis",
+  "character": "a Hancock / E Marion community known for its local character, Mt. Vernon Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "fortville": {
+  "name": "Fortville",
+  "county": "Hancock County",
+  "url": "/cities/hancock-county/fortville-indiana-real-estate/",
+  "price": "the $250s to the $450s+",
+  "schools": "Mt. Vernon Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 15 minutes to downtown Indianapolis",
+  "character": "a Hancock County community known for its local character, Mt. Vernon Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "greenfield": {
+  "name": "Greenfield",
+  "county": "Hancock County",
+  "url": "/cities/hancock-county/greenfield-indiana-real-estate/",
+  "price": "the $200s to the $400s+",
+  "schools": "Greenfield-Central Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 30 minutes to downtown Indianapolis",
+  "character": "a Hancock County community known for its local character, Greenfield-Central Schools, and convenient access to the greater Indianapolis area"
+ },
+ "new-palestine": {
+  "name": "New Palestine",
+  "county": "Hancock County",
+  "url": "/cities/hancock-county/new-palestine-indiana-real-estate/",
+  "price": "the $280s to the $500s+",
+  "schools": "Southern Hancock Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 25 minutes to downtown Indianapolis",
+  "character": "a Hancock County community known for its local character, Southern Hancock Schools, and convenient access to the greater Indianapolis area"
+ },
+ "shirley": {
+  "name": "Shirley",
+  "county": "Hancock County",
+  "url": "/cities/hancock-county/shirley-indiana-real-estate/",
+  "price": "the $150s to the $250s+",
+  "schools": "Eastern Hancock Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 45 minutes to downtown Indianapolis",
+  "character": "a Hancock County community known for its local character, Eastern Hancock Schools, and convenient access to the greater Indianapolis area"
+ },
+ "clayton": {
+  "name": "Clayton",
+  "county": "Hendricks County",
+  "url": "/cities/hendricks-county/clayton-indiana-real-estate/",
+  "price": "the $200s to the $350s+",
+  "schools": "Mill Creek Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 40 minutes to downtown Indianapolis",
+  "character": "a Hendricks County community known for its local character, Mill Creek Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "pittsboro": {
+  "name": "Pittsboro",
+  "county": "Hendricks County",
+  "url": "/cities/hendricks-county/pittsboro-indiana-real-estate/",
+  "price": "the $250s to the $400s+",
+  "schools": "Tri-West Hendricks Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 30 minutes to downtown Indianapolis",
+  "character": "a Hendricks County community known for its local character, Tri-West Hendricks Schools, and convenient access to the greater Indianapolis area"
+ },
+ "seymour": {
+  "name": "Seymour",
+  "county": "Jackson County",
+  "url": "/cities/jackson-county/seymour-indiana-real-estate/",
+  "price": "the $180s to the $350s+",
+  "schools": "Seymour Community School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 70 minutes to downtown Indianapolis",
+  "character": "a Jackson County community known for its local character, Seymour Community School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "north-vernon": {
+  "name": "North Vernon",
+  "county": "Jennings County",
+  "url": "/cities/jennings-county/north-vernon-indiana-real-estate/",
+  "price": "the $150s to the $280s+",
+  "schools": "Jennings County School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 90 minutes to downtown Indianapolis",
+  "character": "a Jennings County community known for its local character, Jennings County School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "bargersville": {
+  "name": "Bargersville",
+  "county": "Johnson County",
+  "url": "/cities/johnson-county/bargersville-indiana-real-estate/",
+  "price": "the $300s to the $600s+",
+  "schools": "Center Grove Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 25 minutes to downtown Indianapolis",
+  "character": "a Johnson County community known for its local character, Center Grove Schools, and convenient access to the greater Indianapolis area"
+ },
+ "edinburgh": {
+  "name": "Edinburgh",
+  "county": "Johnson County",
+  "url": "/cities/johnson-county/edinburgh-indiana-real-estate/",
+  "price": "the $180s to the $300s+",
+  "schools": "Edinburgh Community School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 40 minutes to downtown Indianapolis",
+  "character": "a Johnson County community known for its local character, Edinburgh Community School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "trafalgar": {
+  "name": "Trafalgar",
+  "county": "Johnson County",
+  "url": "/cities/johnson-county/trafalgar-indiana-real-estate/",
+  "price": "the $200s to the $350s+",
+  "schools": "Indian Creek Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 40 minutes to downtown Indianapolis",
+  "character": "a Johnson County community known for its local character, Indian Creek Schools, and convenient access to the greater Indianapolis area"
+ },
+ "whiteland": {
+  "name": "Whiteland",
+  "county": "Johnson County",
+  "url": "/cities/johnson-county/whiteland-indiana-real-estate/",
+  "price": "the $250s to the $400s+",
+  "schools": "Clark-Pleasant Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 25 minutes to downtown Indianapolis",
+  "character": "a Johnson County community known for its local character, Clark-Pleasant Schools, and convenient access to the greater Indianapolis area"
+ },
+ "alexandria": {
+  "name": "Alexandria",
+  "county": "Madison County",
+  "url": "/cities/madison-county/alexandria-indiana-real-estate/",
+  "price": "the $130s to the $280s+",
+  "schools": "Alexandria Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 50 minutes to downtown Indianapolis",
+  "character": "a Madison County community known for its local character, Alexandria Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "anderson": {
+  "name": "Anderson",
+  "county": "Madison County",
+  "url": "/cities/madison-county/anderson-indiana-real-estate/",
+  "price": "the $150s to the $250s",
+  "schools": "Anderson Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "a manageable drive to downtown Indianapolis",
+  "character": "a Madison County community known for its local character, Anderson Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "elwood": {
+  "name": "Elwood",
+  "county": "Madison County",
+  "url": "/cities/madison-county/elwood-indiana-real-estate/",
+  "price": "the $130s to the $280s+",
+  "schools": "Elwood Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 50 minutes to downtown Indianapolis",
+  "character": "a Madison County community known for its local character, Elwood Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "lapel": {
+  "name": "Lapel",
+  "county": "Madison County",
+  "url": "/cities/madison-county/lapel-indiana-real-estate/",
+  "price": "the $180s to the $350s+",
+  "schools": "Frankton-Lapel Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 30 minutes to downtown Indianapolis",
+  "character": "a Madison County community known for its local character, Frankton-Lapel Schools, and convenient access to the greater Indianapolis area"
+ },
+ "pendleton": {
+  "name": "Pendleton",
+  "county": "Madison County",
+  "url": "/cities/madison-county/pendleton-indiana-real-estate/",
+  "price": "the $200s to the $400s+",
+  "schools": "South Madison Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 25 minutes to downtown Indianapolis",
+  "character": "a Madison County community known for its local character, South Madison Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "beech-grove": {
+  "name": "Beech Grove",
+  "county": "Marion County",
+  "url": "/cities/marion-county/beech-grove-indiana-real-estate/",
+  "price": "the $150s to the $280s",
+  "schools": "Beech Grove City Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 12 minutes to downtown Indianapolis",
+  "character": "a Marion County community known for its local character, Beech Grove City Schools, and convenient access to the greater Indianapolis area"
+ },
+ "broad-ripple": {
+  "name": "Broad Ripple",
+  "county": "Marion County",
+  "url": "/cities/marion-county/broad-ripple-indianapolis-real-estate/",
+  "price": "the $250s to the $600s+",
+  "schools": "Indianapolis Public Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 15 minutes to downtown Indianapolis",
+  "character": "a Marion County community known for its local character, Indianapolis Public Schools, and convenient access to the greater Indianapolis area"
+ },
+ "eagle-creek": {
+  "name": "Eagle Creek",
+  "county": "Marion County",
+  "url": "/cities/marion-county/eagle-creek-indianapolis-real-estate/",
+  "price": "the $200s to the $400s+",
+  "schools": "Indianapolis Public Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 20 minutes to downtown Indianapolis",
+  "character": "a Marion County community known for its local character, Indianapolis Public Schools, and convenient access to the greater Indianapolis area"
+ },
+ "geist": {
+  "name": "Geist",
+  "county": "Marion & Hamilton Co.",
+  "url": "/cities/marion-county/geist-indiana-real-estate/",
+  "price": "the $300s to the $1M+",
+  "schools": "Hamilton Southeastern Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 25 minutes to downtown Indianapolis",
+  "character": "a Marion & Hamilton Co. community known for its local character, Hamilton Southeastern Schools, and convenient access to the greater Indianapolis area"
+ },
+ "irvington": {
+  "name": "Irvington",
+  "county": "Marion County",
+  "url": "/cities/marion-county/irvington-indianapolis-real-estate/",
+  "price": "the $150s to the $350s+",
+  "schools": "Indianapolis Public Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 10 minutes to downtown Indianapolis",
+  "character": "a Marion County community known for its local character, Indianapolis Public Schools, and convenient access to the greater Indianapolis area"
+ },
+ "crawfordsville": {
+  "name": "Crawfordsville",
+  "county": "Montgomery County",
+  "url": "/cities/montgomery-county/crawfordsville-indiana-real-estate/",
+  "price": "the $150s to the $300s+",
+  "schools": "Crawfordsville Community School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 50 minutes to downtown Indianapolis",
+  "character": "a Montgomery County community known for its local character, Crawfordsville Community School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "martinsville": {
+  "name": "Martinsville",
+  "county": "Morgan County",
+  "url": "/cities/morgan-county/martinsville-indiana-real-estate/",
+  "price": "the $180s to the $350s+",
+  "schools": "MSD of Martinsville",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 35 minutes to downtown Indianapolis",
+  "character": "a Morgan County community known for its local character, MSD of Martinsville, and convenient access to the greater Indianapolis area"
+ },
+ "monrovia": {
+  "name": "Monrovia",
+  "county": "Morgan County",
+  "url": "/cities/morgan-county/monrovia-indiana-real-estate/",
+  "price": "the $200s to the $350s+",
+  "schools": "Monroe-Gregg Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 40 minutes to downtown Indianapolis",
+  "character": "a Morgan County community known for its local character, Monroe-Gregg Schools, and convenient access to the greater Indianapolis area"
+ },
+ "rockville": {
+  "name": "Rockville",
+  "county": "Parke County",
+  "url": "/cities/parke-county/rockville-indiana-real-estate/",
+  "price": "the $150s to the $280s+",
+  "schools": "North Central Parke Community School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 75 minutes to downtown Indianapolis",
+  "character": "a Parke County community known for its local character, North Central Parke Community School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "cloverdale": {
+  "name": "Cloverdale",
+  "county": "Putnam County",
+  "url": "/cities/putnam-county/cloverdale-indiana-real-estate/",
+  "price": "the $150s to the $280s+",
+  "schools": "Cloverdale Community Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 50 minutes to downtown Indianapolis",
+  "character": "a Putnam County community known for its local character, Cloverdale Community Schools, and convenient access to the greater Indianapolis area"
+ },
+ "greencastle": {
+  "name": "Greencastle",
+  "county": "Putnam County",
+  "url": "/cities/putnam-county/greencastle-indiana-real-estate/",
+  "price": "the $180s to the $350s+",
+  "schools": "Greencastle Community School Corporation",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 45 minutes to downtown Indianapolis",
+  "character": "a Putnam County community known for its local character, Greencastle Community School Corporation, and convenient access to the greater Indianapolis area"
+ },
+ "fairland": {
+  "name": "Fairland",
+  "county": "Shelby County",
+  "url": "/cities/shelby-county/fairland-indiana-real-estate/",
+  "price": "the $250s to the $400s+",
+  "schools": "Triton Central Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 30 minutes to downtown Indianapolis",
+  "character": "a Shelby County community known for its local character, Triton Central Schools, and convenient access to the greater Indianapolis area"
+ },
+ "morristown": {
+  "name": "Morristown",
+  "county": "Shelby County",
+  "url": "/cities/shelby-county/morristown-indiana-real-estate/",
+  "price": "the $180s to the $300s+",
+  "schools": "Shelby Eastern Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 40 minutes to downtown Indianapolis",
+  "character": "a Shelby County community known for its local character, Shelby Eastern Schools, and convenient access to the greater Indianapolis area"
+ },
+ "waldron": {
+  "name": "Waldron",
+  "county": "Shelby County",
+  "url": "/cities/shelby-county/waldron-indiana-real-estate/",
+  "price": "the $180s to the $300s+",
+  "schools": "Shelby Eastern Schools",
+  "areas": [
+   "established neighborhoods near the town center",
+   "newer subdivisions on the edge of town",
+   "quiet residential streets close to the schools",
+   "homes with a little more land just outside town"
+  ],
+  "commute": "about 45 minutes to downtown Indianapolis",
+  "character": "a Shelby County community known for its local character, Shelby Eastern Schools, and convenient access to the greater Indianapolis area"
+ }
+}

@@ -121,3 +121,10 @@ CITIES = {
    commute="about 35 minutes to downtown Indianapolis via I-74",
    character="the Shelby County seat offering some of the metro's most affordable homes, a revitalizing downtown on the Blue River, and easy interstate access"),
 }
+
+# Merge auto-extracted cities (facts pulled from the built city pages). Hand-curated entries above win.
+import json as _json, os as _os
+_auto = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "city_guides_auto.json")
+if _os.path.exists(_auto):
+    for _k, _v in _json.load(open(_auto, encoding="utf-8")).items():
+        CITIES.setdefault(_k, _v)
