@@ -17,6 +17,12 @@ FONT = ('<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?
         '<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>')
 LOGO_B64 = base64.b64encode(open(os.path.join(ROOT, "assets/img/yrl-logo.png"), "rb").read()).decode()
 
+def city_map_b64(city_key):
+    """Base64 the city's street map (with its baked-in Geoapify/OSM attribution)
+    for embedding on the PDF cover. Returns '' if we don't have a map."""
+    p = os.path.join(ROOT, "assets/img/citymaps", city_key + ".webp")
+    return base64.b64encode(open(p, "rb").read()).decode() if os.path.exists(p) else ""
+
 NAV_JS = ("<script>function toggleNav(){document.getElementById('siteNav').classList.toggle('open');}"
           "document.addEventListener('click',function(e){var dd=e.target.closest('.nav-item-dropdown');"
           "if(dd&&window.innerWidth<=960){var nav=dd.closest('.site-nav');if(nav&&nav.classList.contains('open'))"
@@ -116,6 +122,9 @@ def pdf_html(city_key, kind):
 <p>Get your free valuation at <strong>yourrealtylink.com</strong> · info@yourrealtylink.com</p></div>
 """
 
+    _mb = city_map_b64(city_key)
+    covermap = f'<div class="covermap"><img src="data:image/webp;base64,{_mb}"></div>' if _mb else ""
+
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @page {{ size: letter; margin: 0; }}
 *{{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,'Segoe UI',Arial,sans-serif;}}
@@ -126,6 +135,8 @@ body{{color:#1a1a1a;font-size:12px;line-height:1.6;}}
 .cover .csub{{font-size:19px;color:#f3d7d1;margin-top:16px;max-width:6.6in;}}
 .cover .cfoot{{font-size:15px;color:#f0dcd8;}}
 .cover .cfoot b{{color:#fff;}}
+.cover .covermap{{margin-top:28px;max-width:5.2in;border-radius:12px;overflow:hidden;border:3px solid rgba(255,255,255,.92);box-shadow:0 10px 30px rgba(0,0,0,.35);}}
+.cover .covermap img{{width:100%;display:block;}}
 .page{{padding:0.7in 0.9in;}}
 .sec{{margin-bottom:22px;page-break-inside:avoid;}}
 h2{{font-family:'Playfair Display',Georgia,serif;font-size:22px;color:{accent};border-bottom:2px solid {accent};padding-bottom:6px;margin-bottom:10px;}}
@@ -141,7 +152,7 @@ ul.areas li:before{{content:'▪';color:{accent};position:absolute;left:2px;}}
 .cta .big{{font-size:16px;color:{accent};font-weight:800;margin:10px 0;}}
 </style></head><body>
 <div class="cover"><img class="logo" src="data:image/png;base64,{LOGO_B64}">
-<div><h1>{esc(title)}</h1><div class="csub">{esc(sub)}</div></div>
+<div><h1>{esc(title)}</h1><div class="csub">{esc(sub)}</div>{covermap}</div>
 <div class="cfoot"><b>Your Realty Link</b> · Central Indiana Real Estate<br>yourrealtylink.com · 317-997-7404 · Daniel Cope, Real Estate Broker</div></div>
 <div class="page">{body}</div>
 </body></html>"""
