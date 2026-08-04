@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Keep build artifacts and demo/utility files out of the index
+Disallow: /valuation-tool/node_modules/
+Disallow: /valuation-tool/reports/
+Disallow: /assets/img/heroes/Hero-Photo-Checklist.html
+
 Sitemap: https://janetgiles.com/sitemap.xml

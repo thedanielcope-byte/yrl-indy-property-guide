@@ -99,6 +99,11 @@ def hub_page(agents):
  <meta property="og:description" content="{esc(desc)}">
  <meta property="og:url" content="https://janetgiles.com/agents/">
  <meta property="og:type" content="website">
+ <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:image" content="https://janetgiles.com/assets/img/og-default.png">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
  {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
@@ -179,6 +184,8 @@ def agent_page(a):
  <meta property="og:url" content="https://janetgiles.com/agents/{a['slug']}/">
  <meta property="og:type" content="profile">
  <meta property="og:image" content="{a['photo']}">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:image" content="{a['photo']}">
  <script type="application/ld+json">
  {json.dumps(schema, indent=1)}
  </script>
@@ -432,6 +439,8 @@ def premium_agent_page(a):
  <meta property="og:url" content="https://janetgiles.com/agents/{a['slug']}/">
  <meta property="og:type" content="profile">
  <meta property="og:image" content="{a['photo']}">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:image" content="{a['photo']}">
  <script type="application/ld+json">
  {json.dumps(schema, indent=1)}
  </script>
