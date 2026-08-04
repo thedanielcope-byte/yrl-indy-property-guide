@@ -111,7 +111,7 @@ def hub_page(agents):
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  <style>{GRID_CSS}</style>
 </head>
@@ -191,7 +191,7 @@ def agent_page(a):
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  <style>{AGENT_CSS}</style>
 </head>
@@ -446,7 +446,7 @@ def premium_agent_page(a):
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  <script type="application/ld+json">
  {faq_schema}
@@ -598,7 +598,7 @@ def premium_agent_page(a):
  </section>
 </main>
 {CANON_FTR}
-{TAIL}<script src="/assets/js/lead-form.js?v=406824a0"></script>
+{TAIL}<script src="/assets/js/lead-form.js?v=406824a0" defer></script>
 <script src="/assets/js/valuation-form.js?v=044c32e3"></script>
 </body>
 </html>
