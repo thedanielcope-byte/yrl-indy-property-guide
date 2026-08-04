@@ -93,7 +93,10 @@
 .county-card:hover { background: #c03926; }
 .county-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; color: #fff; }
 .county-card p { font-size:.82rem; color: rgba(255,255,255,.7); margin: 0; }
-.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.service-card.feat { grid-column: span 2; border-left-color: #1a1a1a; }
+@media (max-width: 900px) { .service-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .service-grid { grid-template-columns: 1fr; } .service-card.feat { grid-column: span 1; } }
 .service-card { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,.06); text-decoration: none; display: block; border-left: 4px solid #c03926; transition: transform.15s; }
 .service-card:hover { transform: translateY(-2px); }
 .service-card h3 { font-size: 1rem; color: #6e6e70; margin-bottom: 6px; }
@@ -625,12 +628,12 @@
  <p>Whether you're buying your first home, selling after years of memories, or building an investment portfolio — YRL has a service designed for your situation.</p>
  </div>
  <div class="service-grid">
- <a href="/services/buyer-representation/" class="service-card">
+ <a href="/services/buyer-representation/" class="service-card feat">
  <h3>Buyer Representation</h3>
  <p>Your YRL agent works exclusively for you — negotiating price, terms, and inspections so you get the best deal possible.</p>
  <span class="arrow">Explore Buyer Services →</span>
  </a>
- <a href="/services/sell-my-home/" class="service-card">
+ <a href="/services/sell-my-home/" class="service-card feat">
  <h3>Sell Your Home</h3>
  <p>Free CMA, professional marketing, MIBOR MLS exposure, and a proven plan to get your home sold quickly and for top dollar.</p>
  <span class="arrow">Explore Seller Services →</span>
@@ -645,10 +648,10 @@
  <p>Buying a new build? You need your own agent. YRL represents buyers in new construction at no extra cost to you.</p>
  <span class="arrow">Explore New Construction →</span>
  </a>
- <a href="/services/expired-listings/" class="service-card">
- <h3>Expired Listings</h3>
- <p>Your home didn't sell — now what? YRL specializes in relaunching homes that need a new strategy and fresh marketing.</p>
- <span class="arrow">Explore Expired Listings →</span>
+ <a href="/homes-with-acreage-central-indiana/" class="service-card">
+ <h3>Land &amp; Acreage</h3>
+ <p>Looking for land, a building lot, or a home with acreage in Central Indiana? YRL helps buyers and sellers of rural and large-lot properties.</p>
+ <span class="arrow">Explore Land &amp; Acreage →</span>
  </a>
  <a href="/services/join-yrl/" class="service-card">
  <h3>Join Our Team</h3>
