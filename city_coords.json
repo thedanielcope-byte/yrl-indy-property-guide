@@ -1,0 +1,436 @@
+{
+ "columbus": {
+  "name": "Columbus",
+  "lat": 39.2014405,
+  "lon": -85.9213796,
+  "state": "Indiana",
+  "county": "Bartholomew County"
+ },
+ "lebanon": {
+  "name": "Lebanon",
+  "lat": 40.0483744,
+  "lon": -86.4691677,
+  "state": "Indiana",
+  "county": "Boone County"
+ },
+ "whitestown": {
+  "name": "Whitestown",
+  "lat": 39.9972626,
+  "lon": -86.3458296,
+  "state": "Indiana",
+  "county": "Boone County"
+ },
+ "zionsville": {
+  "name": "Zionsville",
+  "lat": 39.950724,
+  "lon": -86.2616968,
+  "state": "Indiana",
+  "county": "Boone County"
+ },
+ "nashville": {
+  "name": "Nashville",
+  "lat": 39.2072,
+  "lon": -86.2469,
+  "state": "Indiana",
+  "county": "Brown County"
+ },
+ "greensburg": {
+  "name": "Greensburg",
+  "lat": 39.3372722,
+  "lon": -85.483581,
+  "state": "Indiana",
+  "county": "Decatur County"
+ },
+ "shirley": {
+  "name": "Shirley",
+  "lat": 39.8917038,
+  "lon": -85.5770184,
+  "state": "Indiana",
+  "county": "Hancock County"
+ },
+ "waldron": {
+  "name": "Waldron",
+  "lat": 39.4536932,
+  "lon": -85.6666529,
+  "state": "Indiana",
+  "county": "Shelby County"
+ },
+ "carmel": {
+  "name": "Carmel",
+  "lat": 39.9784186,
+  "lon": -86.1283681,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "cicero": {
+  "name": "Cicero",
+  "lat": 40.1323222,
+  "lon": -86.0137897,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "fishers": {
+  "name": "Fishers",
+  "lat": 39.9555928,
+  "lon": -86.0138729,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "westfield": {
+  "name": "Westfield",
+  "lat": 40.0428151,
+  "lon": -86.1274888,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "noblesville": {
+  "name": "Noblesville",
+  "lat": 40.0460881,
+  "lon": -86.0139854,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "greenfield": {
+  "name": "Greenfield",
+  "lat": 39.7855096,
+  "lon": -85.7681979,
+  "state": "Indiana",
+  "county": "Hancock County"
+ },
+ "mccordsville": {
+  "name": "McCordsville",
+  "lat": 39.8939648,
+  "lon": -85.9219417,
+  "state": "Indiana",
+  "county": "Hancock County"
+ },
+ "avon": {
+  "name": "Avon",
+  "lat": 39.7628227,
+  "lon": -86.3997168,
+  "state": "Indiana",
+  "county": "Hendricks County"
+ },
+ "brownsburg": {
+  "name": "Brownsburg",
+  "lat": 39.8444409,
+  "lon": -86.3968962,
+  "state": "Indiana",
+  "county": "Hendricks County"
+ },
+ "danville": {
+  "name": "Danville",
+  "lat": 39.7606013,
+  "lon": -86.5263879,
+  "state": "Indiana",
+  "county": "Hendricks County"
+ },
+ "plainfield": {
+  "name": "Plainfield",
+  "lat": 39.703872,
+  "lon": -86.399477,
+  "state": "Indiana",
+  "county": "Hendricks County"
+ },
+ "seymour": {
+  "name": "Seymour",
+  "lat": 38.9592201,
+  "lon": -85.8902547,
+  "state": "Indiana",
+  "county": "Jackson County"
+ },
+ "north-vernon": {
+  "name": "North Vernon",
+  "lat": 39.006165,
+  "lon": -85.6235796,
+  "state": "Indiana",
+  "county": "Jennings County"
+ },
+ "bargersville": {
+  "name": "Bargersville",
+  "lat": 39.5208818,
+  "lon": -86.1677657,
+  "state": "Indiana",
+  "county": "Johnson County"
+ },
+ "greenwood": {
+  "name": "Greenwood",
+  "lat": 39.6136987,
+  "lon": -86.1095429,
+  "state": "Indiana",
+  "county": "Johnson County"
+ },
+ "whiteland": {
+  "name": "Whiteland",
+  "lat": 39.5500485,
+  "lon": -86.0797079,
+  "state": "Indiana",
+  "county": "Johnson County"
+ },
+ "franklin": {
+  "name": "Franklin",
+  "lat": 39.4806056,
+  "lon": -86.0549863,
+  "state": "Indiana",
+  "county": "Johnson County"
+ },
+ "anderson": {
+  "name": "Anderson",
+  "lat": 40.1053196,
+  "lon": -85.6802541,
+  "state": "Indiana",
+  "county": "Madison County"
+ },
+ "lapel": {
+  "name": "Lapel",
+  "lat": 40.0687245,
+  "lon": -85.8479102,
+  "state": "Indiana",
+  "county": "Madison County"
+ },
+ "pendleton": {
+  "name": "Pendleton",
+  "lat": 40.0024801,
+  "lon": -85.745948,
+  "state": "Indiana",
+  "county": "Madison County"
+ },
+ "geist": {
+  "name": "Geist",
+  "lat": 39.9198791,
+  "lon": -86.0130213,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "beech-grove": {
+  "name": "Beech Grove",
+  "lat": 39.7221906,
+  "lon": -86.0894158,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "broad-ripple": {
+  "name": "Broad Ripple",
+  "lat": 39.868748,
+  "lon": -86.134659,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "eagle-creek": {
+  "name": "Eagle Creek",
+  "lat": 39.77636,
+  "lon": -86.2440992,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "irvington": {
+  "name": "Irvington",
+  "lat": 39.770876,
+  "lon": -86.0749843,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "lawrence": {
+  "name": "Lawrence",
+  "lat": 39.8386516,
+  "lon": -86.0252612,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "southport": {
+  "name": "Southport",
+  "lat": 39.659058,
+  "lon": -86.1156974,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "speedway": {
+  "name": "Speedway",
+  "lat": 39.7881233,
+  "lon": -86.2407144,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "crawfordsville": {
+  "name": "Crawfordsville",
+  "lat": 40.0408627,
+  "lon": -86.8997385,
+  "state": "Indiana",
+  "county": "Montgomery County"
+ },
+ "martinsville": {
+  "name": "Martinsville",
+  "lat": 39.4278253,
+  "lon": -86.428328,
+  "state": "Indiana",
+  "county": "Morgan County"
+ },
+ "bean-blossom": {
+  "name": "Bean Blossom",
+  "lat": 39.2545,
+  "lon": -86.2532,
+  "state": "Indiana",
+  "county": "Brown County"
+ },
+ "arcadia": {
+  "name": "Arcadia",
+  "lat": 40.1758704,
+  "lon": -86.0216521,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "atlanta": {
+  "name": "Atlanta",
+  "lat": 40.216067,
+  "lon": -86.0264853,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "fortville": {
+  "name": "Fortville",
+  "lat": 39.9322625,
+  "lon": -85.8480354,
+  "state": "Indiana",
+  "county": "Hancock County"
+ },
+ "pittsboro": {
+  "name": "Pittsboro",
+  "lat": 39.8639329,
+  "lon": -86.4669429,
+  "state": "Indiana",
+  "county": "Hendricks County"
+ },
+ "alexandria": {
+  "name": "Alexandria",
+  "lat": 40.2635468,
+  "lon": -85.6744815,
+  "state": "Indiana",
+  "county": "Madison County"
+ },
+ "elwood": {
+  "name": "Elwood",
+  "lat": 40.2769834,
+  "lon": -85.8419246,
+  "state": "Indiana",
+  "county": "Madison County"
+ },
+ "fairland": {
+  "name": "Fairland",
+  "lat": 39.5859946,
+  "lon": -85.8634727,
+  "state": "Indiana",
+  "county": "Shelby County"
+ },
+ "sheridan": {
+  "name": "Sheridan",
+  "lat": 40.1349677,
+  "lon": -86.2202749,
+  "state": "Indiana",
+  "county": "Hamilton County"
+ },
+ "rockville": {
+  "name": "Rockville",
+  "lat": 39.7625404,
+  "lon": -87.2291809,
+  "state": "Indiana",
+  "county": "Parke County"
+ },
+ "greencastle": {
+  "name": "Greencastle",
+  "lat": 39.6444898,
+  "lon": -86.8647316,
+  "state": "Indiana",
+  "county": "Putnam County"
+ },
+ "clayton": {
+  "name": "Clayton",
+  "lat": 39.6892129,
+  "lon": -86.5224984,
+  "state": "Indiana",
+  "county": "Hendricks County"
+ },
+ "cloverdale": {
+  "name": "Cloverdale",
+  "lat": 39.5147682,
+  "lon": -86.7938969,
+  "state": "Indiana",
+  "county": "Putnam County"
+ },
+ "new-palestine": {
+  "name": "New Palestine",
+  "lat": 39.7219882,
+  "lon": -85.8891471,
+  "state": "Indiana",
+  "county": "Hancock County"
+ },
+ "edinburgh": {
+  "name": "Edinburgh",
+  "lat": 39.3542176,
+  "lon": -85.9666577,
+  "state": "Indiana",
+  "county": "Johnson County"
+ },
+ "mooresville": {
+  "name": "Mooresville",
+  "lat": 39.6128243,
+  "lon": -86.37416,
+  "state": "Indiana",
+  "county": "Morgan County"
+ },
+ "jamestown": {
+  "name": "Jamestown",
+  "lat": 39.9260927,
+  "lon": -86.6279661,
+  "state": "Indiana",
+  "county": "Boone County"
+ },
+ "westport": {
+  "name": "Westport",
+  "lat": 39.1758853,
+  "lon": -85.5730273,
+  "state": "Indiana",
+  "county": "Decatur County"
+ },
+ "trafalgar": {
+  "name": "Trafalgar",
+  "lat": 39.4161604,
+  "lon": -86.150823,
+  "state": "Indiana",
+  "county": "Johnson County"
+ },
+ "shelbyville": {
+  "name": "Shelbyville",
+  "lat": 39.5214373,
+  "lon": -85.7769238,
+  "state": "Indiana",
+  "county": "Shelby County"
+ },
+ "thorntown": {
+  "name": "Thorntown",
+  "lat": 40.1294839,
+  "lon": -86.6066706,
+  "state": "Indiana",
+  "county": "Boone County"
+ },
+ "cumberland": {
+  "name": "Cumberland",
+  "lat": 39.7761534,
+  "lon": -85.9572036,
+  "state": "Indiana",
+  "county": "Marion County"
+ },
+ "monrovia": {
+  "name": "Monrovia",
+  "lat": 39.5789357,
+  "lon": -86.4822187,
+  "state": "Indiana",
+  "county": "Morgan County"
+ },
+ "morristown": {
+  "name": "Morristown",
+  "lat": 39.6732065,
+  "lon": -85.6989709,
+  "state": "Indiana",
+  "county": "Shelby County"
+ }
+}

@@ -56,8 +56,19 @@ def resolve(keys, cap):
     for k in keys[:cap]:
         info = city_info(k)
         if info:
+            info["key"] = k
             out.append(info)
     return out
+
+def hc_map(c):
+    """The card header: a real street map (with a baked-in pin) when we have one,
+    else the gradient + emoji-pin fallback."""
+    img = os.path.join(ROOT, "assets", "img", "citymaps", c["key"] + ".webp")
+    if os.path.exists(img):
+        return (f'<div class="hc-map"><img class="hc-mapimg" loading="lazy" '
+                f'src="/assets/img/citymaps/{c["key"]}.webp" '
+                f'alt="Map of {html.escape(c["name"])}, Indiana" width="480" height="210"></div>')
+    return '<div class="hc-map"><span class="hc-pin">&#128205;</span></div>'
 
 pop = resolve(cfg["popular"], cfg.get("popular_cap", 7))
 near = resolve(cfg["nearby"], cfg.get("nearby_cap", 12))
@@ -66,7 +77,7 @@ chips = '<div class="hero-quick-links">\n <span>Popular:</span>\n' + \
     "".join(f' <a href="{c["url"]}" class="hero-quick-link">{html.escape(c["name"])}</a>\n' for c in pop) + ' </div>'
 
 cards = '<div class="home-cities-grid">\n' + "".join(
-    f'  <a href="{c["url"]}" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div>'
+    f'  <a href="{c["url"]}" class="home-city-card">{hc_map(c)}'
     f'<div class="hc-body"><h3>{html.escape(c["name"])}</h3><span class="hc-county">{html.escape(c["county"])}</span>'
     f'<span class="hc-price">{html.escape(c["price"])}</span><span class="hc-arrow">&rarr;</span></div></a>\n'
     for c in near) + ' </div>'
