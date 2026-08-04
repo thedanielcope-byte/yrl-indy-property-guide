@@ -1,5 +1,7 @@
 {
  "nearby": [
+  "southport",
+  "shelbyville",
   "carmel",
   "fishers",
   "greenwood",
@@ -9,18 +11,15 @@
   "zionsville",
   "westfield",
   "plainfield",
-  "mccordsville",
-  "southport",
-  "shelbyville"
+  "mccordsville"
  ],
  "popular": [
+  "southport",
+  "shelbyville",
   "carmel",
   "fishers",
   "greenwood",
-  "noblesville",
-  "avon",
-  "zionsville",
-  "westfield"
+  "avon"
  ],
  "nearby_cap": 12,
  "popular_cap": 7
