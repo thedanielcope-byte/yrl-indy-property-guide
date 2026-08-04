@@ -33,6 +33,7 @@ jobs:
         run: |
           python3 sync-roster.py
           python3 inject_city_agents.py
+          python3 build_homepage_cities.py
           python3 bump-assets.py
 
       - name: Commit & push if anything changed

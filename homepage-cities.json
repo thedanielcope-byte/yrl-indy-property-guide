@@ -1,6 +1,27 @@
 {
-  "popular_cap": 7,
-  "popular": ["carmel", "fishers", "greenwood", "noblesville", "avon", "zionsville", "westfield"],
-  "nearby_cap": 12,
-  "nearby": ["carmel", "fishers", "greenwood", "noblesville", "avon", "brownsburg", "zionsville", "westfield", "plainfield", "mccordsville", "southport", "shelbyville"]
+ "nearby": [
+  "carmel",
+  "fishers",
+  "greenwood",
+  "noblesville",
+  "avon",
+  "brownsburg",
+  "zionsville",
+  "westfield",
+  "plainfield",
+  "mccordsville",
+  "southport",
+  "shelbyville"
+ ],
+ "popular": [
+  "carmel",
+  "fishers",
+  "greenwood",
+  "noblesville",
+  "avon",
+  "zionsville",
+  "westfield"
+ ],
+ "nearby_cap": 12,
+ "popular_cap": 7
 }

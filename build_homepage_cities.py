@@ -1,11 +1,40 @@
 #!/usr/bin/env python3
 """Regenerate the homepage hero 'Popular:' chips + 'Popular Cities Near
-Indianapolis' cards from homepage-cities.json (capped). Facts (name/county/price)
-are pulled from each city page's 'at a glance' box so they stay accurate."""
-import os, re, html, json, glob
+Indianapolis' cards. The city selection is edited by the broker in the hub
+(Supabase hub_content -> get_yrl_homepage_cities RPC); this script pulls it,
+caches it to homepage-cities.json, and falls back to that file if the hub is
+unreachable. Facts (name/county/price) are pulled from each city page's
+'at a glance' box so they stay accurate."""
+import os, re, html, json, glob, urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-cfg = json.load(open(os.path.join(ROOT, "homepage-cities.json"), encoding="utf-8"))
+CFG_FILE = os.path.join(ROOT, "homepage-cities.json")
+
+SB_URL = "https://wdvolamasztetwpitbwg.supabase.co"
+SB_KEY = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6"
+          "Indkdm9sYW1hc3p0ZXR3cGl0YndnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3Nzc2"
+          "MTYsImV4cCI6MjA5MTM1MzYxNn0.uiGIaZwr88ZNtAobfSV-axlpXB3sos2Rcw3FiFm6JO8")
+
+def load_cfg():
+    """Prefer the hub-edited config (Supabase); cache it locally. On any error,
+    use the last-known local cache so the build never fails on a hub hiccup."""
+    try:
+        req = urllib.request.Request(
+            f"{SB_URL}/rest/v1/rpc/get_yrl_homepage_cities", data=b"{}", method="POST",
+            headers={"apikey": SB_KEY, "Authorization": f"Bearer {SB_KEY}",
+                     "Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            remote = json.load(r)
+        if isinstance(remote, dict) and remote.get("popular") and remote.get("nearby"):
+            json.dump(remote, open(CFG_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            print("homepage cities: pulled from hub (Supabase)")
+            return remote
+        print("homepage cities: hub returned no config, using local cache")
+    except Exception as e:
+        print("homepage cities: hub unreachable (%s), using local cache" % e)
+    return json.load(open(CFG_FILE, encoding="utf-8"))
+
+cfg = load_cfg()
 
 def clean(s): return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", s or ""))).strip()
 
@@ -42,8 +71,18 @@ cards = '<div class="home-cities-grid">\n' + "".join(
     f'<span class="hc-price">{html.escape(c["price"])}</span><span class="hc-arrow">&rarr;</span></div></a>\n'
     for c in near) + ' </div>'
 
+def replace_between(text, name, block):
+    """Swap the content between <!-- NAME --> ... <!-- /NAME --> markers.
+    Idempotent and robust to nested tags inside the block (unlike a bare
+    non-greedy regex, which broke once the cards gained inner <div>s)."""
+    b, e = f"<!-- {name} -->", f"<!-- /{name} -->"
+    pat = re.compile(re.escape(b) + r".*?" + re.escape(e), re.DOTALL)
+    if not pat.search(text):
+        raise SystemExit(f"marker {name} not found in index.html")
+    return pat.sub(lambda m: f"{b}\n {block}\n {e}", text, count=1)
+
 t = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
-t = re.sub(r'<div class="hero-quick-links">.*?</div>', lambda m: chips, t, count=1, flags=re.DOTALL)
-t = re.sub(r'<div class="home-cities-grid">.*?</div>', lambda m: cards, t, count=1, flags=re.DOTALL)
+t = replace_between(t, "HOME-HERO-CHIPS", chips)
+t = replace_between(t, "HOME-CITIES-GRID", cards)
 open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(t)
 print("homepage rebuilt: %d popular chips, %d city cards" % (len(pop), len(near)))
