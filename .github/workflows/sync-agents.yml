@@ -32,6 +32,7 @@ jobs:
       - name: Pull hub roster + rebuild agent pages
         run: |
           python3 sync-roster.py
+          python3 inject_city_agents.py
           python3 bump-assets.py
 
       - name: Commit & push if anything changed
