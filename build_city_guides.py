@@ -29,57 +29,7 @@ LM_STYLE = re.search(r'<style>.*?</style>', LM_STYLE, re.DOTALL).group()
 def esc(s):
     return html.escape(str(s or ""), quote=True)
 
-# ── flagship city data (real facts; price tiers per CLAUDE.md, ranges not exacts) ──
-CITIES = {
- "carmel": dict(name="Carmel", county="Hamilton County", url="/cities/hamilton-county/carmel-indiana-real-estate/",
-   price="the mid-$400s to well over $1 million",
-   schools="the highly regarded Carmel Clay Schools",
-   areas=["the walkable Arts &amp; Design District", "the Village of WestClay", "West Carmel and the Clay Terrace area", "established golf communities like Bridgewater and Brookshire"],
-   commute="roughly 20 minutes to downtown Indianapolis via US-31/Meridian Street and Keystone Parkway",
-   character="an upscale, amenity-rich suburb famous for its roundabouts, the Palladium concert hall, the Monon Trail, and a genuinely walkable downtown"),
- "fishers": dict(name="Fishers", county="Hamilton County", url="/cities/hamilton-county/fishers-indiana-real-estate/",
-   price="the low $300s to the $600s and beyond",
-   schools="Hamilton Southeastern Schools",
-   areas=["the vibrant Nickel Plate District", "waterfront living around Geist Reservoir", "established neighborhoods like Sunblest and Brooks Chase", "newer developments near Fishers Marketplace"],
-   commute="about 25 minutes to downtown Indianapolis via I-69 and SR-37",
-   character="one of America's most-recognized 'best places to live' — family-friendly, safe, and anchored by a lively Nickel Plate District with its amphitheater and farmers market"),
- "greenwood": dict(name="Greenwood", county="Johnson County", url="/cities/johnson-county/greenwood-indiana-real-estate/",
-   price="the $250s to the $450s",
-   schools="Center Grove and Greenwood Community Schools",
-   areas=["revitalized Old Town Greenwood", "the sought-after Center Grove area", "Stones Crossing and the west side", "newer subdivisions near Worthsville Road"],
-   commute="around 15 minutes to downtown Indianapolis via I-65 and US-31",
-   character="the south metro's fast-growing retail and dining hub, offering strong value, an active Old Town, and easy interstate access"),
- "noblesville": dict(name="Noblesville", county="Hamilton County", url="/cities/hamilton-county/noblesville-indiana-real-estate/",
-   price="the $300s to the $600s",
-   schools="Noblesville Schools",
-   areas=["the historic downtown square", "waterfront communities on Morse Reservoir", "The Harbour and Sagamore", "newer growth along SR-32 and Pleasant Street"],
-   commute="about 30 minutes to downtown Indianapolis via SR-37 and I-69",
-   character="Hamilton County's historic county seat, blending a charming courthouse-square downtown with lakefront living and steady new growth"),
- "westfield": dict(name="Westfield", county="Hamilton County", url="/cities/hamilton-county/westfield-indiana-real-estate/",
-   price="the $300s to the $600s",
-   schools="Westfield Washington Schools",
-   areas=["the growing downtown Grand Junction district", "luxury living at Chatham Hills", "Maple Village and Wood Wind", "family neighborhoods near Grand Park"],
-   commute="roughly 30 minutes to downtown Indianapolis via US-31",
-   character="home of the massive Grand Park Sports Campus and one of Indiana's fastest-growing cities, with a rapidly developing downtown"),
- "zionsville": dict(name="Zionsville", county="Boone County", url="/cities/boone-county/zionsville-indiana-real-estate/",
-   price="the mid-$400s to over $1 million",
-   schools="the top-rated Zionsville Community Schools",
-   areas=["the historic brick-street Village", "the Holliday Farms golf community", "Stonegate and Austin Oaks", "wooded estates on the north and west sides"],
-   commute="about 25 minutes to downtown Indianapolis via I-65 and Michigan Road",
-   character="small-town luxury at its finest — a charming brick-paved Main Street, boutique shopping, wooded lots, and some of the state's best schools"),
- "avon": dict(name="Avon", county="Hendricks County", url="/cities/hendricks-county/avon-indiana-real-estate/",
-   price="the $250s to the $450s",
-   schools="Avon Community School Corporation",
-   areas=["family subdivisions along US-36", "the Avon Town Hall Park area", "newer communities near Ronald Reagan Parkway", "established neighborhoods off County Road 100 N"],
-   commute="about 25 minutes to downtown Indianapolis via US-36 (Rockville Road) and I-74",
-   character="a fast-growing, family-first Hendricks County community known for strong schools, new shopping, and excellent value on the west side"),
- "brownsburg": dict(name="Brownsburg", county="Hendricks County", url="/cities/hendricks-county/brownsburg-indiana-real-estate/",
-   price="the $250s to the $450s",
-   schools="the well-regarded Brownsburg Community School Corporation",
-   areas=["downtown Brownsburg and Arbuckle Acres", "newer subdivisions near SR-267", "the Northfield and Cardinal areas", "communities close to I-74"],
-   commute="about 25 minutes to downtown Indianapolis via I-74",
-   character="a welcoming west-side town with racing heritage, top-rated schools, and a growing downtown that keeps a genuine small-town feel"),
-}
+from city_guides_data import CITIES
 
 # ── shared reusable process copy ──
 BUY_STEPS = [
@@ -379,3 +329,31 @@ for city_key in CITIES:
 print("Generated %d city guides (landing + thank-you + PDF):" % len(made))
 for slug, ok, kb in made:
     print("  %s  PDF:%s (%dKB)" % (slug, "OK" if ok else "FAIL", kb))
+
+
+# ── update /resources/ hub section + sitemap (idempotent) ──
+cards = ""
+for key in CITIES:
+    nm = CITIES[key]["name"]
+    cards += ('\n <div class="resource-card">\n <div class="resource-icon">\U0001F4CD</div>\n'
+              ' <h2>' + nm + ' Home Guides</h2>\n'
+              ' <p>Free, ' + nm + '-specific guides to buying or selling — the local market, neighborhoods, ' + nm + ' schools, and every step of the process.</p>\n'
+              ' <a href="/resources/' + key + '-home-buyers-guide/" class="btn btn-primary">Buyer’s Guide →</a>\n'
+              ' <a href="/resources/' + key + '-home-sellers-guide/" class="btn btn-outline" style="margin-top:8px;">Seller’s Guide →</a>\n </div>\n')
+section = ('\n<div class="resources-intro" style="margin-top:16px;">'
+           '<h2 style="text-align:center;color:var(--dark);font-size:1.6rem;margin:0 0 6px;">Free City Home Guides</h2>'
+           '<p>City-specific buyer and seller guides for Central Indiana’s most popular communities — the local market, '
+           'neighborhoods, schools, and process, tailored to each town.</p></div>\n<div class="resources-grid">' + cards + '</div>\n\n')
+hub = os.path.join(ROOT, "resources/index.html"); ht = open(hub, encoding="utf-8").read()
+ht = re.sub(r'\n?<div class="resources-intro" style="margin-top:16px;">.*?(?=<footer class="site-footer">)', '', ht, flags=re.DOTALL)
+ht = ht.replace('<footer class="site-footer">', section + '<footer class="site-footer">', 1)
+open(hub, "w", encoding="utf-8").write(ht)
+smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
+for key in CITIES:
+    for kind in ("buyers", "sellers"):
+        loc = "https://janetgiles.com/resources/%s-home-%s-guide/" % (key, kind)
+        if loc in sm: continue
+        blk += "<url>\n  <loc>%s</loc>\n  <lastmod>2026-08-04</lastmod>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
+if blk:
+    open(smp, "w", encoding="utf-8").write(sm.replace("</urlset>", blk + "</urlset>"))
+print("hub + sitemap updated: %d cities, %d new sitemap URLs" % (len(CITIES), blk.count("<url>")))
