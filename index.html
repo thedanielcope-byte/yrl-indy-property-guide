@@ -95,6 +95,7 @@
 .county-card p { font-size:.82rem; color: rgba(255,255,255,.7); margin: 0; }
 .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .service-card.feat { grid-column: span 2; border-left-color: #1a1a1a; }
+.service-card.join { border-left-color: #2563eb; }
 @media (max-width: 900px) { .service-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .service-grid { grid-template-columns: 1fr; } .service-card.feat { grid-column: span 1; } }
 .service-card { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,.06); text-decoration: none; display: block; border-left: 4px solid #c03926; transition: transform.15s; }
@@ -323,15 +324,20 @@
 @media (max-width: 560px) { .cmap-tile { min-height: 78px; padding: 12px 8px; border-radius:11px; } .cmap-name { font-size:.86rem; } .cmap-cities { display:none; } .cmap-tile::after{display:none;} }
 
  /* ── Homepage city cards ── */
-.home-cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
-.home-city-card { position: relative; background:#fff; border:1px solid #e8eaed; border-radius: 12px; padding: 20px 20px 18px; text-decoration:none; display:block; overflow:hidden; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
-.home-city-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:#c03926; transform: scaleY(0); transform-origin: top; transition: transform .2s ease; }
-.home-city-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(27,58,92,.12); border-color:#d9dde2; }
-.home-city-card:hover::before { transform: scaleY(1); }
-.home-city-card h3 { font-size: 1.1rem; color:#6e6e70; margin:0 0 3px; }
-.home-city-card .hc-county { font-size:.8rem; color:#8a8f96; }
-.home-city-card .hc-price { display:block; font-size:.85rem; color:#c03926; font-weight:700; margin-top:10px; }
-.home-city-card .hc-arrow { position:absolute; right:16px; top:20px; color:#ccd2d8; transition: color .18s, transform .18s; font-size:1.05rem; }
+.home-cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
+.home-city-card { position: relative; background:#fff; border:1px solid #e8eaed; border-radius: 14px; text-decoration:none; display:block; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.05); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.home-city-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(27,58,92,.18); border-color:#d9dde2; }
+.home-city-card .hc-map { height: 86px; position: relative; background:
+   repeating-linear-gradient(0deg, transparent 0 20px, rgba(255,255,255,.14) 20px 21px),
+   repeating-linear-gradient(90deg, transparent 0 24px, rgba(255,255,255,.14) 24px 25px),
+   linear-gradient(135deg, #24507a 0%, #c03926 140%); }
+.home-city-card .hc-pin { position:absolute; left:50%; top:50%; transform: translate(-50%,-58%); width:40px; height:40px; border-radius:50%; background:#fff; box-shadow:0 4px 12px rgba(0,0,0,.28); display:flex; align-items:center; justify-content:center; font-size:20px; line-height:1; }
+.home-city-card:hover .hc-pin { transform: translate(-50%,-64%); transition: transform .18s ease; }
+.home-city-card .hc-body { padding: 14px 16px 16px; position:relative; }
+.home-city-card h3 { font-size: 1.08rem; color:#1a1a1a; margin:0 0 2px; }
+.home-city-card .hc-county { display:block; font-size:.78rem; color:#8a8f96; }
+.home-city-card .hc-price { display:inline-block; margin-top:11px; font-size:.8rem; color:#c03926; font-weight:700; background:#faf1ef; border-radius:20px; padding:3px 11px; }
+.home-city-card .hc-arrow { position:absolute; right:14px; bottom:15px; color:#c9ced4; font-size:1.05rem; transition: color .18s, transform .18s; }
 .home-city-card:hover .hc-arrow { color:#c03926; transform: translateX(3px); }
 
  /* ── Homepage feature cards ── */
@@ -589,18 +595,18 @@
  <p>From fast-growing suburbs to established communities, Central Indiana has a neighborhood for everyone. Explore city guides with local market info, schools, and more.</p>
  </div>
  <div class="home-cities-grid">
-  <a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Carmel</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$400s – $1M+</span></a>
-  <a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Fishers</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span></a>
-  <a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Greenwood</h3><span class="hc-county">Johnson County</span><span class="hc-price">$250s – $450s</span></a>
-  <a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Noblesville</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span></a>
-  <a href="/cities/hendricks-county/avon-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Avon</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$250s – $450s</span></a>
-  <a href="/cities/hendricks-county/brownsburg-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Brownsburg</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$250s – $450s</span></a>
-  <a href="/cities/boone-county/zionsville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Zionsville</h3><span class="hc-county">Boone County</span><span class="hc-price">$400s – $1M+</span></a>
-  <a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Westfield</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span></a>
-  <a href="/cities/hendricks-county/plainfield-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Plainfield</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$230s – $400s</span></a>
-  <a href="/cities/hancock-county/mccordsville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>McCordsville</h3><span class="hc-county">Hancock County</span><span class="hc-price">$280s – $500s</span></a>
-  <a href="/cities/marion-county/southport-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Southport</h3><span class="hc-county">Marion County</span><span class="hc-price">$150s – $320s</span></a>
-  <a href="/cities/shelby-county/shelbyville-indiana-real-estate/" class="home-city-card"><span class="hc-arrow">&rarr;</span><h3>Shelbyville</h3><span class="hc-county">Shelby County</span><span class="hc-price">$150s – $300s</span></a>
+  <a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Carmel</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$400s – $1M+</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Fishers</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Greenwood</h3><span class="hc-county">Johnson County</span><span class="hc-price">$250s – $450s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Noblesville</h3><span class="hc-county">Hamilton County Seat</span><span class="hc-price">$280s – $500s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/hendricks-county/avon-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Avon</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$260s – $450s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/hendricks-county/brownsburg-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Brownsburg</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$250s – $430s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/boone-county/zionsville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Zionsville</h3><span class="hc-county">Boone County</span><span class="hc-price">$400s – $1M+</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Westfield</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $550s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/hendricks-county/plainfield-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Plainfield</h3><span class="hc-county">Hendricks County Seat</span><span class="hc-price">$230s – $400s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/hancock-county/mccordsville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>McCordsville</h3><span class="hc-county">Hancock County</span><span class="hc-price">$280s – $500s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/marion-county/southport-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Southport</h3><span class="hc-county">Marion County</span><span class="hc-price">$160s – $320s</span><span class="hc-arrow">&rarr;</span></div></a>
+  <a href="/cities/shelby-county/shelbyville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><span class="hc-pin">&#128205;</span></div><div class="hc-body"><h3>Shelbyville</h3><span class="hc-county">Shelby County Seat</span><span class="hc-price">$150s – $300s</span><span class="hc-arrow">&rarr;</span></div></a>
  </div>
  </div>
 </section>
@@ -653,7 +659,7 @@
  <p>Looking for land, a building lot, or a home with acreage in Central Indiana? YRL helps buyers and sellers of rural and large-lot properties.</p>
  <span class="arrow">Explore Land &amp; Acreage →</span>
  </a>
- <a href="/services/join-yrl/" class="service-card">
+ <a href="/services/join-yrl/" class="service-card join">
  <h3>Join Our Team</h3>
  <p>Indiana agents: explore the YRL difference. Competitive splits, broker support, and a team that invests in your growth.</p>
  <span class="arrow">Explore Agent Recruiting →</span>
