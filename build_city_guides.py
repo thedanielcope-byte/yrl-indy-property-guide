@@ -163,8 +163,8 @@ def landing_html(city_key, kind, slug, pdf_name):
     is_buy = kind == "buyer"
     hero_img = "resource-buyer" if is_buy else "resource-seller"
     typ = "Buyer" if is_buy else "Seller"
-    title = f"Free {n} Home {typ}’s Guide (Indiana) | Your Realty Link"
-    desc = (f"Download the free {n}, Indiana home {typ.lower()}'s guide from Your Realty Link — the {n} market, neighborhoods, schools, and the {'buying' if is_buy else 'selling'} process, step by step.")
+    title = f"Free {n} Home {typ}’s Guide | Your Realty Link"
+    desc = (f"The free {n}, Indiana home {typ.lower()}'s guide — the local market, neighborhoods, schools, and the {'buying' if is_buy else 'selling'} process, step by step.")
     hero_h1 = f"The Free {n} Home {typ}’s Guide"
     if is_buy:
         hero_sub = f"Everything you need to buy a home in {n}, Indiana — the market, the best neighborhoods, the schools, and how to win the home."

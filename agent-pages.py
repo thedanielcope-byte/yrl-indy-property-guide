@@ -85,7 +85,7 @@ def card(a):
 
 def hub_page(agents):
     cards = "\n ".join(card(a) for a in agents)
-    desc = "Meet the Your Realty Link team — 20+ experienced Central Indiana real estate agents, led by Broker-Owner Janet Giles. Find your agent, view their profile, and start your home search."
+    desc = "Meet the Your Realty Link team — experienced Central Indiana real estate agents led by Broker-Owner Janet Giles. Find your agent and start your home search."
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
