@@ -114,6 +114,32 @@
       document.addEventListener('mouseout', handleMouseOut);
     }, 15000);
 
+    // Mobile: no mouse-out exit-intent, so use a "scroll back up after scrolling
+    // down" proxy (a common sign the visitor is heading off the page), plus a
+    // timed fallback. Gated to touch devices so it never double-fires on desktop.
+    // Both paths go through showPopup(), which keeps the once-per-session guard.
+    if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+      var maxScroll = 0, engaged = false, lastY = window.scrollY || 0;
+      function onMobileScroll() {
+        var y = window.scrollY || document.documentElement.scrollTop || 0;
+        if (y > maxScroll) maxScroll = y;
+        if (maxScroll > 700) engaged = true;                 // scrolled down = engaged
+        if (engaged && y < maxScroll - 150 && (lastY - y) > 8) {  // reversed back up
+          window.removeEventListener('scroll', onMobileScroll);
+          showPopup();
+        }
+        lastY = y;
+      }
+      window.addEventListener('scroll', onMobileScroll, { passive: true });
+      // Fallback: after 30s, show it to visitors who engaged but never scrolled back up
+      setTimeout(function() {
+        if (maxScroll > 300) {
+          window.removeEventListener('scroll', onMobileScroll);
+          showPopup();
+        }
+      }, 30000);
+    }
+
     // Close handlers
     overlay.querySelector('.exit-popup-close').addEventListener('click', closePopup);
     overlay.addEventListener('click', function(e) {
