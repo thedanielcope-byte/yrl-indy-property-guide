@@ -98,7 +98,7 @@ for p in posts:
     loc = f'https://janetgiles.com/blog/{p["slug"]}/'
     if loc in sm:
         continue
-    block += (f"<url>\n  <loc>{loc}</loc>\n  <lastmod>2026-08-03</lastmod>\n"
+    block += (f"<url>\n  <loc>{loc}</loc>\n  <lastmod>2026-08-09</lastmod>\n"
               f"  <changefreq>monthly</changefreq>\n  <priority>0.7</priority>\n</url>\n")
 if block:
     sm = sm.replace("</urlset>", block + "</urlset>")
