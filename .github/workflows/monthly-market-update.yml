@@ -1,0 +1,43 @@
+name: Monthly market update
+
+# Publishes a fresh "Indianapolis Real Estate Market Update" on the 1st of each
+# month and refreshes the /market-updates/ hub. Self-contained Python (no headless
+# Chrome — reuses the shared card image), then auto-commits like the roster sync.
+# Add that month's real MIBOR figures anytime by editing the post; the baseline
+# is seasonal + honest (ranges only, no fabricated stats).
+
+on:
+  schedule:
+    - cron: "0 13 1 * *"    # 1st of the month, 13:00 UTC (~8–9am ET)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monthly-market-update
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate this month's update + rebuild the hub
+        run: |
+          python3 build_market_update.py --auto
+          python3 build_market_hub.py
+
+      - name: Commit & push if anything changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Auto-publish monthly Indianapolis market update"
+            git push
+            echo "Published this month's market update."
+          else
+            echo "No changes — this month's update already exists."
+          fi
