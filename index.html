@@ -84,9 +84,10 @@
 .section-header h2 { font-size: 2rem; color: #6e6e70; margin-bottom: 12px; }
 .section-header p { color: #6e6e70; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
 .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-.value-card { background: #fff; border-radius: 10px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.06); border-top: 3px solid #c03926; }
-.value-card.value-icon { font-size: 2rem; margin-bottom: 12px; }
-.value-card h3 { font-size: 1.1rem; color: #6e6e70; margin-bottom: 8px; }
+.value-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.08); display: flex; flex-direction: column; }
+.value-card .vc-img { width: 100%; height: 172px; object-fit: cover; display: block; }
+.value-card .vc-body { padding: 22px 22px 26px; border-top: 3px solid #c03926; }
+.value-card h3 { font-size: 1.12rem; color: #13294a; margin: 0 0 8px; }
 .value-card p { color: #6e6e70; font-size:.92rem; line-height: 1.6; margin: 0; }
 .county-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
 .county-card { background: #6e6e70; color: #fff; border-radius: 8px; padding: 22px 20px; text-decoration: none; display: block; transition: background.2s; }
@@ -415,25 +416,33 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  </div>
  <div class="value-grid">
  <div class="value-card">
- <div class="value-icon">🏡</div>
- <h3>Local Expertise</h3>
- <p>The Your Realty Link team knows Central Indiana's neighborhoods, price trends, and communities inside and out. We live and work here.</p>
- </div>
+<img class="vc-img" src="/assets/img/tiles/local-expertise.jpg" alt="Aerial view of a Central Indiana neighborhood" loading="lazy" width="760" height="440">
+<div class="vc-body">
+<h3>Local Expertise</h3>
+<p>The Your Realty Link team knows Central Indiana's neighborhoods, price trends, and communities inside and out. We live and work here.</p>
+</div>
+</div>
  <div class="value-card">
- <div class="value-icon">🔍</div>
- <h3>Every Active Listing</h3>
- <p>Search every active MLS listing across Central Indiana at yourrealtylink.com — updated in real time. As MIBOR members, our team brings you the whole market, not just a slice.</p>
- </div>
+<img class="vc-img" src="/assets/img/tiles/active-listing.jpg" alt="A Central Indiana home for sale" loading="lazy" width="760" height="440">
+<div class="vc-body">
+<h3>Every Active Listing</h3>
+<p>Search every active MLS listing across Central Indiana at yourrealtylink.com — updated in real time. As MIBOR members, our team brings you the whole market, not just a slice.</p>
+</div>
+</div>
  <div class="value-card">
- <div class="value-icon">📖</div>
- <h3>Free Local Resources</h3>
- <p>Hundreds of city guides, county overviews, neighborhood breakdowns, and service pages — all written specifically for Central Indiana buyers and sellers.</p>
- </div>
+<img class="vc-img" src="/assets/img/tiles/free-resources.jpg" alt="Free Your Realty Link city home guides" loading="lazy" width="760" height="440">
+<div class="vc-body">
+<h3>Free Local Resources</h3>
+<p>Hundreds of city guides, county overviews, neighborhood breakdowns, and service pages — all written specifically for Central Indiana buyers and sellers.</p>
+</div>
+</div>
  <div class="value-card">
- <div class="value-icon">🤝</div>
- <h3>Trusted Agents</h3>
- <p>Your Realty Link puts people first. Whether you're a first-time buyer, a seasoned investor, or ready to list, our agents guide you every step of the way.</p>
- </div>
+<img class="vc-img" src="/assets/img/tiles/trusted-agents.jpg" alt="The Your Realty Link agent team" loading="lazy" width="760" height="440">
+<div class="vc-body">
+<h3>Trusted Agents</h3>
+<p>Your Realty Link puts people first. Whether you're a first-time buyer, a seasoned investor, or ready to list, our agents guide you every step of the way.</p>
+</div>
+</div>
  </div>
  </div>
 </section>
