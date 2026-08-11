@@ -73,7 +73,7 @@
  }
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap"></noscript>
  <link rel="preload" as="image" href="/assets/img/heroes/home.webp" type="image/webp" fetchpriority="high">
  <link rel="stylesheet" href="/assets/css/style.css?v=890722d8">
  <style>
@@ -111,161 +111,58 @@
 .about-stat.num { font-size: 2rem; font-weight: 700; color: #c03926; display: block; }
 .about-stat.lbl { font-size:.85rem; color: #6e6e70; }
 
- /* ── SEARCH HERO ── */
-.search-hero-home {
- background:
- linear-gradient(160deg, rgba(27,58,92,0.78) 0%, rgba(192,57,38,0.45) 100%),
- image-set(url('/assets/img/heroes/home.webp') type('image/webp'), url('/assets/img/heroes/home.jpg') type('image/jpeg')) center 60% / cover no-repeat;
- border-bottom: none;
- min-height: 82vh;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- text-align: center;
- padding: 100px 24px 72px;
- position: relative;
- overflow: hidden;
+ /* ── SPLIT HERO ── */
+.hero-split{
+ --navy:#13294a; --cream:#f5efe2;
+ display:grid; grid-template-columns:1.02fr 1fr; min-height:600px;
+ background:var(--cream); position:relative; overflow:hidden;
  }
-.search-hero-home::before {
- content: '';
- position: absolute;
- top: 0; left: 0; right: 0;
- height: 5px;
- background: #c03926;
+.hero-split-photo{ position:relative; overflow:hidden; }
+.hero-split-photo img{ width:100%; height:100%; object-fit:cover; object-position:center 42%; display:block; }
+.hero-split-photo::after{ content:''; position:absolute; inset:0; pointer-events:none;
+ background:linear-gradient(90deg, rgba(245,239,226,0) 72%, rgba(245,239,226,.85) 94%, var(--cream) 100%); }
+.hero-split-content{ display:flex; align-items:center; justify-content:center; padding:56px 52px;
+ background:radial-gradient(120% 90% at 85% 8%, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 45%), var(--cream); }
+.hero-split-inner{ width:100%; max-width:540px; text-align:center; box-sizing:border-box; }
+.hero-split-inner > *{ max-width:100%; }
+.hero-headline{ margin:0 0 18px; max-width:100%; }
+.hero-headline .hl-1{ display:block; font-family:'Playfair Display',serif; font-weight:600; color:var(--navy); line-height:1; font-size:clamp(2.1rem,4.4vw,3.7rem); letter-spacing:.01em; }
+.hero-headline .hl-2{ display:block; font-family:'Playfair Display',serif; font-style:italic; font-weight:600; color:var(--navy); line-height:.95; font-size:clamp(2.2rem,7.6vw,5.1rem); margin:2px 0 10px; }
+.hero-headline .hl-3{ display:flex; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; text-transform:uppercase; font-weight:600; letter-spacing:.2em; color:var(--navy); font-size:clamp(.82rem,1.5vw,1.1rem); }
+.hero-headline .hl-3::before,.hero-headline .hl-3::after{ content:''; height:2px; width:34px; background:var(--navy); opacity:.5; }
+.hero-split .hero-sub{ color:#48566b; font-size:1.06rem; line-height:1.6; margin:0 auto 26px; max-width:44ch; }
+.hero-split .hero-search-bar{ display:flex; width:100%; max-width:520px; margin:0 auto 16px; background:#fff; border:1px solid #e3ddcd; border-radius:12px; box-shadow:0 12px 30px rgba(19,41,74,.12); overflow:hidden; transition:box-shadow .2s, border-color .2s; }
+.hero-split .hero-search-bar:focus-within{ border-color:#c9c1ab; box-shadow:0 14px 34px rgba(19,41,74,.18); }
+.hero-split .hero-search-bar input{ flex:1; border:none; outline:none; padding:17px 20px; font-size:1rem; font-family:inherit; color:#3a4658; background:transparent; min-width:0; }
+.hero-split .hero-search-bar input::placeholder{ color:#9aa3af; }
+.hero-split .hero-search-bar button{ background:#c03926; color:#fff; border:none; padding:16px 26px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit; white-space:nowrap; border-radius:10px; margin:5px; transition:background .2s; }
+.hero-split .hero-search-bar button:hover{ background:#9e2e1e; }
+.hero-split .hero-quick-links{ display:flex; gap:6px 8px; flex-wrap:wrap; justify-content:center; align-items:center; margin:0 0 22px; }
+.hero-split .hero-quick-links span{ color:#7b8494; font-size:.9rem; font-weight:600; margin-right:2px; }
+.hero-split .hero-quick-link{ color:var(--navy); font-size:.9rem; font-weight:600; text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(19,41,74,.35); padding:2px 4px; }
+.hero-split .hero-quick-link:hover{ text-decoration-color:var(--navy); color:#c03926; }
+.hero-mls-btn{ display:inline-flex; align-items:center; gap:10px; background:var(--navy); color:#fff; font-family:'Inter',sans-serif; font-weight:700; font-size:1rem; text-decoration:none; padding:14px 30px; border-radius:10px; margin-bottom:30px; transition:background .2s, transform .12s; box-shadow:0 8px 22px rgba(19,41,74,.22); }
+.hero-mls-btn:hover{ background:#0d1e38; transform:translateY(-1px); color:#fff; text-decoration:none; }
+.hero-mls-btn svg{ width:20px; height:20px; }
+.hero-badges{ display:flex; justify-content:center; gap:30px; flex-wrap:wrap; border-top:1px solid rgba(19,41,74,.14); padding-top:24px; }
+.hero-badge{ display:flex; align-items:center; gap:11px; text-align:left; }
+.hero-badge .ico{ width:44px; height:44px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.hero-badge .ico svg{ width:22px; height:22px; }
+.hero-badge .txt{ font-family:'Inter',sans-serif; font-weight:700; color:var(--navy); font-size:.92rem; line-height:1.2; }
+@media (max-width:900px){
+ .hero-split{ grid-template-columns:1fr; min-height:0; }
+ .hero-split-photo{ height:300px; }
+ .hero-split-photo img{ object-position:center 45%; }
+ .hero-split-photo::after{ background:linear-gradient(180deg, rgba(245,239,226,0) 78%, var(--cream) 100%); }
+ .hero-split-content{ padding:40px 22px 46px; }
+ .hero-badges{ gap:18px 26px; }
  }
-.search-hero-home h1 {
- font-size: clamp(2.2rem, 5.5vw, 3.8rem);
- font-weight: 800;
- color: #fff;
- margin: 0 auto 16px;
- line-height: 1.1;
- max-width: 860px;
- text-shadow: 0 2px 16px rgba(0,0,0,.35);
- }
-.search-hero-home h1 em {
- font-style: normal;
- color: #f5a897;
- }
-.search-hero-home .hero-sub {
- color: #fff;
- font-size: 1.1rem;
- margin: 0 auto 40px;
- max-width: 620px;
- line-height: 1.65;
- text-shadow: 0 2px 12px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.4);
- background: rgba(0,0,0,.25);
- padding: 10px 20px;
- border-radius: 8px;
- backdrop-filter: blur(4px);
- }
-.hero-search-bar {
- display: flex;
- width: 100%;
- max-width: 680px;
- background: #fff;
- border-radius: 50px;
- border: 3px solid rgba(255,255,255,.9);
- box-shadow: 0 8px 40px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.2);
- overflow: hidden;
- margin-bottom: 20px;
- transition: border-color.2s, box-shadow.2s;
- }
-.hero-search-bar:focus-within {
- border-color: #fff;
- box-shadow: 0 8px 40px rgba(0,0,0,.45), 0 0 0 4px rgba(255,255,255,.25);
- }
-.hero-search-bar input {
- flex: 1;
- border: none;
- outline: none;
- padding: 18px 24px;
- font-size: 1.02rem;
- font-family: inherit;
- color: #6e6e70;
- background: transparent;
- min-width: 0;
- }
-.hero-search-bar input::placeholder { color: #aaa; }
-.hero-search-bar button {
- background: #c03926;
- color: #fff;
- border: none;
- padding: 18px 30px;
- font-size: 1rem;
- font-weight: 700;
- cursor: pointer;
- font-family: inherit;
- border-radius: 0 50px 50px 0;
- transition: background.2s;
- white-space: nowrap;
- letter-spacing:.01em;
- }
-.hero-search-bar button:hover { background: #9e2e1e; }
-.hero-quick-links {
- display: flex;
- gap: 8px;
- flex-wrap: wrap;
- justify-content: center;
- margin-bottom: 44px;
- align-items: center;
- }
-.hero-quick-links span {
- color: rgba(255,255,255,.75);
- font-size:.85rem;
- }
-.hero-quick-link {
- background: rgba(255,255,255,.15);
- border: 1.5px solid rgba(255,255,255,.5);
- color: #fff;
- padding: 6px 16px;
- border-radius: 20px;
- font-size:.84rem;
- font-weight: 500;
- text-decoration: none;
- transition: background.15s, border-color.15s;
- backdrop-filter: blur(4px);
- }
-.hero-quick-link:hover {
- background: rgba(255,255,255,.28);
- border-color: rgba(255,255,255,.85);
- color: #fff;
- text-decoration: none;
- }
-.hero-trust {
- display: flex;
- gap: 20px;
- justify-content: center;
- flex-wrap: wrap;
- padding-top: 4px;
- background: rgba(27,58,92,.45);
- border-radius: 40px;
- padding: 12px 28px;
- backdrop-filter: blur(6px);
- }
-.hero-trust-item {
- display: flex;
- align-items: center;
- gap: 7px;
- color: rgba(255,255,255,.9);
- font-size:.82rem;
- }
-.hero-trust-item.dot {
- width: 7px;
- height: 7px;
- border-radius: 50%;
- background: #f5a897;
- flex-shrink: 0;
- }
-
- @media (max-width: 600px) {
-.search-hero-home { min-height: auto; padding: 100px 16px 56px; }
-.hero-search-bar { border-radius: 14px; flex-direction: column; }
-.hero-search-bar input { padding: 16px 20px; }
-.hero-search-bar button { border-radius: 0 0 12px 12px; padding: 16px; }
-.about-home { grid-template-columns: 1fr; }
-.section-header h2 { font-size: 1.5rem; }
-.hero-trust { padding: 10px 16px; gap: 14px; }
+@media (max-width:600px){
+ .hero-split .hero-search-bar{ flex-direction:column; }
+ .hero-split .hero-search-bar button{ margin:0 5px 5px; }
+ .hero-split .hero-quick-links{ font-size:.86rem; }
+ .about-home { grid-template-columns: 1fr; }
+ .section-header h2 { font-size: 1.5rem; }
  }
 
  /* ── FEATURED LISTINGS CAROUSEL ── */
@@ -425,21 +322,28 @@
 </header>
 
 <!-- SEARCH HERO -->
-<section class="search-hero-home">
- <h1>Find Your <em>Perfect Home</em> in Central Indiana</h1>
- <p class="hero-sub">Search every active MLS listing across Indianapolis and the surrounding metro — powered by Your Realty Link, a full-service MIBOR brokerage.</p>
+<section class="hero-split">
+ <div class="hero-split-photo">
+  <picture>
+   <source srcset="/assets/img/heroes/yrl-office.webp" type="image/webp">
+   <img src="/assets/img/heroes/yrl-office.jpg" alt="Your Realty Link office at 2302 E Southport Road, Indianapolis" width="1800" height="1200">
+  </picture>
+ </div>
+ <div class="hero-split-content">
+  <div class="hero-split-inner">
+   <h1 class="hero-headline">
+    <span class="hl-1">Find Your</span>
+    <span class="hl-2">Perfect Home</span>
+    <span class="hl-3">in Central Indiana</span>
+   </h1>
+   <p class="hero-sub">Search every active MLS listing across Indianapolis and the surrounding metro — powered by Your Realty Link, a full-service MIBOR brokerage.</p>
 
- <form class="hero-search-bar" onsubmit="event.preventDefault(); window.location.href='/search/';" role="search">
- <input
- type="text"
- placeholder="Search by city, ZIP code, or neighborhood..."
- aria-label="Search homes by city, ZIP code, or neighborhood"
- autocomplete="off"
- >
- <button type="submit">Search Homes</button>
- </form>
+   <form class="hero-search-bar" onsubmit="event.preventDefault(); window.location.href='/search/';" role="search">
+    <input type="text" placeholder="Search by city, ZIP code, or neighborhood..." aria-label="Search homes by city, ZIP code, or neighborhood" autocomplete="off">
+    <button type="submit">Search Homes</button>
+   </form>
 
- <!-- HOME-HERO-CHIPS -->
+   <!-- HOME-HERO-CHIPS -->
  <div class="hero-quick-links">
  <span>Popular:</span>
  <a href="/cities/marion-county/southport-indiana-real-estate/" class="hero-quick-link">Southport</a>
@@ -451,11 +355,26 @@
  </div>
  <!-- /HOME-HERO-CHIPS -->
 
- <div class="hero-trust">
- <div class="hero-trust-item"><span class="dot"></span> All MIBOR MLS Listings</div>
- <div class="hero-trust-item"><span class="dot"></span> Updated Daily</div>
- <div class="hero-trust-item"><span class="dot"></span> 17 Counties Covered</div>
- <div class="hero-trust-item"><span class="dot"></span> Free Agent Representation</div>
+   <a href="/search/" class="hero-mls-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    All MIBOR MLS Listings
+   </a>
+
+   <div class="hero-badges">
+    <div class="hero-badge">
+     <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span>
+     <span class="txt">Updated<br>Daily</span>
+    </div>
+    <div class="hero-badge">
+     <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+     <span class="txt">17 Counties<br>Covered</span>
+    </div>
+    <div class="hero-badge">
+     <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+     <span class="txt">Free Agent<br>Representation</span>
+    </div>
+   </div>
+  </div>
  </div>
 </section>
 
