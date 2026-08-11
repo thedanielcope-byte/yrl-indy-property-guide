@@ -119,7 +119,8 @@ def main():
             geo.setdefault(gp, []).append(posts[slug])
     results = {}
     for gp, plist in geo.items():
-        plist = plist[:MAX_CARDS]
+        # Market Updates always lead (freshest, most timely), then the rest in tag order
+        plist = sorted(plist, key=lambda p: 0 if p.get("cat") == "Market Updates" else 1)[:MAX_CARDS]
         r = inject(gp, section(place_name(gp), [card(p) for p in plist]))
         results[r] = results.get(r, 0) + 1
     print(f"geo pages updated: {results.get('ok',0)}  | missing pages: {results.get('missing',0)}  | no-anchor: {results.get('no-anchor',0)}")

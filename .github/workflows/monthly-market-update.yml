@@ -27,6 +27,7 @@ jobs:
       - name: Generate this month's update + rebuild the hub
         run: |
           python3 build_market_update.py --auto
+          python3 build_local_posts.py
           python3 build_market_hub.py
 
       - name: Commit & push if anything changed

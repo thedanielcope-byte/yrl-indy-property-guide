@@ -18,6 +18,14 @@ import sys, os, json, re, shutil, datetime
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SHARED_IMG = os.path.join(ROOT, "assets/img/blog/market-update.png")
 
+# The metro-wide update breaks prices down by county, so it surfaces (via the
+# local-posts system) on every county hub it references. Only the CURRENT month's
+# report is tagged — publishing next month's swaps it automatically.
+COUNTY_HUBS = [f"/counties/{c}-county-indiana-real-estate/" for c in (
+    "hamilton", "boone", "hendricks", "johnson", "hancock", "marion", "madison",
+    "shelby", "morgan", "brown", "decatur", "bartholomew", "jackson", "jennings",
+    "montgomery", "putnam", "parke")]
+
 TIERS = [
     ("Hamilton County (Carmel, Fishers, Westfield, Noblesville)", "the $300s to well over $1M"),
     ("Boone County (Zionsville, Whitestown, Lebanon)", "the $250s to $1M+"),
@@ -160,6 +168,20 @@ def build_post(year, month, notes):
      "related_posts":[["What Is My Home Worth in Indianapolis?","/blog/what-is-my-home-worth-in-indianapolis/"],["Best Neighborhoods to Buy a Home in Indianapolis","/blog/best-neighborhoods-to-buy-a-home-in-indianapolis/"],["Indianapolis Housing Market Forecast","/blog/indianapolis-housing-market-forecast-what-to-expect/"]],
     }
 
+def retag(slug):
+    """Point the county-hub local-posts sections at THIS month's report. Removes any
+    prior market-update tag so exactly the current month shows. Run build_local_posts.py
+    afterward to inject it into the pages."""
+    tp = os.path.join(ROOT, "data", "local-post-tags.json")
+    data = json.load(open(tp, encoding="utf-8"))
+    for k in [k for k in data if k.startswith("indianapolis-market-update-")]:
+        del data[k]
+    data[slug] = list(COUNTY_HUBS)
+    with open(tp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=1, ensure_ascii=False)
+        f.write("\n")
+    print(f"tagged {slug} -> {len(COUNTY_HUBS)} county hubs")
+
 def _load_builder():
     src=open(os.path.join(ROOT,"blog-posts-glossary.py"),encoding="utf-8").read()
     cut=src.index('new_path = os.path.join(ROOT, "blog-posts-new.json")')  # stop before the file-writing loop
@@ -189,6 +211,8 @@ def publish(post):
     if loc not in sm:
         blk=f"<url>\n  <loc>{loc}</loc>\n  <lastmod>{post['date_pub']}</lastmod>\n  <changefreq>monthly</changefreq>\n  <priority>0.7</priority>\n</url>\n"
         open(os.path.join(ROOT,"sitemap.xml"),"w",encoding="utf-8").write(sm.replace("</urlset>",blk+"</urlset>"))
+    # surface this month's report on the county hubs it references
+    retag(post["slug"])
     print("published /blog/%s/" % post["slug"])
 
 if __name__=="__main__":
