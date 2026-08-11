@@ -18,11 +18,11 @@
  <meta property="og:title" content="Central Indiana Real Estate | Your Realty Link">
  <meta property="og:description" content="Your source for Central Indiana real estate. Browse cities, neighborhoods, and services powered by Your Realty Link — Indianapolis's trusted MIBOR brokerage.">
  <meta property="og:url" content="https://janetgiles.com/">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://janetgiles.com/assets/img/og-home.jpg">
  <meta property="og:image:width" content="1200">
  <meta property="og:image:height" content="630">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta name="twitter:image" content="https://janetgiles.com/assets/img/og-home.jpg">
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="Your Realty Link">
  <script type="application/ld+json">
@@ -149,6 +149,10 @@
 .hero-badge .ico{ width:44px; height:44px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .hero-badge .ico svg{ width:22px; height:22px; }
 .hero-badge .txt{ font-family:'Inter',sans-serif; font-weight:700; color:var(--navy); font-size:.92rem; line-height:1.2; }
+a.hero-badge{ text-decoration:none; cursor:pointer; transition:transform .12s; }
+a.hero-badge:hover{ transform:translateY(-1px); }
+a.hero-badge:hover .ico{ background:#c03926; }
+a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 @media (max-width:900px){
  .hero-split{ grid-template-columns:1fr; min-height:0; }
  .hero-split-photo{ height:300px; }
@@ -369,10 +373,10 @@
      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
      <span class="txt">17 Counties<br>Covered</span>
     </div>
-    <div class="hero-badge">
-     <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
-     <span class="txt">Free Agent<br>Representation</span>
-    </div>
+    <a class="hero-badge" href="/services/free-home-valuation/">
+     <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></span>
+     <span class="txt">What's My<br>Home Worth?</span>
+    </a>
    </div>
   </div>
  </div>
