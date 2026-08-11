@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 valuation-tool/node_modules/
+
+# Raw promo source art (optimized copies live in assets/img/services/)
+assets/How Your Realty Link Can Help/

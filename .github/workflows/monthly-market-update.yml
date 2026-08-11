@@ -29,6 +29,7 @@ jobs:
           python3 build_market_update.py --auto
           python3 build_local_posts.py
           python3 build_market_hub.py
+          python3 build_home_recent_posts.py
 
       - name: Commit & push if anything changed
         run: |

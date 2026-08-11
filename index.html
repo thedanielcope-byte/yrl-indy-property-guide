@@ -104,6 +104,27 @@
 .service-card h3 { font-size: 1rem; color: #6e6e70; margin-bottom: 6px; }
 .service-card p { font-size:.88rem; color: #6e6e70; margin: 0 0 12px; line-height: 1.5; }
 .service-card.arrow { color: #c03926; font-size:.85rem; font-weight: 600; }
+.svc-tiles-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.svc-tiles-tall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.svc-tile { display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.10); transition: transform .15s, box-shadow .15s; }
+.svc-tile:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.17); }
+.svc-tile img { width: 100%; height: auto; display: block; }
+.svc-join { text-align: center; margin: 28px 0 0; }
+.svc-join a { color: #2563eb; font-weight: 700; font-size:.95rem; text-decoration: none; }
+.svc-join a:hover { text-decoration: underline; }
+@media (max-width: 640px) { .svc-tiles-wide { grid-template-columns: 1fr; } .svc-tiles-tall { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .svc-tiles-tall { grid-template-columns: 1fr; } }
+.home-posts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.home-post-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.08); text-decoration: none; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+.home-post-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.15); }
+.home-post-card .hp-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #12283f; }
+.home-post-card .hp-body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.home-post-card .hp-cat { font-size:.72rem; font-weight: 700; letter-spacing:.06em; text-transform: uppercase; color: #c03926; }
+.home-post-card h3 { font-size: 1rem; line-height: 1.3; color: #13294a; margin: 0; }
+.home-post-card p { font-size:.85rem; color: #6e6e70; line-height: 1.5; margin: 0; }
+.home-post-card .hp-more { margin-top: auto; color: #c03926; font-weight: 700; font-size:.82rem; padding-top: 4px; }
+@media (max-width: 900px) { .home-posts-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .home-posts-grid { grid-template-columns: 1fr; } }
 .about-home { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .about-home-text h2 { font-size: 1.8rem; color: #6e6e70; margin-bottom: 16px; }
 .about-home-text p { color: #6e6e70; line-height: 1.7; margin-bottom: 16px; }
@@ -591,40 +612,28 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <div class="container">
  <div class="section-header">
  <h2>How Your Realty Link Can Help</h2>
- <p>Whether you're buying your first home, selling after years of memories, or building an investment portfolio — YRL has a service designed for your situation.</p>
+ <p>Whether you're buying your first home, selling after years of memories, or building an investment portfolio — Your Realty Link has a service designed for your situation.</p>
  </div>
- <div class="service-grid">
- <a href="/services/buyer-representation/" class="service-card feat">
- <h3>Buyer Representation</h3>
- <p>Your YRL agent works exclusively for you — negotiating price, terms, and inspections so you get the best deal possible.</p>
- <span class="arrow">Explore Buyer Services →</span>
+ <div class="svc-tiles-wide">
+ <a href="/services/buyer-representation/" class="svc-tile" aria-label="Buyer Representation">
+ <picture><source srcset="/assets/img/services/buyer-representation.webp" type="image/webp"><img src="/assets/img/services/buyer-representation.jpg" alt="Buyer Representation — your Your Realty Link agent works exclusively for you" loading="lazy" width="1120" height="560"></picture>
  </a>
- <a href="/services/sell-my-home/" class="service-card feat">
- <h3>Sell Your Home</h3>
- <p>Free CMA, professional marketing, MIBOR MLS exposure, and a proven plan to get your home sold quickly and for top dollar.</p>
- <span class="arrow">Explore Seller Services →</span>
- </a>
- <a href="/services/investment-property/" class="service-card">
- <h3>Investment Properties</h3>
- <p>Indianapolis is one of America's top investment markets. YRL helps investors find rentals, flips, and multi-family properties.</p>
- <span class="arrow">Explore Investment Services →</span>
- </a>
- <a href="/services/new-construction/" class="service-card">
- <h3>New Construction</h3>
- <p>Buying a new build? You need your own agent. YRL represents buyers in new construction at no extra cost to you.</p>
- <span class="arrow">Explore New Construction →</span>
- </a>
- <a href="/homes-with-acreage-central-indiana/" class="service-card">
- <h3>Land &amp; Acreage</h3>
- <p>Looking for land, a building lot, or a home with acreage in Central Indiana? YRL helps buyers and sellers of rural and large-lot properties.</p>
- <span class="arrow">Explore Land &amp; Acreage →</span>
- </a>
- <a href="/services/join-yrl/" class="service-card join">
- <h3>Join Our Team</h3>
- <p>Indiana agents: explore the YRL difference. Competitive splits, broker support, and a team that invests in your growth.</p>
- <span class="arrow">Explore Agent Recruiting →</span>
+ <a href="/services/sell-my-home/" class="svc-tile" aria-label="Sell Your Home">
+ <picture><source srcset="/assets/img/services/sell-your-home.webp" type="image/webp"><img src="/assets/img/services/sell-your-home.jpg" alt="Sell Your Home — maximize value, minimize stress with Your Realty Link" loading="lazy" width="1120" height="560"></picture>
  </a>
  </div>
+ <div class="svc-tiles-tall">
+ <a href="/services/investment-property/" class="svc-tile" aria-label="Investment Properties">
+ <picture><source srcset="/assets/img/services/investment-properties.webp" type="image/webp"><img src="/assets/img/services/investment-properties.jpg" alt="Investment Properties — Indianapolis is a top investment market" loading="lazy" width="780" height="1170"></picture>
+ </a>
+ <a href="/homes-with-acreage-central-indiana/" class="svc-tile" aria-label="Land and Acreage">
+ <picture><source srcset="/assets/img/services/land-acreage.webp" type="image/webp"><img src="/assets/img/services/land-acreage.jpg" alt="Land and Acreage — buy or sell rural and large-lot property in Central Indiana" loading="lazy" width="780" height="1170"></picture>
+ </a>
+ <a href="/services/new-construction/" class="svc-tile" aria-label="New Construction">
+ <picture><source srcset="/assets/img/services/new-construction.webp" type="image/webp"><img src="/assets/img/services/new-construction.jpg" alt="New Construction — Your Realty Link represents buyers at no extra cost" loading="lazy" width="780" height="1170"></picture>
+ </a>
+ </div>
+ <p class="svc-join">Indiana agent? <a href="/services/join-yrl/">Explore joining the Your Realty Link team →</a></p>
  </div>
 </section>
 
@@ -634,7 +643,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <div class="about-home">
  <div class="about-home-text">
  <h2>About Your Realty Link</h2>
- <p>Your Realty Link is a full-service MIBOR brokerage headquartered in Indianapolis, Indiana. Led by Real Estate Broker <strong>Our team</strong>, our team serves buyers, sellers, and investors across Central Indiana with honest advice, local knowledge, and a commitment to results.</p>
+ <p>Your Realty Link is a full-service MIBOR brokerage headquartered in Indianapolis, Indiana. <strong>Our experienced team</strong> serves buyers, sellers, and investors across Central Indiana with honest advice, local knowledge, and a commitment to results.</p>
  <p>We're not a big box franchise. We're your neighbors — people who know the difference between Carmel and Fishers, who understand why families love Avon, and who know exactly how to price a home on the south side of Indianapolis. When you work with YRL, you get an agent who genuinely cares about where you end up.</p>
  <div class="btn-group">
  <a href="/about/" class="btn btn-primary">Meet Our Team</a>
@@ -659,6 +668,27 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <span class="lbl">MLS Access</span>
  </div>
  </div>
+ </div>
+ </div>
+</section>
+
+<!-- FROM THE BLOG -->
+<section class="home-section-alt">
+ <div class="container">
+ <div class="section-header">
+ <h2>Latest From the Blog</h2>
+ <p>Local market updates, buyer and seller tips, and neighborhood guides — fresh from the Your Realty Link team.</p>
+ </div>
+ <!-- HOME-RECENT-POSTS -->
+ <div class="home-posts-grid">
+  <a class="home-post-card" href="/blog/traditional-vs-virtual-open-houses-indianapolis/"><img class="hp-img" src="/assets/img/blog/traditional-vs-virtual-open-houses-indianapolis.png" alt="Traditional vs. Virtual Open Houses: Which Is Right for You?" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>Traditional vs. Virtual Open Houses: Which Is Right for You?</h3><p>Traditional or virtual open house? Compare the honest pros and cons for Indianapolis buyers, and learn when each one wins — from Your Realty Link.</p><span class="hp-more">Read more &rarr;</span></span></a>
+  <a class="home-post-card" href="/blog/what-is-a-virtual-open-house-indianapolis/"><img class="hp-img" src="/assets/img/blog/what-is-a-virtual-open-house-indianapolis.png" alt="What Is a Virtual Open House? Tour Indianapolis Homes From Anywhere" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>What Is a Virtual Open House? Tour Indianapolis Homes From Anywhere</h3><p>A virtual open house lets you tour an Indianapolis home from anywhere. Here is how private live-video showings work — and why they are so powerful now.</p><span class="hp-more">Read more &rarr;</span></span></a>
+  <a class="home-post-card" href="/blog/do-open-houses-actually-sell-homes-indianapolis/"><img class="hp-img" src="/assets/img/blog/do-open-houses-actually-sell-homes-indianapolis.png" alt="Do Open Houses Actually Sell Homes? An Honest Look" loading="lazy"><span class="hp-body"><span class="hp-cat">Selling a Home</span><h3>Do Open Houses Actually Sell Homes? An Honest Look</h3><p>Do open houses really sell homes in Indianapolis? An honest look at what open houses do and do not do — and what actually gets your home sold.</p><span class="hp-more">Read more &rarr;</span></span></a>
+  <a class="home-post-card" href="/blog/open-house-etiquette-indianapolis-buyers/"><img class="hp-img" src="/assets/img/blog/open-house-etiquette-indianapolis-buyers.png" alt="Open House Etiquette: What Indianapolis Buyers Should Know" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>Open House Etiquette: What Indianapolis Buyers Should Know</h3><p>Open house etiquette for Indianapolis buyers: what to do, what not to say, and whether you should bring your own agent. A practical guide from Your Realty Link.</p><span class="hp-more">Read more &rarr;</span></span></a>
+ </div>
+ <!-- /HOME-RECENT-POSTS -->
+ <div style="text-align:center; margin-top:30px;">
+ <a href="/blog/" class="btn btn-outline">Read the Blog →</a>
  </div>
  </div>
 </section>

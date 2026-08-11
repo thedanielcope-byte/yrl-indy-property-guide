@@ -104,3 +104,7 @@ if block:
     sm = sm.replace("</urlset>", block + "</urlset>")
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
 print("sitemap: added", block.count("<url>"), "blog URLs")
+
+# refresh the homepage "Latest From the Blog" section with the newest posts
+import subprocess
+subprocess.run(["python3", os.path.join(ROOT, "build_home_recent_posts.py")], check=False)
