@@ -19,8 +19,12 @@
   "carmel",
   "fishers",
   "greenwood",
-  "avon"
+  "avon",
+  "bargersville",
+  "broad-ripple",
+  "plainfield",
+  "brownsburg"
  ],
  "nearby_cap": 12,
- "popular_cap": 7
+ "popular_cap": 12
 }
