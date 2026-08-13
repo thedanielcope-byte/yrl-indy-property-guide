@@ -145,10 +145,21 @@
  </div>
 </nav>
 
-<section class="page-hero">
+<style>
+.blog-hero-banner{display:block;max-width:1120px;margin:20px auto 0;}
+.blog-hero-banner img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.10);}
+.blog-hero-belt{padding:18px 0 4px;text-align:center;}
+.blog-hero-belt h1{color:#13294a;font-size:clamp(1.35rem,2.6vw,1.85rem);margin:0 0 12px;}
+.blog-hero-belt .hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.blog-hero-belt .hero-badge{background:#f5efe2;border:1px solid #e0d8c6;color:#13294a;text-shadow:none;}
+</style>
+<picture class="blog-hero-banner">
+ <source srcset="/assets/img/blog-banner.webp" type="image/webp">
+ <img src="/assets/img/blog-banner.jpg" alt="Latest from the Your Realty Link blog — Central Indiana real estate tips and market updates" width="1600" height="340">
+</picture>
+<section class="blog-hero-belt">
  <div class="container">
  <h1>Indianapolis Real Estate Blog</h1>
- <p class="hero-sub">Market updates, neighborhood guides, buyer and seller tips, and local lifestyle content — written for Central Indiana homeowners, buyers, and investors by the Your Realty Link team.</p>
  <div class="hero-badges">
  <a class="hero-badge" href="/market-updates/" style="text-decoration:none;">📊 Market Updates →</a>
  <span class="hero-badge">City Guides</span>
