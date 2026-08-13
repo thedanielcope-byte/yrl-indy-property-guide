@@ -283,11 +283,14 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 
  /* ── Homepage feature cards ── */
 .home-features-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 980px; margin: 0 auto; }
-.home-feature-card { background:#fff; border:1px solid #e8eaed; border-radius: 16px; padding: 32px 28px; text-decoration:none; display:block; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.home-feature-card { background:#fff; border:1px solid #e8eaed; border-radius: 16px; overflow:hidden; text-decoration:none; display:flex; flex-direction:column; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .home-feature-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(27,58,92,.13); border-color:#d9dde2; }
-.hf-icon { width: 54px; height: 54px; border-radius: 14px; background: #fdeeeb; display:flex; align-items:center; justify-content:center; font-size: 1.55rem; margin-bottom: 18px; }
+.hf-photo { width:100%; height:180px; overflow:hidden; background:#eef0f3; }
+.hf-photo img { width:100%; height:100%; object-fit:cover; display:block; transition: transform .45s ease; }
+.home-feature-card:hover .hf-photo img { transform: scale(1.05); }
+.hf-body { padding: 22px 26px 26px; display:flex; flex-direction:column; flex:1; }
 .home-feature-card h3 { font-size: 1.18rem; color:#6e6e70; margin:0 0 8px; }
-.home-feature-card p { font-size:.9rem; color:#6e6e70; line-height:1.6; margin:0 0 16px; }
+.home-feature-card p { font-size:.9rem; color:#6e6e70; line-height:1.6; margin:0 0 16px; flex:1; }
 .hf-link { font-size:.86rem; font-weight:700; color:#c03926; }
 .home-feature-card:hover .hf-link { text-decoration:underline; }
 @media (max-width: 760px) { .home-features-grid { grid-template-columns: 1fr; } }
@@ -615,9 +618,9 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <p>Buyers often start with a school district, a named community, or a specific Indianapolis neighborhood. Explore Central Indiana the way you actually search.</p>
  </div>
  <div class="home-features-grid">
-  <a href="/schools/" class="home-feature-card"><div class="hf-icon">&#127979;</div><h3>School Districts</h3><p>Search homes by top districts &mdash; Carmel Clay, Hamilton Southeastern, Zionsville, Center Grove &amp; more.</p><span class="hf-link">Browse school districts &rarr;</span></a>
-  <a href="/communities/" class="home-feature-card"><div class="hf-icon">&#127962;</div><h3>Communities &amp; Subdivisions</h3><p>Named golf, luxury &amp; master-planned communities &mdash; Village of WestClay, Chatham Hills, Holliday Farms &amp; more.</p><span class="hf-link">Browse communities &rarr;</span></a>
-  <a href="/neighborhoods/" class="home-feature-card"><div class="hf-icon">&#128205;</div><h3>Indianapolis Neighborhoods</h3><p>Distinct city neighborhoods &mdash; Broad Ripple, Mass Ave, Irvington, Fountain Square &amp; more.</p><span class="hf-link">Browse neighborhoods &rarr;</span></a>
+  <a href="/schools/" class="home-feature-card"><div class="hf-photo"><picture><source srcset="/assets/img/features/school-districts.webp" type="image/webp"><img src="/assets/img/features/school-districts.jpg" alt="Students in a Central Indiana classroom" loading="lazy" decoding="async" width="900" height="600"></picture></div><div class="hf-body"><h3>School Districts</h3><p>Search homes by top districts &mdash; Carmel Clay, Hamilton Southeastern, Zionsville, Center Grove &amp; more.</p><span class="hf-link">Browse school districts &rarr;</span></div></a>
+  <a href="/communities/" class="home-feature-card"><div class="hf-photo"><picture><source srcset="/assets/img/features/communities.webp" type="image/webp"><img src="/assets/img/features/communities.jpg" alt="Aerial view of a master-planned community near Indianapolis" loading="lazy" decoding="async" width="900" height="600"></picture></div><div class="hf-body"><h3>Communities &amp; Subdivisions</h3><p>Named golf, luxury &amp; master-planned communities &mdash; Village of WestClay, Chatham Hills, Holliday Farms &amp; more.</p><span class="hf-link">Browse communities &rarr;</span></div></a>
+  <a href="/neighborhoods/" class="home-feature-card"><div class="hf-photo"><picture><source srcset="/assets/img/features/neighborhoods.webp" type="image/webp"><img src="/assets/img/features/neighborhoods.jpg" alt="Indianapolis skyline over close-in city neighborhoods" loading="lazy" decoding="async" width="900" height="600"></picture></div><div class="hf-body"><h3>Indianapolis Neighborhoods</h3><p>Distinct city neighborhoods &mdash; Broad Ripple, Mass Ave, Irvington, Fountain Square &amp; more.</p><span class="hf-link">Browse neighborhoods &rarr;</span></div></a>
  </div>
  </div>
 </section>
