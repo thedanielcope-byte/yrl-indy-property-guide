@@ -125,6 +125,13 @@
 .home-post-card .hp-more { margin-top: auto; color: #c03926; font-weight: 700; font-size:.82rem; padding-top: 4px; }
 @media (max-width: 900px) { .home-posts-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .home-posts-grid { grid-template-columns: 1fr; } }
+.home-blog-2col { display: grid; grid-template-columns: 320px 1fr; gap: 26px; align-items: start; }
+.home-blog-poster { display: block; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 22px rgba(0,0,0,.12); transition: transform .15s, box-shadow .15s; }
+.home-blog-poster:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+.home-blog-poster img { width: 100%; height: auto; display: block; }
+.home-blog-cards .home-posts-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 900px) { .home-blog-2col { grid-template-columns: 1fr; } .home-blog-poster { max-width: 400px; margin: 0 auto; } }
+@media (max-width: 520px) { .home-blog-cards .home-posts-grid { grid-template-columns: 1fr; } }
 .about-home { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .about-home-text h2 { font-size: 1.8rem; color: #6e6e70; margin-bottom: 16px; }
 .about-home-text p { color: #6e6e70; line-height: 1.7; margin-bottom: 16px; }
@@ -679,6 +686,11 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <h2>Latest From the Blog</h2>
  <p>Local market updates, buyer and seller tips, and neighborhood guides — fresh from the Your Realty Link team.</p>
  </div>
+ <div class="home-blog-2col">
+ <a class="home-blog-poster" href="/blog/" aria-label="Read the Your Realty Link blog">
+  <picture><source srcset="/assets/img/blog-poster.webp" type="image/webp"><img src="/assets/img/blog-poster.jpg" alt="Your Realty Link Blog — find valuable real estate resources" loading="lazy" width="760" height="1140"></picture>
+ </a>
+ <div class="home-blog-cards">
  <!-- HOME-RECENT-POSTS -->
  <div class="home-posts-grid">
   <a class="home-post-card" href="/blog/traditional-vs-virtual-open-houses-indianapolis/"><img class="hp-img" src="/assets/img/blog/traditional-vs-virtual-open-houses-indianapolis.png" alt="Traditional vs. Virtual Open Houses: Which Is Right for You?" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>Traditional vs. Virtual Open Houses: Which Is Right for You?</h3><p>Traditional or virtual open house? Compare the honest pros and cons for Indianapolis buyers, and learn when each one wins — from Your Realty Link.</p><span class="hp-more">Read more &rarr;</span></span></a>
@@ -687,6 +699,8 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
   <a class="home-post-card" href="/blog/open-house-etiquette-indianapolis-buyers/"><img class="hp-img" src="/assets/img/blog/open-house-etiquette-indianapolis-buyers.png" alt="Open House Etiquette: What Indianapolis Buyers Should Know" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>Open House Etiquette: What Indianapolis Buyers Should Know</h3><p>Open house etiquette for Indianapolis buyers: what to do, what not to say, and whether you should bring your own agent. A practical guide from Your Realty Link.</p><span class="hp-more">Read more &rarr;</span></span></a>
  </div>
  <!-- /HOME-RECENT-POSTS -->
+ </div>
+ </div>
  <div style="text-align:center; margin-top:30px;">
  <a href="/blog/" class="btn btn-outline">Read the Blog →</a>
  </div>
