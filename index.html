@@ -132,13 +132,20 @@
 .home-blog-cards .home-posts-grid { grid-template-columns: 1fr 1fr; }
 @media (max-width: 900px) { .home-blog-2col { grid-template-columns: 1fr; } .home-blog-poster { max-width: 400px; margin: 0 auto; } }
 @media (max-width: 520px) { .home-blog-cards .home-posts-grid { grid-template-columns: 1fr; } }
-.about-home { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.about-home { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: start; }
 .about-home-text h2 { font-size: 1.8rem; color: #6e6e70; margin-bottom: 16px; }
 .about-home-text p { color: #6e6e70; line-height: 1.7; margin-bottom: 16px; }
-.about-home-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.about-stat { text-align: center; background: #f7f7f7; border-radius: 8px; padding: 20px; }
-.about-stat.num { font-size: 2rem; font-weight: 700; color: #c03926; display: block; }
-.about-stat.lbl { font-size:.85rem; color: #6e6e70; }
+.about-home-stats { display: flex; flex-direction: column; gap: 11px; margin-bottom: 18px; }
+.about-stat { display: flex; align-items: center; gap: 15px; background: #f7f7f7; border-radius: 10px; padding: 13px 18px; }
+.about-stat .num { font-size: 1.45rem; font-weight: 800; color: #c03926; line-height: 1; flex-shrink: 0; min-width: 92px; text-align: center; }
+.about-stat .lbl { font-size: .95rem; color: #6e6e70; font-weight: 600; }
+.about-referral { display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,.12); text-decoration: none; transition: transform .15s, box-shadow .15s; }
+.about-referral:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+.about-referral img { width: 100%; height: auto; display: block; }
+.about-referral .ref-cap { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #13294a; color: #fff; padding: 13px 18px; font-weight: 700; font-size: .96rem; }
+.about-referral .ref-cap .go { color: #f2b8ad; font-weight: 800; white-space: nowrap; }
+.about-referral:hover .ref-cap { background: #c03926; }
+.about-referral:hover .ref-cap .go { color: #fff; }
 
  /* ── SPLIT HERO ── */
 .hero-split{
@@ -343,6 +350,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <div class="nav-submenu">
  <a href="/about/">About Your Realty Link</a>
  <a href="/agents/">Meet Our Agents</a>
+ <a href="/services/referral-program/">Referral Program</a>
  </div>
  </div>
  <a href="/search/" class="nav-cta">Search Homes →</a>
@@ -657,6 +665,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <a href="/contact/" class="btn btn-outline">Contact YRL</a>
  </div>
  </div>
+ <div class="about-home-side">
  <div class="about-home-stats">
  <div class="about-stat">
  <span class="num">17</span>
@@ -674,6 +683,14 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <span class="num">Full</span>
  <span class="lbl">MLS Access</span>
  </div>
+ </div>
+ <a href="/services/referral-program/" class="about-referral">
+ <picture>
+ <source srcset="/assets/img/services/referral-program.webp" type="image/webp">
+ <img src="/assets/img/services/referral-program.jpg" alt="Thinking about retiring from real estate? Explore the Your Realty Link Referral Status Agent Program" loading="lazy" width="1400" height="933">
+ </picture>
+ <span class="ref-cap">Retiring from real estate? Keep your license earning. <span class="go">Referral Program →</span></span>
+ </a>
  </div>
  </div>
  </div>

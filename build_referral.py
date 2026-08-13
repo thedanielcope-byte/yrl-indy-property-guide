@@ -1,0 +1,262 @@
+#!/usr/bin/env python3
+"""Build /services/referral-program/ — the Referral Status Agent landing page.
+Reuses an existing service page's header/footer/asset-hashes so nav/footer stay
+in sync. Content is from Janet's Referral Program flyer. Re-run to refresh.
+(Temporary landing page; the program will get its own site later.)
+"""
+import os, re
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+TPL = os.path.join(ROOT, "services", "expired-listings", "index.html")
+OUT_DIR = os.path.join(ROOT, "services", "referral-program")
+URL = "https://janetgiles.com/services/referral-program/"
+
+src = open(TPL, encoding="utf-8").read()
+def grab(p):
+    m = re.search(p, src, re.S)
+    if not m: raise SystemExit("extract failed: " + p[:40])
+    return m.group(0)
+FONTS = grab(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?<link rel="stylesheet" href="/assets/css/style\.css\?v=[0-9a-f]+">')
+HEADER = grab(r'<header class="site-header">.*?</header>')
+FOOTER = grab(r'<footer class="site-footer">.*?</footer>')
+SCRIPTS = grab(r'<script>\nfunction toggleNav.*?</body>\n</html>')
+
+faqs = [
+ ("What does it mean to put my license in &ldquo;referral status&rdquo;?",
+  "It means you park your active real estate license with Your Realty Link and step back from day-to-day production. You keep your license active for referrals — when you send us a client, one of our experienced full-time agents takes care of them, and you earn a referral fee on the closing."),
+ ("How much can I earn on a referral?",
+  "You can earn up to 35% referral fees on every local client you send our way. It&rsquo;s steady referral income without the calls, paperwork, or showings."),
+ ("Do I still have to pay MIBOR and board fees?",
+  "No. One of the biggest advantages of referral status is no more MIBOR fees. You keep your license working for you without the ongoing dues and costs of active production."),
+ ("Who takes care of the clients I refer?",
+  "Experienced, full-time Your Realty Link agents — backed by Principal Broker-Owner Janet Giles, who has been selling real estate since 1974 and mentors the team hands-on. Your clients get step-by-step support from contract to closing, so your name stays in good hands."),
+]
+faq_html = "\n".join(
+ f'<details class="faq-item">\n<summary>{q}</summary>\n<div class="faq-answer"><p>{a}</p></div>\n</details>'
+ for q, a in faqs)
+import json
+faq_schema = ",\n".join(
+ '{ "@type": "Question", "name": %s, "acceptedAnswer": { "@type": "Answer", "text": %s } }'
+ % (json.dumps(re.sub("&[a-z]+;|&#\\d+;", lambda m: {"&ldquo;":'"',"&rdquo;":'"',"&rsquo;":"'","&amp;":"&"}.get(m.group(0),""), q)),
+    json.dumps(re.sub("&[a-z]+;|&#\\d+;", lambda m: {"&ldquo;":'"',"&rdquo;":'"',"&rsquo;":"'","&amp;":"&"}.get(m.group(0),""), a)))
+ for q, a in faqs)
+
+page = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Referral Program for Retiring Agents in Indianapolis | Your Realty Link</title>
+ <meta name="description" content="Thinking about retiring from real estate? Put your license in referral status with Your Realty Link and earn up to 35% referral fees — no showings, no paperwork, no MIBOR fees. Call Janet: 317-997-7404.">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="{URL}">
+ <meta property="og:title" content="Referral Program for Retiring Agents | Your Realty Link">
+ <meta property="og:description" content="Put your license in referral status with Your Realty Link and earn up to 35% referral fees — no showings, no paperwork, no MIBOR fees.">
+ <meta property="og:url" content="{URL}">
+ <meta property="og:image" content="https://janetgiles.com/assets/img/services/referral-program.jpg">
+ <meta property="og:image:width" content="1400"><meta property="og:image:height" content="933">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:image" content="https://janetgiles.com/assets/img/services/referral-program.jpg">
+ <meta property="og:type" content="website">
+ <script type="application/ld+json">
+ {{
+ "@context": "https://schema.org",
+ "@graph": [
+ {{ "@type": "WebPage", "url": "{URL}", "speakable": {{ "@type": "SpeakableSpecification", "cssSelector": [".qa-lead", ".qa-facts"] }} }},
+ {{
+ "@type": ["LocalBusiness", "RealEstateAgent"],
+ "name": "Your Realty Link", "url": "https://yourrealtylink.com", "logo": "/assets/img/yrl-logo.png",
+ "telephone": "317-997-7404", "email": "janet@yourrealtylink.com",
+ "address": {{ "@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US" }},
+ "areaServed": "Indianapolis, Indiana and Central Indiana"
+ }},
+ {{ "@type": "FAQPage", "mainEntity": [
+ {faq_schema}
+ ] }},
+ {{ "@type": "BreadcrumbList", "itemListElement": [
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://janetgiles.com/services/" }},
+ {{ "@type": "ListItem", "position": 3, "name": "Referral Program", "item": "{URL}" }}
+ ] }}
+ ]
+ }}
+ </script>
+ {FONTS}
+ <style>
+.service-wrap {{ max-width: 820px; margin: 0 auto; padding: 44px 0; }}
+.ref-banner {{ display: block; max-width: 1000px; margin: 22px auto 0; }}
+.ref-banner img {{ width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 8px 26px rgba(0,0,0,.14); }}
+.ref-belt {{ background: #f5efe2; padding: 26px 0 30px; text-align: center; }}
+.ref-belt .eyebrow {{ font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #c03926; margin-bottom: 10px; }}
+.ref-belt h1 {{ color: #13294a; font-size: clamp(1.5rem, 3.2vw, 2.15rem); margin: 0 0 8px; line-height: 1.15; }}
+.ref-belt p {{ color: #48566b; font-size: 1.05rem; max-width: 60ch; margin: 0 auto 16px; }}
+.ref-belt .btn-group {{ justify-content: center; }}
+.perks {{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1.4rem 0; }}
+.perks .perk {{ background: var(--light); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 14.5px; font-weight: 600; color: var(--text, #1a1d22); display: flex; gap: 10px; align-items: flex-start; }}
+.perks .perk .no {{ color: #c03926; font-weight: 800; }}
+.step-list {{ counter-reset: steps; list-style: none; padding: 0; margin: 1.5rem 0; }}
+.step-list li {{ counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }}
+.step-list li:last-child {{ border: none; }}
+.step-num {{ background: var(--red); color: var(--white); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 2px; }}
+.step-content h4 {{ margin: 0 0 4px; font-size: 15px; }}
+.step-content p {{ font-size: 14px; color: var(--mid); margin: 0; }}
+.ref-highlight {{ background: linear-gradient(135deg, #13294a 0%, #0d1e38 100%); color: #fff; border-radius: 14px; padding: 26px 30px; text-align: center; margin: 26px 0; }}
+.ref-highlight .big {{ font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 800; color: #fff; line-height: 1; }}
+.ref-highlight .lbl {{ color: #c9d4e0; font-size: 1rem; margin-top: 8px; }}
+.why-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.4rem 0; }}
+.why-item {{ background: var(--light); border-radius: var(--radius); padding: 18px 20px; border: 1px solid var(--border); }}
+.why-item h4 {{ font-size: 14px; margin-bottom: 6px; color: var(--red); }}
+.why-item p {{ font-size: 13px; color: var(--mid); margin: 0; }}
+ @media (max-width: 600px) {{ .perks, .why-grid {{ grid-template-columns: 1fr; }} }}
+ </style>
+</head>
+<body>
+
+{HEADER}
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+ <div class="container">
+ <a href="/">Home</a>
+ <span>&rsaquo;</span>
+ <a href="/services/">Services</a>
+ <span>&rsaquo;</span>
+ Referral Program
+ </div>
+</nav>
+
+<picture class="ref-banner">
+ <source srcset="/assets/img/services/referral-program.webp" type="image/webp">
+ <img src="/assets/img/services/referral-program.jpg" alt="Thinking about retiring from real estate? Check out the Your Realty Link Referral Status Agent Program" width="1400" height="933">
+</picture>
+<section class="ref-belt">
+ <div class="container">
+ <div class="eyebrow">Referral Status Agent Program</div>
+ <h1>Let Your License Keep Working for You</h1>
+ <p>Thinking about retiring &mdash; or just stepping back &mdash; from real estate? Put your license in referral status with Your Realty Link and earn steady referral income without the day-to-day hustle.</p>
+ <div class="btn-group">
+ <a href="tel:3179977404" class="btn btn-primary">📞 Call or Text Janet: 317-997-7404</a>
+ <a href="/contact/" class="btn btn-outline">Ask About the Program →</a>
+ </div>
+ </div>
+</section>
+
+<div class="container">
+
+ <!-- QA-START -->
+<div class="quick-answer">
+ <p class="qa-heading">Quick Answer</p>
+ <p class="qa-lead">Place your license into referral status with Your Realty Link and earn up to 35% referral fees on every local client you send our way &mdash; no more showings, paperwork, or MIBOR fees. Call or text Janet Giles: 317-997-7404.</p>
+ <dl class="qa-facts">
+ <div><dt>Referral fee</dt><dd>Up to 35% on local referrals</dd></div>
+ <div><dt>Broker</dt><dd>Janet Giles, Broker/Owner since 1974</dd></div>
+ <div><dt>Call or text</dt><dd><a href="tel:3179977404">317-997-7404</a></dd></div>
+ <div><dt>Email</dt><dd><a href="mailto:janet@yourrealtylink.com">janet@yourrealtylink.com</a></dd></div>
+ </dl>
+</div>
+<!-- QA-END -->
+
+ <div class="service-wrap">
+
+ <p>After years of hard work, you may be ready to step back from the day-to-day hustle of real estate &mdash; but that doesn&rsquo;t mean your career has to stop paying off. At Your Realty Link, our <strong>Referral Status Agent Program</strong> lets you keep your license active and working for you and your network. Place your license into referral with us and earn <strong>up to 35% referral fees</strong> on every local client you send our way.</p>
+
+ <div class="ref-highlight">
+ <div class="big">Up to 35%</div>
+ <div class="lbl">referral fees on every local client you refer</div>
+ </div>
+
+ <h2>What You Leave Behind</h2>
+ <p>Referral status means the income keeps coming &mdash; without everything that wears agents out:</p>
+ <div class="perks">
+ <div class="perk"><span class="no">NO</span> more calls in the middle of dinner</div>
+ <div class="perk"><span class="no">NO</span> more paperwork</div>
+ <div class="perk"><span class="no">NO</span> more showings &mdash; just steady referral income</div>
+ <div class="perk"><span class="no">NO</span> more MIBOR fees</div>
+ </div>
+ <p>Just refer the client. Our experienced, full-time agents handle everything from there.</p>
+
+ <h2>How Referral Status Works</h2>
+ <ol class="step-list">
+ <li><div class="step-num">1</div><div class="step-content"><h4>Park your license with Your Realty Link</h4><p>A quick conversation with Janet gets your license set up in referral status &mdash; no production requirements, no MIBOR dues.</p></div></li>
+ <li><div class="step-num">2</div><div class="step-content"><h4>Send us your local clients</h4><p>Friends, family, past clients, neighbors &mdash; anyone in Central Indiana looking to buy or sell.</p></div></li>
+ <li><div class="step-num">3</div><div class="step-content"><h4>We take great care of them</h4><p>Our experienced, full-time agents guide your client step by step, from contract to closing.</p></div></li>
+ <li><div class="step-num">4</div><div class="step-content"><h4>You earn referral income</h4><p>Collect up to 35% referral fees at closing &mdash; no showings, paperwork, or board dues required.</p></div></li>
+ </ol>
+
+ <h2>A Little About Us</h2>
+ <div class="why-grid">
+ <div class="why-item"><h4>Led by Janet Giles</h4><p>Our Principal Broker-Owner started in 1974 and never stopped selling real estate &mdash; a hands-on mentor to every agent on the team.</p></div>
+ <div class="why-item"><h4>Experienced, Full-Time Team</h4><p>Our agents serve buyers and sellers across Marion, Shelby, Hendricks, Hancock, and Hamilton Counties &mdash; your referrals are in capable hands.</p></div>
+ <div class="why-item"><h4>Real Support Behind Every Deal</h4><p>Dotloop, Office 365, a brick-and-mortar office, and in-house legal assistance &mdash; your clients get step-by-step support once under contract (no guessing or Googling required).</p></div>
+ <div class="why-item"><h4>A No-Hassle Environment</h4><p>Great low caps, no MIBOR fees in referral status, and a genuinely no-hassle way to keep your license earning.</p></div>
+ </div>
+
+ <!-- PRIMARY CTA -->
+ <div class="cta-block">
+ <h3>Give Janet a Call or Text &mdash; Let&rsquo;s Talk Referral</h3>
+ <p>Whether you&rsquo;re ready now or just exploring your options, Janet will walk you through exactly how referral status works for you.</p>
+ <div class="btn-group">
+ <a href="tel:3179977404" class="btn btn-white">📞 Call or Text: 317-997-7404</a>
+ <a href="mailto:janet@yourrealtylink.com" class="btn btn-outline">✉️ Email Janet</a>
+ <a href="/contact/" class="btn btn-outline">Send a Message →</a>
+ </div>
+ </div>
+
+ <!-- FAQ -->
+ <section class="faq-section">
+ <h2>Frequently Asked Questions &mdash; Referral Program</h2>
+{faq_html}
+ </section>
+
+ <hr class="divider">
+ <h3>Related Resources</h3>
+ <ul>
+ <li><a href="/services/join-yrl/">Join the Your Realty Link Team</a></li>
+ <li><a href="/about/">About Your Realty Link</a></li>
+ <li><a href="/agents/">Meet Our Agents</a></li>
+ <li><a href="/contact/">Contact Us</a></li>
+ </ul>
+
+ </div>
+</div>
+
+<section class="cta-form-section">
+ <div class="container">
+ <h2>Interested? Let&rsquo;s Talk.</h2>
+ <p>Fill out the form and Janet Giles will reach out personally about the Referral Status Agent Program — no obligation.</p>
+ <form class="ipg-lead-form">
+ <input type="hidden" name="source_page" value="services/referral-program">
+ <input type="hidden" name="interest_type" value="Referral Program">
+ <input type="hidden" name="tags" value="referral-agent,recruiting">
+ <div class="form-row">
+ <div>
+ <label for="sv-name">Name *</label>
+ <input type="text" id="sv-name" name="name" required placeholder="Your name">
+ </div>
+ <div>
+ <label for="sv-phone">Phone *</label>
+ <input type="tel" id="sv-phone" name="phone" required placeholder="317-555-1234">
+ </div>
+ </div>
+ <label for="sv-email">Email *</label>
+ <input type="email" id="sv-email" name="email" required placeholder="you@example.com">
+ <label for="sv-message">Tell us a little about your situation</label>
+ <textarea id="sv-message" name="message" placeholder="Are you retiring, stepping back, or just exploring referral status?"></textarea>
+ <button type="submit">Send Message →</button>
+ <p class="form-note">No spam · No obligation · Janet responds personally</p>
+ </form>
+ </div>
+</section>
+
+{FOOTER}
+
+{SCRIPTS}'''
+
+os.makedirs(OUT_DIR, exist_ok=True)
+open(os.path.join(OUT_DIR, "index.html"), "w", encoding="utf-8").write(page)
+
+sm = os.path.join(ROOT, "sitemap.xml"); s = open(sm, encoding="utf-8").read()
+if URL not in s:
+    blk = f"<url>\n  <loc>{URL}</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n"
+    open(sm, "w", encoding="utf-8").write(s.replace("</urlset>", blk + "</urlset>"))
+    print("added sitemap entry")
+print("built /services/referral-program/")
