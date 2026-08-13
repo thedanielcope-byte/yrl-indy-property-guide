@@ -5,3 +5,6 @@ valuation-tool/node_modules/
 
 # Raw promo source art (optimized copies live in assets/img/services/)
 assets/How Your Realty Link Can Help/
+
+# Raw team photo source (optimized copy is team-photo.jpg)
+assets/img/teamphoto.png
