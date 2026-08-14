@@ -114,7 +114,7 @@
 .svc-join a:hover { text-decoration: underline; }
 @media (max-width: 640px) { .svc-tiles-wide { grid-template-columns: 1fr; } .svc-tiles-tall { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 420px) { .svc-tiles-tall { grid-template-columns: 1fr; } }
-.home-posts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.home-posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .home-post-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.08); text-decoration: none; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
 .home-post-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.15); }
 .home-post-card .hp-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #12283f; }
@@ -125,13 +125,10 @@
 .home-post-card .hp-more { margin-top: auto; color: #c03926; font-weight: 700; font-size:.82rem; padding-top: 4px; }
 @media (max-width: 900px) { .home-posts-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .home-posts-grid { grid-template-columns: 1fr; } }
-.home-blog-2col { display: grid; grid-template-columns: 320px 1fr; gap: 26px; align-items: start; }
-.home-blog-poster { display: block; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 22px rgba(0,0,0,.12); transition: transform .15s, box-shadow .15s; }
-.home-blog-poster:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.18); }
-.home-blog-poster img { width: 100%; height: auto; display: block; }
-.home-blog-cards .home-posts-grid { grid-template-columns: 1fr 1fr; }
-@media (max-width: 900px) { .home-blog-2col { grid-template-columns: 1fr; } .home-blog-poster { max-width: 400px; margin: 0 auto; } }
-@media (max-width: 520px) { .home-blog-cards .home-posts-grid { grid-template-columns: 1fr; } }
+/* Blog poster tile — full-image card that stretches to match the article cards */
+.home-post-card--poster { display: block; position: relative; min-height: 260px; }
+.home-post-card--poster picture { position: absolute; inset: 0; display: block; }
+.home-post-card--poster .hp-poster-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 .about-home { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: start; }
 .about-home-text h2 { font-size: 1.8rem; color: #6e6e70; margin-bottom: 16px; }
 .about-home-text p { color: #6e6e70; line-height: 1.7; margin-bottom: 16px; }
@@ -706,20 +703,17 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <h2>Latest From the Blog</h2>
  <p>Local market updates, buyer and seller tips, and neighborhood guides — fresh from the Your Realty Link team.</p>
  </div>
- <div class="home-blog-2col">
- <a class="home-blog-poster" href="/blog/" aria-label="Read the Your Realty Link blog">
-  <picture><source srcset="/assets/img/blog-poster.webp" type="image/webp"><img src="/assets/img/blog-poster.jpg" alt="Your Realty Link Blog — find valuable real estate resources" loading="lazy" width="760" height="1140"></picture>
+ <div class="home-posts-grid home-blog-grid">
+ <a class="home-post-card home-post-card--poster" href="/blog/" aria-label="Read the Your Realty Link blog">
+  <picture><source srcset="/assets/img/blog-poster-card.webp" type="image/webp"><img class="hp-poster-img" src="/assets/img/blog-poster-card.jpg" alt="Your Realty Link Blog — find valuable real estate resources" loading="lazy" width="600" height="711"></picture>
  </a>
- <div class="home-blog-cards">
  <!-- HOME-RECENT-POSTS -->
- <div class="home-posts-grid">
   <a class="home-post-card" href="/blog/traditional-vs-virtual-open-houses-indianapolis/"><img class="hp-img" src="/assets/img/blog/traditional-vs-virtual-open-houses-indianapolis.png" alt="Traditional vs. Virtual Open Houses: Which Is Right for You?" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>Traditional vs. Virtual Open Houses: Which Is Right for You?</h3><p>Traditional or virtual open house? Compare the honest pros and cons for Indianapolis buyers, and learn when each one wins — from Your Realty Link.</p><span class="hp-more">Read more &rarr;</span></span></a>
   <a class="home-post-card" href="/blog/what-is-a-virtual-open-house-indianapolis/"><img class="hp-img" src="/assets/img/blog/what-is-a-virtual-open-house-indianapolis.png" alt="What Is a Virtual Open House? Tour Indianapolis Homes From Anywhere" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>What Is a Virtual Open House? Tour Indianapolis Homes From Anywhere</h3><p>A virtual open house lets you tour an Indianapolis home from anywhere. Here is how private live-video showings work — and why they are so powerful now.</p><span class="hp-more">Read more &rarr;</span></span></a>
   <a class="home-post-card" href="/blog/do-open-houses-actually-sell-homes-indianapolis/"><img class="hp-img" src="/assets/img/blog/do-open-houses-actually-sell-homes-indianapolis.png" alt="Do Open Houses Actually Sell Homes? An Honest Look" loading="lazy"><span class="hp-body"><span class="hp-cat">Selling a Home</span><h3>Do Open Houses Actually Sell Homes? An Honest Look</h3><p>Do open houses really sell homes in Indianapolis? An honest look at what open houses do and do not do — and what actually gets your home sold.</p><span class="hp-more">Read more &rarr;</span></span></a>
   <a class="home-post-card" href="/blog/open-house-etiquette-indianapolis-buyers/"><img class="hp-img" src="/assets/img/blog/open-house-etiquette-indianapolis-buyers.png" alt="Open House Etiquette: What Indianapolis Buyers Should Know" loading="lazy"><span class="hp-body"><span class="hp-cat">Buying a Home</span><h3>Open House Etiquette: What Indianapolis Buyers Should Know</h3><p>Open house etiquette for Indianapolis buyers: what to do, what not to say, and whether you should bring your own agent. A practical guide from Your Realty Link.</p><span class="hp-more">Read more &rarr;</span></span></a>
- </div>
+  <a class="home-post-card" href="/blog/how-to-host-a-successful-open-house-indianapolis/"><img class="hp-img" src="/assets/img/blog/how-to-host-a-successful-open-house-indianapolis.png" alt="How to Host a Successful Open House in Indianapolis" loading="lazy"><span class="hp-body"><span class="hp-cat">Selling a Home</span><h3>How to Host a Successful Open House in Indianapolis</h3><p>A seller&#x27;s guide to hosting a successful open house in Indianapolis — how to prep, promote, and pair it with a virtual option. From Your Realty Link.</p><span class="hp-more">Read more &rarr;</span></span></a>
  <!-- /HOME-RECENT-POSTS -->
- </div>
  </div>
  <div style="text-align:center; margin-top:30px;">
  <a href="/blog/" class="btn btn-outline">Read the Blog →</a>

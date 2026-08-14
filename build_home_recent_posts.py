@@ -14,7 +14,7 @@ import os, re, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BLOG_INDEX = os.path.join(ROOT, "blog", "index.html")
 HOME = os.path.join(ROOT, "index.html")
-N = 4
+N = 5
 START, END = "<!-- HOME-RECENT-POSTS -->", "<!-- /HOME-RECENT-POSTS -->"
 
 def parse_latest(n):
@@ -51,9 +51,11 @@ def card(p):
 
 def main():
     posts = parse_latest(N)
-    grid = ('\n <div class="home-posts-grid">\n  '
+    # Cards only — the enclosing .home-posts-grid (with the blog poster tile as
+    # its first child) lives in the static homepage markup around these markers.
+    grid = ('\n  '
             + "\n  ".join(card(p) for p in posts)
-            + '\n </div>\n ')
+            + '\n ')
     idx = open(HOME, encoding="utf-8").read()
     if START not in idx or END not in idx:
         raise SystemExit("HOME-RECENT-POSTS markers not found in index.html")
