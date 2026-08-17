@@ -82,6 +82,13 @@ VENDORS = json.loads(r'''[
 {"category":"🛡️ Home Warranty","company":"Residential Warranty Services Inc","contact":"Jon Wirth — Account Manager","phone":"317-640-1499","website":"www.rwswarranty.com","notes":"Orders/Claims 800-544-8156 · 698 Pro-Med Lane, Carmel IN 46032"}
 ]''')
 
+# Prefer the live snapshot from the hub (sync-vendors.py) over the embedded seed.
+_vj = os.path.join(ROOT, "vendors.json")
+if os.path.exists(_vj):
+    VENDORS = json.load(open(_vj, encoding="utf-8"))
+# Publish only vendors the broker flagged for the site (default = shown).
+VENDORS = [v for v in VENDORS if v.get("site", True) is not False]
+
 # Static, factual Central Indiana utilities (not referral vendors — a setup helper)
 UTILITIES = [
  ("Electric", "AES Indiana (Indianapolis/Marion County)", "888-261-8222", "aesindiana.com"),
@@ -111,7 +118,8 @@ def norm_url(u):
     return u if u.startswith("http") else "https://" + u
 
 def vcard(v):
-    parts = [f'<h3>{esc(v["company"])}</h3>']
+    star = ' <span class="vd-star" title="Preferred partner">★</span>' if v.get("featured") else ''
+    parts = [f'<h3>{esc(v["company"])}{star}</h3>']
     if v.get("contact"): parts.append(f'<p class="vd-contact">{esc(v["contact"])}</p>')
     rows = []
     if v.get("phone"):
@@ -128,7 +136,7 @@ for v in VENDORS: bycat.setdefault(v["category"], []).append(v)
 sections = ""
 for cat in ORDER:
     if cat not in bycat: continue
-    cards = "\n".join(vcard(v) for v in sorted(bycat[cat], key=lambda x: x["company"]))
+    cards = "\n".join(vcard(v) for v in sorted(bycat[cat], key=lambda x: (not x.get("featured"), x["company"].lower())))
     sections += f'\n<h2 id="{anchor(cat)}">{esc(cat)}</h2>\n<div class="vendor-grid">\n{cards}\n</div>\n'
 
 jump_html = "\n".join(f'  <a href="#{anchor(c)}">{esc(c)}</a>' for c in ORDER if c in bycat)
@@ -171,6 +179,7 @@ page = f'''<!DOCTYPE html>
 .vendor-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 14px; }}
 .vendor-card {{ background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; box-shadow: 0 2px 10px rgba(0,0,0,.05); }}
 .vendor-card h3 {{ font-size: 1.02rem; color: #13294a; margin: 0 0 3px; }}
+.vendor-card .vd-star {{ color: #eab308; }}
 .vendor-card .vd-contact {{ font-size: .84rem; color: var(--mid); font-weight: 600; margin: 0 0 10px; }}
 .vendor-card .vd-links {{ display: flex; flex-direction: column; gap: 6px; }}
 .vendor-card .vd-row {{ font-size: .88rem; color: var(--red); font-weight: 600; text-decoration: none; word-break: break-word; }}
