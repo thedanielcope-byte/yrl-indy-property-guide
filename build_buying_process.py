@@ -37,16 +37,22 @@ STEPS = [
   "New homeowner checklist", "/blog/new-homeowner-checklist-after-closing-indianapolis/"),
 ]
 steps_html = "\n".join(
- f'''<div class="stop">
- <div class="stop-marker">{i}</div>
- <div class="stop-card">
-  <span class="stop-emoji">{emoji}</span>
+ f'''<div class="jstep">
+ <div class="jnum">{i}</div>
+ <div class="jstep-card">
+  <span class="jstep-emoji">{emoji}</span>
   <h4><a href="{url}">{t}</a></h4>
   <p>{blurb}</p>
-  <a class="stop-more" href="{url}">{more} &rarr;</a>
+  <a class="jstep-more" href="{url}">{more} &rarr;</a>
  </div>
 </div>'''
  for i,(t,emoji,blurb,more,url) in enumerate(STEPS, 1))
+
+# Smooth S-curve road that weaves between x=66% (odd steps) and x=34% (even), in a
+# 0..100 normalized viewBox stretched to the container (non-scaling stroke keeps width even).
+ROAD_D = "M66,0 L66,10 C66,20 34,20 34,30 C34,40 66,40 66,50 C66,60 34,60 34,70 C34,80 66,80 66,90 L66,100"
+ROAD_SVG = (f'<svg class="journey-road" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">'
+            f'<path class="road-base" d="{ROAD_D}"/><path class="road-line" d="{ROAD_D}"/></svg>')
 
 faqs = [
  ("How long does it take to buy a home in Indianapolis?", "From accepted offer to closing typically runs 30&ndash;45 days when financing with a mortgage; cash purchases can close faster. Finding the right home varies &mdash; some buyers find it in a weekend, others take a few months."),
@@ -86,32 +92,30 @@ page = f'''<!DOCTYPE html>
  {FONTS}
  <style>
 .service-wrap {{ max-width: 780px; margin: 0 auto; padding: 44px 0; }}
-/* Illustrated "road" journey: a vertical road with a driving car and alternating stops */
-.roadmap {{ position: relative; margin: 2rem 0 1rem; padding: 6px 0; }}
-.road {{ position: absolute; top: 0; bottom: 0; left: 50%; width: 52px; transform: translateX(-50%); background: #3b4048; border-radius: 26px; box-shadow: inset 0 0 0 3px #2d3138, 0 4px 16px rgba(0,0,0,.12); z-index: 0; }}
-.road::before {{ content: ''; position: absolute; left: 50%; top: 14px; bottom: 14px; width: 4px; transform: translateX(-50%); background: repeating-linear-gradient(#ffd24a 0 20px, transparent 20px 40px); border-radius: 2px; }}
-.road .car {{ position: absolute; left: 50%; top: 0; transform: translateX(-50%) rotate(90deg); font-size: 30px; line-height: 1; filter: drop-shadow(0 4px 5px rgba(0,0,0,.35)); animation: drive 12s linear infinite; }}
-@keyframes drive {{ 0% {{ top: -3%; }} 90% {{ top: 101%; }} 100% {{ top: 101%; }} }}
-@media (prefers-reduced-motion: reduce) {{ .road .car {{ animation: none; top: 0; }} }}
-.stop {{ position: relative; display: grid; grid-template-columns: 1fr 52px 1fr; align-items: center; margin-bottom: 30px; z-index: 1; }}
-.stop:last-child {{ margin-bottom: 0; }}
-.stop-marker {{ grid-column: 2; justify-self: center; width: 40px; height: 40px; border-radius: 50%; background: #13294a; color: #fff; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px #fff, 0 0 0 6px #c03926; z-index: 2; }}
-.stop-card {{ background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 15px 18px 17px; box-shadow: 0 4px 16px rgba(0,0,0,.08); text-decoration: none; display: block; transition: transform .15s ease, box-shadow .15s ease; }}
-.stop-card:hover {{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.15); }}
-.stop-emoji {{ font-size: 22px; }}
-.stop-card h4 {{ margin: 3px 0 5px; font-size: 1.08rem; }}
-.stop-card h4 a {{ color: #13294a; text-decoration: none; }}
-.stop-card:hover h4 a {{ color: var(--red); }}
-.stop-card .stop-more {{ text-decoration: none; display: inline-block; }}
-.stop-card p {{ margin: 0 0 9px; font-size: 13.5px; color: var(--mid); line-height: 1.6; }}
-.stop-card .stop-more {{ color: var(--red); font-weight: 700; font-size: 13px; }}
-.stop:nth-child(odd) .stop-card {{ grid-column: 1; text-align: right; }}
-.stop:nth-child(even) .stop-card {{ grid-column: 3; text-align: left; }}
-@media (max-width: 700px) {{
- .road {{ left: 26px; }}
- .stop {{ grid-template-columns: 52px 1fr; }}
- .stop-marker {{ grid-column: 1; }}
- .stop:nth-child(odd) .stop-card, .stop:nth-child(even) .stop-card {{ grid-column: 2; text-align: left; }}
+/* Winding-road journey: an S-curve road (auto-sizes to content) with tiles alternating along the curve */
+.journey {{ position: relative; margin: 2.2rem 0 1rem; }}
+.journey-road {{ position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: visible; }}
+.journey-road .road-base {{ fill: none; stroke: #3b4048; stroke-width: 46; stroke-linecap: butt; stroke-linejoin: round; vector-effect: non-scaling-stroke; }}
+.journey-road .road-line {{ fill: none; stroke: #ffd24a; stroke-width: 3; stroke-dasharray: 16 15; stroke-linecap: butt; vector-effect: non-scaling-stroke; }}
+.jstep {{ position: relative; z-index: 1; margin-bottom: 26px; min-height: 118px; }}
+.jstep:last-child {{ margin-bottom: 0; }}
+.jstep-card {{ position: relative; width: 62%; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px 18px; box-shadow: 0 6px 22px rgba(0,0,0,.12); display: block; transition: transform .15s ease, box-shadow .15s ease; }}
+.jstep-card:hover {{ transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.17); }}
+.jstep:nth-child(even) .jstep-card {{ margin-left: 38%; }}
+.jnum {{ position: absolute; top: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #13294a; color: #fff; font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 5px #fff, 0 0 0 7px #c03926; z-index: 3; }}
+.jstep:nth-child(odd) .jnum {{ left: 66%; }}
+.jstep:nth-child(even) .jnum {{ left: 34%; }}
+.jstep-emoji {{ font-size: 23px; line-height: 1; }}
+.jstep-card h4 {{ margin: 4px 0 5px; font-size: 1.1rem; }}
+.jstep-card h4 a {{ color: #13294a; text-decoration: none; }}
+.jstep-card:hover h4 a {{ color: var(--red); }}
+.jstep-card p {{ margin: 0 0 10px; font-size: 13.5px; color: var(--mid); line-height: 1.6; }}
+.jstep-card .jstep-more {{ color: var(--red); font-weight: 700; font-size: 13px; text-decoration: none; }}
+@media (max-width: 720px) {{
+ .journey-road {{ display: none; }}
+ .jstep {{ min-height: 0; margin-bottom: 16px; }}
+ .jstep-card, .jstep:nth-child(even) .jstep-card {{ width: 100%; margin-left: 0; padding-left: 56px; }}
+ .jnum, .jstep:nth-child(odd) .jnum, .jstep:nth-child(even) .jnum {{ left: 28px; top: 30px; transform: translate(-50%, 0); width: 40px; height: 40px; font-size: 16px; }}
 }}
  </style>
 </head>
@@ -154,8 +158,8 @@ page = f'''<!DOCTYPE html>
 
  <p>Whether it's your first home or your fifth, the process can feel like a lot of moving parts. The good news: it's a well-worn path, and with the right agent it's genuinely manageable. Here is the Central Indiana home-buying journey, step by step &mdash; and how <strong>Your Realty Link</strong> helps at each stage.</p>
 
- <div class="roadmap">
- <div class="road" aria-hidden="true"><span class="car">🚗</span></div>
+ <div class="journey">
+ {ROAD_SVG}
 {steps_html}
  </div>
 
