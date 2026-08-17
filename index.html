@@ -89,6 +89,9 @@
 .value-card .vc-body { padding: 22px 22px 26px; border-top: 3px solid #c03926; }
 .value-card h3 { font-size: 1.12rem; color: #13294a; margin: 0 0 8px; }
 .value-card p { color: #6e6e70; font-size:.92rem; line-height: 1.6; margin: 0; }
+a.value-card { text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+a.value-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0,0,0,.15); }
+a.value-card .vc-body::after { content: "Explore Senior Living →"; display: inline-block; margin-top: 12px; color: #c03926; font-weight: 700; font-size: .82rem; }
 .county-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
 .county-card { background: #6e6e70; color: #fff; border-radius: 8px; padding: 22px 20px; text-decoration: none; display: block; transition: background.2s; }
 .county-card:hover { background: #c03926; }
@@ -346,15 +349,14 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <a href="/contact/">Contact</a>
  <a href="/reviews/">Reviews</a>
  <div class="nav-item-dropdown">
- <a href="/about/">About</a>
- <div class="nav-submenu">
- <a href="/about/">About Your Realty Link</a>
  <a href="/agents/">Meet Our Agents</a>
+ <div class="nav-submenu">
+ <a href="/agents/">Meet Our Agents</a>
+ <a href="/about/">About Your Realty Link</a>
  <a href="/services/referral-program/">Referral Program</a>
  </div>
  </div>
  <a href="/search/" class="nav-cta">Search Homes →</a>
- <a href="https://yrlagent.com" target="_blank" rel="noopener" style="font-weight:600;color:#6e6e70;border:1px solid #d3d3d3;border-radius:6px;padding:6px 12px;">Agent Login</a>
  </nav>
  <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
  <span></span><span></span><span></span>
@@ -452,19 +454,19 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  </div>
  <div class="value-grid">
  <div class="value-card">
-<img class="vc-img" src="/assets/img/tiles/local-expertise.jpg" alt="Aerial view of a Central Indiana neighborhood" loading="lazy" width="760" height="440">
+<img class="vc-img" src="/assets/img/tiles/local-expertise.jpg" alt="A Your Realty Link agent with the downtown Indianapolis skyline" loading="lazy" width="900" height="520">
 <div class="vc-body">
 <h3>Local Expertise</h3>
 <p>The Your Realty Link team knows Central Indiana's neighborhoods, price trends, and communities inside and out. We live and work here.</p>
 </div>
 </div>
- <div class="value-card">
-<img class="vc-img" src="/assets/img/tiles/active-listing.jpg" alt="A Central Indiana home for sale" loading="lazy" width="760" height="440">
+ <a class="value-card" href="/senior-living/">
+<img class="vc-img" src="/assets/img/tiles/senior-living.jpg" alt="A senior couple moving forward to a new season of life" loading="lazy" width="900" height="520">
 <div class="vc-body">
-<h3>Every Active Listing</h3>
-<p>Search every active MLS listing across Central Indiana at yourrealtylink.com — updated in real time. As MIBOR members, our team brings you the whole market, not just a slice.</p>
+<h3>Senior Living</h3>
+<p>Downsizing, right-sizing, or moving to a 55+ community? Our senior real estate specialists guide you through every step — from prepping the family home to finding the perfect next chapter.</p>
 </div>
-</div>
+</a>
  <div class="value-card">
 <img class="vc-img" src="/assets/img/tiles/free-resources.jpg" alt="Free Your Realty Link city home guides" loading="lazy" width="760" height="440">
 <div class="vc-body">
@@ -746,6 +748,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <a href="https://www.instagram.com/IndianapolisRealEstate" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
  <a href="https://share.google/kcy70YdMXrZGTg3GF" target="_blank" rel="noopener" aria-label="Google Business Profile">G</a>
  </div>
+ <a href="https://yrlagent.com" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:#6e6e70;border:1px solid #d3d3d3;border-radius:6px;padding:6px 12px;">Agent Login &rarr;</a>
  </div>
  <div class="footer-col"><h4>Top Cities</h4><ul>
  <li><a href="/areas/">All Areas</a></li>
@@ -769,7 +772,6 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <li><a href="/agents/">Our Agents</a></li>
  <li><a href="/glossary/">Glossary</a></li>
  <li><a href="/contact/">Contact Us</a></li>
- <li><a href="https://yrlagent.com" target="_blank" rel="noopener">Agent Login</a></li>
  <li><a href="tel:3179977404">317-997-7404</a></li>
  </ul></div>
  </div>
