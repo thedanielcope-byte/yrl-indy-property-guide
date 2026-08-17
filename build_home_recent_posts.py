@@ -17,7 +17,8 @@ HOME = os.path.join(ROOT, "index.html")
 N = 5
 START, END = "<!-- HOME-RECENT-POSTS -->", "<!-- /HOME-RECENT-POSTS -->"
 
-def parse_latest(n):
+def parse_all():
+    """All blog-index cards, newest-first (that's the order they appear)."""
     h = open(BLOG_INDEX, encoding="utf-8").read()
     posts = []
     for m in re.finditer(r'<div class="blog-card">(.*?)</div>\s*</div>', h, re.S):
@@ -36,9 +37,28 @@ def parse_latest(n):
             "title": re.sub(r"\s+", " ", title.group(1)).strip() if title else "",
             "excerpt": re.sub(r"\s+", " ", exc.group(1)).strip() if exc else "",
         })
-        if len(posts) >= n:
-            break
     return posts
+
+def pick_diverse(posts, n, per_cat=1):
+    """Prefer variety: at most `per_cat` per category (newest-first), then top up
+    with the next-newest regardless of category so we always fill n slots."""
+    picked, counts, used = [], {}, set()
+    for p in posts:
+        if len(picked) >= n:
+            break
+        c = p["cat"] or "_"
+        if counts.get(c, 0) >= per_cat:
+            continue
+        picked.append(p); counts[c] = counts.get(c, 0) + 1; used.add(p["url"])
+    for p in posts:  # top-up pass, newest-first, ignore the cap
+        if len(picked) >= n:
+            break
+        if p["url"] not in used:
+            picked.append(p); used.add(p["url"])
+    return picked[:n]
+
+def parse_latest(n):
+    return pick_diverse(parse_all(), n)
 
 def card(p):
     # title/excerpt come from the blog index already display-ready (do not re-escape)
