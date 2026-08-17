@@ -3124,4 +3124,9 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+<url>
+  <loc>https://janetgiles.com/vendors/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
 </urlset>
