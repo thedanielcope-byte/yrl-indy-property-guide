@@ -66,6 +66,12 @@ TERMS = sorted(TERMS_RAW, key=lambda t: -len(t[0]))
 
 TAG = re.compile(r"<[^>]+>")
 P_BLOCK = re.compile(r"<p\b[^>]*>.*?</p>", re.DOTALL | re.IGNORECASE)
+# Match a full <p>…</p> block, OR a bare <a>/</a> tag, so we can track whether a
+# <p> sits inside an outer anchor (e.g. a whole-card <a> wrapper) and skip it —
+# linking inside an outer <a> would create invalid nested anchors that break layout.
+BLOCK_OR_A = re.compile(
+    r"(?P<p><p\b[^>]*>.*?</p>)|(?P<aopen><a\b[^>]*>)|(?P<aclose></a\s*>)",
+    re.DOTALL | re.IGNORECASE)
 
 def alnum(c):
     return c.isalnum() or c == "_"
@@ -127,9 +133,26 @@ def process_file(path):
     src = open(path, encoding="utf-8").read()
     existing = set(re.findall(r'href="(/glossary/[^"]+)"', src))
     state = {"urls": set(existing), "new": 0}
-    def repl(mo):
-        return process_p(mo.group(0), state)
-    out = P_BLOCK.sub(repl, src)
+    # Single pass over the document, tracking anchor depth. Only <p> blocks at
+    # depth 0 (not wrapped by an outer <a>, e.g. a card link) get linkified.
+    out_parts = []
+    last = 0
+    a_depth = 0
+    for m in BLOCK_OR_A.finditer(src):
+        out_parts.append(src[last:m.start()])
+        last = m.end()
+        kind = m.lastgroup
+        if kind == "p":
+            block = m.group("p")
+            out_parts.append(process_p(block, state) if a_depth == 0 else block)
+        elif kind == "aopen":
+            a_depth += 1
+            out_parts.append(m.group("aopen"))
+        else:  # aclose
+            a_depth = max(0, a_depth - 1)
+            out_parts.append(m.group("aclose"))
+    out_parts.append(src[last:])
+    out = "".join(out_parts)
     if out != src:
         # sanity: anchors still balanced
         if out.count("<a ") != out.count("</a>"):
