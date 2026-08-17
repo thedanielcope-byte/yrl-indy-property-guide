@@ -66,6 +66,17 @@
 .search-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 1.2rem 0; }
 .search-links a { background: var(--light); border: 1px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 13.5px; font-weight: 600; color: #13294a; text-decoration: none; }
 .search-links a:hover { border-color: var(--red); color: var(--red); }
+.sr-blog { margin: 2.4rem 0 0.5rem; }
+.sr-blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 1.2rem; }
+.sr-post { background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
+.sr-post:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
+.sr-post img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #12283f; }
+.sr-post .b { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.sr-post .cat { font-size: .68rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #3f7d4f; }
+.sr-post h4 { font-size: .98rem; line-height: 1.3; color: #13294a; margin: 0; }
+.sr-post p { font-size: .82rem; color: var(--mid); line-height: 1.5; margin: 0; }
+.sr-post .more { margin-top: auto; color: var(--red); font-weight: 700; font-size: .8rem; padding-top: 4px; }
+ @media (max-width: 700px) { .sr-blog-grid { grid-template-columns: 1fr; } }
  @media (max-width: 600px) { .help-grid, .spec-grid { grid-template-columns: 1fr; } }
  </style>
 </head>
@@ -176,7 +187,7 @@
  <p>A senior real estate specialist does more than list a house. We know the 55+ communities across the metro, we&rsquo;re patient with a move that may take time, and we coordinate the moving pieces &mdash; downsizing, estate-sale help, movers, and repairs &mdash; so the transition feels manageable instead of overwhelming. And because Your Realty Link is a full-service MIBOR brokerage, you get the whole market and a proven marketing plan behind the sale of your current home.</p>
 
  <h2>What Is a Retirement Mortgage?</h2>
- <p>You don&rsquo;t always have to pay cash to buy your next home. &ldquo;Retirement mortgage&rdquo; options &mdash; including reverse mortgages (HECMs) and reverse-for-purchase loans &mdash; can let qualified buyers 62 and older buy a home with no required monthly mortgage payment, using home equity and retirement income. These programs aren&rsquo;t right for everyone, so rather than give one-size-fits-all advice, we connect you with <a href="/services/preferred-lenders/">trusted local lenders</a> who specialize in retirement financing and can walk you through the numbers.</p>
+ <p>You don&rsquo;t always have to pay cash to buy your next home. &ldquo;Retirement mortgage&rdquo; options &mdash; including reverse mortgages (HECMs) and reverse-for-purchase loans &mdash; can let qualified buyers 62 and older buy a home with no required monthly mortgage payment, using <a href="/glossary/home-equity/" class="gloss-link">home equity</a> and retirement income. These programs aren&rsquo;t right for everyone, so rather than give one-size-fits-all advice, we connect you with <a href="/services/preferred-lenders/">trusted local lenders</a> who specialize in retirement financing and can walk you through the numbers.</p>
 
  <h2>Managing the Move</h2>
  <p>The logistics are often what people dread most. We help you break the move into steps &mdash; deciding what to keep, arranging estate sales or donations for the rest, scheduling movers, and timing everything around your closing &mdash; so &ldquo;goodbye to the memories&rdquo; can become &ldquo;hello to the next chapter&rdquo; without the chaos.</p>
@@ -206,6 +217,21 @@
  <a href="tel:3175077770">📞 317-507-7770</a>
  </div>
  </div>
+
+ <section class="sr-blog">
+ <h2>From the Senior Living Blog</h2>
+ <p>Plain-English guides on downsizing, managing a move, retirement mortgages, and property-tax deductions for Central Indiana seniors.</p>
+ <!-- SENIOR-RECENT-POSTS -->
+ <div class="sr-blog-grid">
+  <a class="sr-post" href="/blog/what-is-a-retirement-mortgage-indianapolis/"><img src="/assets/img/blog/what-is-a-retirement-mortgage-indianapolis.png" alt="What Is a Retirement Mortgage? Financing a Home After 60" loading="lazy"><span class="b"><span class="cat">Senior Real Estate</span><h4>What Is a Retirement Mortgage? Financing a Home After 60</h4><p>Retirement mortgages explained for Indianapolis buyers over 60 — from mortgages on retirement income to reverse mortgages and reverse-for-purchase (H4P).</p><span class="more">Read more &rarr;</span></span></a>
+  <a class="sr-post" href="/blog/managing-a-senior-move-indianapolis/"><img src="/assets/img/blog/managing-a-senior-move-indianapolis.png" alt="Managing a Move After 55 — A Step-by-Step Plan" loading="lazy"><span class="b"><span class="cat">Senior Real Estate</span><h4>Managing a Move After 55 — A Step-by-Step Plan</h4><p>A calm, step-by-step plan for managing a later-in-life move in Indianapolis — when to start, how to sort, who to hire, and how to time the sale and the purchase.</p><span class="more">Read more &rarr;</span></span></a>
+  <a class="sr-post" href="/blog/downsizing-made-easy-indianapolis/"><img src="/assets/img/blog/downsizing-made-easy-indianapolis.png" alt="Downsizing Made Easy — A Room-by-Room Plan" loading="lazy"><span class="b"><span class="cat">Senior Real Estate</span><h4>Downsizing Made Easy — A Room-by-Room Plan</h4><p>Downsizing your Indianapolis home without the stress: a room-by-room method, what to do with treasured belongings, and how to prep the family home to sell.</p><span class="more">Read more &rarr;</span></span></a>
+  <a class="sr-post" href="/blog/indiana-property-tax-deductions-seniors/"><img src="/assets/img/blog/indiana-property-tax-deductions-seniors.png" alt="Indiana Property Tax Deductions for Seniors — What to File" loading="lazy"><span class="b"><span class="cat">Senior Real Estate</span><h4>Indiana Property Tax Deductions for Seniors — What to File</h4><p>A plain-English guide to Indiana property tax deductions homeowners and seniors should file — homestead, Over 65 deduction and circuit breaker credit, and how to file.</p><span class="more">Read more &rarr;</span></span></a>
+  <a class="sr-post" href="/blog/single-senior-women-real-estate-indianapolis/"><img src="/assets/img/blog/single-senior-women-real-estate-indianapolis.png" alt="Why Are There So Many Single Senior Women? What It Means for Housing" loading="lazy"><span class="b"><span class="cat">Senior Real Estate</span><h4>Why Are There So Many Single Senior Women? What It Means for Housing</h4><p>Women outlive men and increasingly move solo later in life. What that means for housing choices in Indianapolis — and how a senior specialist supports women moving on their own.</p><span class="more">Read more &rarr;</span></span></a>
+ </div>
+ <!-- /SENIOR-RECENT-POSTS -->
+ <p style="margin-top:16px;"><a href="/blog/" style="color:var(--red);font-weight:700;text-decoration:none;">Read more on the Your Realty Link blog &rarr;</a></p>
+ </section>
 
  <!-- PRIMARY CTA -->
  <div class="cta-block" id="connect">

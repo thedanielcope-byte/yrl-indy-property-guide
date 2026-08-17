@@ -100,6 +100,17 @@ page = f'''<!DOCTYPE html>
 .search-links {{ display: flex; flex-wrap: wrap; gap: 10px; margin: 1.2rem 0; }}
 .search-links a {{ background: var(--light); border: 1px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 13.5px; font-weight: 600; color: #13294a; text-decoration: none; }}
 .search-links a:hover {{ border-color: var(--red); color: var(--red); }}
+.sr-blog {{ margin: 2.4rem 0 0.5rem; }}
+.sr-blog-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 1.2rem; }}
+.sr-post {{ background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }}
+.sr-post:hover {{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }}
+.sr-post img {{ width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #12283f; }}
+.sr-post .b {{ padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }}
+.sr-post .cat {{ font-size: .68rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #3f7d4f; }}
+.sr-post h4 {{ font-size: .98rem; line-height: 1.3; color: #13294a; margin: 0; }}
+.sr-post p {{ font-size: .82rem; color: var(--mid); line-height: 1.5; margin: 0; }}
+.sr-post .more {{ margin-top: auto; color: var(--red); font-weight: 700; font-size: .8rem; padding-top: 4px; }}
+ @media (max-width: 700px) {{ .sr-blog-grid {{ grid-template-columns: 1fr; }} }}
  @media (max-width: 600px) {{ .help-grid, .spec-grid {{ grid-template-columns: 1fr; }} }}
  </style>
 </head>
@@ -193,6 +204,15 @@ page = f'''<!DOCTYPE html>
  <a href="tel:3175077770">📞 317-507-7770</a>
  </div>
  </div>
+
+ <section class="sr-blog">
+ <h2>From the Senior Living Blog</h2>
+ <p>Plain-English guides on downsizing, managing a move, retirement mortgages, and property-tax deductions for Central Indiana seniors.</p>
+ <!-- SENIOR-RECENT-POSTS -->
+ <div class="sr-blog-grid"></div>
+ <!-- /SENIOR-RECENT-POSTS -->
+ <p style="margin-top:16px;"><a href="/blog/" style="color:var(--red);font-weight:700;text-decoration:none;">Read more on the Your Realty Link blog &rarr;</a></p>
+ </section>
 
  <!-- PRIMARY CTA -->
  <div class="cta-block" id="connect">
