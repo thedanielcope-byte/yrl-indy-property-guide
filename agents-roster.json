@@ -7,7 +7,32 @@
   "website": "",
   "photo": "/assets/img/agents/janet-giles.jpg",
   "lead": true,
-  "slug": "janet-giles"
+  "slug": "janet-giles",
+  "designations": [
+   "ePro",
+   "Emeritus Realtor"
+  ],
+  "languages": [
+   "English"
+  ],
+  "years": "52",
+  "expertise": [
+   "Buyer Representation",
+   "Seller Representation",
+   "First-Time Buyers",
+   "Luxury Homes",
+   "Investment Property",
+   "New Construction",
+   "Relocation",
+   "Downsizing & Senior",
+   "Land & Lots",
+   "Multi-Family",
+   "Foreclosure & Short Sale",
+   "Divorce & Estate Sales",
+   "New Home Communities"
+  ],
+  "bio": "Licensed in 1974 and continually have served my family, friends and new buyers and sellers in the role of Dream Home Finder.  I have also held a brokers license in Ohio since 2001.  I love the deal - I love helping my buyer or seller figure out the right strategy to get them into their next home.",
+  "tagline": "Your Link to Everything Home"
  },
  {
   "name": "Daniel Cope",
