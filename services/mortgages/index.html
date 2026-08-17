@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Mortgages &amp; Home Loans in Indianapolis | Your Realty Link</title>
+ <meta name="description" content="Financing your Central Indiana home: an interactive mortgage payment calculator, loan types (FHA, VA, USDA, conventional), pre-approval, down payment help, and preferred local lenders.">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://janetgiles.com/services/mortgages/">
+ <meta property="og:title" content="Mortgages & Home Loans in Indianapolis | Your Realty Link">
+ <meta property="og:description" content="Mortgage calculator, loan types, pre-approval, down payment assistance, and trusted local lenders for Central Indiana buyers.">
+ <meta property="og:url" content="https://janetgiles.com/services/mortgages/">
+ <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:type" content="website">
+ <script type="application/ld+json">
+ { "@context": "https://schema.org", "@graph": [
+ { "@type": "WebPage", "url": "https://janetgiles.com/services/mortgages/", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".qa-lead",".qa-facts"] } },
+ { "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" },
+ { "@type": "FAQPage", "mainEntity": [ { "@type": "Question", "name": "How much home can I afford in Indianapolis?", "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is keeping your total housing payment near 28% of gross monthly income, but the real answer depends on your debts, down payment, rate, and comfort level. The calculator above gives a quick payment estimate; a lender pre-approval gives you the real number. We're glad to connect you with a trusted local lender." } },
+{ "@type": "Question", "name": "What credit score do I need to buy a home?", "acceptedAnswer": { "@type": "Answer", "text": "It varies by loan. FHA loans can go as low as the 500s-580 with a larger down payment; conventional loans usually want 620+; and the best rates go to scores around 740+. Do not assume you can't qualify  a lender can tell you exactly where you stand and what to improve." } },
+{ "@type": "Question", "name": "How much do I need for a down payment?", "acceptedAnswer": { "@type": "Answer", "text": "Less than most people think. Conventional loans can go as low as 3% down, FHA is 3.5%, and VA and USDA can be 0% down for those who qualify. Indiana also has down payment assistance programs. See our down payment assistance guide." } },
+{ "@type": "Question", "name": "Should I get pre-approved before I start looking?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A pre-approval tells you your real budget, shows sellers you're serious, and lets you move fast when you find the right home. It's the first real step  start with our pre-approval guide." } } ] },
+ { "@type": "BreadcrumbList", "itemListElement": [
+ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" },
+ { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://janetgiles.com/services/" },
+ { "@type": "ListItem", "position": 3, "name": "Mortgages", "item": "https://janetgiles.com/services/mortgages/" } ] }
+ ] }
+ </script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
+ <link rel="stylesheet" href="/assets/css/style.css?v=dd2ef87c">
+ <style>
+.service-wrap { max-width: 820px; margin: 0 auto; padding: 40px 0; }
+.mtg-calc { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 26px 28px; box-shadow: 0 6px 22px rgba(0,0,0,.07); margin: 1.4rem 0; }
+.mc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 8px; }
+.mc-grid label { display: flex; flex-direction: column; font-size: .8rem; font-weight: 700; color: #13294a; gap: 5px; position: relative; }
+.mc-grid label span { position: absolute; right: 12px; top: 33px; color: #9ca3af; font-weight: 600; font-size: .8rem; }
+.mc-grid input { border: 1px solid var(--border); border-radius: 9px; padding: 11px 40px 11px 12px; font-size: 1rem; font-family: inherit; color: #13294a; }
+.mc-grid input:focus { outline: none; border-color: var(--red); }
+.mc-out { background: linear-gradient(135deg,#13294a,#0d1e38); color: #fff; border-radius: 12px; padding: 20px 24px; text-align: center; margin-top: 8px; }
+.mc-num { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 800; display: block; line-height: 1; }
+.mc-lbl { font-size: .85rem; color: #c9d4e0; }
+.mc-meta { font-size: .82rem; color: #c9d4e0; margin-top: 10px; }
+.loan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.3rem 0; }
+.loan-card { background: var(--light); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+.loan-card h4 { margin: 0 0 5px; color: var(--red); font-size: 15px; }
+.loan-card p { margin: 0 0 8px; font-size: 13.5px; color: var(--mid); }
+.loan-card a { font-size: 13px; font-weight: 700; }
+ @media (max-width: 560px) { .mc-grid, .loan-grid { grid-template-columns: 1fr; } }
+ </style>
+</head>
+<body>
+
+<header class="site-header">
+ <div class="header-inner">
+ <a href="/" class="site-logo">
+ <img src="/assets/img/yrl-logo.png" alt="Your Realty Link" width="120" height="40">
+ </a>
+ <nav class="site-nav" id="siteNav">
+ <a href="/">Home</a>
+ <div class="nav-item-dropdown">
+ <a href="/sell-my-home-indianapolis/">Sellers</a>
+ <div class="nav-submenu">
+ <a href="/contact/">Free Home Valuation</a>
+ <div class="nav-submenu-divider"></div>
+ <a href="/services/sell-my-home/">Sell My Home</a>
+ <a href="/services/pricing-your-home/">Pricing Your Home</a>
+ <a href="/services/home-staging/">Home Staging</a>
+ <a href="/services/expired-listings/">Expired Listings</a>
+ <a href="/services/for-sale-by-owner/">For Sale By Owner</a>
+ <a href="/senior-living/">Senior Living</a>
+ </div>
+ </div>
+ <div class="nav-item-dropdown">
+ <a href="/first-time-home-buyers-indianapolis/">Buyers</a>
+ <div class="nav-submenu">
+ <a href="/search/">Search Homes</a>
+ <div class="nav-submenu-divider"></div>
+ <a href="/services/first-time-home-buyers/">First Time Buyers</a>
+ <a href="/services/buyer-representation/">Buyer Representation</a>
+ <a href="/services/new-construction/">New Construction</a>
+ <a href="/services/relocation-buyers/">Relocating to Indianapolis</a>
+ <a href="/services/mortgage-calculator/">Mortgage Calculator</a>
+ <a href="/services/down-payment-assistance/">Down Payment Help</a>
+ <a href="/senior-living/">Senior Living</a>
+ </div>
+ </div>
+ <a href="/blog/">Blog</a>
+ <a href="/contact/">Contact</a>
+ <a href="/reviews/">Reviews</a>
+ <div class="nav-item-dropdown">
+ <a href="/agents/">Meet Our Agents</a>
+ <div class="nav-submenu">
+ <a href="/agents/">Meet Our Agents</a>
+ <a href="/about/">About Your Realty Link</a>
+ <a href="/services/referral-program/">Referral Program</a>
+ </div>
+ </div>
+ <a href="/search/" class="nav-cta">Search Homes →</a>
+ </nav>
+ <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+</header>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+ <div class="container"><a href="/">Home</a> <span>&rsaquo;</span> <a href="/services/">Services</a> <span>&rsaquo;</span> Mortgages</div>
+</nav>
+
+<section class="page-hero">
+ <div class="container">
+ <h1>Mortgages &amp; Home Loans</h1>
+ <p class="hero-sub">Financing is where a home purchase is won or lost. Estimate your payment, understand your loan options, and get connected with a trusted local lender &mdash; all in one place.</p>
+ <div class="hero-badges">
+ <span class="hero-badge">🧮 Payment Calculator</span>
+ <span class="hero-badge">🏦 Loan Types</span>
+ <span class="hero-badge">✅ Pre-Approval</span>
+ <span class="hero-badge">💵 Down Payment Help</span>
+ </div>
+ </div>
+</section>
+
+<div class="container">
+ <!-- QA-START -->
+<div class="quick-answer">
+ <p class="qa-heading">Quick Answer</p>
+ <p class="qa-lead">Use the calculator to estimate your monthly payment, explore conventional, FHA, VA, and USDA loans, and get pre-approved with a trusted local lender. Your Realty Link connects Central Indiana buyers with the right financing &mdash; call 317-997-7404.</p>
+ <dl class="qa-facts">
+ <div><dt>Down payment</dt><dd>As low as 0&ndash;3.5%</dd></div>
+ <div><dt>First step</dt><dd>Get pre-approved</dd></div>
+ <div><dt>Lenders</dt><dd><a href="/vendors/#lenders-mortgage">Our preferred lenders</a></dd></div>
+ <div><dt>Call</dt><dd><a href="tel:3179977404">317-997-7404</a></dd></div>
+ </dl>
+</div>
+<!-- QA-END -->
+
+ <div class="service-wrap">
+
+ <p>Before you fall in love with a home, it helps to know what you can comfortably afford &mdash; and which loan fits your situation. Start with a quick payment estimate below, then talk to a lender to turn it into a real pre-approval. Your Realty Link works with a network of <a href="/vendors/#lenders-mortgage">trusted local lenders</a> and will help you find the right fit.</p>
+
+ 
+<div class="mtg-calc">
+ <h2 style="margin-top:0;">Mortgage Payment Calculator</h2>
+ <p style="color:#6e6e70;font-size:.92rem;margin-top:0;">Estimate your monthly principal &amp; interest. Taxes, insurance, HOA, and mortgage insurance are not included.</p>
+ <div class="mc-grid">
+ <label>Home price <span>$</span><input type="number" id="mc-price" value="300000" min="0" step="1000"></label>
+ <label>Down payment <span>%</span><input type="number" id="mc-down" value="10" min="0" max="100" step="1"></label>
+ <label>Interest rate <span>%</span><input type="number" id="mc-rate" value="6.5" min="0" max="25" step="0.05"></label>
+ <label>Loan term <span>yrs</span><input type="number" id="mc-term" value="30" min="1" max="40" step="1"></label>
+ </div>
+ <div class="mc-out">
+ <div class="mc-pay"><span class="mc-num" id="mc-payment">$0</span><span class="mc-lbl">est. monthly P&amp;I</span></div>
+ <div class="mc-meta"><span id="mc-loan">Loan amount: $0</span> &middot; <span id="mc-dp">Down: $0</span></div>
+ </div>
+ <p style="font-size:.78rem;color:#9ca3af;margin:12px 0 0;">Estimate only &mdash; not a loan offer or commitment. Actual terms come from your lender. For the full amortization calculator, <a href="https://yourrealtylink.com/content/mortgage-calculator" target="_blank" rel="noopener">open the Your Realty Link calculator</a>.</p>
+</div>
+<script>
+(function(){
+ var f=function(n){return '$'+Math.round(n).toLocaleString('en-US');};
+ function calc(){
+  var price=+document.getElementById('mc-price').value||0;
+  var down=+document.getElementById('mc-down').value||0;
+  var rate=+document.getElementById('mc-rate').value||0;
+  var term=+document.getElementById('mc-term').value||30;
+  var dp=price*down/100, loan=Math.max(price-dp,0), i=rate/100/12, n=term*12, m;
+  m = i>0 ? loan*i*Math.pow(1+i,n)/(Math.pow(1+i,n)-1) : (n>0?loan/n:0);
+  document.getElementById('mc-payment').textContent=f(m||0);
+  document.getElementById('mc-loan').textContent='Loan amount: '+f(loan);
+  document.getElementById('mc-dp').textContent='Down: '+f(dp);
+ }
+ ['mc-price','mc-down','mc-rate','mc-term'].forEach(function(id){
+  var el=document.getElementById(id); el.addEventListener('input',calc); el.addEventListener('change',calc);
+ });
+ calc();
+})();
+</script>
+
+ <h2>Loan Types at a Glance</h2>
+ <div class="loan-grid">
+ <div class="loan-card"><h4>Conventional</h4><p>As little as 3% down for well-qualified buyers. Best rates with strong credit; no upfront mortgage-insurance fee.</p></div>
+ <div class="loan-card"><h4>FHA</h4><p>3.5% down and flexible credit &mdash; popular with first-time buyers. <a href="/services/fha-loan-buyers/">FHA loans →</a></p></div>
+ <div class="loan-card"><h4>VA</h4><p>0% down for eligible veterans and service members, with no monthly mortgage insurance. <a href="/services/va-loan-buyers/">VA loans →</a></p></div>
+ <div class="loan-card"><h4>USDA</h4><p>0% down in eligible rural and edge-of-metro areas of Central Indiana. <a href="/services/usda-loans/">USDA loans →</a></p></div>
+ </div>
+
+ <h2>Your Financing Roadmap</h2>
+ <ul>
+ <li><strong><a href="/services/mortgage-pre-approval/">Get pre-approved</a></strong> &mdash; the real first step; know your budget and shop with confidence.</li>
+ <li><strong><a href="/services/down-payment-assistance/">Down payment assistance</a></strong> &mdash; Indiana (IHCDA) programs that help with upfront costs.</li>
+ <li><strong><a href="/services/closing-costs-buyers/">Closing costs</a></strong> &mdash; what to budget beyond the down payment.</li>
+ <li><strong><a href="/vendors/#lenders-mortgage">Preferred lenders</a></strong> &mdash; the local loan officers our clients trust.</li>
+ </ul>
+
+ <p style="font-size:.85rem;color:#6e6e70;">Your Realty Link is a real estate brokerage, not a lender, and we receive no compensation for lender referrals. We connect you with independent local lenders so you get advice tailored to your situation.</p>
+
+ <div class="cta-block">
+ <h3>Ready to Get Pre-Approved?</h3>
+ <p>Tell us where you are in the process and we'll connect you with a trusted local lender &mdash; no pressure, no obligation.</p>
+ <div class="btn-group">
+ <a href="tel:3179977404" class="btn btn-white">📞 Call: 317-997-7404</a>
+ <a href="/services/mortgage-pre-approval/" class="btn btn-outline">Pre-Approval Guide →</a>
+ <a href="/vendors/#lenders-mortgage" class="btn btn-outline">See Our Lenders →</a>
+ </div>
+ </div>
+
+ <section class="faq-section">
+ <h2>Mortgage FAQs</h2>
+<details class="faq-item">
+<summary>How much home can I afford in Indianapolis?</summary>
+<div class="faq-answer"><p>A common guideline is keeping your total housing payment near 28% of gross monthly income, but the real answer depends on your debts, down payment, rate, and comfort level. The calculator above gives a quick payment estimate; a lender pre-approval gives you the real number. We're glad to connect you with a trusted local lender.</p></div>
+</details>
+<details class="faq-item">
+<summary>What credit score do I need to buy a home?</summary>
+<div class="faq-answer"><p>It varies by loan. FHA loans can go as low as the 500s&ndash;580 with a larger down payment; conventional loans usually want 620+; and the best rates go to scores around 740+. Do not assume you can't qualify &mdash; a lender can tell you exactly where you stand and what to improve.</p></div>
+</details>
+<details class="faq-item">
+<summary>How much do I need for a down payment?</summary>
+<div class="faq-answer"><p>Less than most people think. Conventional loans can go as low as 3% down, FHA is 3.5%, and VA and USDA can be 0% down for those who qualify. Indiana also has down payment assistance programs. See our <a href='/services/down-payment-assistance/'>down payment assistance</a> guide.</p></div>
+</details>
+<details class="faq-item">
+<summary>Should I get pre-approved before I start looking?</summary>
+<div class="faq-answer"><p>Yes. A pre-approval tells you your real budget, shows sellers you're serious, and lets you move fast when you find the right home. It's the first real step &mdash; start with our <a href='/services/mortgage-pre-approval/'>pre-approval guide</a>.</p></div>
+</details>
+ </section>
+
+ </div>
+</div>
+
+<section class="cta-form-section">
+ <div class="container">
+ <h2>Talk Financing With Your Realty Link</h2>
+ <p>Not sure which loan or lender fits? Send a note and we'll point you in the right direction.</p>
+ <form class="ipg-lead-form">
+ <input type="hidden" name="source_page" value="services/mortgages">
+ <input type="hidden" name="interest_type" value="Mortgages">
+ <div class="form-row">
+ <div><label for="sv-name">Name *</label><input type="text" id="sv-name" name="name" required placeholder="Your name"></div>
+ <div><label for="sv-phone">Phone *</label><input type="tel" id="sv-phone" name="phone" required placeholder="317-555-1234"></div>
+ </div>
+ <label for="sv-email">Email *</label>
+ <input type="email" id="sv-email" name="email" required placeholder="you@example.com">
+ <label for="sv-message">How can we help?</label>
+ <textarea id="sv-message" name="message" placeholder="First-time buyer, refinancing questions, need a lender referral…"></textarea>
+ <button type="submit">Send Message →</button>
+ <p class="form-note">No spam · No obligation · We respond personally</p>
+ </form>
+ </div>
+</section>
+
+<footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <img src="/assets/img/yrl-logo.png" alt="Your Realty Link">
+ <p>Your Realty Link is your source for Central Indiana real estate — a full-service MIBOR brokerage.</p>
+ <div class="social-links">
+ <a href="https://www.facebook.com/yourrealtylink" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+ <a href="https://www.youtube.com/@yourrealtylink" target="_blank" rel="noopener" aria-label="YouTube">yt</a>
+ <a href="https://www.linkedin.com/company/your-realty-link-llc/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+ <a href="https://www.instagram.com/IndianapolisRealEstate" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+ <a href="https://share.google/kcy70YdMXrZGTg3GF" target="_blank" rel="noopener" aria-label="Google Business Profile">G</a>
+ </div>
+ <a href="https://yrlagent.com" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:#6e6e70;border:1px solid #d3d3d3;border-radius:6px;padding:6px 12px;">Agent Login &rarr;</a>
+ </div>
+ <div class="footer-col"><h4>Top Cities</h4><ul>
+ <li><a href="/areas/">All Areas</a></li>
+ <li><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a></li>
+ <li><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a></li>
+ <li><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a></li>
+ <li><a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a></li>
+ <li><a href="/cities/hamilton-county/noblesville-indiana-real-estate/">Noblesville</a></li>
+ </ul></div>
+ <div class="footer-col"><h4>Services</h4><ul>
+ <li><a href="/services/buyer-representation/">Buy a Home</a></li>
+ <li><a href="/services/sell-my-home/">Sell a Home</a></li>
+ <li><a href="/services/expired-listings/">Expired Listings</a></li>
+ <li><a href="/services/free-home-valuation/">Free Valuation</a></li>
+ <li><a href="/services/investment-property/">Investment</a></li>
+ </ul></div>
+ <div class="footer-col"><h4>Your Realty Link</h4><ul>
+ <li><a href="https://yourrealtylink.com/property-search" target="_blank" rel="noopener">Search Homes</a></li>
+ <li><a href="/services/free-home-valuation/" target="_blank" rel="noopener">Home Valuation</a></li>
+ <li><a href="/reviews/">Reviews</a></li>
+ <li><a href="/agents/">Our Agents</a></li>
+ <li><a href="/glossary/">Glossary</a></li>
+ <li><a href="/contact/">Contact Us</a></li>
+ <li><a href="tel:3179977404">317-997-7404</a></li>
+ </ul></div>
+ </div>
+ <div class="footer-bottom">
+ <span>© 2026 <a href="https://yourrealtylink.com" target="_blank" rel="noopener">Your Realty Link</a> · Janet Giles, Broker/Owner</span>
+ <span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a></span>
+ <span>2302 E Southport Rd, Indianapolis, IN 46227 · <a href="tel:3179977404">317-997-7404</a></span>
+ </div>
+ </div>
+</footer>
+
+<script>
+function toggleNav() {
+ document.getElementById('siteNav').classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+ var dd = e.target.closest('.nav-item-dropdown');
+ if (dd && window.innerWidth <= 960) {
+ var nav = dd.closest('.site-nav');
+ if (nav && nav.classList.contains('open')) {
+ e.preventDefault();
+ dd.classList.toggle('open');
+ }
+ }
+});
+</script>
+<script src="/assets/js/lead-form.js?v=406824a0" defer></script>
+<script src="/assets/js/site-enhancements.js?v=69df98c0" defer></script>
+</body>
+</html>
