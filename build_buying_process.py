@@ -18,16 +18,35 @@ HEADER = grab(r'<header class="site-header">.*?</header>')
 FOOTER = grab(r'<footer class="site-footer">.*?</footer>')
 SCRIPTS = grab(r'<script>\nfunction toggleNav.*?</body>\n</html>')
 
+# (title, emoji, short blurb, deeper-dive label, deeper-dive URL)
 STEPS = [
- ("Get Pre-Approved", "Before you tour a single home, talk to a lender and get pre-approved. It tells you your real budget, shows sellers you're serious, and lets you move fast when the right home appears. Your lender will look at your income, debts, credit, and down payment. Not sure where to start? Use our <a href='/services/mortgages/'>mortgage calculator and financing hub</a> or our list of <a href='/vendors/#lenders-mortgage'>preferred local lenders</a>, and see the <a href='/services/mortgage-pre-approval/'>pre-approval guide</a>."),
- ("Search &amp; Make an Offer", "Now the fun part &mdash; touring homes and finding the one. When you do, your Your Realty Link agent helps you craft a competitive offer: the right price, contingencies (financing, inspection, appraisal), earnest money, and closing timeline. In a tight market, strategy matters, and having an experienced <a href='/services/buyer-representation/'>buyer's agent</a> on your side is what turns a good home into an accepted offer."),
- ("Inspections &amp; Under Contract", "Once your offer is accepted, you're &ldquo;under contract&rdquo; and the clock starts. This is when you complete your <strong>home inspection</strong> (we'll connect you with a trusted <a href='/vendors/#home-inspectors'>inspector</a>), the lender orders the <strong>appraisal</strong>, and the <strong>title company</strong> researches the property. If the inspection turns up issues, we negotiate repairs or credits on your behalf. Stay responsive with your lender &mdash; this is where financing gets finalized."),
- ("Closing", "A few days before closing you'll do a <strong>final walkthrough</strong> to confirm the home's condition, and you'll receive your <strong>Closing Disclosure</strong> showing your final numbers. Review your <a href='/services/closing-costs-buyers/'>closing costs</a> ahead of time so there are no surprises. At the closing table (or a mobile signing), you sign, funds are exchanged, and &mdash; the best part &mdash; you get the keys."),
- ("After You Close", "Congratulations, you're a homeowner! A few things to knock out: set up your <a href='/vendors/#utilities'>utilities</a> and change your address, and &mdash; important in Indiana &mdash; <strong>file your homestead deduction</strong> with the county auditor to lower your property taxes (see our <a href='/blog/indiana-property-tax-deductions-seniors/'>deductions guide</a>). Then settle in. And remember: we're here long after closing for maintenance referrals, market questions, and whenever you're ready for the next move."),
+ ("Get Pre-Approved", "✅",
+  "Talk to a lender before you shop. Pre-approval sets your real budget, shows sellers you're serious, and lets you move fast on the right home.",
+  "Pre-approval guide", "/services/mortgage-pre-approval/"),
+ ("Search &amp; Make an Offer", "📝",
+  "Tour homes, find the one, and write a competitive offer &mdash; the right price, contingencies, and terms that win without overpaying.",
+  "How to make a winning offer", "/blog/making-a-winning-offer-on-a-home-indianapolis/"),
+ ("Inspections &amp; Under Contract", "🔍",
+  "Offer accepted! Now the inspection, appraisal, and title work happen &mdash; and we negotiate repairs on your behalf.",
+  "Under contract, explained", "/blog/home-inspection-under-contract-what-to-expect-indianapolis/"),
+ ("Closing", "🔑",
+  "Final walkthrough, Closing Disclosure, sign the paperwork, exchange funds &mdash; and get the keys to your new home.",
+  "What to expect on closing day", "/blog/closing-day-what-to-expect-buying-a-home-indianapolis/"),
+ ("After You Close", "🏡",
+  "Set up utilities, file your Indiana homestead deduction, protect your investment &mdash; and settle in.",
+  "New homeowner checklist", "/blog/new-homeowner-checklist-after-closing-indianapolis/"),
 ]
 steps_html = "\n".join(
- f'<li>\n<div class="step-num">{n}</div>\n<div class="step-content"><h4>{t}</h4><p>{b}</p></div>\n</li>'
- for n,(t,b) in enumerate(STEPS, 1))
+ f'''<div class="stop">
+ <div class="stop-marker">{i}</div>
+ <div class="stop-card">
+  <span class="stop-emoji">{emoji}</span>
+  <h4><a href="{url}">{t}</a></h4>
+  <p>{blurb}</p>
+  <a class="stop-more" href="{url}">{more} &rarr;</a>
+ </div>
+</div>'''
+ for i,(t,emoji,blurb,more,url) in enumerate(STEPS, 1))
 
 faqs = [
  ("How long does it take to buy a home in Indianapolis?", "From accepted offer to closing typically runs 30&ndash;45 days when financing with a mortgage; cash purchases can close faster. Finding the right home varies &mdash; some buyers find it in a weekend, others take a few months."),
@@ -67,12 +86,33 @@ page = f'''<!DOCTYPE html>
  {FONTS}
  <style>
 .service-wrap {{ max-width: 780px; margin: 0 auto; padding: 44px 0; }}
-.step-list {{ counter-reset: steps; list-style: none; padding: 0; margin: 1.5rem 0; }}
-.step-list li {{ display: flex; gap: 18px; align-items: flex-start; margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }}
-.step-list li:last-child {{ border: none; }}
-.step-num {{ background: var(--red); color: var(--white); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0; margin-top: 2px; }}
-.step-content h4 {{ margin: 2px 0 6px; font-size: 1.12rem; color: #13294a; }}
-.step-content p {{ font-size: 14.5px; color: var(--mid); margin: 0; line-height: 1.65; }}
+/* Illustrated "road" journey: a vertical road with a driving car and alternating stops */
+.roadmap {{ position: relative; margin: 2rem 0 1rem; padding: 6px 0; }}
+.road {{ position: absolute; top: 0; bottom: 0; left: 50%; width: 52px; transform: translateX(-50%); background: #3b4048; border-radius: 26px; box-shadow: inset 0 0 0 3px #2d3138, 0 4px 16px rgba(0,0,0,.12); z-index: 0; }}
+.road::before {{ content: ''; position: absolute; left: 50%; top: 14px; bottom: 14px; width: 4px; transform: translateX(-50%); background: repeating-linear-gradient(#ffd24a 0 20px, transparent 20px 40px); border-radius: 2px; }}
+.road .car {{ position: absolute; left: 50%; top: 0; transform: translateX(-50%) rotate(90deg); font-size: 30px; line-height: 1; filter: drop-shadow(0 4px 5px rgba(0,0,0,.35)); animation: drive 12s linear infinite; }}
+@keyframes drive {{ 0% {{ top: -3%; }} 90% {{ top: 101%; }} 100% {{ top: 101%; }} }}
+@media (prefers-reduced-motion: reduce) {{ .road .car {{ animation: none; top: 0; }} }}
+.stop {{ position: relative; display: grid; grid-template-columns: 1fr 52px 1fr; align-items: center; margin-bottom: 30px; z-index: 1; }}
+.stop:last-child {{ margin-bottom: 0; }}
+.stop-marker {{ grid-column: 2; justify-self: center; width: 40px; height: 40px; border-radius: 50%; background: #13294a; color: #fff; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px #fff, 0 0 0 6px #c03926; z-index: 2; }}
+.stop-card {{ background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 15px 18px 17px; box-shadow: 0 4px 16px rgba(0,0,0,.08); text-decoration: none; display: block; transition: transform .15s ease, box-shadow .15s ease; }}
+.stop-card:hover {{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.15); }}
+.stop-emoji {{ font-size: 22px; }}
+.stop-card h4 {{ margin: 3px 0 5px; font-size: 1.08rem; }}
+.stop-card h4 a {{ color: #13294a; text-decoration: none; }}
+.stop-card:hover h4 a {{ color: var(--red); }}
+.stop-card .stop-more {{ text-decoration: none; display: inline-block; }}
+.stop-card p {{ margin: 0 0 9px; font-size: 13.5px; color: var(--mid); line-height: 1.6; }}
+.stop-card .stop-more {{ color: var(--red); font-weight: 700; font-size: 13px; }}
+.stop:nth-child(odd) .stop-card {{ grid-column: 1; text-align: right; }}
+.stop:nth-child(even) .stop-card {{ grid-column: 3; text-align: left; }}
+@media (max-width: 700px) {{
+ .road {{ left: 26px; }}
+ .stop {{ grid-template-columns: 52px 1fr; }}
+ .stop-marker {{ grid-column: 1; }}
+ .stop:nth-child(odd) .stop-card, .stop:nth-child(even) .stop-card {{ grid-column: 2; text-align: left; }}
+}}
  </style>
 </head>
 <body>
@@ -114,9 +154,10 @@ page = f'''<!DOCTYPE html>
 
  <p>Whether it's your first home or your fifth, the process can feel like a lot of moving parts. The good news: it's a well-worn path, and with the right agent it's genuinely manageable. Here is the Central Indiana home-buying journey, step by step &mdash; and how <strong>Your Realty Link</strong> helps at each stage.</p>
 
- <ol class="step-list">
+ <div class="roadmap">
+ <div class="road" aria-hidden="true"><span class="car">🚗</span></div>
 {steps_html}
- </ol>
+ </div>
 
  <div class="cta-block">
  <h3>Ready to Start? Let's Talk</h3>
