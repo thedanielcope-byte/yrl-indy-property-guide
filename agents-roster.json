@@ -1,260 +1,260 @@
 [
-  {
-    "name": "Janet Giles-Schultz",
-    "title": "Broker – Owner",
-    "phone": "317-997-7404",
-    "email": "janet@yourrealtylink.com",
-    "website": "",
-    "photo": "/assets/img/agents/janet-giles.jpg",
-    "lead": true,
-    "slug": "janet-giles",
-    "designations": [
-      "ePro",
-      "Emeritus Realtor"
-    ],
-    "languages": [
-      "English"
-    ],
-    "years": "52",
-    "expertise": [
-      "Buyer Representation",
-      "Seller Representation",
-      "First-Time Buyers",
-      "Luxury Homes",
-      "Investment Property",
-      "New Construction",
-      "Relocation",
-      "Downsizing & Senior",
-      "Land & Lots",
-      "Multi-Family",
-      "Foreclosure & Short Sale",
-      "Divorce & Estate Sales",
-      "New Home Communities"
-    ],
-    "bio": "Licensed in 1974 and continually have served my family, friends and new buyers and sellers in the role of Dream Home Finder.  I have also held a brokers license in Ohio since 2001.  I love the deal - I love helping my buyer or seller figure out the right strategy to get them into their next home.  I am the principal-broker/owner of Your Realty Link and my family of 18 wonderful agents.",
-    "tagline": "Your Link to Everything Home"
-  },
-  {
-    "name": "Daniel Cope",
-    "title": "Commercial Broker / Marketing",
-    "phone": "317-201-6323",
-    "email": "csirealtyteam@yourrealtylink.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/daniel-cope-brick.png",
-    "areas": [
-      [
-        "Southport",
-        "/cities/marion-county/southport-indiana-real-estate/"
-      ],
-      [
-        "Greenwood",
-        "/cities/johnson-county/greenwood-indiana-real-estate/"
-      ],
-      [
-        "Franklin",
-        "/cities/johnson-county/franklin-indiana-real-estate/"
-      ],
-      [
-        "Bargersville",
-        "/cities/johnson-county/bargersville-indiana-real-estate/"
-      ],
-      [
-        "Fountain Square",
-        "/neighborhoods/fountain-square-indianapolis/"
-      ],
-      [
-        "Broad Ripple",
-        "/cities/marion-county/broad-ripple-indianapolis-real-estate/"
-      ],
-      [
-        "Mass Ave",
-        "/neighborhoods/mass-ave-indianapolis/"
-      ]
-    ],
-    "expertise": [
-      "Buyer Representation",
-      "Seller Representation",
-      "New Construction",
-      "Commercial Real Estate"
-    ],
-    "bio": "Daniel Cope is a Commercial Broker and the marketing lead at Your Realty Link, helping clients buy, sell, and invest across commercial and residential real estate throughout the Indianapolis metro and Central Indiana. With a marketing background, Daniel brings sharp positioning and full-MLS reach to every deal.\n\nWhether you're expanding a business, buying your first home, or growing an investment portfolio, Daniel offers straight talk and deep local knowledge — from the Southport area through Johnson County and beyond.",
-    "tagline": "Commercial & residential real estate across Central Indiana — straight talk, sharp marketing, real results.",
-    "slug": "daniel-cope"
-  },
-  {
-    "name": "Clark Giles",
-    "title": "REALTOR",
-    "phone": "317-294-9608",
-    "email": "clark@yourrealtylink.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/clark-giles-brick.png",
-    "slug": "clark-giles"
-  },
-  {
-    "name": "Matt Worton",
-    "title": "REALTOR",
-    "phone": "317-642-6156",
-    "email": "matt@yourrealtylink.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/matt-worton-brick.png",
-    "slug": "matt-worton"
-  },
-  {
-    "name": "Michelle Martin",
-    "title": "REALTOR",
-    "phone": "317-945-5112",
-    "email": "michelle@yourrealtylink.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/michelle-martin-brick.png",
-    "slug": "michelle-martin"
-  },
-  {
-    "name": "Brenda D. Dean",
-    "title": "REALTOR",
-    "phone": "317-403-2780",
-    "email": "brenda@brendadeanteam.com",
-    "website": "https://www.BrendaDeanTeam.com",
-    "photo": "https://janetgiles.com/assets/img/agents/brenda-d-dean-brick.png",
-    "slug": "brenda-d-dean"
-  },
-  {
-    "name": "Elizabeth Cottler",
-    "title": "REALTOR",
-    "phone": "317-507-7770",
-    "email": "ecottler@hotmail.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/elizabeth-cottler-brick.png",
-    "slug": "elizabeth-cottler"
-  },
-  {
-    "name": "Leah Matis",
-    "title": "REALTOR",
-    "phone": "317-965-3676",
-    "email": "leah.matis@gmail.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/leah-matis-brick.png",
-    "slug": "leah-matis"
-  },
-  {
-    "name": "Marie Washburne",
-    "title": "REALTOR",
-    "phone": "317-287-4608",
-    "email": "marie@indypropertychicks.com",
-    "website": "https://indypropertychicks.com",
-    "photo": "https://janetgiles.com/assets/img/agents/marie-washburne-brick.png",
-    "slug": "marie-washburne"
-  },
-  {
-    "name": "Portia Rhoades",
-    "title": "REALTOR",
-    "phone": "317-653-9658",
-    "email": "portiafay1976@gmail.com",
-    "website": "",
-    "photo": "/assets/img/agents/portia-rhoades.jpg",
-    "slug": "portia-rhoades"
-  },
-  {
-    "name": "Raina Billington",
-    "title": "REALTOR",
-    "phone": "317-266-9317",
-    "email": "rainabillington@gmail.com",
-    "website": "https://www.yourrealtylink.com",
-    "photo": "/assets/img/agents/raina-billington.jpg",
-    "slug": "raina-billington"
-  },
-  {
-    "name": "Sadie Darlage",
-    "title": "REALTOR",
-    "phone": "317-370-0674",
-    "email": "csdarlage@hotmail.com",
-    "website": "https://www.yourrealtylink.com",
-    "photo": "https://janetgiles.com/assets/img/agents/sadie-darlage-brick.png",
-    "slug": "sadie-darlage"
-  },
-  {
-    "name": "Tami & Todd Scroggins",
-    "title": "REALTOR",
-    "phone": "317-445-1723",
-    "email": "ttscroggins1113@gmail.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/tami-todd-scroggins-brick.png",
-    "slug": "tami-todd-scroggins",
-    "expertise": [
-      "Buyer Representation",
-      "Seller Representation",
-      "First-Time Buyers",
-      "Luxury Homes",
-      "New Home Communities"
-    ],
-    "areas": [
-      [
-        "Shelbyville",
-        "/cities/shelby-county/shelbyville-indiana-real-estate/"
-      ]
-    ],
-    "tagline": "Best Realtor in Shelby County 2025 & 2026!"
-  },
-  {
-    "name": "Tammy Jennings",
-    "title": "REALTOR",
-    "phone": "317-850-4456",
-    "email": "goldenhoperealty@yahoo.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/tammy-jennings-brick.png",
-    "slug": "tammy-jennings"
-  },
-  {
-    "name": "Teresa Thacker",
-    "title": "REALTOR",
-    "phone": "317-670-0017",
-    "email": "listwithteresa@gmail.com",
-    "website": "https://www.yourrealtylink.com",
-    "photo": "/assets/img/agents/teresa-thacker.jpg",
-    "slug": "teresa-thacker"
-  },
-  {
-    "name": "Angela Perez",
-    "title": "REALTOR",
-    "phone": "317-554-7214",
-    "email": "realtorangelaperez@gmail.com",
-    "website": "https://www.yourrealtylink.com",
-    "photo": "https://janetgiles.com/assets/img/agents/angela-perez-brick.png",
-    "slug": "angela-perez"
-  },
-  {
-    "name": "Daniel Fenton",
-    "title": "REALTOR",
-    "phone": "317-413-9057",
-    "email": "danielfentonrealty@gmail.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/daniel-fenton-brick.png",
-    "slug": "daniel-fenton"
-  },
-  {
-    "name": "Jordan Gleason",
-    "title": "Referral Partner",
-    "phone": "317-501-3490",
-    "email": "jgleason@gileslawgroup.com",
-    "website": "https://www.gileslawgroup.com",
-    "photo": "/assets/img/agents/jordan-gleason.jpg",
-    "slug": "jordan-gleason"
-  },
-  {
-    "name": "Lisa Hicks",
-    "title": "Referral Partner",
-    "phone": "317-417-2707",
-    "email": "lisa@indypropertychicks.com",
-    "website": "https://indypropertychicks.com",
-    "photo": "https://janetgiles.com/assets/img/agents/lisa-hicks-brick.png",
-    "slug": "lisa-hicks"
-  },
-  {
-    "name": "Steve Webber",
-    "title": "Referral Partner",
-    "phone": "317-201-3982",
-    "email": "stevewebber54@gmail.com",
-    "website": "",
-    "photo": "https://janetgiles.com/assets/img/agents/steve-webber-brick.png",
-    "slug": "steve-webber"
-  }
+ {
+  "name": "Janet Giles-Schultz",
+  "title": "Broker – Owner",
+  "phone": "317-997-7404",
+  "email": "janet@yourrealtylink.com",
+  "website": "",
+  "photo": "/assets/img/agents/janet-giles.jpg",
+  "lead": true,
+  "slug": "janet-giles",
+  "designations": [
+   "ePro",
+   "Emeritus Realtor"
+  ],
+  "languages": [
+   "English"
+  ],
+  "years": "52",
+  "expertise": [
+   "Buyer Representation",
+   "Seller Representation",
+   "First-Time Buyers",
+   "Luxury Homes",
+   "Investment Property",
+   "New Construction",
+   "Relocation",
+   "Downsizing & Senior",
+   "Land & Lots",
+   "Multi-Family",
+   "Foreclosure & Short Sale",
+   "Divorce & Estate Sales",
+   "New Home Communities"
+  ],
+  "bio": "Licensed in 1974 and continually have served my family, friends and new buyers and sellers in the role of Dream Home Finder.  I have also held a brokers license in Ohio since 2001.  I love the deal - I love helping my buyer or seller figure out the right strategy to get them into their next home.  I am the principal-broker/owner of Your Realty Link and my family of 18 wonderful agents.",
+  "tagline": "Your Link to Everything Home"
+ },
+ {
+  "name": "Daniel Cope",
+  "title": "Commercial Broker / Marketing",
+  "phone": "317-201-6323",
+  "email": "csirealtyteam@yourrealtylink.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/daniel-cope-brick.png",
+  "areas": [
+   [
+    "Southport",
+    "/cities/marion-county/southport-indiana-real-estate/"
+   ],
+   [
+    "Greenwood",
+    "/cities/johnson-county/greenwood-indiana-real-estate/"
+   ],
+   [
+    "Franklin",
+    "/cities/johnson-county/franklin-indiana-real-estate/"
+   ],
+   [
+    "Bargersville",
+    "/cities/johnson-county/bargersville-indiana-real-estate/"
+   ],
+   [
+    "Fountain Square",
+    "/neighborhoods/fountain-square-indianapolis/"
+   ],
+   [
+    "Broad Ripple",
+    "/cities/marion-county/broad-ripple-indianapolis-real-estate/"
+   ],
+   [
+    "Mass Ave",
+    "/neighborhoods/mass-ave-indianapolis/"
+   ]
+  ],
+  "expertise": [
+   "Buyer Representation",
+   "Seller Representation",
+   "New Construction",
+   "Commercial Real Estate"
+  ],
+  "bio": "Daniel Cope is a Commercial Broker and the marketing lead at Your Realty Link, helping clients buy, sell, and invest across commercial and residential real estate throughout the Indianapolis metro and Central Indiana. With a marketing background, Daniel brings sharp positioning and full-MLS reach to every deal.\n\nWhether you're expanding a business, buying your first home, or growing an investment portfolio, Daniel offers straight talk and deep local knowledge — from the Southport area through Johnson County and beyond.",
+  "tagline": "Commercial & residential real estate across Central Indiana — straight talk, sharp marketing, real results.",
+  "slug": "daniel-cope"
+ },
+ {
+  "name": "Clark Giles",
+  "title": "REALTOR",
+  "phone": "317-294-9608",
+  "email": "clark@yourrealtylink.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/clark-giles-brick.png",
+  "slug": "clark-giles"
+ },
+ {
+  "name": "Matt Worton",
+  "title": "REALTOR",
+  "phone": "317-642-6156",
+  "email": "matt@yourrealtylink.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/matt-worton-brick.png",
+  "slug": "matt-worton"
+ },
+ {
+  "name": "Michelle Martin",
+  "title": "REALTOR",
+  "phone": "317-945-5112",
+  "email": "michelle@yourrealtylink.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/michelle-martin-brick.png",
+  "slug": "michelle-martin"
+ },
+ {
+  "name": "Brenda D. Dean",
+  "title": "REALTOR",
+  "phone": "317-403-2780",
+  "email": "brenda@brendadeanteam.com",
+  "website": "https://www.BrendaDeanTeam.com",
+  "photo": "https://janetgiles.com/assets/img/agents/brenda-d-dean-brick.png",
+  "slug": "brenda-d-dean"
+ },
+ {
+  "name": "Elizabeth Cottler",
+  "title": "REALTOR",
+  "phone": "317-507-7770",
+  "email": "ecottler@hotmail.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/elizabeth-cottler-brick.png",
+  "slug": "elizabeth-cottler"
+ },
+ {
+  "name": "Leah Matis",
+  "title": "REALTOR",
+  "phone": "317-965-3676",
+  "email": "leah.matis@gmail.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/leah-matis-brick.png",
+  "slug": "leah-matis"
+ },
+ {
+  "name": "Marie Washburne",
+  "title": "REALTOR",
+  "phone": "317-287-4608",
+  "email": "marie@indypropertychicks.com",
+  "website": "https://indypropertychicks.com",
+  "photo": "https://janetgiles.com/assets/img/agents/marie-washburne-brick.png",
+  "slug": "marie-washburne"
+ },
+ {
+  "name": "Portia Rhoades",
+  "title": "REALTOR",
+  "phone": "317-653-9658",
+  "email": "portiafay1976@gmail.com",
+  "website": "",
+  "photo": "/assets/img/agents/portia-rhoades.jpg",
+  "slug": "portia-rhoades"
+ },
+ {
+  "name": "Raina Billington",
+  "title": "REALTOR",
+  "phone": "317-266-9317",
+  "email": "rainabillington@gmail.com",
+  "website": "https://www.yourrealtylink.com",
+  "photo": "/assets/img/agents/raina-billington.jpg",
+  "slug": "raina-billington"
+ },
+ {
+  "name": "Sadie Darlage",
+  "title": "REALTOR",
+  "phone": "317-370-0674",
+  "email": "csdarlage@hotmail.com",
+  "website": "https://www.yourrealtylink.com",
+  "photo": "https://janetgiles.com/assets/img/agents/sadie-darlage-brick.png",
+  "slug": "sadie-darlage"
+ },
+ {
+  "name": "Tami & Todd Scroggins",
+  "title": "REALTOR",
+  "phone": "317-445-1723",
+  "email": "ttscroggins1113@gmail.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/tami-todd-scroggins-brick.png",
+  "slug": "tami-todd-scroggins",
+  "expertise": [
+   "Buyer Representation",
+   "Seller Representation",
+   "First-Time Buyers",
+   "Luxury Homes",
+   "New Home Communities"
+  ],
+  "areas": [
+   [
+    "Shelbyville",
+    "/cities/shelby-county/shelbyville-indiana-real-estate/"
+   ]
+  ],
+  "tagline": "Best Realtor in Shelby County 2025 & 2026!"
+ },
+ {
+  "name": "Tammy Jennings",
+  "title": "REALTOR",
+  "phone": "317-850-4456",
+  "email": "goldenhoperealty@yahoo.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/tammy-jennings-brick.png",
+  "slug": "tammy-jennings"
+ },
+ {
+  "name": "Teresa Thacker",
+  "title": "REALTOR",
+  "phone": "317-670-0017",
+  "email": "listwithteresa@gmail.com",
+  "website": "https://www.yourrealtylink.com",
+  "photo": "/assets/img/agents/teresa-thacker.jpg",
+  "slug": "teresa-thacker"
+ },
+ {
+  "name": "Angela Perez",
+  "title": "REALTOR",
+  "phone": "317-554-7214",
+  "email": "realtorangelaperez@gmail.com",
+  "website": "https://www.yourrealtylink.com",
+  "photo": "https://janetgiles.com/assets/img/agents/angela-perez-brick.png",
+  "slug": "angela-perez"
+ },
+ {
+  "name": "Daniel Fenton",
+  "title": "REALTOR",
+  "phone": "317-413-9057",
+  "email": "danielfentonrealty@gmail.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/daniel-fenton-brick.png",
+  "slug": "daniel-fenton"
+ },
+ {
+  "name": "Jordan Gleason",
+  "title": "Referral Partner",
+  "phone": "317-501-3490",
+  "email": "jgleason@gileslawgroup.com",
+  "website": "https://www.gileslawgroup.com",
+  "photo": "/assets/img/agents/jordan-gleason.jpg",
+  "slug": "jordan-gleason"
+ },
+ {
+  "name": "Lisa Hicks",
+  "title": "Referral Partner",
+  "phone": "317-417-2707",
+  "email": "lisa@indypropertychicks.com",
+  "website": "https://indypropertychicks.com",
+  "photo": "https://janetgiles.com/assets/img/agents/lisa-hicks-brick.png",
+  "slug": "lisa-hicks"
+ },
+ {
+  "name": "Steve Webber",
+  "title": "Referral Partner",
+  "phone": "317-201-3982",
+  "email": "stevewebber54@gmail.com",
+  "website": "",
+  "photo": "https://janetgiles.com/assets/img/agents/steve-webber-brick.png",
+  "slug": "steve-webber"
+ }
 ]
