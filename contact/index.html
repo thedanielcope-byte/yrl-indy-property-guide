@@ -94,6 +94,17 @@
 .hours-row span { color: #6e6e70; }
  @media (max-width: 768px) {.contact-layout { grid-template-columns: 1fr; } }
  </style>
+<style>
+/* Contact split hero: verbiage left, fitted photo right */
+.contact-split .container{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;}
+.contact-split .hero-copy{min-width:0;}
+.contact-split .hero-figure{margin:0;}
+.contact-split .hero-figure img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.34);}
+@media (max-width:820px){
+ .contact-split .container{grid-template-columns:1fr;gap:26px;}
+ .contact-split .hero-figure{max-width:480px;}
+}
+</style>
 </head>
 <body>
 
@@ -158,15 +169,23 @@
  </div>
 </nav>
 
-<section class="page-hero has-photo" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/contact.webp') type('image/webp'), url('/assets/img/heroes/contact.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/contact.webp') type('image/webp'), url('/assets/img/heroes/contact.jpg') type('image/jpeg')); --hero-pos: center 32%;">
+<section class="page-hero contact-split">
  <div class="container">
- <h1>Contact Your Realty Link</h1>
- <p class="hero-sub">Ready to buy, sell, or just have questions about the Central Indiana market? The Your Realty Link team is here to help. No pressure, no runaround — just straight answers from people who know this market.</p>
- <div class="hero-badges">
+  <div class="hero-copy">
+   <h1>Contact Your Realty Link</h1>
+   <p class="hero-sub">Ready to buy, sell, or just have questions about the Central Indiana market? The Your Realty Link team is here to help. No pressure, no runaround — just straight answers from people who know this market.</p>
+   <div class="hero-badges">
  <span class="hero-badge">Free Consultations</span>
  <span class="hero-badge">Brokerage</span>
  <span class="hero-badge">Call or Text Anytime</span>
  </div>
+  </div>
+  <figure class="hero-figure">
+   <picture>
+    <source srcset="/assets/img/heroes/contact.webp" type="image/webp">
+    <img src="/assets/img/heroes/contact.jpg" alt="Janet Giles and Brenda at the Your Realty Link office" width="1536" height="864" loading="eager" decoding="async">
+   </picture>
+  </figure>
  </div>
 </section>
 
