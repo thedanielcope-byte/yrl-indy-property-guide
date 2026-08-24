@@ -78,17 +78,6 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
  <link rel="stylesheet" href="/assets/css/style.css?v=01856790">
-<style>
-/* Split hero: verbiage left, fitted photo right */
-.split-hero .container{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;}
-.split-hero .hero-copy{min-width:0;}
-.split-hero .hero-figure{margin:0;}
-.split-hero .hero-figure img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.34);}
-@media (max-width:820px){
- .split-hero .container{grid-template-columns:1fr;gap:26px;}
- .split-hero .hero-figure{max-width:480px;}
-}
-</style>
 </head>
 <body>
 
@@ -153,24 +142,16 @@
  </div>
 </nav>
 
-<section class="page-hero split-hero">
+<section class="page-hero has-photo" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/first-time-home-buyers-indianapolis.webp') type('image/webp'), url('/assets/img/heroes/first-time-home-buyers-indianapolis.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/first-time-home-buyers-indianapolis.webp') type('image/webp'), url('/assets/img/heroes/first-time-home-buyers-indianapolis.jpg') type('image/jpeg')); --hero-pos: center 50%;">
  <div class="container">
-  <div class="hero-copy">
-   <h1>First Time Home Buyers in Indianapolis</h1>
-   <p class="hero-sub">Buying your first home is one of the biggest decisions of your life. Your Realty Link guides Indianapolis first-time buyers through every step — from understanding your budget to <a href="/glossary/closing-day/" class="gloss-link">closing day</a> — with honest advice and zero pressure.</p>
-   <div class="hero-badges">
+ <h1>First Time Home Buyers in Indianapolis</h1>
+ <p class="hero-sub">Buying your first home is one of the biggest decisions of your life. Your Realty Link guides Indianapolis first-time buyers through every step — from understanding your budget to <a href="/glossary/closing-day/" class="gloss-link">closing day</a> — with honest advice and zero pressure.</p>
+ <div class="hero-badges">
  <span class="hero-badge">Free Buyer Consultation</span>
  <span class="hero-badge">MIBOR MLS Access</span>
  <span class="hero-badge">Down Payment Programs</span>
  <span class="hero-badge">Step-by-Step Guidance</span>
  </div>
-  </div>
-  <figure class="hero-figure">
-   <picture>
-    <source srcset="/assets/img/heroes/first-time-buyers-split.webp" type="image/webp">
-    <img src="/assets/img/heroes/first-time-buyers-split.jpg" alt="A staged Central Indiana living room" width="1008" height="800" loading="eager" decoding="async">
-   </picture>
-  </figure>
  </div>
 </section>
 
