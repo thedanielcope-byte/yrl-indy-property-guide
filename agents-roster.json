@@ -178,7 +178,21 @@
   "email": "ttscroggins1113@gmail.com",
   "website": "",
   "photo": "/assets/img/agents/tami-todd-scroggins.jpg",
-  "slug": "tami-todd-scroggins"
+  "slug": "tami-todd-scroggins",
+  "expertise": [
+   "Buyer Representation",
+   "Seller Representation",
+   "First-Time Buyers",
+   "Luxury Homes",
+   "New Home Communities"
+  ],
+  "areas": [
+   [
+    "Shelbyville",
+    "/cities/shelby-county/shelbyville-indiana-real-estate/"
+   ]
+  ],
+  "tagline": "Best Realtor in Shelby County 2025 & 2026!"
  },
  {
   "name": "Tammy Jennings",
