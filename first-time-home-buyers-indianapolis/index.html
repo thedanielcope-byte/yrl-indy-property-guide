@@ -78,6 +78,15 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
  <link rel="stylesheet" href="/assets/css/style.css?v=01856790">
+<style>
+/* Full-bleed banner graphic — no scrim on desktop; light shade on mobile for text legibility */
+.page-hero.banner-raw{background-image:var(--hero-img);background-size:cover;background-position:var(--hero-pos,center);background-repeat:no-repeat;}
+.page-hero.banner-raw::before{content:none;}
+@media (max-width:820px){
+ .page-hero.banner-raw::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,16,24,.62) 0%,rgba(12,16,24,.40) 52%,rgba(12,16,24,.15) 100%);}
+ .page-hero.banner-raw .container{position:relative;z-index:1;}
+}
+</style>
 </head>
 <body>
 
@@ -142,7 +151,7 @@
  </div>
 </nav>
 
-<section class="page-hero has-photo" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/first-time-home-buyers-indianapolis.webp') type('image/webp'), url('/assets/img/heroes/first-time-home-buyers-indianapolis.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/first-time-home-buyers-indianapolis.webp') type('image/webp'), url('/assets/img/heroes/first-time-home-buyers-indianapolis.jpg') type('image/jpeg')); --hero-pos: center 50%;">
+<section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/first-time-home-buyers-indianapolis.webp') type('image/webp'), url('/assets/img/heroes/first-time-home-buyers-indianapolis.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/first-time-home-buyers-indianapolis.webp') type('image/webp'), url('/assets/img/heroes/first-time-home-buyers-indianapolis.jpg') type('image/jpeg')); --hero-pos: center 45%;">
  <div class="container">
  <h1>First Time Home Buyers in Indianapolis</h1>
  <p class="hero-sub">Buying your first home is one of the biggest decisions of your life. Your Realty Link guides Indianapolis first-time buyers through every step — from understanding your budget to <a href="/glossary/closing-day/" class="gloss-link">closing day</a> — with honest advice and zero pressure.</p>
