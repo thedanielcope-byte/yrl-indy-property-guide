@@ -36,15 +36,6 @@
  .agent-card .ac-cta { color:#c03926; font-weight:600; font-size:.82rem; margin-top:8px; display:inline-block; }
  .team-photo { width:100%; max-width:920px; display:block; margin:0 auto 22px; border-radius:14px; }
 </style>
-<style>
-/* Full-bleed banner graphic — no scrim on desktop; light shade on mobile for text legibility */
-.page-hero.banner-raw{background-image:var(--hero-img);background-size:cover;background-position:var(--hero-pos,center);background-repeat:no-repeat;}
-.page-hero.banner-raw::before{content:none;}
-@media (max-width:820px){
- .page-hero.banner-raw::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,16,24,.62) 0%,rgba(12,16,24,.40) 52%,rgba(12,16,24,.15) 100%);}
- .page-hero.banner-raw .container{position:relative;z-index:1;}
-}
-</style>
 </head>
 <body>
 <header class="site-header">
@@ -104,7 +95,7 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb">
  <div class="container"><a href="/">Home</a> <span>›</span> Our Agents</div>
 </nav>
-<section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/agents.webp') type('image/webp'), url('/assets/img/heroes/agents.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/agents.webp') type('image/webp'), url('/assets/img/heroes/agents.jpg') type('image/jpeg')); --hero-pos: center 18%;">
+<section class="page-hero">
  <div class="container">
  <h1>Our Agents</h1>
  <p class="hero-sub">Meet the Your Realty Link team — a local boutique brokerage of 20+ experienced Central Indiana real estate experts, led by Broker-Owner Janet Giles.</p>
