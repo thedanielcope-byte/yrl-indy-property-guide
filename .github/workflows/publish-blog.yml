@@ -1,0 +1,47 @@
+name: Publish blog posts from hub
+
+# Builds blog posts authored in the YRL hub admin (Supabase blog_posts) into
+# blog/<slug>/ pages and refreshes the /blog/ listing — no manual push needed.
+# Scheduled posts go live automatically once their publish time passes.
+#
+# Triggers:
+#   • schedule          — polls every 15 minutes (also releases scheduled posts)
+#   • workflow_dispatch  — manual "Run workflow" button
+#   • repository_dispatch (type: blog-updated) — reserved for an instant trigger
+#     from the hub (future: hub Publish → edge fn → dispatch)
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+  repository_dispatch:
+    types: [blog-updated]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-blog
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build published blog posts
+        run: python3 build-blog.py
+
+      - name: Commit & push if anything changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Auto-publish blog posts from hub"
+            git push
+            echo "Published blog changes."
+          else
+            echo "No changes — blog already up to date."
+          fi
