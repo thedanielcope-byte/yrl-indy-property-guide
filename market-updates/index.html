@@ -167,6 +167,72 @@
 })();
 </script>
 
+<div class="container" style="padding:34px 0 6px;">
+ <div style="background:linear-gradient(135deg,#17130f,#2a231d);border-radius:18px;padding:30px 32px;color:#fff;max-width:760px;">
+  <h2 style="font-family:'Playfair Display',Georgia,serif;color:#fff;margin:0 0 6px;">Get the Full Report &mdash; Free</h2>
+  <p style="color:#d8cfc6;margin:0 0 18px;font-size:15.5px;">Pick your county and we&rsquo;ll send you a clean, one-page PDF report with the latest numbers. No cost, no obligation.</p>
+  <form id="reportForm" novalidate>
+   <input type="hidden" name="lead_magnet" value="market-report">
+   <input type="hidden" name="source_page" value="market-updates">
+   <input type="hidden" name="interest_type" value="Market Report">
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;">
+    <div style="grid-column:1 / -1;">
+     <label for="rf-county" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Your county *</label>
+     <select id="rf-county" name="county" required style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;background:#fff;color:#1e1a17;font:inherit;">
+     <option value="central-indiana">Central Indiana — 17-county overall</option>
+     <option value="marion-county">Marion County (Indianapolis)</option>
+     <option value="hamilton-county">Hamilton County</option>
+     <option value="hendricks-county">Hendricks County</option>
+     <option value="johnson-county">Johnson County</option>
+     <option value="boone-county">Boone County</option>
+     <option value="hancock-county">Hancock County</option>
+     <option value="madison-county">Madison County</option>
+     <option value="morgan-county">Morgan County</option>
+     <option value="shelby-county">Shelby County</option>
+     <option value="bartholomew-county">Bartholomew County</option>
+     <option value="brown-county">Brown County</option>
+     <option value="decatur-county">Decatur County</option>
+     <option value="jackson-county">Jackson County</option>
+     <option value="jennings-county">Jennings County</option>
+     <option value="montgomery-county">Montgomery County</option>
+     <option value="parke-county">Parke County</option>
+     <option value="putnam-county">Putnam County</option>
+     </select>
+    </div>
+    <div><label for="rf-fn" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">First name *</label><input id="rf-fn" name="first_name" required placeholder="First name" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
+    <div><label for="rf-ln" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Last name</label><input id="rf-ln" name="last_name" placeholder="Last name" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
+    <div><label for="rf-em" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Email *</label><input id="rf-em" type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
+    <div><label for="rf-ph" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Phone <span style="color:#a99e93;font-weight:400;">(optional)</span></label><input id="rf-ph" type="tel" name="phone" placeholder="317-555-1234" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
+   </div>
+   <button type="submit" style="margin-top:16px;background:#c03926;color:#fff;border:none;border-radius:9px;padding:13px 26px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;">Send My Report &rarr;</button>
+   <p style="font-size:12px;color:#a99e93;margin:12px 0 0;">No spam. Unsubscribe anytime. Your info stays private.</p>
+  </form>
+  <div id="reportDone" style="display:none;"></div>
+ </div>
+</div>
+<script>
+(function(){
+ var fm=document.getElementById('reportForm');
+ fm.addEventListener('submit',function(e){
+  e.preventDefault();
+  var btn=fm.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
+  var d={},ins=fm.querySelectorAll('input,select');for(var i=0;i<ins.length;i++){if(ins[i].name)d[ins[i].name]=ins[i].value;}
+  var county=d.county||'central-indiana';
+  var sel=document.getElementById('rf-county');var clabel=sel.options[sel.selectedIndex].text;
+  var pdf='/assets/pdf/market-reports/latest/'+county+'.pdf';
+  d.source_url=window.location.href;d.submitted_at=new Date().toISOString();d.business='yrl';d.source='lead-magnet';
+  d.county_label=clabel;d.tags='lead-magnet,market-report,'+county;
+  fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+   .then(function(){
+     var done=document.getElementById('reportDone');
+     done.innerHTML='<h2 style="font-family:\'Playfair Display\',Georgia,serif;color:#fff;margin:0 0 8px;">Check it out &mdash; your report is ready \u2713</h2><p style="color:#d8cfc6;margin:0 0 16px;font-size:15.5px;">Your '+clabel+' market report is downloading now. If it doesn\'t open, use the button below.</p><a href="'+pdf+'" target="_blank" style="display:inline-block;background:#c03926;color:#fff;border-radius:9px;padding:13px 26px;font-weight:700;text-decoration:none;">Download the '+clabel+' report &rarr;</a>';
+     fm.style.display='none';done.style.display='block';
+     setTimeout(function(){window.location.href=pdf;},400);
+   })
+   .catch(function(){btn.disabled=false;btn.textContent='Send My Report \u2192';alert('Something went wrong. Please try again or call 317-997-7404.');});
+ });
+})();
+</script>
 <div class="container" style="padding:32px 0 8px;">
  <p style="max-width:70ch;color:var(--gray,#6e6e70);">Want the exact numbers for your home or neighborhood? A market average never tells your street&rsquo;s story &mdash; <a href="/services/free-home-valuation/">get a free, no-obligation home valuation</a> built on real, recent local sales.</p>
  <div class="blog-grid" style="margin-top:20px;">

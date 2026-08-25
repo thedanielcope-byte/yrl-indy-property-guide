@@ -152,7 +152,51 @@ BANNER = """<meta charset="utf-8">
  </div>
 </div>"""
 
+# ---- downloadable 1-page PDF report (lead-magnet gated on the market-updates page) ----
+PDFDIR = os.path.join(ROOT, "assets/pdf/market-reports", "latest")
+
+def region_name(label):
+    return label.split(",")[0].split("·")[0].strip()
+
+def takeaway(name, med, med_yoy, dom, months):
+    if med_yoy > 0.5:   t = "up %s%% year-over-year" % pct(med_yoy)
+    elif med_yoy < -0.5: t = "down %s%% year-over-year" % pct(med_yoy)
+    else:               t = "about flat year-over-year"
+    if months < 3:   cond = "a seller-leaning market — inventory is still tight"
+    elif months < 5: cond = "moving toward a balanced market"
+    elif months <= 7: cond = "a balanced market"
+    else:            cond = "a buyer-leaning market"
+    return ("In %s, the median single-family home sold for %s (%s), in a median of %s days. "
+            "At %s months of supply, it is %s." % (name, money(med), t, dom, ("%.1f" % months), cond))
+
+PDF_TPL = """<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<style>
+ @page{{size:letter;margin:0}}
+ *{{margin:0;padding:0;box-sizing:border-box}}
+ body{{font-family:"Libre Franklin",system-ui,sans-serif;color:#1e1a17}}
+ .pg{{width:8.5in;min-height:11in;padding:.55in .6in;display:flex;flex-direction:column}}
+ .hd{{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #c03926;padding-bottom:12px;margin-bottom:20px}}
+ .hd img{{height:.5in}}
+ .hd .m{{text-align:right;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#c03926;line-height:1.5}}
+ h1{{font-family:"Playfair Display",serif;font-size:27px;margin:0 0 3px;color:#17130f}}
+ .sub{{color:#6e6e70;font-size:12px;margin:0 0 18px}}
+ .report{{width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.10)}}
+ .take{{font-size:13.5px;color:#3a332e;line-height:1.65;margin:20px 0 0}}
+ .cta{{margin-top:auto;background:#17130f;color:#fff;border-radius:12px;padding:16px 22px;font-size:13px;line-height:1.55}}
+ .cta b{{color:#e0644f}}
+</style>
+<div class="pg">
+ <div class="hd"><img src="data:image/png;base64,{logo}"><div class="m">{month}<br>{label}</div></div>
+ <h1>{name} Market Report</h1>
+ <p class="sub">Single-family homes &middot; Source: MIBOR REALTOR&reg; Association</p>
+ <img class="report" src="data:image/png;base64,{img}">
+ <p class="take">{take}</p>
+ <div class="cta">Want your home&rsquo;s exact value &mdash; not a metro average? Get a free, no-obligation valuation at <b>janetgiles.com/services/free-home-valuation</b><br>Janet Giles-Schultz, Principal Broker &middot; Your Realty Link &middot; <b>317-997-7404</b></div>
+</div>"""
+
 os.makedirs(OUTDIR, exist_ok=True)
+os.makedirs(PDFDIR, exist_ok=True)
 ok = 0
 for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DATA.items():
     html = TPL.format(
@@ -182,6 +226,17 @@ for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DAT
                     "--force-device-scale-factor=1", "--window-size=1600,600",
                     "--virtual-time-budget=2500", "--screenshot=" + bout, "file://" + bhp],
                    capture_output=True)
+    # downloadable 1-page PDF (embeds the just-rendered square graphic)
+    if os.path.exists(out):
+        img_b64 = base64.b64encode(open(out, "rb").read()).decode()
+        name = region_name(label)
+        phtml = PDF_TPL.format(logo=LOGO, month=MONTH, label=H.escape(label), name=H.escape(name),
+                               img=img_b64, take=H.escape(takeaway(name, med, med_yoy, dom, months)))
+        php = os.path.join(SCRATCH, "mp_%s.html" % slug)
+        open(php, "w").write(phtml)
+        ppdf = os.path.join(PDFDIR, slug + ".pdf")
+        subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
+                        "--print-to-pdf=" + ppdf, "file://" + php], capture_output=True)
     if os.path.exists(out):
         ok += 1
         print("  ok", slug)
