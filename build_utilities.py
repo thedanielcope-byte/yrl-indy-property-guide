@@ -246,6 +246,7 @@ page = f'''<!DOCTYPE html>
  {{ "@type": "ListItem", "position": 3, "name": "Utilities & Setup", "item": "{URL}" }} ] }}
  ] }}
  </script>
+ <link rel="preload" as="image" href="/assets/img/heroes/utilities.jpg" fetchpriority="high">
  {FONTS}
  <style>
 .uo-wrap {{ max-width: 900px; margin: 0 auto; padding: 34px 0 10px; }}
@@ -279,7 +280,7 @@ page = f'''<!DOCTYPE html>
  <div class="container"><a href="/">Home</a> <span>&rsaquo;</span> <a href="/vendors/">Local Resources</a> <span>&rsaquo;</span> Utilities &amp; Setup</div>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/utilities.webp') type('image/webp'), url('/assets/img/heroes/utilities.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/utilities.webp') type('image/webp'), url('/assets/img/heroes/utilities.jpg') type('image/jpeg')); --hero-pos: center;">
  <div class="container">
  <h1>Central Indiana Utilities &amp; Setup Guide</h1>
  <p class="hero-sub">Just bought or about to move? Here is who to call to turn on electric, gas, water, sewer, trash, and internet across the Indianapolis metro &mdash; with a city-by-city directory below.</p>
