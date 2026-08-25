@@ -7,7 +7,7 @@ on every graphic). Renders each region to assets/img/market-reports/<period>/.
 
     python3 build_market_social.py
 """
-import os, base64, subprocess, html as H
+import os, base64, subprocess, shutil, html as H
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -110,6 +110,48 @@ TPL = """<meta charset="utf-8">
  </div>
 </div>"""
 
+BANNER = """<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+<style>
+ *{{margin:0;padding:0;box-sizing:border-box}}
+ body{{width:1600px;height:600px;overflow:hidden;font-family:"Libre Franklin",system-ui,sans-serif;background:#f7f3ef;color:#1e1a17}}
+ .b{{width:1600px;height:600px;padding:48px 54px;display:flex;gap:46px;position:relative}}
+ .b::after{{content:"";position:absolute;left:-120px;bottom:-160px;width:380px;height:380px;border-radius:50%;background:rgba(192,57,38,.06)}}
+ .L{{width:560px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}}
+ .L img{{height:60px;align-self:flex-start;margin-bottom:22px}}
+ .eb{{font-size:17px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#c03926}}
+ .eb span{{color:#6e6e70}}
+ .L h1{{font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:58px;line-height:1.02;margin:12px 0 0;color:#17130f}}
+ .L h1 em{{font-style:normal;color:#c03926}}
+ .rule{{width:84px;height:6px;background:#c03926;border-radius:3px;margin:18px 0 16px}}
+ .src{{font-size:15px;color:#6e6e70;font-weight:600}}
+ .cta{{margin-top:auto;font-size:19px;font-weight:800;color:#17130f;padding-top:20px}}
+ .cta b{{color:#c03926}}
+ .R{{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;position:relative;z-index:2}}
+ .t{{background:#fff;border:1px solid #ece4dc;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px rgba(40,25,20,.05)}}
+ .t .lab{{background:#c03926;color:#fff;font-size:15px;font-weight:800;padding:11px 18px}}
+ .t .bd{{padding:14px 18px 16px;display:flex;flex-direction:column;justify-content:center;flex:1}}
+ .t .val{{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:40px;line-height:1;color:#17130f}}
+ .t .val.red{{color:#c03926}}
+ .t .sub{{font-size:14px;color:#6e6e70;margin-top:7px;font-weight:500;line-height:1.35}}
+</style>
+<div class="b">
+ <div class="L">
+  <img src="data:image/png;base64,{logo}">
+  <div class="eb">{month} <span>&middot; {label}</span></div>
+  <h1>Real Estate<br><em>Market Report</em></h1>
+  <div class="rule"></div>
+  <div class="src">Single-family homes &middot; Source: MIBOR REALTOR&reg; Association</div>
+  <div class="cta">Full report &rarr; <b>janetgiles.com</b> &middot; 317-997-7404</div>
+ </div>
+ <div class="R">
+  <div class="t"><div class="lab">Median sale price</div><div class="bd"><div class="val red">{median}</div><div class="sub">{median_sub}</div></div></div>
+  <div class="t"><div class="lab">Homes sold in July</div><div class="bd"><div class="val">{sales}</div><div class="sub">{sales_sub}</div></div></div>
+  <div class="t"><div class="lab">Median days on market</div><div class="bd"><div class="val">{dom} days</div><div class="sub">{dom_sub}</div></div></div>
+  <div class="t"><div class="lab">Months of supply</div><div class="bd"><div class="val red">{months}</div><div class="sub">{months_sub}</div></div></div>
+ </div>
+</div>"""
+
 os.makedirs(OUTDIR, exist_ok=True)
 ok = 0
 for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DATA.items():
@@ -126,7 +168,28 @@ for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DAT
                     "--force-device-scale-factor=1", "--window-size=1080,1080",
                     "--virtual-time-budget=2500", "--screenshot=" + out, "file://" + hp],
                    capture_output=True)
+    # wide banner (Facebook cover / blog hero)
+    bhtml = BANNER.format(
+        logo=LOGO, month=MONTH, label=H.escape(label),
+        median=money(med), median_sub=price_sub(med_yoy),
+        sales="{:,}".format(sales), sales_sub=sales_sub(sales_yoy),
+        dom=dom, dom_sub=dom_sub(dom, dom_prior),
+        months=("%.1f" % months), months_sub=months_desc(months))
+    bhp = os.path.join(SCRATCH, "mb_%s.html" % slug)
+    open(bhp, "w").write(bhtml)
+    bout = os.path.join(OUTDIR, slug + "-banner.png")
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+                    "--force-device-scale-factor=1", "--window-size=1600,600",
+                    "--virtual-time-budget=2500", "--screenshot=" + bout, "file://" + bhp],
+                   capture_output=True)
     if os.path.exists(out):
         ok += 1
         print("  ok", slug)
-print("rendered %d/%d -> %s" % (ok, len(DATA), os.path.relpath(OUTDIR, ROOT)))
+print("rendered %d/%d (square + banner) -> %s" % (ok, len(DATA), os.path.relpath(OUTDIR, ROOT)))
+
+# mirror to a stable "latest/" folder so on-site embeds never go stale month to month
+LATEST = os.path.join(ROOT, "assets/img/market-reports", "latest")
+if os.path.isdir(LATEST):
+    shutil.rmtree(LATEST)
+shutil.copytree(OUTDIR, LATEST)
+print("mirrored -> assets/img/market-reports/latest")
