@@ -120,7 +120,7 @@ def hub_page(agents):
 <nav class="breadcrumbs" aria-label="Breadcrumb">
  <div class="container"><a href="/">Home</a> <span>›</span> Our Agents</div>
 </nav>
-<section class="page-hero">
+<section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/agents.webp') type('image/webp'), url('/assets/img/heroes/agents.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/agents.webp') type('image/webp'), url('/assets/img/heroes/agents.jpg') type('image/jpeg')); --hero-pos: center 18%;">
  <div class="container">
  <h1>Our Agents</h1>
  <p class="hero-sub">Meet the Your Realty Link team — a local boutique brokerage of 20+ experienced Central Indiana real estate experts, led by Broker-Owner Janet Giles.</p>

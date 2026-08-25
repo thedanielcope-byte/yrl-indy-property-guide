@@ -303,6 +303,13 @@ p  { margin-bottom: 1rem; }
 /* E-E-A-T reviewer/credential line under the hero */
 .hero-reviewed { margin-top: 14px; font-size: 12.5px; color: rgba(255,255,255,.72); letter-spacing: .01em; }
 .hero-reviewed a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+/* Full-bleed banner hero graphic — shows the graphic at 100% (no scrim) on desktop; light shade on mobile for text legibility */
+.page-hero.banner-raw { background-image: var(--hero-img); background-size: cover; background-position: var(--hero-pos, center); background-repeat: no-repeat; }
+.page-hero.banner-raw::before { content: none; }
+@media (max-width: 820px) {
+  .page-hero.banner-raw::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,16,24,.62) 0%, rgba(12,16,24,.40) 52%, rgba(12,16,24,.15) 100%); }
+  .page-hero.banner-raw .container { position: relative; z-index: 1; }
+}
 
 /* ── CONTENT LAYOUT ── */
 .content-wrap {
