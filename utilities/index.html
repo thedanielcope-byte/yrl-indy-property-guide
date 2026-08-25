@@ -44,6 +44,9 @@
 .util-city[open] > summary { border-bottom: 1px solid var(--border); background: var(--light); }
 .util-city .util-table-wrap { padding: 4px 16px 0; }
 .util-city .util-note { padding: 0 16px 12px; }
+.uc-tools { display: flex; flex-wrap: wrap; gap: 10px; margin: 1rem 0 1.3rem; }
+.uc-tools input, .uc-tools select { flex: 1; min-width: 220px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; font-size: 1rem; font-family: inherit; color: #13294a; background: #fff; }
+.uc-tools input:focus, .uc-tools select:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(192,57,38,.12); }
  @media (max-width: 640px) { .uo-grid { grid-template-columns: 1fr; } }
  </style>
 </head>
@@ -184,9 +187,78 @@
  </div>
 
  <h2 id="by-city">Utilities by City</h2>
- <p>Tap a city for its electric, gas, water/sewer, trash, and internet providers, with phone numbers and start-service links. Fields marked &ldquo;varies by address&rdquo; are where you should confirm the provider directly when you set up service.</p>
+ <p>Search or jump to your city for its electric, gas, water/sewer, trash, and internet providers, with phone numbers and start-service links. Fields marked &ldquo;varies by address&rdquo; are where you should confirm the provider directly when you set up service.</p>
+ <div class="uc-tools">
+ <input type="search" id="uCitySearch" placeholder="🔎 Search your city…" autocomplete="off" aria-label="Search for your city">
+ <select id="uCityJump" aria-label="Jump to a city A to Z">
+ <option value="">Jump to a city (A–Z)…</option>
+ <option value="uc-alexandria">Alexandria</option>
+ <option value="uc-anderson">Anderson</option>
+ <option value="uc-arcadia">Arcadia</option>
+ <option value="uc-atlanta">Atlanta</option>
+ <option value="uc-avon">Avon</option>
+ <option value="uc-bargersville">Bargersville</option>
+ <option value="uc-bean-blossom">Bean Blossom</option>
+ <option value="uc-beech-grove">Beech Grove</option>
+ <option value="uc-broad-ripple">Broad Ripple</option>
+ <option value="uc-brownsburg">Brownsburg</option>
+ <option value="uc-carmel">Carmel</option>
+ <option value="uc-cicero">Cicero</option>
+ <option value="uc-clayton">Clayton</option>
+ <option value="uc-cloverdale">Cloverdale</option>
+ <option value="uc-columbus">Columbus</option>
+ <option value="uc-crawfordsville">Crawfordsville</option>
+ <option value="uc-cumberland">Cumberland</option>
+ <option value="uc-danville">Danville</option>
+ <option value="uc-eagle-creek">Eagle Creek</option>
+ <option value="uc-edinburgh">Edinburgh</option>
+ <option value="uc-elwood">Elwood</option>
+ <option value="uc-fairland">Fairland</option>
+ <option value="uc-fishers">Fishers</option>
+ <option value="uc-fortville">Fortville</option>
+ <option value="uc-franklin">Franklin</option>
+ <option value="uc-geist">Geist</option>
+ <option value="uc-greencastle">Greencastle</option>
+ <option value="uc-greenfield">Greenfield</option>
+ <option value="uc-greensburg">Greensburg</option>
+ <option value="uc-greenwood">Greenwood</option>
+ <option value="uc-irvington">Irvington</option>
+ <option value="uc-jamestown">Jamestown</option>
+ <option value="uc-lapel">Lapel</option>
+ <option value="uc-lawrence">Lawrence</option>
+ <option value="uc-lebanon">Lebanon</option>
+ <option value="uc-martinsville">Martinsville</option>
+ <option value="uc-mccordsville">McCordsville</option>
+ <option value="uc-monrovia">Monrovia</option>
+ <option value="uc-mooresville">Mooresville</option>
+ <option value="uc-morristown">Morristown</option>
+ <option value="uc-nashville">Nashville</option>
+ <option value="uc-new-palestine">New Palestine</option>
+ <option value="uc-noblesville">Noblesville</option>
+ <option value="uc-north-vernon">North Vernon</option>
+ <option value="uc-pendleton">Pendleton</option>
+ <option value="uc-pittsboro">Pittsboro</option>
+ <option value="uc-plainfield">Plainfield</option>
+ <option value="uc-rockville">Rockville</option>
+ <option value="uc-seymour">Seymour</option>
+ <option value="uc-shelbyville">Shelbyville</option>
+ <option value="uc-sheridan">Sheridan</option>
+ <option value="uc-shirley">Shirley</option>
+ <option value="uc-southport">Southport</option>
+ <option value="uc-speedway">Speedway</option>
+ <option value="uc-thorntown">Thorntown</option>
+ <option value="uc-trafalgar">Trafalgar</option>
+ <option value="uc-waldron">Waldron</option>
+ <option value="uc-westfield">Westfield</option>
+ <option value="uc-westport">Westport</option>
+ <option value="uc-whiteland">Whiteland</option>
+ <option value="uc-whitestown">Whitestown</option>
+ <option value="uc-zionsville">Zionsville</option>
+ </select>
+ </div>
+ <p id="uNoMatch" class="util-note" style="display:none;">No city matches that search. Try a different spelling, or <a href="/contact/">contact us</a> and we will track it down.</p>
  <section class="uo-county"><h3>Bartholomew County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-columbus" data-city="Columbus">
 <summary>Columbus</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -202,7 +274,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Boone County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-jamestown" data-city="Jamestown">
 <summary>Jamestown</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -216,7 +288,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/boone-county/jamestown-indiana-real-estate/">Jamestown, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-lebanon" data-city="Lebanon">
 <summary>Lebanon</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -230,7 +302,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/boone-county/lebanon-indiana-real-estate/">Lebanon, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-thorntown" data-city="Thorntown">
 <summary>Thorntown</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -244,7 +316,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/boone-county/thorntown-indiana-real-estate/">Thorntown, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-whitestown" data-city="Whitestown">
 <summary>Whitestown</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -258,7 +330,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/boone-county/whitestown-indiana-real-estate/">Whitestown, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-zionsville" data-city="Zionsville">
 <summary>Zionsville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -274,7 +346,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Brown County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-bean-blossom" data-city="Bean Blossom">
 <summary>Bean Blossom</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -288,7 +360,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/brown-county/bean-blossom-indiana-real-estate/">Bean Blossom, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-nashville" data-city="Nashville">
 <summary>Nashville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -304,7 +376,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Decatur County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-greensburg" data-city="Greensburg">
 <summary>Greensburg</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -318,7 +390,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/decatur-county/greensburg-indiana-real-estate/">Greensburg, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-westport" data-city="Westport">
 <summary>Westport</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -334,7 +406,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Hamilton County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-arcadia" data-city="Arcadia">
 <summary>Arcadia</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -348,7 +420,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hamilton-county/arcadia-indiana-real-estate/">Arcadia, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-atlanta" data-city="Atlanta">
 <summary>Atlanta</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -362,7 +434,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hamilton-county/atlanta-indiana-real-estate/">Atlanta, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-carmel" data-city="Carmel">
 <summary>Carmel</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -376,7 +448,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-cicero" data-city="Cicero">
 <summary>Cicero</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -390,7 +462,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hamilton-county/cicero-indiana-real-estate/">Cicero, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-fishers" data-city="Fishers">
 <summary>Fishers</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -404,7 +476,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-noblesville" data-city="Noblesville">
 <summary>Noblesville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -418,7 +490,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hamilton-county/noblesville-indiana-real-estate/">Noblesville, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-sheridan" data-city="Sheridan">
 <summary>Sheridan</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -432,7 +504,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hamilton-county/sheridan-indiana-real-estate/">Sheridan, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-westfield" data-city="Westfield">
 <summary>Westfield</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -448,7 +520,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Hancock County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-cumberland" data-city="Cumberland">
 <summary>Cumberland</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -462,7 +534,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hancock-county/cumberland-indiana-real-estate/">Cumberland, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-fortville" data-city="Fortville">
 <summary>Fortville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -476,7 +548,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hancock-county/fortville-indiana-real-estate/">Fortville, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-greenfield" data-city="Greenfield">
 <summary>Greenfield</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -490,7 +562,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hancock-county/greenfield-indiana-real-estate/">Greenfield, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-mccordsville" data-city="McCordsville">
 <summary>McCordsville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -504,7 +576,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hancock-county/mccordsville-indiana-real-estate/">McCordsville, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-new-palestine" data-city="New Palestine">
 <summary>New Palestine</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -518,7 +590,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hancock-county/new-palestine-indiana-real-estate/">New Palestine, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-shirley" data-city="Shirley">
 <summary>Shirley</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -534,7 +606,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Hendricks County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-avon" data-city="Avon">
 <summary>Avon</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -548,7 +620,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-brownsburg" data-city="Brownsburg">
 <summary>Brownsburg</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -562,7 +634,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hendricks-county/brownsburg-indiana-real-estate/">Brownsburg, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-clayton" data-city="Clayton">
 <summary>Clayton</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -576,7 +648,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hendricks-county/clayton-indiana-real-estate/">Clayton, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-danville" data-city="Danville">
 <summary>Danville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -590,7 +662,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hendricks-county/danville-indiana-real-estate/">Danville, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-pittsboro" data-city="Pittsboro">
 <summary>Pittsboro</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -604,7 +676,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/hendricks-county/pittsboro-indiana-real-estate/">Pittsboro, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-plainfield" data-city="Plainfield">
 <summary>Plainfield</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -620,7 +692,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Jackson County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-seymour" data-city="Seymour">
 <summary>Seymour</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -636,7 +708,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Jennings County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-north-vernon" data-city="North Vernon">
 <summary>North Vernon</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -652,7 +724,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Johnson County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-bargersville" data-city="Bargersville">
 <summary>Bargersville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -666,7 +738,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/johnson-county/bargersville-indiana-real-estate/">Bargersville, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-edinburgh" data-city="Edinburgh">
 <summary>Edinburgh</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -680,7 +752,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/johnson-county/edinburgh-indiana-real-estate/">Edinburgh, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-franklin" data-city="Franklin">
 <summary>Franklin</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -694,7 +766,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/johnson-county/franklin-indiana-real-estate/">Franklin, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-greenwood" data-city="Greenwood">
 <summary>Greenwood</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -708,7 +780,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-trafalgar" data-city="Trafalgar">
 <summary>Trafalgar</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -722,7 +794,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/johnson-county/trafalgar-indiana-real-estate/">Trafalgar, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-whiteland" data-city="Whiteland">
 <summary>Whiteland</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -738,7 +810,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Madison County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-alexandria" data-city="Alexandria">
 <summary>Alexandria</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -752,7 +824,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/madison-county/alexandria-indiana-real-estate/">Alexandria, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-anderson" data-city="Anderson">
 <summary>Anderson</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -766,7 +838,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/madison-county/anderson-indiana-real-estate/">Anderson, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-elwood" data-city="Elwood">
 <summary>Elwood</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -780,7 +852,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/madison-county/elwood-indiana-real-estate/">Elwood, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-lapel" data-city="Lapel">
 <summary>Lapel</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -794,7 +866,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/madison-county/lapel-indiana-real-estate/">Lapel, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-pendleton" data-city="Pendleton">
 <summary>Pendleton</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -810,7 +882,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Marion County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-beech-grove" data-city="Beech Grove">
 <summary>Beech Grove</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -824,7 +896,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/marion-county/beech-grove-indiana-real-estate/">Beech Grove, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-broad-ripple" data-city="Broad Ripple">
 <summary>Broad Ripple</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -838,7 +910,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/marion-county/broad-ripple-indianapolis-real-estate/">Broad Ripple, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-eagle-creek" data-city="Eagle Creek">
 <summary>Eagle Creek</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -852,7 +924,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/marion-county/eagle-creek-indianapolis-real-estate/">Eagle Creek, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-geist" data-city="Geist">
 <summary>Geist</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -866,7 +938,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/marion-county/geist-indiana-real-estate/">Geist, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-irvington" data-city="Irvington">
 <summary>Irvington</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -880,7 +952,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/marion-county/irvington-indianapolis-real-estate/">Irvington, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-lawrence" data-city="Lawrence">
 <summary>Lawrence</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -894,7 +966,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/marion-county/lawrence-indiana-real-estate/">Lawrence, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-southport" data-city="Southport">
 <summary>Southport</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -908,7 +980,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/marion-county/southport-indiana-real-estate/">Southport, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-speedway" data-city="Speedway">
 <summary>Speedway</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -924,7 +996,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Montgomery County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-crawfordsville" data-city="Crawfordsville">
 <summary>Crawfordsville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -940,7 +1012,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Morgan County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-martinsville" data-city="Martinsville">
 <summary>Martinsville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -954,7 +1026,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/morgan-county/martinsville-indiana-real-estate/">Martinsville, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-monrovia" data-city="Monrovia">
 <summary>Monrovia</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -968,7 +1040,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/morgan-county/monrovia-indiana-real-estate/">Monrovia, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-mooresville" data-city="Mooresville">
 <summary>Mooresville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -984,7 +1056,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Parke County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-rockville" data-city="Rockville">
 <summary>Rockville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -1000,7 +1072,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Putnam County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-cloverdale" data-city="Cloverdale">
 <summary>Cloverdale</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -1014,7 +1086,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/putnam-county/cloverdale-indiana-real-estate/">Cloverdale, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-greencastle" data-city="Greencastle">
 <summary>Greencastle</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -1030,7 +1102,7 @@
 </details>
 </section>
 <section class="uo-county"><h3>Shelby County</h3>
-<details class="util-city">
+<details class="util-city" id="uc-fairland" data-city="Fairland">
 <summary>Fairland</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -1044,7 +1116,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/shelby-county/fairland-indiana-real-estate/">Fairland, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-morristown" data-city="Morristown">
 <summary>Morristown</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -1058,7 +1130,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/shelby-county/morristown-indiana-real-estate/">Morristown, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-shelbyville" data-city="Shelbyville">
 <summary>Shelbyville</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -1072,7 +1144,7 @@
 </tbody></table></div>
 <p class="util-note"><a href="/cities/shelby-county/shelbyville-indiana-real-estate/">Shelbyville, Indiana real estate &#8594;</a></p>
 </details>
-<details class="util-city">
+<details class="util-city" id="uc-waldron" data-city="Waldron">
 <summary>Waldron</summary>
 <div class="util-table-wrap">
 <table class="util-table">
@@ -1087,6 +1159,36 @@
 <p class="util-note"><a href="/cities/shelby-county/waldron-indiana-real-estate/">Waldron, Indiana real estate &#8594;</a></p>
 </details>
 </section>
+ <script>
+ (function(){
+  var q=document.getElementById('uCitySearch'),
+      jump=document.getElementById('uCityJump'),
+      noMatch=document.getElementById('uNoMatch'),
+      cities=[].slice.call(document.querySelectorAll('details.util-city')),
+      counties=[].slice.call(document.querySelectorAll('.uo-county'));
+  function norm(s){return (s||'').toLowerCase().trim();}
+  function filter(){
+   var v=norm(q.value), any=false;
+   cities.forEach(function(d){
+    var show=!v || norm(d.getAttribute('data-city')).indexOf(v)>-1;
+    d.style.display=show?'':'none'; if(show) any=true;
+   });
+   counties.forEach(function(sec){
+    var vis=[].slice.call(sec.querySelectorAll('details.util-city')).some(function(d){return d.style.display!=='none';});
+    sec.style.display=vis?'':'none';
+   });
+   noMatch.style.display=any?'none':'';
+  }
+  q.addEventListener('input',filter);
+  jump.addEventListener('change',function(){
+   var id=jump.value; if(!id) return;
+   q.value=''; filter();
+   var el=document.getElementById(id);
+   if(el){ el.open=true; el.scrollIntoView({behavior:'smooth',block:'start'}); }
+   jump.selectedIndex=0;
+  });
+ })();
+ </script>
 
  <p style="font-size:.85rem;color:#6e6e70;margin-top:1.4rem;">Your Realty Link provides this guide as a convenience for Central Indiana buyers and sellers. Providers, phone numbers, and service areas change over time &mdash; always confirm with the utility when you start service. We are a real estate brokerage and are not affiliated with the utilities listed.</p>
  </div>

@@ -202,15 +202,22 @@ for cslug in sorted(by_county, key=lambda s: county_pretty(s)):
     cards = []
     for rec, d in cities:
         rel = "/cities/%s/%s/" % (cslug, os.path.basename(d))
+        cid = "uc-" + rec["city"].strip().lower().replace(" ", "-").replace("/", "-")
         cards.append(
-          '<details class="util-city">\n'
+          '<details class="util-city" id="%s" data-city="%s">\n'
           '<summary>%s</summary>\n%s\n'
           '<p class="util-note"><a href="%s">%s, Indiana real estate &#8594;</a></p>\n'
-          '</details>' % (esc(rec["city"]), util_table(rec), rel, esc(rec["city"])))
+          '</details>' % (cid, esc(rec["city"]), esc(rec["city"]), util_table(rec), rel, esc(rec["city"])))
     dir_sections.append(
       '<section class="uo-county"><h3>%s</h3>\n%s\n</section>'
       % (county_pretty(cslug), "\n".join(cards)))
 directory_html = "\n".join(dir_sections)
+
+# alphabetical jump dropdown (all cities, flat)
+jump_options = "\n ".join(
+  '<option value="uc-%s">%s</option>'
+  % (r["city"].strip().lower().replace(" ", "-").replace("/", "-"), esc(r["city"]))
+  for r in sorted(DATA, key=lambda x: x["city"]))
 
 DESC = ("Who to call to set up electric, gas, water, sewer, trash, and internet when you move "
         "in Central Indiana — provider phone numbers, start-service links, and a city-by-city guide.")
@@ -258,6 +265,9 @@ page = f'''<!DOCTYPE html>
 .util-city[open] > summary {{ border-bottom: 1px solid var(--border); background: var(--light); }}
 .util-city .util-table-wrap {{ padding: 4px 16px 0; }}
 .util-city .util-note {{ padding: 0 16px 12px; }}
+.uc-tools {{ display: flex; flex-wrap: wrap; gap: 10px; margin: 1rem 0 1.3rem; }}
+.uc-tools input, .uc-tools select {{ flex: 1; min-width: 220px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; font-size: 1rem; font-family: inherit; color: #13294a; background: #fff; }}
+.uc-tools input:focus, .uc-tools select:focus {{ outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(192,57,38,.12); }}
  @media (max-width: 640px) {{ .uo-grid {{ grid-template-columns: 1fr; }} }}
  </style>
 </head>
@@ -309,8 +319,46 @@ page = f'''<!DOCTYPE html>
  </div>
 
  <h2 id="by-city">Utilities by City</h2>
- <p>Tap a city for its electric, gas, water/sewer, trash, and internet providers, with phone numbers and start-service links. Fields marked &ldquo;varies by address&rdquo; are where you should confirm the provider directly when you set up service.</p>
+ <p>Search or jump to your city for its electric, gas, water/sewer, trash, and internet providers, with phone numbers and start-service links. Fields marked &ldquo;varies by address&rdquo; are where you should confirm the provider directly when you set up service.</p>
+ <div class="uc-tools">
+ <input type="search" id="uCitySearch" placeholder="🔎 Search your city…" autocomplete="off" aria-label="Search for your city">
+ <select id="uCityJump" aria-label="Jump to a city A to Z">
+ <option value="">Jump to a city (A–Z)…</option>
+ {jump_options}
+ </select>
+ </div>
+ <p id="uNoMatch" class="util-note" style="display:none;">No city matches that search. Try a different spelling, or <a href="/contact/">contact us</a> and we will track it down.</p>
  {directory_html}
+ <script>
+ (function(){{
+  var q=document.getElementById('uCitySearch'),
+      jump=document.getElementById('uCityJump'),
+      noMatch=document.getElementById('uNoMatch'),
+      cities=[].slice.call(document.querySelectorAll('details.util-city')),
+      counties=[].slice.call(document.querySelectorAll('.uo-county'));
+  function norm(s){{return (s||'').toLowerCase().trim();}}
+  function filter(){{
+   var v=norm(q.value), any=false;
+   cities.forEach(function(d){{
+    var show=!v || norm(d.getAttribute('data-city')).indexOf(v)>-1;
+    d.style.display=show?'':'none'; if(show) any=true;
+   }});
+   counties.forEach(function(sec){{
+    var vis=[].slice.call(sec.querySelectorAll('details.util-city')).some(function(d){{return d.style.display!=='none';}});
+    sec.style.display=vis?'':'none';
+   }});
+   noMatch.style.display=any?'none':'';
+  }}
+  q.addEventListener('input',filter);
+  jump.addEventListener('change',function(){{
+   var id=jump.value; if(!id) return;
+   q.value=''; filter();
+   var el=document.getElementById(id);
+   if(el){{ el.open=true; el.scrollIntoView({{behavior:'smooth',block:'start'}}); }}
+   jump.selectedIndex=0;
+  }});
+ }})();
+ </script>
 
  <p style="font-size:.85rem;color:#6e6e70;margin-top:1.4rem;">Your Realty Link provides this guide as a convenience for Central Indiana buyers and sellers. Providers, phone numbers, and service areas change over time &mdash; always confirm with the utility when you start service. We are a real estate brokerage and are not affiliated with the utilities listed.</p>
  </div>
