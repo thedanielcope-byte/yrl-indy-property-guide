@@ -112,12 +112,51 @@
 </div></section>
 <div class="container" style="padding:30px 0 0;">
  <h2 style="font-family:'Playfair Display',Georgia,serif;margin:0 0 6px;">This Month&rsquo;s Snapshot</h2>
- <p style="max-width:70ch;color:var(--gray,#6e6e70);margin:0 0 16px;">The Central Indiana single-family market at a glance, from the latest MIBOR figures. Scroll down for the full written report &mdash; and see your own county&rsquo;s snapshot on its <a href="/counties/marion-county-indiana-real-estate/">county page</a>.</p>
+ <p style="max-width:70ch;color:var(--gray,#6e6e70);margin:0 0 14px;">The single-family market at a glance, from the latest MIBOR figures. Pick a county to see its numbers, or scroll down for the full written report.</p>
+ <div style="margin:0 0 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+  <label for="countySel" style="font-weight:600;">See a county:</label>
+  <select id="countySel" style="padding:9px 13px;border:1px solid #d9cfc6;border-radius:9px;font:inherit;background:#fff;min-width:260px;cursor:pointer;">
+    <option value="central-indiana">Central Indiana — 17-county overall</option>
+    <option value="marion-county">Marion County (Indianapolis)</option>
+    <option value="hamilton-county">Hamilton County</option>
+    <option value="hendricks-county">Hendricks County</option>
+    <option value="johnson-county">Johnson County</option>
+    <option value="boone-county">Boone County</option>
+    <option value="hancock-county">Hancock County</option>
+    <option value="madison-county">Madison County</option>
+    <option value="morgan-county">Morgan County</option>
+    <option value="shelby-county">Shelby County</option>
+    <option value="bartholomew-county">Bartholomew County</option>
+    <option value="brown-county">Brown County</option>
+    <option value="decatur-county">Decatur County</option>
+    <option value="jackson-county">Jackson County</option>
+    <option value="jennings-county">Jennings County</option>
+    <option value="montgomery-county">Montgomery County</option>
+    <option value="parke-county">Parke County</option>
+    <option value="putnam-county">Putnam County</option>
+  </select>
+ </div>
  <figure style="margin:0;max-width:900px;">
-  <img src="/assets/img/market-reports/latest/central-indiana-banner.png" alt="Central Indiana real estate market snapshot — median price, closed sales, days on market, and months of supply" loading="lazy" style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 26px rgba(0,0,0,.10);">
-  <figcaption style="font-size:13px;color:var(--gray,#6e6e70);margin-top:9px;">Single-family homes, 17-county MIBOR region &middot; Source: MIBOR REALTOR&reg; Association.</figcaption>
+  <a id="snapLink" href="/blog/indianapolis-market-update-august-2026/" aria-label="Open the full market report">
+   <img id="snapImg" src="/assets/img/market-reports/latest/central-indiana-banner.png" alt="Central Indiana real estate market snapshot — median price, closed sales, days on market, and months of supply" loading="lazy" style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 26px rgba(0,0,0,.10);display:block;">
+  </a>
+  <figcaption style="font-size:13px;color:var(--gray,#6e6e70);margin-top:9px;">Single-family homes &middot; Source: MIBOR REALTOR&reg; Association. <a id="snapMore" href="/blog/indianapolis-market-update-august-2026/">Open the full report &rarr;</a></figcaption>
  </figure>
 </div>
+<script>
+(function(){
+ var sel=document.getElementById('countySel'),img=document.getElementById('snapImg'),link=document.getElementById('snapLink'),more=document.getElementById('snapMore');
+ var PAGES={'central-indiana':'/blog/indianapolis-market-update-august-2026/'};
+ ['marion','hamilton','johnson','hendricks','hancock','boone','madison','shelby','morgan','montgomery','decatur','brown','putnam','parke','bartholomew','jackson','jennings'].forEach(function(c){PAGES[c+'-county']='/counties/'+c+'-county-indiana-real-estate/';});
+ sel.addEventListener('change',function(){
+  var v=this.value,label=this.options[this.selectedIndex].text,dest=PAGES[v]||'/market-updates/';
+  img.src='/assets/img/market-reports/latest/'+v+'-banner.png';
+  img.alt=label+' real estate market snapshot';
+  link.href=dest;more.href=dest;
+  more.textContent=(v==='central-indiana')?'Open the full report →':'See the '+label+' page →';
+ });
+})();
+</script>
 
 <div class="container" style="padding:32px 0 8px;">
  <p style="max-width:70ch;color:var(--gray,#6e6e70);">Want the exact numbers for your home or neighborhood? A market average never tells your street&rsquo;s story &mdash; <a href="/services/free-home-valuation/">get a free, no-obligation home valuation</a> built on real, recent local sales.</p>
