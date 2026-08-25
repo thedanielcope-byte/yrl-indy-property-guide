@@ -311,6 +311,17 @@ p  { margin-bottom: 1rem; }
   .page-hero.banner-raw .container { position: relative; z-index: 1; }
 }
 
+/* ── UTILITIES TABLE (city blocks + /utilities/ guide) ── */
+.util-table-wrap { overflow-x: auto; margin: 1rem 0; -webkit-overflow-scrolling: touch; }
+.util-table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 480px; }
+.util-table th, .util-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.util-table thead th { background: var(--light); font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--mid); font-weight: 700; }
+.util-table td:first-child { white-space: nowrap; font-weight: 700; color: #13294a; }
+.util-table tbody tr:last-child td { border-bottom: none; }
+.util-table a { color: var(--red); font-weight: 600; }
+.util-table em { color: #6e6e70; font-weight: 400; font-style: italic; }
+.util-note { font-size: .82rem; color: #6e6e70; margin: .4rem 0 0; }
+
 /* ── CONTENT LAYOUT ── */
 .content-wrap {
   display: grid;

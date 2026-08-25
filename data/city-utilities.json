@@ -1,0 +1,2041 @@
+[
+ {
+  "city": "Columbus",
+  "county": "Bartholomew",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/customer-service/start-service"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (Indiana North, formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service/start-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Columbus City Utilities",
+   "phone": "812-372-8861",
+   "url": "https://www.columbusutilities.org/service/start-service/"
+  },
+  "trash": {
+   "name": "City of Columbus Dept. of Public Works – Sanitation (municipal curbside; Rumpke is available as a private hauler in unincorporated areas)",
+   "phone": "812-376-2509",
+   "url": "https://www.columbus.in.gov/public-works/new-service/"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "AT&T (Fiber & DSL)",
+   "Smithville Fiber"
+  ],
+  "gaps": [],
+  "sources": [
+   "https://www.duke-energy.com/customer-service",
+   "https://www.columbusutilities.org/service/start-service/",
+   "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service/start-service?sa=in",
+   "https://www.columbus.in.gov/public-works/new-service/",
+   "https://www.rumpke.com/about-us/service-areas/in/bartholomew-county/columbus/trash-pickup",
+   "https://broadbandnow.com/Indiana/Columbus",
+   "https://www.xfinity.com/local/in/columbus"
+  ]
+ },
+ {
+  "city": "Jamestown",
+  "county": "Boone",
+  "electric": {
+   "name": "Jamestown Municipal Electric Utility (Indiana Municipal Power Agency member)",
+   "phone": "765-676-6331",
+   "url": "https://www.in.gov/towns/jamestown/municipal-utilities/electric-utility/"
+  },
+  "gas": {
+   "name": "No natural-gas utility in town - homes rely on propane (e.g., Keystone Cooperative, located in Jamestown)",
+   "phone": "765-676-5924",
+   "url": "https://www.keystonecoop.com/products-services/propane"
+  },
+  "water_sewer": {
+   "name": "Jamestown Municipal Utilities (municipal water & sewer)",
+   "phone": "765-676-6331",
+   "url": "https://www.in.gov/towns/jamestown/municipal-utilities/"
+  },
+  "trash": {
+   "name": "Town of Jamestown / Jamestown Municipal Utilities (trash billed with municipal utility bill)",
+   "phone": "765-676-6331",
+   "url": "https://www.in.gov/towns/jamestown/municipal-utilities/"
+  },
+  "internet": [
+   "AT&T",
+   "Xfinity (Comcast)",
+   "Endeavor Communications"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Lebanon",
+  "county": "Boone",
+  "electric": {
+   "name": "Lebanon Utilities (municipal electric); Boone REMC serves some outlying/annexed areas (800-897-7362)",
+   "phone": "765-482-5100",
+   "url": "https://lebanon-utilities.com/"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren) - Lebanon Utilities does NOT provide gas",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Lebanon Utilities (municipal water & sewer)",
+   "phone": "765-482-5100",
+   "url": "https://lebanon-utilities.com/"
+  },
+  "trash": {
+   "name": "City of Lebanon contracted trash & recycling - set up and billed through Lebanon Utilities (hauler transitioned from Ray's Trash to WM)",
+   "phone": "765-482-5100",
+   "url": "https://lebanon.in.gov/wastemanagementinfo/"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "Metronet",
+   "AT&T",
+   "Lebanon Utilities iLine (municipal fiber)"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Thorntown",
+  "county": "Boone",
+  "electric": {
+   "name": "Thorntown Utilities (municipal electric, Indiana Municipal Power Agency member)",
+   "phone": "765-436-2627",
+   "url": "https://townofthorntown.com/utilities"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Thorntown Utilities (municipal water & sewer)",
+   "phone": "765-436-2627",
+   "url": "https://townofthorntown.com/utilities"
+  },
+  "trash": {
+   "name": "Smith Trash Service - residents must arrange their own private hauler; town runs a recycling center on Front St",
+   "phone": "765-436-2399",
+   "url": "https://townofthorntown.com/sanitation-and-recycling"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "Metronet",
+   "Frontier"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Whitestown",
+  "county": "Boone",
+  "electric": {
+   "name": "Boone REMC (serves majority of town), 800-897-7362; Duke Energy Indiana in some areas, 800-521-2232 (address-dependent)",
+   "phone": "800-897-7362",
+   "url": "https://bremc.com/"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Whitestown Municipal Utilities (water & sewer; water purchased from Citizens Energy Group)",
+   "phone": "317-733-8584",
+   "url": "https://whitestown.in.gov/government/departments/municipal-utilities"
+  },
+  "trash": {
+   "name": "Republic Services (hauler listed by the Town for residents; 24/7 recycling drop-off at Municipal Complex)",
+   "phone": "317-917-7300",
+   "url": "https://www.republicservices.com/locations/indiana/whitestown-trash-pickup-and-recycling"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "AT&T",
+   "Metronet",
+   "TDS"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Zionsville",
+  "county": "Boone",
+  "electric": {
+   "name": "Duke Energy Indiana (east of Ford Rd), 800-521-2232; Boone REMC (west of Ford Rd), 800-897-7362",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Water: Citizens Water; Sewer: Town of Zionsville Wastewater (some areas TriCo Regional Sewer east of US-421, or Whitestown Utilities in far west)",
+   "phone": "317-924-3311",
+   "url": "https://www.zionsville-in.gov/691/Trash-and-Utilities"
+  },
+  "trash": {
+   "name": "Priority Waste (town-contracted curbside trash & recycling)",
+   "phone": "855-927-8365",
+   "url": "https://www.prioritywaste.com/municipality/zionsville-in/"
+  },
+  "internet": [
+   "AT&T",
+   "Metronet",
+   "Spectrum (Charter)",
+   "TDS"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Bean Blossom",
+  "county": "Brown",
+  "electric": {
+   "name": "Duke Energy Indiana and/or South Central Indiana REMC (service varies by address in this unincorporated area)",
+   "phone": "800-521-2232 (Duke) / 765-342-3344 (SCI REMC)",
+   "url": "https://www.duke-energy.com/customer-service/start-service"
+  },
+  "gas": {
+   "name": "Indiana Natural Gas Corporation (serves parts of Brown County; availability varies — many rural properties use propane)",
+   "phone": "812-988-2512",
+   "url": "https://www.indiananatural.com"
+  },
+  "water_sewer": {
+   "name": "Brown County Water Utility, Inc. (rural water; HQ located in Bean Blossom. Sewer is typically private septic in this area)",
+   "phone": "812-988-6611",
+   "url": "https://browncountywater.com/"
+  },
+  "trash": {
+   "name": "Private subscription haulers — Rumpke; Spicer's Refuse Service (no municipal pickup; drop-off available at Brown County Recycling Center)",
+   "phone": "800-828-8171",
+   "url": "https://www.rumpke.com/about-us/service-areas/in/brown-county"
+  },
+  "internet": [
+   "Mainstream Fiber Networks – fiber",
+   "South Central Indiana REMC (SCI-Fi) – fiber",
+   "Smithville Fiber",
+   "Satellite (Starlink/Viasat) where wired is unavailable"
+  ],
+  "gaps": [
+   "electric_provider_varies_by_address",
+   "gas_availability_not_confirmed_at_address_level_propane_common",
+   "sewer_typically_private_septic",
+   "trash_is_private_subscription"
+  ],
+  "sources": [
+   "https://browncountywater.com/",
+   "https://www.townofnashville.org/links-to-other-utilities",
+   "https://www.indiananatural.com/service-territory",
+   "https://www.rumpke.com/about-us/service-areas/in/brown-county",
+   "https://broadbandnow.com/Indiana/Nashville",
+   "https://en.wikipedia.org/wiki/Beanblossom,_Indiana"
+  ]
+ },
+ {
+  "city": "Nashville",
+  "county": "Brown",
+  "electric": {
+   "name": "Duke Energy Indiana (primary in town; South Central Indiana REMC serves some outlying areas — 765-342-3344)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/customer-service/start-service"
+  },
+  "gas": {
+   "name": "Indiana Natural Gas Corporation (HQ in Nashville; serves the town)",
+   "phone": "812-988-2512",
+   "url": "https://www.indiananatural.com"
+  },
+  "water_sewer": {
+   "name": "Nashville Municipal Utilities (Town of Nashville)",
+   "phone": "812-988-5526",
+   "url": "https://www.townofnashville.org/administration-and-utilities"
+  },
+  "trash": {
+   "name": "Private subscription haulers — Rumpke; Spicer's Refuse Service (no municipal pickup)",
+   "phone": "800-828-8171",
+   "url": "https://www.rumpke.com/about-us/service-areas/in/brown-county"
+  },
+  "internet": [
+   "Sparklight (Cable One) – cable",
+   "South Central Indiana REMC (SCI-Fi) – fiber",
+   "Mainstream Fiber Networks – fiber",
+   "Smithville Fiber"
+  ],
+  "gaps": [
+   "trash_is_private_subscription"
+  ],
+  "sources": [
+   "https://www.townofnashville.org/links-to-other-utilities",
+   "https://www.indiananatural.com/service-territory",
+   "https://www.townofnashville.org/administration-and-utilities",
+   "https://www.rumpke.com/about-us/service-areas/in/brown-county",
+   "https://broadbandnow.com/Indiana/Nashville",
+   "https://www.sciremc.com/about-us/contact-us/"
+  ]
+ },
+ {
+  "city": "Greensburg",
+  "county": "Decatur",
+  "electric": {
+   "name": "Duke Energy Indiana (serves the city of Greensburg; Decatur County REMC serves surrounding rural areas)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/customer-service"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (Indiana North / formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential"
+  },
+  "water_sewer": {
+   "name": "City of Greensburg Water & Utilities Office (water, sewer, stormwater)",
+   "phone": "812-663-5621",
+   "url": "https://www.cityofgreensburg.com/city-services/utilities/"
+  },
+  "trash": {
+   "name": "City of Greensburg Street Department (municipal trash/recycling, billed with water account; recycling via Decatur County Solid Waste)",
+   "phone": "812-663-3344",
+   "url": "https://www.cityofgreensburg.com/city-services/street-department/trash-and-brush-routes/"
+  },
+  "internet": [
+   "Xfinity (Comcast) cable",
+   "ETC / Enhanced Telecommunications fiber",
+   "Frontier (DSL/fiber)"
+  ],
+  "gaps": [],
+  "sources": [
+   "https://www.greensburgchamber.com/list/member/centerpoint-energy-formerly-vectren-190",
+   "https://www.cityofgreensburg.com/city-services/utilities/",
+   "https://www.cityofgreensburg.com/city-services/street-department/trash-and-brush-routes/",
+   "https://findenergy.com/in/decatur-county-electricity/",
+   "https://broadbandnow.com/Indiana/Greensburg"
+  ]
+ },
+ {
+  "city": "Westport",
+  "county": "Decatur",
+  "electric": {
+   "name": "Decatur County REMC (primary for the Westport area; Duke Energy also serves parts of Decatur County — verify by exact address)",
+   "phone": "812-663-3391",
+   "url": "https://www.dcremc.com/our_services/establish-new-service/"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Westport Water & Sewer Office",
+   "phone": "812-591-3500",
+   "url": "https://townofwestportindiana.com/water-office/"
+  },
+  "trash": {
+   "name": "Rumpke (private hauler serving Decatur County/Westport)",
+   "phone": "800-678-6753",
+   "url": "https://www.rumpke.com/about-us/service-areas/in/decatur-county"
+  },
+  "internet": [
+   "Frontier (DSL/fiber)",
+   "Xfinity (Comcast) cable — partial coverage",
+   "Viasat/HughesNet satellite"
+  ],
+  "gaps": [
+   "gas (could not confirm a natural-gas main serving the town of Westport; small town likely on propane — verify with CenterPoint address lookup)"
+  ],
+  "sources": [
+   "https://www.dcremc.com/",
+   "https://townofwestportindiana.com/water-office/",
+   "https://www.rumpke.com/about-us/service-areas/in/decatur-county",
+   "https://findenergy.com/providers/decatur-county-remc/",
+   "https://broadbandnow.com/Indiana/Westport"
+  ]
+ },
+ {
+  "city": "Arcadia",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://move.centerpointenergy.com/"
+  },
+  "water_sewer": {
+   "name": "Town of Arcadia (Arcadia Utilities)",
+   "phone": "317-984-3512",
+   "url": "https://www.arcadiaindiana.org/home/street-dept-utilities"
+  },
+  "trash": {
+   "name": "Arcadia Utilities (town-billed with water/sewer; private hauler name not published)",
+   "phone": "317-984-3512",
+   "url": "https://www.arcadiaindiana.org/home/calendars-towntrash"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Atlanta",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Atlanta",
+   "phone": "765-292-2626",
+   "url": "https://atlantaindiana.com/?p=601"
+  },
+  "trash": {
+   "name": "Republic Services (contracted by Town of Atlanta)",
+   "phone": "765-292-2626",
+   "url": "https://atlantaindiana.com/"
+  },
+  "internet": [
+   "Endeavor Communications",
+   "Xfinity"
+  ],
+  "gaps": [
+   "gas"
+  ]
+ },
+ {
+  "city": "Carmel",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/my-account/start-service?type=home"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "City of Carmel Utilities (Carmel Utilities) — water & sewer",
+   "phone": "317-571-2442",
+   "url": "https://carmelutilities.com/request-for-new-service/"
+  },
+  "trash": {
+   "name": "Republic Services (contracted by City of Carmel; billed via Carmel Utilities)",
+   "phone": "317-917-7300",
+   "url": "https://www.republicservices.com/locations/indiana/carmel-trash-pickup-and-recycling"
+  },
+  "internet": [
+   "Spectrum",
+   "AT&T Fiber",
+   "Metronet"
+  ],
+  "gaps": [
+   "water_sewer: primary is City of Carmel Utilities, but some outlying/annexed Carmel addresses are served by Citizens Water — verify by exact address"
+  ]
+ },
+ {
+  "city": "Cicero",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://move.centerpointenergy.com/"
+  },
+  "water_sewer": {
+   "name": "Town of Cicero Utilities & Billing Office",
+   "phone": "317-984-4900",
+   "url": "https://www.ciceroin.org/departments/utilities-and-billing-office/"
+  },
+  "trash": {
+   "name": "Republic Services (contracted by Town of Cicero)",
+   "phone": "317-984-4900",
+   "url": "https://www.ciceroin.org/departments/utilities-and-billing-office/"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T",
+   "Metronet"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Fishers",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/my-account/start-service?type=home"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "City of Fishers Utilities (sewer & trash billing); water provided separately by Citizens Water (primary) or Indiana American Water depending on area",
+   "phone": "317-595-3140",
+   "url": "https://fishersin.gov/services-resources/city-services/fishers-utilities/sewer-utility/"
+  },
+  "trash": {
+   "name": "Republic Services (citywide City of Fishers contract; billed by City of Fishers Utilities)",
+   "phone": "317-595-3140",
+   "url": "https://fishersin.gov/services-resources/resident-resources/citywide-waste-removal-study/"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Metronet"
+  ],
+  "gaps": [
+   "water_sewer: water is split by area — Citizens Water (317-924-3311, primary) vs Indiana American Water (800-492-8373); sewer/trash are the City of Fishers. New movers set up water and sewer with different entities."
+  ]
+ },
+ {
+  "city": "Noblesville",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/my-account/start-service?type=home"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "City of Noblesville Utilities (sewer & trash billing); drinking water provided separately by Indiana American Water — Noblesville",
+   "phone": "317-776-6353",
+   "url": "https://www.noblesville.in.gov/408/Begin-New-Service-Request---Noblesville-"
+  },
+  "trash": {
+   "name": "Republic Services (billed through City of Noblesville Utilities)",
+   "phone": "317-567-6400",
+   "url": "https://www.noblesville.in.gov/408/Begin-New-Service-Request---Noblesville-"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Metronet"
+  ],
+  "gaps": [
+   "water_sewer: split entities — water is Indiana American Water (800-492-8373, https://amwater.com/inaw/customer-service-billing/For-New-Customers); sewer & trash are City of Noblesville Utilities"
+  ]
+ },
+ {
+  "city": "Sheridan",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://move.centerpointenergy.com/"
+  },
+  "water_sewer": {
+   "name": "Town of Sheridan (Municipal Water & Sewer)",
+   "phone": null,
+   "url": "https://sheridan.in.gov/public-works/"
+  },
+  "trash": {
+   "name": "Town of Sheridan Public Works",
+   "phone": null,
+   "url": "https://sheridan.in.gov/public-works/"
+  },
+  "internet": [
+   "AT&T",
+   "Xfinity",
+   "Metronet"
+  ],
+  "gaps": [
+   "water_sewer.phone",
+   "trash.phone"
+  ]
+ },
+ {
+  "city": "Westfield",
+  "county": "Hamilton",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/my-account/start-service?type=home"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Citizens Water / Citizens Energy Group (serves Westfield water & sewer)",
+   "phone": "317-924-3311",
+   "url": "https://citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "trash": {
+   "name": "Waste Management (WM) — City of Westfield contract; service/billing via MyWM",
+   "phone": "317-804-3150",
+   "url": null
+  },
+  "internet": [
+   "Xfinity",
+   "Spectrum",
+   "AT&T Fiber",
+   "Metronet"
+  ],
+  "gaps": [
+   "trash.url: no confirmed WM/MyWM Westfield-specific start-service page; phone shown is City of Westfield's line (317-804-3150) — WM took over trash billing (MyWM) effective April 1"
+  ]
+ },
+ {
+  "city": "Cumberland",
+  "county": "Hancock",
+  "electric": {
+   "name": "AES Indiana (serves the Marion County side of Cumberland; NineStar Connect serves the Hancock County side — verify by address)",
+   "phone": "317-261-8222",
+   "url": "https://www.aesindiana.com/"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Water: NineStar Connect (former Gem Water Utility, 317-326-3131). Sewer & stormwater: Town of Cumberland Utility Billing",
+   "phone": "317-894-6213",
+   "url": "https://www.town.cumberland.in.us/government/departments/utilities.php"
+  },
+  "trash": {
+   "name": "Resident subscription / private hauler (town does not provide trash) — Waste Management, Republic Services (317-462-3425), or Fisk Waste Removal (317-462-6626); Marion County residents use Indianapolis DPW (317-327-4000)",
+   "phone": "855-852-7110",
+   "url": "https://www.town.cumberland.in.us/residents/service.php"
+  },
+  "internet": [
+   "NineStar Connect (fiber)",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Fortville",
+  "county": "Hancock",
+  "electric": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "gas": {
+   "name": "CenterPoint Energy (Indiana North / former Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential"
+  },
+  "water_sewer": {
+   "name": "Town of Fortville — Water & Sewer (Dept. of Public Works)",
+   "phone": "317-485-4044",
+   "url": "https://www.fortville.in.gov/utilities-information/"
+  },
+  "trash": {
+   "name": "Town of Fortville (Public Works) curbside; Waste Management (WM) handles collection and bulk pickup",
+   "phone": "317-485-4044",
+   "url": "https://www.fortville.in.gov/recycle-trash/"
+  },
+  "internet": [
+   "NineStar Connect (fiber)",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": [
+   "electric"
+  ]
+ },
+ {
+  "city": "Greenfield",
+  "county": "Hancock",
+  "electric": {
+   "name": "Greenfield Power & Light (municipal, within city limits; Duke Energy or NineStar Connect serve some outlying/annexed areas)",
+   "phone": "317-477-4370",
+   "url": "https://www.greenfield.in.gov/power-and-light"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (Indiana North / former Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential"
+  },
+  "water_sewer": {
+   "name": "City of Greenfield — Water & Wastewater (Utility Billing 317-477-4330; Water 317-477-4350; Sewer 317-477-4360)",
+   "phone": "317-477-4330",
+   "url": "https://greenfield.in.gov/utilities/starting-utility-service"
+  },
+  "trash": {
+   "name": "Resident subscription — no single citywide contract as of 2026; residents choose a hauler (Republic Services, Waste Management, Best Way Disposal, or Fisk Waste Removal)",
+   "phone": "317-462-3425",
+   "url": "https://www.republicservices.com/locations/indiana/greenfield-trash-pickup-and-recycling"
+  },
+  "internet": [
+   "NineStar Connect (fiber)",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "McCordsville",
+  "county": "Hancock",
+  "electric": {
+   "name": "NineStar Connect (electric cooperative; verify by address — AES Indiana/Duke may serve some newer western areas)",
+   "phone": "317-326-3131",
+   "url": "https://www.ninestarconnect.com/electric/"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Water: Citizens Energy Group (317-924-3311). Sewer: Town of McCordsville (and Aqua Indiana in parts) — billed via Town Utility Dept",
+   "phone": "317-335-5118",
+   "url": "https://www.mccordsville.in.gov/departments/utility/index.php"
+  },
+  "trash": {
+   "name": "Town of McCordsville — contracted curbside trash & recycling (billed by Town Utility Dept, ~$18.48/mo)",
+   "phone": "317-335-5118",
+   "url": "https://mccordsville.in.gov/departments/utility/trash_recycling.php"
+  },
+  "internet": [
+   "NineStar Connect (fiber)",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "New Palestine",
+  "county": "Hancock",
+  "electric": {
+   "name": "Duke Energy Indiana (RushShelby Energy cooperative serves some outlying/rural areas — verify by address)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/billing/start-service"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Sewer: New Palestine Municipal Sewage Works (Town of New Palestine), 42 E Main St. Water provider not confirmed.",
+   "phone": "317-861-4727",
+   "url": "https://www.newpalestine.in.gov/wastewater"
+  },
+  "trash": {
+   "name": "Resident subscription / private hauler — Republic Services serves New Palestine; Waste Management also available",
+   "phone": "317-462-3425",
+   "url": "https://www.republicservices.com/locations/indiana/new-palestine-trash-pickup-and-recycling"
+  },
+  "internet": [
+   "NineStar Connect (fiber)",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": [
+   "gas",
+   "water"
+  ]
+ },
+ {
+  "city": "Shirley",
+  "county": "Hancock",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/billing/start-service"
+  },
+  "gas": {
+   "name": "Fountaintown Gas Company (an Ohio Valley Gas company)",
+   "phone": "765-763-6393",
+   "url": "http://www.ftgas.net/"
+  },
+  "water_sewer": {
+   "name": "Town of Shirley — Water & Sewer (Maintenance Dept / Utility Office)",
+   "phone": "765-738-6561",
+   "url": "https://www.townofshirley.com/service"
+  },
+  "trash": {
+   "name": "Best Way Disposal (town-contracted; set up through the Town of Shirley)",
+   "phone": "765-738-6561",
+   "url": "https://www.townofshirley.com/service"
+  },
+  "internet": [
+   "NineStar Connect",
+   "Xfinity (Comcast)",
+   "Frontier Communications"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Avon",
+  "county": "Hendricks",
+  "electric": {
+   "name": "Duke Energy Indiana (primary; parts of Avon are served by AES Indiana and Hendricks Power Cooperative)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/my-account/start-stop-transfer-reconnect-service"
+  },
+  "water_sewer": {
+   "name": "West Central Conservancy District (water & sewer for most of Avon; areas east of CR 900 E served by Aqua Indiana, and parts by Citizens Water)",
+   "phone": "317-272-2980",
+   "url": "https://www.wccdin.org/"
+  },
+  "trash": {
+   "name": "Private subscription - resident chooses a hauler (Ray's Trash Service/WM, or Republic Services); Town does not provide trash",
+   "phone": "317-539-2024",
+   "url": "https://raystrash.com/"
+  },
+  "internet": [
+   "Spectrum",
+   "AT&T Fiber",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Brownsburg",
+  "county": "Hendricks",
+  "electric": {
+   "name": "Split by location - Duke Energy Indiana, AES Indiana, and Hendricks Power Cooperative all serve parts of Brownsburg; verify by address",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/my-account/start-stop-transfer-reconnect-service"
+  },
+  "water_sewer": {
+   "name": "Town of Brownsburg Utility Department (water & sewer)",
+   "phone": "317-852-1102",
+   "url": "https://www.brownsburg.org/242/Service-Application"
+  },
+  "trash": {
+   "name": "Private subscription - resident chooses a hauler (WM/Ray's Trash, or Republic Services); Town does not provide trash",
+   "phone": "317-539-2024",
+   "url": "https://raystrash.com/"
+  },
+  "internet": [
+   "AT&T Fiber",
+   "Spectrum",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Clayton",
+  "county": "Hendricks",
+  "electric": {
+   "name": "Hendricks Power Cooperative (rural electric co-op serving the Clayton/Liberty Township area; Duke Energy Indiana serves some nearby areas - verify by address)",
+   "phone": "317-745-5473",
+   "url": "https://www.hendrickspower.com/"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Clayton (municipal water & sewer/wastewater)",
+   "phone": "317-539-2333",
+   "url": "https://townofclayton.us/"
+  },
+  "trash": {
+   "name": "Private subscription (Jack's Trash Service - Clayton-based, or Republic Services); Town provides only water/sewer",
+   "phone": "765-653-2838",
+   "url": "https://jackstrashservice.com/"
+  },
+  "internet": [
+   "TDS Telecom (Fiber)",
+   "Sparklight",
+   "Endeavor Communications",
+   "Spectrum"
+  ],
+  "gaps": [
+   "gas"
+  ]
+ },
+ {
+  "city": "Danville",
+  "county": "Hendricks",
+  "electric": {
+   "name": "Hendricks Power Cooperative (primary, ~54% of town); also Duke Energy Indiana (~46%)",
+   "phone": "317-745-5473",
+   "url": "https://www.hendrickspower.com/"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/my-account/start-stop-transfer-reconnect-service"
+  },
+  "water_sewer": {
+   "name": "Town of Danville Utilities (municipal water & wastewater)",
+   "phone": "317-745-4180",
+   "url": "https://danvillein.gov/department/division.php?structureid=79"
+  },
+  "trash": {
+   "name": "Private haulers (Ray's Trash Service/WM, or Republic Services); Town does not provide municipal trash",
+   "phone": "317-539-2024",
+   "url": "https://raystrash.com/"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "AT&T Fiber",
+   "Endeavor Communications",
+   "Spectrum"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Pittsboro",
+  "county": "Hendricks",
+  "electric": {
+   "name": "Hendricks Power Cooperative (primary); also Duke Energy Indiana",
+   "phone": "317-745-5473",
+   "url": "https://www.hendrickspower.com/"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/my-account/start-stop-transfer-reconnect-service"
+  },
+  "water_sewer": {
+   "name": "Town of Pittsboro (municipal water & sewer)",
+   "phone": "317-892-3326",
+   "url": "https://www.townofpittsboro.org/water"
+  },
+  "trash": {
+   "name": "Town of Pittsboro (municipal trash service, town-managed)",
+   "phone": "317-892-3326",
+   "url": "https://www.townofpittsboro.org/"
+  },
+  "internet": [
+   "TDS Telecom (Fiber)",
+   "Spectrum",
+   "Endeavor Communications",
+   "AT&T"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Plainfield",
+  "county": "Hendricks",
+  "electric": {
+   "name": "Duke Energy Indiana (primary); Hendricks Power Cooperative serves rural edges",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/my-account/start-stop-transfer-reconnect-service"
+  },
+  "water_sewer": {
+   "name": "Town of Plainfield Utilities (municipal water & sewer)",
+   "phone": "317-837-0000",
+   "url": "https://www.townofplainfield.com/1205/Utility-Billing"
+  },
+  "trash": {
+   "name": "Town of Plainfield (curbside trash included via Town, one pickup/week, 6-bag limit; Ray's Trash provides recycling)",
+   "phone": "317-839-2561",
+   "url": "https://www.townofplainfield.com/"
+  },
+  "internet": [
+   "AT&T Fiber",
+   "Spectrum",
+   "Xfinity (Comcast)"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Seymour",
+  "county": "Jackson",
+  "electric": {
+   "name": "Duke Energy Indiana (serves the city of Seymour; Jackson County REMC serves rural Jackson County)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/customer-service"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential"
+  },
+  "water_sewer": {
+   "name": "Indiana American Water (water) / City of Seymour Water Pollution Control (sewer, 812-522-5351)",
+   "phone": "800-492-8373",
+   "url": "https://www.amwater.com/inaw/customer-service-billing/turn-service-on-off"
+  },
+  "trash": {
+   "name": "City of Seymour Municipal Sanitation (Dept. of Public Works)",
+   "phone": "812-522-4345",
+   "url": "https://seymourin.org/index.php/residents/trash-recycling-yardwaste-schedule"
+  },
+  "internet": [
+   "Xfinity (Comcast) cable",
+   "Metronet fiber",
+   "Jackson County REMC (JacksonConnect) fiber",
+   "Frontier (DSL)"
+  ],
+  "gaps": [],
+  "sources": [
+   "https://jcidc.com/utilities/",
+   "https://www.seymourin.org/index.php/offices/sanitation",
+   "https://www.amwater.com/inaw/customer-service-billing/for-new-customers/",
+   "https://www.jacksonremc.com/fiber-and-telephone/",
+   "https://broadbandnow.com/Indiana/Seymour"
+  ]
+ },
+ {
+  "city": "North Vernon",
+  "county": "Jennings",
+  "electric": {
+   "name": "Duke Energy Indiana (no municipal electric; the city utility bills water/sewer/sanitation only)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/customer-service"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (Indiana North / formerly Vectren North)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential"
+  },
+  "water_sewer": {
+   "name": "North Vernon Municipal Utilities (water, sewer, stormwater)",
+   "phone": "812-346-4691",
+   "url": "https://www.northvernon-in.gov/departments/utilities.php"
+  },
+  "trash": {
+   "name": "North Vernon Municipal Utilities — Sanitation (municipal, billed on the city utility statement)",
+   "phone": "812-346-4691",
+   "url": "https://www.northvernon-in.gov/departments/utilities.php"
+  },
+  "internet": [
+   "Xfinity (Comcast) cable",
+   "Metronet fiber",
+   "Frontier (DSL)",
+   "SEI Communications fiber"
+  ],
+  "gaps": [],
+  "sources": [
+   "https://www.northvernon-in.gov/departments/utilities.php",
+   "https://findenergy.com/in/jennings-county-electricity/",
+   "https://www.in.gov/oucc/featured-topics/vectren-north-gas-rates/",
+   "https://broadbandnow.com/Indiana/North-Vernon"
+  ]
+ },
+ {
+  "city": "Bargersville",
+  "county": "Johnson",
+  "electric": {
+   "name": "Town of Bargersville Utilities (municipal)",
+   "phone": "317-422-3160",
+   "url": "https://bargersville.in.gov/services/utilities/electric/"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Town of Bargersville Utilities (municipal water & sewer)",
+   "phone": "317-422-3160",
+   "url": "https://bargersville.in.gov/services/utilities/"
+  },
+  "trash": {
+   "name": "Republic Services",
+   "phone": null,
+   "url": "https://www.republicservices.com/locations/indiana/bargersville/46106"
+  },
+  "internet": [
+   "Xfinity",
+   "Metronet",
+   "Brightspeed",
+   "JCFiber"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Edinburgh",
+  "county": "Johnson",
+  "electric": {
+   "name": "Edinburgh Municipal Utilities (municipal)",
+   "phone": "812-526-3514",
+   "url": "https://www.edinburgh.in.us"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Edinburgh Municipal Utilities (municipal water & sewer)",
+   "phone": "812-526-3514",
+   "url": "https://www.edinburgh.in.us"
+  },
+  "trash": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "AT&T Fiber",
+   "Xfinity",
+   "Sparklight",
+   "JCFiber",
+   "Brightspeed"
+  ],
+  "gaps": [
+   "gas",
+   "trash"
+  ]
+ },
+ {
+  "city": "Franklin",
+  "county": "Johnson",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Indiana American Water (water); City of Franklin (sewer)",
+   "phone": "800-492-8373",
+   "url": "https://amwater.com/inaw"
+  },
+  "trash": {
+   "name": "Ray's Trash Service (City of Franklin contracted collection)",
+   "phone": "800-531-6752",
+   "url": "https://www.franklin.in.gov/department/division.php?structureid=95"
+  },
+  "internet": [
+   "Xfinity",
+   "Metronet",
+   "Brightspeed",
+   "JCFiber"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Greenwood",
+  "county": "Johnson",
+  "electric": {
+   "name": "Duke Energy Indiana (AES Indiana serves some north Greenwood areas)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Indiana American Water (water); City of Greenwood Sanitary Sewer",
+   "phone": "800-492-8373",
+   "url": "https://amwater.com/inaw"
+  },
+  "trash": {
+   "name": "City of Greenwood (contracted to Best Way Disposal)",
+   "phone": "317-865-8238",
+   "url": "https://www.greenwood.in.gov"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Metronet",
+   "JCFiber"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Trafalgar",
+  "county": "Johnson",
+  "electric": {
+   "name": "Duke Energy Indiana (Johnson County REMC serves some areas)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Trafalgar (municipal water & sewer)",
+   "phone": "317-878-4592",
+   "url": "https://townoftrafalgar.org/utilities/"
+  },
+  "trash": {
+   "name": "Private haulers (resident-arranged): Best Way, Brock Enterprises, Rumpke",
+   "phone": "317-878-5041",
+   "url": "https://townoftrafalgar.org/utilities/"
+  },
+  "internet": [
+   "JCFiber",
+   "Brightspeed",
+   "South Central Indiana REMC Fiber"
+  ],
+  "gaps": [
+   "gas"
+  ]
+ },
+ {
+  "city": "Whiteland",
+  "county": "Johnson",
+  "electric": {
+   "name": "Varies by address: Duke Energy Indiana, Johnson County REMC, or Bargersville Municipal Utilities",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/home/start-stop-move"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential/customer-service/start-stop-transfer-service?sa=in"
+  },
+  "water_sewer": {
+   "name": "Town of Whiteland (municipal water & sewer)",
+   "phone": "317-530-0201",
+   "url": "https://www.townofwhiteland.com/residents/utility-office/"
+  },
+  "trash": {
+   "name": "Town of Whiteland (curbside, billed on town utility account)",
+   "phone": "317-530-0201",
+   "url": "https://www.townofwhiteland.com/residents/utility-office/"
+  },
+  "internet": [
+   "Metronet",
+   "Xfinity",
+   "Brightspeed",
+   "AT&T Fiber",
+   "JCFiber"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Alexandria",
+  "county": "Madison",
+  "electric": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com"
+  },
+  "water_sewer": {
+   "name": "City of Alexandria Utility Office (water, sewer, stormwater)",
+   "phone": "765-724-4720",
+   "url": "https://www.in.gov/cities/alexandria/departments/city-services/utility-office/"
+  },
+  "trash": {
+   "name": "City of Alexandria (municipal — Recycling Dept. / Utility Office)",
+   "phone": "765-724-4720",
+   "url": "https://www.in.gov/cities/alexandria/departments/city-services/"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "AT&T",
+   "Frontier",
+   "EarthLink"
+  ],
+  "gaps": [
+   "electric"
+  ]
+ },
+ {
+  "city": "Anderson",
+  "county": "Madison",
+  "electric": {
+   "name": "Anderson Municipal Light & Power (AMLP)",
+   "phone": "765-648-6112",
+   "url": "https://www.cityofanderson.com/171/Light-Power"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com"
+  },
+  "water_sewer": {
+   "name": "City of Anderson Water Dept. (water) & Water Pollution Control (sewer) — City Utility Office",
+   "phone": "765-648-6187",
+   "url": "https://www.cityofanderson.com/192/Utility-Office"
+  },
+  "trash": {
+   "name": "Best Way Disposal",
+   "phone": "765-649-7272",
+   "url": "https://www.bestway-disposal.com"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "AT&T",
+   "Frontier"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Elwood",
+  "county": "Madison",
+  "electric": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com"
+  },
+  "water_sewer": {
+   "name": "City of Elwood Utilities (water & wastewater) — Utility Office",
+   "phone": "765-552-9844",
+   "url": "https://elwood-in.com/utility-office/"
+  },
+  "trash": {
+   "name": "City of Elwood Recycle & Sanitation (municipal)",
+   "phone": "765-552-7080",
+   "url": "https://elwood-in.com/city-of-elwood-recycle-center/"
+  },
+  "internet": [
+   "Xfinity (Comcast)",
+   "AT&T",
+   "Mercury Fiber",
+   "T-Mobile Home Internet",
+   "EarthLink"
+  ],
+  "gaps": [
+   "electric"
+  ]
+ },
+ {
+  "city": "Lapel",
+  "county": "Madison",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Lapel (municipal water & sewer) — Town Hall",
+   "phone": "765-534-3157",
+   "url": "https://lapelindiana.org"
+  },
+  "trash": {
+   "name": "Best Way Disposal",
+   "phone": "877-507-0470",
+   "url": "https://www.bestway-disposal.com"
+  },
+  "internet": [
+   "FiberHawk",
+   "ORI (Onramp Indiana)",
+   "CenturyLink/Brightspeed",
+   "T-Mobile Home Internet",
+   "Verizon Home 5G",
+   "Starlink"
+  ],
+  "gaps": [
+   "gas"
+  ]
+ },
+ {
+  "city": "Pendleton",
+  "county": "Madison",
+  "electric": {
+   "name": "Town of Pendleton (municipal electric)",
+   "phone": null,
+   "url": "https://www.pendleton.in.gov/257/Utility-Office"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com"
+  },
+  "water_sewer": {
+   "name": "Town of Pendleton (municipal water & sewer) — Utility Office",
+   "phone": null,
+   "url": "https://www.pendleton.in.gov/257/Utility-Office"
+  },
+  "trash": {
+   "name": "Town of Pendleton (municipal — billed via Utility Office)",
+   "phone": null,
+   "url": "https://www.pendleton.in.gov/257/Utility-Office"
+  },
+  "internet": [
+   "AT&T",
+   "Xfinity (Comcast)",
+   "Metronet",
+   "NineStar Connect",
+   "Spectrum (Charter)",
+   "Frontier"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Beech Grove",
+  "county": "Marion",
+  "electric": {
+   "name": "AES Indiana",
+   "phone": "317-261-8222",
+   "url": "https://www.aesindiana.com/start-residential-service"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Citizens Water (Citizens Energy Group)",
+   "phone": "317-924-3311",
+   "url": "https://citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "trash": {
+   "name": "City of Beech Grove Department of Public Works",
+   "phone": "317-803-9098",
+   "url": "https://www.beechgrove.com/department-of-public-works"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Spectrum"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Broad Ripple",
+  "county": "Marion",
+  "electric": {
+   "name": "AES Indiana",
+   "phone": "888-261-8222",
+   "url": "https://www.aesindiana.com/start-residential-service"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "trash": {
+   "name": "City of Indianapolis Department of Public Works (DPW)",
+   "phone": "317-327-4622",
+   "url": "https://www.indy.gov/activity/trash-pickup"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Metronet"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Eagle Creek",
+  "county": "Marion",
+  "electric": {
+   "name": "AES Indiana",
+   "phone": "888-261-8222",
+   "url": "https://www.aesindiana.com/start-residential-service"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "trash": {
+   "name": "City of Indianapolis Department of Public Works (DPW)",
+   "phone": "317-327-4622",
+   "url": "https://www.indy.gov/activity/trash-pickup"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Metronet"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Irvington",
+  "county": "Marion",
+  "electric": {
+   "name": "AES Indiana",
+   "phone": "888-261-8222",
+   "url": "https://www.aesindiana.com/start-residential-service"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "trash": {
+   "name": "City of Indianapolis Department of Public Works (DPW)",
+   "phone": "317-327-4622",
+   "url": "https://www.indy.gov/activity/trash-pickup"
+  },
+  "internet": [
+   "AT&T Fiber",
+   "Xfinity",
+   "Metronet"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Lawrence",
+  "county": "Marion",
+  "electric": {
+   "name": "AES Indiana",
+   "phone": "317-261-8222",
+   "url": "https://www.aesindiana.com/start-residential-service"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "City of Lawrence Utilities",
+   "phone": "317-542-0511",
+   "url": "https://cityoflawrencein.municipalonlinepayments.com/cityoflawrencein/utilities"
+  },
+  "trash": {
+   "name": "City of Lawrence Utilities",
+   "phone": "317-542-0511",
+   "url": "https://cityoflawrencein.municipalonlinepayments.com/cityoflawrencein/utilities"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Metronet"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Southport",
+  "county": "Marion",
+  "electric": {
+   "name": "AES Indiana",
+   "phone": "317-261-8222",
+   "url": "https://www.aesindiana.com/start-residential-service"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Citizens Water (Citizens Energy Group)",
+   "phone": "317-924-3311",
+   "url": "https://citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "trash": {
+   "name": "City of Indianapolis Dept. of Public Works (Marion County residential trash)",
+   "phone": "317-327-4622",
+   "url": "https://www.indy.gov/activity/trash-pickup"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Speedway",
+  "county": "Marion",
+  "electric": {
+   "name": "AES Indiana",
+   "phone": "317-261-8222",
+   "url": "https://www.aesindiana.com/start-residential-service"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Town of Speedway (Clerk-Treasurer / Water Works & Wastewater)",
+   "phone": "317-246-4111",
+   "url": "https://www.speedwayin.gov/clerk-treasurer/pages/utility-billing-payment"
+  },
+  "trash": {
+   "name": "Town of Speedway (Clerk-Treasurer / Streets Dept.)",
+   "phone": "317-246-4111",
+   "url": "https://www.speedwayin.gov/clerk-treasurer/pages/utility-billing-payment"
+  },
+  "internet": [
+   "Xfinity",
+   "AT&T Fiber",
+   "Spectrum"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Geist",
+  "county": "Marion/Hamilton/Hancock",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/start"
+  },
+  "gas": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "water_sewer": {
+   "name": "Citizens Energy Group",
+   "phone": "317-924-3311",
+   "url": "https://www.citizensenergygroup.com/My-Home/Start-or-Stop-Service"
+  },
+  "trash": {
+   "name": "Republic Services (City of Fishers city-wide contract)",
+   "phone": "317-917-7300",
+   "url": "https://www.republicservices.com/residents"
+  },
+  "internet": [
+   "AT&T Fiber",
+   "Xfinity",
+   "Metronet"
+  ],
+  "gaps": [
+   "electric: SPLIT TERRITORY — Duke Energy Indiana serves the Fishers/Hamilton County side (predominant around the reservoir); AES Indiana (888-261-8222) serves the Marion County / Lawrence Township side. Rural Hancock County edges near McCordsville may be served by a different provider.",
+   "water_sewer: SPLIT — On the Fishers/Hamilton side, drinking water is Citizens Energy Group OR Indiana American Water depending on address, and SEWER/stormwater is operated by the City of Fishers Utilities (317-595-3140), NOT Citizens. On the Marion/Lawrence side, Citizens Energy Group provides both water and wastewater. McCordsville/Hancock side may use town utilities — not pinned down.",
+   "trash: SPLIT — Republic Services is the city-wide contracted hauler ONLY for the Fishers/Hamilton side (billed by the City of Fishers). The Marion County / Lawrence side is served by Indianapolis DPW (317-327-4622). McCordsville/Fortville (Hancock) portions use town-contracted haulers — not confirmed."
+  ]
+ },
+ {
+  "city": "Crawfordsville",
+  "county": "Montgomery",
+  "electric": {
+   "name": "Crawfordsville Electric Light & Power (municipal utility — serves the city; Tipmont REMC serves rural Montgomery County outside city limits)",
+   "phone": "765-362-1900",
+   "url": "https://celp.com/"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential?sa=in"
+  },
+  "water_sewer": {
+   "name": "Water: Indiana American Water | Sewer: City of Crawfordsville Waste Water Dept (city utility billing 765-364-5192)",
+   "phone": "Water 800-492-8373 | Sewer 765-364-5170",
+   "url": "https://www.crawfordsville.in.gov/300/Utility-Providers"
+  },
+  "trash": {
+   "name": "City of Crawfordsville Street & Sanitation Department (municipal curbside trash & recycling for city residents)",
+   "phone": "765-364-5166",
+   "url": "https://www.crawfordsville.in.gov/224/Street-Sanitation-Department"
+  },
+  "internet": [
+   "Metronet (fiber)",
+   "AT&T (fiber)",
+   "Xfinity / Comcast (cable)"
+  ],
+  "gaps": [],
+  "sources": [
+   "https://www.crawfordsville.in.gov/300/Utility-Providers",
+   "https://celp.com/",
+   "https://www.crawfordsville.in.gov/224/Street-Sanitation-Department",
+   "https://www.crawfordsville.in.gov/207/Waste-Water-Department"
+  ]
+ },
+ {
+  "city": "Martinsville",
+  "county": "Morgan",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com"
+  },
+  "water_sewer": {
+   "name": "City of Martinsville Water & Sewer Utility Department (municipal)",
+   "phone": "765-342-2449",
+   "url": "https://www.martinsville.in.gov/202/Water-Sewer-Utility-Department"
+  },
+  "trash": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "Xfinity (Comcast) - cable/fiber",
+   "AT&T - fiber/DSL",
+   "Brightspeed - DSL",
+   "Sparklight - cable",
+   "Endeavor Communications - fiber",
+   "South Central Indiana REMC (SCI REMC) - fiber",
+   "JCFiber - fiber"
+  ],
+  "gaps": [
+   "trash (could not confirm whether city-contracted or private subscription, or the hauler)"
+  ]
+ },
+ {
+  "city": "Monrovia",
+  "county": "Morgan",
+  "electric": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Sewer: Town of Monrovia municipal wastewater/sewer utility (confirmed by IURC Cause No. 46239). Water: not confirmed — town operates wastewater only; surrounding rural areas use private wells & septic",
+   "phone": null,
+   "url": null
+  },
+  "trash": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "Endeavor Communications - fiber (primary, ~97% coverage)",
+   "Sparklight - cable",
+   "AT&T - fiber",
+   "South Central Indiana REMC (SCI REMC) - fiber"
+  ],
+  "gaps": [
+   "electric (candidates: Duke Energy Indiana or South Central Indiana REMC — service is by exact address; not confirmed)",
+   "gas (small town — may be CenterPoint or propane-only; unconfirmed)",
+   "water (drinking-water provider unconfirmed; sewer is confirmed municipal)",
+   "water_sewer phone/URL (no Monrovia town contact confirmed)",
+   "trash"
+  ]
+ },
+ {
+  "city": "Mooresville",
+  "county": "Morgan",
+  "electric": {
+   "name": "Duke Energy Indiana",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com"
+  },
+  "gas": {
+   "name": "CenterPoint Energy",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com"
+  },
+  "water_sewer": {
+   "name": "Sewer: Town of Mooresville Wastewater Utility (municipal). Water: Indiana American Water (residential 800-492-8373) — the Town does NOT operate water and directs residents to their water utility provider",
+   "phone": "317-831-1608",
+   "url": "https://www.mooresville.in.gov/pay-my-bill/"
+  },
+  "trash": {
+   "name": "Private subscription — the Town does not provide trash pickup (Public Works handles streets/snow/leaf only); residents contract a private hauler such as Ray's Trash Service or Republic Services",
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "Xfinity (Comcast) - cable/fiber",
+   "AT&T - fiber/DSL",
+   "Spectrum (Charter) - cable",
+   "Endeavor Communications - fiber",
+   "South Central Indiana REMC (SCI REMC) - fiber"
+  ],
+  "gaps": [
+   "trash (specific hauler unconfirmed)",
+   "water provider name (Indiana American Water strongly indicated but not name-confirmed on a source page)"
+  ]
+ },
+ {
+  "city": "Rockville",
+  "county": "Parke",
+  "electric": {
+   "name": "Duke Energy Indiana and/or Parke County REMC (both operate in the Rockville area; the specific in-town provider depends on address and could not be authoritatively confirmed)",
+   "phone": "Duke Energy 800-521-2232",
+   "url": "https://www.duke-energy.com/"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Rockville (municipal water & sewer)",
+   "phone": "765-569-6253",
+   "url": "https://www.in.gov/towns/rockville/"
+  },
+  "trash": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "Joink (fiber)",
+   "Endeavor Communications (fiber)"
+  ],
+  "gaps": [
+   "electric (could not confirm whether Duke Energy Indiana or Parke County REMC serves a given in-town address; both serve the area)",
+   "gas (no natural-gas provider confirmed serving the town; propane, e.g. AmeriGas, is available — town may have no piped natural gas)",
+   "trash (residential hauler unconfirmed; town Code Ch. 51 governs garbage collection and Republic Services operates in the area — new residents should confirm with the Town of Rockville, 765-569-6253)"
+  ],
+  "sources": [
+   "https://www.in.gov/towns/rockville/",
+   "https://www.doxo.com/info/town-rockville-in",
+   "https://www.duke-energy.com/",
+   "https://pcremc.com/"
+  ]
+ },
+ {
+  "city": "Cloverdale",
+  "county": "Putnam",
+  "electric": {
+   "name": "Town of Cloverdale Municipal Utilities (town appears to run a municipal electric — see note; Duke Energy Indiana and SCI REMC serve outlying/rural areas)",
+   "phone": "765-795-4093",
+   "url": "https://townofcloverdale.in.gov/"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Cloverdale (municipal water & sewer)",
+   "phone": "765-795-4093",
+   "url": "https://townofcloverdale.in.gov/"
+  },
+  "trash": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "Endeavor Communications (fiber — dominant, ~95% coverage)",
+   "Metronet (fiber)",
+   "Frontier (DSL)"
+  ],
+  "gaps": [
+   "electric (municipal-electric status is based on the town's utility-billing record and its utility@cloverdalein.com office email; the town's own .gov/utility site blocked automated verification — could not confirm on an official page)",
+   "gas (no natural-gas provider confirmed serving the town; propane, e.g. AmeriGas, is available — town may have no piped natural gas)",
+   "trash (residential hauler unconfirmed; Priority Waste offers dumpsters in the area — new residents should confirm with the Town of Cloverdale utility office, 765-795-4093)"
+  ],
+  "sources": [
+   "https://www.doxo.com/info/town-cloverdale-in",
+   "https://townofcloverdale.in.gov/",
+   "https://en.wikipedia.org/wiki/Cloverdale,_Indiana",
+   "https://broadbandnow.com/Indiana/Cloverdale"
+  ]
+ },
+ {
+  "city": "Greencastle",
+  "county": "Putnam",
+  "electric": {
+   "name": "Duke Energy Indiana (no municipal electric — Greencastle does NOT run its own electric utility)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com/"
+  },
+  "gas": {
+   "name": "CenterPoint Energy Indiana North (formerly Vectren / Indiana Gas Co.)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com/en-us/residential?sa=in"
+  },
+  "water_sewer": {
+   "name": "City of Greencastle (municipal water & sewer/wastewater)",
+   "phone": "765-653-2638",
+   "url": "https://www.cityofgreencastle.com/"
+  },
+  "trash": {
+   "name": "City of Greencastle (municipal trash & recycling — billed with water/sewer via the city utility office)",
+   "phone": "765-653-2638",
+   "url": "https://www.cityofgreencastle.com/"
+  },
+  "internet": [
+   "Metronet (fiber)",
+   "Xfinity / Comcast (cable)",
+   "Endeavor Communications (fiber)"
+  ],
+  "gaps": [],
+  "sources": [
+   "https://www.cityofgreencastle.com/183/Wastewater",
+   "https://cityofgreencastle.com/Faq.aspx?QID=135",
+   "https://www.cityofgreencastle.com/DocumentCenter/View/209/Residential-Application-for-Water-Sewer-and-Trash-Service-PDF"
+  ]
+ },
+ {
+  "city": "Fairland",
+  "county": "Shelby",
+  "electric": {
+   "name": "RushShelby Energy (Shelby County REMC serving Fairland; some addresses served by Duke Energy Indiana)",
+   "phone": "765-544-2600",
+   "url": "https://www.rse.coop"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "trash": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "Xfinity (Comcast) - cable",
+   "NineStar Connect - fiber",
+   "JCFiber - fiber",
+   "AT&T / T-Mobile / Verizon 5G Home; Starlink/Viasat/HughesNet satellite"
+  ],
+  "gaps": [
+   "gas",
+   "water_sewer",
+   "trash"
+  ]
+ },
+ {
+  "city": "Morristown",
+  "county": "Shelby",
+  "electric": {
+   "name": "RushShelby Energy (REMC serving Morristown; some addresses served by Duke Energy Indiana)",
+   "phone": "765-544-2600",
+   "url": "https://www.rse.coop"
+  },
+  "gas": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "water_sewer": {
+   "name": "Town of Morristown (municipal water & wastewater)",
+   "phone": "765-763-7112",
+   "url": "https://www.morristown.in.gov"
+  },
+  "trash": {
+   "name": "Town of Morristown (municipal trash, billed with town water/sewer)",
+   "phone": "765-763-6748",
+   "url": "https://www.morristown.in.gov"
+  },
+  "internet": [
+   "NineStar Connect - fiber (primary local, ~63% coverage)",
+   "Frontier - DSL",
+   "WATCH Communications - fixed wireless",
+   "XNET WiFi - fixed wireless",
+   "Starlink/Viasat/HughesNet satellite; 5G Home"
+  ],
+  "gaps": [
+   "gas"
+  ]
+ },
+ {
+  "city": "Shelbyville",
+  "county": "Shelby",
+  "electric": {
+   "name": "Duke Energy Indiana (city of Shelbyville; RushShelby Energy REMC serves rural/outlying addresses)",
+   "phone": "800-521-2232",
+   "url": "https://www.duke-energy.com"
+  },
+  "gas": {
+   "name": "CenterPoint Energy (formerly Vectren / Indiana Gas)",
+   "phone": "800-227-1376",
+   "url": "https://www.centerpointenergy.com"
+  },
+  "water_sewer": {
+   "name": "City of Shelbyville Public Utility Office (municipal water & sewer)",
+   "phone": "317-392-5104",
+   "url": "https://www.shelbyville.in.gov/202/Public-Utility-Office"
+  },
+  "trash": {
+   "name": "City of Shelbyville Street Department (municipal curbside trash & yard waste)",
+   "phone": "317-392-5169",
+   "url": "https://www.shelbyville.in.gov/242/Trash-Pickup-Information"
+  },
+  "internet": [
+   "Xfinity (Comcast) - cable",
+   "AT&T Fiber",
+   "NineStar Connect - fiber",
+   "Brightspeed - DSL",
+   "T-Mobile / Verizon 5G Home; Starlink/Viasat satellite"
+  ],
+  "gaps": []
+ },
+ {
+  "city": "Waldron",
+  "county": "Shelby",
+  "electric": {
+   "name": "RushShelby Energy (REMC; rural Liberty Township - some addresses served by Duke Energy Indiana)",
+   "phone": "765-544-2600",
+   "url": "https://www.rse.coop"
+  },
+  "gas": {
+   "name": "No natural-gas utility (no distribution main) - propane only; RushShelby Energy offers metered propane",
+   "phone": "765-544-2600",
+   "url": "https://www.rse.coop"
+  },
+  "water_sewer": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "trash": {
+   "name": null,
+   "phone": null,
+   "url": null
+  },
+  "internet": [
+   "NineStar Connect - fiber (limited)",
+   "TDS - DSL",
+   "XNET WiFi - fixed wireless",
+   "WATCH Communications - fixed wireless",
+   "Starlink/Viasat/HughesNet satellite; AT&T/T-Mobile/Verizon 5G Home"
+  ],
+  "gaps": [
+   "water_sewer",
+   "trash"
+  ]
+ }
+]
