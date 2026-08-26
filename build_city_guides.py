@@ -351,12 +351,12 @@ for key in CITIES:
               ' <p>Free, ' + nm + '-specific guides to buying or selling — the local market, neighborhoods, ' + nm + ' schools, and every step of the process.</p>\n'
               ' <a href="/resources/' + key + '-home-buyers-guide/" class="btn btn-primary">Buyer’s Guide →</a>\n'
               ' <a href="/resources/' + key + '-home-sellers-guide/" class="btn btn-outline" style="margin-top:8px;">Seller’s Guide →</a>\n </div>\n')
-section = ('\n<div class="resources-intro" style="margin-top:16px;">'
+section = ('\n<div class="resources-intro" id="city-guides" style="margin-top:16px;">'
            '<h2 style="text-align:center;color:var(--dark);font-size:1.6rem;margin:0 0 6px;">Free City Home Guides</h2>'
            '<p>City-specific buyer and seller guides for Central Indiana’s most popular communities — the local market, '
            'neighborhoods, schools, and process, tailored to each town.</p></div>\n<div class="resources-grid">' + cards + '</div>\n\n')
 hub = os.path.join(ROOT, "resources/index.html"); ht = open(hub, encoding="utf-8").read()
-ht = re.sub(r'\n?<div class="resources-intro" style="margin-top:16px;">.*?(?=<footer class="site-footer">)', '', ht, flags=re.DOTALL)
+ht = re.sub(r'\n?<div class="resources-intro"[^>]*style="margin-top:16px;">.*?(?=<footer class="site-footer">)', '', ht, flags=re.DOTALL)
 ht = ht.replace('<footer class="site-footer">', section + '<footer class="site-footer">', 1)
 open(hub, "w", encoding="utf-8").write(ht)
 smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
