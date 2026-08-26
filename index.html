@@ -45,7 +45,8 @@
 .value-card p { color: #6e6e70; font-size:.92rem; line-height: 1.6; margin: 0; }
 a.value-card { text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
 a.value-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0,0,0,.15); }
-a.value-card .vc-body::after { content: "Explore Senior Living →"; display: inline-block; margin-top: 12px; color: #c03926; font-weight: 700; font-size: .82rem; }
+.value-card .vc-link { display: inline-block; margin-top: 12px; color: #c03926; font-weight: 700; font-size: .82rem; }
+a.value-card:hover .vc-link { text-decoration: underline; }
 .county-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
 .county-card { background: #6e6e70; color: #fff; border-radius: 8px; padding: 22px 20px; text-decoration: none; display: block; transition: background.2s; }
 .county-card:hover { background: #c03926; }
@@ -314,6 +315,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <div class="nav-submenu">
  <a href="/vendors/">Preferred Vendors</a>
  <a href="/utilities/">Utilities &amp; Setup</a>
+ <a href="/resources/">Free Guides &amp; Resources</a>
  </div>
  </div>
  <a href="/contact/">Contact</a>
@@ -423,34 +425,38 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  <p>We built this resource to help buyers, sellers, and investors navigate Central Indiana's real estate market with confidence — backed by a brokerage that's been doing it for years.</p>
  </div>
  <div class="value-grid">
- <div class="value-card">
+ <a class="value-card" href="/about/">
 <img class="vc-img" src="/assets/img/tiles/local-expertise.jpg" alt="A Your Realty Link agent with the downtown Indianapolis skyline" loading="lazy" width="900" height="520">
 <div class="vc-body">
 <h3>Local Expertise</h3>
 <p>The Your Realty Link team knows Central Indiana's neighborhoods, price trends, and communities inside and out. We live and work here.</p>
+<span class="vc-link">About Your Realty Link &rarr;</span>
 </div>
-</div>
+</a>
  <a class="value-card" href="/senior-living/">
 <img class="vc-img" src="/assets/img/tiles/senior-living.jpg" alt="A senior couple moving forward to a new season of life" loading="lazy" width="900" height="520">
 <div class="vc-body">
 <h3>Senior Living</h3>
 <p>Downsizing, right-sizing, or moving to a 55+ community? Our senior real estate specialists guide you through every step — from prepping the family home to finding the perfect next chapter.</p>
+<span class="vc-link">Explore Senior Living &rarr;</span>
 </div>
 </a>
- <div class="value-card">
+ <a class="value-card" href="/resources/">
 <img class="vc-img" src="/assets/img/tiles/free-resources.jpg" alt="Free Your Realty Link city home guides" loading="lazy" width="760" height="440">
 <div class="vc-body">
 <h3>Free Local Resources</h3>
 <p>Hundreds of city guides, county overviews, neighborhood breakdowns, and service pages — all written specifically for Central Indiana buyers and sellers.</p>
+<span class="vc-link">Browse Free Resources &rarr;</span>
 </div>
-</div>
- <div class="value-card">
+</a>
+ <a class="value-card" href="/agents/">
 <img class="vc-img" src="/assets/img/tiles/trusted-agents.jpg" alt="The Your Realty Link agent team" loading="lazy" width="760" height="440">
 <div class="vc-body">
 <h3>Trusted Agents</h3>
 <p>Your Realty Link puts people first. Whether you're a first-time buyer, a seasoned investor, or ready to list, our agents guide you every step of the way.</p>
+<span class="vc-link">Meet Our Agents &rarr;</span>
 </div>
-</div>
+</a>
  </div>
  </div>
 </section>
