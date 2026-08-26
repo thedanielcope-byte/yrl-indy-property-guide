@@ -56,6 +56,9 @@ li.ck-item:first-child { border-top: none; }
 .ck-alert p { margin: 0; font-size: .9rem; color: #33373b; line-height: 1.6; }
 .ck-cross { background: var(--light); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 22px 0; font-size: .92rem; }
 .ck-cross strong { color: #13294a; }
+.ck-pdfcta { margin: 0 0 14px; font-weight: 600; font-size: .95rem; }
+.ck-pdfcta a { color: var(--red); }
+@media print { .ck-pdfcta { display: none !important; } }
 @media print {
   .site-header, .breadcrumbs, .page-hero, .ck-actions, .cta-block, .cta-form-section, .site-footer, .ck-progress, .quick-answer, .faq-section { display: none !important; }
   .ck-phase { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
@@ -164,6 +167,7 @@ PAGE = """<!DOCTYPE html>
 
  <div class="ck-wrap">
 @@PROGRESS@@
+@@PDFCTA@@
 @@INTRO@@
 @@PHASES@@
 
@@ -199,6 +203,8 @@ def build(cfg):
         "@@CTA@@": cfg["cta"], "@@FAQ@@": faq_html, "@@FAQSCHEMA@@": faq_schema,
         "@@PHASES@@": phases, "@@PROGRESS@@": PROGRESS, "@@CKJS@@": CK_JS, "@@CSS@@": CSS,
         "@@FONTS@@": FONTS, "@@HEADER@@": HEADER, "@@FOOTER@@": FOOTER, "@@SCRIPTS@@": SCRIPTS,
+        "@@PDFCTA@@": ('<p class="ck-pdfcta">📄 <a href="/resources/%s/">Prefer a printable copy? '
+                       'Get the PDF checklist &rarr;</a></p>' % cfg["pdf_landing"]),
     }
     for k, v in repl.items():
         out = out.replace(k, v)
@@ -215,6 +221,7 @@ def build(cfg):
 # ─────────────────────────────── BUYER ───────────────────────────────
 buyer = {
  "dir": "services/buyer-closing-checklist",
+ "pdf_landing": "buyer-closing-checklist",
  "url": "https://janetgiles.com/services/buyer-closing-checklist/",
  "title": "Buyer&rsquo;s Closing Checklist for Indianapolis Home Buyers | Your Realty Link",
  "desc": "A step-by-step closing checklist for Central Indiana home buyers: what to do before closing, what to bring on closing day, and how to protect yourself from wire fraud.",
@@ -321,6 +328,7 @@ buyer = {
 # ─────────────────────────────── SELLER ───────────────────────────────
 seller = {
  "dir": "services/seller-closing-checklist",
+ "pdf_landing": "seller-closing-checklist",
  "url": "https://janetgiles.com/services/seller-closing-checklist/",
  "title": "Seller&rsquo;s Closing Checklist for Indianapolis Home Sellers | Your Realty Link",
  "desc": "A step-by-step closing checklist for Central Indiana home sellers: what to prepare under contract, how to review your net proceeds, what to bring to closing, and what to do after.",
@@ -419,6 +427,7 @@ seller = {
  ],
 }
 
-for cfg in (buyer, seller):
-    d = build(cfg)
-    print("built /%s/" % d)
+if __name__ == "__main__":
+    for cfg in (buyer, seller):
+        d = build(cfg)
+        print("built /%s/" % d)

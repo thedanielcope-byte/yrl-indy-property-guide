@@ -56,6 +56,9 @@ li.ck-item:first-child { border-top: none; }
 .ck-alert p { margin: 0; font-size: .9rem; color: #33373b; line-height: 1.6; }
 .ck-cross { background: var(--light); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 22px 0; font-size: .92rem; }
 .ck-cross strong { color: #13294a; }
+.ck-pdfcta { margin: 0 0 14px; font-weight: 600; font-size: .95rem; }
+.ck-pdfcta a { color: var(--red); }
+@media print { .ck-pdfcta { display: none !important; } }
 @media print {
   .site-header, .breadcrumbs, .page-hero, .ck-actions, .cta-block, .cta-form-section, .site-footer, .ck-progress, .quick-answer, .faq-section { display: none !important; }
   .ck-phase { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
@@ -154,6 +157,7 @@ li.ck-item:first-child { border-top: none; }
  <span class="ck-count" id="ckCount">0 done</span>
  <div class="ck-actions"><button id="ckPrint" type="button">🖨 Print</button><button id="ckReset" type="button">Reset</button></div>
 </div>
+<p class="ck-pdfcta">📄 <a href="/resources/buyer-closing-checklist/">Prefer a printable copy? Get the PDF checklist &rarr;</a></p>
 <p>We built this checklist so nothing about closing catches you off guard. Tap each item to check it off &mdash; your progress saves on this device &mdash; and use the Print button to bring a copy to the table. It follows the same stages the Consumer Financial Protection Bureau recommends, tuned for how closings actually work here in Central Indiana.</p>
 <div class="ck-phase">
 <h2>A couple of weeks out: get your ducks in a row</h2>
