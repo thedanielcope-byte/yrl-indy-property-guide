@@ -14,6 +14,7 @@ reused from a sibling service page so nav stays in sync.
     python3 build_closing_checklists.py
 """
 import os, re, json
+from local_essentials import block as local_essentials_block
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TPL  = os.path.join(ROOT, "services", "expired-listings", "index.html")
@@ -170,6 +171,7 @@ PAGE = """<!DOCTYPE html>
 @@PDFCTA@@
 @@INTRO@@
 @@PHASES@@
+@@EXTRAS@@
 
  <div class="ck-cross">@@CROSS@@</div>
 
@@ -205,6 +207,7 @@ def build(cfg):
         "@@FONTS@@": FONTS, "@@HEADER@@": HEADER, "@@FOOTER@@": FOOTER, "@@SCRIPTS@@": SCRIPTS,
         "@@PDFCTA@@": ('<p class="ck-pdfcta">📄 <a href="/resources/%s/">Prefer a printable copy? '
                        'Get the PDF checklist &rarr;</a></p>' % cfg["pdf_landing"]),
+        "@@EXTRAS@@": cfg.get("extras", ""),
     }
     for k, v in repl.items():
         out = out.replace(k, v)
@@ -222,6 +225,7 @@ def build(cfg):
 buyer = {
  "dir": "services/buyer-closing-checklist",
  "pdf_landing": "buyer-closing-checklist",
+ "extras": local_essentials_block(),
  "url": "https://janetgiles.com/services/buyer-closing-checklist/",
  "title": "Buyer&rsquo;s Closing Checklist for Indianapolis Home Buyers | Your Realty Link",
  "desc": "A step-by-step closing checklist for Central Indiana home buyers: what to do before closing, what to bring on closing day, and how to protect yourself from wire fraud.",

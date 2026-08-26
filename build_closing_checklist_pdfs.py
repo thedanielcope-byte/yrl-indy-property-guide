@@ -289,31 +289,9 @@ print("Generated closing-checklist lead magnets:")
 for slug, ok, kb in made:
     print("  %s  PDF:%s (%dKB)" % (slug, "OK" if ok else "FAIL", kb))
 
-# ── /resources/ hub cards + sitemap (idempotent; placed BEFORE the city-guides
-#    section so build_city_guides.py's cleanup regex never eats it) ──
-MK_A, MK_B = "<!-- CLOSING-CHECKLIST-RESOURCES -->", "<!-- /CLOSING-CHECKLIST-RESOURCES -->"
-cards = (
- '\n <div class="resource-card">\n <div class="resource-icon">✅</div>\n'
- ' <h2>Buyer&rsquo;s Closing Checklist</h2>\n'
- ' <p>A free, printable step-by-step checklist for closing on your Central Indiana home &mdash; what to do before, what to bring, and how to avoid wire fraud.</p>\n'
- ' <a href="/resources/buyer-closing-checklist/" class="btn btn-primary">Get the Buyer Checklist →</a>\n </div>\n'
- '\n <div class="resource-card">\n <div class="resource-icon">🏡</div>\n'
- ' <h2>Seller&rsquo;s Closing Checklist</h2>\n'
- ' <p>A free, printable step-by-step checklist for selling your Central Indiana home &mdash; from under contract to the closing table.</p>\n'
- ' <a href="/resources/seller-closing-checklist/" class="btn btn-primary">Get the Seller Checklist →</a>\n </div>\n')
-section = (MK_A + '\n<div class="resources-intro" style="margin-top:16px;">'
-           '<h2 style="text-align:center;color:var(--dark);font-size:1.6rem;margin:0 0 6px;">Free Closing Checklists</h2>'
-           '<p>Printable buyer and seller closing checklists for Central Indiana &mdash; every step from contract to keys, plus what to bring and how to close safely.</p></div>\n'
-           '<div class="resources-grid">' + cards + '</div>\n' + MK_B + '\n')
-
-hub = os.path.join(ROOT, "resources/index.html"); ht = open(hub, encoding="utf-8").read()
-ht = re.sub(re.escape(MK_A) + r".*?" + re.escape(MK_B) + r"\s*", "", ht, flags=re.DOTALL)
-if '<div class="resources-intro" style="margin-top:16px;">' in ht:
-    ht = ht.replace('<div class="resources-intro" style="margin-top:16px;">', section + '<div class="resources-intro" style="margin-top:16px;">', 1)
-else:
-    ht = ht.replace('<footer class="site-footer">', section + '<footer class="site-footer">', 1)
-open(hub, "w", encoding="utf-8").write(ht)
-
+# ── sitemap (the /resources/ hub cards for these two are hand-authored in the
+#    "For Buyers" / "For Sellers" sections of resources/index.html, so this
+#    generator no longer inserts its own hub section) ──
 smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
 for kind in ("buyer", "seller"):
     loc = "https://janetgiles.com/resources/%s-closing-checklist/" % kind

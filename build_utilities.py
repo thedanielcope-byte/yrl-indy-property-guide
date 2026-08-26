@@ -15,6 +15,7 @@ sends provider fills for the gap towns).
     python3 build_utilities.py
 """
 import os, re, json, glob, html
+from local_essentials import block as local_essentials_block
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = json.load(open(os.path.join(ROOT, "data", "city-utilities.json"), encoding="utf-8"))
@@ -318,6 +319,8 @@ page = f'''<!DOCTYPE html>
  <a href="/vendors/" class="btn btn-outline">Preferred Vendors →</a>
  </div>
  </div>
+
+ {local_essentials_block()}
 
  <h2 id="by-city">Utilities by City</h2>
  <p>Search or jump to your city for its electric, gas, water/sewer, trash, and internet providers, with phone numbers and start-service links. Fields marked &ldquo;varies by address&rdquo; are where you should confirm the provider directly when you set up service.</p>

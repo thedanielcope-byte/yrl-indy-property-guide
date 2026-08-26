@@ -190,6 +190,30 @@
  </div>
  </div>
 
+ <style>
+.local-essentials { background: var(--light); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; margin: 1.7rem 0; }
+.local-essentials > h2 { margin: 0 0 4px; font-size: 1.2rem; color: #13294a; }
+.local-essentials > p { margin: 0 0 14px; color: var(--mid); font-size: .92rem; }
+.le-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.le-item { display: block; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 13px 15px; text-decoration: none; transition: border-color .15s, box-shadow .15s; }
+.le-item:hover { border-color: var(--red); box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.le-item strong { display: block; color: var(--red); font-size: .95rem; margin-bottom: 2px; }
+.le-item span { color: #33373b; font-size: .83rem; line-height: 1.45; }
+.le-note { font-size: .78rem; color: var(--mid); margin: 13px 0 0; }
+</style>
+<section class="local-essentials">
+ <h2 id="local-essentials">🧭 New to the Area? Local Essentials</h2>
+ <p>Just moved to Central Indiana? A few official links to help you get settled &mdash; beyond your utilities.</p>
+ <div class="le-grid">
+ <a class="le-item" href="https://www.in.gov/bmv/" target="_blank" rel="noopener"><strong>Indiana BMV &#8599;</strong><span>Register your vehicle and get an Indiana driver's license — new residents generally have 60 days.</span></a>
+ <a class="le-item" href="https://tools.usps.com/find-location.htm" target="_blank" rel="noopener"><strong>Find Your Post Office &#8599;</strong><span>Locate your new post office, and set up USPS mail forwarding to your new address.</span></a>
+ <a class="le-item" href="https://indianavoters.in.gov/" target="_blank" rel="noopener"><strong>Register to Vote &#8599;</strong><span>Update your Indiana voter registration once you're at your new address.</span></a>
+ <a class="le-item" href="https://www.in.gov/dlgf/deductions-property-tax/" target="_blank" rel="noopener"><strong>Homestead Deduction &#8599;</strong><span>Lower the property taxes on your primary home — file with your county auditor.</span></a>
+ <a class="le-item" href="https://iuhealth.org/" target="_blank" rel="noopener"><strong>Local Hospitals &#8599;</strong><span>Central Indiana's major systems: IU Health, Community Health Network, Ascension St. Vincent &amp; Franciscan Health.</span></a>
+ </div>
+ <p class="le-note">Official government and healthcare links, provided for your convenience. Your Realty Link is not affiliated with them.</p>
+</section>
+
  <h2 id="by-city">Utilities by City</h2>
  <p>Search or jump to your city for its electric, gas, water/sewer, trash, and internet providers, with phone numbers and start-service links. Fields marked &ldquo;varies by address&rdquo; are where you should confirm the provider directly when you set up service.</p>
  <div class="uc-tools">
