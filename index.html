@@ -217,6 +217,10 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 
  /* ── Homepage city cards ── */
 .home-cities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
+.home-city-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; max-width: 880px; margin: 20px auto 4px; }
+.home-city-btns .hcb-label { font-weight: 700; color: #6e6e70; font-size: .9rem; margin-right: 2px; }
+.home-city-btn { display: inline-block; padding: 7px 14px; background: #fff; border: 1px solid #d9dde2; border-radius: 20px; color: #13294a; text-decoration: none; font-size: .9rem; font-weight: 600; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.home-city-btn:hover { background: #c03926; border-color: #c03926; color: #fff; }
 .home-city-card { position: relative; background:#fff; border:1px solid #e8eaed; border-radius: 14px; text-decoration:none; display:block; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.05); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .home-city-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(27,58,92,.18); border-color:#d9dde2; }
 .home-city-card .hc-map { height: 86px; position: relative; background:
@@ -552,37 +556,14 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
    </div>
   </div>
  </div>
+ <!-- HOME-CITIES-GRID -->
+ <div class="home-city-btns"><span class="hcb-label">Popular cities:</span><a href="/cities/marion-county/southport-indiana-real-estate/" class="home-city-btn">Southport</a><a href="/cities/shelby-county/shelbyville-indiana-real-estate/" class="home-city-btn">Shelbyville</a><a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="home-city-btn">Carmel</a><a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="home-city-btn">Fishers</a><a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="home-city-btn">Greenwood</a><a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="home-city-btn">Noblesville</a><a href="/cities/hendricks-county/avon-indiana-real-estate/" class="home-city-btn">Avon</a><a href="/cities/hendricks-county/brownsburg-indiana-real-estate/" class="home-city-btn">Brownsburg</a><a href="/cities/boone-county/zionsville-indiana-real-estate/" class="home-city-btn">Zionsville</a><a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="home-city-btn">Westfield</a><a href="/cities/hendricks-county/plainfield-indiana-real-estate/" class="home-city-btn">Plainfield</a><a href="/cities/hancock-county/mccordsville-indiana-real-estate/" class="home-city-btn">McCordsville</a></div>
+ <!-- /HOME-CITIES-GRID -->
  <p class="cmap-foot"><a href="/areas/">See the full directory of every city, neighborhood &amp; community &rarr;</a></p>
 </div>
  </div>
 </section>
 
-<!-- POPULAR CITIES -->
-<section class="home-section">
- <div class="container">
- <div class="section-header">
- <h2>Popular Cities Near Indianapolis</h2>
- <p>From fast-growing suburbs to established communities, Central Indiana has a neighborhood for everyone. Explore city guides with local market info, schools, and more.</p>
- </div>
- <!-- HOME-CITIES-GRID -->
- <div class="home-cities-grid">
-  <a href="/cities/marion-county/southport-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/southport.webp" alt="Map of Southport, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Southport</h3><span class="hc-county">Marion County</span><span class="hc-price">$160s – $320s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/shelby-county/shelbyville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/shelbyville.webp" alt="Map of Shelbyville, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Shelbyville</h3><span class="hc-county">Shelby County Seat</span><span class="hc-price">$150s – $300s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hamilton-county/carmel-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/carmel.webp" alt="Map of Carmel, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Carmel</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$400s – $1M+</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hamilton-county/fishers-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/fishers.webp" alt="Map of Fishers, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Fishers</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $600s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/johnson-county/greenwood-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/greenwood.webp" alt="Map of Greenwood, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Greenwood</h3><span class="hc-county">Johnson County</span><span class="hc-price">$250s – $450s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hamilton-county/noblesville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/noblesville.webp" alt="Map of Noblesville, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Noblesville</h3><span class="hc-county">Hamilton County Seat</span><span class="hc-price">$280s – $500s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hendricks-county/avon-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/avon.webp" alt="Map of Avon, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Avon</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$260s – $450s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hendricks-county/brownsburg-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/brownsburg.webp" alt="Map of Brownsburg, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Brownsburg</h3><span class="hc-county">Hendricks County</span><span class="hc-price">$250s – $430s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/boone-county/zionsville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/zionsville.webp" alt="Map of Zionsville, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Zionsville</h3><span class="hc-county">Boone County</span><span class="hc-price">$400s – $1M+</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hamilton-county/westfield-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/westfield.webp" alt="Map of Westfield, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Westfield</h3><span class="hc-county">Hamilton County</span><span class="hc-price">$300s – $550s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hendricks-county/plainfield-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/plainfield.webp" alt="Map of Plainfield, Indiana" width="480" height="210"></div><div class="hc-body"><h3>Plainfield</h3><span class="hc-county">Hendricks County Seat</span><span class="hc-price">$230s – $400s</span><span class="hc-arrow">&rarr;</span></div></a>
-  <a href="/cities/hancock-county/mccordsville-indiana-real-estate/" class="home-city-card"><div class="hc-map"><img class="hc-mapimg" loading="lazy" src="/assets/img/citymaps/mccordsville.webp" alt="Map of McCordsville, Indiana" width="480" height="210"></div><div class="hc-body"><h3>McCordsville</h3><span class="hc-county">Hancock County</span><span class="hc-price">$280s – $500s</span><span class="hc-arrow">&rarr;</span></div></a>
- </div>
- <!-- /HOME-CITIES-GRID -->
- <p class="map-attrib">City maps &copy; <a href="https://www.geoapify.com/" target="_blank" rel="noopener nofollow">Geoapify</a> &middot; &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener nofollow">OpenStreetMap</a> contributors</p>
- </div>
-</section>
 
 <!-- EXPLORE BY DISTRICT / COMMUNITY / NEIGHBORHOOD -->
 <section class="home-section-alt">

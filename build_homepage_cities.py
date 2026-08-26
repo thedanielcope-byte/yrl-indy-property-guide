@@ -76,11 +76,11 @@ near = resolve(cfg["nearby"], cfg.get("nearby_cap", 12))
 chips = '<div class="hero-quick-links">\n <span>Popular:</span>\n' + \
     "".join(f' <a href="{c["url"]}" class="hero-quick-link">{html.escape(c["name"])}</a>\n' for c in pop) + ' </div>'
 
-cards = '<div class="home-cities-grid">\n' + "".join(
-    f'  <a href="{c["url"]}" class="home-city-card">{hc_map(c)}'
-    f'<div class="hc-body"><h3>{html.escape(c["name"])}</h3><span class="hc-county">{html.escape(c["county"])}</span>'
-    f'<span class="hc-price">{html.escape(c["price"])}</span><span class="hc-arrow">&rarr;</span></div></a>\n'
-    for c in near) + ' </div>'
+# Compact city-name buttons under the county map (was a big card grid — the
+# broker asked to save homepage space). hc_map() is kept for possible reuse.
+cards = '<div class="home-city-btns"><span class="hcb-label">Popular cities:</span>' + "".join(
+    f'<a href="{c["url"]}" class="home-city-btn">{html.escape(c["name"])}</a>'
+    for c in near) + '</div>'
 
 def replace_between(text, name, block):
     """Swap the content between <!-- NAME --> ... <!-- /NAME --> markers.
@@ -96,4 +96,4 @@ t = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 t = replace_between(t, "HOME-HERO-CHIPS", chips)
 t = replace_between(t, "HOME-CITIES-GRID", cards)
 open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(t)
-print("homepage rebuilt: %d popular chips, %d city cards" % (len(pop), len(near)))
+print("homepage rebuilt: %d popular chips, %d city buttons" % (len(pop), len(near)))
