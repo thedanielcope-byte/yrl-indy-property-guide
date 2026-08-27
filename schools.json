@@ -1,0 +1,1588 @@
+{
+ "districts": [
+  {
+   "slug": "lebanon-community-schools",
+   "name": "Lebanon Community School Corporation",
+   "short_name": "Lebanon",
+   "type": "public",
+   "county": "Boone",
+   "grade_span": "K-12",
+   "cities": [
+    "Lebanon",
+    "Whitestown"
+   ],
+   "boundary_note": "South-central Boone County: Lebanon and Ulen plus most of Whitestown (Worth and Perry townships).",
+   "existing": false
+  },
+  {
+   "slug": "western-boone-county-schools",
+   "name": "Western Boone County Community School District",
+   "short_name": "Western Boone",
+   "type": "public",
+   "county": "Boone",
+   "grade_span": "K-12",
+   "cities": [
+    "Thorntown",
+    "Jamestown",
+    "Advance"
+   ],
+   "boundary_note": "Western Boone County, including Thorntown, Jamestown, and Advance.",
+   "existing": false
+  },
+  {
+   "slug": "zionsville-community-schools",
+   "name": "Zionsville Community Schools",
+   "short_name": "Zionsville",
+   "type": "public",
+   "county": "Boone",
+   "grade_span": "K-12",
+   "cities": [
+    "Zionsville",
+    "Whitestown"
+   ],
+   "boundary_note": "Serves Eagle and Union Townships; covers Zionsville and the southeastern (Anson) area of Whitestown.",
+   "existing": true
+  },
+  {
+   "slug": "carmel-clay-schools",
+   "name": "Carmel Clay Schools",
+   "short_name": "Carmel Clay",
+   "type": "public",
+   "county": "Hamilton",
+   "grade_span": "K-12",
+   "cities": [
+    "Carmel"
+   ],
+   "boundary_note": "Serves the City of Carmel and Clay Township.",
+   "existing": true
+  },
+  {
+   "slug": "hamilton-heights-school-corporation",
+   "name": "Hamilton Heights School Corporation",
+   "short_name": "Hamilton Heights",
+   "type": "public",
+   "county": "Hamilton",
+   "grade_span": "K-12",
+   "cities": [
+    "Cicero",
+    "Arcadia",
+    "Atlanta"
+   ],
+   "boundary_note": "Covers northern Hamilton County (Jackson and White River townships); serves Cicero, Arcadia and Atlanta.",
+   "existing": false
+  },
+  {
+   "slug": "hamilton-southeastern-schools",
+   "name": "Hamilton Southeastern Schools",
+   "short_name": "Hamilton Southeastern",
+   "type": "public",
+   "county": "Hamilton",
+   "grade_span": "K-12",
+   "cities": [
+    "Fishers",
+    "Noblesville"
+   ],
+   "boundary_note": "Serves all of Fishers plus a southern portion of Noblesville.",
+   "existing": true
+  },
+  {
+   "slug": "noblesville-schools",
+   "name": "Noblesville Schools",
+   "short_name": "Noblesville",
+   "type": "public",
+   "county": "Hamilton",
+   "grade_span": "K-12",
+   "cities": [
+    "Noblesville"
+   ],
+   "boundary_note": "Serves most of Noblesville; a southern portion falls in Hamilton Southeastern.",
+   "existing": true
+  },
+  {
+   "slug": "sheridan-community-schools",
+   "name": "Sheridan Community Schools",
+   "short_name": "Sheridan",
+   "type": "public",
+   "county": "Hamilton",
+   "grade_span": "K-12",
+   "cities": [
+    "Sheridan"
+   ],
+   "boundary_note": "Serves the Town of Sheridan and Adams Township in northwestern Hamilton County.",
+   "existing": false
+  },
+  {
+   "slug": "westfield-washington-schools",
+   "name": "Westfield Washington Schools",
+   "short_name": "Westfield Washington",
+   "type": "public",
+   "county": "Hamilton",
+   "grade_span": "K-12",
+   "cities": [
+    "Westfield"
+   ],
+   "boundary_note": "Serves the City of Westfield and Washington Township.",
+   "existing": true
+  },
+  {
+   "slug": "eastern-hancock-county-community-schools",
+   "name": "Eastern Hancock County Community School Corporation",
+   "short_name": "Eastern Hancock",
+   "type": "public",
+   "county": "Hancock",
+   "grade_span": "K-12",
+   "cities": [
+    "Shirley"
+   ],
+   "boundary_note": "Serves eastern Hancock County; Shirley's Hancock-County (Brown Township) portion attends here.",
+   "existing": false
+  },
+  {
+   "slug": "greenfield-central-community-schools",
+   "name": "Greenfield-Central Community School Corporation",
+   "short_name": "Greenfield-Central",
+   "type": "public",
+   "county": "Hancock",
+   "grade_span": "K-12",
+   "cities": [
+    "Greenfield"
+   ],
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "mt-vernon-community-schools",
+   "name": "Mt. Vernon Community School Corporation",
+   "short_name": "Mt. Vernon",
+   "type": "public",
+   "county": "Hancock",
+   "grade_span": "K-12",
+   "cities": [
+    "McCordsville",
+    "Fortville",
+    "Cumberland"
+   ],
+   "boundary_note": "Covers Vernon and Buck Creek townships in northwest Hancock County; includes McCordsville, Fortville, and part of Cumberland.",
+   "existing": false
+  },
+  {
+   "slug": "new-palestine-community-schools",
+   "name": "New Palestine Community Schools",
+   "short_name": "New Palestine",
+   "type": "public",
+   "county": "Hancock",
+   "grade_span": "K-12",
+   "cities": [
+    "New Palestine",
+    "Cumberland"
+   ],
+   "boundary_note": "Formerly the Community School Corporation of Southern Hancock County; renamed 2024-25. Serves southwestern Hancock County, including the Sugar Creek Township part of Cumberland.",
+   "existing": false
+  },
+  {
+   "slug": "avon-community-schools",
+   "name": "Avon Community School Corporation",
+   "short_name": "Avon",
+   "type": "public",
+   "county": "Hendricks",
+   "grade_span": "K-12",
+   "cities": [
+    "Avon"
+   ],
+   "boundary_note": null,
+   "existing": true
+  },
+  {
+   "slug": "brownsburg-community-schools",
+   "name": "Brownsburg Community School Corporation",
+   "short_name": "Brownsburg",
+   "type": "public",
+   "county": "Hendricks",
+   "grade_span": "K-12",
+   "cities": [
+    "Brownsburg"
+   ],
+   "boundary_note": "Serves most of Brownsburg; a northwest portion falls in North West Hendricks School Corporation.",
+   "existing": true
+  },
+  {
+   "slug": "danville-community-schools",
+   "name": "Danville Community School Corporation",
+   "short_name": "Danville",
+   "type": "public",
+   "county": "Hendricks",
+   "grade_span": "K-12",
+   "cities": [
+    "Danville"
+   ],
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "mill-creek-community-schools",
+   "name": "Mill Creek Community School Corporation",
+   "short_name": "Mill Creek",
+   "type": "public",
+   "county": "Hendricks",
+   "grade_span": "K-12",
+   "cities": [
+    "Clayton",
+    "Coatesville",
+    "Amo",
+    "Stilesville"
+   ],
+   "boundary_note": "Clay, Franklin, and Liberty townships — Clayton, Coatesville, Amo, Stilesville, plus a small section of Plainfield. High school is Cascade.",
+   "existing": false
+  },
+  {
+   "slug": "north-west-hendricks-schools",
+   "name": "North West Hendricks School Corporation",
+   "short_name": "North West Hendricks",
+   "type": "public",
+   "county": "Hendricks",
+   "grade_span": "K-12",
+   "cities": [
+    "Pittsboro",
+    "Lizton",
+    "North Salem"
+   ],
+   "boundary_note": "Covers Eel River, Middle, and Union townships — Pittsboro, Lizton, North Salem, plus portions of Brownsburg. High school is Tri-West Hendricks.",
+   "existing": false
+  },
+  {
+   "slug": "plainfield-community-schools",
+   "name": "Plainfield Community School Corporation",
+   "short_name": "Plainfield",
+   "type": "public",
+   "county": "Hendricks",
+   "grade_span": "K-12",
+   "cities": [
+    "Plainfield"
+   ],
+   "boundary_note": "Serves the town of Plainfield (Guilford Township); a small western section lies in Mill Creek.",
+   "existing": false
+  },
+  {
+   "slug": "charles-a-beard-memorial-schools",
+   "name": "Charles A. Beard Memorial School Corporation",
+   "short_name": "Charles A. Beard",
+   "type": "public",
+   "county": "Henry",
+   "grade_span": "K-12",
+   "cities": [
+    "Shirley"
+   ],
+   "boundary_note": "Henry County district (Knightstown) serving the Henry-County portion of Shirley.",
+   "existing": false
+  },
+  {
+   "slug": "center-grove-schools",
+   "name": "Center Grove Community School Corporation",
+   "short_name": "Center Grove",
+   "type": "public",
+   "county": "Johnson",
+   "grade_span": "K-12",
+   "cities": [
+    "Greenwood",
+    "Bargersville"
+   ],
+   "boundary_note": "Serves White River Township — the western portions of Greenwood and most of Bargersville.",
+   "existing": true
+  },
+  {
+   "slug": "clark-pleasant-community-schools",
+   "name": "Clark-Pleasant Community School Corporation",
+   "short_name": "Clark-Pleasant",
+   "type": "public",
+   "county": "Johnson",
+   "grade_span": "K-12",
+   "cities": [
+    "Whiteland",
+    "Greenwood",
+    "Franklin"
+   ],
+   "boundary_note": "Headquartered in Whiteland; covers New Whiteland, southern/southeastern Greenwood, and a small section of Franklin. Whiteland Community High School is its high school.",
+   "existing": false
+  },
+  {
+   "slug": "edinburgh-community-schools",
+   "name": "Edinburgh Community School Corporation",
+   "short_name": "Edinburgh",
+   "type": "public",
+   "county": "Johnson",
+   "grade_span": "PK-12",
+   "cities": [
+    "Edinburgh"
+   ],
+   "boundary_note": "Serves the town of Edinburgh and Blue River Township.",
+   "existing": false
+  },
+  {
+   "slug": "franklin-community-schools",
+   "name": "Franklin Community School Corporation",
+   "short_name": "Franklin Community",
+   "type": "public",
+   "county": "Johnson",
+   "grade_span": "K-12",
+   "cities": [
+    "Franklin",
+    "Bargersville"
+   ],
+   "boundary_note": "Serves almost all of Franklin plus a small section of Bargersville.",
+   "existing": false
+  },
+  {
+   "slug": "greenwood-community-schools",
+   "name": "Greenwood Community School Corporation",
+   "short_name": "Greenwood Community",
+   "type": "public",
+   "county": "Johnson",
+   "grade_span": "PK-12",
+   "cities": [
+    "Greenwood"
+   ],
+   "boundary_note": "Serves the older, central/established areas of the City of Greenwood.",
+   "existing": false
+  },
+  {
+   "slug": "indian-creek-schools",
+   "name": "Nineveh-Hensley-Jackson United School Corporation",
+   "short_name": "Indian Creek Schools",
+   "type": "public",
+   "county": "Johnson",
+   "grade_span": "K-12",
+   "cities": [
+    "Trafalgar"
+   ],
+   "boundary_note": "Branded 'Indian Creek Schools,' headquartered in Trafalgar; serves Trafalgar, Nineveh, Princes Lakes and Morgantown.",
+   "existing": false
+  },
+  {
+   "slug": "alexandria-community-schools",
+   "name": "Alexandria Community School Corporation",
+   "short_name": "Alexandria (Alexandria-Monroe)",
+   "type": "public",
+   "county": "Madison",
+   "grade_span": "K-12",
+   "cities": [
+    "Alexandria"
+   ],
+   "boundary_note": "Serves Alexandria and Orestes; schools operate under the Alexandria-Monroe name.",
+   "existing": false
+  },
+  {
+   "slug": "anderson-community-schools",
+   "name": "Anderson Community School Corporation",
+   "short_name": "Anderson",
+   "type": "public",
+   "county": "Madison",
+   "grade_span": "K-12",
+   "cities": [
+    "Anderson"
+   ],
+   "boundary_note": "Primary district for Anderson; also serves Edgewood, River Forest, and most of Chesterfield.",
+   "existing": false
+  },
+  {
+   "slug": "elwood-community-schools",
+   "name": "Elwood Community School Corporation",
+   "short_name": "Elwood",
+   "type": "public",
+   "county": "Madison",
+   "grade_span": "K-12",
+   "cities": [
+    "Elwood"
+   ],
+   "boundary_note": "Serves Elwood (Pipe Creek Township).",
+   "existing": false
+  },
+  {
+   "slug": "frankton-lapel-community-schools",
+   "name": "Frankton-Lapel Community Schools",
+   "short_name": "Frankton-Lapel",
+   "type": "public",
+   "county": "Madison",
+   "grade_span": "K-12",
+   "cities": [
+    "Lapel",
+    "Anderson"
+   ],
+   "boundary_note": "Serves all of Lapel plus Frankton and the northwestern edge of the Anderson area (Lafayette Township).",
+   "existing": false
+  },
+  {
+   "slug": "south-madison-community-schools",
+   "name": "South Madison Community School Corporation",
+   "short_name": "South Madison",
+   "type": "public",
+   "county": "Madison",
+   "grade_span": "K-12",
+   "cities": [
+    "Pendleton"
+   ],
+   "boundary_note": "Serves Pendleton, Ingalls, and Markleville; high school is Pendleton Heights.",
+   "existing": false
+  },
+  {
+   "slug": "beech-grove-city-schools",
+   "name": "Beech Grove City Schools",
+   "short_name": "Beech Grove",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Beech Grove"
+   ],
+   "boundary_note": "Independent district serving the City of Beech Grove, an enclave within Marion County.",
+   "existing": false
+  },
+  {
+   "slug": "indianapolis-public-schools",
+   "name": "Indianapolis Public Schools",
+   "short_name": "IPS",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Broad Ripple",
+    "Irvington"
+   ],
+   "boundary_note": "Covers the historic urban core — including Broad Ripple Village and the Irvington Historic District.",
+   "existing": false
+  },
+  {
+   "slug": "franklin-township-schools",
+   "name": "MSD of Franklin Township",
+   "short_name": "Franklin Township",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Southport"
+   ],
+   "boundary_note": "Eastern parts of the broader Southport area (46237) fall in MSD of Franklin Township.",
+   "existing": true
+  },
+  {
+   "slug": "msd-lawrence-township",
+   "name": "MSD of Lawrence Township",
+   "short_name": "Lawrence Township",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Lawrence",
+    "Geist"
+   ],
+   "boundary_note": "Serves the City of Lawrence and most of Lawrence Township, including the Marion County side of Geist.",
+   "existing": false
+  },
+  {
+   "slug": "perry-township-schools",
+   "name": "MSD of Perry Township",
+   "short_name": "Perry Township",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Southport"
+   ],
+   "boundary_note": "Serves the City of Southport and surrounding Perry Township.",
+   "existing": true
+  },
+  {
+   "slug": "msd-pike-township",
+   "name": "MSD of Pike Township",
+   "short_name": "Pike Township",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Eagle Creek"
+   ],
+   "boundary_note": "Serves the Eagle Creek area of northwest Marion County.",
+   "existing": false
+  },
+  {
+   "slug": "msd-warren-township",
+   "name": "MSD of Warren Township",
+   "short_name": "Warren Township",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Irvington",
+    "Cumberland"
+   ],
+   "boundary_note": "Serves east-side areas beyond the Irvington Historic District.",
+   "existing": false
+  },
+  {
+   "slug": "msd-washington-township",
+   "name": "MSD of Washington Township",
+   "short_name": "Washington Township",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Broad Ripple"
+   ],
+   "boundary_note": "Serves northern and surrounding portions of the broader Broad Ripple area; the Village core is IPS.",
+   "existing": false
+  },
+  {
+   "slug": "school-town-of-speedway",
+   "name": "School Town of Speedway",
+   "short_name": "Speedway",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Speedway"
+   ],
+   "boundary_note": "Independent district serving the Town of Speedway.",
+   "existing": false
+  },
+  {
+   "slug": "msd-martinsville",
+   "name": "Metropolitan School District of Martinsville",
+   "short_name": "MSD Martinsville",
+   "type": "public",
+   "county": "Morgan",
+   "grade_span": "K-12",
+   "cities": [
+    "Martinsville"
+   ],
+   "boundary_note": "Serves the greater Martinsville area of central Morgan County.",
+   "existing": false
+  },
+  {
+   "slug": "monroe-gregg-school-district",
+   "name": "Monroe-Gregg School District",
+   "short_name": "Monroe-Gregg",
+   "type": "public",
+   "county": "Morgan",
+   "grade_span": "K-12",
+   "cities": [
+    "Monrovia"
+   ],
+   "boundary_note": "Serves Monroe and Gregg Townships (Monrovia).",
+   "existing": false
+  },
+  {
+   "slug": "mooresville-consolidated-schools",
+   "name": "Mooresville Consolidated School Corporation",
+   "short_name": "Mooresville",
+   "type": "public",
+   "county": "Morgan",
+   "grade_span": "K-12",
+   "cities": [
+    "Mooresville"
+   ],
+   "boundary_note": "Serves the Mooresville area of northern Morgan County.",
+   "existing": false
+  },
+  {
+   "slug": "northwestern-consolidated-schools-shelby",
+   "name": "Northwestern Consolidated School District of Shelby County",
+   "short_name": "Northwestern Consolidated (Triton Central)",
+   "type": "public",
+   "county": "Shelby",
+   "grade_span": "K-12",
+   "cities": [
+    "Fairland"
+   ],
+   "boundary_note": "Operates the Triton Central schools; serves northwestern Shelby County including Fairland.",
+   "existing": false
+  },
+  {
+   "slug": "shelby-eastern-schools",
+   "name": "Shelby Eastern Schools",
+   "short_name": "Shelby Eastern",
+   "type": "public",
+   "county": "Shelby",
+   "grade_span": "PK-12",
+   "cities": [
+    "Morristown",
+    "Waldron"
+   ],
+   "boundary_note": "Serves eastern Shelby County with Morristown and Waldron campuses.",
+   "existing": false
+  },
+  {
+   "slug": "shelbyville-central-schools",
+   "name": "Shelbyville Central Schools",
+   "short_name": "Shelbyville Central",
+   "type": "public",
+   "county": "Shelby",
+   "grade_span": "K-12",
+   "cities": [
+    "Shelbyville"
+   ],
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "traders-point-christian-schools",
+   "name": "Traders Point Christian Schools",
+   "short_name": "Traders Point Christian Schools",
+   "type": "private",
+   "county": "Boone",
+   "grade_span": "PK-12",
+   "affiliation": "Christian (nondenominational)",
+   "cities": [
+    "Whitestown"
+   ],
+   "city": "Whitestown",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "guerin-catholic-high-school",
+   "name": "Guerin Catholic High School",
+   "short_name": "Guerin Catholic High School",
+   "type": "private",
+   "county": "Hamilton",
+   "grade_span": "9-12",
+   "affiliation": "Catholic",
+   "cities": [
+    "Noblesville"
+   ],
+   "city": "Noblesville",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "legacy-christian-school",
+   "name": "Legacy Christian School",
+   "short_name": "Legacy Christian School",
+   "type": "private",
+   "county": "Hamilton",
+   "grade_span": "PK-12",
+   "affiliation": "Christian",
+   "cities": [
+    "Noblesville"
+   ],
+   "city": "Noblesville",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "montessori-school-of-westfield",
+   "name": "Montessori School of Westfield",
+   "short_name": "Montessori School of Westfield",
+   "type": "private",
+   "county": "Hamilton",
+   "grade_span": "PK-8",
+   "affiliation": "Montessori",
+   "cities": [
+    "Westfield"
+   ],
+   "city": "Westfield",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "our-lady-of-mount-carmel-school",
+   "name": "Our Lady of Mount Carmel School",
+   "short_name": "Our Lady of Mount Carmel School",
+   "type": "private",
+   "county": "Hamilton",
+   "grade_span": "K-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Carmel"
+   ],
+   "city": "Carmel",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-louis-de-montfort-catholic-school",
+   "name": "St. Louis de Montfort Catholic School",
+   "short_name": "St. Louis de Montfort Catholic School",
+   "type": "private",
+   "county": "Hamilton",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Fishers"
+   ],
+   "city": "Fishers",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-maria-goretti-catholic-school",
+   "name": "St. Maria Goretti Catholic School",
+   "short_name": "St. Maria Goretti Catholic School",
+   "type": "private",
+   "county": "Hamilton",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Westfield"
+   ],
+   "city": "Westfield",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "university-high-school-of-indiana",
+   "name": "University High School of Indiana",
+   "short_name": "University High School of Indiana",
+   "type": "private",
+   "county": "Hamilton",
+   "grade_span": "9-12",
+   "affiliation": "Independent (nonsectarian college prep)",
+   "cities": [
+    "Carmel"
+   ],
+   "city": "Carmel",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-michael-catholic-school-greenfield",
+   "name": "St. Michael Catholic School",
+   "short_name": "St. Michael Catholic School",
+   "type": "private",
+   "county": "Hancock",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Greenfield"
+   ],
+   "city": "Greenfield",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "bethesda-christian-school",
+   "name": "Bethesda Christian School",
+   "short_name": "Bethesda Christian School",
+   "type": "private",
+   "county": "Hendricks",
+   "grade_span": "PK-12",
+   "affiliation": "Christian (non-denominational)",
+   "cities": [
+    "Brownsburg"
+   ],
+   "city": "Brownsburg",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "our-shepherd-lutheran-school",
+   "name": "Our Shepherd Lutheran School",
+   "short_name": "Our Shepherd Lutheran School",
+   "type": "private",
+   "county": "Hendricks",
+   "grade_span": "PK-8",
+   "affiliation": "Lutheran (LCMS)",
+   "cities": [
+    "Avon"
+   ],
+   "city": "Avon",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-malachy-catholic-school",
+   "name": "St. Malachy Parish School",
+   "short_name": "St. Malachy Parish School",
+   "type": "private",
+   "county": "Hendricks",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Brownsburg"
+   ],
+   "city": "Brownsburg",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-susanna-catholic-school",
+   "name": "St. Susanna Catholic School",
+   "short_name": "St. Susanna Catholic School",
+   "type": "private",
+   "county": "Hendricks",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Plainfield"
+   ],
+   "city": "Plainfield",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "greenwood-christian-academy",
+   "name": "Greenwood Christian Academy",
+   "short_name": "Greenwood Christian Academy",
+   "type": "private",
+   "county": "Johnson",
+   "grade_span": "PK-12",
+   "affiliation": "Christian",
+   "cities": [
+    "Greenwood"
+   ],
+   "city": "Greenwood",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "our-lady-of-the-greenwood-school",
+   "name": "Our Lady of the Greenwood Catholic School",
+   "short_name": "Our Lady of the Greenwood Catholic School",
+   "type": "private",
+   "county": "Johnson",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Greenwood"
+   ],
+   "city": "Greenwood",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-rose-of-lima-catholic-school",
+   "name": "St. Rose of Lima Catholic School",
+   "short_name": "St. Rose of Lima Catholic School",
+   "type": "private",
+   "county": "Johnson",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Franklin"
+   ],
+   "city": "Franklin",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "holy-cross-school-anderson",
+   "name": "Holy Cross School",
+   "short_name": "Holy Cross School",
+   "type": "private",
+   "county": "Madison",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Anderson"
+   ],
+   "city": "Anderson",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "indiana-christian-academy",
+   "name": "Indiana Christian Academy",
+   "short_name": "Indiana Christian Academy",
+   "type": "private",
+   "county": "Madison",
+   "grade_span": "PK-12",
+   "affiliation": "Christian (Baptist)",
+   "cities": [
+    "Anderson"
+   ],
+   "city": "Anderson",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "liberty-christian-school-anderson",
+   "name": "Liberty Christian School",
+   "short_name": "Liberty Christian School",
+   "type": "private",
+   "county": "Madison",
+   "grade_span": "PK-12",
+   "affiliation": "Christian (nondenominational)",
+   "cities": [
+    "Anderson"
+   ],
+   "city": "Anderson",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-mary-school-alexandria",
+   "name": "St. Mary School",
+   "short_name": "St. Mary School",
+   "type": "private",
+   "county": "Madison",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Alexandria"
+   ],
+   "city": "Alexandria",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "bishop-chatard-high-school",
+   "name": "Bishop Chatard High School",
+   "short_name": "Bishop Chatard High School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "9-12",
+   "affiliation": "Catholic",
+   "cities": [
+    "Broad Ripple"
+   ],
+   "city": "Broad Ripple",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "brebeuf-jesuit-preparatory-school",
+   "name": "Brebeuf Jesuit Preparatory School",
+   "short_name": "Brebeuf Jesuit Preparatory School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "9-12",
+   "affiliation": "Catholic (Jesuit)",
+   "cities": [
+    "Eagle Creek"
+   ],
+   "city": "Eagle Creek",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "cathedral-high-school",
+   "name": "Cathedral High School",
+   "short_name": "Cathedral High School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "9-12",
+   "affiliation": "Catholic",
+   "cities": [
+    "Lawrence"
+   ],
+   "city": "Lawrence",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "heritage-christian-school",
+   "name": "Heritage Christian School",
+   "short_name": "Heritage Christian School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "PK-12",
+   "affiliation": "Christian (nondenominational)",
+   "cities": [
+    "Geist"
+   ],
+   "city": "Geist",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "holy-name-catholic-school",
+   "name": "Holy Name Catholic School",
+   "short_name": "Holy Name Catholic School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Beech Grove"
+   ],
+   "city": "Beech Grove",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "park-tudor-school",
+   "name": "Park Tudor School",
+   "short_name": "Park Tudor School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "PK-12",
+   "affiliation": "Independent (nonsectarian)",
+   "cities": [
+    "Broad Ripple"
+   ],
+   "city": "Broad Ripple",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "roncalli-high-school",
+   "name": "Roncalli High School",
+   "short_name": "Roncalli High School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "9-12",
+   "affiliation": "Catholic",
+   "cities": [
+    "Southport"
+   ],
+   "city": "Southport",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "scecina-memorial-high-school",
+   "name": "Scecina Memorial High School",
+   "short_name": "Scecina Memorial High School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "9-12",
+   "affiliation": "Catholic",
+   "cities": [
+    "Irvington"
+   ],
+   "city": "Irvington",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-christopher-catholic-school",
+   "name": "St. Christopher Catholic School",
+   "short_name": "St. Christopher Catholic School",
+   "type": "private",
+   "county": "Marion",
+   "grade_span": "PK-6",
+   "affiliation": "Catholic",
+   "cities": [
+    "Speedway"
+   ],
+   "city": "Speedway",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "mooresville-christian-academy",
+   "name": "Mooresville Christian Academy",
+   "short_name": "Mooresville Christian Academy",
+   "type": "private",
+   "county": "Morgan",
+   "grade_span": "PK-12",
+   "affiliation": "Christian (nondenominational)",
+   "cities": [
+    "Mooresville"
+   ],
+   "city": "Mooresville",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "tabernacle-christian-school",
+   "name": "Tabernacle Christian School",
+   "short_name": "Tabernacle Christian School",
+   "type": "private",
+   "county": "Morgan",
+   "grade_span": "PK-12",
+   "affiliation": "Baptist",
+   "cities": [
+    "Martinsville"
+   ],
+   "city": "Martinsville",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-joseph-catholic-school-shelbyville",
+   "name": "St. Joseph Catholic School",
+   "short_name": "St. Joseph Catholic School",
+   "type": "private",
+   "county": "Shelby",
+   "grade_span": "PK-5",
+   "affiliation": "Catholic",
+   "cities": [
+    "Shelbyville"
+   ],
+   "city": "Shelbyville",
+   "boundary_note": null,
+   "existing": false
+  }
+ ],
+ "city_schools": {
+  "Carmel": {
+   "public": [
+    "carmel-clay-schools"
+   ],
+   "private": [
+    "our-lady-of-mount-carmel-school",
+    "university-high-school-of-indiana"
+   ],
+   "note": "All of Carmel is served by Carmel Clay Schools.",
+   "county": "Hamilton"
+  },
+  "Fishers": {
+   "public": [
+    "hamilton-southeastern-schools"
+   ],
+   "private": [
+    "st-louis-de-montfort-catholic-school"
+   ],
+   "note": "The entire City of Fishers is served by Hamilton Southeastern Schools.",
+   "county": "Hamilton"
+  },
+  "Noblesville": {
+   "public": [
+    "noblesville-schools",
+    "hamilton-southeastern-schools"
+   ],
+   "private": [
+    "guerin-catholic-high-school",
+    "legacy-christian-school"
+   ],
+   "note": "Most of Noblesville is Noblesville Schools; a southern/southeastern portion lies in Hamilton Southeastern Schools.",
+   "county": "Hamilton"
+  },
+  "Westfield": {
+   "public": [
+    "westfield-washington-schools"
+   ],
+   "private": [
+    "st-maria-goretti-catholic-school",
+    "montessori-school-of-westfield"
+   ],
+   "note": "All of Westfield is served by Westfield Washington Schools.",
+   "county": "Hamilton"
+  },
+  "Cicero": {
+   "public": [
+    "hamilton-heights-school-corporation"
+   ],
+   "private": [],
+   "note": "Cicero is served by Hamilton Heights School Corporation.",
+   "county": "Hamilton"
+  },
+  "Arcadia": {
+   "public": [
+    "hamilton-heights-school-corporation"
+   ],
+   "private": [],
+   "note": "Arcadia is served by Hamilton Heights School Corporation; the district office is in Arcadia.",
+   "county": "Hamilton"
+  },
+  "Atlanta": {
+   "public": [
+    "hamilton-heights-school-corporation"
+   ],
+   "private": [],
+   "note": "Atlanta is served by Hamilton Heights School Corporation.",
+   "county": "Hamilton"
+  },
+  "Sheridan": {
+   "public": [
+    "sheridan-community-schools"
+   ],
+   "private": [],
+   "note": "Sheridan is served by Sheridan Community Schools (Adams Township).",
+   "county": "Hamilton"
+  },
+  "Greenwood": {
+   "public": [
+    "center-grove-schools",
+    "greenwood-community-schools",
+    "clark-pleasant-community-schools"
+   ],
+   "private": [
+    "our-lady-of-the-greenwood-school",
+    "greenwood-christian-academy"
+   ],
+   "note": "Assignment depends on the address — west-side Greenwood (White River Township) is Center Grove, the established central/older areas are Greenwood Community, and southern/southeastern pockets fall in Clark-Pleasant.",
+   "county": "Johnson"
+  },
+  "Franklin": {
+   "public": [
+    "franklin-community-schools",
+    "clark-pleasant-community-schools"
+   ],
+   "private": [
+    "st-rose-of-lima-catholic-school"
+   ],
+   "note": "Nearly all of Franklin is Franklin Community; a very small section falls within Clark-Pleasant.",
+   "county": "Johnson"
+  },
+  "Bargersville": {
+   "public": [
+    "center-grove-schools",
+    "franklin-community-schools"
+   ],
+   "private": [],
+   "note": "Most of Bargersville is Center Grove (White River Township); a portion on the Franklin side is Franklin Community.",
+   "county": "Johnson"
+  },
+  "Whiteland": {
+   "public": [
+    "clark-pleasant-community-schools"
+   ],
+   "private": [],
+   "note": "Whiteland (and New Whiteland) are served by Clark-Pleasant; Whiteland Community High School is the district high school.",
+   "county": "Johnson"
+  },
+  "Edinburgh": {
+   "public": [
+    "edinburgh-community-schools"
+   ],
+   "private": [],
+   "note": "Edinburgh is served by Edinburgh Community School Corporation.",
+   "county": "Johnson"
+  },
+  "Trafalgar": {
+   "public": [
+    "indian-creek-schools"
+   ],
+   "private": [],
+   "note": "Trafalgar is served by Nineveh-Hensley-Jackson United School Corporation, branded Indian Creek Schools.",
+   "county": "Johnson"
+  },
+  "Avon": {
+   "public": [
+    "avon-community-schools"
+   ],
+   "private": [
+    "our-shepherd-lutheran-school"
+   ],
+   "note": "Avon is served by Avon Community School Corporation.",
+   "county": "Hendricks"
+  },
+  "Brownsburg": {
+   "public": [
+    "brownsburg-community-schools",
+    "north-west-hendricks-schools"
+   ],
+   "private": [
+    "st-malachy-catholic-school",
+    "bethesda-christian-school"
+   ],
+   "note": "Brownsburg Community Schools serves most of the town; a small northwest portion is in North West Hendricks.",
+   "county": "Hendricks"
+  },
+  "Plainfield": {
+   "public": [
+    "plainfield-community-schools",
+    "mill-creek-community-schools"
+   ],
+   "private": [
+    "st-susanna-catholic-school"
+   ],
+   "note": "Plainfield Community Schools serves the town; a small western section is in Mill Creek.",
+   "county": "Hendricks"
+  },
+  "Danville": {
+   "public": [
+    "danville-community-schools"
+   ],
+   "private": [],
+   "note": "Danville is served by Danville Community School Corporation.",
+   "county": "Hendricks"
+  },
+  "Pittsboro": {
+   "public": [
+    "north-west-hendricks-schools"
+   ],
+   "private": [],
+   "note": "Pittsboro's schools are part of North West Hendricks.",
+   "county": "Hendricks"
+  },
+  "Clayton": {
+   "public": [
+    "mill-creek-community-schools"
+   ],
+   "private": [],
+   "note": "Cascade schools in Clayton are part of Mill Creek Community School Corporation.",
+   "county": "Hendricks"
+  },
+  "Zionsville": {
+   "public": [
+    "zionsville-community-schools"
+   ],
+   "private": [],
+   "note": "All of Zionsville is served by Zionsville Community Schools.",
+   "county": "Boone"
+  },
+  "Whitestown": {
+   "public": [
+    "zionsville-community-schools",
+    "lebanon-community-schools"
+   ],
+   "private": [
+    "traders-point-christian-schools"
+   ],
+   "note": "Whitestown is split: the Eagle Township/southeast (Anson) area attends Zionsville, while the Worth and Perry Township areas (most of the older town) attend Lebanon.",
+   "county": "Boone"
+  },
+  "Lebanon": {
+   "public": [
+    "lebanon-community-schools"
+   ],
+   "private": [],
+   "note": "Lebanon is served by Lebanon Community School Corporation.",
+   "county": "Boone"
+  },
+  "Thorntown": {
+   "public": [
+    "western-boone-county-schools"
+   ],
+   "private": [],
+   "note": "Home to the Western Boone district offices and Western Boone Jr-Sr High School.",
+   "county": "Boone"
+  },
+  "Jamestown": {
+   "public": [
+    "western-boone-county-schools"
+   ],
+   "private": [],
+   "note": "Served by Western Boone County Community School District.",
+   "county": "Boone"
+  },
+  "Mooresville": {
+   "public": [
+    "mooresville-consolidated-schools"
+   ],
+   "private": [
+    "mooresville-christian-academy"
+   ],
+   "note": "Served by Mooresville Consolidated School Corporation.",
+   "county": "Morgan"
+  },
+  "Martinsville": {
+   "public": [
+    "msd-martinsville"
+   ],
+   "private": [
+    "tabernacle-christian-school"
+   ],
+   "note": "Served by the Metropolitan School District of Martinsville.",
+   "county": "Morgan"
+  },
+  "Monrovia": {
+   "public": [
+    "monroe-gregg-school-district"
+   ],
+   "private": [],
+   "note": "Served by Monroe-Gregg School District.",
+   "county": "Morgan"
+  },
+  "Beech Grove": {
+   "public": [
+    "beech-grove-city-schools"
+   ],
+   "private": [
+    "holy-name-catholic-school"
+   ],
+   "note": "Independent enclave city district; not part of IPS or a township MSD.",
+   "county": "Marion"
+  },
+  "Speedway": {
+   "public": [
+    "school-town-of-speedway"
+   ],
+   "private": [
+    "st-christopher-catholic-school"
+   ],
+   "note": "Independent enclave town district on the west side.",
+   "county": "Marion"
+  },
+  "Southport": {
+   "public": [
+    "perry-township-schools",
+    "franklin-township-schools"
+   ],
+   "private": [
+    "roncalli-high-school"
+   ],
+   "note": "MSD of Perry Township serves the City of Southport; eastern parts of the broader 46237 area fall in MSD of Franklin Township.",
+   "county": "Marion"
+  },
+  "Lawrence": {
+   "public": [
+    "msd-lawrence-township"
+   ],
+   "private": [
+    "cathedral-high-school"
+   ],
+   "note": "The City of Lawrence is served by MSD of Lawrence Township.",
+   "county": "Marion"
+  },
+  "Broad Ripple": {
+   "public": [
+    "indianapolis-public-schools",
+    "msd-washington-township"
+   ],
+   "private": [
+    "bishop-chatard-high-school",
+    "park-tudor-school"
+   ],
+   "note": "Broad Ripple Village core is within IPS; surrounding northern areas are served by MSD of Washington Township.",
+   "county": "Marion"
+  },
+  "Irvington": {
+   "public": [
+    "indianapolis-public-schools",
+    "msd-warren-township"
+   ],
+   "private": [
+    "scecina-memorial-high-school"
+   ],
+   "note": "The Irvington Historic District is within IPS; areas farther east are served by MSD of Warren Township.",
+   "county": "Marion"
+  },
+  "Geist": {
+   "public": [
+    "msd-lawrence-township",
+    "hamilton-southeastern-schools"
+   ],
+   "private": [
+    "heritage-christian-school"
+   ],
+   "note": "Geist straddles the county line: the Marion County side is MSD of Lawrence Township; the Hamilton County (Fishers) side is Hamilton Southeastern Schools.",
+   "county": "Marion"
+  },
+  "Eagle Creek": {
+   "public": [
+    "msd-pike-township"
+   ],
+   "private": [
+    "brebeuf-jesuit-preparatory-school"
+   ],
+   "note": "Served by MSD of Pike Township in northwest Marion County.",
+   "county": "Marion"
+  },
+  "McCordsville": {
+   "public": [
+    "mt-vernon-community-schools"
+   ],
+   "private": [],
+   "note": "McCordsville is served entirely by Mt. Vernon Community School Corporation.",
+   "county": "Hancock"
+  },
+  "Fortville": {
+   "public": [
+    "mt-vernon-community-schools"
+   ],
+   "private": [],
+   "note": "Fortville is served by Mt. Vernon Community School Corporation.",
+   "county": "Hancock"
+  },
+  "Greenfield": {
+   "public": [
+    "greenfield-central-community-schools"
+   ],
+   "private": [
+    "st-michael-catholic-school-greenfield"
+   ],
+   "note": "Greenfield is served by Greenfield-Central Community School Corporation.",
+   "county": "Hancock"
+  },
+  "New Palestine": {
+   "public": [
+    "new-palestine-community-schools"
+   ],
+   "private": [],
+   "note": "New Palestine is served by New Palestine Community Schools (formerly Southern Hancock).",
+   "county": "Hancock"
+  },
+  "Cumberland": {
+   "public": [
+    "msd-warren-township",
+    "mt-vernon-community-schools",
+    "new-palestine-community-schools"
+   ],
+   "private": [],
+   "note": "Cumberland straddles the Marion-Hancock county line across three townships, so it is split among MSD of Warren Township, Mt. Vernon, and New Palestine. Attendance depends on which part of town a home is in.",
+   "county": "Marion"
+  },
+  "Shirley": {
+   "public": [
+    "eastern-hancock-county-community-schools",
+    "charles-a-beard-memorial-schools"
+   ],
+   "private": [],
+   "note": "Shirley straddles the Hancock-Henry county line: the larger Hancock (Brown Township) portion attends Eastern Hancock; the Henry-County portion attends Charles A. Beard.",
+   "county": "Hancock"
+  },
+  "Shelbyville": {
+   "public": [
+    "shelbyville-central-schools"
+   ],
+   "private": [
+    "st-joseph-catholic-school-shelbyville"
+   ],
+   "note": "Shelbyville is served by Shelbyville Central Schools.",
+   "county": "Shelby"
+  },
+  "Fairland": {
+   "public": [
+    "northwestern-consolidated-schools-shelby"
+   ],
+   "private": [],
+   "note": "Fairland is served by the Northwestern Consolidated School District of Shelby County (Triton Central).",
+   "county": "Shelby"
+  },
+  "Morristown": {
+   "public": [
+    "shelby-eastern-schools"
+   ],
+   "private": [],
+   "note": "Morristown is served by Shelby Eastern Schools.",
+   "county": "Shelby"
+  },
+  "Waldron": {
+   "public": [
+    "shelby-eastern-schools"
+   ],
+   "private": [],
+   "note": "Waldron is served by Shelby Eastern Schools.",
+   "county": "Shelby"
+  },
+  "Anderson": {
+   "public": [
+    "anderson-community-schools",
+    "frankton-lapel-community-schools"
+   ],
+   "private": [
+    "holy-cross-school-anderson",
+    "liberty-christian-school-anderson",
+    "indiana-christian-academy"
+   ],
+   "note": "Anderson Community School Corporation serves the majority of the city; the northwestern edge (Lafayette Township) falls in Frankton-Lapel.",
+   "county": "Madison"
+  },
+  "Pendleton": {
+   "public": [
+    "south-madison-community-schools"
+   ],
+   "private": [],
+   "note": "Served entirely by South Madison Community School Corporation (Pendleton Heights).",
+   "county": "Madison"
+  },
+  "Lapel": {
+   "public": [
+    "frankton-lapel-community-schools"
+   ],
+   "private": [],
+   "note": "Served by Frankton-Lapel Community Schools.",
+   "county": "Madison"
+  },
+  "Alexandria": {
+   "public": [
+    "alexandria-community-schools"
+   ],
+   "private": [
+    "st-mary-school-alexandria"
+   ],
+   "note": "Served by Alexandria Community School Corporation (Alexandria-Monroe).",
+   "county": "Madison"
+  },
+  "Elwood": {
+   "public": [
+    "elwood-community-schools"
+   ],
+   "private": [],
+   "note": "Served entirely by Elwood Community School Corporation.",
+   "county": "Madison"
+  }
+ }
+}
