@@ -1101,6 +1101,255 @@
    "city": "Shelbyville",
    "boundary_note": null,
    "existing": false
+  },
+  {
+   "slug": "brown-county-schools",
+   "name": "Brown County School Corporation",
+   "short_name": "Brown County",
+   "type": "public",
+   "county": "Brown",
+   "grade_span": "K-12",
+   "cities": [
+    "Nashville",
+    "Bean Blossom"
+   ],
+   "boundary_note": "Single county-wide district covering all of Brown County, including Nashville and Bean Blossom.",
+   "existing": false
+  },
+  {
+   "slug": "greensburg-community-schools",
+   "name": "Greensburg Community School Corporation",
+   "short_name": "Greensburg Community",
+   "type": "public",
+   "county": "Decatur",
+   "grade_span": "K-12",
+   "cities": [
+    "Greensburg"
+   ],
+   "boundary_note": "City district serving Greensburg; rural Decatur County is served by Decatur County Community Schools.",
+   "existing": false
+  },
+  {
+   "slug": "decatur-county-community-schools",
+   "name": "Decatur County Community Schools",
+   "short_name": "Decatur County Community",
+   "type": "public",
+   "county": "Decatur",
+   "grade_span": "K-12",
+   "cities": [
+    "Westport"
+   ],
+   "boundary_note": "Serves rural Decatur County outside Greensburg via North Decatur and South Decatur campuses; Westport is in the South Decatur attendance area.",
+   "existing": false
+  },
+  {
+   "slug": "st-marys-catholic-school-greensburg",
+   "name": "St. Mary's Catholic School",
+   "short_name": "St. Mary's Catholic School",
+   "type": "private",
+   "county": "Decatur",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Greensburg"
+   ],
+   "city": "Greensburg",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "bartholomew-consolidated-school-corporation",
+   "name": "Bartholomew Consolidated School Corporation",
+   "short_name": "Bartholomew Consolidated (BCSC)",
+   "type": "public",
+   "county": "Bartholomew",
+   "grade_span": "PK-12",
+   "cities": [
+    "Columbus"
+   ],
+   "boundary_note": "Serves the city of Columbus and all but two townships in Bartholomew County (all except Hawcreek and Flatrock).",
+   "existing": false
+  },
+  {
+   "slug": "flat-rock-hawcreek-school-corporation",
+   "name": "Flat Rock-Hawcreek School Corporation",
+   "short_name": "Flat Rock-Hawcreek",
+   "type": "public",
+   "county": "Bartholomew",
+   "grade_span": "K-12",
+   "cities": [
+    "Hope"
+   ],
+   "boundary_note": "Serves eastern Bartholomew County — the town of Hope and Hawcreek and Flatrock townships. Does not serve the city of Columbus.",
+   "existing": false
+  },
+  {
+   "slug": "seymour-community-schools",
+   "name": "Seymour Community School Corporation",
+   "short_name": "Seymour Community Schools",
+   "type": "public",
+   "county": "Jackson",
+   "grade_span": "PK-12",
+   "cities": [
+    "Seymour"
+   ],
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "jennings-county-school-corporation",
+   "name": "Jennings County School Corporation",
+   "short_name": "Jennings County Schools",
+   "type": "public",
+   "county": "Jennings",
+   "grade_span": "PK-12",
+   "cities": [
+    "North Vernon"
+   ],
+   "boundary_note": "Single countywide district serving all of Jennings County, including North Vernon.",
+   "existing": false
+  },
+  {
+   "slug": "st-bartholomew-catholic-school",
+   "name": "St. Bartholomew Catholic School",
+   "short_name": "St. Bartholomew Catholic School",
+   "type": "private",
+   "county": "Bartholomew",
+   "grade_span": "K-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Columbus"
+   ],
+   "city": "Columbus",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "columbus-christian-school",
+   "name": "Columbus Christian School",
+   "short_name": "Columbus Christian School",
+   "type": "private",
+   "county": "Bartholomew",
+   "grade_span": "PK-12",
+   "affiliation": "Interdenominational Christian",
+   "cities": [
+    "Columbus"
+   ],
+   "city": "Columbus",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "trinity-lutheran-high-school",
+   "name": "Trinity Lutheran High School",
+   "short_name": "Trinity Lutheran High School",
+   "type": "private",
+   "county": "Jackson",
+   "grade_span": "9-12",
+   "affiliation": "Lutheran (LCMS)",
+   "cities": [
+    "Seymour"
+   ],
+   "city": "Seymour",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-ambrose-catholic-school",
+   "name": "St. Ambrose Catholic School",
+   "short_name": "St. Ambrose Catholic School",
+   "type": "private",
+   "county": "Jackson",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "Seymour"
+   ],
+   "city": "Seymour",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "immanuel-lutheran-school-seymour",
+   "name": "Immanuel Lutheran School",
+   "short_name": "Immanuel Lutheran School",
+   "type": "private",
+   "county": "Jackson",
+   "grade_span": "PK-8",
+   "affiliation": "Lutheran (LCMS)",
+   "cities": [
+    "Seymour"
+   ],
+   "city": "Seymour",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "st-mary-catholic-school-north-vernon",
+   "name": "St. Mary's School (North Vernon)",
+   "short_name": "St. Mary's School (North Vernon)",
+   "type": "private",
+   "county": "Jennings",
+   "grade_span": "PK-8",
+   "affiliation": "Catholic",
+   "cities": [
+    "North Vernon"
+   ],
+   "city": "North Vernon",
+   "boundary_note": null,
+   "existing": false
+  },
+  {
+   "slug": "crawfordsville-community-schools",
+   "name": "Crawfordsville Community School Corporation",
+   "short_name": "Crawfordsville",
+   "type": "public",
+   "county": "Montgomery",
+   "grade_span": "K-12",
+   "cities": [
+    "Crawfordsville"
+   ],
+   "boundary_note": "Serves the city of Crawfordsville; rural Montgomery County is served by North Montgomery and South Montgomery.",
+   "existing": false
+  },
+  {
+   "slug": "greencastle-community-schools",
+   "name": "Greencastle Community School Corporation",
+   "short_name": "Greencastle",
+   "type": "public",
+   "county": "Putnam",
+   "grade_span": "K-12",
+   "cities": [
+    "Greencastle"
+   ],
+   "boundary_note": "Serves Greencastle plus Greencastle and Madison townships; rural Putnam County is served by North Putnam and South Putnam.",
+   "existing": false
+  },
+  {
+   "slug": "cloverdale-community-schools",
+   "name": "Cloverdale Community School Corporation",
+   "short_name": "Cloverdale",
+   "type": "public",
+   "county": "Putnam",
+   "grade_span": "K-12",
+   "cities": [
+    "Cloverdale"
+   ],
+   "boundary_note": "Serves the town of Cloverdale and Cloverdale Township in southern Putnam County.",
+   "existing": false
+  },
+  {
+   "slug": "north-central-parke-community-schools",
+   "name": "North Central Parke Community School Corporation",
+   "short_name": "North Central Parke",
+   "type": "public",
+   "county": "Parke",
+   "grade_span": "K-12",
+   "cities": [
+    "Rockville"
+   ],
+   "boundary_note": "Serves Rockville (HQ), Bloomingdale, and Marshall; the 2013 merger of the former Rockville and Turkey Run districts. Southwestern Parke County is served by Southwest Parke.",
+   "existing": false
   }
  ],
  "city_schools": {
@@ -1583,6 +1832,105 @@
    "private": [],
    "note": "Served entirely by Elwood Community School Corporation.",
    "county": "Madison"
+  },
+  "Nashville": {
+   "public": [
+    "brown-county-schools"
+   ],
+   "private": [],
+   "note": "Served by the single county-wide Brown County School Corporation.",
+   "county": "Brown"
+  },
+  "Bean Blossom": {
+   "public": [
+    "brown-county-schools"
+   ],
+   "private": [],
+   "note": "An unincorporated community in Brown County, served by the county-wide Brown County School Corporation.",
+   "county": "Brown"
+  },
+  "Greensburg": {
+   "public": [
+    "greensburg-community-schools"
+   ],
+   "private": [
+    "st-marys-catholic-school-greensburg"
+   ],
+   "note": "The city is served by Greensburg Community Schools; surrounding rural Decatur County is served by Decatur County Community Schools.",
+   "county": "Decatur"
+  },
+  "Westport": {
+   "public": [
+    "decatur-county-community-schools"
+   ],
+   "private": [],
+   "note": "Sand Creek Township; served by Decatur County Community Schools (South Decatur campus).",
+   "county": "Decatur"
+  },
+  "Columbus": {
+   "public": [
+    "bartholomew-consolidated-school-corporation"
+   ],
+   "private": [
+    "st-bartholomew-catholic-school",
+    "columbus-christian-school"
+   ],
+   "note": "The city of Columbus is served by Bartholomew Consolidated School Corporation (BCSC). The separate Flat Rock-Hawcreek School Corporation covers eastern Bartholomew County (the Hope area), not the city itself.",
+   "county": "Bartholomew"
+  },
+  "Seymour": {
+   "public": [
+    "seymour-community-schools"
+   ],
+   "private": [
+    "trinity-lutheran-high-school",
+    "st-ambrose-catholic-school",
+    "immanuel-lutheran-school-seymour"
+   ],
+   "note": "Seymour is served entirely by Seymour Community School Corporation. Trinity Lutheran High School is a regional LCMS high school.",
+   "county": "Jackson"
+  },
+  "North Vernon": {
+   "public": [
+    "jennings-county-school-corporation"
+   ],
+   "private": [
+    "st-mary-catholic-school-north-vernon"
+   ],
+   "note": "Jennings County is a single countywide district; North Vernon is its county seat. St. Mary's is a K-8 Catholic school.",
+   "county": "Jennings"
+  },
+  "Crawfordsville": {
+   "public": [
+    "crawfordsville-community-schools"
+   ],
+   "private": [],
+   "note": "The city is served entirely by Crawfordsville Community School Corporation; North Montgomery and South Montgomery serve rural Montgomery County.",
+   "county": "Montgomery"
+  },
+  "Greencastle": {
+   "public": [
+    "greencastle-community-schools"
+   ],
+   "private": [],
+   "note": "Served by Greencastle Community School Corporation; North Putnam and South Putnam serve rural Putnam County.",
+   "county": "Putnam"
+  },
+  "Cloverdale": {
+   "public": [
+    "cloverdale-community-schools"
+   ],
+   "private": [],
+   "note": "Served by Cloverdale Community School Corporation.",
+   "county": "Putnam"
+  },
+  "Rockville": {
+   "public": [
+    "north-central-parke-community-schools"
+   ],
+   "private": [],
+   "note": "Served by North Central Parke Community School Corporation (the 2013 merger of the former Rockville and Turkey Run districts).",
+   "county": "Parke"
   }
  }
 }
