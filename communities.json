@@ -1,62 +1,1440 @@
 {
- "cities": ["Carmel", "Fishers", "Westfield", "Noblesville", "Zionsville", "Greenwood", "Bargersville", "Avon", "Brownsburg", "Plainfield", "Whitestown", "McCordsville"],
+ "cities": [
+  "Carmel",
+  "Fishers",
+  "Westfield",
+  "Noblesville",
+  "Zionsville",
+  "Greenwood",
+  "Bargersville",
+  "Avon",
+  "Brownsburg",
+  "Plainfield",
+  "Whitestown",
+  "McCordsville",
+  "Shelbyville",
+  "Southport"
+ ],
  "communities": [
-  { "slug": "village-of-westclay-carmel", "name": "Village of WestClay", "city": "Carmel", "county": "Hamilton", "existing": true },
-  { "slug": "brookshire-carmel", "name": "Brookshire", "city": "Carmel", "county": "Hamilton", "existing": true },
-  { "slug": "chatham-hills-westfield", "name": "Chatham Hills", "city": "Westfield", "county": "Hamilton", "existing": true },
-  { "slug": "bridgewater-club-westfield", "name": "The Bridgewater Club", "city": "Westfield", "county": "Hamilton", "existing": true },
-  { "slug": "windermere-fishers", "name": "Windermere", "city": "Fishers", "county": "Hamilton", "existing": true },
-  { "slug": "avalon-fishers", "name": "Avalon of Fishers", "city": "Fishers", "county": "Hamilton", "existing": true },
-  { "slug": "holliday-farms-zionsville", "name": "Holliday Farms", "city": "Zionsville", "county": "Boone", "existing": true },
-  { "slug": "irishmans-run-zionsville", "name": "Irishman's Run", "city": "Zionsville", "county": "Boone", "existing": true },
-  { "slug": "sagamore-noblesville", "name": "Sagamore", "city": "Noblesville", "county": "Hamilton", "existing": true },
-  { "slug": "kensington-grove-greenwood", "name": "Kensington Grove", "city": "Greenwood", "county": "Johnson", "existing": true },
-
-  { "slug": "jacksons-grant-carmel", "name": "Jackson's Grant on Williams Creek", "short_name": "Jackson's Grant", "city": "Carmel", "county": "Hamilton", "price_band": "$700s to $1.5M+", "type": "luxury master-planned", "highlights": ["Community & recreation center overlooking Williams Creek", "Three outdoor pools", "Williams Creek Nature Preserve & arboretum", "Connected walking trails"], "school_district": "Carmel Clay Schools", "hoa_url": "https://www.jacksonsgrant.com/", "image": null, "video": null },
-  { "slug": "claridge-farm-carmel", "name": "Claridge Farm", "city": "Carmel", "county": "Hamilton", "price_band": "$400s to $700s", "type": "established family subdivision", "highlights": ["Mature, established neighborhood", "Convenient to the US-31 corridor", "Strong long-term home-value appreciation"], "school_district": "Carmel Clay Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "springmill-ponds-carmel", "name": "Springmill Ponds", "city": "Carmel", "county": "Hamilton", "price_band": "$400s to $700s", "type": "established family subdivision", "highlights": ["Neighborhood pool", "Family-oriented single-family streets", "Near the US-31 commute corridor"], "school_district": "Carmel Clay Schools", "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "hamilton-proper-fishers", "name": "Hamilton Proper", "city": "Fishers", "county": "Hamilton", "price_band": "$500s to $1M+", "type": "golf community", "highlights": ["The Hawthorns Golf & Country Club", "Upscale custom homes", "Mature landscaping"], "school_district": "Hamilton Southeastern Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "britton-falls-fishers", "name": "Britton Falls", "city": "Fishers", "county": "Hamilton", "price_band": "$300s to $600s", "type": "55+ active adult", "highlights": ["23,000 sq ft clubhouse (The Chateau)", "Indoor & resort-style outdoor pools", "Pickleball, tennis & bocce courts", "4.5 miles of walking trails"], "school_district": "Hamilton Southeastern Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "sunblest-fishers", "name": "Sunblest", "city": "Fishers", "county": "Hamilton", "price_band": "$300s to $500s", "type": "established subdivision", "highlights": ["Mature trees & larger lots", "Walkable to the Nickel Plate District", "Near downtown Fishers"], "school_district": "Hamilton Southeastern Schools", "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "harmony-westfield", "name": "Harmony", "city": "Westfield", "county": "Hamilton", "price_band": "$400s to $700s+", "type": "master-planned", "highlights": ["Three community pools", "Clubhouse & fitness center", "60+ acres of green space", "Pickleball & tennis courts"], "school_district": "Westfield Washington Schools", "hoa_url": "https://www.harmonywestfield.com/", "image": null, "video": null },
-  { "slug": "viking-meadows-westfield", "name": "Viking Meadows", "city": "Westfield", "county": "Hamilton", "price_band": "$300s to $600s", "type": "master-planned", "highlights": ["Clubhouse with pools", "Fitness center & athletic courts", "Ponds & waterfalls", "Playground"], "school_district": "Westfield Washington Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "maple-knoll-westfield", "name": "Maple Knoll", "city": "Westfield", "county": "Hamilton", "price_band": "$400s to $700s", "type": "master-planned", "highlights": ["Planned-unit development in Westfield", "Custom & semi-custom homes"], "school_district": "Westfield Washington Schools", "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "north-harbour-noblesville", "name": "North Harbour", "city": "Noblesville", "county": "Hamilton", "price_band": "$250s to $1M+", "type": "lakefront & golf", "highlights": ["On Morse Reservoir", "Harbour Trees Golf Club (Pete Dye course)", "Waterfront & golf-course homes", "Pool, tennis & clubhouse"], "school_district": "Noblesville Schools", "hoa_url": "https://www.nhpoai.com/", "image": null, "video": null },
-  { "slug": "highlands-at-stony-creek-noblesville", "name": "Highlands at Stony Creek", "city": "Noblesville", "county": "Hamilton", "price_band": "$300s to $500s", "type": "established family subdivision", "highlights": ["Community pool", "Tennis & basketball courts", "Clubhouse with fitness room", "Walking paths"], "school_district": "Hamilton Southeastern Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "deer-path-noblesville", "name": "Deer Path", "city": "Noblesville", "county": "Hamilton", "price_band": "$250s to $450s", "type": "established family subdivision", "highlights": ["Community pool", "Tennis & basketball courts", "Multiple playgrounds", "Large community near Hamilton Town Center"], "school_district": null, "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "stonegate-zionsville", "name": "Stonegate", "city": "Zionsville", "county": "Boone", "price_band": "$500s to $1M+", "type": "master-planned village", "highlights": ["Competition-size swimming pool", "70+ acres of parks & open space", "Walkable village feel", "Basketball courts"], "school_district": "Zionsville Community Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "the-willows-zionsville", "name": "The Willows", "city": "Zionsville", "county": "Boone", "price_band": "$700s to $1.5M+", "type": "luxury", "highlights": ["Community pool & tennis courts", "Eagle Lake & walking trails", "Custom luxury homes", "Rolling hills & mature trees"], "school_district": "Zionsville Community Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "austin-oaks-zionsville", "name": "Austin Oaks", "city": "Zionsville", "county": "Boone", "price_band": "$500s to $900s", "type": "luxury custom", "highlights": ["Clubhouse & swimming pool", "Tennis courts", "Wooded custom-home lots", "Neighborhood park"], "school_district": "Zionsville Community Schools", "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "enclave-at-stones-crossing-greenwood", "name": "Enclave at Stones Crossing", "city": "Greenwood", "county": "Johnson", "price_band": "$300s to $500s", "type": "established family subdivision", "highlights": ["174-home single-family community", "Off State Road 135 near Stones Crossing", "Near Center Grove shopping"], "school_district": "Center Grove Community Schools", "hoa_url": "https://www.enclaveatstonescrossing.com/", "image": null, "video": null },
-  { "slug": "sagebriar-greenwood", "name": "Sagebriar by Del Webb", "short_name": "Sagebriar", "city": "Greenwood", "county": "Johnson", "price_band": "$300s to $500s", "type": "55+ active adult", "highlights": ["Del Webb active-adult community", "Amenity-focused, low-maintenance living", "Single-family homes"], "school_district": null, "hoa_url": null, "image": null, "video": null },
-  { "slug": "maxwell-springs-greenwood", "name": "Maxwell Springs", "city": "Greenwood", "county": "Johnson", "price_band": "$400s to $700s", "type": "luxury / estate", "highlights": ["Estate homes", "Lake, clubhouse & pool", "Rolling hills & ponds"], "school_district": null, "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "bellingham-bargersville", "name": "Bellingham", "city": "Bargersville", "county": "Johnson", "price_band": "$300s to $500s", "type": "master-planned / new construction", "highlights": ["Planned swimming pool", "Multi-use trails & sport courts", "Single-family homes & townhomes"], "school_district": "Center Grove Community Schools", "hoa_url": null, "image": null, "video": null },
-  { "slug": "morningside-bargersville", "name": "Morningside", "city": "Bargersville", "county": "Johnson", "price_band": "$350s to $600s", "type": "new construction / estate", "highlights": ["New-construction estate community", "Single-family homes"], "school_district": null, "hoa_url": null, "image": null, "video": null },
-  { "slug": "walnut-commons-bargersville", "name": "Walnut Commons", "city": "Bargersville", "county": "Johnson", "price_band": "$300s to $500s", "type": "new construction", "highlights": ["New-construction community", "Single-family homes near downtown Bargersville"], "school_district": null, "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "parks-at-prestwick-avon", "name": "Parks at Prestwick", "city": "Avon", "county": "Hendricks", "price_band": "$400s to $1M+", "type": "golf community", "highlights": ["Prestwick Country Club golf", "Clubhouse & swimming pool", "Custom homes & executive townhomes", "Playground & basketball courts"], "school_district": "Avon Community School Corporation", "hoa_url": null, "image": null, "video": null },
-  { "slug": "beechwood-farms-avon", "name": "Beechwood Farms", "city": "Avon", "county": "Hendricks", "price_band": "$350s to $600s", "type": "custom / wooded", "highlights": ["Custom-built homes", "Wooded setting", "Active HOA"], "school_district": "Avon Community School Corporation", "hoa_url": null, "image": null, "video": null },
-  { "slug": "stratford-of-avon-avon", "name": "Stratford of Avon", "city": "Avon", "county": "Hendricks", "price_band": "$250s to $450s", "type": "established family subdivision", "highlights": ["Established Avon neighborhood", "Streets named after Shakespeare works"], "school_district": "Avon Community School Corporation", "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "wynne-farms-brownsburg", "name": "Wynne Farms", "city": "Brownsburg", "county": "Hendricks", "price_band": "$250s to $450s", "type": "master-planned", "highlights": ["Includes the Birch Run & Northfield sections", "Established Brownsburg community", "Mix of single-family homes, villas & townhomes"], "school_district": "Brownsburg Community School Corporation", "hoa_url": null, "image": null, "video": null },
-  { "slug": "summer-ridge-brownsburg", "name": "Summer Ridge", "city": "Brownsburg", "county": "Hendricks", "price_band": "$250s to $400s", "type": "established family subdivision", "highlights": ["Established single-family subdivision"], "school_district": "Brownsburg Community School Corporation", "hoa_url": null, "image": null, "video": null },
-  { "slug": "lake-ridge-brownsburg", "name": "Lake Ridge", "city": "Brownsburg", "county": "Hendricks", "price_band": "$250s to $450s", "type": "established family subdivision", "highlights": ["Established single-family subdivision in Brownsburg"], "school_district": "Brownsburg Community School Corporation", "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "saratoga-plainfield", "name": "Saratoga", "city": "Plainfield", "county": "Hendricks", "price_band": "$230s to $400s", "type": "master-planned", "highlights": ["Master-planned community", "BBQ & picnic areas", "Mix of townhomes & single-family homes"], "school_district": "Plainfield Community School Corporation", "hoa_url": null, "image": null, "video": null },
-  { "slug": "grey-hawk-plainfield", "name": "Grey Hawk", "city": "Plainfield", "county": "Hendricks", "price_band": "$350s to $500s", "type": "new construction (low-maintenance)", "highlights": ["One-story single-family homes", "Walking & biking trails", "Wide sidewalks & greenspace", "About 15 minutes to the Indianapolis airport"], "school_district": "Plainfield Community School Corporation", "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "walker-farms-whitestown", "name": "Walker Farms", "city": "Whitestown", "county": "Boone", "price_band": "$250s to $450s", "type": "master-planned", "highlights": ["1,000+ homes plus villas", "Community pool", "Playgrounds & basketball court", "Walking trails; near Anson shopping"], "school_district": "Lebanon Community School Corporation", "hoa_url": "https://www.walkerfarmshomeowners.com/", "image": null, "video": null },
-  { "slug": "neighborhoods-at-anson-whitestown", "name": "The Neighborhoods at Anson", "city": "Whitestown", "county": "Boone", "price_band": "$300s to $500s", "type": "master-planned", "highlights": ["Swimming pool", "Playground & basketball court", "Dedicated nature area & walking trails", "Near Anson shopping/dining"], "school_district": null, "hoa_url": null, "image": null, "video": null },
-  { "slug": "highlands-whitestown", "name": "The Highlands, Whitestown", "short_name": "The Highlands", "city": "Whitestown", "county": "Boone", "price_band": "$300s to $500s", "type": "new construction", "highlights": ["Community pool", "Playground", "Pickleball courts", "Easy I-65 access"], "school_district": null, "hoa_url": null, "image": null, "video": null },
-
-  { "slug": "gateway-crossing-mccordsville", "name": "Gateway Crossing", "city": "McCordsville", "county": "Hancock", "price_band": "$300s to $500s", "type": "master-planned", "highlights": ["Master-planned McCordsville community", "Amenity-focused new construction"], "school_district": "Mt. Vernon Community School Corporation", "hoa_url": null, "image": null, "video": null },
-  { "slug": "emerald-springs-mccordsville", "name": "Emerald Springs", "city": "McCordsville", "county": "Hancock", "price_band": "$300s to $500s", "type": "new construction", "highlights": ["New-construction subdivision", "Family-oriented community"], "school_district": "Mt. Vernon Community School Corporation", "hoa_url": null, "image": null, "video": null },
-  { "slug": "bay-creek-mccordsville", "name": "Bay Creek", "city": "McCordsville", "county": "Hancock", "price_band": "$280s to $500s", "type": "established family subdivision", "highlights": ["Established neighborhood near Geist", "Well-maintained homes", "Mix of young families & retirees"], "school_district": null, "hoa_url": null, "image": null, "video": null }
+  {
+   "slug": "village-of-westclay-carmel",
+   "name": "Village of WestClay",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "existing": true
+  },
+  {
+   "slug": "brookshire-carmel",
+   "name": "Brookshire",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "existing": true
+  },
+  {
+   "slug": "chatham-hills-westfield",
+   "name": "Chatham Hills",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "existing": true
+  },
+  {
+   "slug": "bridgewater-club-westfield",
+   "name": "The Bridgewater Club",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "existing": true
+  },
+  {
+   "slug": "windermere-fishers",
+   "name": "Windermere",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "existing": true
+  },
+  {
+   "slug": "avalon-fishers",
+   "name": "Avalon of Fishers",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "existing": true
+  },
+  {
+   "slug": "holliday-farms-zionsville",
+   "name": "Holliday Farms",
+   "city": "Zionsville",
+   "county": "Boone",
+   "existing": true
+  },
+  {
+   "slug": "irishmans-run-zionsville",
+   "name": "Irishman's Run",
+   "city": "Zionsville",
+   "county": "Boone",
+   "existing": true
+  },
+  {
+   "slug": "sagamore-noblesville",
+   "name": "Sagamore",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "existing": true
+  },
+  {
+   "slug": "kensington-grove-greenwood",
+   "name": "Kensington Grove",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "existing": true
+  },
+  {
+   "slug": "jacksons-grant-carmel",
+   "name": "Jackson's Grant on Williams Creek",
+   "short_name": "Jackson's Grant",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$700s to $1.5M+",
+   "type": "luxury master-planned",
+   "highlights": [
+    "Community & recreation center overlooking Williams Creek",
+    "Three outdoor pools",
+    "Williams Creek Nature Preserve & arboretum",
+    "Connected walking trails"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": "https://www.jacksonsgrant.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "claridge-farm-carmel",
+   "name": "Claridge Farm",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$400s to $700s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Mature, established neighborhood",
+    "Convenient to the US-31 corridor",
+    "Strong long-term home-value appreciation"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "springmill-ponds-carmel",
+   "name": "Springmill Ponds",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$400s to $700s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Neighborhood pool",
+    "Family-oriented single-family streets",
+    "Near the US-31 commute corridor"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "hamilton-proper-fishers",
+   "name": "Hamilton Proper",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$500s to $1M+",
+   "type": "golf community",
+   "highlights": [
+    "The Hawthorns Golf & Country Club",
+    "Upscale custom homes",
+    "Mature landscaping"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "britton-falls-fishers",
+   "name": "Britton Falls",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $600s",
+   "type": "55+ active adult",
+   "highlights": [
+    "23,000 sq ft clubhouse (The Chateau)",
+    "Indoor & resort-style outdoor pools",
+    "Pickleball, tennis & bocce courts",
+    "4.5 miles of walking trails"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sunblest-fishers",
+   "name": "Sunblest",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established subdivision",
+   "highlights": [
+    "Mature trees & larger lots",
+    "Walkable to the Nickel Plate District",
+    "Near downtown Fishers"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "harmony-westfield",
+   "name": "Harmony",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$400s to $700s+",
+   "type": "master-planned",
+   "highlights": [
+    "Three community pools",
+    "Clubhouse & fitness center",
+    "60+ acres of green space",
+    "Pickleball & tennis courts"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": "https://www.harmonywestfield.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "viking-meadows-westfield",
+   "name": "Viking Meadows",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$300s to $600s",
+   "type": "master-planned",
+   "highlights": [
+    "Clubhouse with pools",
+    "Fitness center & athletic courts",
+    "Ponds & waterfalls",
+    "Playground"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "maple-knoll-westfield",
+   "name": "Maple Knoll",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$400s to $700s",
+   "type": "master-planned",
+   "highlights": [
+    "Planned-unit development in Westfield",
+    "Custom & semi-custom homes"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "north-harbour-noblesville",
+   "name": "North Harbour",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$250s to $1M+",
+   "type": "lakefront & golf",
+   "highlights": [
+    "On Morse Reservoir",
+    "Harbour Trees Golf Club (Pete Dye course)",
+    "Waterfront & golf-course homes",
+    "Pool, tennis & clubhouse"
+   ],
+   "school_district": "Noblesville Schools",
+   "hoa_url": "https://www.nhpoai.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "highlands-at-stony-creek-noblesville",
+   "name": "Highlands at Stony Creek",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool",
+    "Tennis & basketball courts",
+    "Clubhouse with fitness room",
+    "Walking paths"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "deer-path-noblesville",
+   "name": "Deer Path",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool",
+    "Tennis & basketball courts",
+    "Multiple playgrounds",
+    "Large community near Hamilton Town Center"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "stonegate-zionsville",
+   "name": "Stonegate",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$500s to $1M+",
+   "type": "master-planned village",
+   "highlights": [
+    "Competition-size swimming pool",
+    "70+ acres of parks & open space",
+    "Walkable village feel",
+    "Basketball courts"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-willows-zionsville",
+   "name": "The Willows",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$700s to $1.5M+",
+   "type": "luxury",
+   "highlights": [
+    "Community pool & tennis courts",
+    "Eagle Lake & walking trails",
+    "Custom luxury homes",
+    "Rolling hills & mature trees"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "austin-oaks-zionsville",
+   "name": "Austin Oaks",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$500s to $900s",
+   "type": "luxury custom",
+   "highlights": [
+    "Clubhouse & swimming pool",
+    "Tennis courts",
+    "Wooded custom-home lots",
+    "Neighborhood park"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "enclave-at-stones-crossing-greenwood",
+   "name": "Enclave at Stones Crossing",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "174-home single-family community",
+    "Off State Road 135 near Stones Crossing",
+    "Near Center Grove shopping"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": "https://www.enclaveatstonescrossing.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sagebriar-greenwood",
+   "name": "Sagebriar by Del Webb",
+   "short_name": "Sagebriar",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $500s",
+   "type": "55+ active adult",
+   "highlights": [
+    "Del Webb active-adult community",
+    "Amenity-focused, low-maintenance living",
+    "Single-family homes"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "maxwell-springs-greenwood",
+   "name": "Maxwell Springs",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$400s to $700s",
+   "type": "luxury / estate",
+   "highlights": [
+    "Estate homes",
+    "Lake, clubhouse & pool",
+    "Rolling hills & ponds"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bellingham-bargersville",
+   "name": "Bellingham",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$300s to $500s",
+   "type": "master-planned / new construction",
+   "highlights": [
+    "Planned swimming pool",
+    "Multi-use trails & sport courts",
+    "Single-family homes & townhomes"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "morningside-bargersville",
+   "name": "Morningside",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$350s to $600s",
+   "type": "new construction / estate",
+   "highlights": [
+    "New-construction estate community",
+    "Single-family homes"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "walnut-commons-bargersville",
+   "name": "Walnut Commons",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$300s to $500s",
+   "type": "new construction",
+   "highlights": [
+    "New-construction community",
+    "Single-family homes near downtown Bargersville"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "parks-at-prestwick-avon",
+   "name": "Parks at Prestwick",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$400s to $1M+",
+   "type": "golf community",
+   "highlights": [
+    "Prestwick Country Club golf",
+    "Clubhouse & swimming pool",
+    "Custom homes & executive townhomes",
+    "Playground & basketball courts"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "beechwood-farms-avon",
+   "name": "Beechwood Farms",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$350s to $600s",
+   "type": "custom / wooded",
+   "highlights": [
+    "Custom-built homes",
+    "Wooded setting",
+    "Active HOA"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "stratford-of-avon-avon",
+   "name": "Stratford of Avon",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established Avon neighborhood",
+    "Streets named after Shakespeare works"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "wynne-farms-brownsburg",
+   "name": "Wynne Farms",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "master-planned",
+   "highlights": [
+    "Includes the Birch Run & Northfield sections",
+    "Established Brownsburg community",
+    "Mix of single-family homes, villas & townhomes"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "summer-ridge-brownsburg",
+   "name": "Summer Ridge",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established single-family subdivision"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lake-ridge-brownsburg",
+   "name": "Lake Ridge",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established single-family subdivision in Brownsburg"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "saratoga-plainfield",
+   "name": "Saratoga",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$230s to $400s",
+   "type": "master-planned",
+   "highlights": [
+    "Master-planned community",
+    "BBQ & picnic areas",
+    "Mix of townhomes & single-family homes"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "grey-hawk-plainfield",
+   "name": "Grey Hawk",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$350s to $500s",
+   "type": "new construction (low-maintenance)",
+   "highlights": [
+    "One-story single-family homes",
+    "Walking & biking trails",
+    "Wide sidewalks & greenspace",
+    "About 15 minutes to the Indianapolis airport"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "walker-farms-whitestown",
+   "name": "Walker Farms",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$250s to $450s",
+   "type": "master-planned",
+   "highlights": [
+    "1,000+ homes plus villas",
+    "Community pool",
+    "Playgrounds & basketball court",
+    "Walking trails; near Anson shopping"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": "https://www.walkerfarmshomeowners.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "neighborhoods-at-anson-whitestown",
+   "name": "The Neighborhoods at Anson",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$300s to $500s",
+   "type": "master-planned",
+   "highlights": [
+    "Swimming pool",
+    "Playground & basketball court",
+    "Dedicated nature area & walking trails",
+    "Near Anson shopping/dining"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "highlands-whitestown",
+   "name": "The Highlands, Whitestown",
+   "short_name": "The Highlands",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$300s to $500s",
+   "type": "new construction",
+   "highlights": [
+    "Community pool",
+    "Playground",
+    "Pickleball courts",
+    "Easy I-65 access"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "gateway-crossing-mccordsville",
+   "name": "Gateway Crossing",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$300s to $500s",
+   "type": "master-planned",
+   "highlights": [
+    "Master-planned McCordsville community",
+    "Amenity-focused new construction"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "emerald-springs-mccordsville",
+   "name": "Emerald Springs",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$300s to $500s",
+   "type": "new construction",
+   "highlights": [
+    "New-construction subdivision",
+    "Family-oriented community"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bay-creek-mccordsville",
+   "name": "Bay Creek",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$280s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established neighborhood near Geist",
+    "Well-maintained homes",
+    "Mix of young families & retirees"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "crooked-stick-estates-carmel",
+   "name": "Crooked Stick Estates",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$700s to $2M+",
+   "type": "luxury golf community",
+   "highlights": [
+    "Borders Crooked Stick Golf Club (Pete Dye)",
+    "Custom estate homes on 1+ acre lots",
+    "Established West Carmel with mature landscaping"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": "https://crookedstickestatescarmelneighborhood.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "plum-creek-carmel",
+   "name": "Plum Creek",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$300s to $700s",
+   "type": "golf community",
+   "highlights": [
+    "Pete Dye-designed Plum Creek Golf Club",
+    "Clubhouse and community pool",
+    "Sections including Plum Creek Village and Plum Creek North"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "woodland-springs-carmel",
+   "name": "Woodland Springs",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$400s to $800s",
+   "type": "established lake community",
+   "highlights": [
+    "42-acre private lake with boat launch and fishing",
+    "Community pool and tennis/pickleball courts",
+    "Established, 400+ homes with walking paths"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": "https://woodlandspringsinc.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cheswick-place-carmel",
+   "name": "Cheswick Place",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$500s to $800s",
+   "type": "custom home community",
+   "highlights": [
+    "~160 custom homes on roughly half-acre lots",
+    "Community pond, pool and tennis courts",
+    "West Carmel off Ditch Road"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bayhill-carmel",
+   "name": "Bayhill",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$400s to $800s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Clubhouse, pool and tennis courts",
+    "Walking and jogging trails",
+    "Family-friendly East Carmel setting"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sanctuary-at-116th-street-carmel",
+   "name": "The Sanctuary at 116th Street",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$500s to $900s",
+   "type": "newer luxury community",
+   "highlights": [
+    "Newer construction",
+    "Mix of single-family, townhomes and condos",
+    "Low-maintenance living options"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "The Sanctuary at 116th"
+  },
+  {
+   "slug": "lakes-at-hayden-run-carmel",
+   "name": "The Lakes at Hayden Run",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$400s to $800s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool",
+    "Five stocked ponds, four with fountains",
+    "Walking paths; shared HOA with The Ridge at Hayden Run"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": "https://lakesridgeathaydenrun.weebly.com/",
+   "image": null,
+   "video": null,
+   "short_name": "Lakes at Hayden Run"
+  },
+  {
+   "slug": "ashton-carmel",
+   "name": "Ashton",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$500s to $800s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Wooded lots and quiet streets",
+    "Near 146th Street & Hazel Dell Road"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "foster-estates-carmel",
+   "name": "Foster Estates",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$400s to $700s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool",
+    "Near the Monon Trail",
+    "East Carmel near Keystone Pkwy and US-31"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "springmill-streams-carmel",
+   "name": "Springmill Streams",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$500s to $900s",
+   "type": "established custom subdivision",
+   "highlights": [
+    "West Carmel near Spring Mill Road",
+    "Larger homes in a wooded, stream setting"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "overbrook-farms-carmel",
+   "name": "Overbrook Farms",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$500s to $900s",
+   "type": "established family subdivision",
+   "highlights": [
+    "West Carmel subdivision",
+    "A variety of home styles and sizes"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "village-of-mount-carmel-carmel",
+   "name": "Village of Mount Carmel",
+   "city": "Carmel",
+   "county": "Hamilton",
+   "price_band": "$200s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Half-acre-plus lots",
+    "Active civic organization with community events",
+    "Mix of mid-century ranch and 1990s two-story homes"
+   ],
+   "school_district": "Carmel Clay Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "saxony-fishers",
+   "name": "Saxony",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $700s+",
+   "type": "master-planned community",
+   "highlights": [
+    "20-acre lake with a public beach",
+    "Clubhouse, pool and walking trails",
+    "Mix of single-family homes, villas and townhomes"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "thorpe-creek-fishers",
+   "name": "Thorpe Creek",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$500s to $900s",
+   "type": "custom home community",
+   "highlights": [
+    "Custom-home community with mature trees",
+    "Clubhouse, pool, playground and basketball court",
+    "Sections: The Knoll, The Woods and The Overlook"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "masthead-at-geist-fishers",
+   "name": "Masthead at Geist",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$700s to $1.5M+",
+   "type": "luxury waterfront community",
+   "highlights": [
+    "Established Geist neighborhood",
+    "Custom homes with mature trees and spacious lots",
+    "Select homes offer Geist Reservoir views or deeded boat access"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "woods-at-geist-overlook-fishers",
+   "name": "Woods at Geist Overlook",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$400s to $800s",
+   "type": "Geist-area community",
+   "highlights": [
+    "East-Fishers subdivision",
+    "Larger homes on wooded lots",
+    "Walking trails near Geist Reservoir and Waterfront Park"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": "https://www.thewoodsatgeistoverlook.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brooks-chase-fishers",
+   "name": "Brooks Chase",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Large community of ~550 homes at 131st & Brookschool Rd",
+    "Two playgrounds, basketball court and a gazebo common area",
+    "Adjacent to Saxony Park"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": "https://brookschase.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-bristols-fishers",
+   "name": "The Bristols",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Family-oriented, walkable neighborhood",
+    "Community park, pool and clubhouse",
+    "Close to Fishers shopping and dining"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sand-creek-woods-fishers",
+   "name": "Sand Creek Woods",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Quiet, family-friendly established neighborhood",
+    "Well-maintained homes with green space",
+    "Near top-rated Fishers schools"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heritage-meadows-fishers",
+   "name": "Heritage Meadows",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Neighborhood park and playground",
+    "Along the Cheeney Creek trail",
+    "Close-in Fishers location"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sandstone-lakes-fishers",
+   "name": "Sandstone Lakes",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "Geist-area community",
+   "highlights": [
+    "East-Fishers community of relatively newer homes",
+    "Contemporary designs and landscaped yards",
+    "Near Geist Reservoir and Waterfront Park"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cyntheanne-meadows-fishers",
+   "name": "Cyntheanne Meadows",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$500s to $800s",
+   "type": "new-construction community",
+   "highlights": [
+    "Newer community in east Fishers",
+    "Tree-lined roughly half-acre home sites",
+    "Open-concept floor plans, 3-5 bedrooms"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "new-britton-woods-fishers",
+   "name": "New Britton Woods",
+   "city": "Fishers",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established single-family neighborhood",
+    "Convenient central-Fishers location"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "foxberry-trace-greenwood",
+   "name": "Foxberry Trace",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$200s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Suburban established neighborhood",
+    "A range of home sizes"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cobblestone-greenwood",
+   "name": "Cobblestone",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $500s",
+   "type": "golf community",
+   "highlights": [
+    "Built around the Cobblestone Golf Course",
+    "Golf-course lots available"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "willow-lakes-greenwood",
+   "name": "Willow Lakes",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $500s",
+   "type": "established lake community",
+   "highlights": [
+    "Three cascading community lakes",
+    "Active homeowners association"
+   ],
+   "school_district": null,
+   "hoa_url": "https://www.willowlakeshoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "villages-at-grassy-creek-greenwood",
+   "name": "The Villages at Grassy Creek",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$200s to $300s",
+   "type": "master-planned community",
+   "highlights": [
+    "Large master-planned community",
+    "One of Greenwood's more affordable subdivisions"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Villages at Grassy Creek"
+  },
+  {
+   "slug": "greenwood-station-greenwood",
+   "name": "Greenwood Station",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $400s",
+   "type": "single-family subdivision",
+   "highlights": [
+    "Single-family homes near central Greenwood"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-retreat-greenwood",
+   "name": "The Retreat",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $400s",
+   "type": "low-maintenance community",
+   "highlights": [
+    "Low-maintenance living",
+    "Lawn care and snow removal included",
+    "Landscape/irrigation packages"
+   ],
+   "school_district": "Clark-Pleasant Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lone-pine-farms-greenwood",
+   "name": "Lone Pine Farms",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $450s",
+   "type": "new-construction community",
+   "highlights": [
+    "Walking trails and community pavilion",
+    "Community pond and recreation area",
+    "Ranch and two-story homes"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "scottsdale-estates-greenwood",
+   "name": "Scottsdale Estates",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$300s to $450s",
+   "type": "new-construction community",
+   "highlights": [
+    "Community pool and pool house",
+    "Walking trails and disc golf course",
+    "Playground and pond views"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "berry-chase-greenwood",
+   "name": "Berry Chase",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$400s to $600s+",
+   "type": "new-construction community",
+   "highlights": [
+    "Community pond and fountain",
+    "Dog park with agility equipment",
+    "Oversized homesites; basements and 3-car garages available"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brighton-knoll-greenwood",
+   "name": "Brighton Knoll",
+   "city": "Greenwood",
+   "county": "Johnson",
+   "price_band": "$400s to $600s+",
+   "type": "new-construction community",
+   "highlights": [
+    "Newer Fischer Homes community",
+    "Near Freedom Park"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bear-run-shelbyville",
+   "name": "Bear Run",
+   "city": "Shelbyville",
+   "county": "Shelby",
+   "price_band": "$230s to $350s",
+   "type": "new-construction community",
+   "highlights": [
+    "Community playground and park shelter",
+    "Walking trails",
+    "Some homesites with water views"
+   ],
+   "school_district": "Shelbyville Central Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "twelve-oaks-shelbyville",
+   "name": "Twelve Oaks",
+   "city": "Shelbyville",
+   "county": "Shelby",
+   "price_band": "$230s to $380s",
+   "type": "new-construction community",
+   "highlights": [
+    "Spacious ranch and two-story homesites"
+   ],
+   "school_district": "Shelbyville Central Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "isabelle-farms-shelbyville",
+   "name": "Isabelle Farms",
+   "city": "Shelbyville",
+   "county": "Shelby",
+   "price_band": "$230s to $320s",
+   "type": "new-construction community",
+   "highlights": [],
+   "school_district": "Shelbyville Central Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "summerfield-shelbyville",
+   "name": "Summerfield",
+   "city": "Shelbyville",
+   "county": "Shelby",
+   "price_band": "$230s to $330s",
+   "type": "new-construction community",
+   "highlights": [
+    "Scenic walking paths",
+    "Family playground"
+   ],
+   "school_district": "Shelbyville Central Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "clearview-shelbyville",
+   "name": "Clearview",
+   "city": "Shelbyville",
+   "county": "Shelby",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Cul-de-sac and corner lots"
+   ],
+   "school_district": "Shelbyville Central Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "fountain-lake-shelbyville",
+   "name": "Fountain Lake",
+   "city": "Shelbyville",
+   "county": "Shelby",
+   "price_band": "$150s to $300s",
+   "type": "established lake community",
+   "highlights": [
+    "Neighborhood lake / water views",
+    "HOA community"
+   ],
+   "school_district": "Shelbyville Central Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sunshine-gardens-southport",
+   "name": "Sunshine Gardens",
+   "city": "Southport",
+   "county": "Marion",
+   "price_band": "$150s to $300s",
+   "type": "historic established neighborhood",
+   "highlights": [
+    "Platted in the 1920s as large-lot parcels",
+    "Bordered by the White River and I-465",
+    "Mix of original bungalows and newer homes"
+   ],
+   "school_district": "Perry Township Schools (MSD of Perry Township)",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "homecroft-southport",
+   "name": "Homecroft",
+   "city": "Southport",
+   "county": "Marion",
+   "price_band": "$150s to $300s",
+   "type": "established neighborhood",
+   "highlights": [
+    "Small incorporated town within Perry Township (est. 1923)",
+    "Tree-lined streets and well-kept homes",
+    "Adjacent to Southport, near Madison Ave"
+   ],
+   "school_district": "Perry Township Schools (MSD of Perry Township)",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "university-heights-southport",
+   "name": "University Heights",
+   "city": "Southport",
+   "county": "Marion",
+   "price_band": "$150s to $300s",
+   "type": "historic established neighborhood",
+   "highlights": [
+    "Home to the University of Indianapolis",
+    "Platted as a subdivision in 1907",
+    "Easy access to I-65 and I-465"
+   ],
+   "school_district": "Perry Township Schools (MSD of Perry Township)",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "southern-dunes-southport",
+   "name": "Southern Dunes",
+   "city": "Southport",
+   "county": "Marion",
+   "price_band": "$200s to $400s",
+   "type": "golf-course neighborhood",
+   "highlights": [
+    "Anchored by the public Southern Dunes Golf Course",
+    "South-side setting along the White River",
+    "Mix of single-family homes and condos"
+   ],
+   "school_district": "Perry Township Schools (MSD of Perry Township)",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "glenns-valley-southport",
+   "name": "Glenns Valley",
+   "city": "Southport",
+   "county": "Marion",
+   "price_band": "$200s to $400s",
+   "type": "wooded suburban neighborhood",
+   "highlights": [
+    "One of Perry Township's most wooded areas",
+    "Near Glenns Valley Nature Park on Bluff Rd",
+    "Served by Glenns Valley Elementary"
+   ],
+   "school_district": "Perry Township Schools (MSD of Perry Township)",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "southdale-southport",
+   "name": "Southdale",
+   "city": "Southport",
+   "county": "Marion",
+   "price_band": "$150s to $320s",
+   "type": "established neighborhood",
+   "highlights": [
+    "Competitively priced mid-century and newer homes",
+    "Feeds Perry Meridian Middle and High schools",
+    "Central Perry Township location near Southport"
+   ],
+   "school_district": "Perry Township Schools (MSD of Perry Township)",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  }
  ]
 }
