@@ -452,7 +452,7 @@ def hub():
  <div class="container"><a href="/">Home</a> <span>&rsaquo;</span> School Districts</div>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/schools.webp') type('image/webp'), url('/assets/img/heroes/schools.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/schools.webp') type('image/webp'), url('/assets/img/heroes/schools.jpg') type('image/jpeg')); --hero-pos: center;">
  <div class="container">
  <h1>Central Indiana <em>School Districts &amp; Schools</em></h1>
  <p class="hero-sub">For many buyers, the school comes first. Explore homes for sale by district across Central Indiana — public districts and private schools — and let Your Realty Link help you find a home inside the boundary that matters to your family. School assignment depends on the exact address; we'll help you confirm it.</p>

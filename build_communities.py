@@ -298,7 +298,7 @@ def build_hub():
  <div class="container"><a href="/">Home</a> <span>&rsaquo;</span> Communities &amp; Subdivisions</div>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/communities.webp') type('image/webp'), url('/assets/img/heroes/communities.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/communities.webp') type('image/webp'), url('/assets/img/heroes/communities.jpg') type('image/jpeg')); --hero-pos: center;">
  <div class="container">
  <h1>Central Indiana <em>Communities &amp; Subdivisions</em></h1>
  <p class="hero-sub">From golf and lakefront communities to master-planned and 55+ neighborhoods, explore the named communities that make Central Indiana's suburbs distinct. Each links to homes, amenities, schools, and local market info.</p>

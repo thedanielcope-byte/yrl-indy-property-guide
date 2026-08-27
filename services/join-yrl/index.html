@@ -64,7 +64,10 @@
  <style>
  /* ── HIRING HERO ── */
 .join-hero {
- background: linear-gradient(135deg, #6e6e70 0%, #565759 100%);
+ background: linear-gradient(135deg, rgba(22,23,25,.88) 0%, rgba(38,39,42,.78) 100%), -webkit-image-set(url('/assets/img/heroes/join-yrl.webp') type('image/webp'), url('/assets/img/heroes/join-yrl.jpg') type('image/jpeg'));
+ background: linear-gradient(135deg, rgba(22,23,25,.88) 0%, rgba(38,39,42,.78) 100%), image-set(url('/assets/img/heroes/join-yrl.webp') type('image/webp'), url('/assets/img/heroes/join-yrl.jpg') type('image/jpeg'));
+ background-size: cover;
+ background-position: center;
  color: #fff;
  padding: 64px 24px 56px;
  position: relative;
