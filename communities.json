@@ -13,7 +13,15 @@
   "Whitestown",
   "McCordsville",
   "Shelbyville",
-  "Southport"
+  "Southport",
+  "Lebanon",
+  "Franklin",
+  "Mooresville",
+  "Anderson",
+  "Greenfield",
+  "Whiteland",
+  "Pendleton",
+  "Danville"
  ],
  "communities": [
   {
@@ -2266,6 +2274,1432 @@
    "type": "established family subdivision",
    "highlights": [],
    "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "aberdeen-bargersville",
+   "name": "Aberdeen",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$500s to $1M+",
+   "type": "gated luxury community",
+   "highlights": [
+    "Gated wellness 'agrihood' with a working farm and green spaces",
+    "2.5+ miles of trails and multiple lakes",
+    "Pickleball, tennis and basketball courts"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": "https://www.aberdeenliving.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sawyer-walk-bargersville",
+   "name": "Sawyer Walk",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$310s to $600s",
+   "type": "new-construction community",
+   "highlights": [
+    "Community pool, playground and walking trails",
+    "Single-family homes plus low-maintenance villas",
+    "Golf-cart-friendly streets with pond views"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "highland-knoll-bargersville",
+   "name": "Highland Knoll",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$330s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "Ranch and two-story plans",
+    "Smart-home technology and finished garages"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "shadowood-bargersville",
+   "name": "Shadowood",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$500s to $900s+",
+   "type": "custom estate community",
+   "highlights": [
+    "Estate homes from custom collections",
+    "Ranch, two-story and multi-level plans"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "country-meadows-bargersville",
+   "name": "Country Meadows",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established suburban neighborhood",
+    "Homes commonly 2,500+ sq ft"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "meadowbrook-acres-bargersville",
+   "name": "Meadowbrook Acres",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$100s to $200s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established, affordable single-family homes"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "claybourne-bargersville",
+   "name": "Claybourne",
+   "city": "Bargersville",
+   "county": "Johnson",
+   "price_band": "$400s to $1M+",
+   "type": "custom home community",
+   "highlights": [
+    "Upscale custom homes on larger lots",
+    "Homeowners association community"
+   ],
+   "school_district": "Center Grove Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-settlement-plainfield",
+   "name": "The Settlement",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "One of Plainfield's larger established subdivisions",
+    "Within the Town of Plainfield core"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sugar-grove-farms-plainfield",
+   "name": "Sugar Grove Farms",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Active homeowners association",
+    "An assortment of home styles and sizes"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": "https://www.sugargrovehoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lakes-at-sugar-grove-plainfield",
+   "name": "The Lakes at Sugar Grove",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Single-family neighborhood within the larger Sugar Grove area"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "trescott-gardens-plainfield",
+   "name": "Trescott Gardens",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$450s to $550s",
+   "type": "new-construction community",
+   "highlights": [
+    "Homesites with tree views, ponds and open green space",
+    "Minutes from I-70 and the airport"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "fairwood-plainfield",
+   "name": "Fairwood",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$400s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "Oversized homesites with ponds and mature trees",
+    "Covered picnic pavilion and walking-trail access",
+    "Assigned to the Avon school district (not Plainfield)"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "auburn-meadows-plainfield",
+   "name": "Auburn Meadows",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$300s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established single-family neighborhood within Plainfield"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "rockingham-plainfield",
+   "name": "Rockingham",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$400s to $550s",
+   "type": "custom home community",
+   "highlights": [
+    "Smaller, lower-density enclave north of US-40",
+    "Mix of custom and production-built brick homes",
+    "Direct connection to the Plainfield trail system"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "williamsburg-in-the-woods-plainfield",
+   "name": "Williamsburg in the Woods",
+   "city": "Plainfield",
+   "county": "Hendricks",
+   "price_band": "$550s to $700s+",
+   "type": "established family subdivision",
+   "highlights": [
+    "Wooded, higher-end established neighborhood",
+    "HOA that maintains neighborhood standards"
+   ],
+   "school_district": "Plainfield Community School Corporation",
+   "hoa_url": "https://williamsburginthewoods.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "jackson-run-whitestown",
+   "name": "Jackson Run",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$350s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "Scenic trails, future community pool and dog park",
+    "Central park connecting to Lions Park and a nature park",
+    "Minutes from I-65 and the LEAP district"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "windswept-farms-whitestown",
+   "name": "Windswept Farms",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$350s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "25 acres of wooded preserve with scenic trails",
+    "Pond-view homesites with no rear neighbors",
+    "Ranch and two-story plans"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bridle-oaks-whitestown",
+   "name": "Bridle Oaks",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$350s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "Just outside downtown Whitestown",
+    "Direct access to the Big 4 Rail Trail",
+    "Playground, open space and scenic lakes"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "peabody-farms-west-whitestown",
+   "name": "Peabody Farms West",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$300s to $400s",
+   "type": "master-planned community",
+   "highlights": [
+    "Community center, swimming pool and pickleball court",
+    "Near 50+ acres of area parks and the Big 4 Trail"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "trailside-whitestown",
+   "name": "Trailside",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$300s to $500s",
+   "type": "master-planned community",
+   "highlights": [
+    "Clubhouse, outdoor pool and 24-hour fitness center",
+    "Pickleball, tennis, bocce and basketball courts",
+    "Trails connect to the regional Big 4 Trail"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "edmonds-creek-at-anson-whitestown",
+   "name": "Edmonds Creek at Anson",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Within the Anson master-planned development",
+    "Spacious homesites, some with pond views",
+    "About 3 miles from I-65"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "ellis-acres-whitestown",
+   "name": "Ellis Acres",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$300s to $400s",
+   "type": "townhome community",
+   "highlights": [
+    "Two- and three-story townhome collections",
+    "Near the Zionsville border",
+    "Close to Eagle Creek Park"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "townhomes-at-anson-whitestown",
+   "name": "Townhomes at Anson",
+   "city": "Whitestown",
+   "county": "Boone",
+   "price_band": "$200s to $300s",
+   "type": "townhome community",
+   "highlights": [
+    "Townhomes within the master-planned Anson development",
+    "Near Anson shopping and dining along Whitestown Parkway"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "villages-at-brookside-mccordsville",
+   "name": "Villages at Brookside",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$300s to $500s",
+   "type": "master-planned community",
+   "highlights": [
+    "Community pool, playground and basketball court",
+    "Neighborhood lake and walking paths",
+    "Two-story, ranch and first-floor owner's-suite plans"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": "https://www.villagesatbrooksidehoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "gatherings-at-aurora-mccordsville",
+   "name": "Gatherings at Aurora",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$400s to $600s",
+   "type": "55+ active-adult community",
+   "highlights": [
+    "Age-restricted 55+ active-adult community",
+    "Amenity center with pool, fitness and pickleball",
+    "Minutes from McCord Square and Geist Reservoir"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "haven-ponds-mccordsville",
+   "name": "Haven Ponds",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$350s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "Linear park with looped walking trail and playground",
+    "Pond-view and cul-de-sac homesites"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "mccord-pointe-mccordsville",
+   "name": "McCord Pointe",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$300s to $500s",
+   "type": "master-planned community",
+   "highlights": [
+    "Clubhouse and resort-style swimming pool",
+    "Ponds throughout the neighborhood",
+    "Near Geist Reservoir between Fishers and Fortville"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "hampton-walk-mccordsville",
+   "name": "Hampton Walk",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$300s to $500s",
+   "type": "master-planned community",
+   "highlights": [
+    "Swimming pool, cabana and playground",
+    "Lakes with fountains, gazebo and walking paths",
+    "Single-family homes and townhomes"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "colonnade-mccordsville",
+   "name": "Colonnade",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$400s to $600s",
+   "type": "new-construction community",
+   "highlights": [
+    "Homes with main-floor primary and guest suites",
+    "Community playground",
+    "Walking distance to McCord Square"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "weavers-landing-mccordsville",
+   "name": "Weavers Landing",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Community pool, park and trails",
+    "Roughly 200 single-family homesites"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "hampton-cove-mccordsville",
+   "name": "Hampton Cove",
+   "city": "McCordsville",
+   "county": "Hancock",
+   "price_band": "$700s to $1M+",
+   "type": "luxury waterfront community",
+   "highlights": [
+    "Gated waterfront enclave on Geist Reservoir",
+    "Waterfront and water-access lots with private streets",
+    "Active HOA with security patrol"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cedar-ridge-lebanon",
+   "name": "Cedar Ridge",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Two-story and ranch single-family plans",
+    "Growing Boone County location off I-65"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "auburn-meadows-lebanon",
+   "name": "Auburn Meadows",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "New single-family homes",
+    "Near the planned I-65 interchange at CR 300 North"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sunbrook-lebanon",
+   "name": "Sunbrook",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$260s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Includes the Sunbrook Villas paired-home section",
+    "Center Township location in Lebanon"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "angilee-gardens-lebanon",
+   "name": "Angilee Gardens",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Compact single-family floor plans"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "prairie-heights-lebanon",
+   "name": "Prairie Heights",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$160s to $250s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established ranch-style homes",
+    "No HOA; affordable, entry-level price point"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "edgewood-lebanon",
+   "name": "Edgewood",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$180s to $280s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established quiet neighborhood on the east side of Lebanon",
+    "Mid-century ranch homes"
+   ],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "mar-lee-manor-lebanon",
+   "name": "Mar Lee Manor",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$180s to $300s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "chadwick-village-lebanon",
+   "name": "Chadwick Village",
+   "city": "Lebanon",
+   "county": "Boone",
+   "price_band": "$200s to $320s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Lebanon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "homesteads-at-hillview-franklin",
+   "name": "Homesteads at Hillview",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$400s to $1M+",
+   "type": "custom golf community",
+   "highlights": [
+    "Borders Hillview Country Club golf course",
+    "Common area with lake overlook, pavilion and bocce",
+    "Connects to the Franklin Greenway Trails"
+   ],
+   "school_district": "Franklin Community School Corporation",
+   "hoa_url": "https://hillviewhomesfranklin.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heritage-at-brookhaven-franklin",
+   "name": "Heritage at Brookhaven",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$150s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool, clubhouse and fitness center",
+    "6-acre park with playground and basketball courts",
+    "Large master-planned HOA neighborhood"
+   ],
+   "school_district": "Franklin Community School Corporation",
+   "hoa_url": "https://www.heritage-hoa.net/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "legends-west-franklin",
+   "name": "Legends West",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$300s to $500s",
+   "type": "low-maintenance golf community",
+   "highlights": [
+    "Low-maintenance cottages overlooking The Legends Golf Club",
+    "HOA covers lawn care, irrigation and snow removal"
+   ],
+   "school_district": "Franklin Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "franklin-lakes-franklin",
+   "name": "Franklin Lakes",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$200s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established neighborhood off Nineveh Road",
+    "Adjacent to Windstar and Bluffs at Young's Creek"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "windstar-franklin",
+   "name": "Windstar",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$200s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established neighborhood off Nineveh Road",
+    "Adjoins Franklin Lakes and Bluffs at Young's Creek"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bluffs-at-youngs-creek-franklin",
+   "name": "Bluffs at Young's Creek",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$260s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "New-construction homes off Nineveh Road",
+    "Quiet, country-feel setting near Franklin shopping"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "westwind-at-cumberland-franklin",
+   "name": "Westwind at Cumberland",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$260s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Ranch and two-story homes",
+    "Community walking trails"
+   ],
+   "school_district": "Franklin Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "deer-trace-franklin",
+   "name": "Deer Trace",
+   "city": "Franklin",
+   "county": "Johnson",
+   "price_band": "$150s to $350s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Franklin Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heartland-crossing-mooresville",
+   "name": "Heartland Crossing",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$200s to $400s",
+   "type": "master-planned community",
+   "highlights": [
+    "Multiple pools, parks, tennis and basketball courts",
+    "Bordered by Heartland Crossing Golf Links",
+    "Includes The Villas maintenance-free section"
+   ],
+   "school_district": null,
+   "hoa_url": "https://www.heartlandcrossinghoa.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bridgemor-village-mooresville",
+   "name": "Bridgemor Village",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$200s to $300s",
+   "type": "55+ active-adult community",
+   "highlights": [
+    "Maintenance-free active-adult condos",
+    "Clubhouse, heated pool and fitness",
+    "1.5-acre lake with waterfront home sites"
+   ],
+   "school_district": "Mooresville Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "pioneer-country-estates-mooresville",
+   "name": "Pioneer Country Estates",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$200s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established subdivision with a range of home styles"
+   ],
+   "school_district": "Mooresville Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "rooker-run-mooresville",
+   "name": "Rooker Run",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$200s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established neighborhood near downtown Mooresville"
+   ],
+   "school_district": "Mooresville Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "rooker-trace-mooresville",
+   "name": "Rooker Trace",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$200s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "No HOA",
+    "Walkable, well-maintained established neighborhood"
+   ],
+   "school_district": "Mooresville Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "highland-meadows-mooresville",
+   "name": "Highland Meadows",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$200s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established single-family neighborhood"
+   ],
+   "school_district": "Mooresville Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cedarwood-estates-mooresville",
+   "name": "Cedarwood Estates",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$300s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established Mooresville subdivision"
+   ],
+   "school_district": "Mooresville Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "country-view-estates-mooresville",
+   "name": "Country View Estates",
+   "city": "Mooresville",
+   "county": "Morgan",
+   "price_band": "$300s to $600s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Larger homes on generous, semi-rural lots",
+    "Minutes from downtown Mooresville"
+   ],
+   "school_district": "Mooresville Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "edgewood-anderson",
+   "name": "Edgewood",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$150s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Home to the Killbuck Golf Course",
+    "Tree City USA and bike-friendly community"
+   ],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "country-club-heights-anderson",
+   "name": "Country Club Heights",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$150s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Home to the Anderson Country Club (formed 1902)",
+    "Small enclave surrounded by the city of Anderson"
+   ],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "woodlawn-heights-anderson",
+   "name": "Woodlawn Heights",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$120s to $250s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Small established residential community bordered by Anderson"
+   ],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "river-forest-anderson",
+   "name": "River Forest",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$120s to $250s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Small established community served by Anderson schools"
+   ],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lakes-of-killbuck-anderson",
+   "name": "Lakes of Killbuck",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$150s to $300s",
+   "type": "established lake community",
+   "highlights": [
+    "Neighborhood built around scenic lakes",
+    "Walkable; some homes on nearly an acre"
+   ],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "killbuck-terrace-anderson",
+   "name": "Killbuck Terrace",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$150s to $300s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "meadowbrook-anderson",
+   "name": "Meadowbrook",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$150s to $300s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "deer-creek-anderson",
+   "name": "Deer Creek",
+   "city": "Anderson",
+   "county": "Madison",
+   "price_band": "$200s to $400s",
+   "type": "custom home community",
+   "highlights": [
+    "Lots from about a half-acre to nearly an acre",
+    "Used for custom-home building"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brunsons-landing-greenfield",
+   "name": "Brunson's Landing",
+   "city": "Greenfield",
+   "county": "Hancock",
+   "price_band": "$280s to $330s",
+   "type": "new-construction community",
+   "highlights": [
+    "Playground, trails and a covered picnic pavilion",
+    "Tree-lined homesites, some with water views",
+    "Minutes from downtown Greenfield with I-70 access"
+   ],
+   "school_district": "Greenfield-Central Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "woodfield-pointe-greenfield",
+   "name": "Woodfield Pointe",
+   "city": "Greenfield",
+   "county": "Hancock",
+   "price_band": "$230s to $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Oversized homesites with common areas and playground",
+    "Pond views; basements available on select homesites"
+   ],
+   "school_district": "Greenfield-Central Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "parkrose-greenfield",
+   "name": "Parkrose",
+   "city": "Greenfield",
+   "county": "Hancock",
+   "price_band": "$200s to $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Single-family plans plus low-maintenance townhomes",
+    "Easy I-70 access, minutes from downtown Greenfield"
+   ],
+   "school_district": "Greenfield-Central Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heron-creek-greenfield",
+   "name": "Heron Creek",
+   "city": "Greenfield",
+   "county": "Hancock",
+   "price_band": "$250s to $380s",
+   "type": "new-construction community",
+   "highlights": [
+    "Country-style setting close to Greenfield shops",
+    "3-5 bedroom plans"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "evergreen-estates-greenfield",
+   "name": "Evergreen Estates",
+   "city": "Greenfield",
+   "county": "Hancock",
+   "price_band": "$250s to $350s",
+   "type": "low-maintenance villa community",
+   "highlights": [
+    "Single-level paired villas with snow/lawn care included",
+    "Pavilion, playground, ponds and nature trails"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cooks-corner-greenfield",
+   "name": "Cooks Corner",
+   "city": "Greenfield",
+   "county": "Hancock",
+   "price_band": "$200s to $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Community just off US-40 near Woodfield Pointe",
+    "Short drive to downtown Greenfield"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brandywine-village-greenfield",
+   "name": "Brandywine Village",
+   "city": "Greenfield",
+   "county": "Hancock",
+   "price_band": "$200s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established suburban neighborhood near Brandywine Creek",
+    "Mix of updated single-family resale homes"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "saddlebrook-farms-whiteland",
+   "name": "Saddlebrook Farms",
+   "city": "Whiteland",
+   "county": "Johnson",
+   "price_band": "$400s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "Playground, walking trails and green space",
+    "Community pond with fountain",
+    "Larger two-story plans"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "saddlebrook-farms-north-whiteland",
+   "name": "Saddlebrook Farms North",
+   "city": "Whiteland",
+   "county": "Johnson",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Ranch and two-story floor plans",
+    "Walking trails, ponds and acres of green space"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "briar-creek-whiteland",
+   "name": "Briar Creek",
+   "city": "Whiteland",
+   "county": "Johnson",
+   "price_band": "$250s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Ranches (low-maintenance) and Estates (two-story) sections",
+    "Estates homesites up to about 1/3 acre",
+    "About a half-mile to US-31 and 1.5 miles to I-65"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "timber-valley-whiteland",
+   "name": "Timber Valley",
+   "city": "Whiteland",
+   "county": "Johnson",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Mix of older ranch homes and newer construction",
+    "Mostly three- and four-bedroom homes"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-brownstone-whiteland",
+   "name": "The Brownstone",
+   "city": "Whiteland",
+   "county": "Johnson",
+   "price_band": "$330s to $430s",
+   "type": "new-construction community",
+   "highlights": [
+    "Main-floor guest-suite plans with 3-car garages",
+    "In adjacent New Whiteland, same schools and area"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "country-gate-whiteland",
+   "name": "Country Gate",
+   "city": "Whiteland",
+   "county": "Johnson",
+   "price_band": "$220s to $350s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Ranch and two-story homes",
+    "Easy US-31 access; near parks and trails"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "falls-at-pendleton",
+   "name": "Falls at Pendleton",
+   "city": "Pendleton",
+   "county": "Madison",
+   "price_band": "$300s to $450s",
+   "type": "new-construction community",
+   "highlights": [
+    "Walking distance of downtown Pendleton",
+    "Near Falls Park waterfalls and trails",
+    "About 10 minutes to I-69"
+   ],
+   "school_district": "South Madison Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "maple-trails-pendleton",
+   "name": "Maple Trails",
+   "city": "Pendleton",
+   "county": "Madison",
+   "price_band": "$270s to $410s",
+   "type": "new-construction community",
+   "highlights": [
+    "Large front-sodded lots",
+    "Pond views and walking trails",
+    "Minutes from I-69"
+   ],
+   "school_district": "South Madison Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cold-springs-at-huntzinger-farm-pendleton",
+   "name": "Cold Springs at Huntzinger Farm",
+   "city": "Pendleton",
+   "county": "Madison",
+   "price_band": "$260s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Located in Fall Creek Township",
+    "Short distance from I-69"
+   ],
+   "school_district": "South Madison Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "huntzinger-farm-pendleton",
+   "name": "Huntzinger Farm",
+   "city": "Pendleton",
+   "county": "Madison",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Roughly 402 single-family homes",
+    "Well-established community with an active HOA"
+   ],
+   "school_district": "South Madison Community School Corporation",
+   "hoa_url": "https://www.huntzingerfarmhoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "carrick-glen-pendleton",
+   "name": "Carrick Glen",
+   "city": "Pendleton",
+   "county": "Madison",
+   "price_band": "$300s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Directly across from Falls Park",
+    "Walkable to the library and downtown shops"
+   ],
+   "school_district": "South Madison Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "estes-park-pendleton",
+   "name": "Estes Park",
+   "city": "Pendleton",
+   "county": "Madison",
+   "price_band": "$300s to $475s",
+   "type": "low-maintenance community",
+   "highlights": [
+    "Low-maintenance living with lawn care and snow removal",
+    "Borders the Fishers town line",
+    "Minutes from I-69 and Hamilton Town Center"
+   ],
+   "school_district": "South Madison Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "camden-creek-danville",
+   "name": "Camden Creek",
+   "city": "Danville",
+   "county": "Hendricks",
+   "price_band": "$220s to $330s",
+   "type": "new-construction community",
+   "highlights": [
+    "Playground and walking trails",
+    "Green space with mature trees and preserved wetlands"
+   ],
+   "school_district": "Danville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "northwood-haven-danville",
+   "name": "Northwood Haven",
+   "city": "Danville",
+   "county": "Hendricks",
+   "price_band": "$280s to $360s",
+   "type": "new-construction community",
+   "highlights": [
+    "Walking trails, playground and dog park",
+    "Pond views; off 10th Street near downtown Danville"
+   ],
+   "school_district": "Danville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "wexford-danville",
+   "name": "Wexford",
+   "city": "Danville",
+   "county": "Hendricks",
+   "price_band": "$400s to $800s+",
+   "type": "custom home community",
+   "highlights": [
+    "Homes built exclusively by area custom builders",
+    "Large homesites around a wooded lake",
+    "Includes the Wexford Commons section"
+   ],
+   "school_district": "Danville Community School Corporation",
+   "hoa_url": "https://www.wexforddanville.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "miles-farm-danville",
+   "name": "Miles Farm",
+   "city": "Danville",
+   "county": "Hendricks",
+   "price_band": "$280s to $460s",
+   "type": "master-planned community",
+   "highlights": [
+    "Three collections (Estates, Reserve, Preserve)",
+    "Directly across from Danville High School",
+    "Planned pool, splash pad, pickleball and trails"
+   ],
+   "school_district": "Danville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-bevy-danville",
+   "name": "The Bevy",
+   "city": "Danville",
+   "county": "Hendricks",
+   "price_band": "$310s to $470s",
+   "type": "new-construction community",
+   "highlights": [
+    "One- and two-story open-concept plans",
+    "On 10th Street near the county fairgrounds"
+   ],
+   "school_district": "Danville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "quail-west-danville",
+   "name": "Quail West",
+   "city": "Danville",
+   "county": "Hendricks",
+   "price_band": "$330s to $460s",
+   "type": "new-construction community",
+   "highlights": [
+    "Nature trails, playground and covered pavilion",
+    "Ponds; near the county fairgrounds"
+   ],
+   "school_district": "Danville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "whisperwood-lakes-danville",
+   "name": "Whisperwood Lakes",
+   "city": "Danville",
+   "county": "Hendricks",
+   "price_band": "$220s to $330s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established lakes/ponds neighborhood in Danville"
+   ],
+   "school_district": "Danville Community School Corporation",
    "hoa_url": null,
    "image": null,
    "video": null
