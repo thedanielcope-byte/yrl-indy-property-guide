@@ -1435,6 +1435,840 @@
    "hoa_url": null,
    "image": null,
    "video": null
+  },
+  {
+   "slug": "wood-wind-westfield",
+   "name": "Wood Wind",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$600s to $1M+",
+   "type": "golf community",
+   "highlights": [
+    "Built around Wood Wind Golf Club",
+    "Fairway and lake views",
+    "Custom homesites along Ditch Road"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": "https://woodwindlanding.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "countryside-westfield",
+   "name": "Countryside",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool and playground",
+    "Tennis courts",
+    "Walking trails around several ponds"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "village-farms-westfield",
+   "name": "Village Farms",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$400s to $700s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Monon Trail access",
+    "Pool, tennis, pickleball and sand volleyball",
+    "Clubhouse and stocked ponds"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "centennial-westfield",
+   "name": "Centennial",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "single-family & townhome community",
+   "highlights": [
+    "Community pool and pickleball courts",
+    "Walking trails and ponds",
+    "Mix of single-family homes and townhomes"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "villages-of-oak-manor-westfield",
+   "name": "Villages of Oak Manor",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$200s to $400s",
+   "type": "single-family & condo community",
+   "highlights": [
+    "Near Clay Terrace and the Carmel Arts & Design District",
+    "Includes the Suffolk and Lancashire sections"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "maple-village-westfield",
+   "name": "Maple Village",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "springmill-villas-westfield",
+   "name": "Springmill Villas",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "low-maintenance villa community",
+   "highlights": [
+    "Maintenance-free living (lawn, snow, irrigation)",
+    "Community ponds",
+    "Connection to the Midland Trace Trail"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brookside-westfield",
+   "name": "Brookside",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$700s to $1M+",
+   "type": "custom home community",
+   "highlights": [
+    "Clubhouse and community pool",
+    "Wooded, walkout and waterfront homesites",
+    "Waterfront walking paths"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": "https://www.ourbrookside.com/home/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bent-creek-westfield",
+   "name": "Bent Creek",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$500s to $800s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Resort-style pool and clubhouse",
+    "Tennis and basketball courts",
+    "On Towne Road near Grand Park"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "osborne-trails-westfield",
+   "name": "Osborne Trails",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "55+ active-adult community",
+   "highlights": [
+    "Westfield's first 55+ community",
+    "9,000 sq ft clubhouse with pool and fitness center",
+    "Pickleball courts near the Monon Trail"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lancaster-westfield",
+   "name": "Lancaster",
+   "city": "Westfield",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "townhome & single-family community",
+   "highlights": [
+    "Pool, wading pool and bath house",
+    "Athletic courts and playground",
+    "Trailhead Park with Monon Trail access"
+   ],
+   "school_district": "Westfield Washington Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lochaven-noblesville",
+   "name": "Lochaven",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$400s to $700s",
+   "type": "master-planned community",
+   "highlights": [
+    "Community clubhouse, pools and playgrounds",
+    "Tree-lined streets and scenic ponds"
+   ],
+   "school_district": "Noblesville Schools",
+   "hoa_url": "https://lochavennoblesvilleneighborhood.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "south-harbour-noblesville",
+   "name": "South Harbour",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$300s to $1M+",
+   "type": "lakefront community",
+   "highlights": [
+    "Morse Reservoir access for boating and fishing",
+    "Mature tree canopy and curving streets",
+    "Waterfront and wooded interior lots"
+   ],
+   "school_district": "Noblesville Schools",
+   "hoa_url": "https://southharbournoblesvilleneighborhood.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "waterman-farms-noblesville",
+   "name": "Waterman Farms",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Active homeowners association",
+    "Zoned to Promise Road Elementary"
+   ],
+   "school_district": "Noblesville Schools",
+   "hoa_url": "https://www.watermanfarmshoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "mill-grove-noblesville",
+   "name": "Mill Grove",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool",
+    "Active HOA with architectural guidelines"
+   ],
+   "school_district": null,
+   "hoa_url": "https://www.millgrovehoa.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "courtyards-of-hazel-dell-noblesville",
+   "name": "Courtyards of Hazel Dell",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$300s to $500s",
+   "type": "55+ low-maintenance community",
+   "highlights": [
+    "Clubhouse, fitness center, pool and pickleball",
+    "Ranch homes with first-floor owner's suites",
+    "Direct access to the Midland Trace Trail"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "hazel-dell-woods-noblesville",
+   "name": "Hazel Dell Woods",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established, wooded neighborhood in the Hazel Dell corridor"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "prairie-crossing-noblesville",
+   "name": "Prairie Crossing",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$250s to $450s",
+   "type": "master-planned community",
+   "highlights": [
+    "Five sub-neighborhoods (Woods, Ridge, Lakes, Greens, Fairways)",
+    "Dedicated on-site nature area"
+   ],
+   "school_district": null,
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-meadows-noblesville",
+   "name": "The Meadows",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$200s to $350s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Property-owners association managed community"
+   ],
+   "school_district": null,
+   "hoa_url": "https://www.meadowspoa.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-retreat-at-morse-noblesville",
+   "name": "The Retreat at Morse",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$350s to $550s",
+   "type": "low-maintenance villa community",
+   "highlights": [
+    "Low-maintenance villas with lawn care and snow removal",
+    "Pickleball court and walking trail",
+    "Connectivity to Morse Park & Beach"
+   ],
+   "school_district": "Noblesville Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "slater-ridge-noblesville",
+   "name": "Slater Ridge",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$500s to $800s",
+   "type": "new-construction community",
+   "highlights": [
+    "7-acre lake",
+    "Walkout and daylight-basement homesites",
+    "Larger sprawling lots"
+   ],
+   "school_district": "Noblesville Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "magnolia-ridge-noblesville",
+   "name": "Magnolia Ridge",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$400s to $600s",
+   "type": "new-construction community",
+   "highlights": [
+    "Ranch and two-story floor plans",
+    "Pond homesites and wooded views",
+    "Near Pebble Brook and Stony Creek golf courses"
+   ],
+   "school_district": "Noblesville Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "parkside-at-finch-creek-noblesville",
+   "name": "Parkside at Finch Creek",
+   "city": "Noblesville",
+   "county": "Hamilton",
+   "price_band": "$350s to $550s",
+   "type": "new-construction community",
+   "highlights": [
+    "Adjacent to Finch Creek Park",
+    "Large multi-phase community",
+    "Near 166th Street and Boden Road"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "royal-run-zionsville",
+   "name": "Royal Run",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$300s to $600s",
+   "type": "master-planned community",
+   "highlights": [
+    "Large established community (~700 homes)",
+    "Close to Eagle Creek Park and cycling routes",
+    "Minutes from the historic Zionsville Village"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": "https://royalrun.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cobblestone-lakes-zionsville",
+   "name": "Cobblestone Lakes",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$400s to $700s",
+   "type": "master-planned community",
+   "highlights": [
+    "Clubhouse and community pool",
+    "Tennis courts and playground",
+    "Walking trails and ponds"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "colony-woods-zionsville",
+   "name": "Colony Woods",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$600s to $1M+",
+   "type": "custom home community",
+   "highlights": [
+    "Mature trees and large lots",
+    "Custom-built homes",
+    "Walkable to Zionsville High School and the Village"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "thornhill-zionsville",
+   "name": "Thornhill",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$600s to $1M+",
+   "type": "custom home community",
+   "highlights": [
+    "Private, park-like home sites"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brittany-chase-zionsville",
+   "name": "Brittany Chase",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$500s to $900s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "blackstone-zionsville",
+   "name": "Blackstone",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$400s to $800s",
+   "type": "established family subdivision",
+   "highlights": [
+    "A variety of home styles and sizes"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "buttondown-farm-zionsville",
+   "name": "Buttondown Farm",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$400s to $800s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Walkable to schools, trails, and parks"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "fox-hollow-zionsville",
+   "name": "Fox Hollow",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$500s to $900s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cheval-de-selle-zionsville",
+   "name": "Cheval de Selle",
+   "city": "Zionsville",
+   "county": "Boone",
+   "price_band": "$800s to $1.5M+",
+   "type": "luxury estate community",
+   "highlights": [
+    "Large multi-acre estate lots",
+    "Custom-built luxury homes",
+    "Country setting in southwest Zionsville"
+   ],
+   "school_district": "Zionsville Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bridgewater-avon",
+   "name": "Bridgewater",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "master-planned community",
+   "highlights": [
+    "Community pool and playgrounds",
+    "Common lakes and parks",
+    "Cul-de-sac streets"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": "https://www.bridgewateravon.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "winton-meadows-avon",
+   "name": "Winton Meadows",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "275 single-family homes",
+    "Active HOA"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": "https://www.wintonmeadowshoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "austin-lakes-avon",
+   "name": "Austin Lakes",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$250s to $400s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "avon-estates-avon",
+   "name": "Avon Estates",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$200s to $400s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "westover-woods-avon",
+   "name": "Westover Woods",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$200s to $300s",
+   "type": "low-maintenance community",
+   "highlights": [
+    "Maintenance-free (lawn, snow, trash included)",
+    "Ranch-style floor plans"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "oaks-of-avon-avon",
+   "name": "Oaks of Avon",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool",
+    "Playground"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cedar-bend-avon",
+   "name": "Cedar Bend",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$200s to $400s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "timber-bend-avon",
+   "name": "Timber Bend",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$200s to $380s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Established HOA neighborhood"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "whispering-pines-avon",
+   "name": "Whispering Pines",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$300s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "Side-load garages and full basements",
+    "Near Avon schools, US-36 and Ronald Reagan Parkway"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "manors-at-avon-avon",
+   "name": "Manors at Avon",
+   "city": "Avon",
+   "county": "Hendricks",
+   "price_band": "$300s to $500s+",
+   "type": "new-construction community",
+   "highlights": [
+    "Two-story, ranch and multi-level plans",
+    "Cul-de-sac and tree-lined streets"
+   ],
+   "school_district": "Avon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "eagle-crossing-brownsburg",
+   "name": "Eagle Crossing",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "master-planned community",
+   "highlights": [
+    "Homes across the Tallgrass & Silverleaf sections",
+    "Community pools, playgrounds and dog park",
+    "2.5 miles of woodland trails",
+    "126 acres of common area"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": "https://www.eaglecrossinghoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cedar-run-lake-brownsburg",
+   "name": "Cedar Run Lake",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $400s",
+   "type": "lake community",
+   "highlights": [
+    "Neighborhood lake setting",
+    "Off South Green Street and Lake Drive North"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": "https://www.cedarrunlakehoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "country-walk-brownsburg",
+   "name": "Country Walk",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$200s to $380s",
+   "type": "established family subdivision",
+   "highlights": [
+    "99-home subdivision established 1997",
+    "Architectural control committee"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": "http://www.countrywalkhoa.net/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "creekside-commons-brownsburg",
+   "name": "Creekside Commons",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$280s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Clubhouse, pool, playground and basketball court",
+    "Southeast Brownsburg, south of SR-136"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": "https://creeksidecommons.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "white-lick-creek-estates-brownsburg",
+   "name": "White Lick Creek Estates",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$280s to $450s",
+   "type": "established large-lot subdivision",
+   "highlights": [
+    "Established 1973",
+    "Lots typically over a half acre",
+    "Mature trees and generous yards"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "highland-springs-brownsburg",
+   "name": "Highland Springs",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$350s to $500s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Larger homes",
+    "North edge of Brownsburg near I-74"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "branches-brownsburg",
+   "name": "Branches",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": "https://www.brancheshoa.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "winding-creek-brownsburg",
+   "name": "Winding Creek",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Neighborhood retention pond"
+   ],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": "https://sites.google.com/site/windingcreekhoa/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brentwood-brownsburg",
+   "name": "Brentwood",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": "https://brentwoodbrownsburghoa.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heritage-hill-brownsburg",
+   "name": "Heritage Hill",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "austin-meadows-brownsburg",
+   "name": "Austin Meadows",
+   "city": "Brownsburg",
+   "county": "Hendricks",
+   "price_band": "$250s to $450s",
+   "type": "established family subdivision",
+   "highlights": [],
+   "school_district": "Brownsburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
   }
  ]
 }
