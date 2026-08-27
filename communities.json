@@ -21,7 +21,43 @@
   "Greenfield",
   "Whiteland",
   "Pendleton",
-  "Danville"
+  "Danville",
+  "Lawrence",
+  "Beech Grove",
+  "Speedway",
+  "Geist",
+  "Broad Ripple",
+  "Irvington",
+  "Eagle Creek",
+  "Fortville",
+  "New Palestine",
+  "Cumberland",
+  "Cicero",
+  "Arcadia",
+  "Sheridan",
+  "Alexandria",
+  "Elwood",
+  "Lapel",
+  "Clayton",
+  "Pittsboro",
+  "Thorntown",
+  "Edinburgh",
+  "Trafalgar",
+  "Fairland",
+  "Morristown",
+  "Waldron",
+  "Martinsville",
+  "Monrovia",
+  "Columbus",
+  "Seymour",
+  "Crawfordsville",
+  "Greensburg",
+  "Westport",
+  "Nashville",
+  "North Vernon",
+  "Greencastle",
+  "Cloverdale",
+  "Rockville"
  ],
  "communities": [
   {
@@ -3701,6 +3737,2015 @@
    ],
    "school_district": "Danville Community School Corporation",
    "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "foxcliff-estates-martinsville",
+   "name": "Foxcliff Estates",
+   "city": "Martinsville",
+   "county": "Morgan",
+   "price_band": "$300s to $700s+",
+   "type": "golf course & lake community",
+   "highlights": [
+    "Built around the 18-hole Foxcliff Golf Club",
+    "Foxcliff North & South, each with its own HOA and pool",
+    "Small lakes; larger custom homes on wooded, rolling lots"
+   ],
+   "school_district": "MSD of Martinsville",
+   "hoa_url": "http://www.foxcliff.com/",
+   "image": null,
+   "video": null,
+   "short_name": "Foxcliff"
+  },
+  {
+   "slug": "painted-hills-martinsville",
+   "name": "Painted Hills",
+   "city": "Martinsville",
+   "county": "Morgan",
+   "price_band": "$200s to $500s+",
+   "type": "private lake community",
+   "highlights": [
+    "Two private lakes (Lake Holiday & Lake Nebo) with boating and swimming",
+    "Clubhouse, pool, tennis, and boat/dock storage",
+    "Off SR-252 east of town"
+   ],
+   "school_district": "MSD of Martinsville",
+   "hoa_url": "http://www.painted-hills.com/",
+   "image": null,
+   "video": null,
+   "short_name": "Painted Hills"
+  },
+  {
+   "slug": "hanna-farms-martinsville",
+   "name": "Hanna Farms",
+   "city": "Martinsville",
+   "county": "Morgan",
+   "price_band": "low $200s to low $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Active new-construction community by Arbor Homes",
+    "Single- and two-story plans",
+    "Easy access toward I-69 and Indianapolis"
+   ],
+   "school_district": "MSD of Martinsville",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Hanna Farms"
+  },
+  {
+   "slug": "morgan-trails-martinsville",
+   "name": "Morgan Trails",
+   "city": "Martinsville",
+   "county": "Morgan",
+   "price_band": "low $200s to upper $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "A wide mix of home sizes and styles",
+    "Low homeowners association dues",
+    "One of Martinsville's larger resale subdivisions"
+   ],
+   "school_district": "MSD of Martinsville",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Morgan Trails"
+  },
+  {
+   "slug": "legendary-hills-martinsville",
+   "name": "Legendary Hills",
+   "city": "Martinsville",
+   "county": "Morgan",
+   "price_band": "upper $200s to $500s",
+   "type": "wooded custom-home subdivision",
+   "highlights": [
+    "Lots atop wooded ridges on quiet cul-de-sacs",
+    "Privacy, mature trees, and wildlife",
+    "Larger custom and semi-custom homes"
+   ],
+   "school_district": "MSD of Martinsville",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Legendary Hills"
+  },
+  {
+   "slug": "homestead-monrovia",
+   "name": "Homestead",
+   "city": "Monrovia",
+   "county": "Morgan",
+   "price_band": "$200s to low $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Active new-construction community by D.R. Horton",
+    "Pool, clubhouse, playground, walking trails, and stocked ponds",
+    "About 21 miles from Indianapolis"
+   ],
+   "school_district": "Monroe-Gregg School District",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Homestead"
+  },
+  {
+   "slug": "winding-ridge-lawrence",
+   "name": "Winding Ridge",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "mid-$200s to $400s+",
+   "type": "golf community",
+   "highlights": [
+    "18-hole public golf course & clubhouse",
+    "community pool, tennis & basketball courts",
+    "ponds and walking trails, minutes to I-465"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Winding Ridge"
+  },
+  {
+   "slug": "fort-harrison-lawrence",
+   "name": "Fort Harrison",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "$200s to $500s+",
+   "type": "master-planned community",
+   "highlights": [
+    "renovated historic officers' quarters plus newer homes & condos",
+    "adjacent to 1,700-acre Fort Harrison State Park",
+    "walkable village setting at the center of Lawrence"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Fort Ben"
+  },
+  {
+   "slug": "lawrence-woods-lawrence",
+   "name": "Lawrence Woods",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "$150s to $280s",
+   "type": "established subdivision",
+   "highlights": [
+    "single-family homes on mature, tree-lined lots",
+    "convenient to Pendleton Pike shopping",
+    "quick access to I-465 and I-70"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Lawrence Woods"
+  },
+  {
+   "slug": "oaklandon-lawrence",
+   "name": "Oaklandon",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "low-$200s to $400s",
+   "type": "established neighborhood",
+   "highlights": [
+    "historic hamlet in northeast Lawrence Township",
+    "mix of older homes and newer subdivisions",
+    "close to Geist Reservoir recreation"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Oaklandon"
+  },
+  {
+   "slug": "carrington-woods-beech-grove",
+   "name": "Carrington Woods",
+   "city": "Beech Grove",
+   "county": "Marion",
+   "price_band": "low-$200s to mid-$200s",
+   "type": "townhome community",
+   "highlights": [
+    "low-maintenance townhomes, some with lofts",
+    "attached garages",
+    "convenient to I-465 and Emerson Avenue"
+   ],
+   "school_district": "Beech Grove City Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Carrington Woods"
+  },
+  {
+   "slug": "carrington-park-beech-grove",
+   "name": "Carrington Park",
+   "city": "Beech Grove",
+   "county": "Marion",
+   "price_band": "mid-$100s to high-$200s",
+   "type": "established subdivision",
+   "highlights": [
+    "single-family homes",
+    "near Sarah T. Bolton Park",
+    "Beech Grove City Schools"
+   ],
+   "school_district": "Beech Grove City Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Carrington Park"
+  },
+  {
+   "slug": "south-grove-beech-grove",
+   "name": "South Grove",
+   "city": "Beech Grove",
+   "county": "Marion",
+   "price_band": "mid-$100s to high-$200s",
+   "type": "established subdivision",
+   "highlights": [
+    "brick ranches and two-story homes",
+    "mature tree-lined streets",
+    "walkable to Beech Grove schools"
+   ],
+   "school_district": "Beech Grove City Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "South Grove"
+  },
+  {
+   "slug": "grovewood-acres-beech-grove",
+   "name": "Grovewood Acres",
+   "city": "Beech Grove",
+   "county": "Marion",
+   "price_band": "mid-$100s to high-$200s",
+   "type": "established subdivision",
+   "highlights": [
+    "ranch homes on established lots",
+    "quiet residential streets",
+    "minutes from Main Street shops and dining"
+   ],
+   "school_district": "Beech Grove City Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Grovewood"
+  },
+  {
+   "slug": "southeastwood-beech-grove",
+   "name": "Southeastwood",
+   "city": "Beech Grove",
+   "county": "Marion",
+   "price_band": "low-$100s to $200s",
+   "type": "established subdivision",
+   "highlights": [
+    "affordable post-war ranch homes",
+    "close to Franciscan Health (St. Francis)",
+    "easy I-465 access"
+   ],
+   "school_district": "Beech Grove City Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Southeastwood"
+  },
+  {
+   "slug": "timber-grove-beech-grove",
+   "name": "Timber Grove",
+   "city": "Beech Grove",
+   "county": "Marion",
+   "price_band": "mid-$100s to high-$200s",
+   "type": "established subdivision",
+   "highlights": [
+    "single-family homes",
+    "convenient to I-465 and Emerson Avenue",
+    "Beech Grove City Schools"
+   ],
+   "school_district": "Beech Grove City Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Timber Grove"
+  },
+  {
+   "slug": "speedway-city-speedway",
+   "name": "Speedway City",
+   "city": "Speedway",
+   "county": "Marion",
+   "price_band": "mid-$100s to high-$200s",
+   "type": "established subdivision",
+   "highlights": [
+    "1920s-1940s bungalows and American Foursquares",
+    "walk to the revitalized Main Street / Wilshaw dining & shops",
+    "steps from the Indianapolis Motor Speedway"
+   ],
+   "school_district": "School Town of Speedway",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Speedway City"
+  },
+  {
+   "slug": "speedway-manor-speedway",
+   "name": "Speedway Manor",
+   "city": "Speedway",
+   "county": "Marion",
+   "price_band": "mid-$100s to high-$200s",
+   "type": "established subdivision",
+   "highlights": [
+    "midcentury brick ranches",
+    "quiet tree-lined streets",
+    "walkable to School Town of Speedway campuses"
+   ],
+   "school_district": "School Town of Speedway",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Speedway Manor"
+  },
+  {
+   "slug": "speedway-estates-speedway",
+   "name": "Speedway Estates",
+   "city": "Speedway",
+   "county": "Marion",
+   "price_band": "$200s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "ranch and split-level homes on established lots",
+    "convenient to I-465 and I-74",
+    "close to town parks and schools"
+   ],
+   "school_district": "School Town of Speedway",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Speedway Estates"
+  },
+  {
+   "slug": "meadowood-speedway",
+   "name": "Meadowood",
+   "city": "Speedway",
+   "county": "Marion",
+   "price_band": "mid-$100s to $200s",
+   "type": "established subdivision",
+   "highlights": [
+    "post-war ranch homes",
+    "affordable, walkable neighborhood",
+    "close to Speedway schools and shopping"
+   ],
+   "school_district": "School Town of Speedway",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Meadowood"
+  },
+  {
+   "slug": "winterwood-speedway",
+   "name": "Winterwood",
+   "city": "Speedway",
+   "county": "Marion",
+   "price_band": "mid-$100s to high-$200s",
+   "type": "established subdivision",
+   "highlights": [
+    "established neighborhood with mature trees",
+    "brick ranch and traditional homes",
+    "quick access to Speedway shopping, dining and I-465"
+   ],
+   "school_district": "School Town of Speedway",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Winterwood"
+  },
+  {
+   "slug": "timbergate-edinburgh",
+   "name": "Timbergate",
+   "city": "Edinburgh",
+   "county": "Johnson",
+   "price_band": "high $200s to upper $300s",
+   "type": "golf-course community with new ranch homes",
+   "highlights": [
+    "Homes back up to Timbergate Golf Course with fairway views",
+    "New one-level ranch homes by Ryan Homes with lawn care & snow removal",
+    "Minutes to I-65 for Columbus and Indianapolis commutes"
+   ],
+   "school_district": "Edinburgh Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Timbergate"
+  },
+  {
+   "slug": "pleasant-view-edinburgh",
+   "name": "Pleasant View",
+   "city": "Edinburgh",
+   "county": "Johnson",
+   "price_band": "low $200s to upper $200s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established single-family homes close to downtown Edinburgh",
+    "Mix of ranch and traditional two-story styles",
+    "Quick access to US-31 and I-65"
+   ],
+   "school_district": "Edinburgh Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Pleasant View"
+  },
+  {
+   "slug": "meadow-village-edinburgh",
+   "name": "Meadow Village",
+   "city": "Edinburgh",
+   "county": "Johnson",
+   "price_band": "high $100s to mid $200s",
+   "type": "established subdivision",
+   "highlights": [
+    "Budget-friendly ranch and traditional homes",
+    "Within the Edinburgh Community school district",
+    "Convenient to Edinburgh Premium Outlets and town parks"
+   ],
+   "school_district": "Edinburgh Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Meadow Village"
+  },
+  {
+   "slug": "lamb-lake-estates-trafalgar",
+   "name": "Lamb Lake Estates",
+   "city": "Trafalgar",
+   "county": "Johnson",
+   "price_band": "mid $200s to $1M+ for premium lakefront",
+   "type": "private lake community",
+   "highlights": [
+    "Built around private 260-acre Lamb Lake with boating and fishing",
+    "Lakefront and wooded lots via the Lamb Lake Estates Lot Owners Association",
+    "Ranges from modest homes to large custom lakefront estates"
+   ],
+   "school_district": "Indian Creek Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Lamb Lake"
+  },
+  {
+   "slug": "wood-preserve-trafalgar",
+   "name": "Wood Preserve",
+   "city": "Trafalgar",
+   "county": "Johnson",
+   "price_band": "$230s to low $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "New single-family homes by Arbor Homes, basements available",
+    "Pond-view and corner homesites in a quiet country setting",
+    "Indian Creek Schools; about an hour from downtown Indianapolis"
+   ],
+   "school_district": "Indian Creek Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Wood Preserve"
+  },
+  {
+   "slug": "earlham-lake-estates-trafalgar",
+   "name": "Earlham Lake Estates",
+   "city": "Trafalgar",
+   "county": "Johnson",
+   "price_band": "low $200s to $400s",
+   "type": "lakeside subdivision",
+   "highlights": [
+    "Set on Earlham Lake with wooded, rolling lots",
+    "Established custom homes with some build-to-suit lots",
+    "Quiet, private setting near Johnson County Park"
+   ],
+   "school_district": "Indian Creek Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Earlham"
+  },
+  {
+   "slug": "waterfront-condominiums-at-morse-lake-cicero",
+   "name": "Waterfront Condominiums at Morse Lake",
+   "city": "Cicero",
+   "county": "Hamilton",
+   "price_band": "low $300s to $500s",
+   "type": "lake condo community",
+   "highlights": [
+    "Maintenance-free luxury condos built on Morse Reservoir",
+    "Waterfront living with lake access",
+    "A low-maintenance alternative to a single-family lake home"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Waterfront Condos at Morse"
+  },
+  {
+   "slug": "stillwater-cove-cicero",
+   "name": "Stillwater Cove",
+   "city": "Cicero",
+   "county": "Hamilton",
+   "price_band": "upper $300s to $600s",
+   "type": "upscale subdivision",
+   "highlights": [
+    "Upscale development on the west side of Morse Reservoir",
+    "A move-up home area near the lake",
+    "Single-family homes minutes from the water and marina"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Stillwater Cove"
+  },
+  {
+   "slug": "morse-landing-cicero",
+   "name": "Morse Landing",
+   "city": "Cicero",
+   "county": "Hamilton",
+   "price_band": "mid $300s to $600s",
+   "type": "established subdivision",
+   "highlights": [
+    "Upscale west-side community near Morse Reservoir",
+    "Larger single-family homes on landscaped lots",
+    "Popular family neighborhood close to lake recreation"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Morse Landing"
+  },
+  {
+   "slug": "bear-slide-cicero",
+   "name": "Bear Slide",
+   "city": "Cicero",
+   "county": "Hamilton",
+   "price_band": "$500s to $1M+",
+   "type": "estate golf-adjacent community",
+   "highlights": [
+    "Estate homes on larger lots in a rural setting",
+    "Adjacent to Bear Slide Golf Club",
+    "Secluded feel within the Cicero area"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Bear Slide"
+  },
+  {
+   "slug": "calumet-farms-cicero",
+   "name": "Calumet Farms",
+   "city": "Cicero",
+   "county": "Hamilton",
+   "price_band": "$500s to $900s",
+   "type": "estate subdivision",
+   "highlights": [
+    "Estate homes on larger lots in a rural setting",
+    "A spacious alternative to lakefront living",
+    "Cicero-area community in Hamilton Heights schools"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Calumet Farms"
+  },
+  {
+   "slug": "forest-bay-cicero",
+   "name": "Forest Bay",
+   "city": "Cicero",
+   "county": "Hamilton",
+   "price_band": "upper $400s to $800s",
+   "type": "estate subdivision",
+   "highlights": [
+    "Estate homes in a wooded setting near Morse Reservoir",
+    "Larger lots and privacy",
+    "Served by Hamilton Heights schools"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Forest Bay"
+  },
+  {
+   "slug": "crystal-lake-cicero",
+   "name": "Crystal Lake",
+   "city": "Cicero",
+   "county": "Hamilton",
+   "price_band": "$200s to $400s",
+   "type": "small established subdivision",
+   "highlights": [
+    "Small community of roughly 30 homesites",
+    "Over 7 acres of common area with play area and basketball court",
+    "East of Hague Road near the Morse marina"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Crystal Lake"
+  },
+  {
+   "slug": "langdon-crossing-arcadia",
+   "name": "Langdon Crossing",
+   "city": "Arcadia",
+   "county": "Hamilton",
+   "price_band": "from the $270s",
+   "type": "new-construction subdivision",
+   "highlights": [
+    "New single-family homes by Arbor Homes",
+    "Small-town setting in far northern Hamilton County",
+    "Affordable new-build entry point vs. southern Hamilton County"
+   ],
+   "school_district": "Hamilton Heights School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Langdon Crossing"
+  },
+  {
+   "slug": "maple-run-sheridan",
+   "name": "Maple Run",
+   "city": "Sheridan",
+   "county": "Hamilton",
+   "price_band": "from the mid $260s",
+   "type": "new-construction subdivision",
+   "highlights": [
+    "New single-family homes by Arbor Homes",
+    "Walkable to downtown Sheridan and the Sheridan-Monon Trail",
+    "Convenient to US-31 between Indianapolis and Kokomo"
+   ],
+   "school_district": "Sheridan Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Maple Run"
+  },
+  {
+   "slug": "centre-place-sheridan",
+   "name": "Centre Place",
+   "city": "Sheridan",
+   "county": "Hamilton",
+   "price_band": "high $200s to $350s",
+   "type": "new-construction subdivision",
+   "highlights": [
+    "New homes by D.R. Horton with seven floor plans",
+    "Smart-home tech and 2-car garages",
+    "Playground, walking trails, and a scenic pond"
+   ],
+   "school_district": "Sheridan Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Centre Place"
+  },
+  {
+   "slug": "tipton-lakes-columbus",
+   "name": "Tipton Lakes",
+   "city": "Columbus",
+   "county": "Bartholomew",
+   "price_band": "mid $300s to $1M+",
+   "type": "master-planned lake community",
+   "highlights": [
+    "Large planned community built around multiple lakes with a marina and beach",
+    "Dozens of sub-neighborhoods (Greystone, Oakbrook, Blackhawk, The Preserve, and more)",
+    "Paved trails, community events, and an active HOA"
+   ],
+   "school_district": "Bartholomew Consolidated School Corporation",
+   "hoa_url": "https://www.tiptonlakes.com",
+   "image": null,
+   "video": null,
+   "short_name": "Tipton Lakes"
+  },
+  {
+   "slug": "sutter-place-columbus",
+   "name": "Sutter Place",
+   "city": "Columbus",
+   "county": "Bartholomew",
+   "price_band": "$190s to $240s+",
+   "type": "new-construction community",
+   "highlights": [
+    "Built by Arbor Homes (Arrival and Arbor series)",
+    "Near I-65 and US-31 with common areas, playground, and pond views",
+    "One of the newest active new-home neighborhoods in Columbus"
+   ],
+   "school_district": "Bartholomew Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Sutter Place"
+  },
+  {
+   "slug": "abbey-commons-columbus",
+   "name": "Abbey Commons",
+   "city": "Columbus",
+   "county": "Bartholomew",
+   "price_band": "from the $240s",
+   "type": "new-construction community",
+   "highlights": [
+    "Arbor Homes community on the south side near US-31",
+    "Newer single-family homes with modern open floor plans",
+    "Convenient access to shopping and I-65"
+   ],
+   "school_district": "Bartholomew Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Abbey Commons"
+  },
+  {
+   "slug": "everroad-park-west-columbus",
+   "name": "Everroad Park West",
+   "city": "Columbus",
+   "county": "Bartholomew",
+   "price_band": "mid $100s to low $300s",
+   "type": "established neighborhood",
+   "highlights": [
+    "Long-established west-side Columbus neighborhood",
+    "An affordable, in-town alternative to newer edge subdivisions",
+    "Close to schools, parks, and everyday shopping"
+   ],
+   "school_district": "Bartholomew Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Everroad Park"
+  },
+  {
+   "slug": "sycamore-bend-columbus",
+   "name": "Sycamore Bend",
+   "city": "Columbus",
+   "county": "Bartholomew",
+   "price_band": "mid $200s to $400s",
+   "type": "established subdivision",
+   "highlights": [
+    "Well-regarded residential subdivision",
+    "Single-family homes on established, tree-lined streets",
+    "Suburban feel with easy access to central Columbus"
+   ],
+   "school_district": "Bartholomew Consolidated School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Sycamore Bend"
+  },
+  {
+   "slug": "redbud-meadows-seymour",
+   "name": "Redbud Meadows",
+   "city": "Seymour",
+   "county": "Jackson",
+   "price_band": "low $200s to $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Built by National HomeCorp on the north side of Seymour",
+    "One- and two-story plans, 4-5 bedrooms",
+    "Positioned between Indianapolis and Louisville"
+   ],
+   "school_district": "Seymour Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Redbud Meadows"
+  },
+  {
+   "slug": "stoney-run-seymour",
+   "name": "Stoney Run",
+   "city": "Seymour",
+   "county": "Jackson",
+   "price_band": "low $200s to $300s",
+   "type": "newer subdivision",
+   "highlights": [
+    "Newer development off Marley Lane, about 51 building sites",
+    "Single-family homes on the growing edge of Seymour",
+    "One of the city's more recent residential additions"
+   ],
+   "school_district": "Seymour Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Stoney Run"
+  },
+  {
+   "slug": "cloverleaf-estates-seymour",
+   "name": "Cloverleaf Estates",
+   "city": "Seymour",
+   "county": "Jackson",
+   "price_band": "$300s and up",
+   "type": "acreage subdivision",
+   "highlights": [
+    "Southeast-edge development with about 16 one-acre homesites",
+    "Larger lots for buyers wanting more space near town",
+    "City-approved subdivision expanding Seymour's higher-end inventory"
+   ],
+   "school_district": "Seymour Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Cloverleaf Estates"
+  },
+  {
+   "slug": "ashwood-seymour",
+   "name": "Ashwood",
+   "city": "Seymour",
+   "county": "Jackson",
+   "price_band": "mid $100s to low $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Located off County Road 950E on the east side",
+    "Established single-family homes in a convenient location",
+    "Close to retail and highway access"
+   ],
+   "school_district": "Seymour Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Ashwood"
+  },
+  {
+   "slug": "hoevener-seymour",
+   "name": "Hoevener",
+   "city": "Seymour",
+   "county": "Jackson",
+   "price_band": "mid $100s to low $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Neighbors Ashwood on the southeast side",
+    "Mix of established and updated single-family homes",
+    "Convenient to shopping and commuter routes"
+   ],
+   "school_district": "Seymour Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Hoevener"
+  },
+  {
+   "slug": "hawkview-crawfordsville",
+   "name": "Hawkview",
+   "city": "Crawfordsville",
+   "county": "Montgomery",
+   "price_band": "$220s to low $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Arbor Homes community with basements available",
+    "Cul-de-sac homesites, playground, and pond views",
+    "Near Sugar Creek Nature Park with quick highway access"
+   ],
+   "school_district": "South Montgomery Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Hawkview"
+  },
+  {
+   "slug": "elston-grove-crawfordsville",
+   "name": "Elston Grove",
+   "city": "Crawfordsville",
+   "county": "Montgomery",
+   "price_band": "mid $100s to $400s+",
+   "type": "historic in-town neighborhood",
+   "highlights": [
+    "National Register historic district with Italianate and Queen Anne homes",
+    "Walkable to downtown Crawfordsville and Wabash College",
+    "Stately older homes blending period character with updates"
+   ],
+   "school_district": "Crawfordsville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Elston Grove"
+  },
+  {
+   "slug": "ashton-walk-crawfordsville",
+   "name": "Ashton Walk",
+   "city": "Crawfordsville",
+   "county": "Montgomery",
+   "price_band": "$200s to $300s",
+   "type": "new garden-home community",
+   "highlights": [
+    "Newer garden homes and townhouses with low-maintenance living",
+    "Open-concept plans with primary suites and in-home laundry",
+    "Appeals to downsizers and first-time buyers"
+   ],
+   "school_district": "Crawfordsville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Ashton Walk"
+  },
+  {
+   "slug": "pleasant-meadows-crawfordsville",
+   "name": "Pleasant Meadows",
+   "city": "Crawfordsville",
+   "county": "Montgomery",
+   "price_band": "mid $100s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Popular established neighborhood with varied home styles",
+    "Mix of updated and remodeled single-family homes",
+    "Convenient, family-friendly location"
+   ],
+   "school_district": "Crawfordsville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Pleasant Meadows"
+  },
+  {
+   "slug": "deer-haven-crawfordsville",
+   "name": "Deer Haven",
+   "city": "Crawfordsville",
+   "county": "Montgomery",
+   "price_band": "low $100s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Subdivision with both single-family homes and condos",
+    "Lower-maintenance condo options for downsizers",
+    "Established streets convenient to city amenities"
+   ],
+   "school_district": "Crawfordsville Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Deer Haven"
+  },
+  {
+   "slug": "mt-vernon-north-fortville",
+   "name": "Mt. Vernon North",
+   "city": "Fortville",
+   "county": "Hancock",
+   "price_band": "low $300s to mid $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Single- and two-story D.R. Horton plans, 4-5 bedrooms",
+    "Just southeast of Fishers and northeast of McCordsville",
+    "Smart-home features standard"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Mt. Vernon North"
+  },
+  {
+   "slug": "beyers-estates-fortville",
+   "name": "Beyers Estates",
+   "city": "Fortville",
+   "county": "Hancock",
+   "price_band": "high $200s to upper $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Over 10 acres of common space with walking trails",
+    "2-acre central park with picnic shelter and playground",
+    "Single-family and carriage-duplex home collections by Lennar"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Beyers Estates"
+  },
+  {
+   "slug": "wyndstone-fortville",
+   "name": "Wyndstone",
+   "city": "Fortville",
+   "county": "Hancock",
+   "price_band": "$300s to low $400s",
+   "type": "established subdivision",
+   "highlights": [
+    "Community walking trails",
+    "Partial-brick exteriors",
+    "Off Flint Blvd near IN-13 and I-69"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Wyndstone"
+  },
+  {
+   "slug": "park-creek-fortville",
+   "name": "Park Creek",
+   "city": "Fortville",
+   "county": "Hancock",
+   "price_band": "mid $200s to low $400s",
+   "type": "established neighborhood",
+   "highlights": [
+    "Small 34-home single-family enclave",
+    "Walkable to downtown Fortville",
+    "Active homeowners association"
+   ],
+   "school_district": "Mt. Vernon Community School Corporation",
+   "hoa_url": "https://www.parkcreekhoa.com/",
+   "image": null,
+   "video": null,
+   "short_name": "Park Creek"
+  },
+  {
+   "slug": "fields-at-sugar-creek-new-palestine",
+   "name": "Fields at Sugar Creek",
+   "city": "New Palestine",
+   "county": "Hancock",
+   "price_band": "mid $300s to mid $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "About 111 homesites; six D.R. Horton plans, one- and two-story",
+    "Community walking trails near Sugar Creek Township Park",
+    "Standard smart-home package"
+   ],
+   "school_district": "New Palestine Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Fields at Sugar Creek"
+  },
+  {
+   "slug": "willow-ridge-new-palestine",
+   "name": "Willow Ridge",
+   "city": "New Palestine",
+   "county": "Hancock",
+   "price_band": "from the low $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Private, tree-lined homesites",
+    "Basement options available",
+    "Contemporary single-family plans"
+   ],
+   "school_district": "New Palestine Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Willow Ridge"
+  },
+  {
+   "slug": "stone-crossing-new-palestine",
+   "name": "Stone Crossing",
+   "city": "New Palestine",
+   "county": "Hancock",
+   "price_band": "mid $300s to mid $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Spacious plans roughly 2,300-2,600+ sq ft",
+    "Full brick wrap on every home",
+    "In its final selling phase"
+   ],
+   "school_district": "New Palestine Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Stone Crossing"
+  },
+  {
+   "slug": "grant-s-corner-cumberland",
+   "name": "Grant's Corner",
+   "city": "Cumberland",
+   "county": "Hancock",
+   "price_band": "low $350s and up",
+   "type": "new-construction community",
+   "highlights": [
+    "Single-family homes and low-maintenance paired villas by Olthof Homes",
+    "Community walking trails, picnic shelter, and playground",
+    "Quick access to I-465 and I-70"
+   ],
+   "school_district": "New Palestine Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Grant's Corner"
+  },
+  {
+   "slug": "towns-at-pennsy-cumberland",
+   "name": "Towns at Pennsy",
+   "city": "Cumberland",
+   "county": "Hancock",
+   "price_band": "high $200s to low $300s",
+   "type": "new-construction townhomes",
+   "highlights": [
+    "Low-maintenance 3-bedroom Lennar townhomes",
+    "Backs up to the Pennsy trail toward downtown Indianapolis",
+    "About 14 miles from downtown Indy"
+   ],
+   "school_district": "New Palestine Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Towns at Pennsy"
+  },
+  {
+   "slug": "cumberland-cove-cumberland",
+   "name": "Cumberland Cove",
+   "city": "Cumberland",
+   "county": "Hancock",
+   "price_band": "$200s to low $300s",
+   "type": "55-plus patio-home community",
+   "highlights": [
+    "Age-55+ community of duplex patio homes",
+    "Off Cumberland Road adjacent to Brookview Elementary",
+    "Low-maintenance, single-level living"
+   ],
+   "school_district": "MSD of Warren Township",
+   "hoa_url": "https://www.cumberlandcoveindy.com/",
+   "image": null,
+   "video": null,
+   "short_name": "Cumberland Cove"
+  },
+  {
+   "slug": "masthead-at-geist",
+   "name": "Masthead at Geist",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "upper $400s to $1M+",
+   "type": "waterfront community",
+   "highlights": [
+    "One of the two original Geist Reservoir subdivisions",
+    "Deep-water lots with private docks and direct reservoir access",
+    "Member of the Geist Harbours POA (marina, boating, trails)"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": "https://ghpoa.com/",
+   "image": null,
+   "video": null,
+   "short_name": "Masthead"
+  },
+  {
+   "slug": "feather-cove-geist",
+   "name": "Feather Cove",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "mid $400s to $900s",
+   "type": "waterfront community",
+   "highlights": [
+    "Sits on the main body of Geist Reservoir",
+    "Three phases within the Geist Harbours POA",
+    "Established waterfront homes with docks"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": "https://ghpoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "admirals-bay-geist",
+   "name": "Admirals Bay",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "mid $300s to $800s",
+   "type": "waterfront community",
+   "highlights": [
+    "Part of the Admirals cluster in the Geist Harbours POA",
+    "Mix of waterfront and water-access interior homes",
+    "Boating, swimming and marina amenities"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": "https://ghpoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "admirals-pointe-geist",
+   "name": "Admirals Pointe",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "$400s to $900s",
+   "type": "waterfront community",
+   "highlights": [
+    "One of the four Admirals subdivisions in the POA",
+    "Peninsula-style lots with reservoir frontage",
+    "Shared POA marina and water recreation"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": "https://ghpoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "diamond-pointe-geist",
+   "name": "Diamond Pointe",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "$400s to $800s",
+   "type": "waterfront community",
+   "highlights": [
+    "Established Geist Harbours POA neighborhood",
+    "Water-access and waterfront homesites",
+    "Nature trails and boating access"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": "https://ghpoa.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-anchorage-geist",
+   "name": "The Anchorage",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "$400s to $900s",
+   "type": "waterfront community",
+   "highlights": [
+    "Established waterfront subdivision on the Marion County side of Geist",
+    "Mature, wooded reservoir lots",
+    "Docks and direct lake access"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sail-place-geist",
+   "name": "Sail Place",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "$300s to $700s",
+   "type": "waterfront community",
+   "highlights": [
+    "Geist Reservoir waterfront and water-access subdivision",
+    "Lawrence Township location near Geist marinas",
+    "Established homes on wooded lots"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "windjammer-at-geist",
+   "name": "Windjammer at Geist",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "$300s to $700s",
+   "type": "waterfront community",
+   "highlights": [
+    "Named Geist waterfront subdivision on the Lawrence Township side",
+    "Reservoir access for boating and fishing",
+    "Near Geist shopping and dining"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Windjammer"
+  },
+  {
+   "slug": "bridgewater-at-geist",
+   "name": "Bridgewater at Geist",
+   "city": "Geist",
+   "county": "Marion",
+   "price_band": "$800s to $1.5M+",
+   "type": "luxury waterfront community",
+   "highlights": [
+    "Premier wooded enclave with half-acre-plus custom estate lots",
+    "Many homes with private boat docks",
+    "Indianapolis mailing address but served by Hamilton Southeastern Schools"
+   ],
+   "school_district": "Hamilton Southeastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Bridgewater"
+  },
+  {
+   "slug": "broad-ripple-village-broad-ripple",
+   "name": "Broad Ripple Village",
+   "city": "Broad Ripple",
+   "county": "Marion",
+   "price_band": "$200s to $500s+",
+   "type": "historic neighborhood",
+   "highlights": [
+    "Walkable historic core along the Central Canal and Monon Trail",
+    "1920s bungalows, cottages, condos and canal-front homes",
+    "Dining, nightlife and arts district"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "The Village"
+  },
+  {
+   "slug": "warfleigh-broad-ripple",
+   "name": "Warfleigh",
+   "city": "Broad Ripple",
+   "county": "Marion",
+   "price_band": "$300s to $600s+",
+   "type": "historic neighborhood",
+   "highlights": [
+    "About 700 homes between the White River and the Central Canal",
+    "Established early-20th-century housing stock",
+    "Active Warfleigh Neighborhood Association"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": "https://warfleigh.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "canterbury-broad-ripple",
+   "name": "Canterbury",
+   "city": "Broad Ripple",
+   "county": "Marion",
+   "price_band": "$300s to $600s",
+   "type": "established neighborhood",
+   "highlights": [
+    "About 330 homes in the South Broad Ripple (SoBro) area",
+    "Borders the 54th Street corridor and the Monon Trail",
+    "Active Canterbury Neighborhood Association"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": "https://www.cnaindy.com/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "meridian-kessler-broad-ripple",
+   "name": "Meridian-Kessler",
+   "city": "Broad Ripple",
+   "county": "Marion",
+   "price_band": "$300s to $1M+",
+   "type": "historic neighborhood",
+   "highlights": [
+    "Directly south of Broad Ripple along the Monon",
+    "Bungalows to grand historic homes on Washington and Pennsylvania",
+    "One of Indy's largest neighborhood associations"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": "https://www.mkna.org/",
+   "image": null,
+   "video": null,
+   "short_name": "Meridian-Kessler"
+  },
+  {
+   "slug": "historic-irvington",
+   "name": "Historic Irvington",
+   "city": "Irvington",
+   "county": "Marion",
+   "price_band": "$150s to $400s",
+   "type": "historic neighborhood",
+   "highlights": [
+    "Founded 1870 with a curvilinear street plan, about 5 miles east of downtown",
+    "Largest locally protected historic district in Indianapolis",
+    "Victorian, Tudor Revival and Arts & Crafts bungalows"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Irvington Historic District"
+  },
+  {
+   "slug": "pleasanton-irvington",
+   "name": "Pleasanton",
+   "city": "Irvington",
+   "county": "Marion",
+   "price_band": "$150s to $300s",
+   "type": "historic subdivision",
+   "highlights": [
+    "Platted 1915 between Pleasant Run, Michigan St and Emerson Ave",
+    "Rows of early-20th-century bungalows",
+    "Pleasanton-in-Irvington Historic District (NRHP)"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "irvington-terrace-irvington",
+   "name": "Irvington Terrace",
+   "city": "Irvington",
+   "county": "Marion",
+   "price_band": "$150s to $300s",
+   "type": "historic subdivision",
+   "highlights": [
+    "Platted 1913 east of Arlington Avenue",
+    "Bungalow-heavy plat",
+    "Irvington Terrace Historic District (NRHP)"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "north-irvington-gardens-irvington",
+   "name": "North Irvington Gardens",
+   "city": "Irvington",
+   "county": "Marion",
+   "price_band": "$150s to $300s",
+   "type": "historic subdivision",
+   "highlights": [
+    "Northern extension of Irvington built out in the 1920s-30s",
+    "Tudor Revival cottages and Craftsman homes",
+    "On the National Register (2008)"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bay-colony-eagle-creek",
+   "name": "Bay Colony",
+   "city": "Eagle Creek",
+   "county": "Marion",
+   "price_band": "$400s to $900s+",
+   "type": "gated waterfront community",
+   "highlights": [
+    "Private, gated community on Eagle Creek Reservoir via a causeway off W 56th St",
+    "Many homes with private docks and direct lake/park access",
+    "HOA dues cover common areas and clubhouse"
+   ],
+   "school_district": "MSD of Pike Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "bay-landing-eagle-creek",
+   "name": "Bay Landing",
+   "city": "Eagle Creek",
+   "county": "Marion",
+   "price_band": "$400s to $800s",
+   "type": "gated community",
+   "highlights": [
+    "Gated neighborhood adjacent to Eagle Creek Reservoir",
+    "Custom homes on wooded, water-oriented lots",
+    "Minutes from Eagle Creek Park and I-465/I-65"
+   ],
+   "school_district": "MSD of Pike Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-preserve-at-eagle-creek",
+   "name": "The Preserve at Eagle Creek",
+   "city": "Eagle Creek",
+   "county": "Marion",
+   "price_band": "$300s to $600s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established Pike Township subdivision bordering Eagle Creek Park",
+    "Single-family homes on generous, tree-lined lots",
+    "Quick access to park trails, marina and I-465"
+   ],
+   "school_district": "MSD of Pike Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "The Preserve"
+  },
+  {
+   "slug": "sunset-at-eagle-creek",
+   "name": "Sunset at Eagle Creek",
+   "city": "Eagle Creek",
+   "county": "Marion",
+   "price_band": "$250s to $450s",
+   "type": "established subdivision",
+   "highlights": [
+    "About 75 homes with a community pond and mature trees",
+    "Near Eagle Highlands Park with easy I-465/I-65 access",
+    "Active homeowners association"
+   ],
+   "school_district": "MSD of Pike Township",
+   "hoa_url": "http://www.sunsetateaglecreek.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "montgomery-farms-lapel",
+   "name": "Montgomery Farms",
+   "city": "Lapel",
+   "county": "Madison",
+   "price_band": "high $300s to mid $400s",
+   "type": "new-construction subdivision",
+   "highlights": [
+    "Active new construction by Dunnhaven and Hallmark Homes",
+    "Customizable 3-4 bedroom plans",
+    "Granite, LVP flooring and upgraded cabinets standard"
+   ],
+   "school_district": "Frankton-Lapel Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "tuscany-lapel",
+   "name": "Tuscany",
+   "city": "Lapel",
+   "county": "Madison",
+   "price_band": "mid $200s to low $400s",
+   "type": "established subdivision",
+   "highlights": [
+    "Former Arbor Homes community, now resale",
+    "3-5 bedroom ranch and two-story homes",
+    "Quiet setting near Purgatory Golf Club"
+   ],
+   "school_district": "Frankton-Lapel Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brookside-lapel",
+   "name": "Brookside",
+   "city": "Lapel",
+   "county": "Madison",
+   "price_band": "low $200s to mid $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established Lapel neighborhood tracked as a distinct subdivision",
+    "Primarily resale single-family homes",
+    "Small-town setting in Frankton-Lapel schools"
+   ],
+   "school_district": "Frankton-Lapel Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "timberlake-estates-alexandria",
+   "name": "Timberlake Estates",
+   "city": "Alexandria",
+   "county": "Madison",
+   "price_band": "mid $100s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Featured in the City of Alexandria housing plan",
+    "Single-family homes alongside some duplexes",
+    "One of Alexandria's larger newer-home neighborhoods"
+   ],
+   "school_district": "Alexandria Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "fairington-alexandria",
+   "name": "Fairington",
+   "city": "Alexandria",
+   "county": "Madison",
+   "price_band": "high $200s to $400s",
+   "type": "custom-home subdivision",
+   "highlights": [
+    "Custom-built homes on roughly half-acre lots",
+    "Phase 1 lots with utility tie-ins still available",
+    "In the 46001 ZIP within Alexandria"
+   ],
+   "school_district": "Alexandria Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heritage-heights-alexandria",
+   "name": "Heritage Heights",
+   "city": "Alexandria",
+   "county": "Madison",
+   "price_band": "$200s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established Alexandria subdivision tracked by MLS brokerages",
+    "Traditional single-family homes on in-town lots",
+    "In the Alexandria Community school district"
+   ],
+   "school_district": "Alexandria Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "woodlawn-acres-alexandria",
+   "name": "Woodlawn Acres",
+   "city": "Alexandria",
+   "county": "Madison",
+   "price_band": "upper $100s to $400s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established neighborhood next to Yule Golf Course",
+    "Larger lots and a range of home sizes",
+    "Quiet setting on the edge of town"
+   ],
+   "school_district": "Alexandria Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cattail-estates-elwood",
+   "name": "Cattail Estates",
+   "city": "Elwood",
+   "county": "Madison",
+   "price_band": "low to mid $300s",
+   "type": "new-construction subdivision",
+   "highlights": [
+    "Active new construction by Citation Homes",
+    "Open-concept 3-bed, 2-bath ranch plans",
+    "Cul-de-sac homesites with two-car garages"
+   ],
+   "school_district": "Elwood Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "willow-run-willow-walk-elwood",
+   "name": "Willow Run / Willow Walk",
+   "city": "Elwood",
+   "county": "Madison",
+   "price_band": "$150s to low $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "North-side community built around a landscaped pond",
+    "Low-maintenance garden and patio homes plus ranch and two-story homes",
+    "Pond-view and double-lot homesites"
+   ],
+   "school_district": "Elwood Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Willow Walk"
+  },
+  {
+   "slug": "fox-creek-clayton",
+   "name": "Fox Creek",
+   "city": "Clayton",
+   "county": "Hendricks",
+   "price_band": "low $350s to upper $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Wooded homesites and pond views with optional basements",
+    "Nature trails, playground, basketball court and picnic pavilion",
+    "Built by D.R. Horton; quick access to SR-39/I-70"
+   ],
+   "school_district": "Mill Creek Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "pheasant-run-clayton",
+   "name": "Pheasant Run",
+   "city": "Clayton",
+   "county": "Hendricks",
+   "price_band": "$200s to $400s",
+   "type": "established subdivision",
+   "highlights": [
+    "Rare waterfront and pond lot opportunities",
+    "Convenient to the I-70 and SR-39 interchange",
+    "Quiet, established neighborhood"
+   ],
+   "school_district": "Mill Creek Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "hidden-hills-pittsboro",
+   "name": "Hidden Hills",
+   "city": "Pittsboro",
+   "county": "Hendricks",
+   "price_band": "mid $300s to low $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Pond-overlook deck, firepit, playground and gazebo",
+    "Open-concept plans with lofts and flex rooms by Taylor Morrison",
+    "South of I-74, blending Pittsboro with nearby Brownsburg"
+   ],
+   "school_district": "North West Hendricks School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "jefferson-park-pittsboro",
+   "name": "Jefferson Park",
+   "city": "Pittsboro",
+   "county": "Hendricks",
+   "price_band": "$250s to $350s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established Arbor Homes neighborhood, now resale",
+    "Walkable to Pittsboro Elementary and Tri-West High",
+    "About 10 minutes from Brownsburg and I-74"
+   ],
+   "school_district": "North West Hendricks School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "westfall-place-thorntown",
+   "name": "Westfall Place",
+   "city": "Thorntown",
+   "county": "Boone",
+   "price_band": "$240s to mid $350s",
+   "type": "new-construction community",
+   "highlights": [
+    "70 single-family lots on about 41 acres with pond views and trails",
+    "Common areas, picnic shelter and playground by Arbor Homes",
+    "Off IN-47, minutes from downtown Thorntown"
+   ],
+   "school_district": "Western Boone County Community School District",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "green-meadows-fairland",
+   "name": "Green Meadows",
+   "city": "Fairland",
+   "county": "Shelby",
+   "price_band": "$100s to low $200s",
+   "type": "established rural subdivision",
+   "highlights": [
+    "Just off I-74 at the London Road exit for an easy Indianapolis commute",
+    "Mix of older ranch and updated single-family homes",
+    "Zoned for the Triton Central schools"
+   ],
+   "school_district": "Northwestern Consolidated School District of Shelby County",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "blue-river-trails-morristown",
+   "name": "Blue River Trails",
+   "city": "Morristown",
+   "county": "Shelby",
+   "price_band": "$200s to upper $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Larger lots (about a half-acre) with mature trees near the Blue River",
+    "Quiet setting just outside downtown Morristown",
+    "Homes primarily built from the 1980s onward"
+   ],
+   "school_district": "Shelby Eastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "overlook-park-waldron",
+   "name": "Overlook Park",
+   "city": "Waldron",
+   "county": "Shelby",
+   "price_band": "$100s to low $200s",
+   "type": "established subdivision",
+   "highlights": [
+    "Variety of home styles and sizes",
+    "Affordable price point in the Waldron community",
+    "Quiet small-town setting in southern Shelby County"
+   ],
+   "school_district": "Shelby Eastern Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lake-santee-greensburg",
+   "name": "Lake Santee",
+   "city": "Greensburg",
+   "county": "Decatur",
+   "price_band": "mid $100s to $400s+",
+   "type": "private lake community",
+   "highlights": [
+    "Private ~250-acre lake with about 1,680 lots, beaches and boating",
+    "Active new construction along its themed trail streets",
+    "Managed by the Lake Santee Property Owners Association"
+   ],
+   "school_district": "Decatur County Community Schools",
+   "hoa_url": "https://lake-santee.com",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "the-preserve-at-sand-creek-greensburg",
+   "name": "The Preserve at Sand Creek",
+   "city": "Greensburg",
+   "county": "Decatur",
+   "price_band": "low $200s to upper $300s",
+   "type": "newer subdivision",
+   "highlights": [
+    "Newer building-lot subdivision near Sand Creek",
+    "Single-family new construction",
+    "MLS-recognized Greensburg subdivision"
+   ],
+   "school_district": "Greensburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "The Preserve"
+  },
+  {
+   "slug": "rolling-meadows-greensburg",
+   "name": "Rolling Meadows",
+   "city": "Greensburg",
+   "county": "Decatur",
+   "price_band": "$150s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established residential subdivision within Greensburg",
+    "Convenient to Greensburg schools and downtown",
+    "MLS-recognized subdivision"
+   ],
+   "school_district": "Greensburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "greenview-greensburg",
+   "name": "Greenview",
+   "city": "Greensburg",
+   "county": "Decatur",
+   "price_band": "$150s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established residential neighborhood inside Greensburg",
+    "MLS-recognized subdivision in Decatur County",
+    "Convenient in-town location"
+   ],
+   "school_district": "Greensburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "winchester-park-greensburg",
+   "name": "Winchester Park",
+   "city": "Greensburg",
+   "county": "Decatur",
+   "price_band": "$150s to low $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established single-family subdivision within Greensburg",
+    "MLS-recognized Greensburg neighborhood",
+    "Convenient to schools and shopping"
+   ],
+   "school_district": "Greensburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sycamore-run-greensburg",
+   "name": "Sycamore Run",
+   "city": "Greensburg",
+   "county": "Decatur",
+   "price_band": "$200s to upper $300s",
+   "type": "newer subdivision",
+   "highlights": [
+    "Single-family building lots in the Greensburg area",
+    "MLS-recognized subdivision in Decatur County",
+    "Newer homes and lots"
+   ],
+   "school_district": "Greensburg Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "deer-run-westport",
+   "name": "Deer Run",
+   "city": "Westport",
+   "county": "Decatur",
+   "price_band": "$150s to $250s",
+   "type": "small subdivision",
+   "highlights": [
+    "Small platted subdivision in Sand Creek Township",
+    "Homes built in the mid-1990s",
+    "Within the town of Westport"
+   ],
+   "school_district": "Decatur County Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "pine-tree-hills-nashville",
+   "name": "Pine Tree Hills",
+   "city": "Nashville",
+   "county": "Brown",
+   "price_band": "mid $200s to $400s+",
+   "type": "subdivision with HOA",
+   "highlights": [
+    "HOA community with clubhouse and fishing lake",
+    "Town utilities; HOA covers lawn, snow and trash removal",
+    "Minutes from downtown Nashville"
+   ],
+   "school_district": "Brown County School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heritage-estates-north-vernon",
+   "name": "Heritage Estates",
+   "city": "North Vernon",
+   "county": "Jennings",
+   "price_band": "mid $200s to around $300s",
+   "type": "new-construction subdivision",
+   "highlights": [
+    "111-lot subdivision, North Vernon's first major development in 30+ years",
+    "Public-private project backed by a state READI grant",
+    "Open to all local builders"
+   ],
+   "school_district": "Jennings County School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "edgelea-greencastle",
+   "name": "Edgelea",
+   "city": "Greencastle",
+   "county": "Putnam",
+   "price_band": "$150s to low $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established subdivision known for large, quiet lots",
+    "Homes dating to the late 1950s",
+    "Inside Greencastle (46135)"
+   ],
+   "school_district": "Greencastle Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "crestview-estates-greencastle",
+   "name": "Crestview Estates",
+   "city": "Greencastle",
+   "county": "Putnam",
+   "price_band": "$200s to $300s",
+   "type": "planned subdivision",
+   "highlights": [
+    "About 78 single-family/workforce homes planned on 44 acres",
+    "Wooded lots off Crestview Drive; a READI-supported project",
+    "Addresses Greencastle housing demand tied to DePauw"
+   ],
+   "school_district": "Greencastle Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "stardust-hills-cloverdale",
+   "name": "Stardust Hills",
+   "city": "Cloverdale",
+   "county": "Putnam",
+   "price_band": "$100s to low $200s",
+   "type": "lake community with owners association",
+   "highlights": [
+    "Owners association with clubhouse, pool and about 5 fishing lakes",
+    "Streets, water and sewer maintained by the Town of Cloverdale",
+    "Mix of manufactured, modular and site-built homes"
+   ],
+   "school_district": "Cloverdale Community School Corporation",
+   "hoa_url": "https://stardusthills.org",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sunset-ridge-cloverdale",
+   "name": "Sunset Ridge",
+   "city": "Cloverdale",
+   "county": "Putnam",
+   "price_band": "$200s to $300s",
+   "type": "newer subdivision (no HOA)",
+   "highlights": [
+    "Newer no-HOA section connected to Stardust Hills",
+    "Buildable lots plus completed homes",
+    "Tucked-away, private setting near Cloverdale"
+   ],
+   "school_district": "Cloverdale Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "nevins-estates-rockville",
+   "name": "Nevins Estates",
+   "city": "Rockville",
+   "county": "Parke",
+   "price_band": "$150s to $350s+",
+   "type": "lake-access lot subdivision",
+   "highlights": [
+    "Lakefront, lake-view and lake-access lots on Raccoon Lake",
+    "Common paths providing lake access for all owners",
+    "Rockville mailing address, about an hour west of Indianapolis"
+   ],
+   "school_district": "North Central Parke Community School Corporation",
+   "hoa_url": "https://www.raccoon-lake.com",
    "image": null,
    "video": null
   }
