@@ -5732,4 +5732,14 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
 </url>
+<url>
+  <loc>https://janetgiles.com/communities/meridian-hills/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://janetgiles.com/communities/princes-lakes/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
 </urlset>

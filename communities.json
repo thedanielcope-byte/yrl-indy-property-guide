@@ -64,7 +64,9 @@
   "Camby",
   "Clermont",
   "Homecroft",
-  "Coatesville"
+  "Coatesville",
+  "Meridian Hills",
+  "Prince's Lakes"
  ],
  "communities": [
   {
@@ -6065,6 +6067,40 @@
    "hoa_url": "https://www.hlpoa.us/",
    "image": null,
    "video": null
+  },
+  {
+   "slug": "meridian-hills",
+   "name": "Meridian Hills",
+   "city": "Meridian Hills",
+   "county": "Marion",
+   "price_band": "$500s to $2M+",
+   "type": "established luxury neighborhood",
+   "school_district": "MSD of Washington Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "highlights": [
+    "Wooded estate lots along the prestigious North Meridian Street corridor",
+    "Home to Meridian Hills Country Club (1923) and next to Park Tudor School",
+    "Affluent north-side enclave about 8 miles from downtown; Washington Township / North Central schools"
+   ]
+  },
+  {
+   "slug": "princes-lakes",
+   "name": "Prince's Lakes",
+   "city": "Prince's Lakes",
+   "county": "Johnson",
+   "price_band": "$150s to $400s",
+   "type": "private-lake community",
+   "school_district": "Indian Creek Schools (Nineveh-Hensley-Jackson)",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "highlights": [
+    "Built around four private lakes with boating, fishing, and swimming",
+    "Ranges from affordable cottages to lakefront homes with docks",
+    "Rural south Johnson County near Brown County; served by Indian Creek Schools"
+   ]
   }
  ]
 }
