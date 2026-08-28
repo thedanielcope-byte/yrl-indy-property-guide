@@ -32,7 +32,7 @@ def plain(t): return re.sub(r"<[^>]+>", "", str(t)).replace("&amp;", "&").replac
 # city -> city-page url
 CITY_DIRS = sorted(glob.glob(os.path.join(ROOT, "cities", "*", "*") + os.sep))
 def city_url(city):
-    kebab = city.strip().lower().replace(" ", "-").replace(".", "")
+    kebab = city.strip().lower().replace(" ", "-").replace(".", "").replace("'", "").replace("’", "")
     for d in CITY_DIRS:
         base = os.path.basename(d.rstrip(os.sep))
         if base.startswith(kebab + "-"):

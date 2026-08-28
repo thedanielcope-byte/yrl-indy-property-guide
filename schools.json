@@ -353,7 +353,8 @@
    "county": "Johnson",
    "grade_span": "K-12",
    "cities": [
-    "Trafalgar"
+    "Trafalgar",
+    "Prince's Lakes"
    ],
    "boundary_note": "Branded 'Indian Creek Schools,' headquartered in Trafalgar; serves Trafalgar, Nineveh, Princes Lakes and Morgantown.",
    "existing": false
@@ -489,7 +490,8 @@
    "county": "Marion",
    "grade_span": "K-12",
    "cities": [
-    "Southport"
+    "Southport",
+    "Homecroft"
    ],
    "boundary_note": "Serves the City of Southport and surrounding Perry Township.",
    "existing": true
@@ -529,7 +531,8 @@
    "county": "Marion",
    "grade_span": "K-12",
    "cities": [
-    "Broad Ripple"
+    "Broad Ripple",
+    "Meridian Hills"
    ],
    "boundary_note": "Serves northern and surrounding portions of the broader Broad Ripple area; the Village core is IPS.",
    "existing": false
@@ -1976,6 +1979,40 @@
    "private": [],
    "note": "Brooklyn is served by the MSD of Martinsville (Brooklyn Elementary STEM Academy in town).",
    "county": "Morgan"
+  },
+  "Prince's Lakes": {
+   "public": [
+    "indian-creek-schools"
+   ],
+   "private": [],
+   "note": "Prince's Lakes is served by Indian Creek Schools (Nineveh-Hensley-Jackson).",
+   "county": "Johnson"
+  },
+  "Meridian Hills": {
+   "public": [
+    "msd-washington-township"
+   ],
+   "private": [
+    "park-tudor-school"
+   ],
+   "note": "Meridian Hills is served by MSD of Washington Township (North Central); one block lies in Indianapolis Public Schools. Park Tudor School is adjacent.",
+   "county": "Marion"
+  },
+  "Homecroft": {
+   "public": [
+    "perry-township-schools"
+   ],
+   "private": [],
+   "note": "Homecroft is served by MSD of Perry Township (Southport Middle and High).",
+   "county": "Marion"
+  },
+  "Coatesville": {
+   "public": [
+    "mill-creek-community-schools"
+   ],
+   "private": [],
+   "note": "Coatesville is served by Mill Creek Community Schools (Cascade schools in Clayton).",
+   "county": "Hendricks"
   }
  }
 }

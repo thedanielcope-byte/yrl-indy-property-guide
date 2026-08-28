@@ -21,7 +21,7 @@ def label(slug): return BY_SLUG.get(slug, {}).get("short_name") or slug
 
 CITY_DIRS = sorted(glob.glob(os.path.join(ROOT, "cities", "*", "*") + os.sep))
 def city_dir(city):
-    kebab = city.strip().lower().replace(" ", "-").replace(".", "")
+    kebab = city.strip().lower().replace(" ", "-").replace(".", "").replace("'", "").replace("’", "")
     for d in CITY_DIRS:
         if os.path.basename(d.rstrip(os.sep)).startswith(kebab + "-"):
             return d.rstrip(os.sep)
