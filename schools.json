@@ -299,7 +299,8 @@
    "cities": [
     "Whiteland",
     "Greenwood",
-    "Franklin"
+    "Franklin",
+    "New Whiteland"
    ],
    "boundary_note": "Headquartered in Whiteland; covers New Whiteland, southern/southeastern Greenwood, and a small section of Franklin. Whiteland Community High School is its high school.",
    "existing": false
@@ -378,7 +379,8 @@
    "county": "Madison",
    "grade_span": "K-12",
    "cities": [
-    "Anderson"
+    "Anderson",
+    "Chesterfield"
    ],
    "boundary_note": "Primary district for Anderson; also serves Edgewood, River Forest, and most of Chesterfield.",
    "existing": false
@@ -405,7 +407,8 @@
    "grade_span": "K-12",
    "cities": [
     "Lapel",
-    "Anderson"
+    "Anderson",
+    "Frankton"
    ],
    "boundary_note": "Serves all of Lapel plus Frankton and the northwestern edge of the Anderson area (Lafayette Township).",
    "existing": false
@@ -418,7 +421,8 @@
    "county": "Madison",
    "grade_span": "K-12",
    "cities": [
-    "Pendleton"
+    "Pendleton",
+    "Ingalls"
    ],
    "boundary_note": "Serves Pendleton, Ingalls, and Markleville; high school is Pendleton Heights.",
    "existing": false
@@ -551,7 +555,8 @@
    "county": "Morgan",
    "grade_span": "K-12",
    "cities": [
-    "Martinsville"
+    "Martinsville",
+    "Brooklyn"
    ],
    "boundary_note": "Serves the greater Martinsville area of central Morgan County.",
    "existing": false
@@ -1931,6 +1936,46 @@
    "private": [],
    "note": "Served by North Central Parke Community School Corporation (the 2013 merger of the former Rockville and Turkey Run districts).",
    "county": "Parke"
+  },
+  "New Whiteland": {
+   "public": [
+    "clark-pleasant-community-schools"
+   ],
+   "private": [],
+   "note": "Whiteland and New Whiteland are served by Clark-Pleasant; Whiteland Community High School is the district high school.",
+   "county": "Johnson"
+  },
+  "Ingalls": {
+   "public": [
+    "south-madison-community-schools"
+   ],
+   "private": [],
+   "note": "Ingalls is served by South Madison Community Schools (Pendleton Heights).",
+   "county": "Madison"
+  },
+  "Chesterfield": {
+   "public": [
+    "anderson-community-schools"
+   ],
+   "private": [],
+   "note": "Most of Chesterfield is served by Anderson Community Schools; the Delaware County (Salem Township) edge falls in Daleville Community Schools.",
+   "county": "Madison"
+  },
+  "Frankton": {
+   "public": [
+    "frankton-lapel-community-schools"
+   ],
+   "private": [],
+   "note": "Frankton is served by Frankton-Lapel Community Schools (Frankton Junior-Senior High).",
+   "county": "Madison"
+  },
+  "Brooklyn": {
+   "public": [
+    "msd-martinsville"
+   ],
+   "private": [],
+   "note": "Brooklyn is served by the MSD of Martinsville (Brooklyn Elementary STEM Academy in town).",
+   "county": "Morgan"
   }
  }
 }

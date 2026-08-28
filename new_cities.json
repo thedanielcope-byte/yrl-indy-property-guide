@@ -1,0 +1,76 @@
+{
+ "cities": [
+  {
+   "name": "New Whiteland", "slug": "new-whiteland", "county": "Johnson", "population": 5700,
+   "school_district": "Clark-Pleasant Community School Corporation (Whiteland Community High School)",
+   "school_short": "Clark-Pleasant",
+   "price_band": "$200s to $400s",
+   "commute": "New Whiteland is about 25 to 30 minutes from downtown Indianapolis (roughly 20 miles south), with US-31 running directly through town and I-65 reached at the Whiteland interchange just east.",
+   "commute_short": "~25-30 min",
+   "highways": "US-31, I-65, SR-135",
+   "character": "New Whiteland is a small suburban town in Pleasant Township that got its start in the 1950s when US-31 was rerouted through the area, incorporating in 1954. It sits immediately next to Whiteland and shares the Clark-Pleasant Community School Corporation, whose Whiteland Community High School (the Warriors) anchors the community. Housing runs from mid-century ranches near the older town core to newer subdivisions filling in along the fast-growing southern Indianapolis and Greenwood corridor.",
+   "highlights": ["Quick US-31 and I-65 access to Indianapolis", "Generally more affordable than the Greenwood core", "Clark-Pleasant schools and Whiteland Community High School"],
+   "nearby_towns": ["Whiteland", "Greenwood", "Franklin"]
+  },
+  {
+   "name": "Ingalls", "slug": "ingalls", "county": "Madison", "population": 2223,
+   "school_district": "South Madison Community School Corporation (Pendleton Heights High School)",
+   "school_short": "South Madison",
+   "price_band": "$200s to $350s",
+   "commute": "Ingalls is about 35 minutes from downtown Indianapolis (roughly 26 miles) via I-69, with Anderson about 12 miles northeast.",
+   "commute_short": "~35 min",
+   "highways": "US-36, I-69",
+   "character": "Ingalls sits in the southwest corner of Madison County in Green Township, platted in 1893 and named for railroad official Melville E. Ingalls, with Fall Creek winding through the north side of town. It has been one of the area's faster-growing small towns as an I-69 commuter suburb, and it feeds the well-regarded South Madison Community Schools and Pendleton Heights High School. Buyers find a mix of newer subdivisions alongside older homes in the original town core.",
+   "highlights": ["Easy I-69 commute to Indianapolis and Anderson", "Growing with newer subdivisions", "South Madison / Pendleton Heights schools"],
+   "nearby_towns": ["Pendleton", "Lapel", "Fortville"]
+  },
+  {
+   "name": "Chesterfield", "slug": "chesterfield", "county": "Madison", "population": 2490,
+   "school_district": "Anderson Community School Corporation (with the Delaware County / Salem Township edge in Daleville Community Schools)",
+   "school_short": "Anderson Community",
+   "price_band": "$150s to $280s",
+   "commute": "Chesterfield is an Anderson- and Muncie-oriented town, about 50 minutes (roughly 44 miles) from downtown Indianapolis via I-69, with Anderson just minutes west and Muncie about 13 miles northeast.",
+   "commute_short": "~50 min",
+   "highways": "SR-32, I-69 (Exit 234)",
+   "character": "Chesterfield straddles Madison and Delaware counties along the White River, between Anderson to the west and Daleville to the east. It was first platted as 'West Union' in 1830, renamed in 1834, and incorporated in 1858. The town is nationally known for Camp Chesterfield, a historic spiritualist retreat listed on the National Register of Historic Places. Part of the Anderson metro area, it offers an established, affordable housing stock and a small-town setting.",
+   "highlights": ["Affordable, established housing", "Historic Camp Chesterfield spiritualist heritage", "Quick I-69 access at the SR-67 interchange, minutes from Anderson"],
+   "nearby_towns": ["Anderson", "Pendleton", "Alexandria"]
+  },
+  {
+   "name": "Frankton", "slug": "frankton", "county": "Madison", "population": 1775,
+   "school_district": "Frankton-Lapel Community Schools (Frankton Junior-Senior High School)",
+   "school_short": "Frankton-Lapel",
+   "price_band": "$150s to low $300s",
+   "commute": "Frankton is a quiet northern Madison County town about 12 miles northwest of Anderson and roughly an hour from downtown Indianapolis via Anderson and I-69.",
+   "commute_short": "~1 hr",
+   "highways": "SR-128, SR-13, SR-9, I-69 (via Anderson)",
+   "character": "Frankton is a small town in northern Madison County, about 12 miles northwest of Anderson, with SR-128 running straight through its center and Pipe Creek crossing the north end. Laid out in 1853 and incorporated in 1871, it has kept a tight-knit small-town feel and is home to Frankton Junior-Senior High School in the Frankton-Lapel district. Its signature event is the annual Heritage Days Festival, held every fall since 1975. Housing runs from older homes near the town center to newer construction on the edges.",
+   "highlights": ["Annual Heritage Days Festival every fall since 1975", "Well-regarded Frankton-Lapel schools, including Frankton Junior-Senior High", "Quiet Madison County small town about 12 miles from Anderson"],
+   "nearby_towns": ["Anderson", "Lapel", "Alexandria", "Elwood"]
+  },
+  {
+   "name": "Brooklyn", "slug": "brooklyn", "county": "Morgan", "population": 2511,
+   "school_district": "Metropolitan School District of Martinsville (Brooklyn Elementary STEM Academy)",
+   "school_short": "MSD of Martinsville",
+   "price_band": "$180s to mid $300s",
+   "commute": "Brooklyn is about 21 miles (roughly 30 to 35 minutes) from downtown Indianapolis via SR-67 north through Mooresville, with the SR-37/I-69 corridor also close by.",
+   "commute_short": "~30-35 min",
+   "highways": "SR-67, SR-37/I-69, SR-42, SR-144",
+   "character": "Brooklyn is a small Morgan County town in Clay and Brown townships, sitting between Mooresville and Martinsville just off State Road 67, with White Lick Creek running along its east side. It was laid out in 1854 as the railroad came through, and the surrounding area has documented Underground Railroad history. Just west of town, the Goethe Link Observatory is known for its spring daffodil gardens. Local children attend MSD of Martinsville schools, including Brooklyn Elementary STEM Academy in town, and the town has grown notably over the past decade.",
+   "highlights": ["Goethe Link Observatory and its spring daffodil gardens just west of town", "Historic railroad town (platted 1854) zoned to MSD of Martinsville", "Between Mooresville and Martinsville off SR-67, about half an hour from downtown Indianapolis"],
+   "nearby_towns": ["Mooresville", "Martinsville", "Monrovia"]
+  },
+  {
+   "name": "Clermont", "slug": "clermont", "county": "Marion", "population": 1384,
+   "school_district": "Metropolitan School District of Wayne Township (Ben Davis schools), with a small portion in MSD of Pike Township",
+   "school_short": "MSD of Wayne Township",
+   "price_band": "$160s to low $330s",
+   "commute": "Clermont is on the west side of Indianapolis, about 10 to 12 miles (roughly 15 to 20 minutes) from downtown via US-136 (Crawfordsville Road) and I-465 to I-65/I-70.",
+   "commute_short": "~15-20 min",
+   "highways": "US-136, I-465, I-74",
+   "character": "Clermont is a small town on the west and northwest side of Indianapolis in Marion County's Pike and Wayne townships, bordering Brownsburg to the west. Since 1970 it has been an 'included town' under Unigov — legally part of Indianapolis while keeping its own town government. It is best known as the home of Lucas Oil Raceway, a drag strip, paved oval, and road course that hosts the NHRA U.S. Nationals over Labor Day weekend. Students are served primarily by MSD of Wayne Township and Ben Davis High School. It is a small, largely built-out community with older housing, so inventory is limited — buyers here are typically drawn by the west-side location, raceway proximity, and Brownsburg and Speedway access.",
+   "highlights": ["Home of Lucas Oil Raceway, host of the NHRA U.S. Nationals each Labor Day weekend", "Self-governing 'included town' on Indy's west side with quick US-136 / I-465 access downtown", "Zoned to MSD of Wayne Township (Ben Davis), just west of Speedway and next to Brownsburg"],
+   "nearby_towns": ["Speedway", "Brownsburg", "Avon"]
+  }
+ ]
+}
