@@ -50,6 +50,10 @@ KNOWN_FOR = {
  "bargersville":"small-town growth, wineries, and Center Grove-area schools",
  "whiteland":"affordable newer homes and quick I-65 access",
  "franklin":"a restored courthouse-square downtown, the Artcraft Theatre, and a college-town feel",
+ "mooresville":"a walkable downtown, small-town charm, and quick interstate access",
+ "fortville":"small-town character, Mt. Vernon schools, and easy northeast-side access",
+ "lebanon":"a classic courthouse-square downtown, affordable homes, and LEAP-district growth",
+ "southport":"a tight-knit south-side community, affordable homes, and an easy commute",
 }
 # second-person clauses so they fit both "Choose X if you ___" and "Buyers who ___"
 BEST_FOR = {
@@ -69,6 +73,10 @@ BEST_FOR = {
  "bargersville":"want newer homes and small-town character south of Indy",
  "whiteland":"want affordable new construction in Clark-Pleasant schools",
  "franklin":"want more house per dollar and genuine small-town character",
+ "mooresville":"want small-town charm and value on the southwest side",
+ "fortville":"want a small-town feel with newer homes northeast of Indy",
+ "lebanon":"want affordability and long-term growth potential in Boone County",
+ "southport":"want affordability and a genuine community feel close to downtown",
 }
 
 # High-value matchups to generate (a, b). Skips any whose dir already exists.
@@ -78,6 +86,12 @@ MATCHUPS = [
  ("zionsville","whitestown"), ("avon","plainfield"), ("brownsburg","plainfield"),
  ("plainfield","danville"), ("greenwood","bargersville"), ("greenwood","whiteland"),
  ("carmel","greenwood"), ("fishers","avon"), ("mccordsville","noblesville"),
+ # round 2
+ ("zionsville","fishers"), ("geist","noblesville"), ("plainfield","greenwood"),
+ ("avon","greenwood"), ("mooresville","greenwood"), ("mooresville","plainfield"),
+ ("franklin","bargersville"), ("bargersville","whiteland"), ("avon","danville"),
+ ("brownsburg","danville"), ("whitestown","brownsburg"), ("mccordsville","fortville"),
+ ("lebanon","whitestown"), ("greenwood","southport"),
 ]
 
 def low(price):
