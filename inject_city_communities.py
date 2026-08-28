@@ -13,7 +13,7 @@ def disp(c): return c.get("short_name") or c["name"]
 
 CITY_DIRS = sorted(glob.glob(os.path.join(ROOT, "cities", "*", "*") + os.sep))
 def city_dir(city):
-    kebab = city.strip().lower().replace(" ", "-")
+    kebab = city.strip().lower().replace(" ", "-").replace(".", "").replace("'", "").replace("’", "")
     for d in CITY_DIRS:
         if os.path.basename(d.rstrip(os.sep)).startswith(kebab + "-"):
             return d.rstrip(os.sep)

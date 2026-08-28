@@ -57,7 +57,14 @@
   "North Vernon",
   "Greencastle",
   "Cloverdale",
-  "Rockville"
+  "Rockville",
+  "New Whiteland",
+  "Ingalls",
+  "Chesterfield",
+  "Camby",
+  "Clermont",
+  "Homecroft",
+  "Coatesville"
  ],
  "communities": [
   {
@@ -5746,6 +5753,316 @@
    ],
    "school_district": "North Central Parke Community School Corporation",
    "hoa_url": "https://www.raccoon-lake.com",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "country-gate-new-whiteland",
+   "name": "Country Gate",
+   "city": "New Whiteland",
+   "county": "Johnson",
+   "price_band": "$250s to $400s",
+   "type": "established subdivision",
+   "highlights": [
+    "HOA neighborhood with a playground, picnic area, and a year-round pond/nature common area",
+    "Mostly early-2000s two-story homes around 1,800 sq ft",
+    "Just south of US-31, minutes from I-65 and Greenwood shopping"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "hilltop-farms-new-whiteland",
+   "name": "Hilltop Farms",
+   "city": "New Whiteland",
+   "county": "Johnson",
+   "price_band": "$250s to $350s",
+   "type": "established subdivision",
+   "highlights": [
+    "Newer-built (circa 2012) two-story, open-concept homes",
+    "Close to US-31 shopping with quick interstate access",
+    "Family-oriented, within the Clark-Pleasant school district"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "tracy-commons-new-whiteland",
+   "name": "Tracy Commons",
+   "city": "New Whiteland",
+   "county": "Johnson",
+   "price_band": "$180s to $300s",
+   "type": "single-family and townhome subdivision",
+   "highlights": [
+    "Lower-maintenance mix of single-family homes and townhomes off Tracy Road",
+    "One of New Whiteland's more affordable entry points",
+    "Walkable to New Whiteland town parks and services"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "tracy-ridge-new-whiteland",
+   "name": "Tracy Ridge",
+   "city": "New Whiteland",
+   "county": "Johnson",
+   "price_band": "$220s to $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Late-1990s to 2000s single-family homes",
+    "Established, tree-lined streets near Tracy Road",
+    "Convenient Clark-Pleasant schools and US-31 location"
+   ],
+   "school_district": "Clark-Pleasant Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "prairie-hollow-ingalls",
+   "name": "Prairie Hollow",
+   "city": "Ingalls",
+   "county": "Madison",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Active new-build community by Shoopman Homes and Davis Homes",
+    "Sidewalks, street lighting, and a neighborhood park",
+    "Fast I-69 access into Indianapolis, near Hamilton Town Center"
+   ],
+   "school_district": "South Madison Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "chesterfield-bluffs-chesterfield",
+   "name": "Chesterfield Bluffs",
+   "city": "Chesterfield",
+   "county": "Madison",
+   "price_band": "mid $100s to low $200s",
+   "type": "single-family subdivision",
+   "highlights": [
+    "Quiet residential subdivision with easy I-69 access",
+    "Mid-sized single-family homes near the White River corridor",
+    "Established neighborhood on the edge of town"
+   ],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "The Bluffs"
+  },
+  {
+   "slug": "emerald-glen-chesterfield",
+   "name": "Emerald Glen",
+   "city": "Chesterfield",
+   "county": "Madison",
+   "price_band": "upper $100s to $200s",
+   "type": "single-family subdivision",
+   "highlights": [
+    "Known for all-brick ranch-style homes on generous lots",
+    "Minutes from Anderson and Muncie amenities",
+    "Established, low-turnover residential pocket within Chesterfield"
+   ],
+   "school_district": "Anderson Community Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "heartland-crossing-camby",
+   "name": "Heartland Crossing",
+   "city": "Camby",
+   "county": "Marion",
+   "price_band": "$200s to $400s",
+   "type": "master-planned community",
+   "highlights": [
+    "Largest community in Decatur Township, wrapped around Heartland Crossings Golf Links",
+    "Multiple pools, parks, tennis courts, and an HOA clubhouse",
+    "New-construction sections by D.R. Horton and Ryan Homes; quick I-465 and airport access"
+   ],
+   "school_district": "Mooresville, Plainfield, or MSD of Decatur Township (varies by section)",
+   "hoa_url": "https://www.heartlandcrossinghoa.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "village-at-heartland-crossing-camby",
+   "name": "Village at Heartland Crossing",
+   "city": "Camby",
+   "county": "Marion",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "D.R. Horton ranch and two-story plans within Heartland Crossing",
+    "Shares master-community pools, parks, and tennis",
+    "Minutes from dining, shopping, and the airport"
+   ],
+   "school_district": "Mooresville / MSD of Decatur Township (varies by lot)",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "The Village"
+  },
+  {
+   "slug": "parks-at-decatur-camby",
+   "name": "Parks at Decatur",
+   "city": "Camby",
+   "county": "Marion",
+   "price_band": "high $290s to low $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "D.R. Horton homes with smart-home technology",
+    "Walking trails, fishing pond, playground, and splash pad",
+    "Feeds Decatur Central schools"
+   ],
+   "school_district": "MSD of Decatur Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "oberlin-at-camby-village-camby",
+   "name": "Oberlin at Camby Village",
+   "city": "Camby",
+   "county": "Marion",
+   "price_band": "high $290s to high $380s",
+   "type": "new-construction community",
+   "highlights": [
+    "Roughly 184 Taylor Morrison homes with flex rooms, studies, and lofts",
+    "Meandering trails and a community playground",
+    "Central to Camby's shopping, dining, and airport access"
+   ],
+   "school_district": "MSD of Decatur Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Oberlin"
+  },
+  {
+   "slug": "glenwood-camby",
+   "name": "Glenwood",
+   "city": "Camby",
+   "county": "Marion",
+   "price_band": "high $200s to high $300s",
+   "type": "new-construction community",
+   "highlights": [
+    "Lennar single-family community with 'Everything's Included' packages",
+    "Convenient to I-465 and the airport corridor",
+    "Modern open floor plans"
+   ],
+   "school_district": "MSD of Decatur Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "noble-heights-camby",
+   "name": "Noble Heights",
+   "city": "Camby",
+   "county": "Marion",
+   "price_band": "high $200s to low $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "Lennar master-planned community including single-level plans",
+    "Modern open floor plans with included features",
+    "Growing southwest-side location near Camby amenities"
+   ],
+   "school_district": "MSD of Decatur Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "trotters-landing-camby",
+   "name": "Trotters Landing",
+   "city": "Camby",
+   "county": "Marion",
+   "price_band": "high $200s to high $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Built out by D.R. Horton at Camby Road and Trotter Road",
+    "Open ranch and two-story layouts",
+    "Established resale neighborhood"
+   ],
+   "school_district": "MSD of Decatur Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "tansel-woods-clermont",
+   "name": "Tansel Woods",
+   "city": "Clermont",
+   "county": "Marion",
+   "price_band": "low $200s to upper $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Established, mature subdivision along Tansel Road",
+    "Near Clermont Lions Club Park",
+    "Tree-lined streets with well-kept mid-century homes"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "tansel-wood-estates-clermont",
+   "name": "Tansel Wood Estates",
+   "city": "Clermont",
+   "county": "Marion",
+   "price_band": "low $200s to upper $300s",
+   "type": "established subdivision",
+   "highlights": [
+    "Small established neighborhood adjacent to Tansel Woods",
+    "Quiet, family-oriented west-side setting near Clermont",
+    "Served by MSD of Wayne Township schools"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "homecroft-historic-district-homecroft",
+   "name": "Homecroft Historic District",
+   "city": "Homecroft",
+   "county": "Marion",
+   "price_band": "mid $200s to upper $300s",
+   "type": "historic district",
+   "highlights": [
+    "Listed on the National Register of Historic Places (1996)",
+    "1920s-1950s bungalows with Tudor Revival and Colonial Revival details",
+    "Walkable, tree-lined enclave adjacent to Southport"
+   ],
+   "school_district": "MSD of Perry Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null,
+   "short_name": "Homecroft"
+  },
+  {
+   "slug": "heritage-lake-coatesville",
+   "name": "Heritage Lake",
+   "city": "Coatesville",
+   "county": "Putnam",
+   "price_band": "$100s to $400s+",
+   "type": "private gated lake community",
+   "highlights": [
+    "Private roughly 320-acre lake with three sandy beaches, a boat launch, and marina",
+    "Community pool, tennis and pickleball courts, playgrounds, and a clubhouse",
+    "On-site dining and an active property owners' association (Coatesville mailing address, Putnam County)"
+   ],
+   "school_district": "North Putnam Community Schools (Putnam County)",
+   "hoa_url": "https://www.hlpoa.us/",
    "image": null,
    "video": null
   }

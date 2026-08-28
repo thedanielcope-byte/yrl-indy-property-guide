@@ -34,7 +34,7 @@ def disp(c): return c.get("short_name") or c["name"]
 # city -> city-page url (glob the cities/ tree)
 CITY_DIRS = sorted(glob.glob(os.path.join(ROOT, "cities", "*", "*") + os.sep))
 def city_url(city):
-    kebab = city.strip().lower().replace(" ", "-")
+    kebab = city.strip().lower().replace(" ", "-").replace(".", "").replace("'", "").replace("’", "")
     for d in CITY_DIRS:
         base = os.path.basename(d.rstrip(os.sep))
         if base.startswith(kebab + "-"):
