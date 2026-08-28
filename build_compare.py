@@ -54,6 +54,7 @@ KNOWN_FOR = {
  "fortville":"small-town character, Mt. Vernon schools, and easy northeast-side access",
  "lebanon":"a classic courthouse-square downtown, affordable homes, and LEAP-district growth",
  "southport":"a tight-knit south-side community, affordable homes, and an easy commute",
+ "lawrence":"Fort Harrison State Park, the Fort Ben cultural campus, and affordable green space",
 }
 # second-person clauses so they fit both "Choose X if you ___" and "Buyers who ___"
 BEST_FOR = {
@@ -77,6 +78,7 @@ BEST_FOR = {
  "fortville":"want a small-town feel with newer homes northeast of Indy",
  "lebanon":"want affordability and long-term growth potential in Boone County",
  "southport":"want affordability and a genuine community feel close to downtown",
+ "lawrence":"want affordable homes and green space on the northeast side",
 }
 
 # High-value matchups to generate (a, b). Skips any whose dir already exists.
@@ -92,6 +94,9 @@ MATCHUPS = [
  ("franklin","bargersville"), ("bargersville","whiteland"), ("avon","danville"),
  ("brownsburg","danville"), ("whitestown","brownsburg"), ("mccordsville","fortville"),
  ("lebanon","whitestown"), ("greenwood","southport"),
+ # round 3 (final high-value pairs)
+ ("lawrence","fishers"), ("franklin","whiteland"), ("avon","whitestown"),
+ ("lebanon","zionsville"), ("plainfield","whitestown"),
 ]
 
 def low(price):
