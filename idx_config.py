@@ -22,16 +22,17 @@ best-effort for the interim — worst case the search opens unfiltered.
 from urllib.parse import quote_plus
 
 MODE = "deeplink"                                             # "deeplink" | "embed"
-# INTERIM (Sep 2026): Agent3000 was retired and the Displet IDX feed is not live
-# yet, so every search button points at MIBOR's PUBLIC MLS search — the same portal
-# the site already uses for open houses. That portal doesn't honor our city/county
-# params, so DEEPLINK_PARAMS is off and buttons open the working search unfiltered.
-# WHEN DISPLET IS LIVE: paste its widget into EMBED_SNIPPET and set MODE="embed"
-# (or point SEARCH_BASE at Displet's search and set DEEPLINK_PARAMS=True), then
-# re-run inject_idx.py — updates every page at once.
-SEARCH_BASE = "https://property.mibor.com/listings"          # interim: MIBOR public MLS search
-DEEPLINK_PARAMS = False                                       # MIBOR public portal ignores our filters
-EMBED_SNIPPET = ""            # paste the dedicated Displet IDX widget/iframe here for embed mode
+# LIVE (Sep 2026): Displet IDX Pro is provisioned. The full MLS search is embedded
+# on the on-site /search/ page (Displet All-MLS feed, cms.mysolidearth.com, user
+# 6024260 — domain-locked to yourrealtylink.com). Every city/county/community slot
+# deep-links to /search/. DEEPLINK_PARAMS is off because the on-site /search/ page
+# currently ignores query params (fixed All-MLS iframe).
+# FUTURE (per-city listings on each page): either make /search/ read a ?city= param
+# and inject it into the Displet iframe src, or set MODE="embed" + EMBED_SNIPPET to a
+# city-filtered Displet iframe — both need Displet's city/area field name (ask support).
+SEARCH_BASE = "/search/"                                      # on-site Displet search hub
+DEEPLINK_PARAMS = False                                       # /search/ ignores query params (fixed All-MLS embed)
+EMBED_SNIPPET = ""            # paste a city-filtered Displet iframe here to switch to inline embeds
 
 
 def _url(param, value):
