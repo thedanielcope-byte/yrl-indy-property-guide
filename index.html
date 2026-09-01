@@ -413,22 +413,25 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  </div>
 </section>
 
-<!-- FEATURED LISTINGS CAROUSEL -->
+<!-- OUR OFFICE LISTINGS — Displet office feed (list_office_mls_id=MBRYRLT01). Displet is iframe-only (no data API/carousel), so this embeds the office-listings widget. -->
 <section class="listings-section" id="featuredListings">
  <div class="container">
  <div class="listings-header">
  <h2>Our Office Listings</h2>
- <span class="listings-count" id="listingsCount"></span>
  </div>
- <div class="listings-scroll-wrap">
- <button class="listings-arrow listings-arrow-left" id="listingsLeft" aria-label="Scroll left">&#8249;</button>
- <div class="listings-track" id="listingsTrack">
- <div class="listings-loading" id="listingsLoading">Loading listings&hellip;</div>
- </div>
- <button class="listings-arrow listings-arrow-right" id="listingsRight" aria-label="Scroll right">&#8250;</button>
+ <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);border:1px solid #e2e2e2;background:#fff;">
+ <iframe
+ src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=bGlzdF9vZmZpY2VfbWxzX2lkPU1CUllSTFQwMSZtbHNfc3RhdHVzPWFjdGl2ZQ==&amp;user_id=6024260"
+ width="100%"
+ height="640"
+ scrolling="auto"
+ frameborder="0"
+ title="Your Realty Link — Our Current Office Listings"
+ loading="lazy"
+ style="display:block;width:100%;border:none;"></iframe>
  </div>
  <div class="listings-cta">
- <a href="/search/" target="_blank" rel="noopener">Browse All Listings on YourRealtyLink.com &rarr;</a>
+ <a href="/search/">Browse All MLS Listings &rarr;</a>
  </div>
  </div>
 </section>
@@ -766,56 +769,10 @@ document.addEventListener('click', function(e) {
  }
 });
 
-// ── Featured Listings Carousel ──
-(function() {
- var API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/office-listings';
- var track = document.getElementById('listingsTrack');
- var loading = document.getElementById('listingsLoading');
- var countEl = document.getElementById('listingsCount');
- var section = document.getElementById('featuredListings');
-
- function buildCard(l) {
-  return '<a class="listing-card" href="' + l.detailUrl + '" target="_blank" rel="noopener">' +
-   '<img class="listing-card-img" src="' + l.image + '" alt="Home in ' + l.city + '" loading="lazy" onerror="this.src=\'/assets/img/yrl-logo.png\';this.style.objectFit=\'contain\';this.style.padding=\'40px\'">' +
-   '<div class="listing-card-body">' +
-   '<div class="listing-card-price">' + l.price + '</div>' +
-   '<div class="listing-card-city">' + l.city + '</div>' +
-   '<div class="listing-card-details">' +
-   (l.bedsBaths ? '<span>🛏 ' + l.bedsBaths + '</span>' : '') +
-   (l.sqft ? '<span>📐 ' + l.sqft + ' sqft</span>' : '') +
-   (l.acres ? '<span>🌳 ' + l.acres + ' acres</span>' : '') +
-   '</div>' +
-   '<div class="listing-card-mls">MLS# ' + l.mlsNumber + '</div>' +
-   '</div></a>';
- }
-
- fetch(API)
-  .then(function(r) { return r.json(); })
-  .then(function(data) {
-   if (!data.listings || data.listings.length === 0) {
-    section.style.display = 'none';
-    return;
-   }
-   loading.remove();
-   countEl.textContent = data.listings.length + ' active listings';
-   var html = '';
-   for (var i = 0; i < data.listings.length; i++) {
-    html += buildCard(data.listings[i]);
-   }
-   track.innerHTML = html;
-  })
-  .catch(function() {
-   section.style.display = 'none';
-  });
-
- // Scroll arrows
- document.getElementById('listingsLeft').addEventListener('click', function() {
-  track.scrollBy({ left: -300, behavior: 'smooth' });
- });
- document.getElementById('listingsRight').addEventListener('click', function() {
-  track.scrollBy({ left: 300, behavior: 'smooth' });
- });
-})();
+// Our Office Listings now renders via a Displet office-feed iframe in #featuredListings.
+// Displet IDX Pro is iframe-only (no data API/carousel), so the old office-listings
+// Edge Function carousel was removed. To restore a custom card carousel later, a RESO
+// Web API / data feed (e.g. MLS Grid) would be needed to repopulate the office-listings function.
 </script>
 <script src="/assets/js/site-enhancements.js?v=69df98c0" defer></script>
 </body>
