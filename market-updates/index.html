@@ -48,15 +48,6 @@
 .cat-pill:hover, .cat-pill.active { background: #c03926; color: #fff; }
  @media (max-width: 768px) {.blog-featured { grid-template-columns: 1fr; }.blog-featured-img { display: none; } }
  </style>
-<style>
-/* Full-bleed banner graphic — no scrim on desktop; light shade on mobile for text legibility */
-.page-hero.banner-raw{background-image:var(--hero-img);background-size:cover;background-position:var(--hero-pos,center);background-repeat:no-repeat;}
-.page-hero.banner-raw::before{content:none;}
-@media (max-width:820px){
- .page-hero.banner-raw::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,16,24,.62) 0%,rgba(12,16,24,.40) 52%,rgba(12,16,24,.15) 100%);}
- .page-hero.banner-raw .container{position:relative;z-index:1;}
-}
-</style>
 </head>
 <body>
 <header class="site-header">
@@ -135,128 +126,24 @@
  </div>
 </header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><a href="/">Home</a> <span>&rsaquo;</span> Market Updates</div></nav>
-<section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/market-updates.webp') type('image/webp'), url('/assets/img/heroes/market-updates.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/market-updates.webp') type('image/webp'), url('/assets/img/heroes/market-updates.jpg') type('image/jpeg')); --hero-pos: center 45%;"><div class="container">
+<section class="page-hero"><div class="container">
  <h1>Central Indiana Market Updates</h1>
  <p class="hero-sub">A fresh read on the Indianapolis-area real estate market each month — buyer vs. seller conditions, price ranges by county, and what it means for your next move.</p>
- <div class="hero-badges"><span class="hero-badge">&#128197; Updated Monthly</span><span class="hero-badge">&#128205; All 17 Central Indiana Counties</span><span class="hero-badge">&#9993;&#65039; Free CMA on request</span></div><p class="hero-reviewed">✔ Reviewed by <a href="/agents/janet-giles/">Janet Giles-Schultz</a>, Principal Broker · MIBOR member · Updated August 2026</p>
+ <div class="hero-badges"><span class="hero-badge">&#128197; Updated Monthly</span><span class="hero-badge">&#128205; All 17 Central Indiana Counties</span><span class="hero-badge">&#9993;&#65039; Free CMA on request</span></div>
 </div></section>
-<div class="container" style="padding:30px 0 0;">
- <h2 style="font-family:'Playfair Display',Georgia,serif;margin:0 0 6px;">This Month&rsquo;s Snapshot</h2>
- <p style="max-width:70ch;color:var(--gray,#6e6e70);margin:0 0 14px;">The single-family market at a glance, from the latest MIBOR figures. Pick a county to see its numbers, or scroll down for the full written report.</p>
- <div style="margin:0 0 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-  <label for="countySel" style="font-weight:600;">See a county:</label>
-  <select id="countySel" style="padding:9px 13px;border:1px solid #d9cfc6;border-radius:9px;font:inherit;background:#fff;min-width:260px;cursor:pointer;">
-    <option value="central-indiana">Central Indiana — 17-county overall</option>
-    <option value="marion-county">Marion County (Indianapolis)</option>
-    <option value="hamilton-county">Hamilton County</option>
-    <option value="hendricks-county">Hendricks County</option>
-    <option value="johnson-county">Johnson County</option>
-    <option value="boone-county">Boone County</option>
-    <option value="hancock-county">Hancock County</option>
-    <option value="madison-county">Madison County</option>
-    <option value="morgan-county">Morgan County</option>
-    <option value="shelby-county">Shelby County</option>
-    <option value="bartholomew-county">Bartholomew County</option>
-    <option value="brown-county">Brown County</option>
-    <option value="decatur-county">Decatur County</option>
-    <option value="jackson-county">Jackson County</option>
-    <option value="jennings-county">Jennings County</option>
-    <option value="montgomery-county">Montgomery County</option>
-    <option value="parke-county">Parke County</option>
-    <option value="putnam-county">Putnam County</option>
-  </select>
- </div>
- <figure style="margin:0;max-width:900px;">
-  <a id="snapLink" href="/blog/indianapolis-market-update-august-2026/" aria-label="Open the full market report">
-   <img id="snapImg" src="/assets/img/market-reports/latest/central-indiana-banner.png" alt="Central Indiana real estate market snapshot — median price, closed sales, days on market, and months of supply" loading="lazy" style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 26px rgba(0,0,0,.10);display:block;">
-  </a>
-  <figcaption style="font-size:13px;color:var(--gray,#6e6e70);margin-top:9px;">Single-family homes &middot; Source: MIBOR REALTOR&reg; Association. <a id="snapMore" href="/blog/indianapolis-market-update-august-2026/">Open the full report &rarr;</a></figcaption>
- </figure>
-</div>
-<script>
-(function(){
- var sel=document.getElementById('countySel'),img=document.getElementById('snapImg'),link=document.getElementById('snapLink'),more=document.getElementById('snapMore');
- var PAGES={'central-indiana':'/blog/indianapolis-market-update-august-2026/'};
- ['marion','hamilton','johnson','hendricks','hancock','boone','madison','shelby','morgan','montgomery','decatur','brown','putnam','parke','bartholomew','jackson','jennings'].forEach(function(c){PAGES[c+'-county']='/counties/'+c+'-county-indiana-real-estate/';});
- sel.addEventListener('change',function(){
-  var v=this.value,label=this.options[this.selectedIndex].text,dest=PAGES[v]||'/market-updates/';
-  img.src='/assets/img/market-reports/latest/'+v+'-banner.png';
-  img.alt=label+' real estate market snapshot';
-  link.href=dest;more.href=dest;
-  more.textContent=(v==='central-indiana')?'Open the full report →':'See the '+label+' page →';
- });
-})();
-</script>
-
-<div class="container" style="padding:34px 0 6px;">
- <div style="background:linear-gradient(135deg,#17130f,#2a231d);border-radius:18px;padding:30px 32px;color:#fff;max-width:760px;">
-  <h2 style="font-family:'Playfair Display',Georgia,serif;color:#fff;margin:0 0 6px;">Get the Full Report &mdash; Free</h2>
-  <p style="color:#d8cfc6;margin:0 0 18px;font-size:15.5px;">Pick your county and we&rsquo;ll send you a clean, one-page PDF report with the latest numbers. No cost, no obligation.</p>
-  <form id="reportForm" novalidate>
-   <input type="hidden" name="lead_magnet" value="market-report">
-   <input type="hidden" name="source_page" value="market-updates">
-   <input type="hidden" name="interest_type" value="Market Report">
-   <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;">
-    <div style="grid-column:1 / -1;">
-     <label for="rf-county" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Your county *</label>
-     <select id="rf-county" name="county" required style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;background:#fff;color:#1e1a17;font:inherit;">
-     <option value="central-indiana">Central Indiana — 17-county overall</option>
-     <option value="marion-county">Marion County (Indianapolis)</option>
-     <option value="hamilton-county">Hamilton County</option>
-     <option value="hendricks-county">Hendricks County</option>
-     <option value="johnson-county">Johnson County</option>
-     <option value="boone-county">Boone County</option>
-     <option value="hancock-county">Hancock County</option>
-     <option value="madison-county">Madison County</option>
-     <option value="morgan-county">Morgan County</option>
-     <option value="shelby-county">Shelby County</option>
-     <option value="bartholomew-county">Bartholomew County</option>
-     <option value="brown-county">Brown County</option>
-     <option value="decatur-county">Decatur County</option>
-     <option value="jackson-county">Jackson County</option>
-     <option value="jennings-county">Jennings County</option>
-     <option value="montgomery-county">Montgomery County</option>
-     <option value="parke-county">Parke County</option>
-     <option value="putnam-county">Putnam County</option>
-     </select>
-    </div>
-    <div><label for="rf-fn" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">First name *</label><input id="rf-fn" name="first_name" required placeholder="First name" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
-    <div><label for="rf-ln" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Last name</label><input id="rf-ln" name="last_name" placeholder="Last name" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
-    <div><label for="rf-em" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Email *</label><input id="rf-em" type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
-    <div><label for="rf-ph" style="display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:#f0e9e2;">Phone <span style="color:#a99e93;font-weight:400;">(optional)</span></label><input id="rf-ph" type="tel" name="phone" placeholder="317-555-1234" style="width:100%;padding:11px 13px;border-radius:9px;border:1px solid #4a3f36;font:inherit;"></div>
-   </div>
-   <button type="submit" style="margin-top:16px;background:#c03926;color:#fff;border:none;border-radius:9px;padding:13px 26px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;">Send My Report &rarr;</button>
-   <p style="font-size:12px;color:#a99e93;margin:12px 0 0;">No spam. Unsubscribe anytime. Your info stays private.</p>
-  </form>
-  <div id="reportDone" style="display:none;"></div>
- </div>
-</div>
-<script>
-(function(){
- var fm=document.getElementById('reportForm');
- fm.addEventListener('submit',function(e){
-  e.preventDefault();
-  var btn=fm.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
-  var d={},ins=fm.querySelectorAll('input,select');for(var i=0;i<ins.length;i++){if(ins[i].name)d[ins[i].name]=ins[i].value;}
-  var county=d.county||'central-indiana';
-  var sel=document.getElementById('rf-county');var clabel=sel.options[sel.selectedIndex].text;
-  var pdf='/assets/pdf/market-reports/latest/'+county+'.pdf';
-  d.source_url=window.location.href;d.submitted_at=new Date().toISOString();d.business='yrl';d.source='lead-magnet';
-  d.county_label=clabel;d.tags='lead-magnet,market-report,'+county;
-  fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
-   .then(function(){
-     var done=document.getElementById('reportDone');
-     done.innerHTML='<h2 style="font-family:\'Playfair Display\',Georgia,serif;color:#fff;margin:0 0 8px;">Check it out &mdash; your report is ready \u2713</h2><p style="color:#d8cfc6;margin:0 0 16px;font-size:15.5px;">Your '+clabel+' market report is downloading now. If it doesn\'t open, use the button below.</p><a href="'+pdf+'" target="_blank" style="display:inline-block;background:#c03926;color:#fff;border-radius:9px;padding:13px 26px;font-weight:700;text-decoration:none;">Download the '+clabel+' report &rarr;</a>';
-     fm.style.display='none';done.style.display='block';
-     setTimeout(function(){window.location.href=pdf;},400);
-   })
-   .catch(function(){btn.disabled=false;btn.textContent='Send My Report \u2192';alert('Something went wrong. Please try again or call 317-997-7404.');});
- });
-})();
-</script>
 <div class="container" style="padding:32px 0 8px;">
  <p style="max-width:70ch;color:var(--gray,#6e6e70);">Want the exact numbers for your home or neighborhood? A market average never tells your street&rsquo;s story &mdash; <a href="/services/free-home-valuation/">get a free, no-obligation home valuation</a> built on real, recent local sales.</p>
  <div class="blog-grid" style="margin-top:20px;">
+ <a class="blog-card" href="/blog/indianapolis-market-update-september-2026/">
+  <div class="blog-card-img"><img src="/assets/img/blog/indianapolis-market-update-september-2026.png" alt="Indianapolis Market Update — September 2026" loading="lazy"></div>
+  <div class="blog-card-body">
+   <div class="blog-card-cat">Market Updates</div>
+   <h3>Indianapolis Market Update — September 2026</h3>
+   <p>Indianapolis real estate market update for September 2026: buyer vs seller conditions, price ranges by county, and what to do this month across Central Indiana.</p>
+   <span class="read-more">Read the report &rarr;</span>
+  </div>
+ </a>
+
  <a class="blog-card" href="/blog/indianapolis-market-update-august-2026/">
   <div class="blog-card-img"><img src="/assets/img/blog/indianapolis-market-update-august-2026.png" alt="Indianapolis Market Update — August 2026" loading="lazy"></div>
   <div class="blog-card-body">
