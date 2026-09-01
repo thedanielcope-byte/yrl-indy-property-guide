@@ -30,8 +30,8 @@ The site already delivers the PDF instantly on the thank-you page, so GHL's job 
 5. **Add to a nurture workflow** (buyer track vs seller track).
 
 ### PDF links to use in the emails
-- Buyer's Guide: `https://janetgiles.com/resources/central-indiana-buyers-guide/download/Central-Indiana-Home-Buyers-Guide.pdf`
-- Seller's Guide: `https://janetgiles.com/resources/central-indiana-sellers-guide/download/Central-Indiana-Home-Sellers-Guide.pdf`
+- Buyer's Guide: `https://yourrealtylink.com/resources/central-indiana-buyers-guide/download/Central-Indiana-Home-Buyers-Guide.pdf`
+- Seller's Guide: `https://yourrealtylink.com/resources/central-indiana-sellers-guide/download/Central-Indiana-Home-Sellers-Guide.pdf`
 
 ## Delivery email — Buyer's Guide
 **Subject:** Your Central Indiana Home Buyer's Guide 🏡

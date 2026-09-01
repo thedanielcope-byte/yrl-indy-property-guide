@@ -120,7 +120,7 @@ export function buildEmailHTML(data) {
       <tr><td style="padding:24px 28px;text-align:center;">
         <p style="margin:0 0 6px;color:#ffffff;font-size:16px;font-weight:bold;">Want a More Accurate Valuation?</p>
         <p style="margin:0 0 16px;color:rgba(255,255,255,0.85);font-size:13px;">This estimate is based on public data. A personalized Comparative Market Analysis (CMA) from your local expert considers condition, upgrades, and current market activity.</p>
-        <a href="https://yourrealtylink.com/contact" style="display:inline-block;background:#ffffff;color:#c03926;font-weight:bold;font-size:14px;padding:12px 28px;border-radius:4px;text-decoration:none;">Request a Free CMA</a>
+        <a href="/contact/" style="display:inline-block;background:#ffffff;color:#c03926;font-weight:bold;font-size:14px;padding:12px 28px;border-radius:4px;text-decoration:none;">Request a Free CMA</a>
       </td></tr>
     </table>
   </td></tr>

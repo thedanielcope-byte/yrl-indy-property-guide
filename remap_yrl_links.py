@@ -19,9 +19,10 @@ import os, sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 apply = "--apply" in sys.argv
 
-# set this to the new IDX search base at cutover (e.g. "https://search.yourrealtylink.com"
-# or the vendor's embed/search URL). Leave "" to skip the property-search remap.
-PROPERTY_SEARCH_TARGET = ""
+# Interim IDX target: Displet feed not live yet, so leftover hardcoded property-search
+# links go to MIBOR's public MLS search (matches the slot in idx_config.py). Swap to
+# Displet's search URL when the feed is live.
+PROPERTY_SEARCH_TARGET = "https://property.mibor.com/listings"
 
 # (from, to) — longest/most-specific first so no prefix clobbers another
 REMAPS = [
@@ -30,6 +31,7 @@ REMAPS = [
     ("https://yourrealtylink.com/content/join-us",             "/services/join-yrl/"),
     ("https://yourrealtylink.com/instant-home-valuation",      "/services/free-home-valuation/"),
     ("https://yourrealtylink.com/home-valuation",              "/services/free-home-valuation/"),
+    ("https://yourrealtylink.com/contact",                     "/contact/"),
 ]
 if PROPERTY_SEARCH_TARGET:
     REMAPS.append(("https://yourrealtylink.com/property-search", PROPERTY_SEARCH_TARGET))

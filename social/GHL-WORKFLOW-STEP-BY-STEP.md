@@ -1,6 +1,6 @@
 # GHL Workflow — Step by Step
 
-How to build the automation that receives leads from janetgiles.com, tags them,
+How to build the automation that receives leads from yourrealtylink.com, tags them,
 delivers the right PDF, and starts a nurture sequence.
 
 **Time:** ~45 minutes for the first build, ~5 minutes per extra guide after that.
@@ -40,7 +40,7 @@ Webhook trigger — you can't type in your own. So:
 
 Before building anything:
 
-1. Go to **https://janetgiles.com/resources/central-indiana-buyers-guide/**
+1. Go to **https://yourrealtylink.com/resources/central-indiana-buyers-guide/**
 2. Fill the form with your own name and email. Submit.
 3. In GHL, check **Contacts**.
 
@@ -151,15 +151,15 @@ Hi {{contact.first_name}},
 Thanks for grabbing the Central Indiana Home Buyer's Guide — here it is:
 
 → Download the Buyer's Guide (PDF)
-https://janetgiles.com/resources/central-indiana-buyers-guide/download/Central-Indiana-Home-Buyers-Guide.pdf
+https://yourrealtylink.com/resources/central-indiana-buyers-guide/download/Central-Indiana-Home-Buyers-Guide.pdf
 
 Inside: the full buying process step by step, every financing option including
 down-payment assistance, where to buy by county and school district, and how to
 write an offer that actually wins.
 
 Two things that help most buyers right away:
-• Get pre-approved before you tour — https://janetgiles.com/services/mortgage-pre-approval/
-• Compare areas side by side — https://janetgiles.com/compare/
+• Get pre-approved before you tour — https://yourrealtylink.com/services/mortgage-pre-approval/
+• Compare areas side by side — https://yourrealtylink.com/compare/
 
 Question as you read it? Just reply here, or call/text me at 317-201-6323.
 
@@ -177,7 +177,7 @@ Hi {{contact.first_name}},
 Thanks for requesting the Central Indiana Home Seller's Guide — here it is:
 
 → Download the Seller's Guide (PDF)
-https://janetgiles.com/resources/central-indiana-sellers-guide/download/Central-Indiana-Home-Sellers-Guide.pdf
+https://yourrealtylink.com/resources/central-indiana-sellers-guide/download/Central-Indiana-Home-Sellers-Guide.pdf
 
 Inside: how to price correctly from day one (the single biggest factor), what to
 fix and what to skip, how we market on the MIBOR MLS, and what your closing costs
@@ -185,7 +185,7 @@ will actually look like.
 
 When you're ready for a real number on your home — not an online estimate — I'll
 prepare a free comparative market analysis. No cost, no obligation:
-https://janetgiles.com/services/free-home-valuation/
+https://yourrealtylink.com/services/free-home-valuation/
 
 Daniel Cope
 Real Estate Broker · Your Realty Link
@@ -201,14 +201,14 @@ Hi {{contact.first_name}},
 Here's your First-Time Home Buyer Checklist:
 
 → Download the Checklist (PDF)
-https://janetgiles.com/resources/buyer-checklist/download/First-Time-Home-Buyer-Checklist-Indy-Property-Guide.pdf
+https://yourrealtylink.com/resources/buyer-checklist/download/First-Time-Home-Buyer-Checklist-Indy-Property-Guide.pdf
 
 Print it, work down it, and you'll avoid the mistakes that trip up most first-time
 buyers in Indiana.
 
 One thing worth doing today: check whether you qualify for Indiana down payment
 assistance. Most first-time buyers qualify for more help than they expect —
-https://janetgiles.com/services/down-payment-assistance/
+https://yourrealtylink.com/services/down-payment-assistance/
 
 Buying your first home is genuinely a big deal. If anything is confusing, call or
 text me — that's what I'm here for.
@@ -227,7 +227,7 @@ Hi {{contact.first_name}},
 Here's your Home Selling Prep Guide:
 
 → Download the Prep Guide (PDF)
-https://janetgiles.com/resources/seller-guide/download/Home-Selling-Prep-Guide-Indy-Property-Guide.pdf
+https://yourrealtylink.com/resources/seller-guide/download/Home-Selling-Prep-Guide-Indy-Property-Guide.pdf
 
 It walks through exactly what to do before you list — in the order that returns the
 most per dollar. Most of it costs very little; the expensive renovations usually
@@ -235,7 +235,7 @@ aren't worth it.
 
 When you want to know what your home is realistically worth, I'll put together a
 free comparative market analysis:
-https://janetgiles.com/services/free-home-valuation/
+https://yourrealtylink.com/services/free-home-valuation/
 
 Daniel Cope
 Real Estate Broker · Your Realty Link

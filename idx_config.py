@@ -22,11 +22,21 @@ best-effort for the interim — worst case the search opens unfiltered.
 from urllib.parse import quote_plus
 
 MODE = "deeplink"                                             # "deeplink" | "embed"
-SEARCH_BASE = "https://yourrealtylink.com/property-search"    # YRL's Agent3000 IDX
-EMBED_SNIPPET = ""            # paste the dedicated IDX widget/iframe here for embed mode
+# INTERIM (Sep 2026): Agent3000 was retired and the Displet IDX feed is not live
+# yet, so every search button points at MIBOR's PUBLIC MLS search — the same portal
+# the site already uses for open houses. That portal doesn't honor our city/county
+# params, so DEEPLINK_PARAMS is off and buttons open the working search unfiltered.
+# WHEN DISPLET IS LIVE: paste its widget into EMBED_SNIPPET and set MODE="embed"
+# (or point SEARCH_BASE at Displet's search and set DEEPLINK_PARAMS=True), then
+# re-run inject_idx.py — updates every page at once.
+SEARCH_BASE = "https://property.mibor.com/listings"          # interim: MIBOR public MLS search
+DEEPLINK_PARAMS = False                                       # MIBOR public portal ignores our filters
+EMBED_SNIPPET = ""            # paste the dedicated Displet IDX widget/iframe here for embed mode
 
 
 def _url(param, value):
+    if not DEEPLINK_PARAMS:
+        return SEARCH_BASE
     return "%s?%s=%s" % (SEARCH_BASE, param, quote_plus(str(value)))
 
 def city_search_url(city):        return _url("city", city)          # confirmed
