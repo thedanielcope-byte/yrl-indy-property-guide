@@ -235,17 +235,20 @@
 
 <div class="idx-wrap">
 
- <!-- Displet IDX — All-MLS feed. Domain yourrealtylink.com authorized + confirmed working by Displet/TRIBUS (Sep 2026); earlier failures were a local VPN blocking property.mibor.com, not the embed. -->
+ <!-- Displet IDX embed DISABLED (interim). The mysolidearth shell loads (chat widget) but listings never
+      render — property.mibor.com/properties returns 503 for our account's requests. Confirmed broken on
+      phone/5G cell data AND desktop incognito (no VPN, no extensions) = NOT a local issue; escalated to
+      Displet/TRIBUS. Works from Displet's own network, so it's account/region/intermittent server-side.
+      TO RESTORE once Displet truly fixes it, swap the interim block below for this iframe:
  <div class="idx-embed">
- <iframe
- src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=&amp;user_id=6024260"
- width="100%"
- height="700"
- scrolling="auto"
- frameborder="0"
- title="Search Indianapolis &amp; Central Indiana Homes for Sale — Powered by Your Realty Link"
- loading="lazy">
- </iframe>
+ <iframe src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=&amp;user_id=6024260" width="100%" height="700" scrolling="auto" frameborder="0" title="Search — Your Realty Link" loading="lazy"></iframe>
+ </div>
+ -->
+ <div class="idx-embed" style="padding:52px 24px;text-align:center;">
+ <h2 style="margin-top:0;">Search Every Active MLS Listing</h2>
+ <p style="color:#6e6e70;max-width:560px;margin:0 auto 22px;">Browse all homes for sale across Indianapolis and Central Indiana — updated continuously from the MIBOR MLS. Filter by city, price, beds, baths, and property type.</p>
+ <a href="https://property.mibor.com/" class="btn btn-primary" target="_blank" rel="noopener">Open the Full MLS Search →</a>
+ <p style="font-size:.82rem;color:#9ca3af;margin:18px 0 0;">Prefer we do the searching? <a href="/contact/">Tell us what you're looking for</a> and we'll send you matching listings.</p>
  </div>
 
  <div class="search-tips">
