@@ -414,17 +414,25 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  </div>
 </section>
 
-<!-- OUR OFFICE LISTINGS — Displet office embed TEMPORARILY DISABLED (same Displet authorization issue as /search/).
-     TO RESTORE: replace the interim card below with the office iframe:
-     <iframe src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=bGlzdF9vZmZpY2VfbWxzX2lkPU1CUllSTFQwMSZtbHNfc3RhdHVzPWFjdGl2ZQ==&amp;user_id=6024260" width="100%" height="640" scrolling="auto" frameborder="0" title="Your Realty Link — Our Current Office Listings" loading="lazy" style="display:block;width:100%;border:none;"></iframe> -->
+<!-- OUR OFFICE LISTINGS — Displet office feed (list_office_mls_id=MBRYRLT01), confirmed working by Displet/TRIBUS. -->
 <section class="listings-section" id="featuredListings">
  <div class="container">
  <div class="listings-header">
  <h2>Our Office Listings</h2>
  </div>
- <div style="background:#fff;border:1px solid #e2e2e2;border-radius:12px;padding:44px 28px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.08);">
- <p style="color:#6e6e70;max-width:560px;margin:0 auto 20px;font-size:1.02rem;">See every active Your Realty Link listing plus all current MLS homes for sale across Indianapolis and Central Indiana — updated continuously from the MIBOR MLS.</p>
- <a href="/search/" class="btn btn-primary">Browse Our Listings &amp; Search the MLS &rarr;</a>
+ <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);border:1px solid #e2e2e2;background:#fff;">
+ <iframe
+ src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=bGlzdF9vZmZpY2VfbWxzX2lkPU1CUllSTFQwMSZtbHNfc3RhdHVzPWFjdGl2ZQ==&amp;user_id=6024260"
+ width="100%"
+ height="640"
+ scrolling="auto"
+ frameborder="0"
+ title="Your Realty Link — Our Current Office Listings"
+ loading="lazy"
+ style="display:block;width:100%;border:none;"></iframe>
+ </div>
+ <div class="listings-cta">
+ <a href="/search/">Browse All MLS Listings &rarr;</a>
  </div>
  </div>
 </section>
