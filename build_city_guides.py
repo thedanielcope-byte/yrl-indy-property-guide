@@ -197,11 +197,11 @@ def landing_html(city_key, kind, slug, pdf_name):
     rlist = "\n".join(f'<li style="border:none;display:list-item;padding:4px 0;"><a href="{u}">{esc(l)}</a></li>' for u,l in related)
     ld = ('{"@context":"https://schema.org","@graph":['
           '{"@type":["LocalBusiness","RealEstateAgent"],"name":"Your Realty Link","url":"https://yourrealtylink.com","telephone":"317-997-7404","areaServed":"' + esc(n) + ', Indiana"},'
-          '{"@type":"WebPage","name":"' + esc(title) + '","url":"https://janetgiles.com/resources/' + slug + '/"},'
+          '{"@type":"WebPage","name":"' + esc(title) + '","url":"https://yourrealtylink.com/resources/' + slug + '/"},'
           '{"@type":"BreadcrumbList","itemListElement":['
-          '{"@type":"ListItem","position":1,"name":"Home","item":"https://janetgiles.com/"},'
-          '{"@type":"ListItem","position":2,"name":"Resources","item":"https://janetgiles.com/resources/"},'
-          '{"@type":"ListItem","position":3,"name":"' + esc(n) + ' ' + typ + ' Guide","item":"https://janetgiles.com/resources/' + slug + '/"}]}]}')
+          '{"@type":"ListItem","position":1,"name":"Home","item":"https://yourrealtylink.com/"},'
+          '{"@type":"ListItem","position":2,"name":"Resources","item":"https://yourrealtylink.com/resources/"},'
+          '{"@type":"ListItem","position":3,"name":"' + esc(n) + ' ' + typ + ' Guide","item":"https://yourrealtylink.com/resources/' + slug + '/"}]}]}')
 
     js = ("<script>document.getElementById('leadMagnetForm').addEventListener('submit',function(e){"
           "e.preventDefault();var btn=this.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';"
@@ -220,14 +220,14 @@ def landing_html(city_key, kind, slug, pdf_name):
  <title>{esc(title)}</title>
  <meta name="description" content="{esc(desc)}">
  <meta name="robots" content="index, follow">
- <link rel="canonical" href="https://janetgiles.com/resources/{slug}/">
+ <link rel="canonical" href="https://yourrealtylink.com/resources/{slug}/">
  <meta property="og:title" content="{esc(title)}">
  <meta property="og:description" content="{esc(desc)}">
- <meta property="og:url" content="https://janetgiles.com/resources/{slug}/">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:url" content="https://yourrealtylink.com/resources/{slug}/">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">{ld}</script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -362,7 +362,7 @@ open(hub, "w", encoding="utf-8").write(ht)
 smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
 for key in CITIES:
     for kind in ("buyers", "sellers"):
-        loc = "https://janetgiles.com/resources/%s-home-%s-guide/" % (key, kind)
+        loc = "https://yourrealtylink.com/resources/%s-home-%s-guide/" % (key, kind)
         if loc in sm: continue
         blk += "<url>\n  <loc>%s</loc>\n  <lastmod>2026-08-04</lastmod>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
 if blk:

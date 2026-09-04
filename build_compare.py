@@ -123,7 +123,7 @@ def page(a, b):
     A, B = CITIES[a], CITIES[b]
     an, bn = A["name"], B["name"]
     slug = "%s-vs-%s" % (a, b)
-    url = "https://janetgiles.com/compare/%s/" % slug
+    url = "https://yourrealtylink.com/compare/%s/" % slug
     title = "%s vs %s: Which Indiana Suburb? | Your Realty Link" % (an, bn)
     meta = ("%s vs %s, Indiana: compare home prices, schools, commute, and lifestyle side by side to decide which suburb fits you best." % (an, bn))
     same_county = county_short(A["county"]) == county_short(B["county"])
@@ -192,7 +192,7 @@ def page(a, b):
  <meta property="og:title" content="{esc(title)}">
  <meta property="og:description" content="{esc(meta)}">
  <meta property="og:url" content="{url}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="article">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
@@ -200,8 +200,8 @@ def page(a, b):
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" }},
  {{ "@type": "FAQPage", "mainEntity": [ {fs} ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://janetgiles.com/compare/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://yourrealtylink.com/compare/" }},
  {{ "@type": "ListItem", "position": 3, "name": "{esc(an)} vs {esc(bn)}", "item": "{url}" }} ] }}
  ] }}
  </script>
@@ -386,7 +386,7 @@ if anchor in hub:
 # sitemap
 sm = os.path.join(ROOT, "sitemap.xml"); s = open(sm, encoding="utf-8").read(); blk = ""
 for a, b in MATCHUPS:
-    loc = "https://janetgiles.com/compare/%s-vs-%s/" % (a, b)
+    loc = "https://yourrealtylink.com/compare/%s-vs-%s/" % (a, b)
     if loc not in s:
         blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
 if blk:

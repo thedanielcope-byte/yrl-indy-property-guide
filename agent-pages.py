@@ -94,20 +94,20 @@ def hub_page(agents):
  <title>Our Agents | Your Realty Link</title>
  <meta name="description" content="{esc(desc)}">
  <meta name="robots" content="index, follow">
- <link rel="canonical" href="https://janetgiles.com/agents/">
+ <link rel="canonical" href="https://yourrealtylink.com/agents/">
  <meta property="og:title" content="Our Agents | Your Realty Link">
  <meta property="og:description" content="{esc(desc)}">
- <meta property="og:url" content="https://janetgiles.com/agents/">
+ <meta property="og:url" content="https://yourrealtylink.com/agents/">
  <meta property="og:type" content="website">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:image:width" content="1200">
  <meta property="og:image:height" content="630">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Our Agents", "item": "https://janetgiles.com/agents/" }} ] }}
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Our Agents", "item": "https://yourrealtylink.com/agents/" }} ] }}
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,7 +166,7 @@ def agent_page(a):
         "@context": "https://schema.org", "@type": "RealEstateAgent",
         "name": a["name"], "jobTitle": a["title"], "image": a["photo"],
         "telephone": a["phone"], "email": a["email"],
-        "url": f"https://janetgiles.com/agents/{a['slug']}/",
+        "url": f"https://yourrealtylink.com/agents/{a['slug']}/",
         "worksFor": {"@type": "RealEstateAgent", "name": "Your Realty Link", "url": "https://yourrealtylink.com"},
         "areaServed": "Central Indiana",
     }
@@ -178,10 +178,10 @@ def agent_page(a):
  <title>{esc(a['name'])} — {esc(a['title'])} | Your Realty Link</title>
  <meta name="description" content="{esc(desc)}">
  <meta name="robots" content="index, follow">
- <link rel="canonical" href="https://janetgiles.com/agents/{a['slug']}/">
+ <link rel="canonical" href="https://yourrealtylink.com/agents/{a['slug']}/">
  <meta property="og:title" content="{esc(a['name'])} — {esc(a['title'])} | Your Realty Link">
  <meta property="og:description" content="{esc(desc)}">
- <meta property="og:url" content="https://janetgiles.com/agents/{a['slug']}/">
+ <meta property="og:url" content="https://yourrealtylink.com/agents/{a['slug']}/">
  <meta property="og:type" content="profile">
  <meta property="og:image" content="{a['photo']}">
  <meta name="twitter:card" content="summary_large_image">
@@ -361,7 +361,7 @@ def premium_agent_page(a):
     mailto = f"mailto:{a['email']}?subject=Real%20Estate%20Inquiry%20%E2%80%94%20Your%20Realty%20Link"
     site = clean_site(a.get("website"))
     desc = f'{a["name"]}, {a["title"]} at Your Realty Link. Search Central Indiana homes, explore {first}’s expertise, and get in touch to buy, sell, or invest.'
-    schema = {"@context":"https://schema.org","@type":"RealEstateAgent","name":a["name"],"jobTitle":a["title"],"image":a["photo"],"telephone":a["phone"],"email":a["email"],"url":f"https://janetgiles.com/agents/{a['slug']}/","worksFor":{"@type":"RealEstateAgent","name":"Your Realty Link","url":"https://yourrealtylink.com"},"areaServed":"Central Indiana"}
+    schema = {"@context":"https://schema.org","@type":"RealEstateAgent","name":a["name"],"jobTitle":a["title"],"image":a["photo"],"telephone":a["phone"],"email":a["email"],"url":f"https://yourrealtylink.com/agents/{a['slug']}/","worksFor":{"@type":"RealEstateAgent","name":"Your Realty Link","url":"https://yourrealtylink.com"},"areaServed":"Central Indiana"}
 
     # ── Credentials / quick-facts strip ──
     years = str(a.get("years") or "").strip()
@@ -433,10 +433,10 @@ def premium_agent_page(a):
  <title>{esc(a['name'])} — {esc(a['title'])} | Your Realty Link</title>
  <meta name="description" content="{esc(desc)}">
  <meta name="robots" content="index, follow">
- <link rel="canonical" href="https://janetgiles.com/agents/{a['slug']}/">
+ <link rel="canonical" href="https://yourrealtylink.com/agents/{a['slug']}/">
  <meta property="og:title" content="{esc(a['name'])} — {esc(a['title'])} | Your Realty Link">
  <meta property="og:description" content="{esc(desc)}">
- <meta property="og:url" content="https://janetgiles.com/agents/{a['slug']}/">
+ <meta property="og:url" content="https://yourrealtylink.com/agents/{a['slug']}/">
  <meta property="og:type" content="profile">
  <meta property="og:image" content="{a['photo']}">
  <meta name="twitter:card" content="summary_large_image">

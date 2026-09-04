@@ -83,7 +83,7 @@ def faq_html(pairs):
 # ── shared skeleton ──────────────────────────────────────────────────────────
 def page(rec, title, meta, hero_sub, badges, intro, sections, cta_city, faqs,
          explore, quick_facts, related, crumb):
-    slug = rec["slug"]; url = "https://janetgiles.com/schools/%s/" % slug
+    slug = rec["slug"]; url = "https://yourrealtylink.com/schools/%s/" % slug
     fh = faq_html(faqs); fs = faq_schema(faqs)
     badges_html = "\n ".join(badges)
     sec_html = "\n\n ".join(sections)
@@ -106,15 +106,15 @@ def page(rec, title, meta, hero_sub, badges, intro, sections, cta_city, faqs,
  <meta property="og:title" content="{esc(title)}">
  <meta property="og:description" content="{esc(meta)}">
  <meta property="og:url" content="{url}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "{esc(cta_city)}, Indiana" }},
  {{ "@type": "FAQPage", "mainEntity": [ {fs} ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "School Districts", "item": "https://janetgiles.com/schools/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "School Districts", "item": "https://yourrealtylink.com/schools/" }},
  {{ "@type": "ListItem", "position": 3, "name": "{esc(plain(crumb))}", "item": "{url}" }} ] }}
  ] }}
  </script>
@@ -418,7 +418,7 @@ def hub():
             out.append('  <h2>%s</h2>\n  <div class="city-grid">\n%s\n  </div>' % (esc(label), cards))
         return "\n\n".join(out)
     pub_grid = group(pub); prv_grid = group(prv)
-    url = "https://janetgiles.com/schools/"
+    url = "https://yourrealtylink.com/schools/"
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -431,14 +431,14 @@ def hub():
  <meta property="og:title" content="Central Indiana School Districts &amp; Schools | Your Realty Link">
  <meta property="og:description" content="Homes for sale by school district across Central Indiana — public districts and private schools by area.">
  <meta property="og:url" content="{url}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{url}", "name": "Central Indiana School Districts" }},
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
  {{ "@type": "ListItem", "position": 2, "name": "School Districts", "item": "{url}" }} ] }}
  ] }}
  </script>
@@ -503,7 +503,7 @@ for rec in SCHOOLS:
 # sitemap
 sm = os.path.join(ROOT, "sitemap.xml"); s = open(sm, encoding="utf-8").read(); blk = ""
 for rec in SCHOOLS:
-    loc = "https://janetgiles.com/schools/%s/" % rec["slug"]
+    loc = "https://yourrealtylink.com/schools/%s/" % rec["slug"]
     if loc not in s:
         blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
 if blk:

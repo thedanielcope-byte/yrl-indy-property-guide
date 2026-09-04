@@ -60,7 +60,7 @@ for p in pages:
     # canonical
     can = txt(r'<link rel="canonical" href="(.*?)"', s)
     if not can and not is_thankyou: add("missing-canonical", p)
-    elif can and "janetgiles.com" not in can and not is_thankyou: add("canonical-wrong-domain", p, can)
+    elif can and "yourrealtylink.com" not in can and not is_thankyou: add("canonical-wrong-domain", p, can)
 
     # viewport (mobile)
     if 'name="viewport"' not in s: add("missing-viewport", p)

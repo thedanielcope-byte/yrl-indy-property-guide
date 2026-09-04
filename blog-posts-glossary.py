@@ -80,7 +80,7 @@ def related_res_html(items):
 
 def schema(p):
     crumb = esc(p["schema_headline"])
-    url = f'https://janetgiles.com/blog/{p["slug"]}/'
+    url = f'https://yourrealtylink.com/blog/{p["slug"]}/'
     return f'''<script type="application/ld+json">
 {{
  "@context": "https://schema.org",
@@ -89,7 +89,7 @@ def schema(p):
  "@type": "Article",
  "headline": "{esc(p['schema_headline'])}",
  "description": "{esc(p['schema_desc'])}",
- "author": {{ "@type": "Person", "name": "Daniel Cope", "url": "https://janetgiles.com/agents/daniel-cope/", "jobTitle": "Real Estate Broker", "worksFor": {{ "@type": "Organization", "name": "Your Realty Link" }} }},
+ "author": {{ "@type": "Person", "name": "Daniel Cope", "url": "https://yourrealtylink.com/agents/daniel-cope/", "jobTitle": "Real Estate Broker", "worksFor": {{ "@type": "Organization", "name": "Your Realty Link" }} }},
  "publisher": {{ "@type": "Organization", "name": "Your Realty Link", "logo": {{ "@type": "ImageObject", "url": "/assets/img/yrl-logo.png" }} }},
  "datePublished": "{p['date_pub']}",
  "dateModified": "{p['date_mod']}",
@@ -105,8 +105,8 @@ def schema(p):
  {{
  "@type": "BreadcrumbList",
  "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://janetgiles.com/blog/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yourrealtylink.com/blog/" }},
  {{ "@type": "ListItem", "position": 3, "name": "{crumb}", "item": "{url}" }}
  ]
  }}
@@ -135,8 +135,8 @@ def faq_block(faqs):
     return f'\n <!-- FAQ -->\n <h2 id="faq">Frequently Asked Questions</h2>\n{rows}'
 
 def build(p):
-    url = f'https://janetgiles.com/blog/{p["slug"]}/'
-    og_img = f'https://janetgiles.com/assets/img/blog/{p["slug"]}.png'
+    url = f'https://yourrealtylink.com/blog/{p["slug"]}/'
+    og_img = f'https://yourrealtylink.com/assets/img/blog/{p["slug"]}.png'
     badges = "\n".join(f' <span class="hero-badge">{esc(b)}</span>' for b in p["hero_badges"])
     body_parts = [f' <div class="post-meta">\n'
                   f' <span class="category-badge">{esc(p["category"])}</span>\n'

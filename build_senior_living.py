@@ -8,7 +8,7 @@ import os, re, json
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TPL = os.path.join(ROOT, "services", "expired-listings", "index.html")
 OUT_DIR = os.path.join(ROOT, "senior-living")
-URL = "https://janetgiles.com/senior-living/"
+URL = "https://yourrealtylink.com/senior-living/"
 
 src = open(TPL, encoding="utf-8").read()
 def grab(p):
@@ -50,10 +50,10 @@ page = f'''<!DOCTYPE html>
  <meta property="og:title" content="Senior Real Estate in Indianapolis — Moving After 55 | Your Realty Link">
  <meta property="og:description" content="Senior real estate specialists helping Central Indiana buyers and sellers downsize, right-size, and move to one-level and 55+ living.">
  <meta property="og:url" content="{URL}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/services/senior-living-banner.jpg">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/services/senior-living-banner.jpg">
  <meta property="og:image:width" content="1600"><meta property="og:image:height" content="800">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:image" content="https://janetgiles.com/assets/img/services/senior-living-banner.jpg">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/services/senior-living-banner.jpg">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{
@@ -71,7 +71,7 @@ page = f'''<!DOCTYPE html>
  {faq_schema}
  ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
  {{ "@type": "ListItem", "position": 2, "name": "Senior Living", "item": "{URL}" }}
  ] }}
  ]

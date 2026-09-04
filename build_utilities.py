@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = json.load(open(os.path.join(ROOT, "data", "city-utilities.json"), encoding="utf-8"))
 TPL  = os.path.join(ROOT, "services", "expired-listings", "index.html")
 OUT_DIR = os.path.join(ROOT, "utilities")
-URL = "https://janetgiles.com/utilities/"
+URL = "https://yourrealtylink.com/utilities/"
 
 # ── shell (fonts w/ versioned css hash, header, footer, scripts) from a sibling ──
 src = open(TPL, encoding="utf-8").read()
@@ -235,15 +235,15 @@ page = f'''<!DOCTYPE html>
  <meta property="og:title" content="Central Indiana Utilities &amp; Setup Guide | Your Realty Link">
  <meta property="og:description" content="{DESC}">
  <meta property="og:url" content="{URL}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{URL}", "name": "Central Indiana Utilities & Setup Guide", "speakable": {{ "@type": "SpeakableSpecification", "cssSelector": [".qa-lead"] }} }},
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Local Resources", "item": "https://janetgiles.com/vendors/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Local Resources", "item": "https://yourrealtylink.com/vendors/" }},
  {{ "@type": "ListItem", "position": 3, "name": "Utilities & Setup", "item": "{URL}" }} ] }}
  ] }}
  </script>

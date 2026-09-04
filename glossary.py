@@ -15,7 +15,7 @@ Run: python3 glossary.py
 import os, re, json, html
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE = "https://janetgiles.com"
+SITE = "https://yourrealtylink.com"
 
 src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 CANON_HDR = re.search(r'<header class="site-header">.*?</header>', src, re.DOTALL).group()

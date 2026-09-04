@@ -7,7 +7,7 @@ import os, re, json
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TPL = os.path.join(ROOT, "services", "expired-listings", "index.html")
 OUT_DIR = os.path.join(ROOT, "services", "mortgages")
-URL = "https://janetgiles.com/services/mortgages/"
+URL = "https://yourrealtylink.com/services/mortgages/"
 
 src = open(TPL, encoding="utf-8").read()
 def grab(p):
@@ -82,7 +82,7 @@ page = f'''<!DOCTYPE html>
  <meta property="og:title" content="Mortgages & Home Loans in Indianapolis | Your Realty Link">
  <meta property="og:description" content="Mortgage calculator, loan types, pre-approval, down payment assistance, and trusted local lenders for Central Indiana buyers.">
  <meta property="og:url" content="{URL}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
@@ -90,8 +90,8 @@ page = f'''<!DOCTYPE html>
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" }},
  {{ "@type": "FAQPage", "mainEntity": [ {faq_schema} ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://janetgiles.com/services/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourrealtylink.com/services/" }},
  {{ "@type": "ListItem", "position": 3, "name": "Mortgages", "item": "{URL}" }} ] }}
  ] }}
  </script>

@@ -51,7 +51,7 @@ def faq_schema(pairs):
 def page(c):
     name = c["name"]; county = c["county"]; slug = c["slug"]
     cslug = county.lower().replace(" ", "-") + "-county"
-    url = "https://janetgiles.com/cities/%s/%s-indiana-real-estate/" % (cslug, slug)
+    url = "https://yourrealtylink.com/cities/%s/%s-indiana-real-estate/" % (cslug, slug)
     price = c["price_band"]; sch = c["school_district"]; sch_s = c.get("school_short") or short_school(sch)
     commute = c["commute"]; commute_s = c.get("commute_short", ""); hwy = c.get("highways", "")
     pop = c.get("population"); char = c["character"]; hl = c.get("highlights", [])
@@ -134,7 +134,7 @@ def page(c):
  <meta property="og:title" content="{esc(name)} Indiana Real Estate | Your Realty Link">
  <meta property="og:description" content="{esc(metadesc)}">
  <meta property="og:url" content="{url}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
@@ -142,8 +142,8 @@ def page(c):
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "logo": "/assets/img/yrl-logo.png", "telephone": "317-997-7404", "address": {{ "@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US" }}, "areaServed": {{ "@type": "City", "name": "{esc(name)}", "containedIn": "{esc(county)} County, Indiana" }} }},
  {{ "@type": "FAQPage", "mainEntity": [ {fs} ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "{esc(county)} County", "item": "https://janetgiles.com/counties/{cslug}-indiana-real-estate/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "{esc(county)} County", "item": "https://yourrealtylink.com/counties/{cslug}-indiana-real-estate/" }},
  {{ "@type": "ListItem", "position": 3, "name": "{esc(name)} Indiana Real Estate", "item": "{url}" }} ] }}
  ] }}
  </script>
@@ -315,7 +315,7 @@ for c in DATA["cities"]:
 sm = os.path.join(ROOT, "sitemap.xml"); s = open(sm, encoding="utf-8").read(); blk = ""
 for c in DATA["cities"]:
     cslug = c["county"].lower().replace(" ", "-") + "-county"
-    loc = "https://janetgiles.com/cities/%s/%s-indiana-real-estate/" % (cslug, c["slug"])
+    loc = "https://yourrealtylink.com/cities/%s/%s-indiana-real-estate/" % (cslug, c["slug"])
     if loc not in s:
         blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.7</priority>\n</url>\n" % loc
 if blk:

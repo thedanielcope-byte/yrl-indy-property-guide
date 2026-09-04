@@ -95,7 +95,7 @@ else:
 sm = open(os.path.join(ROOT, "sitemap.xml"), encoding="utf-8").read()
 block = ""
 for p in posts:
-    loc = f'https://janetgiles.com/blog/{p["slug"]}/'
+    loc = f'https://yourrealtylink.com/blog/{p["slug"]}/'
     if loc in sm:
         continue
     block += (f"<url>\n  <loc>{loc}</loc>\n  <lastmod>2026-08-09</lastmod>\n"

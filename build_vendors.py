@@ -9,7 +9,7 @@ import os, re, html, json
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TPL = os.path.join(ROOT, "services", "expired-listings", "index.html")
 OUT_DIR = os.path.join(ROOT, "vendors")
-URL = "https://janetgiles.com/vendors/"
+URL = "https://yourrealtylink.com/vendors/"
 
 # Category display order (money/closing first, then home services)
 ORDER = ["💰 Lenders & Mortgage", "🏛️ Title & Closing", "🔍 Home Inspectors",
@@ -161,14 +161,14 @@ page = f'''<!DOCTYPE html>
  <meta property="og:title" content="Preferred Vendors & Trusted Local Partners | Your Realty Link">
  <meta property="og:description" content="Trusted Central Indiana lenders, title companies, inspectors, contractors, movers, and more — vetted by Your Realty Link.">
  <meta property="og:url" content="{URL}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{URL}", "name": "Preferred Vendors" }},
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
  {{ "@type": "ListItem", "position": 2, "name": "Preferred Vendors", "item": "{URL}" }} ] }}
  ] }}
  </script>

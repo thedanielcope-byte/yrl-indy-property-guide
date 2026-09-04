@@ -98,7 +98,7 @@ def info_panel(c):
 
 def detail_page(c):
     name = disp(c); full = c["name"]; city = c["city"]; county = c["county"]
-    url = "https://janetgiles.com/communities/%s/" % c["slug"]
+    url = "https://yourrealtylink.com/communities/%s/" % c["slug"]
     price = c.get("price_band", "a range of price points")
     ctype = c.get("type", "residential community")
     school = c.get("school_district")
@@ -210,7 +210,7 @@ def detail_page(c):
  <meta property="og:title" content="{esc(name)} Homes for Sale | Your Realty Link">
  <meta property="og:description" content="{esc(name)} in {esc(city)}, Indiana — homes, schools, amenities, and market info from Your Realty Link.">
  <meta property="og:url" content="{url}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
@@ -218,8 +218,8 @@ def detail_page(c):
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "{esc(city)}, Indiana" }},
  {{ "@type": "FAQPage", "mainEntity": [ {faq_schema} ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Communities", "item": "https://janetgiles.com/communities/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Communities", "item": "https://yourrealtylink.com/communities/" }},
  {{ "@type": "ListItem", "position": 3, "name": "{esc(name)}", "item": "{url}" }} ] }}
  ] }}
  </script>
@@ -264,7 +264,7 @@ def build_hub():
           % (c["slug"], esc(disp(c))) for c in sorted(by_city[city], key=lambda x: disp(x)))
         sections.append('  <h2>%s Communities</h2>\n  <div class="city-grid">\n%s\n  </div>' % (esc(city), cards))
     grid = "\n\n".join(sections)
-    url = "https://janetgiles.com/communities/"
+    url = "https://yourrealtylink.com/communities/"
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -277,14 +277,14 @@ def build_hub():
  <meta property="og:title" content="Central Indiana Communities &amp; Subdivisions | Your Realty Link">
  <meta property="og:description" content="Popular Central Indiana communities and subdivisions — homes, amenities, schools, and market info by neighborhood.">
  <meta property="og:url" content="{url}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{url}", "name": "Central Indiana Communities & Subdivisions" }},
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
  {{ "@type": "ListItem", "position": 2, "name": "Communities", "item": "{url}" }} ] }}
  ] }}
  </script>
@@ -345,7 +345,7 @@ for c in COMMS:
 # sitemap
 sm = os.path.join(ROOT, "sitemap.xml"); s = open(sm, encoding="utf-8").read(); blk = ""
 for c in COMMS:
-    loc = "https://janetgiles.com/communities/%s/" % c["slug"]
+    loc = "https://yourrealtylink.com/communities/%s/" % c["slug"]
     if loc not in s:
         blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
 if blk:

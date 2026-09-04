@@ -44,7 +44,7 @@ for p in posts:
             f'   <h3>{html.escape(p["title"])}</h3>\n   <p>{html.escape(p["desc"])}</p>\n'
             f'   <span class="read-more">Read the report &rarr;</span>\n  </div>\n </a>\n')
 
-url="https://janetgiles.com/market-updates/"
+url="https://yourrealtylink.com/market-updates/"
 page=f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,13 +58,13 @@ page=f'''<!DOCTYPE html>
  <meta property="og:description" content="Monthly Central Indiana market updates — where the market stands for buyers and sellers.">
  <meta property="og:url" content="{url}">
  <meta property="og:type" content="website">
- <meta property="og:image" content="https://janetgiles.com/assets/img/blog/market-update.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/blog/market-update.png">
  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:image" content="https://janetgiles.com/assets/img/blog/market-update.png">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/blog/market-update.png">
  <script type="application/ld+json">
  {{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-  {{"@type":"ListItem","position":1,"name":"Home","item":"https://janetgiles.com/"}},
+  {{"@type":"ListItem","position":1,"name":"Home","item":"https://yourrealtylink.com/"}},
   {{"@type":"ListItem","position":2,"name":"Market Updates","item":"{url}"}} ]}}
  </script>
  {HEAD}

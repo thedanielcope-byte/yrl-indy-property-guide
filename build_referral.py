@@ -9,7 +9,7 @@ import os, re
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TPL = os.path.join(ROOT, "services", "expired-listings", "index.html")
 OUT_DIR = os.path.join(ROOT, "services", "referral-program")
-URL = "https://janetgiles.com/services/referral-program/"
+URL = "https://yourrealtylink.com/services/referral-program/"
 
 src = open(TPL, encoding="utf-8").read()
 def grab(p):
@@ -53,10 +53,10 @@ page = f'''<!DOCTYPE html>
  <meta property="og:title" content="Referral Program for Retiring Agents | Your Realty Link">
  <meta property="og:description" content="Put your license in referral status with Your Realty Link and earn up to 35% referral fees — no showings, no paperwork, no MIBOR fees.">
  <meta property="og:url" content="{URL}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/services/referral-program.jpg">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/services/referral-program.jpg">
  <meta property="og:image:width" content="1400"><meta property="og:image:height" content="933">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:image" content="https://janetgiles.com/assets/img/services/referral-program.jpg">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/services/referral-program.jpg">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{
@@ -74,8 +74,8 @@ page = f'''<!DOCTYPE html>
  {faq_schema}
  ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://janetgiles.com/services/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourrealtylink.com/services/" }},
  {{ "@type": "ListItem", "position": 3, "name": "Referral Program", "item": "{URL}" }}
  ] }}
  ]

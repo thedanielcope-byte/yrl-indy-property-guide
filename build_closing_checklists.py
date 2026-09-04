@@ -126,7 +126,7 @@ PAGE = """<!DOCTYPE html>
  <meta property="og:title" content="@@OGTITLE@@">
  <meta property="og:description" content="@@DESC@@">
  <meta property="og:url" content="@@URL@@">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  { "@context": "https://schema.org", "@graph": [
@@ -134,8 +134,8 @@ PAGE = """<!DOCTYPE html>
  { "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" },
  { "@type": "FAQPage", "mainEntity": [ @@FAQSCHEMA@@ ] },
  { "@type": "BreadcrumbList", "itemListElement": [
- { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" },
- { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://janetgiles.com/services/" },
+ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" },
+ { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourrealtylink.com/services/" },
  { "@type": "ListItem", "position": 3, "name": "@@NAME@@", "item": "@@URL@@" } ] }
  ] }
  </script>
@@ -226,7 +226,7 @@ buyer = {
  "dir": "services/buyer-closing-checklist",
  "pdf_landing": "buyer-closing-checklist",
  "extras": local_essentials_block(),
- "url": "https://janetgiles.com/services/buyer-closing-checklist/",
+ "url": "https://yourrealtylink.com/services/buyer-closing-checklist/",
  "title": "Buyer&rsquo;s Closing Checklist for Indianapolis Home Buyers | Your Realty Link",
  "desc": "A step-by-step closing checklist for Central Indiana home buyers: what to do before closing, what to bring on closing day, and how to protect yourself from wire fraud.",
  "name": "Buyer's Closing Checklist",
@@ -333,7 +333,7 @@ buyer = {
 seller = {
  "dir": "services/seller-closing-checklist",
  "pdf_landing": "seller-closing-checklist",
- "url": "https://janetgiles.com/services/seller-closing-checklist/",
+ "url": "https://yourrealtylink.com/services/seller-closing-checklist/",
  "title": "Seller&rsquo;s Closing Checklist for Indianapolis Home Sellers | Your Realty Link",
  "desc": "A step-by-step closing checklist for Central Indiana home sellers: what to prepare under contract, how to review your net proceeds, what to bring to closing, and what to do after.",
  "name": "Seller's Closing Checklist",

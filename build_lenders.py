@@ -12,7 +12,7 @@ import os, re, json, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TPL = os.path.join(ROOT, "services", "expired-listings", "index.html")   # any current service page
 OUT_DIR = os.path.join(ROOT, "services", "preferred-lenders")
-URL = "https://janetgiles.com/services/preferred-lenders/"
+URL = "https://yourrealtylink.com/services/preferred-lenders/"
 
 src = open(TPL, encoding="utf-8").read()
 def grab(pat):
@@ -79,10 +79,10 @@ page = f'''<!DOCTYPE html>
  <meta property="og:title" content="Preferred Mortgage Lenders in Indianapolis | Your Realty Link">
  <meta property="og:description" content="Trusted local mortgage lenders and loan officers recommended by Your Realty Link across Central Indiana.">
  <meta property="og:url" content="{URL}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-home.jpg">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-home.jpg">
  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:image" content="https://janetgiles.com/assets/img/og-home.jpg">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-home.jpg">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{
@@ -100,8 +100,8 @@ page = f'''<!DOCTYPE html>
  {faq_schema}
  ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://janetgiles.com/services/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourrealtylink.com/services/" }},
  {{ "@type": "ListItem", "position": 3, "name": "Preferred Lenders", "item": "{URL}" }}
  ] }}
  ]

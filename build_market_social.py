@@ -105,7 +105,7 @@ TPL = """<meta charset="utf-8">
   <div class="tile"><div class="lab">Months of supply</div><div class="body"><div class="val red">{months}</div><div class="sub">{months_sub}</div></div></div>
  </div>
  <div class="foot">
-  <div class="cta">Full report &rarr; <b>janetgiles.com</b></div>
+  <div class="cta">Full report &rarr; <b>yourrealtylink.com</b></div>
   <div class="meta"><b>Your Realty Link</b> &middot; Janet Giles, Broker<br>317-997-7404</div>
  </div>
 </div>"""
@@ -142,7 +142,7 @@ BANNER = """<meta charset="utf-8">
   <h1>Real Estate<br><em>Market Report</em></h1>
   <div class="rule"></div>
   <div class="src">Single-family homes &middot; Source: MIBOR REALTOR&reg; Association</div>
-  <div class="cta">Full report &rarr; <b>janetgiles.com</b> &middot; 317-997-7404</div>
+  <div class="cta">Full report &rarr; <b>yourrealtylink.com</b> &middot; 317-997-7404</div>
  </div>
  <div class="R">
   <div class="t"><div class="lab">Median sale price</div><div class="bd"><div class="val red">{median}</div><div class="sub">{median_sub}</div></div></div>
@@ -192,7 +192,7 @@ PDF_TPL = """<meta charset="utf-8">
  <p class="sub">Single-family homes &middot; Source: MIBOR REALTOR&reg; Association</p>
  <img class="report" src="data:image/png;base64,{img}">
  <p class="take">{take}</p>
- <div class="cta">Want your home&rsquo;s exact value &mdash; not a metro average? Get a free, no-obligation valuation at <b>janetgiles.com/services/free-home-valuation</b><br>Janet Giles-Schultz, Principal Broker &middot; Your Realty Link &middot; <b>317-997-7404</b></div>
+ <div class="cta">Want your home&rsquo;s exact value &mdash; not a metro average? Get a free, no-obligation valuation at <b>yourrealtylink.com/services/free-home-valuation</b><br>Janet Giles-Schultz, Principal Broker &middot; Your Realty Link &middot; <b>317-997-7404</b></div>
 </div>"""
 
 os.makedirs(OUTDIR, exist_ok=True)

@@ -207,7 +207,7 @@ def publish(post):
         open(bi,"w",encoding="utf-8").write(t)
     # sitemap (idempotent)
     sm=open(os.path.join(ROOT,"sitemap.xml"),encoding="utf-8").read()
-    loc=f'https://janetgiles.com/blog/{post["slug"]}/'
+    loc=f'https://yourrealtylink.com/blog/{post["slug"]}/'
     if loc not in sm:
         blk=f"<url>\n  <loc>{loc}</loc>\n  <lastmod>{post['date_pub']}</lastmod>\n  <changefreq>monthly</changefreq>\n  <priority>0.7</priority>\n</url>\n"
         open(os.path.join(ROOT,"sitemap.xml"),"w",encoding="utf-8").write(sm.replace("</urlset>",blk+"</urlset>"))

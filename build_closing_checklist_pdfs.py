@@ -36,7 +36,7 @@ LM_STYLE = re.search(r'<style>.*?</style>',
                      re.DOTALL).group()
 
 def esc(s):  return html.escape(str(s or ""), quote=True)
-def absl(s): return str(s).replace('href="/', 'href="https://janetgiles.com/')
+def absl(s): return str(s).replace('href="/', 'href="https://yourrealtylink.com/')
 
 # extract the wire-fraud copy from the shared WIRE_ALERT block (single source of truth)
 _wa_h = re.search(r'<h3>(.*?)</h3>', WIRE_ALERT).group(1)
@@ -153,11 +153,11 @@ def landing_html(kind, slug, pdf_name):
     rlist = "\n".join(f'<li style="border:none;display:list-item;padding:4px 0;"><a href="{u}">{esc(l)}</a></li>' for u, l in L["related"])
     ld = ('{"@context":"https://schema.org","@graph":['
           '{"@type":["LocalBusiness","RealEstateAgent"],"name":"Your Realty Link","url":"https://yourrealtylink.com","telephone":"317-997-7404","areaServed":"Central Indiana"},'
-          '{"@type":"WebPage","name":"' + esc(title) + '","url":"https://janetgiles.com/resources/' + slug + '/"},'
+          '{"@type":"WebPage","name":"' + esc(title) + '","url":"https://yourrealtylink.com/resources/' + slug + '/"},'
           '{"@type":"BreadcrumbList","itemListElement":['
-          '{"@type":"ListItem","position":1,"name":"Home","item":"https://janetgiles.com/"},'
-          '{"@type":"ListItem","position":2,"name":"Resources","item":"https://janetgiles.com/resources/"},'
-          '{"@type":"ListItem","position":3,"name":"' + esc(typ) + ' Closing Checklist","item":"https://janetgiles.com/resources/' + slug + '/"}]}]}')
+          '{"@type":"ListItem","position":1,"name":"Home","item":"https://yourrealtylink.com/"},'
+          '{"@type":"ListItem","position":2,"name":"Resources","item":"https://yourrealtylink.com/resources/"},'
+          '{"@type":"ListItem","position":3,"name":"' + esc(typ) + ' Closing Checklist","item":"https://yourrealtylink.com/resources/' + slug + '/"}]}]}')
     js = ("<script>document.getElementById('leadMagnetForm').addEventListener('submit',function(e){"
           "e.preventDefault();var btn=this.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';"
           "var data={};var inputs=this.querySelectorAll('input,select,textarea');"
@@ -174,11 +174,11 @@ def landing_html(kind, slug, pdf_name):
  <title>{esc(title)}</title>
  <meta name="description" content="{esc(desc)}">
  <meta name="robots" content="index, follow">
- <link rel="canonical" href="https://janetgiles.com/resources/{slug}/">
+ <link rel="canonical" href="https://yourrealtylink.com/resources/{slug}/">
  <meta property="og:title" content="{esc(title)}">
  <meta property="og:description" content="{esc(desc)}">
- <meta property="og:url" content="https://janetgiles.com/resources/{slug}/">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:url" content="https://yourrealtylink.com/resources/{slug}/">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">{ld}</script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -294,7 +294,7 @@ for slug, ok, kb in made:
 #    generator no longer inserts its own hub section) ──
 smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
 for kind in ("buyer", "seller"):
-    loc = "https://janetgiles.com/resources/%s-closing-checklist/" % kind
+    loc = "https://yourrealtylink.com/resources/%s-closing-checklist/" % kind
     if loc not in sm:
         blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
 if blk:

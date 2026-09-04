@@ -125,9 +125,9 @@ def article_schema(p, url, date_pub):
 
 def build(p):
     slug = p["slug"]
-    url = f'https://janetgiles.com/blog/{slug}/'
+    url = f'https://yourrealtylink.com/blog/{slug}/'
     cover = p.get("cover_image") or "/assets/img/yrl-logo.png"
-    og_img = cover if cover.startswith("http") else ("https://janetgiles.com" + cover)
+    og_img = cover if cover.startswith("http") else ("https://yourrealtylink.com" + cover)
     try:
         dt = datetime.datetime.fromisoformat((p.get("publish_at") or "").replace("Z", "+00:00"))
     except Exception:

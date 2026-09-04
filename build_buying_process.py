@@ -6,7 +6,7 @@ import os, re, json
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TPL = os.path.join(ROOT, "services", "expired-listings", "index.html")
 OUT_DIR = os.path.join(ROOT, "services", "home-buying-process")
-URL = "https://janetgiles.com/services/home-buying-process/"
+URL = "https://yourrealtylink.com/services/home-buying-process/"
 
 src = open(TPL, encoding="utf-8").read()
 def grab(p):
@@ -76,7 +76,7 @@ page = f'''<!DOCTYPE html>
  <meta property="og:title" content="How to Buy a Home in Indianapolis: The Step-by-Step Process | Your Realty Link">
  <meta property="og:description" content="From pre-approval to after you close — the Central Indiana home buying journey, explained step by step.">
  <meta property="og:url" content="{URL}">
- <meta property="og:image" content="https://janetgiles.com/assets/img/og-default.png">
+ <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
@@ -84,8 +84,8 @@ page = f'''<!DOCTYPE html>
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "Central Indiana" }},
  {{ "@type": "FAQPage", "mainEntity": [ {faq_schema} ] }},
  {{ "@type": "BreadcrumbList", "itemListElement": [
- {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://janetgiles.com/" }},
- {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://janetgiles.com/services/" }},
+ {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
+ {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourrealtylink.com/services/" }},
  {{ "@type": "ListItem", "position": 3, "name": "Home Buying Process", "item": "{URL}" }} ] }}
  ] }}
  </script>
