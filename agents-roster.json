@@ -40,7 +40,7 @@
   "phone": "317-201-6323",
   "email": "csirealtyteam@yourrealtylink.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/daniel-cope-brick.jpg",
+  "photo": "/assets/img/agents/daniel-cope.jpg",
   "areas": [
    [
     "Southport",
@@ -79,7 +79,8 @@
   ],
   "bio": "Daniel Cope is a Commercial Broker and the marketing lead at Your Realty Link, helping clients buy, sell, and invest across commercial and residential real estate throughout the Indianapolis metro and Central Indiana. With a marketing background, Daniel brings sharp positioning and full-MLS reach to every deal.\n\nWhether you're expanding a business, buying your first home, or growing an investment portfolio, Daniel offers straight talk and deep local knowledge — from the Southport area through Johnson County and beyond.",
   "tagline": "Commercial & residential real estate across Central Indiana — straight talk, sharp marketing, real results.",
-  "slug": "daniel-cope"
+  "slug": "daniel-cope",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562540544_daniel-cope-brick.jpg"
  },
  {
   "name": "Clark Giles",
@@ -87,8 +88,9 @@
   "phone": "317-294-9608",
   "email": "clark@yourrealtylink.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/clark-giles-brick.jpg",
-  "slug": "clark-giles"
+  "photo": "/assets/img/agents/clark-giles.jpg",
+  "slug": "clark-giles",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562557953_clark-giles-brick.jpg"
  },
  {
   "name": "Matt Worton",
@@ -96,8 +98,9 @@
   "phone": "317-642-6156",
   "email": "matt@yourrealtylink.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/matt-worton-brick.jpg",
-  "slug": "matt-worton"
+  "photo": "/assets/img/agents/matt-worton.jpg",
+  "slug": "matt-worton",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562621717_matt-worton-brick.jpg"
  },
  {
   "name": "Michelle Martin",
@@ -105,8 +108,9 @@
   "phone": "317-945-5112",
   "email": "michelle@yourrealtylink.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/michelle-martin-brick.jpg",
-  "slug": "michelle-martin"
+  "photo": "/assets/img/agents/michelle-martin.jpg",
+  "slug": "michelle-martin",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562606042_michelle-martin-brick.jpg"
  },
  {
   "name": "Brenda D. Dean",
@@ -114,8 +118,9 @@
   "phone": "317-403-2780",
   "email": "brenda@brendadeanteam.com",
   "website": "https://www.BrendaDeanTeam.com",
-  "photo": "https://yourrealtylink.com/assets/img/agents/brenda-d-dean-brick.jpg",
-  "slug": "brenda-d-dean"
+  "photo": "/assets/img/agents/brenda-d-dean.jpg",
+  "slug": "brenda-d-dean",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562526390_brenda-d-dean-brick.jpg"
  },
  {
   "name": "Elizabeth Cottler",
@@ -123,8 +128,9 @@
   "phone": "317-507-7770",
   "email": "ecottler@hotmail.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/elizabeth-cottler-brick.jpg",
-  "slug": "elizabeth-cottler"
+  "photo": "/assets/img/agents/elizabeth-cottler.jpg",
+  "slug": "elizabeth-cottler",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562576743_elizabeth-cottler-brick.jpg"
  },
  {
   "name": "Leah Matis",
@@ -132,8 +138,9 @@
   "phone": "317-965-3676",
   "email": "leah.matis@gmail.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/leah-matis-brick.jpg",
-  "slug": "leah-matis"
+  "photo": "/assets/img/agents/leah-matis.jpg",
+  "slug": "leah-matis",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562592376_leah-matis-brick.jpg"
  },
  {
   "name": "Marie Washburne",
@@ -141,8 +148,9 @@
   "phone": "317-287-4608",
   "email": "marie@indypropertychicks.com",
   "website": "https://indypropertychicks.com",
-  "photo": "https://yourrealtylink.com/assets/img/agents/marie-washburne-brick.jpg",
-  "slug": "marie-washburne"
+  "photo": "/assets/img/agents/marie-washburne.jpg",
+  "slug": "marie-washburne",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562633998_marie-washburne-brick.jpg"
  },
  {
   "name": "Portia Rhoades",
@@ -170,8 +178,9 @@
   "phone": "317-370-0674",
   "email": "csdarlage@hotmail.com",
   "website": "https://www.yourrealtylink.com",
-  "photo": "https://yourrealtylink.com/assets/img/agents/sadie-darlage-brick.jpg",
-  "slug": "sadie-darlage"
+  "photo": "/assets/img/agents/sadie-darlage.jpg",
+  "slug": "sadie-darlage",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562664740_sadie-darlage-brick.jpg"
  },
  {
   "name": "Tami & Todd Scroggins",
@@ -179,7 +188,7 @@
   "phone": "317-445-1723",
   "email": "ttscroggins1113@gmail.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/tami-todd-scroggins-brick.jpg",
+  "photo": "/assets/img/agents/tami-todd-scroggins.jpg",
   "slug": "tami-todd-scroggins",
   "expertise": [
    "Buyer Representation",
@@ -194,7 +203,8 @@
     "/cities/shelby-county/shelbyville-indiana-real-estate/"
    ]
   ],
-  "tagline": "Best Realtor in Shelby County 2025 & 2026!"
+  "tagline": "Best Realtor in Shelby County 2025 & 2026!",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562695401_tami-todd-scroggins-brick.jpg"
  },
  {
   "name": "Tammy Jennings",
@@ -202,8 +212,9 @@
   "phone": "317-850-4456",
   "email": "goldenhoperealty@yahoo.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/tammy-jennings-brick.jpg",
-  "slug": "tammy-jennings"
+  "photo": "/assets/img/agents/tammy-jennings.jpg",
+  "slug": "tammy-jennings",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562708297_tammy-jennings-brick.jpg"
  },
  {
   "name": "Teresa Thacker",
@@ -221,8 +232,9 @@
   "phone": "317-554-7214",
   "email": "realtorangelaperez@gmail.com",
   "website": "https://www.yourrealtylink.com",
-  "photo": "https://yourrealtylink.com/assets/img/agents/angela-perez-brick.jpg",
-  "slug": "angela-perez"
+  "photo": "/assets/img/agents/angela-perez.jpg",
+  "slug": "angela-perez",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562721960_angela-perez-brick.jpg"
  },
  {
   "name": "Daniel Fenton",
@@ -230,8 +242,9 @@
   "phone": "317-413-9057",
   "email": "danielfentonrealty@gmail.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/daniel-fenton-brick.jpg",
-  "slug": "daniel-fenton"
+  "photo": "/assets/img/agents/daniel-fenton.jpg",
+  "slug": "daniel-fenton",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562737471_daniel-fenton-brick.jpg"
  },
  {
   "name": "Jordan Gleason",
@@ -240,7 +253,8 @@
   "email": "jgleason@gileslawgroup.com",
   "website": "https://www.gileslawgroup.com",
   "photo": "/assets/img/agents/jordan-gleason.jpg",
-  "slug": "jordan-gleason"
+  "slug": "jordan-gleason",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562362915_Jordan_Gleason_referral_partner.png"
  },
  {
   "name": "Lisa Hicks",
@@ -248,8 +262,9 @@
   "phone": "317-417-2707",
   "email": "lisa@indypropertychicks.com",
   "website": "https://indypropertychicks.com",
-  "photo": "https://yourrealtylink.com/assets/img/agents/lisa-hicks-brick.jpg",
-  "slug": "lisa-hicks"
+  "photo": "/assets/img/agents/lisa-hicks.jpg",
+  "slug": "lisa-hicks",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562648156_lisa-hicks-brick.jpg"
  },
  {
   "name": "Steve Webber",
@@ -257,7 +272,8 @@
   "phone": "317-201-3982",
   "email": "stevewebber54@gmail.com",
   "website": "",
-  "photo": "https://yourrealtylink.com/assets/img/agents/steve-webber-brick.jpg",
-  "slug": "steve-webber"
+  "photo": "/assets/img/agents/steve-webber.jpg",
+  "slug": "steve-webber",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562679531_steve-webber-brick.jpg"
  }
 ]
