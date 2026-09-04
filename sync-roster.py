@@ -14,7 +14,7 @@ Usage:
     python3 sync-roster.py          # pull, merge, rebuild pages
     python3 sync-roster.py --dry    # show what would change, write nothing
 """
-import json, os, re, sys, subprocess, urllib.request
+import json, os, re, shutil, subprocess, sys, urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ROSTER = os.path.join(ROOT, "agents-roster.json")
@@ -62,13 +62,42 @@ def slugify(name):
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
 
+def pull_headshot(url, dest):
+    """Download an agent's hub headshot and optimize it to a ~600px-wide JPEG,
+    self-hosted at dest. Returns True on success. Uses macOS `sips`; if it isn't
+    available, saves the raw download so the new photo is at least used."""
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    tmp = dest + ".src"
+    try:
+        urllib.request.urlretrieve(url, tmp)
+    except Exception as e:
+        print(f"  ! headshot download failed ({os.path.basename(dest)}): {e}")
+        return False
+    sips = shutil.which("sips")
+    if sips:
+        r = subprocess.run([sips, "--resampleWidth", "600", "-s", "format", "jpeg",
+                            "-s", "formatOptions", "82", tmp, "--out", dest],
+                           capture_output=True, text=True)
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+        if r.returncode != 0:
+            print(f"  ! sips resize failed ({os.path.basename(dest)})")
+            return False
+    else:
+        shutil.move(tmp, dest)  # no sips (non-macOS): keep the raw file
+        print(f"  · {os.path.basename(dest)} saved un-resized (sips not found)")
+    return True
+
+
 def main():
     remote = fetch_remote()
     by_email = {norm(r.get("email")): r for r in remote if norm(r.get("email"))}
     by_name = {norm(r.get("name")): r for r in remote}
 
     local = json.load(open(ROSTER, encoding="utf-8"))
-    changed, matched, unmatched = [], 0, []
+    changed, matched, unmatched, photo_synced = [], 0, [], []
 
     for a in local:
         # Match on email first (stable if the agent renames), then name.
@@ -100,10 +129,21 @@ def main():
             a["title"] = r_title
         if r_phone:
             a["phone"] = r_phone
-        # Photo: only adopt an agent-uploaded headshot (keeps the optimized local
-        # images for everyone else instead of heavy legacy CDN URLs).
-        if "hub-files/headshots" in r_photo:
-            a["photo"] = r_photo
+        # Photo: when an agent uploads a headshot to the hub (ANY Supabase
+        # hub-files/... URL — the old "headshots/" path or the new
+        # "<user-id>/agent-photos/" path), download + optimize + self-host it at
+        # /assets/img/agents/<slug>.jpg instead of hot-linking the heavy hub PNG.
+        # Re-download only when the hub URL actually changes (tracked in photo_src);
+        # non-hub URLs (legacy CDN) are left as-is.
+        if r_photo and "hub-files/" in r_photo and r_photo != a.get("photo_src"):
+            slug = a.get("slug") or slugify(a.get("name"))
+            local_rel = "/assets/img/agents/%s.jpg" % slug
+            if DRY:
+                photo_synced.append(a.get("name"))
+            elif pull_headshot(r_photo, os.path.join(ROOT, "assets", "img", "agents", "%s.jpg" % slug)):
+                a["photo"] = local_rel
+                a["photo_src"] = r_photo   # remember what we synced, so we don't refetch
+                photo_synced.append(a.get("name"))
         # Enrichment fields (agent-editable): mirror the hub; drop when empty.
         for k in ("testimonials", "designations", "languages", "gallery"):
             v = r.get(k)
@@ -145,6 +185,8 @@ def main():
         print("  · no hub match (left as-is): " + ", ".join(n for n in unmatched if n))
     print(f"  · updated specialties/areas/bio for {len(changed)} agent(s): "
           + (", ".join(changed) if changed else "none"))
+    print(f"  · synced new headshot for {len(photo_synced)} agent(s): "
+          + (", ".join(n for n in photo_synced if n) if photo_synced else "none"))
 
     if DRY:
         print("\n--dry: no files written, no rebuild.")

@@ -151,7 +151,8 @@
   "email": "portiafay1976@gmail.com",
   "website": "",
   "photo": "/assets/img/agents/portia-rhoades.jpg",
-  "slug": "portia-rhoades"
+  "slug": "portia-rhoades",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788482238688_1.png"
  },
  {
   "name": "Raina Billington",
@@ -160,7 +161,8 @@
   "email": "rainabillington@gmail.com",
   "website": "https://www.yourrealtylink.com",
   "photo": "/assets/img/agents/raina-billington.jpg",
-  "slug": "raina-billington"
+  "slug": "raina-billington",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788482271778_2.png"
  },
  {
   "name": "Sadie Darlage",
@@ -210,7 +212,8 @@
   "email": "listwithteresa@gmail.com",
   "website": "https://www.yourrealtylink.com",
   "photo": "/assets/img/agents/teresa-thacker.jpg",
-  "slug": "teresa-thacker"
+  "slug": "teresa-thacker",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788482255393_3.png"
  },
  {
   "name": "Angela Perez",
