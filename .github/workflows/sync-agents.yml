@@ -4,14 +4,14 @@ name: Sync agent expertise from hub
 # agent directory to the public site — no manual push needed.
 #
 # Triggers:
-#   • schedule        — polls the hub every 15 minutes
-#   • workflow_dispatch — manual "Run workflow" button
+#   • schedule        — polls the hub once a day (08:00 UTC ≈ 3–4am ET)
+#   • workflow_dispatch — manual "Run workflow" button (use for an instant sync)
 #   • repository_dispatch (type: hub-updated) — reserved for an instant
 #     trigger from the hub (future upgrade: hub Save → edge fn → dispatch)
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "0 8 * * *"
   workflow_dispatch: {}
   repository_dispatch:
     types: [hub-updated]
@@ -28,6 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install image optimizer (Pillow)
+        # sync-roster.py optimizes new hub headshots to ~600px JPEGs. macOS uses the
+        # built-in `sips`; this Linux runner has no `sips`, so it uses Pillow instead.
+        run: pip install --quiet Pillow
 
       - name: Pull hub roster + rebuild agent pages
         run: |

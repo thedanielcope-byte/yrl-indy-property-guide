@@ -62,10 +62,21 @@ def slugify(name):
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
 
+def _rm(p):
+    try:
+        os.remove(p)
+    except OSError:
+        pass
+
+
 def pull_headshot(url, dest):
     """Download an agent's hub headshot and optimize it to a ~600px-wide JPEG,
-    self-hosted at dest. Returns True on success. Uses macOS `sips`; if it isn't
-    available, saves the raw download so the new photo is at least used."""
+    self-hosted at dest. Returns True on success.
+
+    Cross-platform so the same result comes out whether it runs locally or in the
+    GitHub Actions (Linux) auto-sync: prefer macOS `sips` (always present on a Mac),
+    else Pillow (installed on the CI runner), else keep the raw download so the new
+    photo is at least used."""
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     tmp = dest + ".src"
     try:
@@ -78,17 +89,30 @@ def pull_headshot(url, dest):
         r = subprocess.run([sips, "--resampleWidth", "600", "-s", "format", "jpeg",
                             "-s", "formatOptions", "82", tmp, "--out", dest],
                            capture_output=True, text=True)
-        try:
-            os.remove(tmp)
-        except OSError:
-            pass
+        _rm(tmp)
         if r.returncode != 0:
             print(f"  ! sips resize failed ({os.path.basename(dest)})")
             return False
-    else:
-        shutil.move(tmp, dest)  # no sips (non-macOS): keep the raw file
-        print(f"  · {os.path.basename(dest)} saved un-resized (sips not found)")
-    return True
+        return True
+    try:
+        from PIL import Image  # cross-platform fallback (Linux CI runner)
+        im = Image.open(tmp)
+        if im.mode != "RGB":
+            im = im.convert("RGB")
+        w, h = im.size
+        if w > 600:
+            im = im.resize((600, max(1, round(h * 600 / w))), Image.LANCZOS)
+        im.save(dest, "JPEG", quality=82, optimize=True)
+        _rm(tmp)
+        return True
+    except ImportError:
+        shutil.move(tmp, dest)  # neither sips nor Pillow: keep the raw file
+        print(f"  · {os.path.basename(dest)} saved un-resized (no sips/Pillow)")
+        return True
+    except Exception as e:
+        print(f"  ! Pillow resize failed ({os.path.basename(dest)}): {e}")
+        _rm(tmp)
+        return False
 
 
 def main():
