@@ -51,7 +51,7 @@ def main():
             % (r["slug"], html.escape(r["title"], quote=False)) for r in rel)
         blk = (
             '%s\n <section class="section" style="padding-top:0;">\n <div class="container" style="max-width:900px;">\n'
-            ' <h2>More Central Indiana Real Estate Reading</h2>\n'
+            ' <h3>More Central Indiana Real Estate Reading</h3>\n'
             ' <div class="city-grid">\n%s\n </div>\n'
             ' <p style="margin-top:14px;"><a href="/blog/">Browse the full blog &rarr;</a></p>\n'
             ' </div>\n </section>\n %s\n ' % (START, cards, END))

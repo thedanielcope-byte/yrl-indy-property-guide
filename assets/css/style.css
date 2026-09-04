@@ -730,13 +730,13 @@ details.faq-item[open] summary { background: var(--red-light); color: var(--red)
 }
 .footer-brand img { height: 36px; width: auto; max-width: 200px; margin-bottom: 14px; }
 .footer-brand p { font-size: 13px; color: #6e6e70; line-height: 1.6; margin-bottom: 12px; }
-.footer-col h4 {
+.footer-col h3, .footer-col h4 {
   color: var(--dark);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .08em;
-  margin-bottom: 14px;
+  margin: 0 0 14px;
 }
 .footer-col ul { list-style: none; padding: 0; }
 .footer-col ul li { margin-bottom: 8px; }
