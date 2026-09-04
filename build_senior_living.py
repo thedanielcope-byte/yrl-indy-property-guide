@@ -44,7 +44,7 @@ page = f'''<!DOCTYPE html>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Senior Real Estate in Indianapolis &mdash; Moving After 55 | Your Realty Link</title>
- <meta name="description" content="Downsizing or moving to a 55+ community in Central Indiana? Your Realty Link's senior real estate specialists help you sell the family home, right-size, and find one-level living. Call 317-997-7404.">
+ <meta name="description" content="Downsizing or moving to a 55+ community in Central Indiana? Your Realty Link's senior real estate specialists help you right-size and find one-level living.">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="{URL}">
  <meta property="og:title" content="Senior Real Estate in Indianapolis — Moving After 55 | Your Realty Link">
