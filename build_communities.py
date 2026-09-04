@@ -101,6 +101,20 @@ def detail_page(c):
     url = "https://yourrealtylink.com/communities/%s/" % c["slug"]
     price = c.get("price_band", "a range of price points")
     ctype = c.get("type", "residential community")
+    # SEO title + meta description. Put the CITY in the title so same-named
+    # communities in different cities get unique titles (and a geo keyword), and
+    # keep the description under ~160 chars so Google doesn't truncate it.
+    if name.strip().lower() == city.strip().lower():
+        seo_title = "%s Homes for Sale | Your Realty Link" % name
+        meta_desc = ("%s, IN: homes for sale, schools, amenities, and price ranges. "
+                     "Search listings and get a free home valuation with Your Realty Link." % name)
+    else:
+        seo_title = "%s Homes for Sale in %s | Your Realty Link" % (name, city)
+        meta_desc = ("%s in %s, IN: homes for sale, schools, amenities, and price ranges. "
+                     "Search listings and get a free valuation with Your Realty Link." % (name, city))
+        if len(meta_desc) > 160:
+            meta_desc = ("%s homes for sale in %s, IN — schools and price ranges. "
+                         "Search listings and get a free valuation with Your Realty Link." % (name, city))
     school = c.get("school_district")
     hl = c.get("highlights", [])
     cu = city_url(city); cou = county_url(county)
@@ -203,15 +217,19 @@ def detail_page(c):
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>{esc(name)} Homes for Sale | Your Realty Link</title>
- <meta name="description" content="{esc(name)} in {esc(city)}, Indiana: homes for sale, the {esc(ctype)} lifestyle, schools, amenities, and price ranges. Your Realty Link helps buyers and sellers in {esc(name)}.">
+ <title>{esc(seo_title)}</title>
+ <meta name="description" content="{esc(meta_desc)}">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="{url}">
- <meta property="og:title" content="{esc(name)} Homes for Sale | Your Realty Link">
+ <meta property="og:title" content="{esc(seo_title)}">
  <meta property="og:description" content="{esc(name)} in {esc(city)}, Indiana — homes, schools, amenities, and market info from Your Realty Link.">
  <meta property="og:url" content="{url}">
  <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="{esc(seo_title)}">
+ <meta name="twitter:description" content="{esc(meta_desc)}">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{url}", "speakable": {{ "@type": "SpeakableSpecification", "cssSelector": [".hero-sub"] }} }},
@@ -271,7 +289,7 @@ def build_hub():
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Central Indiana Communities &amp; Subdivisions | Your Realty Link</title>
- <meta name="description" content="Explore Central Indiana's most popular communities and subdivisions — golf, lake, luxury, and master-planned neighborhoods in Carmel, Fishers, Westfield, Zionsville, Noblesville and more.">
+ <meta name="description" content="Explore Central Indiana's most popular communities and subdivisions — golf, lake, luxury and master-planned neighborhoods in Carmel, Fishers, Zionsville and more.">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="{url}">
  <meta property="og:title" content="Central Indiana Communities &amp; Subdivisions | Your Realty Link">
@@ -279,6 +297,10 @@ def build_hub():
  <meta property="og:url" content="{url}">
  <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Central Indiana Communities &amp; Subdivisions | Your Realty Link">
+ <meta name="twitter:description" content="Popular Central Indiana communities and subdivisions — homes, amenities, schools, and market info by neighborhood.">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{url}", "name": "Central Indiana Communities & Subdivisions" }},
