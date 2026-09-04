@@ -409,6 +409,19 @@ def premium_agent_page(a):
         + '</div></div></section>')
     faq_schema = json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":anv}} for q, anv in faqs]}, indent=1)
 
+    # ── Team cross-links (internal linking: every agent page links to the others,
+    #    so no agent profile is an orphan reachable only from the /agents/ hub) ──
+    team_cards = "\n".join(
+        f' <a href="/agents/{o["slug"]}/" class="city-card">{esc(o["name"])} <span class="arrow">&rsaquo;</span></a>'
+        for o in AGENTS if o.get("slug") and o.get("slug") != a.get("slug"))
+    team_html = (
+        '\n <section class="section sect-alt" id="our-team">\n <div class="container">\n'
+        ' <h2>Meet the Rest of Our Team</h2>\n'
+        ' <p>Your Realty Link is a full team of experienced Central Indiana agents &mdash; explore more of the team:</p>\n'
+        f' <div class="city-grid">\n{team_cards}\n </div>\n'
+        ' <p style="margin-top:16px;"><a href="/agents/">See the full Your Realty Link team &rarr;</a></p>\n'
+        ' </div>\n </section>')
+
     # ── Photo gallery / carousel (agent-uploaded closings, clients, events) ──
     def _gpair(g):
         if isinstance(g, dict): return ((g.get("url") or "").strip(), (g.get("caption") or "").strip())
@@ -573,6 +586,7 @@ def premium_agent_page(a):
  </div>
  </section>
 {faq_html}
+{team_html}
 
  <section class="section" id="work-with">
  <div class="container" style="max-width:820px;">
