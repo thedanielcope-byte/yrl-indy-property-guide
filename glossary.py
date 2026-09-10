@@ -32,7 +32,7 @@ CATS = ["Lending & Mortgage", "Offers & Contracts", "Inspections & Appraisal",
         "HOA & Community", "Roles & Working With Agents"]
 
 TERMS_BASE = [
- ("Adjustable-rate mortgage (ARM)", "Lending & Mortgage", "A mortgage whose interest rate changes periodically after an initial fixed period, causing your payment to rise or fall.", None),
+ ("Adjustable-rate mortgage (ARM)", "Lending & Mortgage", "A mortgage whose interest rate changes periodically after an initial fixed period, causing your payment to rise or fall.", "/glossary/adjustable-rate-mortgage/"),
  ("Amortization", "Lending & Mortgage", "The schedule by which loan payments are applied to interest and principal over time. Early payments are mostly interest; later ones mostly principal.", "/glossary/amortization/"),
  ("Appraisal", "Inspections & Appraisal", "An independent professional estimate of a property's market value, ordered by your lender to confirm the home supports the loan amount.", "/glossary/home-appraisal/"),
  ("Appraisal gap", "Inspections & Appraisal", "The difference between the contract price and a lower appraised value, which the buyer generally must cover in cash.", "/glossary/appraisal-gap/"),
@@ -41,7 +41,7 @@ TERMS_BASE = [
  ("Buyer's agency agreement", "Roles & Working With Agents", "A written agreement setting out what your agent will do and how they're paid. Buyers now sign one before touring homes.", "/glossary/buyers-agency-agreement/"),
  ("Closing", "Closing & Costs", "The final step, where documents are signed, funds are disbursed, and ownership transfers to the buyer.", "/glossary/closing-day/"),
  ("Closing costs", "Closing & Costs", "Fees and prepaid items due at closing — loan origination, title, recording, taxes and insurance. Commonly 2–5% of price for buyers.", "/services/closing-costs-buyers/"),
- ("Closing disclosure", "Closing & Costs", "A standardized form itemizing your final loan terms and closing costs, provided at least three business days before closing.", None),
+ ("Closing disclosure", "Closing & Costs", "A standardized form itemizing your final loan terms and closing costs, provided at least three business days before closing.", "/glossary/closing-disclosure/"),
  ("Comparables (comps)", "Listing & Market", "Recently sold homes similar in size, age, condition and location, used to estimate value.", "/glossary/comparative-market-analysis/"),
  ("Comparative market analysis (CMA)", "Listing & Market", "An agent's estimate of a home's value based on recent comparable sales, current competition, and market trends.", "/glossary/comparative-market-analysis/"),
  ("Contingency", "Offers & Contracts", "A condition that must be met for a sale to proceed. If unmet, the buyer can usually cancel and recover their earnest money.", "/glossary/contingency/"),
@@ -51,30 +51,30 @@ TERMS_BASE = [
  ("Deed", "Title & Legal", "The legal document transferring ownership of real property from one party to another.", "/glossary/deed/"),
  ("Down payment", "Lending & Mortgage", "The portion of the purchase price you pay upfront. Ranges from 0% on VA and USDA loans to 20%+ on conventional.", "/services/down-payment-assistance/"),
  ("Earnest money", "Offers & Contracts", "A good-faith deposit submitted with an offer, held in escrow and credited toward your costs at closing.", "/glossary/earnest-money/"),
- ("Easement", "Title & Legal", "A right allowing someone else to use part of your property for a specific purpose, such as utility access.", None),
+ ("Easement", "Title & Legal", "A right allowing someone else to use part of your property for a specific purpose, such as utility access.", "/glossary/easement/"),
  ("Equity", "Taxes & Ownership", "The difference between your home's market value and what you still owe on it.", "/glossary/home-equity/"),
  ("Escrow", "Closing & Costs", "A neutral third party holding money or documents until conditions are met. Also the lender account that pays your taxes and insurance.", "/glossary/escrow/"),
  ("FHA loan", "Lending & Mortgage", "A government-insured mortgage with lower credit thresholds and a low down payment, popular with first-time buyers.", "/services/fha-loan-buyers/"),
- ("Fixed-rate mortgage", "Lending & Mortgage", "A mortgage whose interest rate stays the same for the life of the loan.", None),
+ ("Fixed-rate mortgage", "Lending & Mortgage", "A mortgage whose interest rate stays the same for the life of the loan.", "/glossary/fixed-rate-mortgage/"),
  ("HOA (homeowners association)", "HOA & Community", "An organization governing a community, funded by dues, that maintains shared areas and enforces rules. Always review the documents and dues history.", "/glossary/hoa/"),
  ("Home inspection", "Inspections & Appraisal", "A professional evaluation of a home's condition and systems, typically performed during the inspection contingency period.", "/glossary/home-inspection/"),
  ("Homestead exemption", "Taxes & Ownership", "An Indiana property tax deduction available on your primary residence. File it after closing — it lowers your tax bill.", "/glossary/homestead-exemption/"),
- ("Lien", "Title & Legal", "A legal claim against a property for an unpaid debt. Liens must generally be cleared before ownership transfers.", None),
- ("Loan estimate", "Lending & Mortgage", "A standardized form showing your estimated loan terms and closing costs, provided shortly after you apply.", None),
- ("MIBOR", "Listing & Market", "The Metropolitan Indianapolis Board of Realtors, which operates the MLS covering Central Indiana.", None),
- ("MLS", "Listing & Market", "The Multiple Listing Service — the database where brokers share active listings and sale data.", None),
+ ("Lien", "Title & Legal", "A legal claim against a property for an unpaid debt. Liens must generally be cleared before ownership transfers.", "/glossary/lien/"),
+ ("Loan estimate", "Lending & Mortgage", "A standardized form showing your estimated loan terms and closing costs, provided shortly after you apply.", "/glossary/loan-estimate/"),
+ ("MIBOR", "Listing & Market", "The Metropolitan Indianapolis Board of Realtors, which operates the MLS covering Central Indiana.", "/glossary/mibor/"),
+ ("MLS", "Listing & Market", "The Multiple Listing Service — the database where brokers share active listings and sale data.", "/glossary/mls/"),
  ("Pending", "Listing & Market", "A listing status meaning contingencies are cleared and the sale is moving toward closing.", "/glossary/contingent-vs-pending/"),
  ("PMI (private mortgage insurance)", "Lending & Mortgage", "Insurance protecting the lender when a conventional borrower puts less than 20% down. Removable once you build enough equity.", "/glossary/private-mortgage-insurance/"),
  ("Pre-approval", "Lending & Mortgage", "A lender's conditional commitment based on verified income, assets and credit. Stronger than a pre-qualification.", "/glossary/pre-approval-vs-pre-qualification/"),
  ("Pre-qualification", "Lending & Mortgage", "An informal estimate of what you might borrow, based on unverified information.", "/glossary/pre-approval-vs-pre-qualification/"),
- ("Principal", "Lending & Mortgage", "The amount you borrowed, separate from interest.", None),
+ ("Principal", "Lending & Mortgage", "The amount you borrowed, separate from interest.", "/glossary/principal/"),
  ("Property tax caps", "Taxes & Ownership", "Indiana constitutional limits on property tax as a share of assessed value, which vary by property type.", "/glossary/property-tax-caps/"),
  ("Seller's disclosure", "Title & Legal", "An Indiana-required form on which sellers report known defects. It reflects knowledge, not condition — never a substitute for inspection.", "/glossary/sellers-disclosure/"),
  ("Short sale", "Listing & Market", "A sale for less than the mortgage balance, requiring lender approval.", "/services/short-sale/"),
- ("Survey", "Title & Legal", "A drawing showing a property's legal boundaries, structures and easements.", None),
+ ("Survey", "Title & Legal", "A drawing showing a property's legal boundaries, structures and easements.", "/glossary/survey/"),
  ("Title", "Title & Legal", "Legal ownership of a property, and the history of that ownership.", "/glossary/title-insurance/"),
  ("Title insurance", "Title & Legal", "A one-time policy protecting against ownership problems that predate your purchase, such as liens or recording errors.", "/glossary/title-insurance/"),
- ("Underwriting", "Lending & Mortgage", "The lender's final review of your finances and the property before issuing loan approval.", None),
+ ("Underwriting", "Lending & Mortgage", "The lender's final review of your finances and the property before issuing loan approval.", "/glossary/underwriting/"),
  ("USDA loan", "Lending & Mortgage", "A zero-down loan for eligible rural areas — which covers more of Central Indiana than most buyers expect.", "/services/usda-loans/"),
  ("VA loan", "Lending & Mortgage", "A loan for eligible veterans and service members, typically with no down payment and no mortgage insurance.", "/services/va-loan-buyers/"),
  ("Walk-through", "Closing & Costs", "A final inspection shortly before closing to confirm the home's condition and that agreed repairs were made.", "/glossary/final-walk-through/"),
@@ -109,8 +109,9 @@ for t in NEW_TERMS:
     if not term or norm(term) in seen:
         continue
     seen.add(norm(term))
+    lnk = f"/glossary/{t['slug']}/" if t.get("slug") else None
     ALL.append({"term": term, "cat": html.unescape(str(t.get("cat", "Listing & Market"))),
-                "def": html.unescape(str(t.get("def", ""))), "link": None})
+                "def": html.unescape(str(t.get("def", ""))), "link": lnk})
 
 ALL.sort(key=lambda x: x["term"].lower())
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
