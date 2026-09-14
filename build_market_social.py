@@ -11,40 +11,41 @@ import os, base64, subprocess, shutil, html as H
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-SCRATCH = "/private/tmp/claude-501/-Users-danielcope-Library-Mobile-Documents-com-apple-CloudDocs-Claude-YRL/26f905d9-f2dc-48a5-9205-1e23c0b750ad/scratchpad"
-PERIOD = "2026-07"
-MONTH = "July 2026"
+SCRATCH = __import__("tempfile").mkdtemp(prefix="ms_")
+PERIOD = "2026-08"
+MONTH = "August 2026"
+MON = MONTH.split()[0]
 OUTDIR = os.path.join(ROOT, "assets/img/market-reports", PERIOD)
 
 # region slug -> (display label, median$, median YoY%, closed sales, sales YoY%,
 #                 median days on market, prior-year DOM, months supply)
 DATA = {
- "central-indiana": ("Central Indiana · 17 Counties", 330000, 1.5, 3053, 6.1, "20", "16", 2.2),
- "bartholomew-county": ("Bartholomew County, IN", 297000, 18.8, 96, -4.0, "16.5", "8.5", 2.2),
- "boone-county":       ("Boone County, IN", 418000, -9.0, 137, 19.1, "27", "16", 1.6),
- "brown-county":       ("Brown County, IN", 330000, -34.3, 26, 18.2, "15", "39.5", 2.9),
- "decatur-county":     ("Decatur County, IN", 200000, -9.7, 25, 25.0, "34", "32", 2.6),
- "hamilton-county":    ("Hamilton County, IN", 489990, 1.4, 601, 4.3, "12", "13", 1.5),
- "hancock-county":     ("Hancock County, IN", 335000, -5.2, 160, 5.3, "32", "17", 2.3),
- "hendricks-county":   ("Hendricks County, IN", 363000, -0.6, 211, -16.3, "15", "22", 2.3),
- "jackson-county":     ("Jackson County, IN", 238450, 14.1, 42, 20.0, "18", "13", 2.5),
- "jennings-county":    ("Jennings County, IN", 200000, 1.5, 31, 6.9, "31", "18.5", 1.4),
- "johnson-county":     ("Johnson County, IN", 339900, 0.0, 268, 21.3, "26", "23", 2.0),
- "madison-county":     ("Madison County, IN", 236500, 12.7, 164, 5.8, "28", "15.5", 2.7),
- "marion-county":      ("Marion County · Indianapolis", 270000, 1.9, 1051, 9.6, "21", "16", 2.7),
- "montgomery-county":  ("Montgomery County, IN", 239950, 3.2, 50, -5.7, "10.5", "10.5", 1.7),
- "morgan-county":      ("Morgan County, IN", 318450, -2.0, 100, -1.0, "19.5", "24", 1.8),
- "parke-county":       ("Parke County, IN", 165000, -35.0, 9, 50.0, "36", "31", 4.1),
- "putnam-county":      ("Putnam County, IN", 307500, 17.1, 36, -10.0, "25.5", "35", 2.7),
- "shelby-county":      ("Shelby County, IN", 246000, -1.6, 46, 12.2, "29", "16.5", 2.6),
+ "central-indiana": ("Central Indiana · 17 Counties", 327250, 2.6, 2738, -5.2, "23", "17", 2.5),
+ "bartholomew-county": ("Bartholomew County, IN", 300000, 5.3, 95, -4.0, "26", "22.5", 2.4),
+ "boone-county":       ("Boone County, IN", 455000, 8.3, 119, -2.5, "17", "16", 1.9),
+ "brown-county":       ("Brown County, IN", 420000, -17.2, 23, 4.6, "25.5", "40", 3.6),
+ "decatur-county":     ("Decatur County, IN", 240000, 16.5, 23, -11.5, "24", "30", 2.8),
+ "hamilton-county":    ("Hamilton County, IN", 485625, 6.0, 536, -3.6, "14.5", "14", 1.7),
+ "hancock-county":     ("Hancock County, IN", 355000, -1.7, 154, 4.8, "25.5", "21", 2.5),
+ "hendricks-county":   ("Hendricks County, IN", 355500, -3.9, 210, -23.6, "20.5", "17", 2.5),
+ "jackson-county":     ("Jackson County, IN", 240000, -14.3, 42, 16.7, "14", "37", 2.8),
+ "jennings-county":    ("Jennings County, IN", 231200, 15.6, 18, 0.0, "37", "7", 1.9),
+ "johnson-county":     ("Johnson County, IN", 335000, -5.5, 217, -3.1, "20", "14", 2.4),
+ "madison-county":     ("Madison County, IN", 205000, 10.1, 144, 1.4, "44", "11.5", 2.9),
+ "marion-county":      ("Marion County · Indianapolis", 262200, 2.0, 926, -4.0, "26", "19", 3.1),
+ "montgomery-county":  ("Montgomery County, IN", 215950, -9.3, 46, -8.0, "18.5", "14", 1.8),
+ "morgan-county":      ("Morgan County, IN", 309359, -1.8, 91, -11.7, "16", "20", 1.9),
+ "parke-county":       ("Parke County, IN", 175000, -23.3, 11, -8.3, "57", "11", 4.9),
+ "putnam-county":      ("Putnam County, IN", 333750, 29.6, 40, -9.1, "21.5", "21", 2.7),
+ "shelby-county":      ("Shelby County, IN", 269412, 1.2, 43, -6.5, "24", "26", 2.9),
 }
 
 def money(n):  return "${:,}".format(n)
 def pct(v):    return ("%.1f" % abs(v)).rstrip("0").rstrip(".")
 def price_sub(yoy):
-    if yoy > 0.5:  return "Up %s%% from last July" % pct(yoy)
-    if yoy < -0.5: return "Down %s%% from last July" % pct(yoy)
-    return "About flat vs. last July"
+    if yoy > 0.5:  return "Up %s%% from last %s" % (pct(yoy), MON)
+    if yoy < -0.5: return "Down %s%% from last %s" % (pct(yoy), MON)
+    return "About flat vs. last %s" % MON
 def sales_sub(yoy):
     if yoy > 0.5:  return "Up %s%% year-over-year" % pct(yoy)
     if yoy < -0.5: return "Down %s%% year-over-year" % pct(yoy)
@@ -100,7 +101,7 @@ TPL = """<meta charset="utf-8">
  <div class="src">Single-family homes · Source: MIBOR REALTOR&reg; Association</div>
  <div class="grid">
   <div class="tile"><div class="lab">Median sale price</div><div class="body"><div class="val red">{median}</div><div class="sub">{median_sub}</div></div></div>
-  <div class="tile"><div class="lab">Homes sold in July</div><div class="body"><div class="val">{sales}</div><div class="sub">{sales_sub}</div></div></div>
+  <div class="tile"><div class="lab">Homes sold in {mon}</div><div class="body"><div class="val">{sales}</div><div class="sub">{sales_sub}</div></div></div>
   <div class="tile"><div class="lab">Median days on market</div><div class="body"><div class="val">{dom} days</div><div class="sub">{dom_sub}</div></div></div>
   <div class="tile"><div class="lab">Months of supply</div><div class="body"><div class="val red">{months}</div><div class="sub">{months_sub}</div></div></div>
  </div>
@@ -146,7 +147,7 @@ BANNER = """<meta charset="utf-8">
  </div>
  <div class="R">
   <div class="t"><div class="lab">Median sale price</div><div class="bd"><div class="val red">{median}</div><div class="sub">{median_sub}</div></div></div>
-  <div class="t"><div class="lab">Homes sold in July</div><div class="bd"><div class="val">{sales}</div><div class="sub">{sales_sub}</div></div></div>
+  <div class="t"><div class="lab">Homes sold in {mon}</div><div class="bd"><div class="val">{sales}</div><div class="sub">{sales_sub}</div></div></div>
   <div class="t"><div class="lab">Median days on market</div><div class="bd"><div class="val">{dom} days</div><div class="sub">{dom_sub}</div></div></div>
   <div class="t"><div class="lab">Months of supply</div><div class="bd"><div class="val red">{months}</div><div class="sub">{months_sub}</div></div></div>
  </div>
@@ -200,7 +201,7 @@ os.makedirs(PDFDIR, exist_ok=True)
 ok = 0
 for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DATA.items():
     html = TPL.format(
-        logo=LOGO, month=MONTH, label=H.escape(label),
+        logo=LOGO, month=MONTH, mon=MON, label=H.escape(label),
         median=money(med), median_sub=price_sub(med_yoy),
         sales="{:,}".format(sales), sales_sub=sales_sub(sales_yoy),
         dom=dom, dom_sub=dom_sub(dom, dom_prior),
@@ -214,7 +215,7 @@ for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DAT
                    capture_output=True)
     # wide banner (Facebook cover / blog hero)
     bhtml = BANNER.format(
-        logo=LOGO, month=MONTH, label=H.escape(label),
+        logo=LOGO, month=MONTH, mon=MON, label=H.escape(label),
         median=money(med), median_sub=price_sub(med_yoy),
         sales="{:,}".format(sales), sales_sub=sales_sub(sales_yoy),
         dom=dom, dom_sub=dom_sub(dom, dom_prior),
