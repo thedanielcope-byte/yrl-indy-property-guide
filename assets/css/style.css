@@ -427,6 +427,9 @@ p  { margin-bottom: 1rem; }
 .cta-block .btn-group, .cta-block .cta-buttons, .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .cta-block .btn-outline { color: var(--white); border: 2px solid var(--white); }
 .cta-block .btn-outline:hover { background: var(--white); color: var(--red); border-color: var(--white); }
+/* Safety net: any plain (non-button) link inside a red CTA block must stay legible on the red ground */
+.cta-block:not(.cta-light):not(.cta-block-light) a:not(.btn) { color: var(--white); text-decoration: underline; }
+.cta-block:not(.cta-light):not(.cta-block-light) a:not(.btn):hover { color: var(--white); }
 
 .cta-block.cta-light,
 .cta-block-light {
