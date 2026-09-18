@@ -180,7 +180,17 @@
   "website": "https://www.yourrealtylink.com",
   "photo": "/assets/img/agents/sadie-darlage.jpg",
   "slug": "sadie-darlage",
-  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562664740_sadie-darlage-brick.jpg"
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562664740_sadie-darlage-brick.jpg",
+  "expertise": [
+   "Seller Representation",
+   "First-Time Buyers"
+  ],
+  "areas": [
+   [
+    "Fairland",
+    "/cities/shelby-county/fairland-indiana-real-estate/"
+   ]
+  ]
  },
  {
   "name": "Tami & Todd Scroggins",
