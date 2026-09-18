@@ -30,6 +30,7 @@ jobs:
           python3 build_local_posts.py
           python3 build_market_hub.py
           python3 build_home_recent_posts.py
+          python3 inject_gtag.py   # re-add GA4 tag to newly generated pages
 
       - name: Commit & push if anything changed
         run: |

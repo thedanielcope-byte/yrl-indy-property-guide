@@ -31,7 +31,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build published blog posts
-        run: python3 build-blog.py
+        run: |
+          python3 build-blog.py
+          python3 inject_gtag.py   # re-add GA4 tag to newly generated blog pages
 
       - name: Commit & push if anything changed
         run: |
