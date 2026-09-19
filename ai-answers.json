@@ -136,5 +136,231 @@
         "value": "Lawrence and the northeast side, Beech Grove, Greenwood and southern Johnson County, and near-east/south areas like Irvington and Fountain Square"
       }
     ]
+  },
+  {
+    "page": "blog/pre-approval-vs-pre-qualification-indianapolis/",
+    "question": "What is the difference between mortgage pre-approval and pre-qualification for Indianapolis home buyers?",
+    "answer": "Pre-qualification is a quick, informal estimate based on the income, debts, and assets you report yourself, while <strong>pre-approval</strong> is a lender's <strong>verified written commitment</strong> to lend up to a specific amount after checking your documents and credit. In competitive Central Indiana markets, sellers expect a <strong>pre-approval letter</strong>, so a verified pre-approval signals a low-risk buyer and helps your offer get read.",
+    "facts": [
+      {
+        "label": "Pre-qualification",
+        "value": "A quick, informal estimate from the income, debts, and assets you report; often done online in minutes and usually not verified"
+      },
+      {
+        "label": "Pre-approval",
+        "value": "The lender verifies your documents, checks your credit, and issues a written commitment to lend up to a specific amount, subject to the property and final underwriting"
+      },
+      {
+        "label": "Documents needed",
+        "value": "Proof of income, bank and asset statements, ID and Social Security number, employment verification, and debt details"
+      },
+      {
+        "label": "Why it matters",
+        "value": "In competitive Central Indiana markets sellers expect a pre-approval letter, and a verified pre-approval signals a low-risk buyer whose offer is more likely to get read"
+      }
+    ]
+  },
+  {
+    "page": "blog/cma-vs-zestimate-indianapolis/",
+    "question": "Should I price my Indianapolis home from a CMA or a Zestimate?",
+    "answer": "For pricing an Indianapolis home, use a <strong>comparative market analysis (CMA)</strong>, not a Zestimate. A CMA is your agent's analysis of genuinely comparable recent sold homes, adjusted for your property's condition and updates. Automated estimates like the <strong>Zestimate</strong> rely on incomplete public records and can miss by <strong>tens of thousands of dollars</strong> in a varied market. Treat the Zestimate as a starting point only.",
+    "facts": [
+      {
+        "label": "CMA cost",
+        "value": "Free with no obligation at Your Realty Link"
+      },
+      {
+        "label": "What a CMA uses",
+        "value": "Recent sold comparable homes, adjusted for your home's condition and updates"
+      },
+      {
+        "label": "Zestimate accuracy",
+        "value": "Can be off by tens of thousands of dollars in a varied market like Indianapolis"
+      }
+    ]
+  },
+  {
+    "page": "blog/what-hurts-a-home-appraisal-in-indiana/",
+    "question": "What hurts a home appraisal in Indiana?",
+    "answer": "A home appraisal in Indiana is hurt mostly by <strong>weak or misleading comps</strong>, <strong>deferred maintenance</strong> like a worn roof or aging HVAC, dated condition versus updated nearby sales, over-improvement for the neighborhood, unpermitted work, and a rising market moving faster than recent closed-sale data. Most low appraisals trace back to this short list, and several causes are within a seller's control.",
+    "facts": [
+      {
+        "label": "Appraisal ordered by",
+        "value": "The buyer's lender, to protect against over-lending on the collateral"
+      },
+      {
+        "label": "Carries the most weight",
+        "value": "Kitchen and bathroom condition versus updated comps"
+      },
+      {
+        "label": "If it comes in low",
+        "value": "Buyer adds cash, seller lowers price, both meet in the middle, or the agent files a reconsideration of value"
+      }
+    ]
+  },
+  {
+    "page": "blog/what-is-a-short-sale-in-indiana/",
+    "question": "What is a short sale in Indiana?",
+    "answer": "A <strong>short sale</strong> in Indiana is when a homeowner sells their home for less than the outstanding mortgage balance, and the <strong>lender agrees</strong> to accept that lower amount as full or partial satisfaction of the debt. The lender must approve it, typically requiring the seller to demonstrate genuine <strong>financial hardship</strong> and show the price reflects fair market value.",
+    "facts": [
+      {
+        "label": "Lender approval required",
+        "value": "The mortgage is a lien, so the lender must consent before title can transfer to a buyer"
+      },
+      {
+        "label": "Qualifying condition",
+        "value": "Approval typically depends on documented financial hardship and a price at fair market value"
+      },
+      {
+        "label": "Typical timeline",
+        "value": "Two to three months on the fast end to six months or longer for complex situations"
+      },
+      {
+        "label": "vs. foreclosure",
+        "value": "Usually less severe credit damage, shorter waiting periods to buy again, and more seller control"
+      }
+    ]
+  },
+  {
+    "page": "blog/how-the-buyer-compensation-agreement-works-in-indiana/",
+    "question": "How does the buyer compensation agreement work in Indiana?",
+    "answer": "In Indiana, agents must have a signed <strong>buyer representation agreement</strong> before showing any property, a rule stemming from the <strong>2024 NAR settlement</strong> and effective August 2024. It sets your agent's compensation and how it's paid. Sellers can still choose to offer to cover it, often handled at <strong>closing</strong>, but if they won't, your agreement may require you to pay the difference.",
+    "facts": [
+      {
+        "label": "What changed",
+        "value": "The 2024 NAR settlement means buyer-agent compensation can no longer be advertised through the MIBOR MLS"
+      },
+      {
+        "label": "What you sign",
+        "value": "A written buyer representation agreement before any showing — a requirement effective August 2024"
+      },
+      {
+        "label": "The agreement covers",
+        "value": "Duration, geographic scope, the agent's compensation amount, and how it's sourced"
+      },
+      {
+        "label": "Who pays",
+        "value": "Sellers can still offer to cover it, typically paid at closing from sale proceeds; if they won't, the buyer may owe the difference"
+      }
+    ]
+  },
+  {
+    "page": "blog/indiana-homestead-exemption-lower-property-taxes/",
+    "question": "What does the Indiana homestead exemption do and how does it lower my property taxes?",
+    "answer": "The <strong>Indiana homestead exemption</strong> (homestead deduction) reduces the taxable assessed value of your primary residence and qualifies it for the state's lowest <strong>property tax cap</strong>. It applies only to a home you own and occupy as your main residence, and you can claim it on just one property. You file once with your <strong>county auditor</strong>, and the deduction carries over year to year.",
+    "facts": [
+      {
+        "label": "Who qualifies",
+        "value": "Property you own (or buy under a recorded contract) and occupy as your primary residence — one home only, not a rental, vacation, or investment property"
+      },
+      {
+        "label": "Bigger benefit",
+        "value": "A qualifying homestead gets the lowest property tax cap tier under Indiana's constitutional caps (the \"circuit breaker\"); non-homestead property is capped higher"
+      },
+      {
+        "label": "How to file",
+        "value": "File with the county auditor where the home is located (online or paper); often submitted by the title company at closing — always confirm it went through, and file by the state's cutoff"
+      },
+      {
+        "label": "Deduction amounts",
+        "value": "Set by state law and adjusted in recent years — confirm current figures with your county auditor or the Indiana DLGF rather than an old number"
+      }
+    ]
+  },
+  {
+    "page": "blog/rent-vs-buy-in-indianapolis-2026-comparison/",
+    "question": "Should you rent or buy in Indianapolis in 2026?",
+    "answer": "For most people settled in Central Indiana with stable income and reasonable credit who plan to stay at least <strong>three to five years</strong>, buying usually beats renting because a monthly mortgage payment is often comparable to rent while <strong>building equity</strong> and unlocking <strong>tax benefits</strong> renters can't touch. Renting still makes more sense for short-term, uncertain, or credit-building situations.",
+    "facts": [
+      {
+        "label": "Break-even timeline in Indianapolis",
+        "value": "typically 3 to 5 years"
+      },
+      {
+        "label": "Two-bedroom apartment rent",
+        "value": "low $1,000s to mid-$1,400s per month"
+      },
+      {
+        "label": "Mortgage payment on a mid-$200s home (PITI)",
+        "value": "about $1,400 to $1,700 per month"
+      },
+      {
+        "label": "Capital gains exclusion when you sell",
+        "value": "up to $250,000 single / $500,000 married filing jointly"
+      }
+    ]
+  },
+  {
+    "page": "blog/how-long-does-it-take-to-sell-a-house-in-indianapolis/",
+    "question": "How long does it take to sell a house in Indianapolis?",
+    "answer": "A typical Indianapolis home sale takes roughly <strong>two to three months</strong> from start to finish. It breaks into three phases: <strong>1 to 4 weeks</strong> of pre-listing prep, days to weeks on the market (two to six weeks in a balanced market), and <strong>30 to 45 days</strong> from accepted offer to closing. Cash deals can close in as little as two weeks.",
+    "facts": [
+      {
+        "label": "Total timeline",
+        "value": "Roughly two to three months from start to finish"
+      },
+      {
+        "label": "Pre-listing preparation",
+        "value": "1 to 4 weeks"
+      },
+      {
+        "label": "Active on market",
+        "value": "Two to six weeks in a balanced market; offers within the first week in a strong market"
+      },
+      {
+        "label": "Under contract to closing",
+        "value": "30 to 45 days (conventional/FHA); cash deals as little as two weeks"
+      }
+    ]
+  },
+  {
+    "page": "blog/what-is-a-retirement-mortgage-indianapolis/",
+    "question": "What is a retirement mortgage?",
+    "answer": "A retirement mortgage is not one specific product but an <strong>umbrella term</strong> for financing options built around retirement income and home equity. Some let you qualify using Social Security, pensions, annuities, or asset depletion; others, like <strong>reverse mortgages (HECMs)</strong>, let homeowners 62 and older tap equity with no required monthly payment. A <strong>HECM for Purchase</strong> even finances buying your next home.",
+    "facts": [
+      {
+        "label": "Reverse mortgage (HECM) age",
+        "value": "Homeowners 62 and older"
+      },
+      {
+        "label": "Reverse mortgage payments",
+        "value": "No required monthly mortgage payment"
+      },
+      {
+        "label": "Required before a reverse mortgage",
+        "value": "HUD requires independent counseling"
+      },
+      {
+        "label": "HECM for Purchase down payment",
+        "value": "Often roughly half the price, from selling your current home"
+      }
+    ]
+  },
+  {
+    "page": "blog/property-survey-types-buying-home-indianapolis/",
+    "question": "What kind of property survey do you need when buying a home in Indiana?",
+    "answer": "In Indiana, a property survey is typically <strong>optional for buyers</strong>, so the type you need depends on the property and your plans. Buyers usually choose between a <strong>staked (boundary) survey</strong>, which physically marks the corners and costs more, and a lower-cost <strong>survey location report</strong>. Choose the detailed staked survey for large, irregular, or rural lots, or if you plan to build a fence or addition.",
+    "facts": [
+      {
+        "label": "Requirement",
+        "value": "Typically optional for the buyer in Indiana, not legally required, though some lenders or title companies may request one"
+      },
+      {
+        "label": "Two common options",
+        "value": "A staked (boundary) survey or a survey location report"
+      },
+      {
+        "label": "Staked (boundary) survey",
+        "value": "A surveyor physically measures the property and places stakes at the corners; more thorough and more expensive"
+      },
+      {
+        "label": "Survey location report",
+        "value": "Lower cost; shows the general location of improvements, referenced in many Indiana purchase agreements, but does not stake corners as precisely"
+      },
+      {
+        "label": "When a staked survey is worth it",
+        "value": "Building a fence or addition, large or irregular lots, boundary questions, or rural and acreage properties"
+      }
+    ]
   }
 ]
