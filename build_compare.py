@@ -9,9 +9,11 @@ invented. Header/footer/fonts are grabbed from index.html so the nav stays in sy
 
     python3 build_compare.py
 """
-import os, re, html, json
+import os, re, html, json, datetime
 import importlib.util
 import idx_config as idx
+
+UPDATED = datetime.date.today().strftime("%B %Y")   # freshness stamp, auto-current on rebuild
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 spec = importlib.util.spec_from_file_location("cg", os.path.join(ROOT, "city_guides_data.py"))
@@ -124,8 +126,8 @@ def page(a, b):
     an, bn = A["name"], B["name"]
     slug = "%s-vs-%s" % (a, b)
     url = "https://yourrealtylink.com/compare/%s/" % slug
-    title = "%s vs %s: Which Indiana Suburb? | Your Realty Link" % (an, bn)
-    meta = ("%s vs %s, Indiana: compare home prices, schools, commute, and lifestyle side by side to decide which suburb fits you best." % (an, bn))
+    title = "%s vs. %s, Indiana: Which Suburb Is Better? | Your Realty Link" % (an, bn)
+    meta = ("%s vs. %s, Indiana — which suburb is better? Compare prices, schools, commute, and lifestyle side by side before you buy." % (an, bn))
     same_county = county_short(A["county"]) == county_short(B["county"])
     pr = pricier(a, b)
     # price sentence
@@ -194,6 +196,10 @@ def page(a, b):
  <meta property="og:url" content="{url}">
  <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="article">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="{esc(title)}">
+ <meta name="twitter:description" content="{esc(meta)}">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{url}", "speakable": {{ "@type": "SpeakableSpecification", "cssSelector": [".qa-lead", ".qa-facts"] }} }},
@@ -217,13 +223,13 @@ def page(a, b):
 
 <section class="page-hero">
  <div class="container">
- <h1>{esc(an)} vs {esc(bn)}: <em>Which Suburb Is Right for You?</em></h1>
+ <h1>{esc(an)} vs. {esc(bn)}: <em>Which Is Better for You?</em></h1>
  <p class="hero-sub">Two Central Indiana suburbs, side by side — prices, schools, commute, and lifestyle compared honestly by a local MIBOR brokerage.</p>
  <div class="hero-badges">
  <span class="hero-badge">{county_badge}</span>
  <span class="hero-badge">🏡 Prices compared</span>
  <span class="hero-badge">🏫 Schools compared</span>
- </div><p class="hero-reviewed">✔ Reviewed by <a href="/agents/janet-giles/">Janet Giles-Schultz</a>, Principal Broker · MIBOR member · Updated August 2026</p>
+ </div><p class="hero-reviewed">✔ Reviewed by <a href="/agents/janet-giles/">Janet Giles-Schultz</a>, Principal Broker · MIBOR member · Updated {UPDATED}</p>
  </div>
 </section>
 
