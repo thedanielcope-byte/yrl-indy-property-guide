@@ -3,6 +3,35 @@
 
   var VALUATION_API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/property-valuation';
 
+  // ── Bot/spam guard (honeypot + interaction trap; zero friction for real users) ──
+  var HP_NAME = 'contact_time_pref';
+  var MIN_MS = 1500;
+  function armForm(form) {
+    if (form.__armed) return;
+    form.__armed = true;
+    form.__loadedAt = Date.now();
+    form.__interacted = false;
+    var hp = document.createElement('input');
+    hp.type = 'text'; hp.name = HP_NAME; hp.tabIndex = -1;
+    hp.setAttribute('autocomplete', 'off'); hp.setAttribute('aria-hidden', 'true');
+    hp.style.cssText = 'position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden;opacity:0;';
+    form.appendChild(hp);
+    form.addEventListener('focusin', function () { form.__interacted = true; }, true);
+    form.addEventListener('input', function () { form.__interacted = true; }, true);
+  }
+  function armAll() {
+    var fs = document.querySelectorAll('form.ipg-valuation-form');
+    for (var i = 0; i < fs.length; i++) armForm(fs[i]);
+  }
+  if (document.readyState !== 'loading') armAll();
+  else document.addEventListener('DOMContentLoaded', armAll);
+  function isBot(form) {
+    var hpEl = form.querySelector('[name="' + HP_NAME + '"]');
+    return (hpEl && hpEl.value.trim() !== '') ||
+           (form.__loadedAt && Date.now() - form.__loadedAt < MIN_MS) ||
+           !form.__interacted;
+  }
+
   function fmt(n) {
     if (n == null) return 'N/A';
     return '$' + Math.round(n).toLocaleString('en-US');
@@ -17,6 +46,8 @@
     var form = e.target;
     if (!form.classList.contains('ipg-valuation-form')) return;
     e.preventDefault();
+    armForm(form);
+    if (isBot(form)) { return; } // silently drop bot submissions — nothing sent to CRM or API
 
     var btn = form.querySelector('button[type="submit"]');
     var originalText = btn.textContent;
@@ -26,7 +57,7 @@
     var data = {};
     var inputs = form.querySelectorAll('input, select, textarea');
     for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].name) data[inputs[i].name] = inputs[i].value;
+      if (inputs[i].name && inputs[i].name !== HP_NAME) data[inputs[i].name] = inputs[i].value;
     }
     data.source_url = window.location.href;
     data.submitted_at = new Date().toISOString();
