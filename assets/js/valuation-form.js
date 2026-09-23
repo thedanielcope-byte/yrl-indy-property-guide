@@ -3,9 +3,36 @@
 
   var VALUATION_API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/property-valuation';
 
-  // ── Bot/spam guard (honeypot + interaction trap; zero friction for real users) ──
+  // ── Bot/spam guard: Cloudflare Turnstile (verified server-side) + honeypot backstop ──
+  var TS_SITEKEY = '0x4AAAAAAFBn_J2vobl7Yrk7';
   var HP_NAME = 'contact_time_pref';
   var MIN_MS = 1500;
+  (function loadTurnstile() {
+    if (window.turnstile || document.getElementById('cf-ts-api')) return;
+    var s = document.createElement('script');
+    s.id = 'cf-ts-api';
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    s.async = true; s.defer = true;
+    (document.head || document.documentElement).appendChild(s);
+  })();
+  function renderWidget(form) {
+    if (form.__tsId != null || !window.turnstile) return;
+    var holder = document.createElement('div');
+    holder.className = 'cf-turnstile-holder';
+    holder.style.margin = '12px 0';
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) form.insertBefore(holder, btn); else form.appendChild(holder);
+    try { form.__tsId = window.turnstile.render(holder, { sitekey: TS_SITEKEY, action: 'valuation' }); }
+    catch (e) {}
+  }
+  var tsPoll = setInterval(function () {
+    if (window.turnstile) {
+      clearInterval(tsPoll);
+      var fs = document.querySelectorAll('form.ipg-valuation-form');
+      for (var i = 0; i < fs.length; i++) renderWidget(fs[i]);
+    }
+  }, 250);
+  setTimeout(function () { clearInterval(tsPoll); }, 20000);
   function armForm(form) {
     if (form.__armed) return;
     form.__armed = true;
@@ -18,6 +45,7 @@
     form.appendChild(hp);
     form.addEventListener('focusin', function () { form.__interacted = true; }, true);
     form.addEventListener('input', function () { form.__interacted = true; }, true);
+    renderWidget(form);
   }
   function armAll() {
     var fs = document.querySelectorAll('form.ipg-valuation-form');
@@ -68,6 +96,7 @@
     }
 
     // Capture the lead in the CRM in the background (don't wait for it)
+    var tsToken = (window.turnstile && form.__tsId != null) ? window.turnstile.getResponse(form.__tsId) : '';
     fetch(LEAD_CAPTURE, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -79,7 +108,8 @@
         message: 'Home valuation request: ' + (data.address || ''),
         source: data.source || 'home-valuation',
         tags: data.tags || 'valuation-lead',
-        source_page: data.source_page || 'home-valuation'
+        source_page: data.source_page || 'home-valuation',
+        'cf-turnstile-response': tsToken || ''
       })
     }).catch(function () {});
 
