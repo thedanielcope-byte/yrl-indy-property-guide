@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   Indy Property Guide — Lead Capture Forms
+   Your Realty Link — Lead Capture Forms
    Posts to the Nomad Systems CRM capture-lead endpoint (Supabase)
 
    Bot/spam guard, layered:
@@ -108,7 +108,7 @@
     data.source_url = window.location.href;
     data.submitted_at = new Date().toISOString();
     data.business = 'yrl';
-    data.source = data.source || 'indypropertyguide';
+    data.source = data.source || 'yourrealtylink.com';
     data.tags = data.tags || 'real-estate-lead';
 
     fetch(WEBHOOK_URL, {
