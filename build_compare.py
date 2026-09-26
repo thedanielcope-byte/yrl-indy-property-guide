@@ -165,13 +165,19 @@ def page(a, b):
        "%s is %s. %s is %s. The better pick depends on which corridor matches your daily drive." % (an, A["commute"], bn, B["commute"])),
       ("Is %s or %s better for my family?" % (an, bn),
        "It depends on your priorities. %s is best for buyers who %s, while %s is best for buyers who %s. Because they're both in the Indianapolis metro, we can tour homes in each on the same day." % (an, BEST_FOR.get(a,""), bn, BEST_FOR.get(b,""))),
+      ("Is %s or %s a better place to live?" % (an, bn),
+       "Neither is objectively better — it comes down to fit. %s suits people who %s, and %s suits people who %s. Weigh price, the school district, and your commute (all compared above), then tour both on a weekend, since they feel different in person." % (an, BEST_FOR.get(a,""), bn, BEST_FOR.get(b,""))),
+      ("Should I buy a home in %s or %s?" % (an, bn),
+       "Choose %s if you %s, or %s if you %s. %s Because both are in the Indianapolis metro, a Your Realty Link agent can show you homes in each on the same day so you can compare them directly." % (an, BEST_FOR.get(a,""), bn, BEST_FOR.get(b,""), price_lead)),
     ]
     faq_html = "\n".join('  <details class="faq-item">\n <summary>%s</summary>\n <div class="faq-answer">\n <p>%s</p>\n </div>\n </details>' % (esc(q), esc(a2)) for q, a2 in faqs)
     fs = faq_schema(faqs)
 
     # related compares — a stable mix of hand-authored + siblings
-    related_pool = ["carmel-vs-fishers","fishers-vs-noblesville","zionsville-vs-carmel","westfield-vs-fishers",
-                    "avon-vs-brownsburg","greenwood-vs-franklin","new-construction-vs-resale","realtor-vs-fsbo"]
+    # Front-loaded with the highest-impression pages so they gain topical inbound links
+    # (the [:6] slice shows the first six, minus self, on every generated compare page).
+    related_pool = ["zionsville-vs-whitestown","zionsville-vs-fishers","carmel-vs-fishers","greenwood-vs-franklin",
+                    "fishers-vs-noblesville","new-construction-vs-resale","zionsville-vs-carmel","realtor-vs-fsbo"]
     rel = [s for s in related_pool if s != slug][:6]
     rel_cards = "\n ".join('<a href="/compare/%s/" class="city-card">%s <span class="arrow">&rsaquo;</span></a>'
                            % (s, esc(s.replace("-vs-", " vs ").replace("-", " ").title().replace("Vs","vs").replace("Fsbo","FSBO"))) for s in rel)
