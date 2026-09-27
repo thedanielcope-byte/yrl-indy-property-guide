@@ -15,6 +15,35 @@
   var HP_NAME = 'contact_time_pref';
   var MIN_MS = 1500;
 
+  // ── Campaign attribution ──────────────────────────────────────────────
+  // Off-site campaigns (YouTube descriptions, GBP posts, press) tag their links
+  // with ?utm_source=…&utm_medium=…&utm_campaign=…  We stash that on first hit so
+  // it survives navigation, then send it as the lead's `source` instead of the
+  // generic 'yourrealtylink.com'. Only fields the capture-lead endpoint already
+  // accepts are used (source / tags) — no new field names.
+  var ATTR_KEY = 'yrl_attr';
+
+  (function captureAttribution() {
+    try {
+      var q = window.location.search;
+      if (q.indexOf('utm_source=') === -1) return;
+      var p = new URLSearchParams(q);
+      var src = (p.get('utm_source') || '').trim();
+      if (!src) return;
+      sessionStorage.setItem(ATTR_KEY, JSON.stringify({
+        source: src.slice(0, 40),
+        campaign: (p.get('utm_campaign') || '').trim().slice(0, 60)
+      }));
+    } catch (e) {}
+  })();
+
+  function getAttribution() {
+    try {
+      var raw = sessionStorage.getItem(ATTR_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
   // ── Load the Turnstile API (once) + render a widget in each lead form ──
   (function loadTurnstile() {
     if (window.turnstile || document.getElementById('cf-ts-api')) return;
@@ -108,8 +137,10 @@
     data.source_url = window.location.href;
     data.submitted_at = new Date().toISOString();
     data.business = 'yrl';
-    data.source = data.source || 'yourrealtylink.com';
+    var attr = getAttribution();
+    data.source = data.source || (attr && attr.source) || 'yourrealtylink.com';
     data.tags = data.tags || 'real-estate-lead';
+    if (attr && attr.campaign) data.tags += ',utm:' + attr.campaign;
 
     fetch(WEBHOOK_URL, {
       method: 'POST',

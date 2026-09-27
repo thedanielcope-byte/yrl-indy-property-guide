@@ -1,6 +1,32 @@
 (function () {
   var LEAD_CAPTURE = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead';
 
+  // ── Campaign attribution (mirrors lead-form.js) ───────────────────────
+  // ?utm_source=… on an inbound link (YouTube description, GBP post) is stashed
+  // for the visit and sent as the lead's `source`. Only existing fields are used.
+  var ATTR_KEY = 'yrl_attr';
+
+  (function captureAttribution() {
+    try {
+      var q = window.location.search;
+      if (q.indexOf('utm_source=') === -1) return;
+      var p = new URLSearchParams(q);
+      var src = (p.get('utm_source') || '').trim();
+      if (!src) return;
+      sessionStorage.setItem(ATTR_KEY, JSON.stringify({
+        source: src.slice(0, 40),
+        campaign: (p.get('utm_campaign') || '').trim().slice(0, 60)
+      }));
+    } catch (e) {}
+  })();
+
+  function getAttribution() {
+    try {
+      var raw = sessionStorage.getItem(ATTR_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
   var VALUATION_API = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/property-valuation';
 
   // ── Bot/spam guard: Cloudflare Turnstile (verified server-side) + honeypot backstop ──
@@ -97,6 +123,7 @@
 
     // Capture the lead in the CRM in the background (don't wait for it)
     var tsToken = (window.turnstile && form.__tsId != null) ? window.turnstile.getResponse(form.__tsId) : '';
+    var vAttr = getAttribution();
     fetch(LEAD_CAPTURE, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -106,8 +133,8 @@
         email: data.email,
         phone: data.phone,
         message: 'Home valuation request: ' + (data.address || ''),
-        source: data.source || 'home-valuation',
-        tags: data.tags || 'valuation-lead',
+        source: data.source || (vAttr && vAttr.source) || 'home-valuation',
+        tags: (data.tags || 'valuation-lead') + (vAttr && vAttr.campaign ? ',utm:' + vAttr.campaign : ''),
         source_page: data.source_page || 'home-valuation',
         'cf-turnstile-response': tsToken || ''
       })
