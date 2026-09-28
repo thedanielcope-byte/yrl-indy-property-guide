@@ -95,7 +95,7 @@ def pdf_html(city_key, kind):
 <div class="sec cta"><h2>Ready to Buy in {esc(n)}?</h2>
 <p>Your Realty Link is a full-service, MIBOR-member brokerage led by Principal Broker Janet Giles-Schultz. We help buyers across {esc(n)} and all of Central Indiana find the right home and negotiate the right deal.</p>
 <p class="big">Call or text Daniel Cope: <strong>317-201-6323</strong></p>
-<p>Search every active {esc(n)} listing at <strong>yourrealtylink.com</strong> · Questions? info@yourrealtylink.com</p></div>
+<p>Search every active {esc(n)} listing at <strong>yourrealtylink.com</strong> · Questions? indy@yourrealtylink.com</p></div>
 """
     else:
         body = f"""
@@ -119,7 +119,7 @@ def pdf_html(city_key, kind):
 <div class="sec cta"><h2>Thinking About Selling in {esc(n)}?</h2>
 <p>Start with a free, no-obligation home valuation from Your Realty Link — a MIBOR-member brokerage led by Principal Broker Janet Giles-Schultz. We'll give you an honest, data-backed number and a plan to get your {esc(n)} home sold.</p>
 <p class="big">Call or text Daniel Cope: <strong>317-201-6323</strong></p>
-<p>Get your free valuation at <strong>yourrealtylink.com</strong> · info@yourrealtylink.com</p></div>
+<p>Get your free valuation at <strong>yourrealtylink.com</strong> · indy@yourrealtylink.com</p></div>
 """
 
     _mb = city_map_b64(city_key)

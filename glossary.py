@@ -210,7 +210,7 @@ def index_page():
  {{
  "@type": ["LocalBusiness", "RealEstateAgent"],
  "name": "Your Realty Link", "url": "https://yourrealtylink.com",
- "telephone": "317-997-7404", "email": "info@yourrealtylink.com",
+ "telephone": "317-997-7404", "email": "indy@yourrealtylink.com",
  "address": {{ "@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US" }},
  "areaServed": {{ "@type": "City", "name": "Indianapolis", "containedIn": "Marion County, Indiana" }},
  "sameAs": ["https://www.facebook.com/yourrealtylink", "https://www.linkedin.com/company/your-realty-link-llc/"]
@@ -355,7 +355,7 @@ def full_page(p):
  {{
  "@type": ["LocalBusiness", "RealEstateAgent"],
  "name": "Your Realty Link", "url": "https://yourrealtylink.com", "logo": "/assets/img/yrl-logo.png",
- "telephone": "317-997-7404", "email": "info@yourrealtylink.com",
+ "telephone": "317-997-7404", "email": "indy@yourrealtylink.com",
  "address": {{ "@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US" }},
  "areaServed": {{ "@type": "City", "name": "Indianapolis", "containedIn": "Marion County, Indiana" }},
  "sameAs": ["https://www.facebook.com/yourrealtylink", "https://www.linkedin.com/company/your-realty-link-llc/"]

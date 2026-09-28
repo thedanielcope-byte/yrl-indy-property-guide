@@ -70,7 +70,7 @@ def author_box(name):
             f' <p class="author-title">Your Realty Link &mdash; Central Indiana Real Estate</p>\n'
             f' <p>Your Realty Link is a local boutique brokerage serving buyers and sellers across Indianapolis and Central Indiana, led by Principal Broker Janet Giles-Schultz. '
             f'<a href="https://yourrealtylink.com" target="_blank" rel="noopener">Learn more &rarr;</a></p>\n'
-            f' <p style="margin-top:8px;font-size:13px;">&#128222; <a href="tel:3179977404">317-997-7404</a> &nbsp;|&nbsp; <a href="mailto:info@yourrealtylink.com">info@yourrealtylink.com</a></p>\n </div>\n</div>')
+            f' <p style="margin-top:8px;font-size:13px;">&#128222; <a href="tel:3179977404">317-997-7404</a> &nbsp;|&nbsp; <a href="mailto:indy@yourrealtylink.com">indy@yourrealtylink.com</a></p>\n </div>\n</div>')
 
 def anchor_h2s(body):
     """Add id="" to each <h2> (for the TOC) and collect (id, text)."""

@@ -31,7 +31,7 @@ export const config = {
     name: process.env.AGENT_NAME || 'Daniel Cope',
     title: process.env.AGENT_TITLE || 'Real Estate Broker',
     phone: process.env.AGENT_PHONE || '317-997-7404',
-    email: process.env.AGENT_EMAIL || 'info@yourrealtylink.com',
+    email: process.env.AGENT_EMAIL || 'indy@yourrealtylink.com',
   },
   brokerage: {
     name: process.env.BROKERAGE_NAME || 'Your Realty Link',

@@ -63,7 +63,7 @@ page = f'''<!DOCTYPE html>
  {{
  "@type": ["LocalBusiness", "RealEstateAgent"],
  "name": "Your Realty Link — Senior Real Estate", "url": "https://yourrealtylink.com", "logo": "/assets/img/yrl-logo.png",
- "telephone": "317-997-7404", "email": "janet@yourrealtylink.com",
+ "telephone": "317-997-7404", "email": "indy@yourrealtylink.com",
  "address": {{ "@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US" }},
  "areaServed": "Indianapolis, Indiana and Central Indiana"
  }},
@@ -221,7 +221,7 @@ page = f'''<!DOCTYPE html>
  <div class="btn-group">
  <a href="tel:3179977404" class="btn btn-white">📞 Call Janet: 317-997-7404</a>
  <a href="tel:3175077770" class="btn btn-outline">📞 Call Elizabeth: 317-507-7770</a>
- <a href="mailto:janet@yourrealtylink.com" class="btn btn-outline">✉️ Email Us</a>
+ <a href="mailto:indy@yourrealtylink.com" class="btn btn-outline">✉️ Email Us</a>
  </div>
  </div>
 

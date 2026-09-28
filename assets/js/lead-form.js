@@ -161,7 +161,7 @@
           form.appendChild(err);
         }
         err.textContent =
-          'Something went wrong. Please call us at 317-997-7404 or email info@yourrealtylink.com.';
+          'Something went wrong. Please call us at 317-997-7404 or email indy@yourrealtylink.com.';
       });
   });
 })();

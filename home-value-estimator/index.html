@@ -35,9 +35,9 @@
  EMAILJS SETUP (5 minutes — free at emailjs.com)
  ───────────────────────────────────────────────────────────
  1. Go to https://emailjs.com → Sign Up Free
- 2. Add Email Service → Connect Gmail (info@yourrealtylink.com)
+ 2. Add Email Service → Connect Gmail (indy@yourrealtylink.com)
  → copy the Service ID, paste below as EMAILJS_SERVICE_ID
- 3. Create Email Template → set To Email: info@yourrealtylink.com
+ 3. Create Email Template → set To Email: indy@yourrealtylink.com
  Use these template variables:
  {{from_name}} {{from_email}} {{from_phone}}
  {{property_address}} {{estimated_value}}
@@ -1427,7 +1427,7 @@
  `Details: ${r.sqft.toLocaleString()} sqft | ${r.beds}bd/${r.baths}ba | Built ${r.yearBuilt} | Condition: ${r.condition}`
  );
  const subject = encodeURIComponent(`Home Value Lead — ${address}`);
- window.location.href = `mailto:info@yourrealtylink.com?subject=${subject}&body=${body}`;
+ window.location.href = `mailto:indy@yourrealtylink.com?subject=${subject}&body=${body}`;
  showSuccess();
  }
 
@@ -1477,7 +1477,7 @@ document.addEventListener('click', function(e) {
  }
 });
 </script>
-<script src="/assets/js/lead-form.js?v=b2c535a8" defer></script>
+<script src="/assets/js/lead-form.js?v=01533f36" defer></script>
 <script src="/assets/js/site-enhancements.js?v=69df98c0" defer></script>
 </body>
 </html>
