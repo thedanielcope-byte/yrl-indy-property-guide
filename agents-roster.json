@@ -193,7 +193,7 @@
   ]
  },
  {
-  "name": "Tami & Todd Scroggins",
+  "name": "Tami (& Todd) Scroggins",
   "title": "REALTOR",
   "phone": "317-445-1723",
   "email": "ttscroggins1113@gmail.com",
@@ -205,16 +205,318 @@
    "Seller Representation",
    "First-Time Buyers",
    "Luxury Homes",
+   "Investment Property",
+   "New Construction",
+   "Relocation",
+   "Downsizing & Senior",
+   "Commercial Real Estate",
+   "Land & Lots",
+   "Multi-Family",
+   "Foreclosure & Short Sale",
+   "Divorce & Estate Sales",
    "New Home Communities"
   ],
   "areas": [
    [
     "Shelbyville",
     "/cities/shelby-county/shelbyville-indiana-real-estate/"
+   ],
+   [
+    "Fairland",
+    "/cities/shelby-county/fairland-indiana-real-estate/"
+   ],
+   [
+    "New Palestine",
+    "/cities/hancock-county/new-palestine-indiana-real-estate/"
+   ],
+   [
+    "Greenfield",
+    "/cities/hancock-county/greenfield-indiana-real-estate/"
+   ],
+   [
+    "Columbus",
+    "/cities/bartholomew-county/columbus-indiana-real-estate/"
+   ],
+   [
+    "Whitestown",
+    "/cities/boone-county/whitestown-indiana-real-estate/"
+   ],
+   [
+    "Zionsville",
+    "/cities/boone-county/zionsville-indiana-real-estate/"
+   ],
+   [
+    "Lebanon",
+    "/cities/boone-county/lebanon-indiana-real-estate/"
+   ],
+   [
+    "Nashville",
+    "/cities/brown-county/nashville-indiana-real-estate/"
+   ],
+   [
+    "Bean Blossom",
+    "/cities/brown-county/bean-blossom-indiana-real-estate/"
+   ],
+   [
+    "Greensburg",
+    "/cities/decatur-county/greensburg-indiana-real-estate/"
+   ],
+   [
+    "Westport",
+    "/cities/decatur-county/westport-indiana-real-estate/"
+   ],
+   [
+    "Carmel",
+    "/cities/hamilton-county/carmel-indiana-real-estate/"
+   ],
+   [
+    "Cicero",
+    "/cities/hamilton-county/cicero-indiana-real-estate/"
+   ],
+   [
+    "Fishers",
+    "/cities/hamilton-county/fishers-indiana-real-estate/"
+   ],
+   [
+    "Noblesville",
+    "/cities/hamilton-county/noblesville-indiana-real-estate/"
+   ],
+   [
+    "Westfield",
+    "/cities/hamilton-county/westfield-indiana-real-estate/"
+   ],
+   [
+    "Cumberland",
+    "/cities/hancock-county/cumberland-indiana-real-estate/"
+   ],
+   [
+    "Fortville",
+    "/cities/hancock-county/fortville-indiana-real-estate/"
+   ],
+   [
+    "McCordsville",
+    "/cities/hancock-county/mccordsville-indiana-real-estate/"
+   ],
+   [
+    "Shirley",
+    "/cities/hancock-county/shirley-indiana-real-estate/"
+   ],
+   [
+    "Avon",
+    "/cities/hendricks-county/avon-indiana-real-estate/"
+   ],
+   [
+    "Clayton",
+    "/cities/hendricks-county/clayton-indiana-real-estate/"
+   ],
+   [
+    "Brownsburg",
+    "/cities/hendricks-county/brownsburg-indiana-real-estate/"
+   ],
+   [
+    "Danville",
+    "/cities/hendricks-county/danville-indiana-real-estate/"
+   ],
+   [
+    "Pittsboro",
+    "/cities/hendricks-county/pittsboro-indiana-real-estate/"
+   ],
+   [
+    "Plainfield",
+    "/cities/hendricks-county/plainfield-indiana-real-estate/"
+   ],
+   [
+    "Seymour",
+    "/cities/jackson-county/seymour-indiana-real-estate/"
+   ],
+   [
+    "North Vernon",
+    "/cities/jennings-county/north-vernon-indiana-real-estate/"
+   ],
+   [
+    "Bargersville",
+    "/cities/johnson-county/bargersville-indiana-real-estate/"
+   ],
+   [
+    "Edinburgh",
+    "/cities/johnson-county/edinburgh-indiana-real-estate/"
+   ],
+   [
+    "Franklin",
+    "/cities/johnson-county/franklin-indiana-real-estate/"
+   ],
+   [
+    "Greenwood",
+    "/cities/johnson-county/greenwood-indiana-real-estate/"
+   ],
+   [
+    "Trafalgar",
+    "/cities/johnson-county/trafalgar-indiana-real-estate/"
+   ],
+   [
+    "Whiteland",
+    "/cities/johnson-county/whiteland-indiana-real-estate/"
+   ],
+   [
+    "Pendleton",
+    "/cities/madison-county/pendleton-indiana-real-estate/"
+   ],
+   [
+    "Beech Grove",
+    "/cities/marion-county/beech-grove-indiana-real-estate/"
+   ],
+   [
+    "Broad Ripple",
+    "/cities/marion-county/broad-ripple-indianapolis-real-estate/"
+   ],
+   [
+    "Eagle Creek",
+    "/cities/marion-county/eagle-creek-indianapolis-real-estate/"
+   ],
+   [
+    "Geist",
+    "/cities/marion-county/geist-indiana-real-estate/"
+   ],
+   [
+    "Irvington",
+    "/cities/marion-county/irvington-indianapolis-real-estate/"
+   ],
+   [
+    "Lawrence",
+    "/cities/marion-county/lawrence-indiana-real-estate/"
+   ],
+   [
+    "Southport",
+    "/cities/marion-county/southport-indiana-real-estate/"
+   ],
+   [
+    "Speedway",
+    "/cities/marion-county/speedway-indiana-real-estate/"
+   ],
+   [
+    "Lapel",
+    "/cities/madison-county/lapel-indiana-real-estate/"
+   ],
+   [
+    "Elwood",
+    "/cities/madison-county/elwood-indiana-real-estate/"
+   ],
+   [
+    "Alexandria",
+    "/cities/madison-county/alexandria-indiana-real-estate/"
+   ],
+   [
+    "Anderson",
+    "/cities/madison-county/anderson-indiana-real-estate/"
+   ],
+   [
+    "Crawfordsville",
+    "/cities/montgomery-county/crawfordsville-indiana-real-estate/"
+   ],
+   [
+    "Martinsville",
+    "/cities/morgan-county/martinsville-indiana-real-estate/"
+   ],
+   [
+    "Monrovia",
+    "/cities/morgan-county/monrovia-indiana-real-estate/"
+   ],
+   [
+    "Mooresville",
+    "/cities/morgan-county/mooresville-indiana-real-estate/"
+   ],
+   [
+    "Rockville",
+    "/cities/parke-county/rockville-indiana-real-estate/"
+   ],
+   [
+    "Cloverdale",
+    "/cities/putnam-county/cloverdale-indiana-real-estate/"
+   ],
+   [
+    "Greencastle",
+    "/cities/putnam-county/greencastle-indiana-real-estate/"
+   ],
+   [
+    "Morristown",
+    "/cities/shelby-county/morristown-indiana-real-estate/"
+   ],
+   [
+    "Waldron",
+    "/cities/shelby-county/waldron-indiana-real-estate/"
+   ],
+   [
+    "Broad Ripple",
+    "/neighborhoods/broad-ripple-indianapolis/"
+   ],
+   [
+    "Castleton",
+    "/neighborhoods/castleton-indianapolis/"
+   ],
+   [
+    "Eagle Creek",
+    "/neighborhoods/eagle-creek-indianapolis/"
+   ],
+   [
+    "Fall Creek Place",
+    "/neighborhoods/fall-creek-place-indianapolis/"
+   ],
+   [
+    "Fountain Square",
+    "/neighborhoods/fountain-square-indianapolis/"
+   ],
+   [
+    "Fletcher Place",
+    "/neighborhoods/fletcher-place-indianapolis/"
+   ],
+   [
+    "Garfield Park",
+    "/neighborhoods/garfield-park-indianapolis/"
+   ],
+   [
+    "Geist Reservoir",
+    "/neighborhoods/geist-reservoir-indianapolis/"
+   ],
+   [
+    "Irvington",
+    "/neighborhoods/irvington-indianapolis/"
+   ],
+   [
+    "Lockerbie Square",
+    "/neighborhoods/lockerbie-square-indianapolis/"
+   ],
+   [
+    "Mass Ave",
+    "/neighborhoods/mass-ave-indianapolis/"
+   ],
+   [
+    "Meridian-Kessler",
+    "/neighborhoods/meridian-kessler-indianapolis/"
+   ],
+   [
+    "Southport",
+    "/neighborhoods/southport-indianapolis/"
+   ],
+   [
+    "Warren Township",
+    "/neighborhoods/warren-township-indianapolis/"
+   ],
+   [
+    "Pike Township",
+    "/neighborhoods/pike-township-indianapolis/"
+   ],
+   [
+    "Nora",
+    "/neighborhoods/nora-indianapolis/"
+   ],
+   [
+    "Old Northside",
+    "/neighborhoods/old-northside-indianapolis/"
    ]
   ],
-  "tagline": "Best Realtor in Shelby County 2025 & 2026!",
-  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562695401_tami-todd-scroggins-brick.jpg"
+  "tagline": "Voted Best Realtor in Shelby County 2025 & 2026!",
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562695401_tami-todd-scroggins-brick.jpg",
+  "bio": "Realtor who goes the extra mile!!  Represents buyers and sellers all over Indiana!"
  },
  {
   "name": "Tammy Jennings",
