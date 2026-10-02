@@ -249,6 +249,12 @@
  <!-- Displet IDX — All-MLS feed. NOTE: property.mibor.com MLS data is US-geo-restricted — the embed renders
       for US visitors (Displet confirmed = 16,151 listings) but 503s from non-US IPs (e.g. Dan testing from the UK).
       Verify from a US connection. -->
+<!-- IDX-QUERY -->
+ <div id="idxQuery" hidden style="margin:0 0 14px;padding:12px 16px;background:#f7f7f7;border:1px solid #e2e2e2;border-radius:10px;font-size:.95rem;color:#1a1a1a;">
+ <span id="idxQueryText" style="font-weight:600;"></span>
+ <span style="color:#6e6e70;"> Don&rsquo;t see it? Use the search bar in the listings below (address, MLS #, or location), or <a href="/search/" style="color:#c03926;font-weight:600;">show all listings</a>.</span>
+ </div>
+<!-- /IDX-QUERY -->
  <div class="idx-embed">
  <iframe
  src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=&amp;user_id=6024260"
@@ -259,6 +265,46 @@
  title="Search Indianapolis &amp; Central Indiana Homes for Sale — Powered by Your Realty Link"
  loading="lazy">
  </iframe>
+<!-- IDX-QUERY-JS -->
+<script>
+(function(){
+ var raw=(new URLSearchParams(location.search).get('q')||'').trim();
+ if(!raw) return;
+ var CITIES={"advance":"Advance","alamo":"Alamo","alexandria":"Alexandria","amo":"Amo","anderson":"Anderson","arcadia":"Arcadia","atlanta":"Atlanta","avon":"Avon","bainbridge":"Bainbridge","bargersville":"Bargersville","beech grove":"Beech Grove","bethany":"Bethany","bloomingdale":"Bloomingdale","brooklyn":"Brooklyn","brownsburg":"Brownsburg","brownstown":"Brownstown","carmel":"Carmel","chesterfield":"Chesterfield","cicero":"Cicero","clayton":"Clayton","clermont":"Clermont","clifford":"Clifford","cloverdale":"Cloverdale","coatesville":"Coatesville","columbus":"Columbus","country club heights":"Country Club Heights","crawfordsville":"Crawfordsville","crothersville":"Crothersville","crows nest":"Crows Nest","cumberland":"Cumberland","danville":"Danville","darlington":"Darlington","edgewood":"Edgewood","edinburgh":"Edinburgh","elizabethtown":"Elizabethtown","elwood":"Elwood","fairland":"Fairland","fillmore":"Fillmore","fishers":"Fishers","fortville":"Fortville","franklin":"Franklin","frankton":"Frankton","greencastle":"Greencastle","greenfield":"Greenfield","greensburg":"Greensburg","greenwood":"Greenwood","hartsville":"Hartsville","homecroft":"Homecroft","hope":"Hope","indianapolis":"Indianapolis","ingalls":"Ingalls","jamestown":"Jamestown","jonesville":"Jonesville","ladoga":"Ladoga","lapel":"Lapel","lawrence":"Lawrence","lebanon":"Lebanon","linden":"Linden","lizton":"Lizton","markleville":"Markleville","marshall":"Marshall","martinsville":"Martinsville","mccordsville":"McCordsville","mecca":"Mecca","medora":"Medora","meridian hills":"Meridian Hills","millhousen":"Millhousen","monrovia":"Monrovia","montezuma":"Montezuma","mooresville":"Mooresville","morgantown":"Morgantown","morristown":"Morristown","nashville":"Nashville","new market":"New Market","new palestine":"New Palestine","new point":"New Point","new richmond":"New Richmond","new ross":"New Ross","new whiteland":"New Whiteland","noblesville":"Noblesville","north crows nest":"North Crows Nest","north salem":"North Salem","north vernon":"North Vernon","orestes":"Orestes","paragon":"Paragon","pendleton":"Pendleton","pittsboro":"Pittsboro","plainfield":"Plainfield","prince s lakes":"Prince's Lakes","river forest":"River Forest","roachdale":"Roachdale","rockville":"Rockville","rocky ripple":"Rocky Ripple","rosedale":"Rosedale","russellville":"Russellville","seymour":"Seymour","shelbyville":"Shelbyville","sheridan":"Sheridan","shirley":"Shirley","southport":"Southport","speedway":"Speedway","spring hill":"Spring Hill","spring lake":"Spring Lake","st  paul":"St. Paul","stilesville":"Stilesville","summitville":"Summitville","thorntown":"Thorntown","trafalgar":"Trafalgar","ulen":"Ulen","vernon":"Vernon","warren park":"Warren Park","waveland":"Waveland","waynetown":"Waynetown","westfield":"Westfield","westport":"Westport","whiteland":"Whiteland","whitestown":"Whitestown","wilkinson":"Wilkinson","williams creek":"Williams Creek","wingate":"Wingate","woodlawn heights":"Woodlawn Heights","wynnedale":"Wynnedale","zionsville":"Zionsville"};
+ var SUFFIX=/^(dr|drive|st|street|rd|road|ave|avenue|ln|lane|ct|court|blvd|boulevard|way|pl|place|cir|circle|pkwy|parkway|trl|trail|ter|terrace)$/;
+ var FILLER=/^(homes|houses|house|home|for|sale|near|listings|real|estate|properties|property)$/;
+ var s=raw.toLowerCase().replace(/[^a-z0-9#\s]/g,' ').replace(/\s+/g,' ').trim();
+ var f={}, label='';
+ var mls=s.match(/^(?:mls\s*#?\s*|#\s*)?(\d{8})$/);
+ if(mls){ f.listing_id=mls[1]; label='Showing MLS # '+mls[1]+'.'; }
+ else{
+  var hasDigit=/\d/.test(s);
+  var t=s.replace(/#/g,' ').split(' ').filter(function(w){ return w && w!=='in' && w!=='indiana' && (hasDigit || !FILLER.test(w)); });
+  var zip='', city='';
+  if(t.length && /^\d{5}$/.test(t[t.length-1]) && (t.length===1 || t.length>2 || !/^\d+$/.test(t[0]))) zip=t.pop();
+  for(var n=Math.min(3,t.length); n>0 && !city; n--){
+   var cand=t.slice(t.length-n).join(' '), rest=t.slice(0,t.length-n);
+   if(CITIES[cand] && (rest.length===0 || rest.some(function(w){ return !/^\d+$/.test(w); }))){ city=CITIES[cand]; t=rest; }
+  }
+  if(t.length>1 && SUFFIX.test(t[t.length-1])) t.pop();
+  var street=t.join(' ');
+  if(street) f.street_address=street;
+  if(city) f.city=city;
+  if(zip) f.postal_code=zip;
+  if(street) label='Showing listings matching \u201c'+street+'\u201d'+(city?' in '+city:'')+(zip?' ('+zip+')':'')+'.';
+  else if(city) label='Showing listings in '+city+(zip?' ('+zip+')':'')+'.';
+  else if(zip) label='Showing listings in ZIP '+zip+'.';
+ }
+ var parts=[]; for(var k in f) parts.push(k+'='+f[k]);
+ if(!parts.length) return;
+ var frame=document.querySelector('.idx-embed iframe');
+ if(!frame) return;
+ frame.src='https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]='+encodeURIComponent(btoa(parts.join('&')))+'&user_id=6024260';
+ var box=document.getElementById('idxQuery');
+ if(box){ document.getElementById('idxQueryText').textContent=label; box.hidden=false; }
+})();
+</script>
+<!-- /IDX-QUERY-JS -->
  </div>
 
  <div class="search-tips">

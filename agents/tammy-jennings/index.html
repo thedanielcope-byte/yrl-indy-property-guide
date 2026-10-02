@@ -287,8 +287,8 @@
  <div class="container">
  <h2>Search Central Indiana Homes with Tammy</h2>
  <p>Browse every active MLS listing across Indianapolis and the surrounding metro — updated daily.</p>
- <form class="asr-bar" onsubmit="event.preventDefault(); window.location.href='/search/';" role="search">
- <input type="text" placeholder="Search by city, ZIP code, or neighborhood..." aria-label="Search homes" autocomplete="off">
+ <form class="asr-bar" onsubmit="event.preventDefault(); var q=this.querySelector('input').value.trim(); window.location.href='/search/'+(q?'?q='+encodeURIComponent(q):'');" role="search">
+ <input type="text" placeholder="Search by address, city, ZIP, or MLS #..." aria-label="Search homes" autocomplete="off">
  <button type="submit">Search Homes</button>
  </form>
  <div class="asr-links"><span>Popular:</span> <a href="/cities/hamilton-county/carmel-indiana-real-estate/">Carmel</a> <a href="/cities/hamilton-county/fishers-indiana-real-estate/">Fishers</a> <a href="/cities/johnson-county/greenwood-indiana-real-estate/">Greenwood</a> <a href="/cities/hendricks-county/avon-indiana-real-estate/">Avon</a> <a href="/cities/boone-county/zionsville-indiana-real-estate/">Zionsville</a></div>
