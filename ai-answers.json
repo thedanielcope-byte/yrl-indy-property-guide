@@ -362,5 +362,28 @@
         "value": "Building a fence or addition, large or irregular lots, boundary questions, or rural and acreage properties"
       }
     ]
+  },
+  {
+    "page": "blog/indianapolis-housing-market-forecast-what-to-expect/",
+    "question": "What is the Indianapolis housing market forecast for 2027?",
+    "answer": "We expect <strong>steady, moderate price growth</strong> in Indianapolis in 2027 rather than a sharp rise or drop, supported by job growth, in-migration and relative affordability. <strong>Mortgage rates are the swing factor</strong>: lower rates would bring more buyers and competition. Entry-level homes should stay tight, the upper end should keep more choice, and spring will again be the busiest season.",
+    "facts": [
+      {
+        "label": "Price outlook",
+        "value": "Steady, moderate growth &mdash; no exact forecast"
+      },
+      {
+        "label": "Swing factor",
+        "value": "Mortgage rates"
+      },
+      {
+        "label": "Tightest segment",
+        "value": "Entry-level homes ($200K&ndash;$325K)"
+      },
+      {
+        "label": "Busiest season",
+        "value": "Mid-April through June"
+      }
+    ]
   }
 ]
