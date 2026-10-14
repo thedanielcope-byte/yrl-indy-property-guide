@@ -457,7 +457,7 @@
   },
   {
    "slug": "franklin-township-schools",
-   "name": "MSD of Franklin Township",
+   "name": "Franklin Township Community School Corporation",
    "short_name": "Franklin Township",
    "type": "public",
    "county": "Marion",
@@ -465,7 +465,7 @@
    "cities": [
     "Southport"
    ],
-   "boundary_note": "Eastern parts of the broader Southport area (46237) fall in MSD of Franklin Township.",
+   "boundary_note": "Eastern parts of the broader Southport area (46237) fall in Franklin Township Community School Corporation.",
    "existing": true
   },
   {
@@ -1650,7 +1650,7 @@
    "private": [
     "roncalli-high-school"
    ],
-   "note": "MSD of Perry Township serves the City of Southport; eastern parts of the broader 46237 area fall in MSD of Franklin Township.",
+   "note": "MSD of Perry Township serves the City of Southport; eastern parts of the broader 46237 area fall in Franklin Township Community School Corporation.",
    "county": "Marion"
   },
   "Lawrence": {
