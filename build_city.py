@@ -13,6 +13,7 @@ web-verified data in new_cities.json — nothing fabricated.
 """
 import os, re, html, glob, json
 import idx_config as idx
+from geo_titles import geo_title
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = json.load(open(os.path.join(ROOT, "new_cities.json"), encoding="utf-8"))
@@ -127,11 +128,11 @@ def page(c):
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>{esc(name)} Indiana Real Estate | Your Realty Link</title>
+ <title>{geo_title(esc(name))}</title>
  <meta name="description" content="{esc(metadesc)}">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="{url}">
- <meta property="og:title" content="{esc(name)} Indiana Real Estate | Your Realty Link">
+ <meta property="og:title" content="{geo_title(esc(name))}">
  <meta property="og:description" content="{esc(metadesc)}">
  <meta property="og:url" content="{url}">
  <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">

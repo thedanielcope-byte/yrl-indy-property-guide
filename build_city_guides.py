@@ -219,7 +219,7 @@ def landing_html(city_key, kind, slug, pdf_name):
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>{esc(title)}</title>
  <meta name="description" content="{esc(desc)}">
- <meta name="robots" content="index, follow">
+ <meta name="robots" content="noindex, follow">
  <link rel="canonical" href="https://yourrealtylink.com/resources/{slug}/">
  <meta property="og:title" content="{esc(title)}">
  <meta property="og:description" content="{esc(desc)}">
@@ -359,12 +359,11 @@ hub = os.path.join(ROOT, "resources/index.html"); ht = open(hub, encoding="utf-8
 ht = re.sub(r'\n?<div class="resources-intro"[^>]*style="margin-top:16px;">.*?(?=<footer class="site-footer">)', '', ht, flags=re.DOTALL)
 ht = ht.replace('<footer class="site-footer">', section + '<footer class="site-footer">', 1)
 open(hub, "w", encoding="utf-8").write(ht)
-smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
-for key in CITIES:
-    for kind in ("buyers", "sellers"):
-        loc = "https://yourrealtylink.com/resources/%s-home-%s-guide/" % (key, kind)
-        if loc in sm: continue
-        blk += "<url>\n  <loc>%s</loc>\n  <lastmod>2026-08-04</lastmod>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
-if blk:
-    open(smp, "w", encoding="utf-8").write(sm.replace("</urlset>", blk + "</urlset>"))
-print("hub + sitemap updated: %d cities, %d new sitemap URLs" % (len(CITIES), blk.count("<url>")))
+# The per-city guide landing pages are templated lead-capture pages (~190 words each), so
+# they're noindex,follow and kept OUT of the sitemap (Oct 2026 SEO audit). Strip any that crept in.
+smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read()
+sm2 = re.sub(r"[ \t]*<url>\s*<loc>https://yourrealtylink\.com/resources/[a-z0-9-]+-home-(?:buyers|sellers)-guide/</loc>.*?</url>\n?",
+             "", sm, flags=re.DOTALL)
+if sm2 != sm:
+    open(smp, "w", encoding="utf-8").write(sm2)
+print("hub + sitemap updated: %d cities, %d city-guide URLs removed from sitemap" % (len(CITIES), sm.count("<url>") - sm2.count("<url>")))

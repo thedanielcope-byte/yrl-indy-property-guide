@@ -201,6 +201,13 @@ def index_page():
  <meta property="og:title" content="Indiana Real Estate Glossary | Your Realty Link">
  <meta property="og:description" content="{esc(desc)}">
  <meta property="og:url" content="{SITE}/glossary/">
+ <meta property="og:image" content="{SITE}/assets/img/og-default.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Indiana Real Estate Glossary | Your Realty Link">
+ <meta name="twitter:description" content="{esc(desc)}">
+ <meta name="twitter:image" content="{SITE}/assets/img/og-default.png">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
  {{
@@ -346,6 +353,13 @@ def full_page(p):
  <meta property="og:title" content="{esc(p['title'])}">
  <meta property="og:description" content="{esc(p['meta'])}">
  <meta property="og:url" content="{SITE}/glossary/{slug}/">
+ <meta property="og:image" content="{SITE}/assets/img/og-default.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="{esc(p['title'])}">
+ <meta name="twitter:description" content="{esc(p['meta'])}">
+ <meta name="twitter:image" content="{SITE}/assets/img/og-default.png">
  <meta property="og:type" content="article">
  <script type="application/ld+json">
  {{
