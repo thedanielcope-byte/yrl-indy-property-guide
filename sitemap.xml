@@ -6267,4 +6267,16 @@
  <changefreq>monthly</changefreq>
  <priority>0.7</priority>
  </url>
+ <url>
+ <loc>https://yourrealtylink.com/blog/moving-from-cincinnati-to-indianapolis/</loc>
+ <lastmod>2026-10-14</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.7</priority>
+ </url>
+ <url>
+ <loc>https://yourrealtylink.com/blog/moving-from-louisville-to-indianapolis/</loc>
+ <lastmod>2026-10-14</lastmod>
+ <changefreq>monthly</changefreq>
+ <priority>0.7</priority>
+ </url>
 </urlset>
