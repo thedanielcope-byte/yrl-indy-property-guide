@@ -10,34 +10,34 @@ on every graphic). Renders each region to assets/img/market-reports/<period>/.
 import os, base64, subprocess, shutil, html as H
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+CHROME = os.environ.get("CHROME", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 SCRATCH = __import__("tempfile").mkdtemp(prefix="ms_")
-PERIOD = "2026-08"
-MONTH = "August 2026"
+PERIOD = "2026-09"
+MONTH = "September 2026"
 MON = MONTH.split()[0]
 OUTDIR = os.path.join(ROOT, "assets/img/market-reports", PERIOD)
 
 # region slug -> (display label, median$, median YoY%, closed sales, sales YoY%,
 #                 median days on market, prior-year DOM, months supply)
 DATA = {
- "central-indiana": ("Central Indiana · 17 Counties", 327250, 2.6, 2738, -5.2, "23", "17", 2.5),
- "bartholomew-county": ("Bartholomew County, IN", 300000, 5.3, 95, -4.0, "26", "22.5", 2.4),
- "boone-county":       ("Boone County, IN", 455000, 8.3, 119, -2.5, "17", "16", 1.9),
- "brown-county":       ("Brown County, IN", 420000, -17.2, 23, 4.6, "25.5", "40", 3.6),
- "decatur-county":     ("Decatur County, IN", 240000, 16.5, 23, -11.5, "24", "30", 2.8),
- "hamilton-county":    ("Hamilton County, IN", 485625, 6.0, 536, -3.6, "14.5", "14", 1.7),
- "hancock-county":     ("Hancock County, IN", 355000, -1.7, 154, 4.8, "25.5", "21", 2.5),
- "hendricks-county":   ("Hendricks County, IN", 355500, -3.9, 210, -23.6, "20.5", "17", 2.5),
- "jackson-county":     ("Jackson County, IN", 240000, -14.3, 42, 16.7, "14", "37", 2.8),
- "jennings-county":    ("Jennings County, IN", 231200, 15.6, 18, 0.0, "37", "7", 1.9),
- "johnson-county":     ("Johnson County, IN", 335000, -5.5, 217, -3.1, "20", "14", 2.4),
- "madison-county":     ("Madison County, IN", 205000, 10.1, 144, 1.4, "44", "11.5", 2.9),
- "marion-county":      ("Marion County · Indianapolis", 262200, 2.0, 926, -4.0, "26", "19", 3.1),
- "montgomery-county":  ("Montgomery County, IN", 215950, -9.3, 46, -8.0, "18.5", "14", 1.8),
- "morgan-county":      ("Morgan County, IN", 309359, -1.8, 91, -11.7, "16", "20", 1.9),
- "parke-county":       ("Parke County, IN", 175000, -23.3, 11, -8.3, "57", "11", 4.9),
- "putnam-county":      ("Putnam County, IN", 333750, 29.6, 40, -9.1, "21.5", "21", 2.7),
- "shelby-county":      ("Shelby County, IN", 269412, 1.2, 43, -6.5, "24", "26", 2.9),
+ "central-indiana": ("Central Indiana · 17 Counties", 320000, 1.3, 2549, -3.5, "27", "20", 2.9),
+ "bartholomew-county": ("Bartholomew County, IN", 295000, 5.4, 81, -15.6, "32", "21", 3.1),
+ "boone-county":       ("Boone County, IN", 404949, 1.4, 128, 50.6, "21", "17", 2.0),
+ "brown-county":       ("Brown County, IN", 412000, 10.9, 13, -45.8, "46", "22", 7.7),
+ "decatur-county":     ("Decatur County, IN", 247000, -1.6, 26, -13.3, "60", "23", 2.3),
+ "hamilton-county":    ("Hamilton County, IN", 487000, -2.2, 475, -1.7, "25.5", "16", 2.1),
+ "hancock-county":     ("Hancock County, IN", 349100, -5.7, 139, 11.2, "43.5", "20.5", 2.7),
+ "hendricks-county":   ("Hendricks County, IN", 370000, 5.7, 217, -15.6, "26", "19.5", 2.6),
+ "jackson-county":     ("Jackson County, IN", 215000, -9.5, 31, -22.5, "13.5", "28", 4.0),
+ "jennings-county":    ("Jennings County, IN", 233500, -5.5, 15, -21.1, "33", "36", 3.0),
+ "johnson-county":     ("Johnson County, IN", 349900, 0.3, 215, -2.7, "32", "20", 2.6),
+ "madison-county":     ("Madison County, IN", 218450, 27.0, 128, 2.4, "28", "13", 3.1),
+ "marion-county":      ("Marion County · Indianapolis", 255000, 2.0, 873, -6.3, "24", "22", 3.5),
+ "montgomery-county":  ("Montgomery County, IN", 200000, -3.6, 39, -2.5, "39", "16", 2.0),
+ "morgan-county":      ("Morgan County, IN", 285000, -5.0, 72, 0.0, "18", "27", 3.1),
+ "parke-county":       ("Parke County, IN", 169900, -32.0, 4, -55.6, "34.5", "10", 13.2),
+ "putnam-county":      ("Putnam County, IN", 300000, 5.3, 45, 55.2, "26", "14", 2.7),
+ "shelby-county":      ("Shelby County, IN", 230000, -9.5, 48, -9.4, "30.5", "26", 2.6),
 }
 
 def money(n):  return "${:,}".format(n)
