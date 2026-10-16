@@ -191,12 +191,12 @@ I'll pull real comparable sales for any home you're considering. Message me. Ful
 
 # GOOGLE BUSINESS PROFILE
 
-Post type: **Update**. Button: **Learn more** → the link listed with each post. Attach the listed graphic. Two a week, in this order, rather than all at once. No phone numbers, because Google sometimes rejects posts that include them.
+Post type: **Update**. Button: **Learn more** → the link listed with each post. Attach the listed graphic from `assets/img/market-reports/2026-09/gbp-september-2026/` — these are 1200x900, the 4:3 shape Google shows without cropping (the square and banner files get cut off). Two a week, in this order, rather than all at once. No phone numbers, because Google sometimes rejects posts that include them.
 
 ---
 
 ## GBP 1 — Central Indiana September report (post first)
-**Image:** `central-indiana.png` · **Button:** Learn more → https://yourrealtylink.com/blog/indianapolis-market-update-october-2026/
+**Image:** `gbp-september-2026/central-indiana-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/blog/indianapolis-market-update-october-2026/
 
 The September 2026 Central Indiana market report is out. Across the 17-county MIBOR region, the median single-family home sold for $320,000, up 1.3% from last September. There are 7,405 homes on the market, up more than 16% from a year ago, and homes took a median of 27 days to sell, up from 20.
 
@@ -205,7 +205,7 @@ Supply is at 2.9 months, the most balanced the region has been in years. Buyers 
 ---
 
 ## GBP 2 — Marion County / Indianapolis
-**Image:** `marion-county.png` · **Button:** Learn more → https://yourrealtylink.com/market-updates/
+**Image:** `gbp-september-2026/marion-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/market-updates/
 
 Indianapolis market update for September 2026: the median home in Marion County sold for $255,000, up 2% from last year. 873 homes sold, and sellers received 98.2% of list price on average.
 
@@ -214,7 +214,7 @@ Inventory is up almost 21% from a year ago, putting supply at 3.5 months, a genu
 ---
 
 ## GBP 3 — Johnson County
-**Image:** `johnson-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/johnson-county-indiana-real-estate/
+**Image:** `gbp-september-2026/johnson-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/johnson-county-indiana-real-estate/
 
 Johnson County market update for September 2026: the median home sold for $349,900, about flat with last year, across 215 sales. Homes took a median of 32 days to sell, up from 20 a year ago, and inventory is up 18%.
 
@@ -223,7 +223,7 @@ Buyers in Greenwood, Franklin and Bargersville have more options and more time t
 ---
 
 ## GBP 4 — Hamilton County
-**Image:** `hamilton-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/hamilton-county-indiana-real-estate/
+**Image:** `gbp-september-2026/hamilton-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/hamilton-county-indiana-real-estate/
 
 Hamilton County market update for September 2026: the median home sold for $487,000, down about 2% from last year, with 475 homes sold. Homes took a median of about 26 days, compared with 16 a year ago.
 
@@ -232,7 +232,7 @@ With just over 1,000 homes on the market and 2.1 months of supply, Carmel, Fishe
 ---
 
 ## GBP 5 — Hendricks County
-**Image:** `hendricks-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/hendricks-county-indiana-real-estate/
+**Image:** `gbp-september-2026/hendricks-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/hendricks-county-indiana-real-estate/
 
 Hendricks County market update for September 2026: the median home sold for $370,000, up nearly 6% from last year, one of the strongest price gains in Central Indiana. 217 homes sold.
 
@@ -241,7 +241,7 @@ Inventory is up 16% and homes took a median of 26 days, so buyers in Avon, Brown
 ---
 
 ## GBP 6 — Boone County
-**Image:** `boone-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/boone-county-indiana-real-estate/
+**Image:** `gbp-september-2026/boone-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/boone-county-indiana-real-estate/
 
 Boone County market update for September 2026: the median home sold for $404,949, up about 1.4% from last year, and sales rose more than 50% over last September, 128 homes compared with 85.
 
@@ -250,7 +250,7 @@ At 2.0 months of supply, Zionsville, Whitestown and Lebanon are the tightest mar
 ---
 
 ## GBP 7 — Hancock County
-**Image:** `hancock-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/hancock-county-indiana-real-estate/
+**Image:** `gbp-september-2026/hancock-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/hancock-county-indiana-real-estate/
 
 Hancock County market update for September 2026: the median home sold for $349,100, with 139 homes sold, up 11% from last year. Homes took a median of about 44 days to sell, compared with 20 a year ago.
 
@@ -259,7 +259,7 @@ Supply sits at 2.7 months, so buyers in Greenfield, McCordsville, Fortville and 
 ---
 
 ## GBP 8 — Madison County
-**Image:** `madison-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/madison-county-indiana-real-estate/
+**Image:** `gbp-september-2026/madison-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/madison-county-indiana-real-estate/
 
 Madison County market update for September 2026: the median home sold for $218,450, up 27% from last September, the largest year-over-year gain in the region, though an unusually low figure last year and a shift in which homes are selling both play into that.
 
@@ -268,7 +268,7 @@ Madison County market update for September 2026: the median home sold for $218,4
 ---
 
 ## GBP 9 — Morgan County
-**Image:** `morgan-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/morgan-county-indiana-real-estate/
+**Image:** `gbp-september-2026/morgan-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/morgan-county-indiana-real-estate/
 
 Morgan County market update for September 2026: the median home sold for $285,000, and 72 homes sold, matching last September. Homes sold faster than a year ago, a median of 18 days versus 27, one of the quickest paces in the region.
 
@@ -277,7 +277,7 @@ Supply is at 3.1 months. Well-priced homes in Mooresville, Martinsville and Monr
 ---
 
 ## GBP 10 — Shelby County
-**Image:** `shelby-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/shelby-county-indiana-real-estate/
+**Image:** `gbp-september-2026/shelby-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/shelby-county-indiana-real-estate/
 
 Shelby County market update for September 2026: the median home sold for $230,000 across 48 sales, and sellers received 98.1% of list price, better than last year.
 
@@ -286,7 +286,7 @@ Inventory is up 22% and homes took a median of about 30 days, so buyers in Shelb
 ---
 
 ## GBP 11 — Bartholomew County
-**Image:** `bartholomew-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/bartholomew-county-indiana-real-estate/
+**Image:** `gbp-september-2026/bartholomew-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/bartholomew-county-indiana-real-estate/
 
 Bartholomew County market update for September 2026: the median home sold for $295,000, up more than 5% from last year, and sellers received 98.8% of list price, among the strongest in the region.
 
@@ -295,7 +295,7 @@ Bartholomew County market update for September 2026: the median home sold for $2
 ---
 
 ## GBP 12 — Jackson County
-**Image:** `jackson-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/jackson-county-indiana-real-estate/
+**Image:** `gbp-september-2026/jackson-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/jackson-county-indiana-real-estate/
 
 Jackson County market update for September 2026: homes sold faster here than anywhere else in the region, a median of about 14 days compared with 28 last September. The median sale price came in at $215,000 across 31 sales, a small enough number that the median moves around.
 
@@ -304,7 +304,7 @@ Inventory is up 31% and supply is at 4.0 months, a balanced market. Around Seymo
 ---
 
 ## GBP 13 — Putnam County
-**Image:** `putnam-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/putnam-county-indiana-real-estate/
+**Image:** `gbp-september-2026/putnam-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/putnam-county-indiana-real-estate/
 
 Putnam County market update for September 2026: the median home sold for $300,000, up about 5% from last year, and sales rose more than 50%, 45 homes compared with 29 last September.
 
@@ -313,7 +313,7 @@ Homes took a median of 26 days and supply is at 2.7 months. Buying or selling ar
 ---
 
 ## GBP 14 — Decatur County
-**Image:** `decatur-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/decatur-county-indiana-real-estate/
+**Image:** `gbp-september-2026/decatur-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/decatur-county-indiana-real-estate/
 
 Decatur County market update for September 2026: the median home sold for $247,000, about flat with last year, across 26 sales. Homes took a median of 60 days to sell, compared with 23 last September.
 
@@ -322,7 +322,7 @@ Supply is still reasonable at 2.3 months, so the slower pace is mostly about pri
 ---
 
 ## GBP 15 — Montgomery County
-**Image:** `montgomery-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/montgomery-county-indiana-real-estate/
+**Image:** `gbp-september-2026/montgomery-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/montgomery-county-indiana-real-estate/
 
 Montgomery County market update for September 2026: the median home sold for $200,000 across 39 sales. Homes took a median of 39 days, up from 16 a year ago, though supply remains tight at 2.0 months.
 
@@ -331,7 +331,7 @@ In a market this size, one slow month doesn't make a trend. If you're buying or 
 ---
 
 ## GBP 16 — Brown County
-**Image:** `brown-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/brown-county-indiana-real-estate/
+**Image:** `gbp-september-2026/brown-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/brown-county-indiana-real-estate/
 
 Brown County market update for September 2026: only 13 homes sold, so the $412,000 median reflects which homes closed more than the market as a whole.
 
@@ -340,7 +340,7 @@ The number that matters is supply: 100 homes on the market and 7.7 months of inv
 ---
 
 ## GBP 17 — Jennings County
-**Image:** `jennings-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/jennings-county-indiana-real-estate/
+**Image:** `gbp-september-2026/jennings-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/jennings-county-indiana-real-estate/
 
 Jennings County market update for September 2026: 15 homes sold at a median of $233,500. With volume that low the median swings, so it isn't a trend on its own.
 
@@ -349,7 +349,7 @@ Homes sold slightly faster than last September, a median of 33 days, and there a
 ---
 
 ## GBP 18 — Parke County
-**Image:** `parke-county.png` · **Button:** Learn more → https://yourrealtylink.com/counties/parke-county-indiana-real-estate/
+**Image:** `gbp-september-2026/parke-county-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/counties/parke-county-indiana-real-estate/
 
 Parke County market update for September 2026: only 4 homes sold, so the $169,900 median is a small-sample figure rather than a trend.
 
@@ -358,7 +358,7 @@ What's meaningful is inventory: 53 homes on the market, which at the current pac
 ---
 
 ## GBP 19 — Buyers angle (fall market)
-**Image:** `central-indiana-banner.png` · **Button:** Learn more → https://yourrealtylink.com/services/home-buying-process/
+**Image:** `gbp-september-2026/central-indiana-gbp.png` · **Button:** Learn more → https://yourrealtylink.com/services/home-buying-process/
 
 Buying in Central Indiana this fall? The September numbers are in your favor. There are 7,405 homes on the market, up more than 16% from last year, and homes are taking a median of 27 days to sell instead of 20.
 

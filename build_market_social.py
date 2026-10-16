@@ -196,10 +196,13 @@ PDF_TPL = """<meta charset="utf-8">
  <div class="cta">Want your home&rsquo;s exact value &mdash; not a metro average? Get a free, no-obligation valuation at <b>yourrealtylink.com/services/free-home-valuation</b><br>Janet Giles-Schultz, Principal Broker &middot; Your Realty Link &middot; <b>317-997-7404</b></div>
 </div>"""
 
+# MARKET_GBP_ONLY=1 re-renders just the Google Business Profile cards (skips squares/banners/PDFs)
+GBP_ONLY = bool(os.environ.get("MARKET_GBP_ONLY"))
+
 os.makedirs(OUTDIR, exist_ok=True)
 os.makedirs(PDFDIR, exist_ok=True)
 ok = 0
-for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DATA.items():
+for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in ([] if GBP_ONLY else DATA.items()):
     html = TPL.format(
         logo=LOGO, month=MONTH, mon=MON, label=H.escape(label),
         median=money(med), median_sub=price_sub(med_yoy),
@@ -243,9 +246,81 @@ for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DAT
         print("  ok", slug)
 print("rendered %d/%d (square + banner) -> %s" % (ok, len(DATA), os.path.relpath(OUTDIR, ROOT)))
 
+# ---- Google Business Profile card (1200x900, Google's 4:3 slot — no phone number) ----
+GBPDIR = os.path.join(OUTDIR, "gbp-%s-%s" % (MON.lower(), MONTH.split()[1]))
+
+GBP = """<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+<style>
+ *{{margin:0;padding:0;box-sizing:border-box}}
+ body{{width:1200px;height:900px;overflow:hidden;font-family:"Libre Franklin",system-ui,sans-serif;background:#f7f3ef;color:#1e1a17}}
+ .card{{width:1200px;height:900px;padding:56px 60px 52px;display:flex;flex-direction:column;position:relative}}
+ .card::after{{content:"";position:absolute;right:-150px;top:-150px;width:440px;height:440px;border-radius:50%;background:rgba(192,57,38,.06)}}
+ .top{{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2}}
+ .logo{{height:62px}}
+ .eyebrow{{text-align:right;font-size:18px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#c03926;line-height:1.5;margin-top:4px}}
+ .eyebrow span{{display:block;color:#6e6e70;font-weight:700;font-size:15px;letter-spacing:.06em}}
+ h1{{font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:66px;line-height:1;margin:28px 0 6px;color:#17130f}}
+ h1 em{{font-style:normal;color:#c03926}}
+ .rule{{width:88px;height:6px;background:#c03926;border-radius:3px;margin:12px 0 0}}
+ .src{{font-size:17px;color:#6e6e70;font-weight:600;margin-top:16px;position:relative;z-index:2}}
+ .grid{{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;flex:1}}
+ .tile{{background:#fff;border:1px solid #ece4dc;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(40,25,20,.05)}}
+ .tile .lab{{background:#c03926;color:#fff;font-size:18px;font-weight:800;padding:14px 22px}}
+ .tile .body{{padding:20px 22px 22px;display:flex;flex-direction:column;justify-content:center;flex:1}}
+ .tile .val{{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:50px;line-height:1.02;color:#17130f}}
+ .tile .val.red{{color:#c03926}}
+ .tile .sub{{font-size:18px;color:#6e6e70;margin-top:9px;line-height:1.4;font-weight:500}}
+ .foot{{margin-top:26px;background:#17130f;border-radius:16px;padding:20px 28px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}}
+ .foot .cta{{color:#fff;font-size:22px;font-weight:800}}
+ .foot .cta b{{color:#e0644f}}
+ .foot .meta{{color:#c9bfb6;font-size:16px;font-weight:600;text-align:right}}
+ .foot .meta b{{color:#fff}}
+</style>
+<div class="card">
+ <div class="top">
+  <img class="logo" src="data:image/png;base64,{logo}">
+  <div class="eyebrow">{month}<span>{label}</span></div>
+ </div>
+ <h1>Real Estate <em>Market Report</em></h1>
+ <div class="rule"></div>
+ <div class="src">Single-family homes &middot; Source: MIBOR REALTOR&reg; Association</div>
+ <div class="grid">
+  <div class="tile"><div class="lab">Median sale price</div><div class="body"><div class="val red">{median}</div><div class="sub">{median_sub}</div></div></div>
+  <div class="tile"><div class="lab">Homes sold in {mon}</div><div class="body"><div class="val">{sales}</div><div class="sub">{sales_sub}</div></div></div>
+  <div class="tile"><div class="lab">Median days on market</div><div class="body"><div class="val">{dom} days</div><div class="sub">{dom_sub}</div></div></div>
+  <div class="tile"><div class="lab">Months of supply</div><div class="body"><div class="val red">{months}</div><div class="sub">{months_sub}</div></div></div>
+ </div>
+ <div class="foot">
+  <div class="cta">Full report &rarr; <b>yourrealtylink.com</b></div>
+  <div class="meta"><b>Your Realty Link</b> &middot; Janet Giles, Broker</div>
+ </div>
+</div>"""
+
+os.makedirs(GBPDIR, exist_ok=True)
+gok = 0
+for slug, (label, med, med_yoy, sales, sales_yoy, dom, dom_prior, months) in DATA.items():
+    ghtml = GBP.format(
+        logo=LOGO, month=MONTH, mon=MON, label=H.escape(label),
+        median=money(med), median_sub=price_sub(med_yoy),
+        sales="{:,}".format(sales), sales_sub=sales_sub(sales_yoy),
+        dom=dom, dom_sub=dom_sub(dom, dom_prior),
+        months=("%.1f" % months), months_sub=months_desc(months))
+    ghp = os.path.join(SCRATCH, "mg_%s.html" % slug)
+    open(ghp, "w").write(ghtml)
+    gout = os.path.join(GBPDIR, slug + "-gbp.png")
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+                    "--force-device-scale-factor=1", "--window-size=1200,900",
+                    "--virtual-time-budget=2500", "--screenshot=" + gout, "file://" + ghp],
+                   capture_output=True)
+    if os.path.exists(gout):
+        gok += 1
+print("rendered %d/%d GBP 1200x900 -> %s" % (gok, len(DATA), os.path.relpath(GBPDIR, ROOT)))
+
 # mirror to a stable "latest/" folder so on-site embeds never go stale month to month
 LATEST = os.path.join(ROOT, "assets/img/market-reports", "latest")
-if os.path.isdir(LATEST):
+if not GBP_ONLY and os.path.isdir(LATEST):
     shutil.rmtree(LATEST)
-shutil.copytree(OUTDIR, LATEST)
-print("mirrored -> assets/img/market-reports/latest")
+if not GBP_ONLY:
+    shutil.copytree(OUTDIR, LATEST, ignore=shutil.ignore_patterns("gbp-*"))
+    print("mirrored -> assets/img/market-reports/latest")
