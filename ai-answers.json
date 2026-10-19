@@ -385,5 +385,28 @@
         "value": "Mid-April through June"
       }
     ]
+  },
+  {
+    "page": "blog/uad-3-6-appraisal-changes-indiana/",
+    "question": "What is UAD 3.6 and when does it take effect?",
+    "answer": "UAD 3.6 is the updated Uniform Appraisal Dataset and redesigned appraisal report from Fannie Mae and Freddie Mac. Starting <strong>November 2, 2026</strong>, all appraisal reports on loans sold to them must use it. It asks for more detailed property information, so appraisals may take longer, but it <strong>doesn't change how value is determined</strong>.",
+    "facts": [
+      {
+        "label": "Required from",
+        "value": "November 2, 2026"
+      },
+      {
+        "label": "Applies to",
+        "value": "Conventional loans sold to Fannie Mae &amp; Freddie Mac"
+      },
+      {
+        "label": "FHA",
+        "value": "Adopting; no mandatory date yet (Sept 2026)"
+      },
+      {
+        "label": "Value",
+        "value": "Still the appraiser&rsquo;s independent opinion"
+      }
+    ]
   }
 ]
