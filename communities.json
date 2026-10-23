@@ -14,6 +14,7 @@
   "McCordsville",
   "Shelbyville",
   "Southport",
+  "Franklin Township",
   "Lebanon",
   "Franklin",
   "Mooresville",
@@ -6084,6 +6085,196 @@
     "Ranges from affordable cottages to lakefront homes with docks",
     "Rural south Johnson County near Brown County; served by Indian Creek Schools"
    ]
+  },
+  {
+   "slug": "hunters-crossing-indianapolis",
+   "name": "Hunters Crossing",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$300s to $400s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Community pool, playground, ponds and walking trails",
+    "Mostly 2010s-built single-family homes",
+    "Near I-74, Franklin Central High School and Southeastway Park"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "franklin-parke-estates-indianapolis",
+   "name": "Franklin Parke Estates",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$400s to $650s",
+   "type": "custom home community",
+   "highlights": [
+    "Custom homes built in the early 1990s",
+    "Lots of roughly a third to half an acre",
+    "Cul-de-sac streets and mature trees"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "moeller-estates-at-wildwood-farms-indianapolis",
+   "name": "Moeller Estates at Wildwood Farms",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$160s to $290s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Neighborhood pool, playground and pond",
+    "Walking distance to Wildwood Park, with a splash pad and playground",
+    "Homes built in the mid-to-late 2000s"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "villas-at-quail-run-indianapolis",
+   "name": "The Villas at Quail Run",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$190s to $200s",
+   "type": "condo community",
+   "highlights": [
+    "Mid-1990s brick condos, about 1,160 sq ft with 2 bedrooms and 2 baths",
+    "Clubhouse and community pool",
+    "HOA covers lawn care and snow removal"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "hickory-run-indianapolis",
+   "name": "Hickory Run",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$310s to $550s",
+   "type": "new-construction community",
+   "highlights": [
+    "New construction by M/I Homes",
+    "Playground, pavilion, two dog parks and ponds",
+    "Off E Edgewood Ave near the I-74 / Acton Rd exit"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "fields-at-new-bethel-indianapolis",
+   "name": "Fields at New Bethel",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$300s to $400s",
+   "type": "new-construction community",
+   "highlights": [
+    "New construction by D.R. Horton, with 1- and 2-story plans of 3 to 5 bedrooms",
+    "Playground, covered pavilion, fire pit and walking paths",
+    "Less than a mile from Franklin Central High School"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "emerald-preserve-indianapolis",
+   "name": "Emerald Preserve",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$310s to $500s",
+   "type": "new-construction community",
+   "highlights": [
+    "New construction by Fischer Homes, with ranch and two-story plans",
+    "Playground, walking path and seating areas",
+    "Off Hickory Rd, about 5 minutes from I-74"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "palermo-gardens-indianapolis",
+   "name": "Palermo Gardens",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$260s to $320s",
+   "type": "new-construction community",
+   "highlights": [
+    "New construction by Ryan Homes, with ranch and two-story plans of 3 to 5 bedrooms",
+    "Walking trail, playground and pickleball court",
+    "Close to I-465, I-74 and Southeastern Ave"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "crossroads-at-southport-indianapolis",
+   "name": "Crossroads at Southport",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$300s to $450s",
+   "type": "new-construction community",
+   "highlights": [
+    "New construction by Beazer Homes, with 3 to 5 bedroom plans",
+    "Playgrounds and a community picnic area",
+    "Quick access to I-65 and I-74"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "grayson-indianapolis",
+   "name": "Grayson",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Franklin Township",
+   "area_url": "/neighborhoods/franklin-township-indianapolis/",
+   "price_band": "$310s to $370s",
+   "type": "new-construction community",
+   "highlights": [
+    "New construction by M/I Homes, with 1- and 2-story plans",
+    "Walking trails, playground, pavilion and fishing",
+    "Off E Hanna Ave near Franklin Township Community Park"
+   ],
+   "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
   }
  ]
 }

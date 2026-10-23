@@ -120,6 +120,8 @@ def detail_page(c):
     cu = city_url(city); cou = county_url(county)
     school_txt = ("served by %s" % school) if school else "with schools that vary by address"
     cu_link = ('<a href="%s">%s</a>' % (cu, esc(city))) if cu else esc(city)
+    if not cu and c.get("area_url"):   # e.g. city "Indianapolis" + area "Franklin Township"
+        cu_link = '%s&rsquo;s <a href="%s">%s</a>' % (esc(city), c["area_url"], esc(c["area"]))
     cou_link = ('<a href="%s">%s County</a>' % (cou, esc(county))) if cou else ("%s County" % esc(county))
 
     badges = [
@@ -130,9 +132,10 @@ def detail_page(c):
     if hl: badges.append('<span class="hero-badge">✨ %s</span>' % esc(hl[0]))
 
     faq_html, faq_schema = faq_block(c)
-    hl_sentence = natjoin([h[0].lower() + h[1:] for h in hl]) if hl else "well-kept homes and neighborhood amenities"
-    intro_hl = esc(hl[0].lower()) if hl else "its location and lifestyle"
-    intro_hl2 = (" and " + esc(hl[1].lower())) if len(hl) > 1 else ""
+    lc1 = lambda h: h if (len(h) > 1 and h[1].isupper()) else h[:1].lower() + h[1:]   # keep names like M/I Homes, I-74
+    hl_sentence = natjoin([lc1(h) for h in hl]) if hl else "well-kept homes and neighborhood amenities"
+    intro_hl = esc(lc1(hl[0])) if hl else "its location and lifestyle"
+    intro_hl2 = (" and " + esc(lc1(hl[1]))) if len(hl) > 1 else ""
     schoolslink = '/schools/'
     if school:
         schools_p = '%s is served by <a href="%s">%s</a>, a key reason families choose the area. ' % (esc(name), schoolslink, esc(school))
@@ -144,6 +147,7 @@ def detail_page(c):
         amenities_p = '%s offers the neighborhood amenities and green space %s buyers expect. ' % (esc(name), esc(city))
     explore = []
     if cu:  explore.append('<li><a href="%s">%s, Indiana Real Estate</a></li>' % (cu, esc(city)))
+    if c.get("area_url"): explore.append('<li><a href="%s">%s Area Guide</a></li>' % (c["area_url"], esc(c["area"])))
     if cou: explore.append('<li><a href="%s">%s County Real Estate</a></li>' % (cou, esc(county)))
     explore.append('<li><a href="/schools/">Central Indiana School Districts</a></li>')
     explore.append('<li><a href="/communities/">All Communities &amp; Subdivisions</a></li>')
@@ -273,7 +277,7 @@ def detail_page(c):
 def build_hub():
     by_city = {}
     for c in COMMS:
-        by_city.setdefault(c["city"], []).append(c)
+        by_city.setdefault(c.get("area") or c["city"], []).append(c)
     order = [c for c in CITY_ORDER if c in by_city] + [c for c in by_city if c not in CITY_ORDER]
     sections = []
     for city in order:
@@ -362,7 +366,7 @@ for c in COMMS:
     os.makedirs(d, exist_ok=True)
     open(idx, "w", encoding="utf-8").write(detail_page(c))
     made += 1
-    if not city_url(c["city"]): warn.append("no city page for " + c["city"])
+    if not city_url(c["city"]) and not c.get("area_url"): warn.append("no city page for " + c["city"])
 
 # sitemap
 sm = os.path.join(ROOT, "sitemap.xml"); s = open(sm, encoding="utf-8").read(); blk = ""
