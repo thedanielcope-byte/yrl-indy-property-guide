@@ -9,7 +9,8 @@ county, and uses idx_config for the pre-filtered MLS search CTA.
 
     python3 build_schools.py
 """
-import os, re, html, glob, json
+import os, re, html, glob, json, sys
+FORCE = "--force" in sys.argv   # rebuild detail pages that already exist
 import idx_config as idx
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -81,8 +82,19 @@ def faq_html(pairs):
     return "\n".join('<details class="faq-item">\n<summary>%s</summary>\n<div class="faq-answer"><p>%s</p></div>\n</details>' % (esc(q), a) for q, a in pairs)
 
 # ── shared skeleton ──────────────────────────────────────────────────────────
+def cap160(t):
+    """Trim a meta description to 160 chars on a word boundary."""
+    if len(html.unescape(t)) <= 160: return t
+    words, out = t.split(" "), ""
+    for w in words:
+        nxt = (out + " " + w).strip()
+        if len(html.unescape(nxt)) > 157: break
+        out = nxt
+    return out.rstrip(",;:") + "..."
+
 def page(rec, title, meta, hero_sub, badges, intro, sections, cta_city, faqs,
          explore, quick_facts, related, crumb):
+    meta = cap160(meta)
     slug = rec["slug"]; url = "https://yourrealtylink.com/schools/%s/" % slug
     fh = faq_html(faqs); fs = faq_schema(faqs)
     badges_html = "\n ".join(badges)
@@ -108,6 +120,10 @@ def page(rec, title, meta, hero_sub, badges, intro, sections, cta_city, faqs,
  <meta property="og:url" content="{url}">
  <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="{esc(title)}">
+ <meta name="twitter:description" content="{esc(meta)}">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": ["LocalBusiness","RealEstateAgent"], "name": "Your Realty Link", "url": "https://yourrealtylink.com", "telephone": "317-997-7404", "areaServed": "{esc(cta_city)}, Indiana" }},
@@ -433,6 +449,10 @@ def hub():
  <meta property="og:url" content="{url}">
  <meta property="og:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <meta property="og:type" content="website">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Central Indiana School Districts &amp; Schools | Your Realty Link">
+ <meta name="twitter:description" content="Homes for sale by school district across Central Indiana — public districts and private schools by area.">
+ <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/og-default.png">
  <script type="application/ld+json">
  {{ "@context": "https://schema.org", "@graph": [
  {{ "@type": "WebPage", "url": "{url}", "name": "Central Indiana School Districts" }},
@@ -474,7 +494,7 @@ def hub():
   <h3>Searching for a Home in a Specific District?</h3>
   <p>Your Realty Link helps buyers find homes inside the school boundary that matters most. Get a free home valuation or start your search today.</p>
   <div class="btn-group">
-  <a href="https://yourrealtylink.com/property-search" class="btn btn-white" target="_blank" rel="noopener">Search Homes →</a>
+  <a href="/search/" class="btn btn-white">Search Homes →</a>
   <a href="/services/free-home-valuation/" class="btn btn-outline" target="_blank" rel="noopener">Free Home Valuation</a>
   <a href="/contact/" class="btn btn-outline">Contact Your Realty Link</a>
   </div>
@@ -494,6 +514,8 @@ made, skipped, warn = 0, 0, []
 for rec in SCHOOLS:
     d = os.path.join(ROOT, "schools", rec["slug"]); idxf = os.path.join(d, "index.html")
     if rec.get("existing"):          # preserve the 10 hand-authored district pages
+        skipped += 1; continue
+    if os.path.exists(idxf) and not FORCE:   # keep hand-tuned SEO edits on built pages
         skipped += 1; continue
     os.makedirs(d, exist_ok=True)
     htmlout = district_page(rec) if rec["type"] == "public" else private_page(rec)

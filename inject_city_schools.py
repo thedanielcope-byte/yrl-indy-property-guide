@@ -62,10 +62,14 @@ def update_quickfacts(s, pub):
 def inject(pathdir, city, rec):
     f = os.path.join(pathdir, "index.html")
     s = open(f, encoding="utf-8").read()
-    s = re.sub(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\s*", "", s, flags=re.DOTALL)
+    HOLD = "\x00CITY-SCHOOLS-HOLD\x00"
+    s, kept = re.subn(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\s*", HOLD, s, count=1, flags=re.DOTALL)
     s = update_quickfacts(s, rec["public"])   # edit quick-facts FIRST, then compute the anchor on final s
     has = "<!-- SCHOOLS -->" in s
     sec = section(city, rec, with_h2=not has)
+    if kept:                                  # block already on the page: refresh it where it sits
+        open(f, "w", encoding="utf-8").write(s.replace(HOLD, sec, 1))
+        return True
     if has:
         i = s.index("<!-- SCHOOLS -->") + len("<!-- SCHOOLS -->")
         m = re.search(r"<!--", s[i:])          # insert before the next section marker

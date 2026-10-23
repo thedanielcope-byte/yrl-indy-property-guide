@@ -1405,23 +1405,6 @@
    "video": null
   },
   {
-   "slug": "homecroft-southport",
-   "name": "Homecroft",
-   "city": "Southport",
-   "county": "Marion",
-   "price_band": "$150s to $300s",
-   "type": "established neighborhood",
-   "highlights": [
-    "Small incorporated town within Perry Township (est. 1923)",
-    "Tree-lined streets and well-kept homes",
-    "Adjacent to Southport, near Madison Ave"
-   ],
-   "school_district": "Perry Township Schools (MSD of Perry Township)",
-   "hoa_url": null,
-   "image": null,
-   "video": null
-  },
-  {
    "slug": "university-heights-southport",
    "name": "University Heights",
    "city": "Southport",

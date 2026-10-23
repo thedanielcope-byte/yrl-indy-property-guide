@@ -22,6 +22,7 @@ LINKS = {
  "schools/perry-township-schools/index.html": f"For neighborhoods, prices and commutes across the district, see our {PERRY}.",
  "schools/center-grove-schools/index.html": f"For neighborhoods, prices and new construction across the district, see our {CG}.",
  "schools/franklin-township-schools/index.html": f"For neighborhoods, prices and commutes across the district, see our {FT}.",
+ "schools/decatur-township-schools/index.html": f"For neighborhoods, prices and new construction across the district, see our {DT}.",
 }
 
 for path, sentence in LINKS.items():

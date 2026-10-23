@@ -3027,12 +3027,6 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>https://yourrealtylink.com/communities/homecroft-southport/</loc>
- <lastmod>2026-09-04</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>https://yourrealtylink.com/communities/university-heights-southport/</loc>
  <lastmod>2026-09-04</lastmod>
   <changefreq>monthly</changefreq>
@@ -6285,4 +6279,9 @@
  <changefreq>monthly</changefreq>
  <priority>0.7</priority>
  </url>
+<url>
+  <loc>https://yourrealtylink.com/schools/decatur-township-schools/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
 </urlset>

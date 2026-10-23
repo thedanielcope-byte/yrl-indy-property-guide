@@ -469,6 +469,19 @@
    "existing": true
   },
   {
+   "slug": "decatur-township-schools",
+   "name": "MSD of Decatur Township",
+   "short_name": "Decatur Township",
+   "type": "public",
+   "county": "Marion",
+   "grade_span": "K-12",
+   "cities": [
+    "Camby"
+   ],
+   "boundary_note": "It covers most of Decatur Township in southwest Marion County, including Camby, Valley Mills, West Newton and the area around the airport; some Heartland Crossing sections are served by Mooresville Consolidated Schools instead.",
+   "existing": false
+  },
+  {
    "slug": "msd-lawrence-township",
    "name": "MSD of Lawrence Township",
    "short_name": "Lawrence Township",
@@ -2013,6 +2026,15 @@
    "private": [],
    "note": "Coatesville is served by Mill Creek Community Schools (Cascade schools in Clayton).",
    "county": "Hendricks"
+  },
+  "Camby": {
+   "public": [
+    "decatur-township-schools",
+    "mooresville-consolidated-schools"
+   ],
+   "private": [],
+   "note": "MSD of Decatur Township (Decatur Central High School) serves most of Camby; the far southwest / Morgan County edge is served by Mooresville Consolidated School Corporation.",
+   "county": "Marion"
   }
  }
 }

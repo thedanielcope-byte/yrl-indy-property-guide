@@ -36,9 +36,10 @@
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="Your Realty Link">
  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["LocalBusiness", "RealEstateAgent"], "@id": "https://yourrealtylink.com/#business", "name": "Your Realty Link", "alternateName": "Your Realty Link", "description": "Full-service MIBOR real estate brokerage serving buyers, sellers, and investors across Central Indiana.", "url": "https://yourrealtylink.com", "telephone": "+13179977404", "email": "indy@yourrealtylink.com", "address": {"@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 39.6789, "longitude": -86.1003}, "areaServed": {"@type": "State", "name": "Indiana"}, "priceRange": "$$", "image": "/assets/img/yrl-logo.png", "sameAs": ["https://www.facebook.com/yourrealtylink", "https://www.linkedin.com/company/your-realty-link-llc/", "https://www.instagram.com/IndianapolisRealEstate", "https://www.youtube.com/@yourrealtylink", "https://www.google.com/maps/place/?q=place_id:ChIJVwJ1dGFda4gRADdrVWlDYtk"], "founder": {"@type": "Person", "name": "Janet Giles-Schultz", "jobTitle": "Principal Broker & Owner", "url": "https://yourrealtylink.com/agents/janet-giles/"}}, {"@type": "WebSite", "@id": "https://yourrealtylink.com/#website", "url": "https://yourrealtylink.com", "name": "Your Realty Link", "publisher": {"@id": "https://yourrealtylink.com/#business"}}]}</script>
+ <link rel="preload" as="image" href="/assets/img/heroes/yrl-office-960.webp" imagesrcset="/assets/img/heroes/yrl-office-640.webp 640w, /assets/img/heroes/yrl-office-960.webp 960w, /assets/img/heroes/yrl-office-1280.webp 1280w, /assets/img/heroes/yrl-office.webp 1800w" imagesizes="(max-width: 900px) 100vw, 75vw" type="image/webp" fetchpriority="high">
  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap"></noscript>
- <link rel="preload" as="image" href="/assets/img/heroes/yrl-office.webp" type="image/webp" fetchpriority="high">
  <link rel="stylesheet" href="/assets/css/style.css?v=4563a4fe">
  <style>
  /* Homepage-specific overrides */
@@ -368,8 +369,8 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 <section class="hero-split">
  <div class="hero-split-photo">
   <picture>
-   <source srcset="/assets/img/heroes/yrl-office.webp" type="image/webp">
-   <img src="/assets/img/heroes/yrl-office.jpg" alt="Your Realty Link office at 2302 E Southport Road, Indianapolis" width="1800" height="1200" fetchpriority="high" decoding="async">
+   <source srcset="/assets/img/heroes/yrl-office-640.webp 640w, /assets/img/heroes/yrl-office-960.webp 960w, /assets/img/heroes/yrl-office-1280.webp 1280w, /assets/img/heroes/yrl-office.webp 1800w" sizes="(max-width: 900px) 100vw, 75vw" type="image/webp">
+   <img src="/assets/img/heroes/yrl-office.jpg" srcset="/assets/img/heroes/yrl-office-960.jpg 960w, /assets/img/heroes/yrl-office.jpg 1800w" sizes="(max-width: 900px) 100vw, 75vw" alt="Your Realty Link office at 2302 E Southport Road, Indianapolis" width="1800" height="1200" fetchpriority="high" decoding="async">
   </picture>
  </div>
  <div class="hero-split-content">
@@ -457,7 +458,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  </div>
  <div class="value-grid">
  <a class="value-card" href="/about/">
-<img class="vc-img" src="/assets/img/tiles/local-expertise.jpg" alt="A Your Realty Link agent with the downtown Indianapolis skyline" loading="lazy" width="900" height="520">
+<picture style="display:block"><source type="image/webp" srcset="/assets/img/tiles/local-expertise-480.webp 480w, /assets/img/tiles/local-expertise.webp 900w" sizes="(max-width: 600px) 92vw, 300px"><img class="vc-img" src="/assets/img/tiles/local-expertise.jpg" alt="A Your Realty Link agent with the downtown Indianapolis skyline" loading="lazy" width="900" height="520"></picture>
 <div class="vc-body">
 <h3>Local Expertise</h3>
 <p>The Your Realty Link team knows Central Indiana's neighborhoods, price trends, and communities inside and out. We live and work here.</p>
@@ -465,7 +466,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 </div>
 </a>
  <a class="value-card" href="/senior-living/">
-<img class="vc-img" src="/assets/img/tiles/senior-living.jpg" alt="A senior couple moving forward to a new season of life" loading="lazy" width="900" height="520">
+<picture style="display:block"><source type="image/webp" srcset="/assets/img/tiles/senior-living-480.webp 480w, /assets/img/tiles/senior-living.webp 900w" sizes="(max-width: 600px) 92vw, 300px"><img class="vc-img" src="/assets/img/tiles/senior-living.jpg" alt="A senior couple moving forward to a new season of life" loading="lazy" width="900" height="520"></picture>
 <div class="vc-body">
 <h3>Senior Living</h3>
 <p>Downsizing, right-sizing, or moving to a 55+ community? Our senior real estate specialists guide you through every step — from prepping the family home to finding the perfect next chapter.</p>
@@ -473,7 +474,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 </div>
 </a>
  <a class="value-card" href="/resources/">
-<img class="vc-img" src="/assets/img/tiles/free-resources.jpg" alt="Free Your Realty Link city home guides" loading="lazy" width="760" height="440">
+<picture style="display:block"><source type="image/webp" srcset="/assets/img/tiles/free-resources-480.webp 480w, /assets/img/tiles/free-resources.webp 760w" sizes="(max-width: 600px) 92vw, 300px"><img class="vc-img" src="/assets/img/tiles/free-resources.jpg" alt="Free Your Realty Link city home guides" loading="lazy" width="760" height="440"></picture>
 <div class="vc-body">
 <h3>Free Local Resources</h3>
 <p>Hundreds of city guides, county overviews, neighborhood breakdowns, and service pages — all written specifically for Central Indiana buyers and sellers.</p>
@@ -481,7 +482,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 </div>
 </a>
  <a class="value-card" href="/agents/">
-<img class="vc-img" src="/assets/img/tiles/trusted-agents.jpg" alt="The Your Realty Link agent team" loading="lazy" width="760" height="440">
+<picture style="display:block"><source type="image/webp" srcset="/assets/img/tiles/trusted-agents-480.webp 480w, /assets/img/tiles/trusted-agents.webp 760w" sizes="(max-width: 600px) 92vw, 300px"><img class="vc-img" src="/assets/img/tiles/trusted-agents.jpg" alt="The Your Realty Link agent team" loading="lazy" width="760" height="440"></picture>
 <div class="vc-body">
 <h3>Trusted Agents</h3>
 <p>Your Realty Link puts people first. Whether you're a first-time buyer, a seasoned investor, or ready to list, our agents guide you every step of the way.</p>
