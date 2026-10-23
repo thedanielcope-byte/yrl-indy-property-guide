@@ -40,6 +40,9 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap"></noscript>
+ <link rel="icon" href="/favicon.ico" sizes="48x48">
+ <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/icon-192.png">
+ <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
  <link rel="stylesheet" href="/assets/css/style.css?v=4563a4fe">
  <style>
  /* Homepage-specific overrides */
@@ -434,7 +437,8 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  </div>
  <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);border:1px solid #e2e2e2;background:#fff;">
  <iframe
- src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=bGlzdF9vZmZpY2VfbWxzX2lkPU1CUllSTFQwMSZtbHNfc3RhdHVzPWFjdGl2ZQ==&amp;user_id=6024260"
+ id="officeListingsFrame"
+ data-src="https://cms.mysolidearth.com/embed/websites/36/resources/138?base_query[Property]=bGlzdF9vZmZpY2VfbWxzX2lkPU1CUllSTFQwMSZtbHNfc3RhdHVzPWFjdGl2ZQ==&amp;user_id=6024260"
  width="100%"
  height="640"
  scrolling="auto"
@@ -443,6 +447,20 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
  loading="lazy"
  style="display:block;width:100%;border:none;"></iframe>
  </div>
+ <script>
+ // Load the office-listings feed only when it's about to scroll into view: it pulls
+ // ~12 MB of full-size MLS photos, which otherwise slows the first screen on mobile.
+ (function () {
+  var f = document.getElementById('officeListingsFrame');
+  if (!f) return;
+  function load() { if (!f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src')); }
+  if (!('IntersectionObserver' in window)) { load(); return; }
+  var io = new IntersectionObserver(function (entries) {
+   if (entries.some(function (e) { return e.isIntersecting; })) { load(); io.disconnect(); }
+  }, { rootMargin: '200px 0px' });
+  io.observe(f);
+ })();
+ </script>
  <div class="listings-cta">
  <a href="/search/">Browse All MLS Listings &rarr;</a>
  </div>

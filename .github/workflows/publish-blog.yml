@@ -34,6 +34,7 @@ jobs:
         run: |
           python3 build-blog.py
           python3 inject_gtag.py   # re-add GA4 tag to newly generated blog pages
+          python3 inject_favicon.py   # re-add favicon tags to regenerated pages
 
       - name: Commit & push if anything changed
         run: |
