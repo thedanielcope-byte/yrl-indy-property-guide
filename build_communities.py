@@ -27,6 +27,9 @@ HEADER = grab(r'<header class="site-header">.*?</header>')
 FOOTER = grab(r'<footer class="site-footer">.*?</footer>')
 SCRIPTS = grab(r'<script>\nfunction toggleNav.*?</body>\n</html>')
 
+def a_an(w):  # article for a type like "established subdivision"
+    return "an" if str(w or "")[:1].lower() in "aeiou" else "a"
+
 def esc(s):  return html.escape(str(s or ""), quote=False)
 def uhref(u): return str(u or "").replace("&", "&amp;")
 def disp(c): return c.get("short_name") or c["name"]
@@ -64,7 +67,7 @@ def faq_block(c):
        "Use the Your Realty Link property search to browse active MLS listings in %s and across %s &mdash; all pulled directly from the MIBOR MLS." % (name, city)),
       ("What schools serve %s?" % name, sc),
       ("Is %s a good community?" % name,
-       "%s is a %s in %s that draws buyers for its location, amenities, and lifestyle. Your Realty Link knows the community and can help you weigh whether it fits your needs." % (name, c.get("type","community"), city)),
+       "%s is %s %s in %s that draws buyers for its location, amenities, and lifestyle. Your Realty Link knows the community and can help you weigh whether it fits your needs." % (name, a_an(c.get("type","community")), c.get("type","community"), city)),
     ]
     html_ = "\n".join('<details class="faq-item">\n<summary>%s</summary>\n<div class="faq-answer"><p>%s</p></div>\n</details>' % (esc(q), a) for q, a in faqs)
     schema = ",\n".join('{ "@type": "Question", "name": %s, "acceptedAnswer": { "@type": "Answer", "text": %s } }'
@@ -158,7 +161,7 @@ def detail_page(c):
     body = f'''<section class="page-hero">
  <div class="container">
  <h1>{esc(name)} <em>Homes for Sale</em></h1>
- <p class="hero-sub">A {esc(ctype)} in {esc(city)}, {esc(county)} County, {esc(school_txt)}. Your Realty Link helps buyers and sellers in {esc(name)}.</p>
+ <p class="hero-sub">{a_an(ctype).capitalize()} {esc(ctype)} in {esc(city)}, {esc(county)} County, {esc(school_txt)}. Your Realty Link helps buyers and sellers in {esc(name)}.</p>
  <div class="hero-badges">
  {badges_html}
  </div><p class="hero-reviewed">✔ Reviewed by <a href="/agents/janet-giles/">Janet Giles-Schultz</a>, Principal Broker · MIBOR member · Updated August 2026</p>
@@ -169,7 +172,7 @@ def detail_page(c):
  <div class="content-wrap">
  <main class="content-main">
 
- <p>{esc(full)} is a {esc(ctype)} in {cu_link}, one of Central Indiana's most sought-after communities. Known for {intro_hl}{intro_hl2}, it's a place buyers ask about across {cou_link}. <strong>Your Realty Link</strong> &mdash; an Indianapolis-based MIBOR brokerage &mdash; helps buyers and sellers throughout {esc(name)} and the surrounding {esc(city)} area.</p>
+ <p>{esc(full)} is {a_an(ctype)} {esc(ctype)} in {cu_link}, one of Central Indiana's most sought-after communities. Known for {intro_hl}{intro_hl2}, it's a place buyers ask about across {cou_link}. <strong>Your Realty Link</strong> &mdash; an Indianapolis-based MIBOR brokerage &mdash; helps buyers and sellers throughout {esc(name)} and the surrounding {esc(city)} area.</p>
 
  <h2>Living in {esc(name)}</h2>
  <p>{esc(name)} offers the kind of setting that keeps {esc(city)} in demand &mdash; {hl_sentence}. Everyday shopping, dining, and services are close by, and the broader {esc(city)} area surrounds the community with parks, employment, and strong public services. It's a community that suits families and professionals looking for an established {esc(city)} address.</p>

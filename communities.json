@@ -15,6 +15,9 @@
   "Shelbyville",
   "Southport",
   "Franklin Township",
+  "Wayne Township",
+  "Washington Township",
+  "Lawrence Township",
   "Lebanon",
   "Franklin",
   "Mooresville",
@@ -4094,24 +4097,6 @@
    "short_name": "Meadowood"
   },
   {
-   "slug": "winterwood-speedway",
-   "name": "Winterwood",
-   "city": "Speedway",
-   "county": "Marion",
-   "price_band": "mid-$100s to high-$200s",
-   "type": "established subdivision",
-   "highlights": [
-    "established neighborhood with mature trees",
-    "brick ranch and traditional homes",
-    "quick access to Speedway shopping, dining and I-465"
-   ],
-   "school_district": "School Town of Speedway",
-   "hoa_url": null,
-   "image": null,
-   "video": null,
-   "short_name": "Winterwood"
-  },
-  {
    "slug": "timbergate-edinburgh",
    "name": "Timbergate",
    "city": "Edinburgh",
@@ -4956,15 +4941,15 @@
    "slug": "sail-place-geist",
    "name": "Sail Place",
    "city": "Geist",
-   "county": "Marion",
+   "county": "Hamilton",
    "price_band": "$300s to $700s",
    "type": "waterfront community",
    "highlights": [
-    "Geist Reservoir waterfront and water-access subdivision",
-    "Lawrence Township location near Geist marinas",
-    "Established homes on wooded lots"
+    "Small Geist Reservoir community of about 30 lots, many with deeded docks",
+    "Hamilton County side of Geist, near the marinas",
+    "HOA handles lawn care and snow removal"
    ],
-   "school_district": "MSD of Lawrence Township",
+   "school_district": "Hamilton Southeastern Schools",
    "hoa_url": null,
    "image": null,
    "video": null
@@ -4973,15 +4958,15 @@
    "slug": "windjammer-at-geist",
    "name": "Windjammer at Geist",
    "city": "Geist",
-   "county": "Marion",
+   "county": "Hamilton",
    "price_band": "$300s to $700s",
    "type": "waterfront community",
    "highlights": [
-    "Named Geist waterfront subdivision on the Lawrence Township side",
-    "Reservoir access for boating and fishing",
+    "Wooded Geist-area subdivision on the Hamilton County side",
+    "Minutes from Geist Reservoir boating and fishing",
     "Near Geist shopping and dining"
    ],
-   "school_district": "MSD of Lawrence Township",
+   "school_district": "Hamilton Southeastern Schools",
    "hoa_url": null,
    "image": null,
    "video": null,
@@ -6010,9 +5995,9 @@
    "highlights": [
     "Small established neighborhood adjacent to Tansel Woods",
     "Quiet, family-oriented west-side setting near Clermont",
-    "Served by MSD of Wayne Township schools"
+    "Served by MSD of Pike Township schools"
    ],
-   "school_district": "MSD of Wayne Township",
+   "school_district": "MSD of Pike Township",
    "hoa_url": null,
    "image": null,
    "video": null
@@ -6272,6 +6257,454 @@
     "Off E Hanna Ave near Franklin Township Community Park"
    ],
    "school_district": "Franklin Township Community School Corporation",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "eagledale-indianapolis",
+   "name": "Eagledale",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$100s to $200s",
+   "type": "established neighborhood",
+   "highlights": [
+    "National Homes neighborhood that opened in 1955, with about 3,400 homes",
+    "Mostly 1950s single-family homes around 34th Street and Georgetown Road",
+    "About two miles from the Indianapolis Motor Speedway"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "chapel-hill-indianapolis",
+   "name": "Chapel Hill",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$160s to $280s",
+   "type": "established family subdivision",
+   "highlights": [
+    "1960s subdivision of about 665 homes in ZIP 46214",
+    "Next to the Chapel Hill 7th & 8th Grade Center on W 10th Street",
+    "Less than a mile from Ben Davis High School"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "chapel-glen-indianapolis",
+   "name": "Chapel Glen",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$240s to $350s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Platted from 1967 to 1974, with about 370 homes",
+    "Chapel Glen Elementary is on Lansdowne Road inside the neighborhood",
+    "Many homes sit on cul-de-sac courts"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "west-wood-indianapolis",
+   "name": "West Wood",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$180s to $290s",
+   "type": "established family subdivision",
+   "highlights": [
+    "1980s subdivision of about 370 homes in ZIP 46214",
+    "Streets named for soccer greats like Pelé, Maradona and Beckenbauer",
+    "Less than a mile from Ben Davis High School"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "speedway-woods-indianapolis",
+   "name": "Speedway Woods",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$180s to $310s",
+   "type": "established family subdivision",
+   "highlights": [
+    "1990s ranch and two-story homes, about 315 lots",
+    "Indianapolis address served by MSD of Wayne Township, not Speedway schools",
+    "About a mile from I-465 and close to the Town of Speedway"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "avon-creek-estates-indianapolis",
+   "name": "Avon Creek Estates",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$290s to $390s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Late-1980s and early-1990s subdivision of about 175 homes",
+    "Next to Raceway Road at the Hendricks County line, a short drive from Avon",
+    "One of the higher-priced neighborhoods in Wayne Township"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "villages-at-drake-landing-indianapolis",
+   "name": "The Villages at Drake Landing",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$250s to $340s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Built from the mid-1990s to the early 2000s, with about 400 homes",
+    "Streets named for waterfowl, like Canvasback, Mallard Green and Gadwall",
+    "Some lots back up to HOA common and preservation areas"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sunningdale-commons-indianapolis",
+   "name": "Sunningdale Commons",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$250s to $350s",
+   "type": "established family subdivision",
+   "highlights": [
+    "1990s subdivision of about 280 homes in ZIP 46234",
+    "HOA community on the northwest side, just south of W 30th Street",
+    "About half a mile from The Villages at Drake Landing"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "cameron-meadows-indianapolis",
+   "name": "Cameron Meadows",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$210s to $300s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Built around 2000 to 2002, with about 425 homes",
+    "HOA community by Raceway Road at the Hendricks County line, in ZIP 46231",
+    "About a mile south of Avon Creek Estates"
+   ],
+   "school_district": "MSD of Wayne Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "central-state-indianapolis",
+   "name": "Central State",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Wayne Township",
+   "area_url": "/neighborhoods/wayne-township-indianapolis/",
+   "price_band": "$250s to $350s",
+   "type": "new-construction community",
+   "highlights": [
+    "Homes and townhomes built since 2017 on the former Central State Hospital campus off W Washington St",
+    "Master-planned by Holladay Properties, with homes by builders including Compendium Group and M/I Homes",
+    "Same campus as the Indiana Medical History Museum"
+   ],
+   "school_district": "Indianapolis Public Schools",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "ravenswood-indianapolis",
+   "name": "Ravenswood",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Washington Township",
+   "area_url": "/neighborhoods/washington-township-indianapolis/",
+   "price_band": "$180s to $330s",
+   "type": "established neighborhood",
+   "highlights": [
+    "White River neighborhood between 71st and 75th Streets, west of Keystone Avenue",
+    "Began as an early-1900s resort area; cottages, ranches and river homes, some with docks",
+    "Much of it is in the White River floodplain, so check flood zone and insurance"
+   ],
+   "school_district": "MSD of Washington Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "rocky-ripple-indianapolis",
+   "name": "Rocky Ripple",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Washington Township",
+   "area_url": "/neighborhoods/washington-township-indianapolis/",
+   "price_band": "$200s to $500s",
+   "type": "established neighborhood",
+   "highlights": [
+    "Small included town between the Central Canal and the White River, next to Butler University",
+    "Founded in 1927, with about 300 homes and an annual Rocky Ripple Festival",
+    "Most of the town is in the White River floodplain, so check flood zone and insurance"
+   ],
+   "school_district": "MSD of Washington Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "greenbriar-indianapolis",
+   "name": "Greenbriar",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Washington Township",
+   "area_url": "/neighborhoods/washington-township-indianapolis/",
+   "price_band": "$260s to $390s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Bounded by Hoover Lane, 79th Street, Williams Creek and Ditch Road",
+    "Largely 1960s-era ranches and two-story homes",
+    "Near Greenbriar Elementary and the Greenbriar shopping center on 86th Street"
+   ],
+   "school_district": "MSD of Washington Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "sycamore-springs-indianapolis",
+   "name": "Sycamore Springs",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Washington Township",
+   "area_url": "/neighborhoods/washington-township-indianapolis/",
+   "price_band": "$500s to $2M+",
+   "type": "custom home community",
+   "highlights": [
+    "Gated community near 82nd Street and Dean Road",
+    "Ranches, townhomes and custom estate homes, largely built in the early 2000s",
+    "Clubhouse with pool and fitness room on about 125 landscaped acres"
+   ],
+   "school_district": "MSD of Washington Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "newport-bay-indianapolis",
+   "name": "Newport Bay",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Washington Township",
+   "area_url": "/neighborhoods/washington-township-indianapolis/",
+   "price_band": "$170s to $230s",
+   "type": "condo community",
+   "highlights": [
+    "Gated condo community on 80-acre Lake Clearwater",
+    "Two-bedroom condos built around the late 1980s, with secure garage parking",
+    "Indoor pool, fitness center and a community pontoon boat"
+   ],
+   "school_district": "MSD of Washington Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "williams-creek-indianapolis",
+   "name": "Williams Creek",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Washington Township",
+   "area_url": "/neighborhoods/washington-township-indianapolis/",
+   "price_band": "$1M to $5M+",
+   "type": "custom home community",
+   "highlights": [
+    "Included town of about 430 residents, incorporated in 1932",
+    "About 163 individually designed homes on large, wooded lots",
+    "Borders Meridian Hills, about 9 miles north of downtown"
+   ],
+   "school_district": "MSD of Washington Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "clifton-trace-indianapolis",
+   "name": "Clifton Trace",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Lawrence Township",
+   "area_url": "/neighborhoods/lawrence-township-indianapolis/",
+   "price_band": "$250s to $320s",
+   "type": "new-construction community",
+   "highlights": [
+    "New Lennar single-family homes, one- and two-story plans",
+    "Pool and pool house, playground, pond and trails",
+    "Southeast corner of the township, near the Hancock County line"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "lantern-hills-indianapolis",
+   "name": "Lantern Hills",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Lawrence Township",
+   "area_url": "/neighborhoods/lawrence-township-indianapolis/",
+   "price_band": "$280s to $490s",
+   "type": "established neighborhood",
+   "highlights": [
+    "Mostly 1950s–70s ranch and tri-level homes",
+    "Wooded lots, many around half an acre",
+    "No HOA dues on recent sales"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "brendonwood-indianapolis",
+   "name": "Brendonwood",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Lawrence Township",
+   "area_url": "/neighborhoods/lawrence-township-indianapolis/",
+   "price_band": "$600s to $800s+",
+   "type": "established neighborhood",
+   "highlights": [
+    "Planned community begun in 1917, laid out with landscape architect George Kessler",
+    "Listed on the National Register of Historic Places in 2004",
+    "About 110 homesites of 1.4 to 5.7 acres along Fall Creek"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "castleton-farms-indianapolis",
+   "name": "Castleton Farms",
+   "city": "Indianapolis",
+   "county": "Marion",
+   "area": "Lawrence Township",
+   "area_url": "/neighborhoods/lawrence-township-indianapolis/",
+   "price_band": "$160s to $210s",
+   "type": "condo community",
+   "highlights": [
+    "Mostly two-bedroom condos built in the early 1980s",
+    "Clubhouse, pool and walking paths around a pond",
+    "Minutes from Castleton shopping and I-69"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "silver-stream-lawrence",
+   "name": "Silver Stream",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "$240s to $360s",
+   "type": "new-construction community",
+   "highlights": [
+    "New Arbor Homes single-family homes, 3–5 bedrooms",
+    "Ponds, walking trails, playground and dog park",
+    "Inside the City of Lawrence, in the township’s southeast"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "kensington-farms-lawrence",
+   "name": "Kensington Farms",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "$210s to $390s",
+   "type": "established family subdivision",
+   "highlights": [
+    "Single-family homes built in the mid-to-late 1990s",
+    "Pool, playground, basketball court and walking trails",
+    "Registered HOA in Lawrence’s Sunnyside neighborhood"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": null,
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "watson-farms-lawrence",
+   "name": "Watson Farms",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "$250s to $380s",
+   "type": "established family subdivision",
+   "highlights": [
+    "327 homes on a former family dairy farm, developed from 1993",
+    "Heated pool and bathhouse, plus five retention ponds",
+    "Between 59th and 63rd streets, near Fort Harrison State Park"
+   ],
+   "school_district": "MSD of Lawrence Township",
+   "hoa_url": "https://watsonfarmshoa.org/",
+   "image": null,
+   "video": null
+  },
+  {
+   "slug": "oakland-hills-at-geist-lawrence",
+   "name": "Oakland Hills at Geist",
+   "city": "Lawrence",
+   "county": "Marion",
+   "price_band": "$360s to $700s+",
+   "type": "established family subdivision",
+   "highlights": [
+    "Larger homes built from the late 1980s through the 2010s",
+    "Near the private Old Oakland Golf Club on East 75th Street",
+    "Inside the City of Lawrence, a short drive south of Geist Reservoir"
+   ],
+   "school_district": "MSD of Lawrence Township",
    "hoa_url": null,
    "image": null,
    "video": null

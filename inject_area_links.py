@@ -11,6 +11,10 @@ PERRY = '<a href="/neighborhoods/perry-township-indianapolis/">Perry Township ar
 CG = '<a href="/neighborhoods/center-grove-indiana/">Center Grove area guide</a>'
 FT = '<a href="/neighborhoods/franklin-township-indianapolis/">Franklin Township area guide</a>'
 DT = '<a href="/neighborhoods/decatur-township-indianapolis/">Decatur Township area guide</a>'
+WAY = '<a href="/neighborhoods/wayne-township-indianapolis/">Wayne Township area guide</a>'
+WASH = '<a href="/neighborhoods/washington-township-indianapolis/">Washington Township area guide</a>'
+LAW = '<a href="/neighborhoods/lawrence-township-indianapolis/">Lawrence Township area guide</a>'
+PIKE = '<a href="/neighborhoods/pike-township-indianapolis/">Pike Township</a>'
 
 LINKS = {
  "cities/marion-county/southport-indiana-real-estate/index.html": f"Southport sits inside Indianapolis&rsquo;s Perry Township; for the wider south side, see our {PERRY}.",
@@ -22,6 +26,17 @@ LINKS = {
  "schools/perry-township-schools/index.html": f"For neighborhoods, prices and commutes across the district, see our {PERRY}.",
  "schools/center-grove-schools/index.html": f"For neighborhoods, prices and new construction across the district, see our {CG}.",
  "schools/franklin-township-schools/index.html": f"For neighborhoods, prices and commutes across the district, see our {FT}.",
+ "cities/marion-county/speedway-indiana-real-estate/index.html": f"Speedway sits inside Wayne Township on Indianapolis&rsquo;s west side; for the surrounding neighborhoods, see our {WAY}.",
+ "cities/marion-county/clermont-indiana-real-estate/index.html": f"Clermont straddles the {PIKE} and Wayne Township line on the west side; see our {WAY}.",
+ "cities/marion-county/meridian-hills-indiana-real-estate/index.html": f"Meridian Hills is one of the small included towns inside Washington Township; for the wider north side, see our {WASH}.",
+ "neighborhoods/broad-ripple-indianapolis/index.html": f"Broad Ripple is part of Washington Township on Indianapolis&rsquo;s north side; see our {WASH}.",
+ "neighborhoods/meridian-kessler-indianapolis/index.html": f"Meridian-Kessler is part of Washington Township on Indianapolis&rsquo;s north side; see our {WASH}.",
+ "neighborhoods/butler-tarkington-indianapolis/index.html": f"Butler-Tarkington is part of Washington Township on Indianapolis&rsquo;s north side; see our {WASH}.",
+ "neighborhoods/nora-indianapolis/index.html": f"Nora is part of Washington Township on Indianapolis&rsquo;s north side; see our {WASH}.",
+ "cities/marion-county/lawrence-indiana-real-estate/index.html": f"The City of Lawrence covers about two-fifths of Lawrence Township; for the wider northeast side, including Castleton and Geist, see our {LAW}.",
+ "neighborhoods/castleton-indianapolis/index.html": f"Most of Castleton sits in Lawrence Township on the northeast side; see our {LAW}.",
+ "schools/msd-washington-township/index.html": f"For neighborhoods, prices and commutes across the township, see our {WASH}.",
+ "schools/msd-lawrence-township/index.html": f"For neighborhoods, prices and commutes across the district, see our {LAW}.",
  "schools/decatur-township-schools/index.html": f"For neighborhoods, prices and new construction across the district, see our {DT}.",
 }
 
