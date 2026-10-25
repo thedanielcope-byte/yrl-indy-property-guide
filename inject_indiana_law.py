@@ -73,7 +73,7 @@ FIXES = {
   ('og:title" content="Selling an Inherited Home Indianapolis | Your Realty Link"', 'og:title" content="Selling an Inherited House in Indiana | Your Realty Link"'),
   ('twitter:title" content="Selling an Inherited Home Indianapolis | Your Realty Link"', 'twitter:title" content="Selling an Inherited House in Indiana | Your Realty Link"'),
   ('name="description" content="Inherited a home in Indianapolis or Central Indiana? Your Realty Link helps heirs understand their options and sell with confidence."',
-   'name="description" content="Selling an inherited house in Indiana? How TOD deeds, joint ownership and probate affect the sale, and how our Indianapolis team helps heirs sell with confidence."'),
+   'name="description" content="Selling an inherited house in Indiana? How TOD deeds, joint ownership and probate affect the sale, and how our Indianapolis team helps heirs sell."'),
   ("<h1>Selling an Inherited Home in Indianapolis &amp; Central Indiana</h1>", "<h1>Selling an Inherited House in Indiana: Indianapolis &amp; Central Indiana</h1>"),
   ("SEO Title: Selling an Inherited Home Indianapolis | Your Realty Link", "SEO Title: Selling an Inherited House in Indiana | Your Realty Link"),
   ("Focus Keyword: inherited home indianapolis sell", "Focus Keyword: sell inherited house indiana"),

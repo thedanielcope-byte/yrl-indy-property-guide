@@ -361,6 +361,8 @@ def premium_agent_page(a):
     mailto = f"mailto:{a['email']}?subject=Real%20Estate%20Inquiry%20%E2%80%94%20Your%20Realty%20Link"
     site = clean_site(a.get("website"))
     desc = f'{a["name"]}, {a["title"]} at Your Realty Link. Search Central Indiana homes, explore {first}’s expertise, and get in touch to buy, sell, or invest.'
+    if len(desc) > 155:   # long titles: drop the search clause so Google doesn't truncate
+        desc = f'{a["name"]}, {a["title"]} at Your Realty Link. Explore {first}’s expertise and get in touch to buy, sell, or invest.'
     schema = {"@context":"https://schema.org","@type":"RealEstateAgent","name":a["name"],"jobTitle":a["title"],"image":a["photo"],"telephone":a["phone"],"email":a["email"],"url":f"https://yourrealtylink.com/agents/{a['slug']}/","worksFor":{"@type":"RealEstateAgent","name":"Your Realty Link","url":"https://yourrealtylink.com"},"areaServed":"Central Indiana"}
 
     # ── Credentials / quick-facts strip ──

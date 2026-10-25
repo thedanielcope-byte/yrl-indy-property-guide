@@ -155,7 +155,7 @@ page = f'''<!DOCTYPE html>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Preferred Vendors &amp; Trusted Local Partners | Your Realty Link</title>
- <meta name="description" content="Your Realty Link's preferred local vendors across Central Indiana — trusted lenders, title companies, home inspectors, contractors, movers, home warranty, and more.">
+ <meta name="description" content="Your Realty Link's preferred local vendors across Central Indiana: lenders, title companies, home inspectors, contractors, movers, home warranty and more.">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="{URL}">
  <meta property="og:title" content="Preferred Vendors & Trusted Local Partners | Your Realty Link">

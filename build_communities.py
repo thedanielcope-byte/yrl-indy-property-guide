@@ -293,7 +293,7 @@ def build_hub():
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Central Indiana Communities &amp; Subdivisions | Your Realty Link</title>
- <meta name="description" content="Explore Central Indiana's most popular communities and subdivisions — golf, lake, luxury and master-planned neighborhoods in Carmel, Fishers, Zionsville and more.">
+ <meta name="description" content="Explore Central Indiana's most popular communities and subdivisions: golf, lake, luxury and master-planned neighborhoods in Carmel, Fishers and more.">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="{url}">
  <meta property="og:title" content="Central Indiana Communities &amp; Subdivisions | Your Realty Link">

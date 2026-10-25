@@ -412,7 +412,7 @@ def private_page(rec):
     if cou: related.append('<a href="%s" class="city-card">%s County Homes <span class="arrow">&rsaquo;</span></a>' % (cou, esc(county)))
     related.append('<a href="/schools/" class="city-card">All School Districts <span class="arrow">&rsaquo;</span></a>')
     title = "Homes Near %s | Your Realty Link" % name
-    meta = ("Buying or selling a home near %s in %s, Indiana? Your Realty Link helps families across the %s area. Get a free valuation." % (esc(name), esc(city), esc(city)))
+    meta = ("Buying or selling near %s in %s, IN? Your Realty Link helps families across the %s area. Get a free valuation." % (esc(name), esc(city), esc(city)))
     return page(rec, title, meta, hero_sub, badges, intro, sections, city, faqs,
                 explore, quick_facts, related, esc(name))
 

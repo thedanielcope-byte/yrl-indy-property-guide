@@ -149,8 +149,7 @@ def release_page(r):
 
 def hub_page(releases):
     canon = f"{SITE}/press/"
-    desc = ("Official press releases and news from Your Realty Link, a full-service MIBOR real "
-            "estate brokerage serving buyers, sellers, and investors across Central Indiana.")
+    desc = "Press releases and news from Your Realty Link, a full-service MIBOR brokerage serving buyers, sellers and investors across Central Indiana."
     items = []
     cards = []
     for i, r in enumerate(releases):

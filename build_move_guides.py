@@ -25,7 +25,7 @@ OTHER_GUIDES = {"chicago": ("Chicago", "/blog/moving-from-chicago-to-indianapoli
 
 GUIDES = {
 "cincinnati": dict(city="Cincinnati", slug="moving-from-cincinnati-to-indianapolis",
- desc="Moving from Cincinnati to Indianapolis? Compare cost of living, home prices, property and income taxes and the I-74 drive, plus where Cincinnati transplants tend to buy.",
+ desc="Moving from Cincinnati to Indianapolis? Compare cost of living, home prices, taxes and the I-74 drive, plus where Cincinnati transplants tend to buy.",
  hero="Under two hours up I-74: how the cost of living, home prices and taxes actually compare, and where Cincinnati transplants tend to buy.",
  rpp=("95.4", "87.6", "RPPALL17140"), home="$288,700", tax="$3,255",
  inc="Ohio 2.75% + Cincinnati city tax 1.8%",
@@ -48,7 +48,7 @@ GUIDES = {
           ("https://www.cincinnati-oh.gov/finance/income-taxes/", "City of Cincinnati income tax")]),
 
 "louisville": dict(city="Louisville", slug="moving-from-louisville-to-indianapolis",
- desc="Moving from Louisville to Indianapolis? Compare cost of living, home prices, income and property taxes and the I-65 drive, plus where Louisville transplants tend to buy.",
+ desc="Moving from Louisville to Indianapolis? Compare cost of living, home prices, taxes and the I-65 drive, plus where Louisville transplants tend to buy.",
  hero="About two hours up I-65: an honest look at cost of living, home prices and taxes, and where Louisville transplants tend to buy.",
  rpp=("93.1", "78.6", "RPPALL31140"), home="$265,900", tax="$2,130",
  inc="Kentucky 3.5% + Louisville Metro 2.2%",

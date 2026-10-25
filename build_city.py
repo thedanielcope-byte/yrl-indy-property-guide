@@ -121,7 +121,9 @@ def page(c):
                  '<li><a href="https://www.stats.indiana.edu/" target="_blank" rel="noopener">STATS Indiana — Community Data ↗</a></li>']
     reslinks_html = "\n    ".join(reslinks)
 
-    metadesc = "Search %s Indiana homes for sale with Your Realty Link. %s County living with homes from %s and %s. Get a free home valuation." % (name, county, price, sch_s)
+    metadesc = "Search %s, IN homes for sale with Your Realty Link. %s County living, homes from %s, %s schools. Get a free home valuation." % (name, county, price, sch_s)
+    if len(metadesc) > 155:
+        metadesc = metadesc.replace(" Get a free home valuation.", " Free home valuation.")
 
     return f'''<!DOCTYPE html>
 <html lang="en">

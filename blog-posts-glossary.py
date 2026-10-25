@@ -399,7 +399,7 @@ POSTS.append({
  "slug": "cma-vs-zestimate-indianapolis",
  "focus_kw": "comparative market analysis indianapolis",
  "seo_title": "CMA vs Zestimate: Pricing a Home in Indianapolis | Your Realty Link",
- "meta_desc": "A comparative market analysis (CMA) beats a Zestimate for pricing an Indianapolis home. Learn how a CMA is built, why online estimates miss, and how to get one free.",
+ "meta_desc": "Why a comparative market analysis (CMA) beats a Zestimate for pricing an Indianapolis home: how a CMA is built, why online estimates miss and how to get one.",
  "category": "Selling a Home",
  "read_min": 8,
  "date_label": "August 2026", "date_pub": "2026-08-03", "date_mod": "2026-08-03",

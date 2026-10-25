@@ -15,8 +15,7 @@ URL = f"https://yourrealtylink.com/blog/{SLUG}/"
 TITLE = "Moving from Chicago to Indianapolis: 2026 Guide | Your Realty Link"
 H1 = "Moving from Chicago to Indianapolis: <em>Costs, Taxes &amp; Where to Live</em>"
 HEADLINE = "Moving from Chicago to Indianapolis: Costs, Taxes & Where to Live"
-DESC = ("Moving from Chicago to Indianapolis? Compare cost of living, home prices, property and income "
-        "taxes, the drive and the time zone, plus where Chicago transplants tend to buy.")
+DESC = "Moving from Chicago to Indianapolis? Compare cost of living, home prices, taxes, the drive and the time zone, plus where Chicago transplants tend to buy."
 IMG = "https://yourrealtylink.com/assets/img/blog/moving-to-indianapolis-relocation-guide.png"
 
 FAQS = [
