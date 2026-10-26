@@ -19,7 +19,7 @@ TITLE = "Home Inspector in Indianapolis: Why We Recommend HouseMaster"
 HEADLINE = "Our Preferred Home Inspector: HouseMaster Serving Heartland"
 DESC = ("Why Your Realty Link recommends HouseMaster Heartland for home inspections in Indianapolis "
         "and Central Indiana: services, add-on tests and how to book.")
-IMG = "/assets/img/blog/home-inspection-under-contract-what-to-expect-indianapolis.png"
+IMG = "/assets/img/blog/housemaster-heartland-home-inspector-indianapolis.png"
 OG = "https://yourrealtylink.com" + IMG
 HM = "https://housemaster.com/heartland"
 PLA = "https://mylicense.in.gov/everification/"
