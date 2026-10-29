@@ -150,7 +150,22 @@
   "website": "https://indypropertychicks.com",
   "photo": "/assets/img/agents/marie-washburne.jpg",
   "slug": "marie-washburne",
-  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562633998_marie-washburne-brick.jpg"
+  "photo_src": "https://wdvolamasztetwpitbwg.supabase.co/storage/v1/object/public/hub-files/cf007287-a76c-4c9a-bd33-051816db6322/agent-photos/1788562633998_marie-washburne-brick.jpg",
+  "languages": [
+   "English"
+  ],
+  "years": "12",
+  "expertise": [
+   "Buyer Representation",
+   "Seller Representation",
+   "First-Time Buyers",
+   "New Construction",
+   "Downsizing & Senior",
+   "Land & Lots",
+   "Foreclosure & Short Sale"
+  ],
+  "bio": "Meet Marie Washburne, an Indiana REALTOR® who believes real estate should be personal, not just another business transaction. With a friendly, down-to-earth approach, Marie is committed to honest advice, clear communication, and making the process as smooth as possible. She believes in answering calls, returning emails, keeping clients informed, and telling it like it is. Whether you're buying your first home, selling a property, or making your next move, Marie is here to guide you every step of the way. For Marie, real estate is business, but helping people find their place to call home is personal.",
+  "tagline": "Real Estate with Heart, Honesty, and a Little Small-Town Charm"
  },
  {
   "name": "Portia Rhoades",
