@@ -123,6 +123,16 @@
       return;
     }
 
+    // Turnstile: if the widget rendered but the visitor hasn't ticked it yet, ask them to,
+    // instead of sending a tokenless submission the server would treat as unverified.
+    var token = (window.turnstile && form.__tsId != null) ? window.turnstile.getResponse(form.__tsId) : '';
+    if (window.turnstile && form.__tsId != null && !token) {
+      var tsMsg = form.querySelector('.form-error');
+      if (!tsMsg) { tsMsg = document.createElement('p'); tsMsg.className = 'form-error'; form.appendChild(tsMsg); }
+      tsMsg.textContent = 'Please tick \u201cVerify you are human\u201d above, then press Send.';
+      return;
+    }
+
     if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
     var data = {};
@@ -132,7 +142,6 @@
       if (el.name && el.name !== HP_NAME) data[el.name] = el.value;
     }
     // Turnstile token (verified server-side).
-    var token = (window.turnstile && form.__tsId != null) ? window.turnstile.getResponse(form.__tsId) : '';
     data['cf-turnstile-response'] = token || '';
     data.source_url = window.location.href;
     data.submitted_at = new Date().toISOString();
@@ -149,6 +158,7 @@
     })
       .then(function (res) {
         if (!res.ok) throw new Error(res.status);
+        if (window.gtag) gtag('event', 'generate_lead', { form_type: 'contact', interest: data.interest_type || '', page_path: location.pathname });
         form.innerHTML = successHTML();
       })
       .catch(function () {

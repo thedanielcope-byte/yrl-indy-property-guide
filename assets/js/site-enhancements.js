@@ -206,3 +206,17 @@
     initBlogInlineCTAs();
   }
 })();
+
+/* GA4 contact-intent events (marked as key events in GA): phone taps, email clicks,
+   and clicks through to booking (/schedule/ or cal.com). */
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || !window.gtag) return;
+    var h = a.getAttribute('href') || '';
+    var p = { link_url: h, page_path: location.pathname };
+    if (/^tel:/i.test(h)) gtag('event', 'phone_click', p);
+    else if (/^mailto:/i.test(h)) gtag('event', 'email_click', p);
+    else if (/(^|\/)schedule\/?(\?|#|$)|cal\.com\//i.test(h)) gtag('event', 'booking_click', p);
+  }, true);
+})();

@@ -103,6 +103,14 @@
     armForm(form);
     if (isBot(form)) { return; } // silently drop bot submissions — nothing sent to CRM or API
 
+    var tsToken = (window.turnstile && form.__tsId != null) ? window.turnstile.getResponse(form.__tsId) : '';
+    if (window.turnstile && form.__tsId != null && !tsToken) {
+      var tsMsg = form.querySelector('.form-error');
+      if (!tsMsg) { tsMsg = document.createElement('p'); tsMsg.className = 'form-error'; form.appendChild(tsMsg); }
+      tsMsg.textContent = 'Please tick \u201cVerify you are human\u201d above, then try again.';
+      return;
+    }
+
     var btn = form.querySelector('button[type="submit"]');
     var originalText = btn.textContent;
     btn.disabled = true;
@@ -122,7 +130,6 @@
     }
 
     // Capture the lead in the CRM in the background (don't wait for it)
-    var tsToken = (window.turnstile && form.__tsId != null) ? window.turnstile.getResponse(form.__tsId) : '';
     var vAttr = getAttribution();
     fetch(LEAD_CAPTURE, {
       method: 'POST',
@@ -138,6 +145,8 @@
         source_page: data.source_page || 'home-valuation',
         'cf-turnstile-response': tsToken || ''
       })
+    }).then(function (r) {
+      if (r.ok && window.gtag) gtag('event', 'generate_lead', { form_type: 'valuation', page_path: location.pathname });
     }).catch(function () {});
 
     // Send to valuation API
