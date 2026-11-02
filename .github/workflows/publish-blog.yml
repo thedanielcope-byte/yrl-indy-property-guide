@@ -35,6 +35,7 @@ jobs:
           python3 build-blog.py
           python3 inject_gtag.py   # re-add GA4 tag to newly generated blog pages
           python3 inject_favicon.py   # re-add favicon tags to regenerated pages
+          python3 inject_seo_overrides.py   # keep snippet overrides after rebuilds
 
       - name: Commit & push if anything changed
         run: |
@@ -44,6 +45,8 @@ jobs:
             git add -A
             git commit -m "Auto-publish blog posts from hub"
             git push
+            sleep 120   # let GitHub Pages publish, then tell Bing/Copilot what changed
+            python3 indexnow_ping.py --changed HEAD~1 HEAD || true
             echo "Published blog changes."
           else
             echo "No changes — blog already up to date."

@@ -1,0 +1,21 @@
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.html', 'sitemap.xml']
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Wait for GitHub Pages to publish
+        run: sleep 120
+      - name: Ping IndexNow with changed pages
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE="HEAD~1"; fi
+          python3 indexnow_ping.py --changed "$BEFORE" "${{ github.sha }}"
