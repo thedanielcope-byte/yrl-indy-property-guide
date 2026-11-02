@@ -149,18 +149,19 @@
    "short_name": "Jackson's Grant",
    "city": "Carmel",
    "county": "Hamilton",
-   "price_band": "$700s to $1.5M+",
+   "price_band": "$1M to $2M+",
    "type": "luxury master-planned",
    "highlights": [
-    "Community & recreation center overlooking Williams Creek",
-    "Three outdoor pools",
-    "Williams Creek Nature Preserve & arboretum",
-    "Connected walking trails"
+    "280 acres along Williams Creek at 116th St & Spring Mill Rd",
+    "Two-story clubhouse with three outdoor pools, fitness center and tennis",
+    "Wooded preserves, trails and the preserved Hobby Horse Barn",
+    "Custom homes built to a pattern book by several builders"
    ],
    "school_district": "Carmel Clay Schools",
    "hoa_url": "https://www.jacksonsgrant.com/",
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Jackson&rsquo;s Grant on Williams Creek is a 280-acre neighborhood at the northwest corner of 116th Street and Spring Mill Road in west Carmel, developed by Republic Development after a 2014 groundbreaking. The name comes from a presidential land grant from Andrew Jackson, and the land changed hands only once before development. Williams Creek and wooded preserves run through the community, and a two-story clubhouse with a deck overlooking the creek preserve sits next to three outdoor pools, a fitness center, tennis and a playground. The old Hobby Horse Barn was kept as part of the setting. Homes follow a pattern book and come from custom builders such as Wedgewood, Old Town Design Group and the McKenzie Collection. It&rsquo;s in Carmel Clay Schools."
   },
   {
    "slug": "claridge-farm-carmel",
@@ -221,15 +222,16 @@
    "price_band": "$300s to $600s",
    "type": "55+ active adult",
    "highlights": [
-    "23,000 sq ft clubhouse (The Chateau)",
-    "Indoor & resort-style outdoor pools",
-    "Pickleball, tennis & bocce courts",
-    "4.5 miles of walking trails"
+    "Del Webb 55+ community of about 1,050 homes, started in 2006",
+    "The Chateau clubhouse (about 23,000 sq ft) with indoor pool and fitness center",
+    "Outdoor pool plus tennis, pickleball and bocce courts",
+    "About 4.5 miles of walking trails"
    ],
    "school_district": "Hamilton Southeastern Schools",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Britton Falls is Del Webb&rsquo;s 55+ community on the east side of Fishers, set between Cyntheanne and Atlantic roads south of 136th Street. Construction began in 2006, and it has grown to about 1,050 single-family homes, with listings showing builds as recent as 2021. Its centerpiece is the Chateau, a clubhouse of roughly 23,000 square feet with an indoor pool, fitness center, arts and crafts studio and game rooms. Outside are a second pool, tennis, pickleball and bocce courts, and about 4.5 miles of walking trails around the ponds. HOA dues, roughly $260 to $275 a month in recent listings, cover lawn care, snow removal and trash. Homes run from compact two-bedroom ranches to plans of about 2,500 square feet."
   },
   {
    "slug": "sunblest-fishers",
@@ -434,14 +436,16 @@
    "price_band": "$300s to $500s",
    "type": "55+ active adult",
    "highlights": [
-    "Del Webb active-adult community",
-    "Amenity-focused, low-maintenance living",
-    "Single-family homes"
+    "Del Webb 55+ community that opened in 2025, with 524 homesites planned",
+    "Single-story ranch homes of about 1,500-2,900 sq ft",
+    "Indoor and outdoor pools, pickleball and bocce courts, dog park and trails",
+    "Full-time lifestyle director"
    ],
-   "school_district": null,
+   "school_district": "Clark-Pleasant Community School Corporation",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Sagebriar is Del Webb&rsquo;s 55+ community in Greenwood, which opened in 2025 on County Road 300 East just south of County Line Road, a few minutes from I-65&rsquo;s County Line Road exit. Plans call for 524 single-story homes on about 186 acres, in ranch designs of roughly 1,500 to 2,900 square feet with two to four bedrooms. A roughly 15,000-square-foot amenity center, slated for summer 2026, adds an indoor pool, fitness center and sports simulator to an outdoor pool, pickleball and bocce courts, a dog park, pocket parks and walking trails. A full-time lifestyle director plans activities. HOA dues, about $345 a month in a recent listing, include lawn care and irrigation. It&rsquo;s in Clark-Pleasant Community School Corporation."
   },
   {
    "slug": "maxwell-springs-greenwood",
@@ -751,17 +755,19 @@
    "name": "Crooked Stick Estates",
    "city": "Carmel",
    "county": "Hamilton",
-   "price_band": "$700s to $2M+",
+   "price_band": "$800s to $3M+",
    "type": "luxury golf community",
    "highlights": [
-    "Borders Crooked Stick Golf Club (Pete Dye)",
-    "Custom estate homes on 1+ acre lots",
-    "Established West Carmel with mature landscaping"
+    "Custom homes around the Pete Dye-designed Crooked Stick Golf Club (host of the 1991 PGA Championship)",
+    "Lots typically about 3/4 acre to 2+ acres, many on the course or the lake",
+    "Mostly built late 1960s to about 1990, plus some newer rebuilds",
+    "Off Ditch Road between 106th and 116th Streets in west Carmel"
    ],
    "school_district": "Carmel Clay Schools",
-   "hoa_url": "https://crookedstickestatescarmelneighborhood.org/",
+   "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Crooked Stick Estates is the cluster of custom-home streets around Crooked Stick Golf Club, the Pete Dye&ndash;designed course in west Carmel that dates to 1964 and hosted the 1991 PGA Championship. Most homes here were built between the late 1960s and about 1990, with a few newer rebuilds mixed in, and lots typically run from about three-quarters of an acre to two acres, many backing to fairways or the lake. In MLS records the area shows up as Crooked Stick and Spring Run Estates, along streets like Crooked Stick Lane, Augusta Lane and Preston Trail off Ditch Road between 106th and 116th Streets. The golf club itself is private and invitation-only. Homes are in Carmel Clay Schools."
   },
   {
    "slug": "plum-creek-carmel",
@@ -1629,17 +1635,19 @@
    "name": "Osborne Trails",
    "city": "Westfield",
    "county": "Hamilton",
-   "price_band": "$300s to $500s",
+   "price_band": "$350s to $500s+",
    "type": "55+ active-adult community",
    "highlights": [
-    "Westfield's first 55+ community",
-    "9,000 sq ft clubhouse with pool and fitness center",
-    "Pickleball courts near the Monon Trail"
+    "Lennar-built 55+ community that opened in 2020",
+    "The Retreat clubhouse (about 9,000 sq ft) with pool and fitness area",
+    "About 180 acres with six ponds and roughly 3 miles of trails",
+    "HOA covers lawn care, snow removal and irrigation"
    ],
    "school_district": "Westfield Washington Schools",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Osborne Trails is a 55-and-older neighborhood Lennar opened in 2020 near 193rd Street and Spring Mill Road on Westfield&rsquo;s west side, and the builder billed it as the city&rsquo;s first 55+ community. It covers about 180 acres with six ponds and roughly three miles of walking trails. Social life centers on the Retreat, a clubhouse of about 9,000 square feet with a fitness area, pool, kitchen, library and hobby rooms, with pickleball and tennis courts outside. Most homes are ranch-style, with options for a bonus room or second level, and Lennar has kept adding sections since opening. HOA dues, about $290 a month in recent listings, cover lawn care, snow removal and irrigation, so weekends aren&rsquo;t spent on yard work. It&rsquo;s in Westfield Washington Schools."
   },
   {
    "slug": "lancaster-westfield",
@@ -2248,13 +2256,19 @@
    "name": "Branches",
    "city": "Brownsburg",
    "county": "Hendricks",
-   "price_band": "$250s to $450s",
+   "price_band": "$300s to low $400s",
    "type": "established family subdivision",
-   "highlights": [],
+   "highlights": [
+    "Built mostly 2012-2017, many homes by Ryan Homes",
+    "Clubhouse, pool, tennis courts, playgrounds and walking paths",
+    "Ponds throughout, with some homes backing to the water",
+    "Northeast Brownsburg near Ronald Reagan Parkway"
+   ],
    "school_district": "Brownsburg Community School Corporation",
    "hoa_url": "https://www.brancheshoa.org/",
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Branches is a 2010s-era subdivision on Brownsburg&rsquo;s northeast side, reached from County Road 650 North near County Road 1000 East, with Ronald Reagan Parkway and Eagle Creek Park a short drive away. Ryan Homes built many of the houses, largely two-story family plans of about 2,100 to 3,500 square feet, spread over at least seven platted sections. The HOA, managed by M Group Management, runs a clubhouse and pool, tennis courts, playgrounds and walking paths, and a number of homes back to ponds. Listings show homes built from about 2012 to 2017, so most are still fairly new. It&rsquo;s in the Brownsburg Community School Corporation, and I-74, I-65 and I-465 are all within reach for commuters."
   },
   {
    "slug": "winding-creek-brownsburg",
@@ -2640,17 +2654,19 @@
    "name": "Edmonds Creek at Anson",
    "city": "Whitestown",
    "county": "Boone",
-   "price_band": "$300s to $400s",
-   "type": "new-construction community",
+   "price_band": "$300s to low $400s",
+   "type": "single-family subdivision",
    "highlights": [
-    "Within the Anson master-planned development",
-    "Spacious homesites, some with pond views",
-    "About 3 miles from I-65"
+    "Arbor Homes neighborhood within Whitestown's Anson development",
+    "Two phases: Edmonds Creek and Edmonds Creek North",
+    "Single-family plans of roughly 1,600-3,200 sq ft, some with pond views",
+    "Lebanon Community School Corporation"
    ],
-   "school_district": null,
+   "school_district": "Lebanon Community School Corporation",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Edmonds Creek at Anson is an Arbor Homes neighborhood inside Whitestown&rsquo;s 1,700-acre Anson development, near County Roads 500 South and 575 East. Arbor started with about 107 lots the town approved in 2016, then filed plans in 2018 for Edmonds Creek North, 197 more homes on roughly 54 acres next door. Most homes went up in the late 2010s and early 2020s, in plans of roughly 1,600 to 3,200 square feet, and some lots back up to neighborhood ponds. HOA dues are modest, about $500 a year in a recent listing. The neighborhood is served by Lebanon Community School Corporation, and Whitestown Parkway and I-65 are a short drive away."
   },
   {
    "slug": "ellis-acres-whitestown",
@@ -2690,34 +2706,38 @@
    "name": "Villages at Brookside",
    "city": "McCordsville",
    "county": "Hancock",
-   "price_band": "$300s to $500s",
-   "type": "master-planned community",
+   "price_band": "$350s to $500s",
+   "type": "single-family subdivision",
    "highlights": [
-    "Community pool, playground and basketball court",
-    "Neighborhood lake and walking paths",
-    "Two-story, ranch and first-floor owner's-suite plans"
+    "Fischer Homes community, now sold out (resale only)",
+    "Neighborhood pool, playground, basketball court and walking trails",
+    "Several ponds, with some homes backing to the water",
+    "HOA dues around $700 a year in recent listings"
    ],
    "school_district": "Mt. Vernon Community School Corporation",
    "hoa_url": "https://www.villagesatbrooksidehoa.com/",
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Villages at Brookside is a Fischer Homes neighborhood on McCordsville&rsquo;s northwest side, west of County Road 600 West and just south of County Road 900 North. Homes here were built from around 2011 into the early 2020s, and Fischer now lists the community as sold out, so everything for sale is a resale. Streets like Brookside Boulevard wind past several ponds, and some homes back right up to the water. The HOA keeps up a neighborhood pool, playground, basketball court and walking trails, with dues around $700 a year in recent listings. Sizes run from two-bedroom plans of about 1,900 square feet to larger two-story homes with upstairs bonus rooms. It&rsquo;s in the Mt. Vernon Community School Corporation, close to Broadway (US-36)."
   },
   {
    "slug": "gatherings-at-aurora-mccordsville",
    "name": "Gatherings at Aurora",
    "city": "McCordsville",
    "county": "Hancock",
-   "price_band": "$400s to $600s",
+   "price_band": "$400s to $500s",
    "type": "55+ active-adult community",
    "highlights": [
-    "Age-restricted 55+ active-adult community",
-    "Amenity center with pool, fitness and pickleball",
-    "Minutes from McCord Square and Geist Reservoir"
+    "Beazer Homes 55+ community, under construction since 2025",
+    "Ranch homes with optional lofts, about 2,000-3,400 sq ft",
+    "Clubhouse with fitness center and golf simulators, plus pickleball and a pool",
+    "HOA covers lawn care and snow removal"
    ],
-   "school_district": null,
+   "school_district": "Mt. Vernon Community School Corporation",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Gatherings at Aurora is a 55+ neighborhood Beazer Homes began building in 2025 off County Road 700 North on the south side of McCordsville, a short drive up Mt. Comfort Road from I-70. The homes are single-family ranches with optional upstairs lofts, roughly 2,000 to 3,400 square feet across four plans: the Hudson, Wabash, Charleston and Windsor. Beazer builds them with energy efficiency in mind, offering solar options and putting an EV outlet in every garage. Amenities include a clubhouse with a fitness center and golf simulators, pickleball courts and a community pool, and the HOA handles lawn care and snow removal. It&rsquo;s in the Mt. Vernon Community School Corporation, with McCordsville&rsquo;s town center and Geist Reservoir nearby."
   },
   {
    "slug": "haven-ponds-mccordsville",
@@ -2740,17 +2760,19 @@
    "name": "McCord Pointe",
    "city": "McCordsville",
    "county": "Hancock",
-   "price_band": "$300s to $500s",
+   "price_band": "$330s to $550s",
    "type": "master-planned community",
    "highlights": [
-    "Clubhouse and resort-style swimming pool",
-    "Ponds throughout the neighborhood",
-    "Near Geist Reservoir between Fishers and Fortville"
+    "Lennar community opened in 2019: Kingston two-story plans and Stillwater ranch homes",
+    "Community pool, clubhouse, playground, ponds and walking trails",
+    "Stillwater section HOA includes lawn care and snow removal",
+    "Mt. Vernon schools; short drive to Geist Reservoir and Hamilton Town Center"
    ],
    "school_district": "Mt. Vernon Community School Corporation",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "McCord Pointe is a Lennar neighborhood in McCordsville that opened in 2019 with two collections side by side: Kingston, a lineup of two-story family plans, and Stillwater, a section of ranch homes aimed at empty nesters, where the HOA also handles lawn care and snow removal. Most homes were built from 2019 on, on lots of roughly a fifth to a quarter acre, and several back up to ponds. Residents share a pool, clubhouse, playground and walking trails. The neighborhood is in the Mt. Vernon Community School Corporation, and Lennar points to Geist Reservoir, Hamilton Town Center and the Kroger Marketplace as nearby draws. Recent sales have mostly landed between the mid-$300s and mid-$500s, depending on plan and size."
   },
   {
    "slug": "hampton-walk-mccordsville",
@@ -3214,16 +3236,19 @@
    "name": "Country Club Heights",
    "city": "Anderson",
    "county": "Madison",
-   "price_band": "$150s to $300s",
-   "type": "established family subdivision",
+   "price_band": "$150s to $400s",
+   "type": "small incorporated town",
    "highlights": [
-    "Home to the Anderson Country Club (formed 1902)",
-    "Small enclave surrounded by the city of Anderson"
+    "Incorporated town (1950) of about 100 residents, surrounded by Anderson and Woodlawn Heights",
+    "Home to the Anderson Country Club, formed in 1902",
+    "Mostly 1960s ranches on roughly 1/3- to 1/2-acre lots, plus older homes on the golf course",
+    "Anderson mailing addresses; Anderson Community Schools; no HOA"
    ],
-   "school_district": "Anderson Community Schools",
+   "school_district": "Anderson Community School Corporation",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Country Club Heights is a tiny incorporated town on Anderson&rsquo;s north side, with about 100 residents, the White River along its southern edge, and the city of Anderson and the town of Woodlawn Heights on its other sides. Incorporated in 1950, it is home to the Anderson Country Club, formed in 1902 and among the oldest clubs in Indiana, and a few older homes sit right on the golf course. Many houses date from the 1960s, from modest ranches to larger brick and stone ranches, many on lots of a third of an acre or more. Homes here generally carry no HOA. Mailing addresses read Anderson, and students attend Anderson Community Schools."
   },
   {
    "slug": "woodlawn-heights-anderson",
@@ -3335,16 +3360,19 @@
    "name": "Woodfield Pointe",
    "city": "Greenfield",
    "county": "Hancock",
-   "price_band": "$230s to $300s",
-   "type": "new-construction community",
+   "price_band": "$270s to $400s",
+   "type": "newer single-family subdivision",
    "highlights": [
-    "Oversized homesites with common areas and playground",
-    "Pond views; basements available on select homesites"
+    "Arbor Homes (built from about 2023), plus Silverthorne Homes on larger homesites",
+    "3-5 bedroom ranch and two-story plans, about 1,230-3,200 sq ft",
+    "Just off U.S. 40 near SR 9, minutes from downtown Greenfield",
+    "Greenfield-Central schools; HOA about $450 a year"
    ],
    "school_district": "Greenfield-Central Community School Corporation",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Woodfield Pointe is a newer Greenfield subdivision just off U.S. 40 near State Road 9, a few minutes from downtown Greenfield and about 30 minutes from downtown Indianapolis. Arbor Homes was the main builder, starting around 2023, with plans ranging from 1,228-square-foot three-bedroom ranches to five-bedroom two-stories over 3,000 square feet, and Silverthorne Homes also offered ranch and two-story plans on wider homesites of about 0.4 acre. Arbor lots generally run from about 0.17 to 0.35 acre. HOA dues are modest at roughly $450 a year. Students are in Greenfield-Central schools, with Weston Elementary serving at least part of the neighborhood. Recent prices span from smaller ranches in the $270s to larger two-stories near $400,000."
   },
   {
    "slug": "parkrose-greenfield",
@@ -3762,33 +3790,37 @@
    "price_band": "$200s to $500s+",
    "type": "private lake community",
    "highlights": [
-    "Two private lakes (Lake Holiday & Lake Nebo) with boating and swimming",
-    "Clubhouse, pool, tennis, and boat/dock storage",
-    "Off SR-252 east of town"
+    "Two private lakes: Lake Holiday (skiing allowed) and no-wake Lake Nebo",
+    "Clubhouse with restaurant and bar, pool, tennis and basketball courts",
+    "Dock rental plus boat and trailer storage",
+    "About five miles southeast of Martinsville along SR-252"
    ],
-   "school_district": "MSD of Martinsville",
-   "hoa_url": "http://www.painted-hills.com/",
+   "school_district": "Nineveh-Hensley-Jackson United School Corporation (Indian Creek); confirm by address",
+   "hoa_url": "https://www.painted-hills.com/",
    "image": null,
    "video": null,
-   "short_name": "Painted Hills"
+   "short_name": "Painted Hills",
+   "about": "Painted Hills is a private lake community about five miles southeast of Martinsville, with State Road 252 along its northeast edge. It&rsquo;s built around two lakes on Camp Creek: Lake Holiday, about 140 to 150 acres and open to skiing, tubing and wakeboarding, and 46-acre Lake Nebo, which is no-wake for fishing, swimming and paddling. Homes range from 1970s originals on wooded lots to newer construction. The association, with more than 600 members, runs a clubhouse with a restaurant and bar, a pool, tennis and basketball courts, a playground, dock rental and boat and trailer storage, and dues on improved lots are about $950 a year. Listings place most homes in Nineveh-Hensley-Jackson United (Indian Creek) schools, so confirm by address."
   },
   {
    "slug": "hanna-farms-martinsville",
    "name": "Hanna Farms",
    "city": "Martinsville",
    "county": "Morgan",
-   "price_band": "low $200s to low $300s",
+   "price_band": "$200s to high $300s",
    "type": "new-construction community",
    "highlights": [
-    "Active new-construction community by Arbor Homes",
-    "Single- and two-story plans",
-    "Easy access toward I-69 and Indianapolis"
+    "Active Arbor Homes community with Arbor Series and Arrival Series plans",
+    "One-story ranch plans plus two- and three-story designs",
+    "HOA dues about $500 a year",
+    "MSD of Martinsville schools"
    ],
    "school_district": "MSD of Martinsville",
    "hoa_url": null,
    "image": null,
    "video": null,
-   "short_name": "Hanna Farms"
+   "short_name": "Hanna Farms",
+   "about": "Hanna Farms is a newer Arbor Homes neighborhood on the southeast side of Martinsville, with its sales center on South Thomas Drive and I-69 a short drive away. Arbor builds two lines here. The Arbor Series mixes one-story plans like the Ashton and Bradford with two-story designs up to about 3,200 square feet, while the lower-priced Arrival Series leans on two- and three-story plans, some with a third-floor loft. Construction has been active since at least 2024, and new homes were still being listed in 2026. HOA dues are about $500 a year, and the neighborhood is in MSD of Martinsville. Base prices have started near $200,000 for Arrival plans and run into the low $300s for larger Arbor Series homes."
   },
   {
    "slug": "morgan-trails-martinsville",
@@ -3867,18 +3899,20 @@
    "name": "Fort Harrison",
    "city": "Lawrence",
    "county": "Marion",
-   "price_band": "$200s to $500s+",
+   "price_band": "$220s to $700s+",
    "type": "master-planned community",
    "highlights": [
-    "renovated historic officers' quarters plus newer homes & condos",
-    "adjacent to 1,700-acre Fort Harrison State Park",
-    "walkable village setting at the center of Lawrence"
+    "Early-1900s officers' quarters on Lawton Loop, now single-family homes and condos",
+    "Newer single-family homes and townhomes, including Davis Homes' Towns at Fort Harrison",
+    "Next to the roughly 1,700-acre Fort Harrison State Park",
+    "MSD of Lawrence Township schools"
    ],
    "school_district": "MSD of Lawrence Township",
    "hoa_url": null,
    "image": null,
    "video": null,
-   "short_name": "Fort Ben"
+   "short_name": "Fort Ben",
+   "about": "Fort Harrison is the neighborhood that grew from the former Fort Benjamin Harrison Army post in Lawrence after it closed in the 1990s. Its core is the historic district along Lawton Loop, where brick officers&rsquo; quarters and other post buildings from the early 1900s have been turned into large single-family homes and condos facing the old parade ground, with a few newer infill homes built to match. Around it are newer single-family homes and townhomes, including Davis Homes&rsquo; Towns at Fort Harrison near Birtz and Hawkins Roads. Fort Harrison State Park, about 1,700 acres of trails and woods, is next door, and former post buildings also house a YMCA and an Ivy Tech campus. Schools are MSD of Lawrence Township."
   },
   {
    "slug": "lawrence-woods-lawrence",
@@ -4209,18 +4243,20 @@
    "name": "Waterfront Condominiums at Morse Lake",
    "city": "Cicero",
    "county": "Hamilton",
-   "price_band": "low $300s to $500s",
-   "type": "lake condo community",
+   "price_band": "$580s to $630s",
+   "type": "lakefront condo building",
    "highlights": [
-    "Maintenance-free luxury condos built on Morse Reservoir",
-    "Waterfront living with lake access",
-    "A low-maintenance alternative to a single-family lake home"
+    "2006 lakefront condo building at 420 W. Jackson St. on Morse Reservoir",
+    "One-level 2-bed, 2-bath flats (about 1,750 sq ft) with elevator and garage parking",
+    "Private pool and boat slips at the building's dock",
+    "Walkable to downtown Cicero; Hamilton Heights schools"
    ],
    "school_district": "Hamilton Heights School Corporation",
    "hoa_url": null,
    "image": null,
    "video": null,
-   "short_name": "Waterfront Condos at Morse"
+   "short_name": "Waterfront Condos at Morse",
+   "about": "Waterfront Condominiums at Morse Lake is a single condo building, completed in 2006, at 420 W. Jackson Street in Cicero, right on Morse Reservoir and within walking distance of the town&rsquo;s restaurants, coffee shops and ice cream. Recent resales have been one-level two-bedroom, two-bath flats of about 1,750 square feet with lake views, elevator access, a secured entrance and a detached garage space, and some units have balconies. Residents share a private pool, and the building has its own boat dock, with some listings noting a deeded slip. Monthly dues of roughly $500 to $575 cover items like insurance, snow removal and trash. It&rsquo;s an option for buyers who want lake living without exterior upkeep. The building is in Hamilton Heights schools."
   },
   {
    "slug": "stillwater-cove-cicero",
@@ -4785,18 +4821,20 @@
    "name": "Grant's Corner",
    "city": "Cumberland",
    "county": "Hancock",
-   "price_band": "low $350s and up",
+   "price_band": "$280s to $390s",
    "type": "new-construction community",
    "highlights": [
-    "Single-family homes and low-maintenance paired villas by Olthof Homes",
-    "Community walking trails, picnic shelter, and playground",
-    "Quick access to I-465 and I-70"
+    "Olthof Homes single-family homes plus low-maintenance paired villas, built from about 2022",
+    "Walking trails, picnic shelter, playground and a community pond",
+    "Off U.S. 40 at CR 700 W, just east of I-465 with quick I-70 access",
+    "Southern Hancock (New Palestine) schools"
    ],
-   "school_district": "New Palestine Community Schools",
+   "school_district": "Community School Corporation of Southern Hancock County (New Palestine schools)",
    "hoa_url": null,
    "image": null,
    "video": null,
-   "short_name": "Grant's Corner"
+   "short_name": "Grant's Corner",
+   "about": "Grant&rsquo;s Corner is an Olthof Homes neighborhood on the Hancock County side of Cumberland, off U.S. 40 at County Road 700 West, just east of I-465. Building started around 2022, and the community pairs two-story single-family homes with one-level paired villas, where the HOA covers lawn care, irrigation and snow removal. Single-family plans run roughly 2,000 to 2,700 square feet with three or four bedrooms, while villas such as the Brighton plan offer about 1,600 square feet on one floor. Residents share walking trails, a picnic shelter, a playground and a community pond. The neighborhood is in Southern Hancock schools, the New Palestine district, and both I-70 and I-465 are minutes away."
   },
   {
    "slug": "towns-at-pennsy-cumberland",
@@ -4839,18 +4877,20 @@
    "name": "Masthead at Geist",
    "city": "Geist",
    "county": "Marion",
-   "price_band": "upper $400s to $1M+",
+   "price_band": "$550s to $2M+",
    "type": "waterfront community",
    "highlights": [
-    "One of the two original Geist Reservoir subdivisions",
-    "Deep-water lots with private docks and direct reservoir access",
-    "Member of the Geist Harbours POA (marina, boating, trails)"
+    "One of the first two Geist Reservoir subdivisions (construction began in 1980)",
+    "Custom homes on the main body of Geist, many waterfront with docks",
+    "Straddles the Marion/Hamilton line: Lawrence Township or HSE schools by address",
+    "Association dues about $525 a year (listings cite Geist Harbours POA)"
    ],
-   "school_district": "MSD of Lawrence Township",
-   "hoa_url": "https://ghpoa.com/",
+   "school_district": "MSD of Lawrence Township or Hamilton Southeastern Schools (it straddles the county line; confirm by address)",
+   "hoa_url": null,
    "image": null,
    "video": null,
-   "short_name": "Masthead"
+   "short_name": "Masthead",
+   "about": "Masthead, together with neighboring Beamreach, was one of the first two subdivisions built on Geist Reservoir when construction began in 1980, and it sits on the main body of the lake. Streets with nautical names like Brigantine Drive, Helmsman Circle, Stormhaven Court and Landings Drive hold custom homes from the 1980s onward, some waterfront with docks and 65 to more than 100 feet of frontage, others off the water with lake access. The neighborhood straddles the Marion&ndash;Hamilton county line, so the Marion side is in MSD of Lawrence Township and the Hamilton side is in Hamilton Southeastern Schools, and mailing addresses vary between Indianapolis and Fishers. Association dues run about $525 a year, and several listings name Geist Harbours as the managing association."
   },
   {
    "slug": "feather-cove-geist",
@@ -5391,17 +5431,19 @@
    "name": "Hidden Hills",
    "city": "Pittsboro",
    "county": "Hendricks",
-   "price_band": "mid $300s to low $400s",
+   "price_band": "$340s to $460s",
    "type": "new-construction community",
    "highlights": [
-    "Pond-overlook deck, firepit, playground and gazebo",
-    "Open-concept plans with lofts and flex rooms by Taylor Morrison",
-    "South of I-74, blending Pittsboro with nearby Brownsburg"
+    "Taylor Morrison community; homes built from about 2024, final section now selling",
+    "Pond overlook deck, firepit, gazebo, playground and walking trails",
+    "3-5 bedroom Legacy and Crossroads plans, about 1,570-3,630 sq ft",
+    "Off Wall Street near I-74 exit 61; North West Hendricks schools"
    ],
    "school_district": "North West Hendricks School Corporation",
    "hoa_url": null,
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Hidden Hills is a Taylor Morrison neighborhood in Pittsboro, entered from Wall Street a short drive from the I-74 Pittsboro exit. The first homes went up around 2024, and the builder is now selling its final section. Floor plans from the Legacy and Crossroads series run from about 1,570 to 3,630 square feet with three to five bedrooms, with options like lofts, flex rooms and sunrooms on lots around a quarter acre, some facing the pond. Shared spaces include a deck overlooking the pond, a firepit, a gazebo, a playground and walking trails, and HOA dues run about $450 a year. Students attend North West Hendricks schools: Pittsboro Elementary, Tri-West Middle and Tri-West High."
   },
   {
    "slug": "jefferson-park-pittsboro",
@@ -5681,17 +5723,19 @@
    "name": "Stardust Hills",
    "city": "Cloverdale",
    "county": "Putnam",
-   "price_band": "$100s to low $200s",
+   "price_band": "$80s to $180s",
    "type": "lake community with owners association",
    "highlights": [
-    "Owners association with clubhouse, pool and about 5 fishing lakes",
-    "Streets, water and sewer maintained by the Town of Cloverdale",
-    "Mix of manufactured, modular and site-built homes"
+    "Subdivision dating to 1971, with an owners association formed in 1985",
+    "Several fishing lakes and more than 40 acres of common ground",
+    "Clubhouse with in-ground pool, playground and basketball court",
+    "Manufactured, modular and site-built homes on owned lots (no lot rent)"
    ],
    "school_district": "Cloverdale Community School Corporation",
    "hoa_url": "https://stardusthills.org",
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Stardust Hills is a long-established lake subdivision on the northwest side of Cloverdale, a few minutes off US-231 and a short drive from I-70. It dates to 1971, and since 1985 a resident owners association has looked after more than 40 acres of common ground, including several fishing lakes, a clubhouse with an in-ground pool, a playground and a basketball court. The Town of Cloverdale maintains the streets, water and sewer. Homes are a mix of manufactured, modular and site-built houses, owners own their lots so there&rsquo;s no lot rent, and association dues run about $260 to $280 a year in recent listings. Recent sales have mostly landed between about $80,000 and $145,000. It&rsquo;s in the Cloverdale Community School Corporation."
   },
   {
    "slug": "sunset-ridge-cloverdale",
@@ -6025,17 +6069,19 @@
    "name": "Heritage Lake",
    "city": "Coatesville",
    "county": "Putnam",
-   "price_band": "$100s to $400s+",
-   "type": "private gated lake community",
+   "price_band": "$200s to $1M+",
+   "type": "private lake community",
    "highlights": [
-    "Private roughly 320-acre lake with three sandy beaches, a boat launch, and marina",
-    "Community pool, tennis and pickleball courts, playgrounds, and a clubhouse",
-    "On-site dining and an active property owners' association (Coatesville mailing address, Putnam County)"
+    "Private, roughly 318-acre lake (dam built 1971) for boating, fishing and swimming",
+    "POA amenities: three beaches, marina, pool, splash pad, clubhouse, activity center, tennis and pickleball courts",
+    "About 3,000 platted lots across six sections, with lakefront and lake-access homes",
+    "Coatesville/Fillmore mailing addresses in Putnam County; North Putnam schools"
    ],
-   "school_district": "North Putnam Community Schools (Putnam County)",
+   "school_district": "North Putnam Community Schools",
    "hoa_url": "https://www.hlpoa.us/",
    "image": null,
-   "video": null
+   "video": null,
+   "about": "Heritage Lake is a private lake community in Floyd Township, Putnam County, built around a roughly 318-acre lake that only residents use. The dam was finished in 1971 and lots were platted through 1974, across sections such as Gettysburg, Jefferson Valley, Lincoln Hills, Mill Springs, Patriots Landing and Victory Hill. Homes include 1980s and &rsquo;90s lake houses alongside brand-new builds, mostly on lots under half an acre, with lakefront and lake-access homes side by side. The property owners&rsquo; association runs three beaches, a marina, a pool and splash pad, a clubhouse and activity center, playgrounds, and tennis and pickleball courts. Mailing addresses say Coatesville or Fillmore, about a mile south of U.S. 36, and schools are North Putnam."
   },
   {
    "slug": "meridian-hills",

@@ -137,6 +137,8 @@ def detail_page(c):
     faq_html, faq_schema = faq_block(c)
     lc1 = lambda h: h if (len(h) > 1 and h[1].isupper()) else h[:1].lower() + h[1:]   # keep names like M/I Homes, I-74
     hl_sentence = natjoin([lc1(h) for h in hl]) if hl else "well-kept homes and neighborhood amenities"
+    # unique, researched copy when we have it; otherwise the generic paragraph
+    living_p = c["about"] if c.get("about") else f"{esc(name)} offers the kind of setting that keeps {esc(city)} in demand &mdash; {hl_sentence}. Everyday shopping, dining, and services are close by, and the broader {esc(city)} area surrounds the community with parks, employment, and strong public services. It's a community that suits families and professionals looking for an established {esc(city)} address."
     intro_hl = esc(lc1(hl[0])) if hl else "its location and lifestyle"
     intro_hl2 = (" and " + esc(lc1(hl[1]))) if len(hl) > 1 else ""
     schoolslink = '/schools/'
@@ -175,7 +177,7 @@ def detail_page(c):
  <p>{esc(full)} is {a_an(ctype)} {esc(ctype)} in {cu_link}, one of Central Indiana's most sought-after communities. Known for {intro_hl}{intro_hl2}, it's a place buyers ask about across {cou_link}. <strong>Your Realty Link</strong> &mdash; an Indianapolis-based MIBOR brokerage &mdash; helps buyers and sellers throughout {esc(name)} and the surrounding {esc(city)} area.</p>
 
  <h2>Living in {esc(name)}</h2>
- <p>{esc(name)} offers the kind of setting that keeps {esc(city)} in demand &mdash; {hl_sentence}. Everyday shopping, dining, and services are close by, and the broader {esc(city)} area surrounds the community with parks, employment, and strong public services. It's a community that suits families and professionals looking for an established {esc(city)} address.</p>
+ <p>{living_p}</p>
 
  <h2>{esc(name)} Homes &amp; Real Estate Market</h2>
  <p>Homes in {esc(name)} generally range from {esc(price)}, reflecting its profile as a {esc(ctype)}. Demand across {cou_link} is consistently strong, and pricing depends on the specific home, size, updates, and lot &mdash; so a local agent's read on value is helpful whether you're buying or selling. Ask Your Realty Link for a free, no-obligation market analysis for any address in the community.</p>
