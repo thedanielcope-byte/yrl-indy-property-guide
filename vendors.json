@@ -50,6 +50,26 @@
   "featured": false
  },
  {
+  "category": "🏛️ Title & Closing",
+  "company": "Chicago Title Insurance",
+  "contact": "Michael Dick",
+  "phone": "317-441-8093",
+  "website": "https://ctt.com",
+  "notes": "Office:317-684-3829 Chicago Title Greenwood 1642 W Smith Valley Rd, Ste B, Greenwood, IN 46142",
+  "site": true,
+  "featured": false
+ },
+ {
+  "category": "🏛️ Title & Closing",
+  "company": "First American Title (downtown)",
+  "contact": "Angie DeWeese or Serena Williams or Cheryl Davis",
+  "phone": "317-829-6682",
+  "website": "https://firstam.com",
+  "notes": "Downtown office - order thru this team and we can close at any FirstAm",
+  "site": true,
+  "featured": false
+ },
+ {
   "category": "💰 Lenders & Mortgage",
   "company": "Bailey & Wood / Hoosier Mortgage Team",
   "contact": "Jody Bleier — Mortgage Consultant",
@@ -136,6 +156,26 @@
   "phone": "317-361-2012",
   "website": "www.huntington.com",
   "notes": "NMLS 444455 · Fax 877-219-2836 · 45 N Pennsylvania St, Indianapolis IN 46204",
+  "site": true,
+  "featured": false
+ },
+ {
+  "category": "💰 Lenders & Mortgage",
+  "company": "Cornerstone First Mortgage",
+  "contact": "Jeff Love",
+  "phone": "317-289-4184",
+  "website": "https://cfmtg.com",
+  "notes": "Is very supportive of VA - does a fast job - lots of variety - northsider but did a condo for me in 20 days",
+  "site": true,
+  "featured": false
+ },
+ {
+  "category": "💰 Lenders & Mortgage",
+  "company": "Chase Bank",
+  "contact": "Jeff Cotton",
+  "phone": "317-557-1608",
+  "website": "",
+  "notes": "Has some good programs - Chase is being very aggressive",
   "site": true,
   "featured": false
  },
@@ -420,6 +460,36 @@
   "featured": false
  },
  {
+  "category": "🔧 Contractors & Repairs",
+  "company": "Roof It Forward",
+  "contact": "Scott Chamness, Restoration Specialist",
+  "phone": "317-385-4513",
+  "website": "",
+  "notes": "",
+  "site": true,
+  "featured": false
+ },
+ {
+  "category": "🔧 Contractors & Repairs",
+  "company": "Bill the Painter (Brenda and Janet recommend)",
+  "contact": "Bill",
+  "phone": "317-417-9677",
+  "website": "",
+  "notes": "As low as $1.25 sq ft depending on what you need",
+  "site": true,
+  "featured": false
+ },
+ {
+  "category": "🔧 Contractors & Repairs",
+  "company": "CP & Associates Painter",
+  "contact": "Matt Casse",
+  "phone": "317-460-8090",
+  "website": "",
+  "notes": "Has done several jobs for Janet",
+  "site": true,
+  "featured": false
+ },
+ {
   "category": "🏠 Builders & New Construction",
   "company": "Bob's Construction & Repairs",
   "contact": "",
@@ -457,6 +527,16 @@
   "website": "",
   "notes": "Also: Jeanne McCullough 317-371-1492 · Jeanne.avdesign@gmail.com",
   "site": true,
+  "featured": false
+ },
+ {
+  "category": "🛋️ Staging & Design",
+  "company": "Janet Giles",
+  "contact": "Janet Giles",
+  "phone": "317-997-7404",
+  "website": "https://yourrealtylink.com",
+  "notes": "Janet does not do a whole house but several rooms and mostly kitchen and baths - $300 at closing to your seller",
+  "site": false,
   "featured": false
  },
  {
@@ -595,7 +675,7 @@
   "contact": "Clark Giles & Steve Ruby",
   "phone": "888-478-2889",
   "website": "https://gileslawgroup.com/",
-  "notes": "",
+  "notes": "All calls should go to the 888# above and leave a message as to what you need - be sure to say you are with Your Realty Link - Clark or Steve will get back to you.",
   "site": true,
   "featured": false
  },
@@ -617,6 +697,26 @@
   "website": "www.finchumfixesit.com",
   "notes": "213 Black Maple Court, Greenwood IN 46143",
   "site": true,
+  "featured": false
+ },
+ {
+  "category": "🧰 Other Services",
+  "company": "Roof It Forward",
+  "contact": "Scott Chamness, Restoration Specialist",
+  "phone": "317-385-4513",
+  "website": "",
+  "notes": "15503 Stony Creek Way, Noblesville, IN 46060",
+  "site": false,
+  "featured": false
+ },
+ {
+  "category": "🧰 Other Services",
+  "company": "Mayor of Southport",
+  "contact": "Jim Cooney, Mayor",
+  "phone": "317-786-5489",
+  "website": "",
+  "notes": "",
+  "site": false,
   "featured": false
  }
 ]
