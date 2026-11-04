@@ -199,12 +199,10 @@ def main():
                 bi = bi[:m.start()] + card + bi[m.start():]
     open("sitemap.xml", "w", encoding="utf-8").write(sm)
     open("blog/index.html", "w", encoding="utf-8").write(bi)
-    # relocation guide: one line pointing to all three city guides
+    # relocation guide: one line pointing to every city move guide (incl. the fresh_posts ones)
     rg = open(SRC, encoding="utf-8").read()
-    line = ('<p>Coming from Chicago, Cincinnati or Louisville? See our side-by-side guides on costs, taxes and the drive: '
-            '<a href="/blog/moving-from-chicago-to-indianapolis/">Chicago</a>, <a href="/blog/moving-from-cincinnati-to-indianapolis/">Cincinnati</a> '
-            'and <a href="/blog/moving-from-louisville-to-indianapolis/">Louisville</a>.</p>')
-    rg2 = re.sub(r"<p>Coming from Chicago[^\n]*?</p>", line, rg, count=1)
+    line = '<p>Coming from another city? See our side-by-side guides on costs, taxes and the drive: <a href="/blog/moving-from-chicago-to-indianapolis/">Chicago</a>, <a href="/blog/moving-from-cincinnati-to-indianapolis/">Cincinnati</a>, <a href="/blog/moving-from-louisville-to-indianapolis/">Louisville</a>, <a href="/blog/moving-from-columbus-to-indianapolis/">Columbus</a>, <a href="/blog/moving-from-detroit-to-indianapolis/">Detroit</a>, <a href="/blog/moving-from-st-louis-to-indianapolis/">St. Louis</a> and <a href="/blog/moving-from-california-to-indianapolis/">California</a>.</p>'
+    rg2 = re.sub(r"<p>Coming from (?:Chicago|another city)[^\n]*?</p>", line, rg, count=1)
     if rg2 != rg:
         open(SRC, "w", encoding="utf-8").write(rg2)
         print("relocation guide links updated")

@@ -2,6 +2,8 @@
 """Contextual links from related city and school pages to the township / area guides
 built by build_areas.py. One short sentence, marker-wrapped (<!-- AREA-LINK --> ...
 <!-- /AREA-LINK -->), placed after the first paragraph of the page's "Living in" section.
+A value can also be (sentence, heading regex) to place the sentence after another section's first
+paragraph; pages without a "Living in" h2 fall back to any "Living in/on" h2.
 Idempotent — re-run after rebuilding any of these pages.
 """
 import re
@@ -15,11 +17,13 @@ WAY = '<a href="/neighborhoods/wayne-township-indianapolis/">Wayne Township area
 WASH = '<a href="/neighborhoods/washington-township-indianapolis/">Washington Township area guide</a>'
 LAW = '<a href="/neighborhoods/lawrence-township-indianapolis/">Lawrence Township area guide</a>'
 PIKE = '<a href="/neighborhoods/pike-township-indianapolis/">Pike Township</a>'
+CEN = '<a href="/neighborhoods/center-township-indianapolis/">Center Township area guide</a>'
+CORE = "is part of Center Township, the downtown core of Marion County; for the surrounding near-side neighborhoods, see our " + CEN + "."
 
 LINKS = {
  "cities/marion-county/southport-indiana-real-estate/index.html": f"Southport sits inside Indianapolis&rsquo;s Perry Township; for the wider south side, see our {PERRY}.",
  "cities/marion-county/homecroft-indiana-real-estate/index.html": f"Homecroft sits inside Indianapolis&rsquo;s Perry Township; for the wider south side, see our {PERRY}.",
- "cities/marion-county/beech-grove-indiana-real-estate/index.html": f"Beech Grove sits between Perry and Franklin townships on the south side; see our {PERRY} and {FT}.",
+ "cities/marion-county/beech-grove-indiana-real-estate/index.html": f"Beech Grove&rsquo;s city limits reach into Perry, Franklin, Center and Warren townships; see our {PERRY}, {FT} and {CEN}.",
  "cities/johnson-county/greenwood-indiana-real-estate/index.html": f"Parts of western Greenwood are in the Center Grove school district; see our {CG}.",
  "cities/johnson-county/bargersville-indiana-real-estate/index.html": f"Most of Bargersville is in the Center Grove area of White River Township; see our {CG}.",
  "cities/marion-county/camby-indiana-real-estate/index.html": f"Much of Camby is in Decatur Township on Indianapolis&rsquo;s southwest side; see our {DT}.",
@@ -38,15 +42,32 @@ LINKS = {
  "schools/msd-washington-township/index.html": f"For neighborhoods, prices and commutes across the township, see our {WASH}.",
  "schools/msd-lawrence-township/index.html": f"For neighborhoods, prices and commutes across the district, see our {LAW}.",
  "schools/decatur-township-schools/index.html": f"For neighborhoods, prices and new construction across the district, see our {DT}.",
+ # Center Township (downtown) — added Nov 2026
+ "neighborhoods/bates-hendricks-indianapolis/index.html": f"Bates-Hendricks {CORE}",
+ "neighborhoods/chatham-arch-indianapolis/index.html": f"Chatham Arch {CORE}",
+ "neighborhoods/cottage-home-indianapolis/index.html": f"Cottage Home {CORE}",
+ "neighborhoods/fall-creek-place-indianapolis/index.html": f"Fall Creek Place {CORE}",
+ "neighborhoods/fletcher-place-indianapolis/index.html": f"Fletcher Place {CORE}",
+ "neighborhoods/fountain-square-indianapolis/index.html": f"Fountain Square {CORE}",
+ "neighborhoods/garfield-park-indianapolis/index.html": f"Garfield Park {CORE}",
+ "neighborhoods/herron-morton-place-indianapolis/index.html": f"Herron-Morton Place {CORE}",
+ "neighborhoods/lockerbie-square-indianapolis/index.html": f"Lockerbie Square {CORE}",
+ "neighborhoods/old-northside-indianapolis/index.html": f"The Old Northside {CORE}",
+ "neighborhoods/mass-ave-indianapolis/index.html": f"Mass Ave {CORE}",
+ "schools/indianapolis-public-schools/index.html": f"Nearly all of Center Township, downtown Indianapolis and its historic near-side neighborhoods, is in IPS; see our {CEN}.",
+ "blog/downtown-indianapolis-historic-neighborhoods-guide/index.html": f"Every neighborhood in this guide is in Center Township; for boundaries, schools and prices across the township, see our {CEN}.",
+ "indianapolis-real-estate/index.html": (f"For downtown and the historic near-side neighborhoods, see our {CEN}, and browse all of our <a href=\"/neighborhoods/\">Indianapolis neighborhood and township guides</a>.", r"<h2>Indianapolis Neighborhoods Overview</h2>"),
 }
 
-for path, sentence in LINKS.items():
+for path, val in LINKS.items():
+    # a value is a sentence, or (sentence, heading regex) to place it after another section's first paragraph
+    sentence, head = val if isinstance(val, tuple) else (val, r"<h2>Living in [^<]*</h2>")
     s = open(path, encoding="utf-8", newline="").read()
     block = f'{START}\n <p>{sentence}</p>\n{END}\n'
     if START in s:
         s = re.sub(re.escape(START) + r".*?" + re.escape(END) + r"\n", lambda m: block, s, flags=re.S)
     else:
-        m = re.search(r"<h2>Living in [^<]*</h2>", s)
+        m = re.search(head, s) or re.search(r"<h2[^>]*>Living (?:in|on) [^<]*</h2>", s)
         if not m:
             raise SystemExit("no Living section in " + path)
         end_p = s.index("</p>", m.end()) + len("</p>")
