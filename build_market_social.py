@@ -12,32 +12,32 @@ import os, base64, subprocess, shutil, html as H
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHROME = os.environ.get("CHROME", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 SCRATCH = __import__("tempfile").mkdtemp(prefix="ms_")
-PERIOD = "2026-09"
-MONTH = "September 2026"
+PERIOD = "2026-10"
+MONTH = "October 2026"
 MON = MONTH.split()[0]
 OUTDIR = os.path.join(ROOT, "assets/img/market-reports", PERIOD)
 
 # region slug -> (display label, median$, median YoY%, closed sales, sales YoY%,
 #                 median days on market, prior-year DOM, months supply)
 DATA = {
- "central-indiana": ("Central Indiana · 17 Counties", 320000, 1.3, 2549, -3.5, "27", "20", 2.9),
- "bartholomew-county": ("Bartholomew County, IN", 295000, 5.4, 81, -15.6, "32", "21", 3.1),
- "boone-county":       ("Boone County, IN", 404949, 1.4, 128, 50.6, "21", "17", 2.0),
- "brown-county":       ("Brown County, IN", 412000, 10.9, 13, -45.8, "46", "22", 7.7),
- "decatur-county":     ("Decatur County, IN", 247000, -1.6, 26, -13.3, "60", "23", 2.3),
- "hamilton-county":    ("Hamilton County, IN", 487000, -2.2, 475, -1.7, "25.5", "16", 2.1),
- "hancock-county":     ("Hancock County, IN", 349100, -5.7, 139, 11.2, "43.5", "20.5", 2.7),
- "hendricks-county":   ("Hendricks County, IN", 370000, 5.7, 217, -15.6, "26", "19.5", 2.6),
- "jackson-county":     ("Jackson County, IN", 215000, -9.5, 31, -22.5, "13.5", "28", 4.0),
- "jennings-county":    ("Jennings County, IN", 233500, -5.5, 15, -21.1, "33", "36", 3.0),
- "johnson-county":     ("Johnson County, IN", 349900, 0.3, 215, -2.7, "32", "20", 2.6),
- "madison-county":     ("Madison County, IN", 218450, 27.0, 128, 2.4, "28", "13", 3.1),
- "marion-county":      ("Marion County · Indianapolis", 255000, 2.0, 873, -6.3, "24", "22", 3.5),
- "montgomery-county":  ("Montgomery County, IN", 200000, -3.6, 39, -2.5, "39", "16", 2.0),
- "morgan-county":      ("Morgan County, IN", 285000, -5.0, 72, 0.0, "18", "27", 3.1),
- "parke-county":       ("Parke County, IN", 169900, -32.0, 4, -55.6, "34.5", "10", 13.2),
- "putnam-county":      ("Putnam County, IN", 300000, 5.3, 45, 55.2, "26", "14", 2.7),
- "shelby-county":      ("Shelby County, IN", 230000, -9.5, 48, -9.4, "30.5", "26", 2.6),
+ "central-indiana": ("Central Indiana · 17 Counties", 310000, -1.6, 2324, -14.1, "29", "22", 3.3),
+ "bartholomew-county": ("Bartholomew County, IN", 281100, -2.2, 98, 4.3, "25.5", "21", 2.5),
+ "boone-county":       ("Boone County, IN", 399000, 0.0, 93, -19.1, "19", "19", 3.1),
+ "brown-county":       ("Brown County, IN", 355670, -0.5, 17, 6.3, "57.5", "37", 5.3),
+ "decatur-county":     ("Decatur County, IN", 260750, 12.6, 30, 3.4, "34", "27", 1.8),
+ "hamilton-county":    ("Hamilton County, IN", 474000, 0.7, 434, -16.1, "19", "21", 2.5),
+ "hancock-county":     ("Hancock County, IN", 349450, -6.2, 134, -5.6, "52", "23.5", 2.8),
+ "hendricks-county":   ("Hendricks County, IN", 378950, 6.1, 182, -21.2, "33", "20", 3.3),
+ "jackson-county":     ("Jackson County, IN", 255000, 12.3, 30, 0.0, "30", "31", 4.2),
+ "jennings-county":    ("Jennings County, IN", 175000, -25.5, 19, -5.0, "13", "28", 2.9),
+ "johnson-county":     ("Johnson County, IN", 357000, 8.2, 174, -26.6, "33", "28", 3.5),
+ "madison-county":     ("Madison County, IN", 221000, 16.3, 141, 6.8, "35", "19", 3.0),
+ "marion-county":      ("Marion County · Indianapolis", 249900, -2.0, 791, -14.2, "32", "22", 4.0),
+ "montgomery-county":  ("Montgomery County, IN", 222450, -3.7, 37, -7.5, "15.5", "22", 2.2),
+ "morgan-county":      ("Morgan County, IN", 319950, 16.8, 52, -37.3, "26", "27", 4.3),
+ "parke-county":       ("Parke County, IN", 190000, -28.3, 9, 12.5, "33", "43", 5.5),
+ "putnam-county":      ("Putnam County, IN", 264750, -3.7, 34, -12.8, "32", "30", 3.1),
+ "shelby-county":      ("Shelby County, IN", 208900, -20.6, 49, 0.0, "41", "23", 2.8),
 }
 
 def money(n):  return "${:,}".format(n)
