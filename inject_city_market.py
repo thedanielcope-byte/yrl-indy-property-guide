@@ -46,9 +46,9 @@ def supply_note(m):
 
 
 def tile(label, value, sub):
-    return (f'<div style="background:#fff;border:1px solid #e6e1dc;border-radius:12px;padding:14px 16px;">'
+    return (f'<div style="background:#fff;border:1px solid #e6e1dc;border-radius:12px;padding:12px;">'
             f'<div style="font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6e6e70;">{label}</div>'
-            f'<div style="font-size:1.45rem;font-weight:800;color:#1a1a1a;margin-top:4px;font-variant-numeric:tabular-nums;">{value}</div>'
+            f'<div style="font-size:1.3rem;font-weight:800;color:#1a1a1a;margin-top:4px;font-variant-numeric:tabular-nums;">{value}</div>'
             f'<div style="font-size:.85rem;color:#6e6e70;margin-top:2px;">{sub}</div></div>')
 
 
@@ -71,7 +71,7 @@ def block(city, county_slug, row, month):
  <div class="city-market" style="margin:22px 0 26px;padding:20px;background:#f7f7f7;border-radius:16px;">
  <h3 style="margin:0 0 6px;">{c_city} Housing Market: {month} Numbers</h3>
  <p style="margin:0 0 14px;">{c_city} is in {c_county} County, and MIBOR reports the market by county, so these are {c_county} County&rsquo;s figures for {month}. Prices in {c_city} itself can run higher or lower.{caveat}</p>
- <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">{tiles}</div>
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;">{tiles}</div>
  <p style="margin:12px 0 0;font-size:.85rem;color:#6e6e70;">Source: MIBOR REALTOR Association, {month}, single-family homes. Updated monthly. <a href="/market-updates/">Latest market update</a>{county_link}</p>
  </div>
 {END}"""
