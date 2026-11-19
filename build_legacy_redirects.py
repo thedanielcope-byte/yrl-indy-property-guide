@@ -50,6 +50,10 @@ for a in ARCHIVES:
     MAP["blog/archives/" + a] = "/blog/"
 for c in ["Real Estate Career", "Market+Data", "Market Data", "Selling", "New Build", "Inspriation", "First Time Homebuyer"]:
     MAP["blog/category/" + c] = "/blog/"
+# Nov 19 2026 GSC check: recently crawled 404s with no stub yet
+MAP["blog/realtor-referrals-how-we-pay-35-fee-to-agents"] = "/services/referral-program/"
+MAP["blog/buying-a-home-in-indiana-top-questions-answered"] = "/services/home-buying-process/"
+MAP["index.php"] = "/"  # served as /index.php/ ; GitHub Pages 301s /index.php -> /index.php/
 MAP["blog/page/2"] = "/blog/"
 for lid in ["21780790", "22121247", "22116609", "22115443", "22103112", "22080457", "21777342"]:
     MAP["listing/" + lid] = "/search/"
