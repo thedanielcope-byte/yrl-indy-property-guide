@@ -297,7 +297,10 @@
  <h2>Find us on Google</h2>
  <p>Your Realty Link is a verified Google Business at <strong>2302 E Southport Rd, Indianapolis, IN 46227</strong>. Use the map below to view our profile, hours, directions, and every review in one place.</p>
  <div class="map-embed">
- <iframe src="https://www.google.com/maps?q=Your%20Realty%20Link%202302%20E%20Southport%20Rd%20Indianapolis%20IN%2046227&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Your Realty Link on Google Maps"></iframe>
+ <iframe data-src="https://www.google.com/maps?q=Your%20Realty%20Link%202302%20E%20Southport%20Rd%20Indianapolis%20IN%2046227&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Your Realty Link on Google Maps"></iframe>
+ <script>/* map loads only as it nears the screen (the eager embed cost ~460 KB of Maps JS before first paint on mobile) */
+ (function(){var f=document.querySelector('iframe[data-src]');if(!f)return;function go(){f.src=f.getAttribute('data-src');f.removeAttribute('data-src')}
+ if('IntersectionObserver' in window){var o=new IntersectionObserver(function(e){if(e[0].isIntersecting){o.disconnect();go()}},{rootMargin:'200px'});o.observe(f)}else go()})();</script>
  </div>
 </section>
 
