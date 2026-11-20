@@ -68,6 +68,14 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--red); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* In-text links are underlined so they don't rely on color alone (WCAG 1.4.1). */
+p a:not([class]), .faq-answer a:not([class]), a.gloss-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+p a:not([class]):hover, .faq-answer a:not([class]):hover, a.gloss-link:hover { text-decoration-color: currentColor; }
 ul, ol { padding-left: 1.4em; }
 li { margin-bottom: .35em; }
 
@@ -236,7 +244,7 @@ p  { margin-bottom: 1rem; }
 }
 .breadcrumbs a { color: var(--gray); }
 .breadcrumbs a:hover { color: var(--red); text-decoration: none; }
-.breadcrumbs span { margin: 0 6px; color: #bbb; }
+.breadcrumbs span { margin: 0 6px; color: var(--gray); }
 
 /* ── HERO ── */
 .page-hero {

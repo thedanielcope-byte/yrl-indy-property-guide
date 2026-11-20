@@ -43,7 +43,7 @@ def card(p):
            if p["img"] else '<img alt="" loading="lazy">')
     return (f'<a class="sr-post" href="{p["url"]}">{img}'
             f'<span class="b"><span class="cat">{p["cat"]}</span>'
-            f'<h4>{p["title"]}</h4><p>{p["excerpt"]}</p>'
+            f'<h3>{p["title"]}</h3><p>{p["excerpt"]}</p>'
             f'<span class="more">Read more &rarr;</span></span></a>')
 
 def main():

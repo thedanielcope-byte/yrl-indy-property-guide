@@ -83,18 +83,18 @@ page = f'''<!DOCTYPE html>
 .sr-banner {{ display: block; max-width: 1100px; margin: 22px auto 0; }}
 .sr-banner img {{ width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 8px 26px rgba(0,0,0,.14); }}
 .sr-belt {{ background: #eef3ec; padding: 26px 0 30px; text-align: center; }}
-.sr-belt .eyebrow {{ font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #3f7d4f; margin-bottom: 10px; }}
+.sr-belt .eyebrow {{ font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #2f6b3f; margin-bottom: 10px; }}
 .sr-belt h1 {{ color: #13294a; font-size: clamp(1.5rem, 3.2vw, 2.15rem); margin: 0 0 8px; line-height: 1.15; }}
 .sr-belt p {{ color: #48566b; font-size: 1.05rem; max-width: 62ch; margin: 0 auto 16px; }}
 .sr-belt .btn-group {{ justify-content: center; }}
 .help-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.4rem 0; }}
 .help-item {{ background: var(--light); border-radius: var(--radius); padding: 18px 20px; border: 1px solid var(--border); }}
-.help-item h4 {{ font-size: 14.5px; margin-bottom: 6px; color: var(--red); }}
+.help-item h3 {{ font-family: var(--font-sans); letter-spacing: normal; font-size: 14.5px; margin: 0 0 6px; color: var(--red); }}
 .help-item p {{ font-size: 13.5px; color: var(--mid); margin: 0; }}
 .spec-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 1.4rem 0; }}
 .spec-card {{ background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; }}
-.spec-card h4 {{ margin: 0 0 2px; color: #13294a; font-size: 17px; }}
-.spec-card .role {{ color: #3f7d4f; font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; }}
+.spec-card h3 {{ font-family: var(--font-sans); letter-spacing: normal; margin: 0 0 2px; color: #13294a; font-size: 17px; }}
+.spec-card .role {{ color: #2f6b3f; font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; }}
 .spec-card p {{ font-size: 13.5px; color: var(--mid); margin: 10px 0 12px; }}
 .spec-card a {{ font-weight: 700; }}
 .search-links {{ display: flex; flex-wrap: wrap; gap: 10px; margin: 1.2rem 0; }}
@@ -106,8 +106,8 @@ page = f'''<!DOCTYPE html>
 .sr-post:hover {{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }}
 .sr-post img {{ width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #12283f; }}
 .sr-post .b {{ padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }}
-.sr-post .cat {{ font-size: .68rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #3f7d4f; }}
-.sr-post h4 {{ font-size: .98rem; line-height: 1.3; color: #13294a; margin: 0; }}
+.sr-post .cat {{ font-size: .68rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #2f6b3f; }}
+.sr-post h3 {{ font-family: var(--font-sans); letter-spacing: normal; font-size: .98rem; line-height: 1.3; color: #13294a; margin: 0; }}
 .sr-post p {{ font-size: .82rem; color: var(--mid); line-height: 1.5; margin: 0; }}
 .sr-post .more {{ margin-top: auto; color: var(--red); font-weight: 700; font-size: .8rem; padding-top: 4px; }}
  @media (max-width: 700px) {{ .sr-blog-grid {{ grid-template-columns: 1fr; }} }}
@@ -164,10 +164,10 @@ page = f'''<!DOCTYPE html>
  <h2>What Are Your Senior Needs?</h2>
  <p>Every later-in-life move is different. Some clients want to be closer to grandchildren; others want a 55+ community with amenities and no yard work, or a ranch home where everything is on one floor. We start by listening &mdash; then we build a plan around what matters most to you.</p>
  <div class="help-grid">
- <div class="help-item"><h4>Right-Sizing, Not Just Downsizing</h4><p>We help you find the home that fits this chapter &mdash; often smaller and simpler, but the right size for how you actually live now.</p></div>
- <div class="help-item"><h4>One-Level &amp; Low-Maintenance</h4><p>Ranch homes, patio homes, condos, and 55+ communities like Del Webb &mdash; less upkeep, more time for what you enjoy. Browse <a href="/55-plus-communities-indianapolis/">55+ communities in Indianapolis</a> or read our guide to <a href="/blog/55-plus-active-adult-communities-near-indianapolis/">55+ active adult communities near Indianapolis</a>.</p></div>
- <div class="help-item"><h4>Prepping the Family Home</h4><p>We line up the repairs, updates, and cleanout help that get a long-owned home ready to sell for top dollar.</p></div>
- <div class="help-item"><h4>Coordinating Both Sides</h4><p>Selling and buying at once is stressful. We align the timelines so you&rsquo;re not carrying two homes or scrambling to move.</p></div>
+ <div class="help-item"><h3>Right-Sizing, Not Just Downsizing</h3><p>We help you find the home that fits this chapter &mdash; often smaller and simpler, but the right size for how you actually live now.</p></div>
+ <div class="help-item"><h3>One-Level &amp; Low-Maintenance</h3><p>Ranch homes, patio homes, condos, and 55+ communities like Del Webb &mdash; less upkeep, more time for what you enjoy. Browse <a href="/55-plus-communities-indianapolis/">55+ communities in Indianapolis</a> or read our guide to <a href="/blog/55-plus-active-adult-communities-near-indianapolis/">55+ active adult communities near Indianapolis</a>.</p></div>
+ <div class="help-item"><h3>Prepping the Family Home</h3><p>We line up the repairs, updates, and cleanout help that get a long-owned home ready to sell for top dollar.</p></div>
+ <div class="help-item"><h3>Coordinating Both Sides</h3><p>Selling and buying at once is stressful. We align the timelines so you&rsquo;re not carrying two homes or scrambling to move.</p></div>
  </div>
 
  <h2>Why Use a Senior Specialist?</h2>
@@ -193,13 +193,13 @@ page = f'''<!DOCTYPE html>
  <div class="spec-grid">
  <div class="spec-card">
  <span class="role">Broker / Owner &middot; Senior Specialist</span>
- <h4>Janet Giles-Schultz</h4>
+ <h3>Janet Giles-Schultz</h3>
  <p>Janet has been helping Central Indiana families buy and sell since the 1970s and leads Your Realty Link&rsquo;s senior real estate work with patience, honesty, and deep local knowledge.</p>
  <a href="tel:3179977404">📞 317-997-7404</a>
  </div>
  <div class="spec-card">
  <span class="role">Senior Specialist</span>
- <h4>Elizabeth Cottler</h4>
+ <h3>Elizabeth Cottler</h3>
  <p>Elizabeth works closely with senior buyers and sellers across the metro, guiding right-sizing moves and 55+ transitions with genuine care for each client&rsquo;s situation.</p>
  <a href="tel:3175077770">📞 317-507-7770</a>
  </div>
