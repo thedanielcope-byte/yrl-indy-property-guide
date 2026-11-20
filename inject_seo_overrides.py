@@ -44,6 +44,22 @@ OVERRIDES = {
  "best/small-towns-near-indianapolis/": (
   "Best Small Towns Near Indianapolis, 25 to 35 Minutes Out",
   "Zionsville, Danville, Pittsboro, Lebanon, Fortville and Cicero: real main streets about 25 to 35 minutes from downtown Indianapolis. Prices compared."),
+ # Nov 19 2026 audit: top-100 pages whose titles ran past ~62 chars only because of the
+ # brand suffix. Same wording, suffix dropped (full_title() drops it when too long).
+ "blog/indiana-property-tax-deductions-seniors/": (
+  "Indiana Property Tax Deductions for Seniors — What to File", None),
+ "blog/moving-from-chicago-to-indianapolis/": (
+  "Moving from Chicago to Indianapolis: 2026 Guide", None),
+ "blog/carpet-cleaning-tips-home-selling-indianapolis/": (
+  "Carpet Cleaning Tips to Prep Your Home to Sell", None),
+ "compare/carmel-vs-fishers/": (
+  "Carmel vs. Fishers, Indiana: Which Suburb Is Better?", None),
+ "best/best-indianapolis-suburbs-for-young-professionals/": (
+  "Best Indianapolis Suburbs for Young Professionals (2026)", None),
+ "best/best-indianapolis-suburbs-for-retirees/": (
+  "Best Indianapolis Suburbs for Retirees (2026)", None),
+ "compare/whitestown-vs-brownsburg/": (
+  "Whitestown vs. Brownsburg, Indiana: Which Suburb Is Better?", None),
  "cities/marion-county/southport-indiana-real-estate/": (
   "Southport, IN Real Estate and Homes for Sale",
   "Southport, IN real estate on Indy's south side: affordable homes, easy I-65 access and Perry Township schools. Search Southport homes or get a valuation."),
