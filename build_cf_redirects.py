@@ -7,6 +7,11 @@ DNS is proxied through Cloudflare (orange cloud, SSL mode Full — NOT Full (Str
 may not renew its cert behind the proxy), import this CSV as a Bulk Redirect List and enable it with a
 Bulk Redirect Rule. The stubs stay in the repo as a fallback.
 
+LIVE since Nov 20 2026: zone proxied (SSL Full, automatic mode off, email obfuscation off), account
+Bulk Redirect list `yrl_legacy_redirects` (133 rows) + rule "yourrealtylink legacy 301s". When you add a
+stub, re-run this script and add the new rows to that list in the dashboard (Bulk Redirects > list >
+Add items); importing the whole CSV again would collide with the existing rows.
+
 CSV columns (Cloudflare format): source,target,status,preserve_query_string,include_subdomains,
 subpath_matching,preserve_path_suffix. Each stub gets a with- and without-trailing-slash row;
 /blog/archives/, /blog/category/ and /listing/ are subpath catch-alls; /market-trends/ is skipped
