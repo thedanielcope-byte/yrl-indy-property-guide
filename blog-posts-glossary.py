@@ -353,8 +353,8 @@ POSTS.append({
    '<ul>\n <li><strong>Where:</strong> You file with the <em>county auditor</em> in the county where the home is located. Many counties let you file online; others use a paper form (the state’s homestead form).</li>\n'
    ' <li><strong>At closing:</strong> In a lot of Indiana transactions, the title company includes a homestead application with your closing paperwork — but confirm it was actually submitted. Don’t assume.</li>\n'
    ' <li><strong>You file once:</strong> Once approved, the homestead generally stays in place year to year as long as you own and occupy the home and your situation doesn’t change. You don’t re-file annually.</li>\n'
-   ' <li><strong>Tell the auditor about changes:</strong> If you move, convert the home to a rental, or the ownership changes, you’re required to notify the auditor so the deduction can be removed.</li>\n </ul>',
-   '<p>Deadlines matter: the deduction applies to the following year’s tax bill only if you file by the state’s cutoff, so file promptly after you close rather than waiting.</p>',
+   ' <li><strong>Tell the auditor about changes:</strong> If you move, convert the home to a rental, or the ownership changes, you’re required to notify the auditor within 60 days so the deduction can be removed.</li>\n </ul>',
+   '<p><strong>Deadline:</strong> the state form says the application must be filed or postmarked with the county auditor by January 15 of the year the taxes are due, so file as soon as you move in. For online filing links, auditor offices and phone numbers, see <a href="/blog/how-to-file-homestead-deduction-indiana-by-county/">how to file the homestead deduction in each Indiana county</a>.</p>',
   ]),
   ("buyers-sellers", "Why It Matters for Buyers and Sellers", [
    '<p>For buyers, the takeaway is simple: filing your homestead is one of the highest-return five minutes of paperwork in the whole transaction. Confirm it was submitted, and follow up with the county auditor if you’re unsure.</p>',
