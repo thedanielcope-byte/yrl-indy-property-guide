@@ -177,6 +177,14 @@ def hub_page(releases):
  <div class="pr-hublist">
 {chr(10).join(cards)}
  </div>
+ <div class="pr-meta">
+ <h2>For Journalists</h2>
+ <p>Our agents can comment on the Central Indiana housing market, including MIBOR&rsquo;s monthly sales figures, first-time buying, selling and downsizing after 55, new construction, and relocating to the Indianapolis area. Each month we also publish a <a href="/market-updates/">Central Indiana market update</a>.</p>
+ <h2>About Your Realty Link</h2>
+ <p>{esc(BOILERPLATE)}</p>
+ <h2>Media Contact</h2>
+ <p>{esc(CONTACT['name'])}<br>{esc(CONTACT['title'])}<br><a href="mailto:{CONTACT['email']}">{CONTACT['email']}</a> &nbsp;|&nbsp; <a href="tel:{CONTACT['phone'].replace('-', '')}">{CONTACT['phone']}</a></p>
+ </div>
  </div>
  </div>
 </section>
