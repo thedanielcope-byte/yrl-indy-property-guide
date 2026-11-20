@@ -90,7 +90,7 @@ POST = dict(
  <tr><td>Other services</td><td>99.1</td><td>About the same</td></tr>
  </tbody>
  </table>
- <p>In plain terms, you save the most on rent and housing, a little on things you buy, and close to nothing on services. The gap is also narrowing: the all-items score was 93.8 in 2022. (BEA&rsquo;s metro still uses the older &ldquo;Indianapolis-Carmel-Anderson&rdquo; boundary, which includes Madison County.) To compare your own metro and salary, try our <a href="/cost-of-living-calculator-indianapolis/">Indianapolis cost of living calculator</a>.</p>
+ <p>In plain terms, you save the most on rent and housing, a little on things you buy, and close to nothing on services. The gap is also narrowing: the all-items score was 93.8 in 2022. (BEA&rsquo;s 2024 figures use the &ldquo;Indianapolis-Carmel-Greenwood&rdquo; metro, the 2023 renaming of the old Indianapolis-Carmel-Anderson area. It still includes Madison County.) To compare your own metro and salary, try our <a href="/cost-of-living-calculator-indianapolis/">Indianapolis cost of living calculator</a>.</p>
 
  <h2 id="housing">Housing: Rent and Home Prices</h2>
  <h3>Renting</h3>
