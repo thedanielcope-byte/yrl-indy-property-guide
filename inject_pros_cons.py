@@ -11,7 +11,10 @@ No safety/crime claims. Tax-difference dollar figures are simple arithmetic on D
 Marker-wrapped (<!-- PROS-CONS --> ... <!-- /PROS-CONS -->), inserted right after the
 "Living in <Town>, Indiana" section. Idempotent — re-run to update.
 """
-import re
+import os, re
+from living_in_data import TOWNS as _LIVING
+
+GUIDES = {k: v["slug"] for k, v in _LIVING.items()}  # full pros/cons pages (build_living_in.py)
 
 START, END = "<!-- PROS-CONS -->", "<!-- /PROS-CONS -->"
 DOR = ("https://www.in.gov/dor/files/dn01.pdf", "Indiana DOR county tax rates (2026)")
@@ -120,6 +123,9 @@ def block(t):
     li = lambda xs: "\n".join(f"  <li>{x}</li>" for x in xs)
     src = " &middot; ".join(f'<a href="{u}" target="_blank" rel="noopener">{l}</a>' for u, l in t["sources"])
     n = t["name"]
+    g = GUIDES.get(t.get("key", ""))
+    guide = (f'\n <p>Want the full picture? Read our guide to <a href="/blog/{g}/">living in {n}, Indiana: pros and cons</a>, '
+             f'with home prices, taxes, schools, neighborhoods and the commute.</p>') if g and os.path.exists(f"blog/{g}/index.html") else ""
     return f"""{START}
  <h2 id="pros-cons">Pros and Cons of Living in {n}</h2>
  <div class="pros-cons" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:16px 0;">
@@ -134,7 +140,7 @@ def block(t):
  </div>
  <p><strong>Who it&rsquo;s best for:</strong> {t['who']}</p>
  <h3>Is {n}, Indiana a good place to live?</h3>
- <p>{t['faq']}</p>
+ <p>{t['faq']}</p>{guide}
  <p style="font-size:.85rem;color:var(--gray);">Sources: {src}</p>
 {END}
 """
@@ -142,6 +148,7 @@ def block(t):
 
 done = 0
 for key, t in TOWNS.items():
+    t["key"] = key
     p = f"cities/{key}-indiana-real-estate/index.html"
     s = open(p, encoding="utf-8", newline="").read()
     b = block(t)
