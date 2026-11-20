@@ -485,6 +485,8 @@ NEWPOSTS = json.load(open(new_path, encoding="utf-8")) if os.path.exists(new_pat
 
 written = []
 for p in NEWPOSTS:
+    if os.path.exists(os.path.join(ROOT, "fresh_posts", p["slug"] + ".py")):
+        continue  # superseded: build_fresh_posts.py owns this URL now
     d = os.path.join(ROOT, "blog", p["slug"])
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(normalize(build(p)))

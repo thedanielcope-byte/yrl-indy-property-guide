@@ -35,6 +35,8 @@ def main():
     for f in sorted(glob.glob(os.path.join(ROOT, "blog", "*", "index.html"))):
         slug = os.path.basename(os.path.dirname(f))
         s = open(f, encoding="utf-8").read()
+        if 'http-equiv="refresh"' in s:
+            continue  # redirect stub: never a link target
         h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S)
         cat = re.search(r'<span class="category-badge">([^<]*)</span>', s)
         title = text(h1.group(1)) if h1 else slug.replace("-", " ").title()

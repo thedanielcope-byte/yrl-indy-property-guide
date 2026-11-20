@@ -80,14 +80,14 @@ PAGE_GROUP.update({
  "indianapolis-real-estate": "hub", "indianapolis-homes-for-sale": "hub",
  "indianapolis-real-estate-agent": "hub", "indianapolis-luxury-homes": "hub",
  "first-time-home-buyers-indianapolis": "buyer",
- "indianapolis-investment-properties": "investment",
  "new-construction-indianapolis": "newconstruction",
 })
 # guides
 PAGE_GROUP.update({
  "guides/buying-a-home-in-indianapolis": "buyer",
  "guides/selling-a-home-in-indianapolis": "seller",
- "guides/indianapolis-real-estate-investing": "investment",
+ "guides/indianapolis-real-estate-investing": "investment",  # now a redirect stub (skipped)
+ "blog/real-estate-investing-basics-indianapolis": "investment",  # investing pillar (Nov 2026)
  "guides/moving-to-indianapolis": "hub",
 })
 

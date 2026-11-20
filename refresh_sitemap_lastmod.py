@@ -5,8 +5,8 @@ Why: by Nov 2026, 93% of sitemap entries still said September even on pages that
 changed that week, because each generator only stamps the entries it creates. Google
 learns to ignore lastmod that never moves.
 
-"Content" = the page's visible text, minus <head>, <header>, <nav>, <footer>, scripts
-and styles. Site-wide boilerplate edits (nav, footer, GA/favicon/preload tags, link
+"Content" = the page's visible text, minus <head>, <header>, <nav>, <footer>, scripts,
+styles and the auto-generated MORE-ARTICLES / KEY-TERMS link blocks. Site-wide boilerplate edits (nav, footer, GA/favicon/preload tags, link
 retargets) therefore don't bump the date; a new section, rewritten copy or refreshed
 figures do.
 
@@ -32,11 +32,14 @@ os.chdir(ROOT)
 SITE = "https://yourrealtylink.com/"
 STATE = "sitemap-lastmod.json"
 DROP = re.compile(r"<(script|style|header|nav|footer|noscript|svg)\b.*?</\1>", re.S | re.I)
+# Auto-generated cross-link blocks (inject_related_posts.py, inject_key_terms.py): refreshing
+# them is linking, not content, so they don't bump lastmod either.
+LINKBLOCKS = re.compile(r"<!-- (MORE-ARTICLES|KEY-TERMS) -->.*?<!-- /\1 -->", re.S)
 URL_BLOCK = re.compile(r"[ \t]*<url>\s*<loc>(.*?)</loc>(.*?)</url>\n?", re.S)
 
 
 def content_hash(src):
-    body = src.split("<body", 1)[-1]
+    body = LINKBLOCKS.sub(" ", src).split("<body", 1)[-1]
     body = DROP.sub(" ", body)
     text = html.unescape(re.sub(r"<[^>]+>", " ", body))
     return hashlib.sha1(" ".join(text.split()).encode()).hexdigest()[:16]
