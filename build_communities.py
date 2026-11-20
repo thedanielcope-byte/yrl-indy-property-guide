@@ -162,7 +162,7 @@ def detail_page(c):
 
     body = f'''<section class="page-hero">
  <div class="container">
- <h1>{esc(name)} <em>Homes for Sale</em></h1>
+ <h1>{esc(name)} <em>Homes for Sale{"" if name.strip().lower() == city.strip().lower() else " in " + esc(city)}</em></h1>
  <p class="hero-sub">{a_an(ctype).capitalize()} {esc(ctype)} in {esc(city)}, {esc(county)} County, {esc(school_txt)}. Your Realty Link helps buyers and sellers in {esc(name)}.</p>
  <div class="hero-badges">
  {badges_html}
