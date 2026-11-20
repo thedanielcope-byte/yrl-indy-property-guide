@@ -45,13 +45,40 @@
   }
 
   // ── Load the Turnstile API (once) + render a widget in each lead form ──
-  (function loadTurnstile() {
-    if (window.turnstile || document.getElementById('cf-ts-api')) return;
-    var s = document.createElement('script');
-    s.id = 'cf-ts-api';
-    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-    s.async = true; s.defer = true;
-    (document.head || document.documentElement).appendChild(s);
+  // Requested when a visitor starts on a lead form, or 2.5s after the page loads,
+  // whichever comes first, so it doesn't compete with the first paint on mobile.
+  // The submit handler waits for it (see tsStillLoading) so no lead goes out early.
+  var tsRequestedAt = 0;
+  function loadTurnstile() {
+    if (tsRequestedAt) return;
+    tsRequestedAt = Date.now();
+    if (!window.turnstile && !document.getElementById('cf-ts-api')) {
+      var s = document.createElement('script');
+      s.id = 'cf-ts-api';
+      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      s.async = true; s.defer = true;
+      (document.head || document.documentElement).appendChild(s);
+    }
+    // Turnstile loads async: render as soon as it's ready.
+    var tsPoll = setInterval(function () {
+      if (window.turnstile) { clearInterval(tsPoll); renderAllWidgets(); }
+    }, 250);
+    setTimeout(function () { clearInterval(tsPoll); }, 30000);
+  }
+  function tsStillLoading() {
+    return !window.turnstile && tsRequestedAt && Date.now() - tsRequestedAt < 10000;
+  }
+  function onFormTouch(e) {
+    if (e.target && e.target.closest && e.target.closest('form.ipg-lead-form')) loadTurnstile();
+  }
+  document.addEventListener('focusin', onFormTouch, true);
+  document.addEventListener('pointerdown', onFormTouch, true);
+  (function () {
+    function afterLoad() {
+      setTimeout(function () { if (document.querySelector('form.ipg-lead-form')) loadTurnstile(); }, 2500);
+    }
+    if (document.readyState === 'complete') afterLoad();
+    else window.addEventListener('load', afterLoad);
   })();
 
   function renderWidget(form) {
@@ -70,11 +97,6 @@
     var forms = document.querySelectorAll('form.ipg-lead-form');
     for (var i = 0; i < forms.length; i++) renderWidget(forms[i]);
   }
-  // Turnstile loads async — render as soon as it's ready.
-  var tsPoll = setInterval(function () {
-    if (window.turnstile) { clearInterval(tsPoll); renderAllWidgets(); }
-  }, 250);
-  setTimeout(function () { clearInterval(tsPoll); }, 20000);
 
   function successHTML() {
     return '<div class="form-success">' +
@@ -120,6 +142,16 @@
         (form.__loadedAt && Date.now() - form.__loadedAt < MIN_MS) ||
         !form.__interacted) {
       form.innerHTML = successHTML();
+      return;
+    }
+
+    // Turnstile not loaded yet (requested on first focus): start it if needed and ask them
+    // to press Send again in a moment, rather than sending a tokenless lead.
+    if (!tsRequestedAt) loadTurnstile();
+    if (tsStillLoading()) {
+      var wMsg = form.querySelector('.form-error');
+      if (!wMsg) { wMsg = document.createElement('p'); wMsg.className = 'form-error'; form.appendChild(wMsg); }
+      wMsg.textContent = 'One moment, the verification box is still loading. Press Send again in a few seconds.';
       return;
     }
 

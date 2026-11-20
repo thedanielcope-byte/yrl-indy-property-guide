@@ -5,14 +5,28 @@
   // CRISP LIVE CHAT
   // Responses route to csirealtyteam@yourrealtylink.com (set in the Crisp workspace).
   // ═══════════════════════════════════════════════
+  // Loaded after the page has painted (4s after load) or on the visitor's first
+  // interaction, whichever comes first, so the widget doesn't compete with the
+  // hero on mobile (PageSpeed, Nov 2026).
   (function initCrispChat() {
-    if (window.$crisp) return;
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = '3bbec33b-553d-457d-bb53-0cd004a78e3e';
-    var s = document.createElement('script');
-    s.src = 'https://client.crisp.chat/l.js';
-    s.async = 1;
-    (document.head || document.getElementsByTagName('head')[0]).appendChild(s);
+    var started = false;
+    var EVENTS = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+    function loadCrisp() {
+      if (started) return;
+      started = true;
+      EVENTS.forEach(function (ev) { window.removeEventListener(ev, loadCrisp, true); });
+      if (window.$crisp) return;
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = '3bbec33b-553d-457d-bb53-0cd004a78e3e';
+      var s = document.createElement('script');
+      s.src = 'https://client.crisp.chat/l.js';
+      s.async = 1;
+      (document.head || document.getElementsByTagName('head')[0]).appendChild(s);
+    }
+    EVENTS.forEach(function (ev) { window.addEventListener(ev, loadCrisp, { capture: true, passive: true }); });
+    function afterLoad() { setTimeout(loadCrisp, 4000); }
+    if (document.readyState === 'complete') afterLoad();
+    else window.addEventListener('load', afterLoad);
   })();
 
   // ═══════════════════════════════════════════════
