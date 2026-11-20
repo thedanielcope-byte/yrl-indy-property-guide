@@ -25,7 +25,7 @@ def grab(pattern, s, flags=re.DOTALL):
         raise SystemExit("Could not extract from template: " + pattern[:40])
     return m.group(0)
 
-HEAD_ASSETS = grab(r'<link rel="preconnect"[^\n]*googleapis.*?</style>', src)
+HEAD_ASSETS = grab(r'(?:<link rel="preconnect"[^\n]*googleapis|<link rel="preload" href="/assets/fonts/).*?</style>', src)
 HEADER      = grab(r'<header class="site-header">.*?</header>', src)
 TAIL        = grab(r'<footer class="site-footer">.*\Z', src)
 

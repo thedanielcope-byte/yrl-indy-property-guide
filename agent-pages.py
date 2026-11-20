@@ -20,6 +20,40 @@ CANON_FTR = re.search(r'<footer class="site-footer">.*?</footer>', src, re.DOTAL
 TAIL = src[src.index('</footer>') + len('</footer>'):src.index('</body>')]
 CSSHASH = re.search(r'style\.css\?v=([0-9a-f]+)', src).group(1)
 
+
+def img_wh(path):
+    """(width, height) of a local JPEG/PNG/WebP read from its header (no Pillow needed), or None."""
+    import struct
+    try:
+        with open(path, "rb") as fh:
+            b = fh.read(65536)
+    except OSError:
+        return None
+    if b[:8] == b"\x89PNG\r\n\x1a\n":
+        return struct.unpack(">II", b[16:24])
+    if b[:4] == b"RIFF" and b[8:12] == b"WEBP":
+        if b[12:16] == b"VP8X": return (int.from_bytes(b[24:27], "little") + 1, int.from_bytes(b[27:30], "little") + 1)
+        if b[12:16] == b"VP8 ": return (struct.unpack("<H", b[26:28])[0] & 0x3fff, struct.unpack("<H", b[28:30])[0] & 0x3fff)
+        if b[12:16] == b"VP8L":
+            v = int.from_bytes(b[21:25], "little"); return ((v & 0x3fff) + 1, ((v >> 14) & 0x3fff) + 1)
+    if b[:2] == b"\xff\xd8":
+        i = 2
+        while i + 9 < len(b):
+            if b[i] != 0xFF: i += 1; continue
+            m = b[i + 1]
+            if m in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+                h, w = struct.unpack(">HH", b[i + 5:i + 9]); return (w, h)
+            if m in (0xD8, 0x01) or 0xD0 <= m <= 0xD7: i += 2; continue
+            i += 2 + struct.unpack(">H", b[i + 2:i + 4])[0]
+    return None
+
+
+def photo_attrs(a):
+    """width/height for an agent headshot so the hero doesn't jump when it loads (CLS)."""
+    p = a.get("photo") or ""
+    wh = img_wh(os.path.join(ROOT, p.lstrip("/"))) if p.startswith("/") else None
+    return f' width="{wh[0]}" height="{wh[1]}"' if wh else ""
+
 GRID_CSS = """
  .agent-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(185px,1fr)); gap:22px; margin:8px 0; }
  .agent-card { display:block; text-decoration:none; background:#fff; border:1px solid #e6e6e6; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.05); transition:transform .15s, box-shadow .15s; }
@@ -109,9 +143,8 @@ def hub_page(agents):
  {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
  {{ "@type": "ListItem", "position": 2, "name": "Our Agents", "item": "https://yourrealtylink.com/agents/" }} ] }}
  </script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  <style>{GRID_CSS}</style>
 </head>
@@ -189,9 +222,8 @@ def agent_page(a):
  <script type="application/ld+json">
  {json.dumps(schema, indent=1)}
  </script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  <style>{AGENT_CSS}</style>
 </head>
@@ -216,7 +248,7 @@ def agent_page(a):
  <div class="container">
  <div class="agent-layout">
  <aside class="agent-side">
- <img src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link" class="agent-photo">
+ <img src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link" class="agent-photo"{photo_attrs(a)} fetchpriority="high">
  <div class="agent-contact">
  <a href="{SEARCH_URL}" target="_blank" rel="noopener" class="btn-primary">Search Homes with {esc(first)} →</a>
  <a href="mailto:{a['email']}?subject=Real%20Estate%20Inquiry%20%E2%80%94%20Your%20Realty%20Link" class="btn-secondary">Email {esc(first)}</a>
@@ -261,7 +293,8 @@ PREMIUM_CSS = """
  .ah-cta a { font-weight:600; font-size:.95rem; padding:12px 22px; border-radius:8px; text-decoration:none; }
  .ah-cta .btn-primary { background:var(--red); color:#fff; }
  .ah-cta .btn-ghost { background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.4); }
- .agent-search { background:linear-gradient(135deg,rgba(38,38,40,.82) 0%,rgba(22,22,24,.86) 100%), url('/assets/img/heroes/home.jpg') center 58%/cover no-repeat; color:#fff; padding:74px 0; text-align:center; }
+ .agent-search { background:linear-gradient(135deg,rgba(38,38,40,.82) 0%,rgba(22,22,24,.86) 100%) #262628; color:#fff; padding:74px 0; text-align:center; }
+ .agent-search.bg-in { background:linear-gradient(135deg,rgba(38,38,40,.82) 0%,rgba(22,22,24,.86) 100%), url('/assets/img/heroes/home-band.webp') center 58%/cover no-repeat #262628; }
  .agent-search h2 { color:#fff; }
  .agent-search p { color:rgba(255,255,255,.85); margin:6px auto 20px; max-width:560px; }
  .asr-bar { display:flex; max-width:640px; margin:0 auto; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.22); }
@@ -270,10 +303,12 @@ PREMIUM_CSS = """
  .asr-links { margin-top:16px; font-size:.92rem; color:rgba(255,255,255,.92); }
  .asr-links a { color:#fff; text-decoration:underline; margin:0 7px; white-space:nowrap; }
  .sect-alt { background:#f7f7f7; }
- .expertise-band { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%), url('/assets/img/neighborhood.jpg') center/cover no-repeat; }
+ .expertise-band { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%) #2a2a2c; }
+ .expertise-band.bg-in { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%), url('/assets/img/neighborhood-band.webp') center/cover no-repeat #2a2a2c; }
  .expertise-band h2, .expertise-band h3 { color:#fff; }
  .expertise-band p { color:rgba(255,255,255,.9); }
- .reviews-band { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%), url('/assets/img/review.jpg') center/cover no-repeat; }
+ .reviews-band { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%) #2a2a2c; }
+ .reviews-band.bg-in { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%), url('/assets/img/review-band.webp') center/cover no-repeat #2a2a2c; }
  .exp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:8px; }
  .exp-card { background:#fff; border:1px solid #e6e6e6; border-left:4px solid var(--red); border-radius:10px; padding:16px 18px; font-weight:600; color:#1a1a1a; }
  .rev-strip { text-align:center; background:#fff; border:1px solid #e6e6e6; border-radius:14px; padding:26px; box-shadow:0 2px 12px rgba(0,0,0,.05); }
@@ -459,9 +494,8 @@ def premium_agent_page(a):
  <script type="application/ld+json">
  {json.dumps(schema, indent=1)}
  </script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  <script type="application/ld+json">
  {faq_schema}
@@ -477,7 +511,7 @@ def premium_agent_page(a):
 <section class="page-hero">
  <div class="container">
  <div class="ah-grid">
- <img class="ah-photo" src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link">
+ <img class="ah-photo" src="{a['photo']}" alt="{esc(a['name'])} — Your Realty Link"{photo_attrs(a)} fetchpriority="high">
  <div class="ah-info">
  <h1>{esc(a['name'])}</h1>
  <p class="ah-title">{esc(a['title'])} · Your Realty Link · Central Indiana</p>
@@ -616,6 +650,9 @@ def premium_agent_page(a):
 {CANON_FTR}
 {TAIL}<script src="/assets/js/lead-form.js?v=406824a0" defer></script>
 <script src="/assets/js/valuation-form.js?v=044c32e3"></script>
+<script>/* band photos load as each band nears the screen (.bg-in); see agent-pages.py */
+(function(){{var els=document.querySelectorAll('.agent-search,.expertise-band,.reviews-band');if(!('IntersectionObserver' in window)){{els.forEach(function(e){{e.classList.add('bg-in')}});return}}var io=new IntersectionObserver(function(es){{es.forEach(function(x){{if(x.isIntersecting){{x.target.classList.add('bg-in');io.unobserve(x.target)}}}})}},{{rootMargin:'600px 0px'}});els.forEach(function(e){{io.observe(e)}})}})();
+</script>
 </body>
 </html>
 """

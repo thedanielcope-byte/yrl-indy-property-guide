@@ -3,12 +3,18 @@
 <head>
  <meta charset="UTF-8">
  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNV86NLT23"></script>
  <script>
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
  gtag('config', 'G-SNV86NLT23');
+ </script>
+ <script>/* gtag.js loads after first paint or on first interaction; see inject_gtag.py */
+ (function(w,d){var done=0,ev=['pointerdown','keydown','touchstart','scroll'];
+ function load(){if(done)return;done=1;ev.forEach(function(e){w.removeEventListener(e,load,true)});var s=d.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-SNV86NLT23';d.head.appendChild(s)}
+ ev.forEach(function(e){w.addEventListener(e,load,{capture:true,passive:true})});
+ function painted(){var t=setTimeout(load,3000);try{if(PerformanceObserver.supportedEntryTypes.indexOf('largest-contentful-paint')>-1){new PerformanceObserver(function(l,o){o.disconnect();clearTimeout(t);setTimeout(load,0)}).observe({type:'largest-contentful-paint',buffered:true});return}}catch(e){}clearTimeout(t);load()}
+ if(d.readyState==='complete')painted();else w.addEventListener('load',painted)})(window,document);
  </script>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Teresa Thacker — REALTOR | Your Realty Link</title>
@@ -40,13 +46,12 @@
  "areaServed": "Central Indiana"
 }
  </script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap"></noscript>
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="icon" href="/favicon.ico" sizes="48x48">
  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/icon-192.png">
  <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
- <link rel="stylesheet" href="/assets/css/style.css?v=bd9b181b">
+ <link rel="stylesheet" href="/assets/css/style.css?v=c76107d6">
  <script type="application/ld+json">
  {
  "@context": "https://schema.org",
@@ -96,7 +101,8 @@
  .ah-cta a { font-weight:600; font-size:.95rem; padding:12px 22px; border-radius:8px; text-decoration:none; }
  .ah-cta .btn-primary { background:var(--red); color:#fff; }
  .ah-cta .btn-ghost { background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.4); }
- .agent-search { background:linear-gradient(135deg,rgba(38,38,40,.82) 0%,rgba(22,22,24,.86) 100%), url('/assets/img/heroes/home.jpg') center 58%/cover no-repeat; color:#fff; padding:74px 0; text-align:center; }
+ .agent-search { background:linear-gradient(135deg,rgba(38,38,40,.82) 0%,rgba(22,22,24,.86) 100%) #262628; color:#fff; padding:74px 0; text-align:center; }
+ .agent-search.bg-in { background:linear-gradient(135deg,rgba(38,38,40,.82) 0%,rgba(22,22,24,.86) 100%), url('/assets/img/heroes/home-band.webp') center 58%/cover no-repeat #262628; }
  .agent-search h2 { color:#fff; }
  .agent-search p { color:rgba(255,255,255,.85); margin:6px auto 20px; max-width:560px; }
  .asr-bar { display:flex; max-width:640px; margin:0 auto; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.22); }
@@ -105,10 +111,12 @@
  .asr-links { margin-top:16px; font-size:.92rem; color:rgba(255,255,255,.92); }
  .asr-links a { color:#fff; text-decoration:underline; margin:0 7px; white-space:nowrap; }
  .sect-alt { background:#f7f7f7; }
- .expertise-band { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%), url('/assets/img/neighborhood.jpg') center/cover no-repeat; }
+ .expertise-band { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%) #2a2a2c; }
+ .expertise-band.bg-in { background:linear-gradient(rgba(34,34,36,.74) 0%, rgba(26,26,28,.80) 100%), url('/assets/img/neighborhood-band.webp') center/cover no-repeat #2a2a2c; }
  .expertise-band h2, .expertise-band h3 { color:#fff; }
  .expertise-band p { color:rgba(255,255,255,.9); }
- .reviews-band { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%), url('/assets/img/review.jpg') center/cover no-repeat; }
+ .reviews-band { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%) #2a2a2c; }
+ .reviews-band.bg-in { background:linear-gradient(rgba(34,34,36,.72) 0%, rgba(26,26,28,.78) 100%), url('/assets/img/review-band.webp') center/cover no-repeat #2a2a2c; }
  .exp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:8px; }
  .exp-card { background:#fff; border:1px solid #e6e6e6; border-left:4px solid var(--red); border-radius:10px; padding:16px 18px; font-weight:600; color:#1a1a1a; }
  .rev-strip { text-align:center; background:#fff; border:1px solid #e6e6e6; border-radius:14px; padding:26px; box-shadow:0 2px 12px rgba(0,0,0,.05); }
@@ -270,7 +278,7 @@
 <section class="page-hero">
  <div class="container">
  <div class="ah-grid">
- <img class="ah-photo" src="/assets/img/agents/teresa-thacker.jpg" alt="Teresa Thacker — Your Realty Link">
+ <img class="ah-photo" src="/assets/img/agents/teresa-thacker.jpg" alt="Teresa Thacker — Your Realty Link" width="600" height="750" fetchpriority="high">
  <div class="ah-info">
  <h1>Teresa Thacker</h1>
  <p class="ah-title">REALTOR · Your Realty Link · Central Indiana</p>
@@ -508,5 +516,8 @@ document.addEventListener('click', function(e) {
 <script src="/assets/js/site-enhancements.js?v=a5672d51" defer></script>
 <script src="/assets/js/lead-form.js?v=73d168f4" defer></script>
 <script src="/assets/js/valuation-form.js?v=87064e2d"></script>
+<script>/* band photos load as each band nears the screen (.bg-in); see agent-pages.py */
+(function(){var els=document.querySelectorAll('.agent-search,.expertise-band,.reviews-band');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('bg-in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('bg-in');io.unobserve(x.target)}})},{rootMargin:'600px 0px'});els.forEach(function(e){io.observe(e)})})();
+</script>
 </body>
 </html>

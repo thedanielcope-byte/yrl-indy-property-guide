@@ -12,7 +12,7 @@ def grab(p, s):
     m = re.search(p, s, re.S);
     if not m: raise SystemExit("extract failed: "+p[:30])
     return m.group(0)
-HEAD = grab(r'<link rel="preconnect"[^\n]*googleapis.*?</style>', src) if re.search(r'</style>', src) else grab(r'<link rel="stylesheet" href="/assets/css/style\.css[^"]*">', src)
+HEAD = grab(r'(?:<link rel="preconnect"[^\n]*googleapis|<link rel="preload" href="/assets/fonts/).*?</style>', src) if re.search(r'</style>', src) else grab(r'<link rel="stylesheet" href="/assets/css/style\.css[^"]*">', src)
 HEADER = grab(r'<header class="site-header">.*?</header>', src)
 TAIL = grab(r'<footer class="site-footer">.*\Z', src)
 

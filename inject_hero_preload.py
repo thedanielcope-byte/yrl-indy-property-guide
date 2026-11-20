@@ -8,9 +8,10 @@ LCP at 13.6s on mobile for exactly this reason. This adds
 
     <!-- HERO-PRELOAD --><link rel="preload" as="image" href="..." fetchpriority="high"><!-- /HERO-PRELOAD -->
 
-to the <head>, ABOVE the fonts.googleapis.com preconnect: generators copy the range
-from that preconnect to the style.css link out of index.html (the FONTS grab), so
-page-specific tags must sit outside it.
+to the <head>, ABOVE the first font preload (the self-hosted font block from
+inject_fonts.py; older pages: the fonts.googleapis.com preconnect). Generators copy the
+range from that first font tag to the style.css link out of index.html (the FONTS grab),
+so page-specific tags must sit outside it.
 
 Marker-wrapped and idempotent: each run strips the old tag and re-adds it from the
 page's current hero, so a changed hero image is picked up. Runs in the GitHub
@@ -27,7 +28,8 @@ START, END = "<!-- HERO-PRELOAD -->", "<!-- /HERO-PRELOAD -->"
 HERO = re.compile(r'<section class="page-hero[^"]*"[^>]*--hero-img:\s*([^;"]+)')
 URL = re.compile(r"""(/[^'")\s]+\.(?:webp|avif|jpe?g|png))""")
 STRIP = re.compile(r"[ \t]*" + re.escape(START) + r".*?" + re.escape(END) + r"\n", re.S)
-ANCHOR = '<link rel="preconnect" href="https://fonts.googleapis.com">'
+ANCHORS = ('<link rel="preload" href="/assets/fonts/',            # self-hosted fonts (Nov 2026)
+           '<link rel="preconnect" href="https://fonts.googleapis.com">')  # older pages
 
 
 def main():
@@ -53,7 +55,7 @@ def main():
         if re.search(r'<link rel="preload" as="image"[^>]*href="' + re.escape(href) + '"', base):
             continue  # page already preloads it by hand
         tag = f'{START}<link rel="preload" as="image" href="{href}" fetchpriority="high">{END}'
-        i = base.find(ANCHOR)
+        i = next((j for j in (base.find(a) for a in ANCHORS) if j >= 0), -1)
         if i < 0:
             i = base.find("</head>")
         if i >= 0:

@@ -3,12 +3,18 @@
 <head>
  <meta charset="UTF-8">
  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNV86NLT23"></script>
  <script>
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
  gtag('config', 'G-SNV86NLT23');
+ </script>
+ <script>/* gtag.js loads after first paint or on first interaction; see inject_gtag.py */
+ (function(w,d){var done=0,ev=['pointerdown','keydown','touchstart','scroll'];
+ function load(){if(done)return;done=1;ev.forEach(function(e){w.removeEventListener(e,load,true)});var s=d.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-SNV86NLT23';d.head.appendChild(s)}
+ ev.forEach(function(e){w.addEventListener(e,load,{capture:true,passive:true})});
+ function painted(){var t=setTimeout(load,3000);try{if(PerformanceObserver.supportedEntryTypes.indexOf('largest-contentful-paint')>-1){new PerformanceObserver(function(l,o){o.disconnect();clearTimeout(t);setTimeout(load,0)}).observe({type:'largest-contentful-paint',buffered:true});return}}catch(e){}clearTimeout(t);load()}
+ if(d.readyState==='complete')painted();else w.addEventListener('load',painted)})(window,document);
  </script>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <!--
@@ -36,14 +42,13 @@
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="Your Realty Link">
  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["LocalBusiness", "RealEstateAgent"], "@id": "https://yourrealtylink.com/#business", "name": "Your Realty Link", "alternateName": "Your Realty Link", "description": "Full-service MIBOR real estate brokerage serving buyers, sellers, and investors across Central Indiana.", "url": "https://yourrealtylink.com", "telephone": "+13179977404", "email": "indy@yourrealtylink.com", "address": {"@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 39.6789, "longitude": -86.1003}, "areaServed": {"@type": "State", "name": "Indiana"}, "priceRange": "$$", "image": "/assets/img/yrl-logo.png", "sameAs": ["https://www.facebook.com/yourrealtylink", "https://www.linkedin.com/company/your-realty-link-llc/", "https://www.instagram.com/IndianapolisRealEstate", "https://www.youtube.com/@yourrealtylink", "https://www.google.com/maps/place/?q=place_id:ChIJVwJ1dGFda4gRADdrVWlDYtk"], "founder": {"@type": "Person", "name": "Janet Giles-Schultz", "jobTitle": "Principal Broker & Owner", "url": "https://yourrealtylink.com/agents/janet-giles/"}}, {"@type": "WebSite", "@id": "https://yourrealtylink.com/#website", "url": "https://yourrealtylink.com", "name": "Your Realty Link", "publisher": {"@id": "https://yourrealtylink.com/#business"}}]}</script>
- <link rel="preload" as="image" href="/assets/img/heroes/yrl-office-960.webp" imagesrcset="/assets/img/heroes/yrl-office-640.webp 640w, /assets/img/heroes/yrl-office-960.webp 960w, /assets/img/heroes/yrl-office-1280.webp 1280w, /assets/img/heroes/yrl-office.webp 1800w" imagesizes="(max-width: 900px) 100vw, 75vw" type="image/webp" fetchpriority="high">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap"></noscript>
+ <link rel="preload" as="image" href="/assets/img/heroes/yrl-office-960.webp" imagesrcset="/assets/img/heroes/yrl-office-640.webp 640w, /assets/img/heroes/yrl-office-768.webp 768w, /assets/img/heroes/yrl-office-960.webp 960w, /assets/img/heroes/yrl-office-1280.webp 1280w, /assets/img/heroes/yrl-office.webp 1800w" imagesizes="(max-width: 900px) 100vw, 75vw" type="image/webp" fetchpriority="high">
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="icon" href="/favicon.ico" sizes="48x48">
  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/icon-192.png">
  <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
- <link rel="stylesheet" href="/assets/css/style.css?v=bd9b181b">
+ <link rel="stylesheet" href="/assets/css/style.css?v=c76107d6">
  <style>
  /* Homepage-specific overrides */
 .home-section { padding: 64px 0; }
@@ -373,7 +378,7 @@ a.hero-badge:hover .txt{ color:#c03926; text-decoration:none; }
 <section class="hero-split">
  <div class="hero-split-photo">
   <picture>
-   <source srcset="/assets/img/heroes/yrl-office-640.webp 640w, /assets/img/heroes/yrl-office-960.webp 960w, /assets/img/heroes/yrl-office-1280.webp 1280w, /assets/img/heroes/yrl-office.webp 1800w" sizes="(max-width: 900px) 100vw, 75vw" type="image/webp">
+   <source srcset="/assets/img/heroes/yrl-office-640.webp 640w, /assets/img/heroes/yrl-office-768.webp 768w, /assets/img/heroes/yrl-office-960.webp 960w, /assets/img/heroes/yrl-office-1280.webp 1280w, /assets/img/heroes/yrl-office.webp 1800w" sizes="(max-width: 900px) 100vw, 75vw" type="image/webp">
    <img src="/assets/img/heroes/yrl-office.jpg" srcset="/assets/img/heroes/yrl-office-960.jpg 960w, /assets/img/heroes/yrl-office.jpg 1800w" sizes="(max-width: 900px) 100vw, 75vw" alt="Your Realty Link office at 2302 E Southport Road, Indianapolis" width="1800" height="1200" fetchpriority="high" decoding="async">
   </picture>
  </div>

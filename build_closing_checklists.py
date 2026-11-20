@@ -24,7 +24,7 @@ def grab(p):
     m = re.search(p, src, re.S)
     if not m: raise SystemExit("extract failed: " + p[:40])
     return m.group(0)
-FONTS  = grab(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?<link rel="stylesheet" href="/assets/css/style\.css\?v=[0-9a-f]+">')
+FONTS  = grab(r'(?:<link rel="preconnect" href="https://fonts\.googleapis\.com">|<link rel="preload" href="/assets/fonts/).*?<link rel="stylesheet" href="/assets/css/style\.css\?v=[0-9a-f]+">')
 HEADER = grab(r'<header class="site-header">.*?</header>')
 FOOTER = grab(r'<footer class="site-footer">.*?</footer>')
 SCRIPTS = grab(r'<script>\nfunction toggleNav.*?</body>\n</html>')

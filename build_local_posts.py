@@ -75,10 +75,13 @@ def parse_blog_index():
     return posts
 
 def card(p):
-    img = f' style="background-image:url(\'{p["img"]}\')"' if p["img"] else ""
+    # lazy <img> rather than a CSS background, so below-the-fold card images don't
+    # compete with the hero on first load (see inject_img_perf.py)
+    img = (f'<img src="{html.escape(p["img"], quote=True)}" alt="" width="1200" height="630" loading="lazy" decoding="async">'
+           if p["img"] else "")
     cat = f'<span class="local-post-cat">{html.escape(p["cat"])}</span>' if p["cat"] else ""
     return (f'<a class="local-post-card" href="{p["url"]}">'
-            f'<span class="local-post-img"{img}></span>'
+            f'<span class="local-post-img">{img}</span>'
             f'<span class="local-post-body">{cat}'
             f'<h3>{p["title"]}</h3><p>{p["excerpt"]}</p>'
             f'<span class="local-post-more">Read more &rarr;</span></span></a>')

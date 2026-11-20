@@ -3,12 +3,18 @@
 <head>
  <meta charset="UTF-8">
  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNV86NLT23"></script>
  <script>
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
  gtag('config', 'G-SNV86NLT23');
+ </script>
+ <script>/* gtag.js loads after first paint or on first interaction; see inject_gtag.py */
+ (function(w,d){var done=0,ev=['pointerdown','keydown','touchstart','scroll'];
+ function load(){if(done)return;done=1;ev.forEach(function(e){w.removeEventListener(e,load,true)});var s=d.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-SNV86NLT23';d.head.appendChild(s)}
+ ev.forEach(function(e){w.addEventListener(e,load,{capture:true,passive:true})});
+ function painted(){var t=setTimeout(load,3000);try{if(PerformanceObserver.supportedEntryTypes.indexOf('largest-contentful-paint')>-1){new PerformanceObserver(function(l,o){o.disconnect();clearTimeout(t);setTimeout(load,0)}).observe({type:'largest-contentful-paint',buffered:true});return}}catch(e){}clearTimeout(t);load()}
+ if(d.readyState==='complete')painted();else w.addEventListener('load',painted)})(window,document);
  </script>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>What Is Mortgage Underwriting? | Your Realty Link</title>
@@ -54,13 +60,12 @@
  ]
  }
  </script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400..700&display=swap" rel="stylesheet">
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="icon" href="/favicon.ico" sizes="48x48">
  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/icon-192.png">
  <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
- <link rel="stylesheet" href="/assets/css/style.css?v=bd9b181b">
+ <link rel="stylesheet" href="/assets/css/style.css?v=c76107d6">
 </head>
 <body>
 

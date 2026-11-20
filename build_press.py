@@ -81,8 +81,8 @@ def head(title, desc, canon, schema, ogtype="website"):
  <meta name="twitter:description" content="{d}">
  <meta name="twitter:image" content="{SITE}/assets/img/og-home.jpg">
  <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap">
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  {STYLE}
 </head>

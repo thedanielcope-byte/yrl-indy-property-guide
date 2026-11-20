@@ -291,7 +291,7 @@ def shell():
     src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     hdr = re.search(r'<header class="site-header">.*?</header>', src, re.S).group()
     ftr = re.search(r'<footer class="site-footer">.*?</footer>', src, re.S).group()
-    fonts = re.search(r' <link rel="preconnect" href="https://fonts\.googleapis\.com">.*?<link rel="stylesheet" href="/assets/css/style\.css\?v=[0-9a-f]+">', src, re.S).group()
+    fonts = re.search(r' (?:<link rel="preconnect" href="https://fonts\.googleapis\.com">|<link rel="preload" href="/assets/fonts/).*?<link rel="stylesheet" href="/assets/css/style\.css\?v=[0-9a-f]+">', src, re.S).group()
     tail = src[src.index("</footer>") + len("</footer>"):src.index("</body>")]
     if "lead-form.js" not in tail:  # the homepage has no form; this page does
         import hashlib

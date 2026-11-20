@@ -42,8 +42,8 @@ page = f"""<!DOCTYPE html>
  <meta property="og:image" content="{SITE}/assets/img/og-home.jpg">
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="Your Realty Link">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap">
+ <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="stylesheet" href="/assets/css/style.css?v={CSSHASH}">
  <style>
  .rev-wrap{{max-width:640px;margin:0 auto;text-align:center;}}
