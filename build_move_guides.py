@@ -96,7 +96,7 @@ def body(g):
  </div>
 
  <h2 id="cost-of-living">Cost of Living: What the Federal Data Shows</h2>
- <p>{g['cost']}</p>
+ <p>{g['cost']} To see what a {c} salary is worth in Indianapolis, try our <a href="/cost-of-living-calculator-indianapolis/">Indianapolis cost of living calculator</a>.</p>
 
  <h2 id="home-prices">Home Prices and What Your Budget Buys</h2>
  <p>{g['homes']}</p>

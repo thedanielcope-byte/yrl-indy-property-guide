@@ -1810,7 +1810,7 @@
  </url>
  <url>
   <loc>https://yourrealtylink.com/guides/</loc>
-  <lastmod>2026-11-19</lastmod>
+  <lastmod>2026-11-20</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
  </url>
@@ -6155,19 +6155,19 @@
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-chicago-to-indianapolis/</loc>
- <lastmod>2026-11-03</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.7</priority>
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-cincinnati-to-indianapolis/</loc>
- <lastmod>2026-11-03</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.7</priority>
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-louisville-to-indianapolis/</loc>
- <lastmod>2026-11-03</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.7</priority>
  </url>
@@ -6419,13 +6419,13 @@
 </url>
  <url>
  <loc>https://yourrealtylink.com/blog/living-in-indianapolis-pros-and-cons/</loc>
- <lastmod>2026-11-19</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/cost-of-living-in-indianapolis/</loc>
- <lastmod>2026-11-02</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
@@ -6449,13 +6449,13 @@
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-columbus-to-indianapolis/</loc>
- <lastmod>2026-11-03</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-california-to-indianapolis/</loc>
- <lastmod>2026-11-03</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
@@ -6479,13 +6479,13 @@
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-detroit-to-indianapolis/</loc>
- <lastmod>2026-11-03</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-st-louis-to-indianapolis/</loc>
- <lastmod>2026-11-03</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
@@ -6539,7 +6539,7 @@
  </url>
  <url>
  <loc>https://yourrealtylink.com/blog/moving-from-new-york-to-indianapolis/</loc>
- <lastmod>2026-11-19</lastmod>
+ <lastmod>2026-11-20</lastmod>
  <changefreq>monthly</changefreq>
  <priority>0.8</priority>
  </url>
@@ -6719,5 +6719,11 @@
     <loc>https://yourrealtylink.com/best/neighborhoods-in-zionsville-indiana/</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yourrealtylink.com/cost-of-living-calculator-indianapolis/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
