@@ -34,6 +34,7 @@ jobs:
           python3 inject_favicon.py   # re-add favicon tags to regenerated pages
           python3 inject_hero_preload.py   # re-add hero image preloads to regenerated pages
           python3 inject_seo_overrides.py   # keep snippet overrides after rebuilds
+          python3 refresh_sitemap_lastmod.py   # sitemap lastmod = date of the last real content change
 
       - name: Commit & push if anything changed
         run: |
