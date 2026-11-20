@@ -14,6 +14,7 @@ Palestine is SW Hancock) or missed a second county.
 import glob, html, json, re
 
 START, END = "<!-- COUNTY-FAQ -->", "<!-- /COUNTY-FAQ -->"
+TOWNS_POST = "/blog/what-county-is-it-in-indianapolis-area-towns-by-county/"   # links every city page to the towns-by-county post
 
 SEATS = {"noblesville": "Hamilton", "franklin": "Johnson", "shelbyville": "Shelby", "greenfield": "Hancock",
          "danville": "Hendricks", "lebanon": "Boone", "anderson": "Madison", "martinsville": "Morgan",
@@ -70,13 +71,17 @@ for path in sorted(glob.glob("cities/*/*/index.html")):
     q = f"What county is {town}, Indiana in?"
     a = answer(slug, town, county)
     county_url = f"/counties/{county_slug}-indiana-real-estate/"
-    link = f' See our <a href="{county_url}">{county} County real estate guide</a>.' if slug not in SPECIAL else ""
+    if slug in SPECIAL:
+        link = f' See the full list of <a href="{TOWNS_POST}">Indianapolis-area towns by county</a>.'
+    else:
+        link = (f' See our <a href="{county_url}">{county} County real estate guide</a>, or the full list of'
+                f' <a href="{TOWNS_POST}">Indianapolis-area towns by county</a>.')
     block = (f'{START}\n <details class="faq-item">\n <summary>{q}</summary>\n <div class="faq-answer">\n'
              f' <p>{a}{link}</p>\n </div>\n </details>\n {END}\n')
-    s = re.sub(re.escape(START) + r".*?" + re.escape(END) + r"\n", "", s, flags=re.S)
+    s = re.sub(r"[ \t]*" + re.escape(START) + r".*?" + re.escape(END) + r"\n", "", s, flags=re.S)
     sec = s.index('<section class="faq-section">')
     close = s.index("</section>", sec)
-    s = s[:close] + block + " " + s[close:]
+    s = s[:close] + " " + block + " " + s[close:]   # stable indent: re-runs don't add spaces
     # JSON-LD FAQPage
     def fix_ld(m):
         try:
