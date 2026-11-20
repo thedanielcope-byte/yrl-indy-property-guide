@@ -1172,3 +1172,6 @@ hr.divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0
 .local-post-more { font-size: .8rem; font-weight: 600; color: var(--red, #c03926); }
 .local-posts-all { margin-top: 16px; font-size: .88rem; }
 .local-posts-all a { color: var(--red, #c03926); font-weight: 600; text-decoration: none; }
+
+/* ── ANCHOR OFFSET: in-page links (TOCs, #county jumps) land below the sticky header ── */
+h2[id], h3[id], [id].faq-item { scroll-margin-top: 96px; }
