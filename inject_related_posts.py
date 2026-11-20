@@ -27,7 +27,10 @@ ANCHOR = '<div class="author-box">'
 
 
 def text(s):
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s)).strip()
+    # Plain text: strip tags AND decode entities. H1s hold &mdash; / &amp; / &rsquo;,
+    # and the card writer html.escape()s this again; without the unescape the cards
+    # showed literal "&mdash;" ("&amp;mdash;" in the source).
+    return html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s))).strip()
 
 
 def main():

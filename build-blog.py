@@ -30,7 +30,14 @@ HEADER      = grab(r'<header class="site-header">.*?</header>', src)
 TAIL        = grab(r'<footer class="site-footer">.*\Z', src)
 
 def esc(s):
-    return html.escape(str(s or ""), quote=True)
+    # Decode first so hub text that already holds entities (&mdash;, &amp;) isn't
+    # double-escaped into visible "&mdash;" text.
+    return html.escape(html.unescape(str(s or "")), quote=True)
+
+def jstr(s):
+    # JSON-LD string literal: entities are never decoded inside <script>, so it must
+    # hold the real characters (— ’ &), JSON-escaped, not HTML-escaped.
+    return json.dumps(html.unescape(str(s or "")), ensure_ascii=False).replace("</", "<\\/")
 
 def slugify(s):
     s = re.sub(r'<[^>]+>', '', s or '')
@@ -107,7 +114,7 @@ def faq_schema(faqs):
     if not faqs:
         return ""
     items = ",\n ".join(
-        f'{{ "@type": "Question", "name": "{esc(f["q"])}", "acceptedAnswer": {{ "@type": "Answer", "text": "{esc(f.get("a",""))}" }} }}'
+        f'{{ "@type": "Question", "name": {jstr(f["q"])}, "acceptedAnswer": {{ "@type": "Answer", "text": {jstr(f.get("a",""))} }} }}'
         for f in faqs)
     return ('<script type="application/ld+json">\n'
             '{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [\n '
@@ -116,9 +123,9 @@ def faq_schema(faqs):
 def article_schema(p, url, date_pub):
     return ('<script type="application/ld+json">\n{\n "@context": "https://schema.org",\n'
             ' "@type": "Article",\n'
-            f' "headline": "{esc(p["title"])}",\n'
-            f' "description": "{esc(p.get("excerpt",""))}",\n'
-            f' "author": {{ "@type": "Organization", "name": "{esc(p.get("author") or "Your Realty Link")}" }},\n'
+            f' "headline": {jstr(p["title"])},\n'
+            f' "description": {jstr(p.get("excerpt",""))},\n'
+            f' "author": {{ "@type": "Organization", "name": {jstr(p.get("author") or "Your Realty Link")} }},\n'
             ' "publisher": { "@type": "Organization", "name": "Your Realty Link", "logo": { "@type": "ImageObject", "url": "/assets/img/yrl-logo.png" } },\n'
             f' "datePublished": "{date_pub}",\n "dateModified": "{date_pub}",\n'
             f' "mainEntityOfPage": "{url}"\n}}\n</script>')
