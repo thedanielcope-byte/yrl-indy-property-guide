@@ -44,8 +44,8 @@
   --navy:      #6e6e70;
   --navy-dark: #565759;
 
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', 'Inter Fallback', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', 'Playfair Display Fallback', Georgia, 'Times New Roman', serif;
   --radius: 8px;
   --shadow-sm: 0 1px 4px rgba(0,0,0,.08);
   --shadow: 0 2px 12px rgba(0,0,0,.10);
@@ -466,6 +466,16 @@ p  { margin-bottom: 1rem; }
 .cta-block-light h3 { color: var(--dark); }
 .cta-block.cta-light p,
 .cta-block-light p { color: var(--gray); }
+/* Size-matched fallbacks (Nov 2026): until the web fonts arrive, text renders in
+   Arial / Times New Roman (or their Linux twins, Liberation Sans / Serif) scaled to
+   Inter's and Playfair's metrics, so the swap doesn't reflow the page (it was a
+   ~28px hero jump on mobile, CLS 0.25 on community pages). Values computed from
+   the woff2 files with fontTools; re-compute if the font files ever change. */
+@font-face { font-family: 'Inter Fallback'; src: local('Arial'), local('ArialMT'), local('Liberation Sans'), local('Helvetica');
+  size-adjust: 106.43%; ascent-override: 91.02%; descent-override: 22.66%; line-gap-override: 0%; }
+@font-face { font-family: 'Playfair Display Fallback'; src: local('Times New Roman'), local('TimesNewRomanPSMT'), local('Liberation Serif'), local('Times');
+  size-adjust: 110.34%; ascent-override: 98.06%; descent-override: 22.75%; line-gap-override: 0%; }
+
 /* The white outline button above is for the red block; on the light variants it
    was white-on-white (contrast 1.06). Put the standard red outline back there. */
 .cta-block.cta-light .btn-outline,
