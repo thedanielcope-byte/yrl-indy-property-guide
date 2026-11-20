@@ -46,6 +46,7 @@ jobs:
           python3 bump-assets.py
           python3 inject_gtag.py   # re-add GA4 tag to regenerated agent pages
           python3 inject_favicon.py   # re-add favicon tags to regenerated pages
+          python3 inject_hero_preload.py   # re-add hero image preloads to regenerated pages
           python3 inject_seo_overrides.py   # keep snippet overrides after rebuilds
 
       - name: Commit & push if anything changed
