@@ -23,11 +23,19 @@ by_city = {}
 for c in DATA["communities"]:
     by_city.setdefault(c["city"], []).append(c)
 
+def roundup_line(city):
+    """Link the /best/ neighborhoods roundup (build_neighborhood_roundups.py) when it exists."""
+    k = re.sub(r"[^a-z0-9]+", "-", city.lower().replace("'", "").replace("’", "")).strip("-")
+    if not os.path.isfile(os.path.join(ROOT, "best", f"neighborhoods-in-{k}-indiana", "index.html")):
+        return ""
+    return (' <p>Not sure where to start? Our guide to the <a href="/best/neighborhoods-in-%s-indiana/">best neighborhoods in %s</a> '
+            'groups them by type, with typical prices and schools.</p>' % (k, esc(city)))
+
 def section(city, comms):
     cards = "\n".join(
       '  <a href="/communities/%s/" class="city-card">%s <span class="arrow">&rsaquo;</span></a>'
       % (c["slug"], esc(disp(c))) for c in sorted(comms, key=lambda x: disp(x)))
-    return "\n".join([
+    return "\n".join(x for x in [
       BEGIN,
       ' <hr class="divider">',
       ' <h2 id="communities">Communities &amp; Subdivisions in %s</h2>' % esc(city),
@@ -36,10 +44,11 @@ def section(city, comms):
       ' <div class="city-grid">',
       cards,
       ' </div>',
+      roundup_line(city),
       (' <p>See every neighborhood in the <a href="/communities/">Central Indiana communities '
        '&amp; subdivisions</a> directory.</p>'),
       END,
-    ]) + "\n\n "
+    ] if x) + "\n\n "
 
 def inject(pathdir, sec):
     f = os.path.join(pathdir, "index.html")

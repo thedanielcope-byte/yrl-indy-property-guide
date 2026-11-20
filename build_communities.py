@@ -289,7 +289,10 @@ def build_hub():
         cards = "\n".join(
           '    <a href="/communities/%s/" class="city-card">%s <span class="arrow">&rsaquo;</span></a>'
           % (c["slug"], esc(disp(c))) for c in sorted(by_city[city], key=lambda x: disp(x)))
-        sections.append('  <h2>%s Communities</h2>\n  <div class="city-grid">\n%s\n  </div>' % (esc(city), cards))
+        rk = re.sub(r"[^a-z0-9]+", "-", city.lower().replace("'", "")).strip("-")
+        ru = (f'\n  <p>See the <a href="/best/neighborhoods-in-{rk}-indiana/">best neighborhoods in {esc(city)}</a>, grouped by type with typical prices and schools.</p>'
+              if os.path.isfile(os.path.join(ROOT, "best", f"neighborhoods-in-{rk}-indiana", "index.html")) else "")
+        sections.append('  <h2>%s Communities</h2>\n  <div class="city-grid">\n%s\n  </div>%s' % (esc(city), cards, ru))
     grid = "\n\n".join(sections)
     url = "https://yourrealtylink.com/communities/"
     return f'''<!DOCTYPE html>
