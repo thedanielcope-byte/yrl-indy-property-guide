@@ -375,10 +375,10 @@ def render(r):
     assert marker in page
     page = page.replace(marker, "\n\n".join(r["sections"]) + "\n\n" + marker, 1)
     items = ",\n".join(
-        '  { "@type": "ListItem", "position": %d, "name": %s, "url": %s }' % (i, json.dumps(n, ensure_ascii=False), json.dumps(u))
+        '  { "@type": "ListItem", "position": %d, "name": %s, "url": %s }' % (i, json.dumps(html.unescape(n), ensure_ascii=False), json.dumps(u))
         for i, (n, u) in enumerate(r["itemlist"], 1))
     ld = ('<script type="application/ld+json">\n{ "@context": "https://schema.org", "@type": "ItemList", "name": %s,\n "itemListElement": [\n%s\n ] }\n</script>\n'
-          % (json.dumps(plain(r["breadcrumb"]) + ", Indiana", ensure_ascii=False), items))
+          % (json.dumps(bb.ldtext(r["breadcrumb"]) + ", Indiana", ensure_ascii=False), items))
     page = page.replace("</head>", ld + "</head>", 1)
     return page
 

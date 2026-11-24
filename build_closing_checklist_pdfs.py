@@ -12,7 +12,7 @@ build_closing_checklists (its build loop is guarded under __main__).
 
     python3 build_closing_checklist_pdfs.py
 """
-import os, re, html, base64, subprocess
+import os, re, html, json, base64, subprocess
 from build_closing_checklists import buyer, seller, WIRE_ALERT
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -36,6 +36,8 @@ LM_STYLE = re.search(r'<style>.*?</style>',
                      re.DOTALL).group()
 
 def esc(s):  return html.escape(str(s or ""), quote=True)
+# JSON-LD string literal: real characters, JSON-escaped (entities are never decoded inside <script>).
+def jstr(s): return json.dumps(html.unescape(str(s or "")), ensure_ascii=False, separators=(",", ":"))
 def absl(s): return str(s).replace('href="/', 'href="https://yourrealtylink.com/')
 
 # extract the wire-fraud copy from the shared WIRE_ALERT block (single source of truth)
@@ -153,11 +155,11 @@ def landing_html(kind, slug, pdf_name):
     rlist = "\n".join(f'<li style="border:none;display:list-item;padding:4px 0;"><a href="{u}">{esc(l)}</a></li>' for u, l in L["related"])
     ld = ('{"@context":"https://schema.org","@graph":['
           '{"@type":["LocalBusiness","RealEstateAgent"],"name":"Your Realty Link","url":"https://yourrealtylink.com","telephone":"317-997-7404","areaServed":"Central Indiana"},'
-          '{"@type":"WebPage","name":"' + esc(title) + '","url":"https://yourrealtylink.com/resources/' + slug + '/"},'
+          '{"@type":"WebPage","name":' + jstr(title) + ',"url":"https://yourrealtylink.com/resources/' + slug + '/"},'
           '{"@type":"BreadcrumbList","itemListElement":['
           '{"@type":"ListItem","position":1,"name":"Home","item":"https://yourrealtylink.com/"},'
           '{"@type":"ListItem","position":2,"name":"Resources","item":"https://yourrealtylink.com/resources/"},'
-          '{"@type":"ListItem","position":3,"name":"' + esc(typ) + ' Closing Checklist","item":"https://yourrealtylink.com/resources/' + slug + '/"}]}]}')
+          '{"@type":"ListItem","position":3,"name":' + jstr(typ + ' Closing Checklist') + ',"item":"https://yourrealtylink.com/resources/' + slug + '/"}]}]}')
     js = ("<script>document.getElementById('leadMagnetForm').addEventListener('submit',function(e){"
           "e.preventDefault();var btn=this.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';"
           "var data={};var inputs=this.querySelectorAll('input,select,textarea');"

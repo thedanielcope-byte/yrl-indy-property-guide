@@ -14,6 +14,7 @@ reused from a sibling service page so nav stays in sync.
     python3 build_closing_checklists.py
 """
 import os, re, json
+from html import unescape  # faq_block() shadows the name "html"
 from local_essentials import block as local_essentials_block
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -111,7 +112,8 @@ def faq_block(faqs):
     html = "\n".join('<details class="faq-item">\n<summary>%s</summary>\n<div class="faq-answer"><p>%s</p></div>\n</details>'
                      % (q, a) for q, a in faqs)
     schema = ",\n".join('{ "@type": "Question", "name": %s, "acceptedAnswer": { "@type": "Answer", "text": %s } }'
-                        % (json.dumps(strip(q)), json.dumps(strip(a))) for q, a in faqs)
+                        % (json.dumps(unescape(strip(q)), ensure_ascii=False), json.dumps(unescape(strip(a)), ensure_ascii=False))
+                        for q, a in faqs)
     return html, schema
 
 PAGE = """<!DOCTYPE html>

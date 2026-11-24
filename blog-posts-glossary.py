@@ -5,7 +5,7 @@ Extracts the header, head-assets (fonts+css+inline style), and footer/tail from 
 existing blog post so nav/footer/asset-hashes always match the rest of the site.
 Each post's prose carries curated inline links to the matching /glossary/ pages.
 """
-import os, re, html
+import os, re, html, json
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE = os.path.join(ROOT, "blog", "what-is-my-home-worth-in-indianapolis", "index.html")
@@ -55,6 +55,12 @@ SEARCH_CARD = '''<div class="sidebar-card">
 def esc(s):
     return html.escape(str(s), quote=True)
 
+def jstr(s):
+    # JSON-LD string literal: entities are never decoded inside <script>, so hold the real
+    # characters (' ’ &), JSON-escaped, not HTML-escaped. Tags are dropped.
+    t = html.unescape(re.sub(r"<[^>]+>", "", str(s)))
+    return json.dumps(t, ensure_ascii=False).replace("</", "<\\/")
+
 def sections_html(sections):
     out = []
     for sid, h2, paras in sections:
@@ -79,7 +85,7 @@ def related_res_html(items):
     return '<hr class="divider">\n <h3>Related Resources</h3>\n <ul>\n' + lis + '\n </ul>'
 
 def schema(p):
-    crumb = esc(p["schema_headline"])
+    crumb = jstr(p["schema_headline"])
     url = f'https://yourrealtylink.com/blog/{p["slug"]}/'
     return f'''<script type="application/ld+json">
 {{
@@ -87,8 +93,8 @@ def schema(p):
  "@graph": [
  {{
  "@type": "Article",
- "headline": "{esc(p['schema_headline'])}",
- "description": "{esc(p['schema_desc'])}",
+ "headline": {jstr(p['schema_headline'])},
+ "description": {jstr(p['schema_desc'])},
  "author": {{ "@type": "Person", "name": "Daniel Cope", "url": "https://yourrealtylink.com/agents/daniel-cope/", "jobTitle": "Real Estate Broker", "worksFor": {{ "@type": "Organization", "name": "Your Realty Link" }} }},
  "publisher": {{ "@type": "Organization", "name": "Your Realty Link", "logo": {{ "@type": "ImageObject", "url": "/assets/img/yrl-logo.png" }} }},
  "datePublished": "{p['date_pub']}",
@@ -107,7 +113,7 @@ def schema(p):
  "itemListElement": [
  {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourrealtylink.com/" }},
  {{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yourrealtylink.com/blog/" }},
- {{ "@type": "ListItem", "position": 3, "name": "{crumb}", "item": "{url}" }}
+ {{ "@type": "ListItem", "position": 3, "name": {crumb}, "item": "{url}" }}
  ]
  }}
  ]
@@ -118,7 +124,7 @@ def faq_schema(faqs):
     if not faqs:
         return ""
     items = ",\n ".join(
-        f'{{ "@type": "Question", "name": "{esc(q)}", "acceptedAnswer": {{ "@type": "Answer", "text": "{esc(a)}" }} }}'
+        f'{{ "@type": "Question", "name": {jstr(q)}, "acceptedAnswer": {{ "@type": "Answer", "text": {jstr(a)} }} }}'
         for q, a in faqs)
     return f'''<script type="application/ld+json">
 {{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [

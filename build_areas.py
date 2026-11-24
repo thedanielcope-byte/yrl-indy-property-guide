@@ -255,7 +255,7 @@ def build(a, tpl):
          "address": {"@type": "PostalAddress", "streetAddress": "2302 E Southport Rd", "addressLocality": "Indianapolis",
                      "addressRegion": "IN", "postalCode": "46227", "addressCountry": "US"},
          "areaServed": {"@type": "Place", "name": a["place"][0], "containedIn": a["place"][1]}},
-        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": text(ans)}} for q, ans in faqs]},
+        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": text(q), "acceptedAnswer": {"@type": "Answer", "text": text(ans)}} for q, ans in faqs]},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Indianapolis Neighborhoods", "item": SITE + "/neighborhoods/"},

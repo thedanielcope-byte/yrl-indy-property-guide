@@ -28,12 +28,14 @@ CSSHASH = re.search(r'style\.css\?v=([0-9a-f]+)', src).group(1)
 
 def esc(s): return html.escape(str(s or ""), quote=False)
 def plain(s): return re.sub(r'<[^>]+>', '', str(s)).replace("&mdash;", "-").replace("&amp;", "&").replace("&ndash;", "-").replace("&rarr;", "").strip()
+# JSON-LD text: entities are never decoded inside <script>, so decode what plain() leaves (&rsquo; etc.).
+def ldtext(s): return html.unescape(plain(s))
 
 def head(r):
     canon = f"{SITE}/best/{r['slug']}/"
     faq_nodes = ",\n".join(
         '{\n "@type": "Question",\n "name": %s,\n "acceptedAnswer": { "@type": "Answer", "text": %s }\n }'
-        % (json.dumps(plain(f["q"]), ensure_ascii=False), json.dumps(plain(f["a"]), ensure_ascii=False))
+        % (json.dumps(ldtext(f["q"]), ensure_ascii=False), json.dumps(ldtext(f["a"]), ensure_ascii=False))
         for f in r["faqs"])
     t, d = esc(r["meta_title"]), esc(r["meta_desc"])
     ogt = esc(r.get("og_title", r["meta_title"]))
