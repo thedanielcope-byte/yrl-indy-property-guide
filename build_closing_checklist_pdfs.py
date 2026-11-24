@@ -12,12 +12,11 @@ build_closing_checklists (its build loop is guarded under __main__).
 
     python3 build_closing_checklist_pdfs.py
 """
-import os, re, html, json, base64, subprocess
+import os, re, html, json, base64, shutil, subprocess, tempfile
 from build_closing_checklists import buyer, seller, WIRE_ALERT
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-SCRATCH = "/private/tmp/claude-501/-Users-danielcope-Library-Mobile-Documents-com-apple-CloudDocs-Claude-YRL/26f905d9-f2dc-48a5-9205-1e23c0b750ad/scratchpad"
 
 src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 HEADER = re.search(r'<header class="site-header">.*?</header>', src, re.DOTALL).group()
@@ -271,6 +270,7 @@ def thankyou_html(kind, slug, pdf_name):
 def main():
     # ── generate ────────────────────────────────────────────────────────────────
     made = []
+    scratch = tempfile.mkdtemp(prefix="yrl-checklist-pdf-")  # PDF source HTML for Chrome; removed below
     for kind, cfg in (("buyer", buyer), ("seller", seller)):
         slug = f"{kind}-closing-checklist"
         typ = LANDING[kind]["typ"]
@@ -280,13 +280,14 @@ def main():
         os.makedirs(os.path.join(base, "download"), exist_ok=True)
         open(os.path.join(base, "index.html"), "w", encoding="utf-8").write(landing_html(kind, slug, pdf_name))
         open(os.path.join(base, "thank-you", "index.html"), "w", encoding="utf-8").write(thankyou_html(kind, slug, pdf_name))
-        hp = os.path.join(SCRATCH, slug + ".html")
+        hp = os.path.join(scratch, slug + ".html")
         open(hp, "w", encoding="utf-8").write(pdf_html(cfg))
         out = os.path.abspath(os.path.join(base, "download", pdf_name))
         subprocess.run([CHROME, "--headless", "--disable-gpu", "--no-pdf-header-footer",
                         "--print-to-pdf=" + out, "file://" + hp], capture_output=True)
         ok = os.path.exists(out)
         made.append((slug, ok, os.path.getsize(out)//1024 if ok else 0))
+    shutil.rmtree(scratch, ignore_errors=True)
 
     print("Generated closing-checklist lead magnets:")
     for slug, ok, kb in made:
