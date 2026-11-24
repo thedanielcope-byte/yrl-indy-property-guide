@@ -5,11 +5,13 @@
    3. add each post URL to sitemap.xml (idempotent)
 Run AFTER blog-posts-glossary.py has generated the post HTML.
 """
-import os, re, json, html, subprocess, base64
+import os, re, json, html, subprocess, base64, atexit, shutil, tempfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-SCRATCH = "/private/tmp/claude-501/-Users-danielcope-Library-Mobile-Documents-com-apple-CloudDocs-Claude-YRL/26f905d9-f2dc-48a5-9205-1e23c0b750ad/scratchpad"
+# Chrome renders from HTML written here; a fresh folder each run, removed on exit.
+SCRATCH = tempfile.mkdtemp(prefix="yrl-blog-card-")
+atexit.register(shutil.rmtree, SCRATCH, ignore_errors=True)
 
 posts = json.load(open(os.path.join(ROOT, "blog-posts-new.json"), encoding="utf-8"))
 logo = base64.b64encode(open(os.path.join(ROOT, "assets/img/yrl-logo.png"), "rb").read()).decode()

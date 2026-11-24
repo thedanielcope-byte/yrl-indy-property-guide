@@ -8,11 +8,13 @@ assets/img/social/2026-09/NN-slug.png.
 
     python3 build_social_graphics.py
 """
-import os, base64, subprocess, shutil
+import os, base64, subprocess, shutil, atexit, tempfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-SCRATCH = "/private/tmp/claude-501/-Users-danielcope-Library-Mobile-Documents-com-apple-CloudDocs-Claude-YRL/26f905d9-f2dc-48a5-9205-1e23c0b750ad/scratchpad"
+# Chrome renders from HTML written here; a fresh folder each run, removed on exit.
+SCRATCH = tempfile.mkdtemp(prefix="yrl-social-")
+atexit.register(shutil.rmtree, SCRATCH, ignore_errors=True)
 OUTDIR = os.path.join(ROOT, "assets/img/social/2026-09")
 LOGO = base64.b64encode(open(os.path.join(ROOT, "assets/img/yrl-logo.png"), "rb").read()).decode()
 FOOT_META = "<b>Your Realty Link</b> &middot; Janet Giles, Principal Broker<br>317-997-7404 &middot; MIBOR member"

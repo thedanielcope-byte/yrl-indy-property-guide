@@ -3,11 +3,13 @@
 For each city+type: builds /resources/<slug>/ landing + thank-you pages (form ->
 capture-lead) and renders a city-custom branded PDF via headless Chrome.
 Reuses the canonical header/footer + the existing lead-magnet funnel pattern."""
-import os, re, html, base64, subprocess
+import os, re, html, base64, subprocess, atexit, shutil, tempfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-SCRATCH = "/private/tmp/claude-501/-Users-danielcope-Library-Mobile-Documents-com-apple-CloudDocs-Claude-YRL/26f905d9-f2dc-48a5-9205-1e23c0b750ad/scratchpad"
+# Chrome renders from HTML written here; a fresh folder each run, removed on exit.
+SCRATCH = tempfile.mkdtemp(prefix="yrl-city-guide-")
+atexit.register(shutil.rmtree, SCRATCH, ignore_errors=True)
 
 src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 HEADER = re.search(r'<header class="site-header">.*?</header>', src, re.DOTALL).group()
