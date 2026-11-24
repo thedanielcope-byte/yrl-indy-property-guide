@@ -268,37 +268,42 @@ def thankyou_html(kind, slug, pdf_name):
 {SITE_ENH}
 </body></html>"""
 
-# ── generate ────────────────────────────────────────────────────────────────
-made = []
-for kind, cfg in (("buyer", buyer), ("seller", seller)):
-    slug = f"{kind}-closing-checklist"
-    typ = LANDING[kind]["typ"]
-    pdf_name = f"{typ}-Closing-Checklist.pdf"
-    base = os.path.join(ROOT, "resources", slug)
-    os.makedirs(os.path.join(base, "thank-you"), exist_ok=True)
-    os.makedirs(os.path.join(base, "download"), exist_ok=True)
-    open(os.path.join(base, "index.html"), "w", encoding="utf-8").write(landing_html(kind, slug, pdf_name))
-    open(os.path.join(base, "thank-you", "index.html"), "w", encoding="utf-8").write(thankyou_html(kind, slug, pdf_name))
-    hp = os.path.join(SCRATCH, slug + ".html")
-    open(hp, "w", encoding="utf-8").write(pdf_html(cfg))
-    out = os.path.abspath(os.path.join(base, "download", pdf_name))
-    subprocess.run([CHROME, "--headless", "--disable-gpu", "--no-pdf-header-footer",
-                    "--print-to-pdf=" + out, "file://" + hp], capture_output=True)
-    ok = os.path.exists(out)
-    made.append((slug, ok, os.path.getsize(out)//1024 if ok else 0))
+def main():
+    # ── generate ────────────────────────────────────────────────────────────────
+    made = []
+    for kind, cfg in (("buyer", buyer), ("seller", seller)):
+        slug = f"{kind}-closing-checklist"
+        typ = LANDING[kind]["typ"]
+        pdf_name = f"{typ}-Closing-Checklist.pdf"
+        base = os.path.join(ROOT, "resources", slug)
+        os.makedirs(os.path.join(base, "thank-you"), exist_ok=True)
+        os.makedirs(os.path.join(base, "download"), exist_ok=True)
+        open(os.path.join(base, "index.html"), "w", encoding="utf-8").write(landing_html(kind, slug, pdf_name))
+        open(os.path.join(base, "thank-you", "index.html"), "w", encoding="utf-8").write(thankyou_html(kind, slug, pdf_name))
+        hp = os.path.join(SCRATCH, slug + ".html")
+        open(hp, "w", encoding="utf-8").write(pdf_html(cfg))
+        out = os.path.abspath(os.path.join(base, "download", pdf_name))
+        subprocess.run([CHROME, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+                        "--print-to-pdf=" + out, "file://" + hp], capture_output=True)
+        ok = os.path.exists(out)
+        made.append((slug, ok, os.path.getsize(out)//1024 if ok else 0))
 
-print("Generated closing-checklist lead magnets:")
-for slug, ok, kb in made:
-    print("  %s  PDF:%s (%dKB)" % (slug, "OK" if ok else "FAIL", kb))
+    print("Generated closing-checklist lead magnets:")
+    for slug, ok, kb in made:
+        print("  %s  PDF:%s (%dKB)" % (slug, "OK" if ok else "FAIL", kb))
 
-# ── sitemap (the /resources/ hub cards for these two are hand-authored in the
-#    "For Buyers" / "For Sellers" sections of resources/index.html, so this
-#    generator no longer inserts its own hub section) ──
-smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
-for kind in ("buyer", "seller"):
-    loc = "https://yourrealtylink.com/resources/%s-closing-checklist/" % kind
-    if loc not in sm:
-        blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
-if blk:
-    open(smp, "w", encoding="utf-8").write(sm.replace("</urlset>", blk + "</urlset>"))
-print("hub + sitemap updated (%d new sitemap URLs)" % blk.count("<url>"))
+    # ── sitemap (the /resources/ hub cards for these two are hand-authored in the
+    #    "For Buyers" / "For Sellers" sections of resources/index.html, so this
+    #    generator no longer inserts its own hub section) ──
+    smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
+    for kind in ("buyer", "seller"):
+        loc = "https://yourrealtylink.com/resources/%s-closing-checklist/" % kind
+        if loc not in sm:
+            blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
+    if blk:
+        open(smp, "w", encoding="utf-8").write(sm.replace("</urlset>", blk + "</urlset>"))
+    print("hub + sitemap updated (%d new sitemap URLs)" % blk.count("<url>"))
+
+
+if __name__ == "__main__":
+    main()
