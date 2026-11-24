@@ -148,7 +148,7 @@ page = f'''<!DOCTYPE html>
  <p class="qa-lead">Place your license into referral status with Your Realty Link and earn up to 35% referral fees on every local client you send our way &mdash; no more showings, paperwork, or MIBOR fees. Call or text Janet Giles: 317-997-7404.</p>
  <dl class="qa-facts">
  <div><dt>Referral fee</dt><dd>Up to 35% on local referrals</dd></div>
- <div><dt>Broker</dt><dd>Janet Giles, Broker/Owner since 1974</dd></div>
+ <div><dt>Broker</dt><dd>Janet Giles-Schultz, Principal Broker since 1974</dd></div>
  <div><dt>Call or text</dt><dd><a href="tel:3179977404">317-997-7404</a></dd></div>
  <div><dt>Email</dt><dd><a href="mailto:janet@yourrealtylink.com">janet@yourrealtylink.com</a></dd></div>
  </dl>

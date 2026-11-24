@@ -192,7 +192,7 @@ page = f'''<!DOCTYPE html>
  <h2>Meet Your Senior Specialists</h2>
  <div class="spec-grid">
  <div class="spec-card">
- <span class="role">Broker / Owner &middot; Senior Specialist</span>
+ <span class="role">Principal Broker &middot; Senior Specialist</span>
  <h3>Janet Giles-Schultz</h3>
  <p>Janet has been helping Central Indiana families buy and sell since the 1970s and leads Your Realty Link&rsquo;s senior real estate work with patience, honesty, and deep local knowledge.</p>
  <a href="tel:3179977404">📞 317-997-7404</a>
