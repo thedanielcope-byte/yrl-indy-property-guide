@@ -174,7 +174,7 @@ def landing_html(kind, slug, pdf_name):
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>{esc(title)}</title>
  <meta name="description" content="{esc(desc)}">
- <meta name="robots" content="index, follow">
+ <meta name="robots" content="noindex, follow">
  <link rel="canonical" href="https://yourrealtylink.com/resources/{slug}/">
  <meta property="og:title" content="{esc(title)}">
  <meta property="og:description" content="{esc(desc)}">
@@ -296,14 +296,14 @@ def main():
     # ── sitemap (the /resources/ hub cards for these two are hand-authored in the
     #    "For Buyers" / "For Sellers" sections of resources/index.html, so this
     #    generator no longer inserts its own hub section) ──
-    smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read(); blk = ""
-    for kind in ("buyer", "seller"):
-        loc = "https://yourrealtylink.com/resources/%s-closing-checklist/" % kind
-        if loc not in sm:
-            blk += "<url>\n  <loc>%s</loc>\n  <changefreq>monthly</changefreq>\n  <priority>0.6</priority>\n</url>\n" % loc
-    if blk:
-        open(smp, "w", encoding="utf-8").write(sm.replace("</urlset>", blk + "</urlset>"))
-    print("hub + sitemap updated (%d new sitemap URLs)" % blk.count("<url>"))
+    # The landing pages are thin lead-capture pages (~200 words), so they're noindex,follow
+    # and kept OUT of the sitemap (Nov 19 2026 thin-pages pass). Strip any that crept in.
+    smp = os.path.join(ROOT, "sitemap.xml"); sm = open(smp, encoding="utf-8").read()
+    sm2 = re.sub(r"[ \t]*<url>\s*<loc>https://yourrealtylink\.com/resources/(?:buyer|seller)-closing-checklist/</loc>.*?</url>\n?",
+                 "", sm, flags=re.DOTALL)
+    if sm2 != sm:
+        open(smp, "w", encoding="utf-8").write(sm2)
+    print("sitemap: %d closing-checklist URLs removed" % (sm.count("<url>") - sm2.count("<url>")))
 
 
 if __name__ == "__main__":
