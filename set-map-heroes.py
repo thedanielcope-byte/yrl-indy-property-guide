@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 CREDIT = ('<span class="map-credit">Maps &copy; '
           '<a href="https://www.geoapify.com/" target="_blank" rel="noopener nofollow">Geoapify</a>, &copy; '
           '<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener nofollow">OpenStreetMap</a></span>')
-CREDIT_ANCHOR = "Broker/Owner</span>"
+CREDIT_ANCHOR = "Licensed in Indiana</span>"   # end of the footer copyright line
 
 
 def targets():
