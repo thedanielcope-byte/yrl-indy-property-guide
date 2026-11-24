@@ -107,7 +107,7 @@ TPL = """<meta charset="utf-8">
  </div>
  <div class="foot">
   <div class="cta">Full report &rarr; <b>yourrealtylink.com</b></div>
-  <div class="meta"><b>Your Realty Link</b> &middot; Janet Giles, Broker<br>317-997-7404</div>
+  <div class="meta"><b>Your Realty Link</b> &middot; Janet Giles-Schultz, Principal Broker<br>317-997-7404</div>
  </div>
 </div>"""
 
@@ -293,7 +293,7 @@ GBP = """<meta charset="utf-8">
  </div>
  <div class="foot">
   <div class="cta">Full report &rarr; <b>yourrealtylink.com</b></div>
-  <div class="meta"><b>Your Realty Link</b> &middot; Janet Giles, Broker</div>
+  <div class="meta"><b>Your Realty Link</b> &middot; Janet Giles-Schultz, Principal Broker</div>
  </div>
 </div>"""
 
