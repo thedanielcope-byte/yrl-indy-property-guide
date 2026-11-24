@@ -29,7 +29,7 @@ faqs = [
  ("Do I still have to pay MIBOR and board fees?",
   "No. One of the biggest advantages of referral status is no more MIBOR fees. You keep your license working for you without the ongoing dues and costs of active production."),
  ("Who takes care of the clients I refer?",
-  "Experienced, full-time Your Realty Link agents — backed by Principal Broker-Owner Janet Giles, who has been selling real estate since 1974 and mentors the team hands-on. Your clients get step-by-step support from contract to closing, so your name stays in good hands."),
+  "Experienced, full-time Your Realty Link agents — backed by Principal Broker Janet Giles-Schultz, who has been selling real estate since 1974 and mentors the team hands-on. Your clients get step-by-step support from contract to closing, so your name stays in good hands."),
 ]
 faq_html = "\n".join(
  f'<details class="faq-item">\n<summary>{q}</summary>\n<div class="faq-answer"><p>{a}</p></div>\n</details>'
@@ -47,7 +47,7 @@ page = f'''<!DOCTYPE html>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Referral Program for Retiring Agents in Indianapolis | Your Realty Link</title>
- <meta name="description" content="Thinking about retiring from real estate? Put your license in referral status with Your Realty Link and earn up to 35% referral fees — no showings, no paperwork, no MIBOR fees. Call Janet: 317-997-7404.">
+ <meta name="description" content="Thinking about retiring from real estate? Put your license in referral status with Your Realty Link and earn up to 35% referral fees.">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="{URL}">
  <meta property="og:title" content="Referral Program for Retiring Agents | Your Realty Link">
@@ -56,6 +56,8 @@ page = f'''<!DOCTYPE html>
  <meta property="og:image" content="https://yourrealtylink.com/assets/img/services/referral-program.jpg">
  <meta property="og:image:width" content="1400"><meta property="og:image:height" content="933">
  <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Referral Program for Retiring Agents | Your Realty Link">
+ <meta name="twitter:description" content="Put your license in referral status with Your Realty Link and earn up to 35% referral fees — no showings, no paperwork, no MIBOR fees.">
  <meta name="twitter:image" content="https://yourrealtylink.com/assets/img/services/referral-program.jpg">
  <meta property="og:type" content="website">
  <script type="application/ld+json">
@@ -184,7 +186,7 @@ page = f'''<!DOCTYPE html>
 
  <h2>A Little About Us</h2>
  <div class="why-grid">
- <div class="why-item"><h4>Led by Janet Giles</h4><p>Our Principal Broker-Owner started in 1974 and never stopped selling real estate &mdash; a hands-on mentor to every agent on the team.</p></div>
+ <div class="why-item"><h4>Led by Janet Giles-Schultz</h4><p>Our Principal Broker started in 1974 and never stopped selling real estate &mdash; a hands-on mentor to every agent on the team.</p></div>
  <div class="why-item"><h4>Experienced, Full-Time Team</h4><p>Our agents serve buyers and sellers across Marion, Shelby, Hendricks, Hancock, and Hamilton Counties &mdash; your referrals are in capable hands.</p></div>
  <div class="why-item"><h4>Real Support Behind Every Deal</h4><p>Dotloop, Office 365, a brick-and-mortar office, and in-house legal assistance &mdash; your clients get step-by-step support once under contract (no guessing or Googling required).</p></div>
  <div class="why-item"><h4>A No-Hassle Environment</h4><p>Great low caps, no MIBOR fees in referral status, and a genuinely no-hassle way to keep your license earning.</p></div>

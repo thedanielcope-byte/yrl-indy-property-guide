@@ -119,7 +119,7 @@ def card(a):
 
 def hub_page(agents):
     cards = "\n ".join(card(a) for a in agents)
-    desc = "Meet the Your Realty Link team — experienced Central Indiana real estate agents led by Broker-Owner Janet Giles. Find your agent and start your home search."
+    desc = "Meet the Your Realty Link team — experienced Central Indiana agents led by Principal Broker Janet Giles-Schultz. Find your agent and start your home search."
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,7 +156,7 @@ def hub_page(agents):
 <section class="page-hero banner-raw" style="--hero-img: -webkit-image-set(url('/assets/img/heroes/agents.webp') type('image/webp'), url('/assets/img/heroes/agents.jpg') type('image/jpeg')); --hero-img: image-set(url('/assets/img/heroes/agents.webp') type('image/webp'), url('/assets/img/heroes/agents.jpg') type('image/jpeg')); --hero-pos: center 18%;">
  <div class="container">
  <h1>Our Agents</h1>
- <p class="hero-sub">Meet the Your Realty Link team — a local boutique brokerage of 20+ experienced Central Indiana real estate experts, led by Broker-Owner Janet Giles.</p>
+ <p class="hero-sub">Meet the Your Realty Link team — a local boutique brokerage of 20+ experienced Central Indiana real estate experts, led by Principal Broker Janet Giles-Schultz.</p>
  <div class="hero-badges">
  <span class="hero-badge">🏡 20+ Agents</span>
  <span class="hero-badge">📍 All 17 Central Indiana Counties</span>
@@ -439,7 +439,7 @@ def premium_agent_page(a):
         (f"Does {first} help both buyers and sellers?",
          f"Yes. {first} represents both buyers and sellers with Your Realty Link — from first-time buyers and move-up families to sellers pricing a home and investors building a portfolio."),
         (f"Is {first} part of a larger team?",
-         "Yes — Your Realty Link is a local boutique brokerage led by Broker-Owner Janet Giles, with 20+ experienced agents serving Central Indiana."),
+         "Yes — Your Realty Link is a local boutique brokerage led by Principal Broker Janet Giles-Schultz, with 20+ experienced agents serving Central Indiana."),
     ]
     faq_html = ('<section class="section"><div class="container" style="max-width:820px;"><h2>Frequently Asked Questions</h2><div class="faq-list">'
         + "".join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(anv)}</p></details>' for q, anv in faqs)
